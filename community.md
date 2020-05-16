@@ -25,7 +25,7 @@ These are people who have contributed to Off the Dial in the past, but don't get
 
 Sauce is a resident hypeman that wishes one day the Kensa Rapid Blaster will have it's time in the limelight. He tries hard to keep his S+X rank during his streams, but never actually finishes his placements. Also, Sauce streamed a large portion of the broadcasts for the Off the Dial in the past. He also tends to have an obsession over anything that may and could be considered a sauce... Other than Splatoon, Sauce is trying to explore the growing Esports industry and hopes that career choice takes flight!
 
-## Frosty (SBPC)
+### Frosty (SBPC)
 > *Moderator & Club Owner* - **[Discord](https://discord.gg/Y4kzHrt)**
 
 Outside of being the hibernate moderator, Frosty is a developer of community projects across multiple nintendo games! He was one of the two members to commentate Off The Dial's first stream way back during IDTGA 4, and has since been a part of the team. Currently, he runs a pickup club named The 7/11 in his personal server, where Free Agents and people with teams alike can join and get teams for pickups of all kind!
