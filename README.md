@@ -1,7 +1,6 @@
 # `otd.ink`
 > Off the Dial Website
 
-![License][license-shield]
 ![Stars][stars-shield]
 # <!-- ![Banner](banner.png) -->
 
@@ -21,4 +20,3 @@ _[https://github.com/LeptoFlare/otd.ink](https://github.com/LeptoFlare/otd.ink)_
 
 <!-- markdown links & imgs -->
 [stars-shield]: https://img.shields.io/github/stars/LeptoFlare/otd.ink.svg?style=social
-[license-shield]: https://img.shields.io/github/license/LeptoFlare/otd.ink.svg?style=flat
