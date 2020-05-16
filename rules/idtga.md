@@ -1,5 +1,3 @@
-![banner][]
-
 # IDTGA Rules
 
 ## Info
