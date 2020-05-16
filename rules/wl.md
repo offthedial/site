@@ -1,7 +1,7 @@
 # Weakest Link Rules
 
 ## Info
-<u>Weakest Link</u> is a unique, Off the Dial exclusive, free agent **and** team tournament for Splatoon 2! Sign up as a three-player team or the Weakest Link, and we will pair each team to each link. This tournament provides the opportunity for free agents to get coaching experience in a team setting, and for teams to test their communication and teaching skills.
+<u>Weakest Link</u> is a unique, Off the Dial exclusive, free agent **and** team tournament for Splatoon 2! Sign up as a 3-player team or a lone free agent, and we will pair each team to each link. This tournament provides the opportunity for free agents to get coaching experience in a team setting, and for teams to test their communication and teaching skills.
 
 All you need to do is sign up! The world is waiting…
 
@@ -54,14 +54,14 @@ There is no guaranteed your request will be fulfilled.
 
 After this point, If your FA is unavailable, an emergency sub is not allowed and you will be forced to forfeit.
 
-If a FA has requested to replace your team, your team will be removed from the tournament and marked as a dropout (See **[Dropouts](#Dropouts)**).
+If a FA has requested to replace your team, your team will be removed from the tournament and marked as a dropout (See **[Dropouts](#dropouts)**).
 
 ### As a FA
 If there are more FA’s than teams, extra FA’s will be marked as FA subs and may be assigned to teams up to 24 hours before tournament day.
 
 If your team is consistently acting disrespectful towards you, you can request 1 replacement 3 days after teams are released, up to 24 hours before tournament day. There is no guaranteed your request will be fulfilled.
 
-If a team has requested to replace you, you will be removed from the tournament and marked as a dropout (See **[Dropouts](#Dropouts)**).
+If a team has requested to replace you, you will be removed from the tournament and marked as a dropout (See **[Dropouts](#dropouts)**).
 
 ## DC's Redo Decision Rules
 ### Redo the match if:

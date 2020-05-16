@@ -44,7 +44,7 @@ This is so we can confirm you are playing before we sort players into teams. It 
 This is a setting that comes default with smash.gg and there is no way to disable it, so make sure you check in for every match you play!
 
 ### I’ve just finished a season of IDTGA, what do I do now?
-If you’re playing in Swiss or Round Robin, make sure that all your rounds are completed. If you didn’t make the finals feel free to watch the rest of the stream on https://twitch.tv/offthedial. Shortly after the tournament finishes, a feedback forum will be released. We would appreciate it if you gave honest feedback that can improve the next season.
+If you’re playing in Swiss or Round Robin, make sure that all your rounds are completed. If you didn’t make the finals feel free to watch the rest of the stream on [twitch](https://twitch.tv/offthedial). Shortly after the tournament finishes, a feedback forum will be released. We would appreciate it if you gave honest feedback that can improve the next season.
 
 ### Why is it now bi-monthly instead of monthly?
 Really simple actually. It’s because I’m (DJam98) in my final year of high school this year. On the off months, LeptoFlare will be running the Weakest Link tournament (of which I will still assist in but not to the same extent as IDTGA).
@@ -74,10 +74,10 @@ Off the Dial Bot is a custom built bot by `@LeptoFlare`, It provides many comman
 Your Signal Strength is our internal way of calculating your tournament experience while being here on Off the Dial. As it was only introduced at the start of 2020, we'll still be asking for your previous OTD experience in registration forms until the Signal Strength is an accurate representation. You gain strength by playing in tournaments as well as by placing high in the tournaments.
 
 ### Is Off the Dial Bot open-sourced?
-Yes! You can find all the code on Github at https://github.com/LeptoFlare/offthedialbot.
+Yes! You can find all the code on [Github](https://github.com/LeptoFlare/offthedialbot).
 
 ### I have a suggestion/bug report for Off the Dial Bot.
-I'd love it if you made a Github Issue using this link: https://github.com/LeptoFlare/offthedialbot/issues/new/choose. This lets us track all of the suggestions and reports permanently in one place, as opposed to the suggestions channel, where the messages can get easily lost.
+I'd love it if you made a Github Issue using [this link](https://github.com/LeptoFlare/offthedialbot/issues/new/choose). This lets us track all of the suggestions and reports permanently in one place, as opposed to the suggestions channel, where the messages can get easily lost.
 
 ## Definitions
 **DC**: Disconnect
@@ -109,7 +109,7 @@ The community is everyone who helps make Off the Dial what it is behind the scen
 There are many ways to contact us. If you need help and it's not in here ask in `#helpdesk` and either one of the organisers will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the `@Organiser` role (please only do so when needed). You can also dm us here on discord. If you want to do it off discord we regularly check the Twitter `@Off_The_Dial` so you can find us there. While on Twitter feel free to use the hashtags `#idtga` and `#WeakestLink` and mention `@Off_The_Dial` or `@DJam987`.
 
 ### I need help using smash.gg, where can I get it?
-DJam98 is in charge of smash.gg. If he cannot help, you can contact smash.gg directly on their website (https://help.smash.gg/) or on their discord.
+DJam98 is in charge of smash.gg. If he cannot help, you can contact [smash.gg](https://help.smash.gg/) directly on their website or on their discord.
 
 ### I've got a question, where do I ask?
 `#helpdesk` is the best place to go, and if it's a question you think should go in here let us know with all your other suggestions for Off the Dial in `#suggestions`.
