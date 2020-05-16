@@ -1,4 +1,4 @@
 # Off the Dial
 - [Community](community)
 - [FAQ](faq)
-- [Rules](rules/index)
+- [Rules](rules)
