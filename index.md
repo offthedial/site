@@ -1,4 +1,4 @@
 # Off the Dial
-- [Community](community.md)
-- [FAQ](faq.md)
-- [Rules](rules/index.md)
+- [Community](community)
+- [FAQ](faq)
+- [Rules](rules/index)
