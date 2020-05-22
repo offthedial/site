@@ -79,7 +79,6 @@ For everyone's sake, ***please*** do not drop out.
 #### If one on your team has dropped out:
 - Your team (Including the dropout) are responsible for finding a substitute.
 - The substitute must be approved by one of the TO’s.
-
 - You may be granted a little bit of time to search if in the first round, but you may have to do a 3v3 scenario, (see below).
 
 #### Matches with a dropout:
