@@ -4,8 +4,8 @@
 ![Stars][stars-shield]
 # <!-- ![Banner](banner.png) -->
 
-Longer description.
-- Feature
+A website to serve as a centralized place to find everything Off the Dial.
+- Embedded signup page (soon).
 
 ## Usage
 As of right now, I do not own otd.ink, therefore, you must go to `otd.lepto.tech`.
