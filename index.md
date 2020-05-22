@@ -1,4 +1,5 @@
-# About
+# Off the Dial
+## About
 - [Community](community)
 - [FAQ](faq)
 

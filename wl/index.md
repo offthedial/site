@@ -1,1 +1,2 @@
+# Weakest Link
 - [Rules](rules)
