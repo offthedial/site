@@ -1,4 +1,7 @@
-# Off the Dial
+# About
 - [Community](community)
 - [FAQ](faq)
-- [Rules](rules)
+
+## Tournaments
+- [It's Dangerous to go Alone](idtga)
+- [Weakest Link](wl)
