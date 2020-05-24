@@ -1,5 +1,6 @@
 # Off the Dial
 > Off the Dial is a unique tournament organisation for Splatoon 2, providing tournament opportunities for FA's that may not have been otherwise possible.
+
 ## About
 We get asked a lot of questions, so a FAQ necessary. You will find everything from "What is IDTGA" to definitions of tournament seeding. We recommend you check out that page next.
 - [FAQ](faq)
