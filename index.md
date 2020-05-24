@@ -6,7 +6,9 @@ We get asked a lot of questions, so a FAQ necessary. You will find everything fr
 
 Off the Dial is thankful to have such an awesome team and community! And you can check each one of them out, right here!
 - [Community](community)
-- [FAQ](faq)
+
+Our server has a custom Off the Dial Bot used for tournament running assistance. If you would like to know more, we have a page dedicated to about the bot here:
+- [Off the Dial Bot](bot)
 
 ## Tournaments
 You can't run a tournament without setting rules in place! Each tournament has their own rules page, you can check them out here.
