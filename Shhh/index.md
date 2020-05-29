@@ -2,4 +2,4 @@
 
 Something is coming soon, watch this page for more updates to come...
 
-![shhhhhh, it's a secret](https://tenor.com/view/shut-up-shhh-stop-gif-16284746)
+<img src="shhh.gif" width="40" height="40" />
