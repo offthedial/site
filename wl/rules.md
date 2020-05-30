@@ -1,10 +1,4 @@
 # Weakest Link Rules
-
-## Info
-<u>Weakest Link</u> is a unique, Off the Dial exclusive, free agent **and** team tournament for Splatoon 2! Sign up as a 3-player team or a lone free agent, and we will pair each team to each link. This tournament provides the opportunity for free agents to get coaching experience in a team setting, and for teams to test their communication and teaching skills.
-
-All you need to do is sign up! The world is waiting…
-
 ## Registration
 There are 2 ways to register, either as an FA (free agent), or a 3-player team. To register, simply enter `$signup` in `#bot-commands`! The bot will guide you through the complete process. If you have any questions or issues with the bot, feel free to ask in `#helpdesk` or `#user-support` on the [LeptoServer](https://discord.gg/faUNrfP).
 
