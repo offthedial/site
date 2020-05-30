@@ -16,6 +16,10 @@ You can't run a tournament without setting rules in place! Each tournament has t
 - [It's Dangerous to go Alone](idtga)
 - [Weakest Link](wl)
 
+## Blog and News
+Stay up to date with the newest features that we're bringing to Off the Dial!
+- [Blog](blog)
+
 ## Find Us!
 * [Discord](https://discord.gg/xWkx8SZ)
 * [Twitch](https://twitch.tv/offthedial)
