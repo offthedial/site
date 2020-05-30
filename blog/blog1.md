@@ -14,7 +14,7 @@ Wow, we finally did it, we have a brand new website that we can use! Should I ge
 *Not yet, but on the upcoming HTML website we're working at a way to have registration operate entirely on the website.*
 
 ## Who's building this website?
-*This website was built from the ground up by LeptoSpira, and is being currently maintained by both DJam98 and LeptoSpira. But the new website will be built by both LeptoSpira and DJam98 together.
+*This website was built from the ground up by LeptoSpira, and is being currently maintained by both DJam98 and LeptoSpira. But the new website will be built by both LeptoSpira and DJam98 together.*
 
 We're going to continue working on improving your experience with Off the Dial. Whether that be through websites, smash.gg, Discord and of course the actual tournament experience, we're here to make this experience be the best it can be.
 
