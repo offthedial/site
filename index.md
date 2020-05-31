@@ -17,10 +17,8 @@ Stay up to date with the newest updates on Off the Dial!
 ## Others
 - [Off the Dial Bot](bot)
   > Our server has a custom Off the Dial Bot used for tournament running assistance. If you would like to know more, we have a page dedicated to about the bot right here!
-
 - [Community](community)
   > Off the Dial is thankful to have such an awesome team and community! And you can check each one of them out right here!
-
 - [Contact](contact)
   > Off the Dial has many media outlets, you can find a list of all of them right here!
 
