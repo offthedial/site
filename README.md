@@ -16,7 +16,7 @@ Contact me · [**@LeptoFlare**](https://github.com/LeptoFlare) · [lepto.tech](h
 
 As always, distributed under the MIT license. See `LICENSE` for more information.
 
-_[https://github.com/LeptoFlare/otd.ink](https://github.com/LeptoFlare/otd.ink)_
+_[https://github.com/offthedial/otd.ink](https://github.com/offthedial/otd.ink)_
 
 <!-- markdown links & imgs -->
-[stars-shield]: https://img.shields.io/github/stars/LeptoFlare/otd.ink.svg?style=social
+[stars-shield]: https://img.shields.io/github/stars/offthedial/otd.ink.svg?style=social
