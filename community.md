@@ -1,8 +1,6 @@
 # Community
 Off the Dial is thankful to have such an awesome team and community of @Moderators, including @Streamers & @Organisers! They are a crucial part of Off the Dial and the server would not be where it is today without them. Each person in the community also has their own unique skills and backgrounds. If you want to learn more about them, or if they interest you, you can check each one of them out, right here!
 
-## Active
-Here you can find everyone who is actively maintaining Off the Dial!
 ### DJam98
 > *Owner & Twitter Addict* - **[Twitter](https://twitter.com/djam987)**
 
@@ -18,8 +16,6 @@ You may know Lepto as Off the Dial bot's new maintainer, or his latest announcem
 
 Zada is a recent addition to the commentary team at Off the Dial. He's been streaming since 2018 and hosts a weekly on-stream 1v1 Splatoon tournament. In the last two years he has participated in several Splatoon LANs around the United States. Outside of streaming Splatoon and a few other Nintendo Switch games, Zada serves on two boards of directors and works full-time as an information technology manager.
 
-## Past
-These are people who have contributed to Off the Dial in the past, but don't get the wrong idea! They were just as important and influential.
 ### Sauce
 > *Commentator/Streamer & Food Junkie* - **[Twitch](https://twitch.tv/saucesplatoon)**
 

@@ -6,3 +6,5 @@ Some commands to get you started:
 - Use `$flairme <flair>` to give yourself roles surrounding things you would like to get notified for things.
 
 For assistance, you can use `$help`. You can also add help to the beginning of any command for more specific help.
+
+The bot is open sourced, so if you would like to contibute, you can find all the source code [here](https://github.com/offthedial/bot).

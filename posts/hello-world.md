@@ -36,6 +36,9 @@ Not yet. However, we plan on having registration entirely done on the website in
 #### Who's building this website?
 The base of the website was originally built by LeptoFlare, and is being currently maintained by both DJam98 and LeptoFlare. As the website continues to progress and mature, LeptoFlare and DJam98 will be working on it together.
 
+#### Where can I contribute?
+The source code for this website can be found [here](https://github.com/offthedial/site).
+
 ### Final thoughts
 
 We're going to continue working on improving your experience with Off the Dial. Whether that be through websites, smash.gg, Discord and of course the actual tournament experience, we're here to make this experience be the best it can be.
