@@ -10,6 +10,6 @@ By registering into any tournament organised by 'Off the Dial' you are agreeing 
 6. Changes to the tournament may occur due to unforeseen circumstances. If changes do occur players must accept these changed or remove themselves from the current season before check-in closes.
 7. Matches of the tournament may be streamed on the official 'Off the Dial' live-stream or by players who may be also participating in the tournament. By registering in the tournament, players are giving their permission for their in-game avatars to be showcased on social media platforms (such as YouTube, Twitch, Twitter, etc), and for the use of promotional material made by Off the Dial or by players in the tournament.
 
-Player: Any person or team that registers into any 'Off the Dial' tournament
-IDTGA: It's Dangerous to go Alone
+Player: Any person or team that registers into any 'Off the Dial' tournament  
+IDTGA: It's Dangerous to go Alone  
 WL: Weakest Link
