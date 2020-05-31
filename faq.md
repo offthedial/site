@@ -18,6 +18,15 @@ Refer to your corresponding time-zone.
 
 Tournaments usually last anywhere between 2 and 5 hours (generally around the four hour mark)
 
+### Why are the admins and TOs always chatting with everyone?
+A happy server is a good server. We strive to make sure everyone is having a good time here and striking up conversations are a means to that end (and we also enjoy it).
+
+### What is the social media for Off the Dial?
+We have a Twitch, YouTube, Twitter, Patreon and the smash.gg page. All of these can be seen at [otd.ink/media](https://otd.ink/media).
+
+### What is the community page?
+The community is everyone who helps make Off the Dial what it is behind the scenes and the community channel shows who they are and what they do, you can find the page at [otd.ink/community](https://otd.ink/community)
+
 ## It’s Dangerous to go Alone
 ### What is It’s Dangerous to go Alone?
 It’s Dangerous to go Alone is a tournament that sorts free agents into teams, and then those teams play each other until one is crowned victory! Teams are balanced based on a players ranks, play style and tournament experience.
@@ -96,17 +105,8 @@ I'd love it if you made a Github Issue using [this link](https://github.com/Lept
 ### How are disputes/issues resolved?
 All issues are sorted here on discord.
 
-### Why are the admins and TOs always chatting with everyone?
-A happy server is a good server. We strive to make sure everyone is having a good time here and striking up conversations are a means to that end (and we also enjoy it).
-
-### What is the social media for Off the Dial?
-We have a Twitch, YouTube, Twitter, Patreon and the smash.gg page. All of these can be seen with the command `$media`
-
-### What is the `#community`?
-The community is everyone who helps make Off the Dial what it is behind the scenes and the community channel shows who they are and what they do
-
 ### I need to contact someone, how should I do it?
-There are many ways to contact us. If you need help and it's not in here ask in `#helpdesk` and either one of the organisers will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the `@Organiser` role (please only do so when needed). You can also dm us here on discord. If you want to do it off discord we regularly check the Twitter `@Off_The_Dial` so you can find us there. While on Twitter feel free to use the hashtags `#idtga` and `#WeakestLink` and mention `@Off_The_Dial` or `@DJam987`.
+There are many ways to contact us. If you need help and it's not in here ask in `#helpdesk` and either one of the organisers will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the `@Organiser` role (please only do so when needed). You can also dm us here on discord. If you want to do it off discord we regularly check the [Twitter](https://twitter.com/Off_The_Dial) so you can find us there. While on Twitter feel free to use the hashtags `#idtga` and `#WeakestLink` and mention `@Off_The_Dial` or `@DJam987`.
 
 ### I need help using smash.gg, where can I get it?
 DJam98 is in charge of smash.gg. If he cannot help, you can contact [smash.gg](https://help.smash.gg/) directly on their website or on their discord.
