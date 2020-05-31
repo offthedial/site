@@ -1,4 +1,4 @@
-# Off the Dial Attendee Agreement
+# Terms and Conditions
 
 By registering into any tournament organised by 'Off the Dial' you are agreeing to the following conditions:
 
