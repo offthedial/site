@@ -1,5 +1,5 @@
-# `site`
-> Off the Dial Website
+# Off the Dial Site
+> The website for Off the Dial.
 
 ![Stars][stars-shield]
 # <!-- ![Banner](banner.png) -->
