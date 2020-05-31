@@ -9,7 +9,7 @@ As of right now, the website is simply hosting static documents regarding Off th
 Below, we've listed a few questions that you might have.
 
 #### Where can I find the website?
-To get to our main homepage, click the **otd.ink** text above or just go to [`otd.ink`](https://otd.ink) into your browser.
+To get to our main homepage, click the **Off the Dial** text above or just go to [`otd.ink`](https://otd.ink) into your browser.
 
 #### What has changed for me?
 There are a few things that have changed, let's go through them:
