@@ -80,17 +80,17 @@ Yes! You can find all the code on [Github](https://github.com/LeptoFlare/offthed
 I'd love it if you made a Github Issue using [this link](https://github.com/LeptoFlare/offthedialbot/issues/new/choose). This lets us track all of the suggestions and reports permanently in one place, as opposed to the suggestions channel, where the messages can get easily lost.
 
 ## Definitions
-- **DC**: Disconnect
-- **KO**: Knockout
-- **Groups/Pools**: In order to finish large events in a timely manner, most organisers will split up the attendees into
-- **Groups** (more commonly referred to as Pools in the FGC). By having a smaller player group, you can eliminate players faster than if it were all just a single bracket. Pools will always progress into another elimination phase.
 - **FA**: Free agent (any player who isn’t on a team)
-- **Round**: A group of sets in a bracket *Ex: “I lost in the first round of winners, so now I’m in the first round of losers”.*
-- **Match/Set**: The act of two players sitting down to determine a winner during an event. Sets are decided by winning a predetermined number of games.
-- **Game**: Players interacting within the video game until the game (or tournament rules) decides a victor. The end of a game is usually denoted by KO! or GAME!, or a bunch of people loudly reacting.
-- **Best of**:  Number of games required to determine a winner of a set, once a comeback is impossible, the set it over *Ex: “We will play a BO3 and the first team to win twice is determined the champions.*
-- **Play All**: Number of games to be played in a set, but unlike a Best Of, this requires all games in a set to be played *Ex. A PA3 means 3 games will have to be played, regardless if a team has already won two games*
-- **Open Bracket**: *A bracket/event that anyone can register and enter to compete in.*
+- **Pools**: In order to finish large events in a timely manner, most organisers will split up the attendees into groups. By having multiple player pools, you can have more matches running concurrently.
+- **Round**: A group of sets in a bracket.
+  > *Ex: I lost in round 1 of winners, so now I’m in round 1 of losers.*
+- **Match/Set**: A group of games, there are multiple per round. Each match/set of the same round has different competitors and are usually played concurrently. 
+- **Game**: An actual in-game game.
+- **Best of**:  Number of games required to determine a winner of a set, once a comeback is impossible, the set it over.
+  > *Ex: We don't play the last game, because I won the set already.*
+- **Play All**: Number of games to be played in a set, but unlike a Best Of, this requires all games in a set to be played
+  > *Ex: I already won the set, but we play the last game anyways.*
+- **Open Bracket**: A bracket/event that anyone can register and enter to compete in, such as IDTGA.
 
 ## Others
 ### How are disputes/issues resolved?
