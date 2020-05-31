@@ -5,8 +5,8 @@
 You can't run a tournament without setting rules in place!
 Each tournament has their own rules page, you can check them out here.
 
-- ##### Our flagship tournament... [It's Dangerous to go Alone](idtga)!
-- ##### A unique experience... [Weakest Link](wl)!
+- #### Our flagship tournament... [It's Dangerous to go Alone](idtga)!
+- #### A unique experience... [Weakest Link](wl)!
 
 ## [FAQ](faq)
 We get asked a lot of questions, so a FAQ necessary. You will find everything from "What is IDTGA" to definitions of tournament seeding. We recommend you check out that page next.
