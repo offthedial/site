@@ -12,10 +12,6 @@ Go to [`otd.ink`](https://otd.ink).
 
 ---
 
-Contact me · [**@LeptoFlare**](https://github.com/LeptoFlare) · [lepto.tech](https://lepto.tech)
-
-As always, distributed under the MIT license. See `LICENSE` for more information.
-
 _[https://github.com/offthedial/site](https://github.com/offthedial/site)_
 
 <!-- markdown links & imgs -->
