@@ -8,7 +8,7 @@ A website to serve as a centralized place to find everything Off the Dial.
 - Embedded signup page (soon).
 
 ## Usage
-Go to [`site`](https://site).
+Go to [`otd.ink`](https://otd.ink).
 
 ---
 
