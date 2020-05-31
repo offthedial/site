@@ -1,5 +1,5 @@
 # Off the Dial
-> Off the Dial is a unique tournament organisation for Splatoon 2, providing tournament opportunities for FA's that may not have been otherwise possible.
+Off the Dial is a unique tournament organisation for Splatoon 2, providing tournament opportunities for FA's that may not have been otherwise possible.
 
 ## Tournaments
 You can't run a tournament without setting rules in place!

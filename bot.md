@@ -1,5 +1,5 @@
 # Off the Dial Bot
-> A custom made bot, it's built from the ground up by [LeptoFlare](https://lepto.tech) and used for all kinds of stuff, tournament management, profile storage, and generating minesweepers at your convenience.
+A custom made bot, it's built from the ground up by [LeptoFlare](https://lepto.tech) and used for all kinds of stuff, tournament management, profile storage, and generating minesweepers at your convenience.
 
 Some commands to get you started:
 - Use `$profile create` to create your profile so you don't have to create one when you sign up for a tournament.
