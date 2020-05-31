@@ -3,19 +3,20 @@
 ### What is Off the Dial?
 Off the Dial is a tournament organisation dedicated to creating tournaments for Splatoon. Currently our main tournaments are It’s Dangerous to go Alone, Weakest Link and the Off the Dial Story Mode.
 
-### What time do the tournaments begin?
-Refer to your corresponding time-zone.
+### What time do tournaments begin?
+All tournaments begin on the same minute/hour, but due to timezones that time may differ. Daylight savings times have been listed as well.
 
-> **NOTE:** All tournaments begin on the same minute/hour, but due to timezones that time may differ. Daylight savings times have been listed as well.
+Refer to your corresponding time-zone.
 
 - `EST` 3pm Saturday
 - `EDT` 4pm Saturday
 - `GMT` 8pm Saturday
 - `BST` 9pm Saturday
-- `JST/日本時間` 5am Sunday
+- `JST` 5am Sunday
 - `AEST` 6am Sunday
 - `AEDT` 7am Sunday
 
+### What time do tournaments end?
 Tournaments usually last anywhere between 2 and 5 hours (generally around the four hour mark)
 
 ### Why are the admins and TOs always chatting with everyone?
