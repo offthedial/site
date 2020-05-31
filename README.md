@@ -1,4 +1,4 @@
-# `otd.ink`
+# `site`
 > Off the Dial Website
 
 ![Stars][stars-shield]
@@ -8,7 +8,7 @@ A website to serve as a centralized place to find everything Off the Dial.
 - Embedded signup page (soon).
 
 ## Usage
-Go to [`otd.ink`](https://otd.ink).
+Go to [`site`](https://site).
 
 ---
 
@@ -16,7 +16,7 @@ Contact me · [**@LeptoFlare**](https://github.com/LeptoFlare) · [lepto.tech](h
 
 As always, distributed under the MIT license. See `LICENSE` for more information.
 
-_[https://github.com/offthedial/otd.ink](https://github.com/offthedial/otd.ink)_
+_[https://github.com/offthedial/site](https://github.com/offthedial/site)_
 
 <!-- markdown links & imgs -->
-[stars-shield]: https://img.shields.io/github/stars/offthedial/otd.ink.svg?style=social
+[stars-shield]: https://img.shields.io/github/stars/offthedial/site.svg?style=social
