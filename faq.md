@@ -61,13 +61,6 @@ Really simple actually. It’s because I’m (DJam98) in my final year of high s
 ### Why make IDTGA a league?
 So we can have a leaderboard for players who often play in the tournament and to group the tournaments onto one single page
 
-## Off the Dial Story Mode
-### What is the Off the Dial Story Mode
-There is an ongoing story with Off the Dial behind the scenes and it is your job to find out what is happening. Leading up to the tournament, there are be lore drops. The result of the tournament will decide what happens next. For more information ask other people on the server and make your predictions and dicsuss lore in `#crime-scene` If you want to be serious about lore, you can give yourself the `@Detective` role with `$flairme flairs` to ensure you get notified of each new lore drop. Plus, you get a fancy role.
-
-### What’s different about this to regular IDTGA?
-In terms of the actual competition, very little. It is still a free agent tournament at it’s core. The only difference is that after the regular finals match there will be an additional finals round against a pre-determined team called the final boss. This is kept secret until the round begins or may be disclosed in clues prior to the tournament’s commencement
-
 ## Weakest Link
 ### What is Weakest Link?
 Weakest link is a unique, Off the Dial exclusive, tournament featuring both teams and free agents! Sign up as a 3 player team and get paired up with a lone FA.
@@ -75,9 +68,16 @@ Weakest link is a unique, Off the Dial exclusive, tournament featuring both team
 ### Is there a skill limit/cap, and can I still play as a FA if I'm already on a team?
 There is a skill limit for teams, and there is a skill cap for players, if you are a FA above the skill cap, you can create a pickup team, if you are a team below the skill limit, you can sign up as a FA instead.
 
+## Off the Dial Story Mode
+### What is the Off the Dial Story Mode
+There is an ongoing story with Off the Dial behind the scenes and it is your job to find out what is happening. Leading up to the tournament, there are be lore drops. The result of the tournament will decide what happens next. For more information ask other people on the server and make your predictions and dicsuss lore in `#crime-scene` If you want to be serious about lore, you can give yourself the `@Detective` role with `$flairme flairs` to ensure you get notified of each new lore drop. Plus, you get a fancy role.
+
+### What’s different about this to regular IDTGA?
+In terms of the actual competition, very little. It is still a free agent tournament at it’s core. The only difference is that after the regular finals match there will be an additional finals round against a pre-determined team called the final boss. This is kept secret until the round begins or may be disclosed in clues prior to the tournament’s commencement
+
 ## Off the Dial Bot
 ### What is Off the Dial Bot?
-Off the Dial Bot is a custom built bot by `@LeptoFlare`, It provides many commands that help us run tournaments more smoothly.
+Off the Dial Bot is a custom built bot by `@LeptoFlare`, It provides many commands that help us run tournaments more smoothly. You can find a page regarding the bot [here](https://otd.ink/bot).
 
 ### What is my 'Signal Strength'?
 Your Signal Strength is our internal way of calculating your tournament experience while being here on Off the Dial. As it was only introduced at the start of 2020, we'll still be asking for your previous OTD experience in registration forms until the Signal Strength is an accurate representation. You gain strength by playing in tournaments as well as by placing high in the tournaments.
