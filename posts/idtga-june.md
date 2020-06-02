@@ -10,6 +10,9 @@ It's a new month, that means another Off the Dial tournament! This month it'll b
 - AEST - Sunday the 28th of June, 6am
 ### Registration closes 48 hours before the tournament commences.
 
+## Registration
+- To register for the tournament, head to our [Discord](https://discord.gg/xWkx8SZ), go to a bot command channel, say `$signup` and follow the instructions.
+
 ## Patch Notes
 There hasn't been many changes this season, as we've been working towards getting this website up and running, as well as working towards a huge update that's coming later this year. Below are all the links that have changed locations.
 - [IDTGA Rules](https://otd.ink/idtga/rules)
