@@ -20,3 +20,5 @@ There hasn't been many changes this season, as we've been working towards gettin
 - [Off the Dial Bot Info](https://otd.ink/bot)
 - [Community](https://otd.ink/community)
 - [Terms and Conditions](https://otd.ink/legal)
+
+We've had an assets page up for a while, but we haven't actually announced them officially. Before, they were on a Google Drive folder, but we've moved it to a new GitHub page. You can access this [GitHub page at https://github.com/offthedial/assets[(https://github.com/offthedial/assets).
