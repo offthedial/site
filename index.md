@@ -21,6 +21,8 @@ Stay up to date with the newest updates on Off the Dial!
   > Off the Dial is thankful to have such an awesome team and community! And you can check each one of them out right here!
 - [Media](media)
   > Off the Dial has many media outlets, you can find a list of all of them right here!
+- [Assets](https://github.com/offthedial/assets)
+> Use all of our assets free forever. Assets include logos and banners related to Off the Dial and its tournaments
 
 ---
 
