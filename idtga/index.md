@@ -3,5 +3,9 @@
 
 All you need to do is sign up! The world is waiting…
 
+## Registration
+To register, simply enter `$signup` in `#bot-commands` on (Discord)(discord)! The bot will guide you through the complete process. If you have any questions or issues with the bot, feel free to ask in `#helpdesk`.
+
 ## More information
 - [Rules](rules)
+- [smash.gg](https://smash.gg/idtga)

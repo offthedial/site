@@ -1,9 +1,6 @@
 # IDTGA Rules
-## Registration
-To register, simply enter `$signup` in `#bot-commands`! The bot will guide you through the complete process. If you have any questions or issues with the bot, feel free to ask in `#helpdesk` or `#user-support` on the [LeptoServer](https://discord.gg/faUNrfP).
-
 ## Format
-Complete teams will consist of four players.
+Complete teams will consist of 4-5 players.
 
 ### Preliminaries:
 - Swiss Pools
