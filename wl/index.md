@@ -14,13 +14,13 @@ There are 2 ways to register, either as an FA (free agent), or a 3-player team.
 ### Registering as an FA (the Weakest Link)
 - FA’s have a skill ceiling of no X ranks.
 
-  If your rank is too high, you can create a pickup team. Pickups can be formed in the `#build-a-team` channel or any of the pickup channels/servers listed on the [Inkademy](https://www.google.com/url?q=http://discord.io/inkademy&sa=D&ust=1589650454305000) discord server.
+  If your rank is too high, you can create a pickup team. Pickups can be formed in the `#build-a-team` channel or any of the pickup channels/servers listed on the [Inkademy](https://discord.io/inkademy) discord server.
 
 Exceptions can be made! Contact the TO’s for more details.
 
 If you are unsure of what category you are, contact one of the Organisers and we’ll sort you out.
 
-To register, simply enter `$signup` in `#bot-commands` on (Discord)(discord)! The bot will guide you through the complete process. If you have any questions or issues with the bot, feel free to ask in `#helpdesk`.
+To register, simply enter `$signup` in `#bot-commands` on [Discord](https://otd.ink/discord)! The bot will guide you through the complete process. If you have any questions or issues with the bot, feel free to ask in `#helpdesk`.
 
 ## More information
 - [Rules](rules)
