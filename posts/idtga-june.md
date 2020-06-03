@@ -11,14 +11,13 @@ It's a new month, that means another Off the Dial tournament! This month it'll b
 ### Registration closes 48 hours before the tournament commences.
 
 ## Registration
-- To register for the tournament, head to our [Discord](https://discord.gg/xWkx8SZ), go to a bot command channel, say `$signup` and follow the instructions.
+1. Head over to our [Discord](https://otd.ink/discord)
+2. Find an open `#bot-commands` channel
+3. Type `$signup` and follow the instructions.
+
+For more details, you can check out our brand new [tournament page](https://otd.ink/idtga) on our website.
 
 ## Patch Notes
-There hasn't been many changes this season, as we've been working towards getting this website up and running, as well as working towards a huge update that's coming later this year. Below are all the links that have changed locations.
-- [IDTGA Rules](https://otd.ink/idtga/rules)
-- [FAQ](https://otd.ink/faq)
-- [Off the Dial Bot Info](https://otd.ink/bot)
-- [Community](https://otd.ink/community)
-- [Terms and Conditions](https://otd.ink/legal)
+There hasn't been many changes this season, as we've been focusing greatly on getting this website up and running, as well as working towards a huge update that's coming later this year.
 
-We've had an assets page up for a while, but we haven't actually announced them officially. Before, they were on a Google Drive folder, but we've moved it to a new GitHub page. You can access this [GitHub page at https://github.com/offthedial/assets[(https://github.com/offthedial/assets).
+Stay tuned!
