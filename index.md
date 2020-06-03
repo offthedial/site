@@ -1,5 +1,5 @@
 # Off the Dial [![Discord](https://discord.com/api/guilds/374715620052172800/widget.png?style=shield)](https://otd.ink/discord)
-Off the Dial is a unique tournament organisation for Splatoon 2, providing tournament opportunities for FA's (free agents) that may not have been otherwise possible.
+Off the Dial is a unique tournament organisation for Splatoon 2, dedicated to providing fresh tournament opportunities for free agents.
 
 ## Tournaments
 You can't run a tournament without setting rules in place!
