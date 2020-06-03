@@ -1,8 +1,8 @@
 # Media
 Find us on these platforms:
-* [Discord](https://discord.gg/xWkx8SZ)
-* [Twitch](https://twitch.tv/offthedial)
-* [Twitter](https://twitter.com/off_the_dial)
-* [Patreon](https://patreon.com/offthedial)
-* [Github](https://github.com/offthedial)
-* [YouTube](https://www.youtube.com/channel/UCjFqnfg0CKsnQ8ag1MfNtuQ)
+* [Discord](https://otd.ink/discord)
+* [Twitch](https://otd.ink/twitch)
+* [Twitter](https://otd.ink/twitter)
+* [Patreon](https://otd.ink/patreon)
+* [Github](https://otd.ink/github)
+* [YouTube](https://otd.ink/youtube)
