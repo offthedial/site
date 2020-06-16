@@ -1,5 +1,7 @@
 # Off the Dial Site
-> The website for Off the Dial. `The website is still in it's beta phase, we're working on a better version coming later.`
+> The website for Off the Dial. 
+
+`The website is still in it's beta phase, we're working on a better version coming later.`
 
 ![Stars][stars-shield]
 # <!-- ![Banner](banner.png) -->
