@@ -23,6 +23,7 @@ Stay up to date with the newest updates on Off the Dial!
   > Off the Dial has many media outlets, you can find a list of all of them right here!
 - [Assets](https://github.com/offthedial/assets)
   > Many of our assets are public and free. Assets include logos and banners related to Off the Dial and its tournaments. You can find them all right here!
+
 ---
 
 *This website is currently in beta, more features are to come. Stay tuned!*
