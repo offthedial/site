@@ -19,7 +19,6 @@ Complete teams will consist of 4-5 players.
 - All other preliminary matches will go for 40 minutes.
 - There is no time limit on the finals.
 - After the round has completed, any unreported games will automatically be reported as empty.
-- There will be a five-minute break before the first finals match.
 - If you finish a round early, you must wait for the next round to begin.
 
 ## Subs
