@@ -29,7 +29,7 @@ Refer to your corresponding time-zone.
 Tournaments usually last anywhere between 2 and 5 hours (generally around the four hour mark)
 
 ### Will tournaments be streamed?
-Yes! If there are at-least 4 teams, 1 match from each preliminary round will be streamed. All finals matches will be streamed as well.
+Yes! If there are at-least 4 teams, 1 match from each preliminary round will be streamed. There will be a five-minute break before the first finals match. All finals matches will be streamed as well.
 
 ### How are disputes/issues resolved?
 All issues are sorted here on discord.
