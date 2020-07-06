@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import SEO from "../components/seo"
-import Header from "./header"
+import SEO from "./layout/seo"
+import NavBar from "./layout/navbar"
 
 const Layout = ({ seo, children }) => {
   const data = useStaticQuery(graphql`
@@ -18,8 +18,11 @@ const Layout = ({ seo, children }) => {
 
   return (
     <>
+      {/* SEO component */}
       <SEO title={seo} />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      {/* NavBar component */}
+      <NavBar siteTitle={data.site.siteMetadata.title} />
+      {/* Actual page */}
       <div
         style={{
           margin: `0 auto`,
@@ -27,7 +30,9 @@ const Layout = ({ seo, children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+        {/* Main section */}
         <main>{children}</main>
+        {/* Footer */}
         <footer>
           <br></br>
           <hr></hr>

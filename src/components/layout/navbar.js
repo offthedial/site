@@ -4,11 +4,13 @@ import React from "react"
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1.5rem` }}>
-    <Link to={props.to} style={props.style}>{props.children}</Link>
+    <Link to={props.to} style={props.style}>
+      {props.children}
+    </Link>
   </li>
 )
 
-const Header = ({ siteTitle }) => (
+const NavBar = ({ siteTitle }) => (
   <header
     style={{
       background: `#5d9194`,
@@ -28,7 +30,7 @@ const Header = ({ siteTitle }) => (
           style={{
             color: `white`,
             textDecoration: `none`,
-            fontSize: `2rem`
+            fontSize: `2rem`,
           }}
         >
           {siteTitle}
@@ -58,12 +60,12 @@ const Header = ({ siteTitle }) => (
   </header>
 )
 
-Header.propTypes = {
+NavBar.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+NavBar.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default NavBar
