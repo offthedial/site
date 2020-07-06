@@ -23,7 +23,7 @@ module.exports = {
         background_color: `#5d9194`,
         theme_color: `#5d9194`,
         display: `minimal-ui`,
-        icon: `src/images/logo-square.png`,
+        icon: `src/images/logo-squircle.png`,
       },
     },
   ],
