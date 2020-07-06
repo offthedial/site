@@ -32,21 +32,6 @@ const Layout = ({ pageTitle, children }) => {
       >
         {/* Main section */}
         <main>{children}</main>
-        {/* Footer */}
-        <footer>
-          <br></br>
-          <hr></hr>
-          <div
-            style={{
-              fontSize: `80%`,
-              opacity: `80%`,
-              fontStyle: `italic`,
-            }}
-          >
-            This website is currently in beta, more features are to come.
-            Stay tuned!
-          </div>
-        </footer>
       </div>
     </>
   )

@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
+import Footer from "../components/footer"
 
 const IndexPage = () => (
   <Layout pageTitle="Welcome">
@@ -56,6 +57,7 @@ const IndexPage = () => (
         </blockquote>
       </li>
     </ul>
+    <Footer msg="This website is currently in beta, more features are to come. Stay tuned"/>
   </Layout>
 )
 
