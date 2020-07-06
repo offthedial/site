@@ -1,4 +1,4 @@
-# Weakest Link Season 4 | July 2020
+# Weakest Link | July 2020
 July has hit the stacks, and this month, we'll be playing __Weakest Link__. In this tournament, you sign up as one of either two categories. You could be a free agent, or as a three-player team. To be a free agent, you must have **zero** X ranks. If you're signing up together with two other people in a three-player team (you must all sign up together as a team), every player of the team must have at least *one* X rank. About one week before the tournament, registration will close, free agents will be assigned to a three-player team, and you'll have a week to practice before the tournament! Good luck to you all, and we'll see you all at the end of the month!
 
 ## Dates
