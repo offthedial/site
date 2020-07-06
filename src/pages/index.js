@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 
 const IndexPage = () => (
-  <Layout seo="Welcome">
+  <Layout pageTitle="Welcome">
     <p>
       Off the Dial is a unique tournament organisation for Splatoon 2, dedicated
       to providing fresh tournament opportunities for free agents and teams

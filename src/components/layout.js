@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import SEO from "./layout/seo"
 import NavBar from "./layout/navbar"
 
-const Layout = ({ seo, children }) => {
+const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -19,7 +19,7 @@ const Layout = ({ seo, children }) => {
   return (
     <>
       {/* SEO component */}
-      <SEO title={seo} />
+      <SEO title={pageTitle} />
       {/* NavBar component */}
       <NavBar siteTitle={data.site.siteMetadata.title} />
       {/* Actual page */}
