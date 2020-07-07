@@ -1,9 +1,9 @@
 import React from "react"
-import gray from "gray-percentage"
+import { Card } from "react-bootstrap"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 
-import { rhythm } from "src/utils/typography"
+import { rhythm, gray } from "src/utils/typography"
 import Layout from "src/components/layout"
 
 export default function Posts({ data }) {
@@ -39,8 +39,8 @@ export default function Posts({ data }) {
             <Link style={{
               padding: rhythm(2 / 3)
             }}
-            to={node.fields.slug}
-            css={css`
+              to={node.fields.slug}
+              css={css`
               text-decoration: none;
               color: inherit;
               border-bottom: 0 !important;
@@ -49,21 +49,21 @@ export default function Posts({ data }) {
                 <h3 css={css`
                     margin-bottom: ${rhythm(1 / 4)}
                   `}>
-              {node.frontmatter.title}{" "}
-              <span
-                css={css`
-                  color: ${gray(33)};
-                  font-size: 80%;
-                `}
-              >
-                — {node.frontmatter.date}
-              </span>
-            </h3>
+                  {node.frontmatter.title}{" "}
+                  <span
+                    css={css`
+                        color: ${gray(33)};
+                        font-size: 80%;
+                      `}
+                  >
+                    — {node.frontmatter.date}
+                  </span>
+                </h3>
               </Card.Title>
               <Card.Text>
-            <blockquote><i>{node.excerpt}</i></blockquote>
+                <blockquote><i>{node.excerpt}</i></blockquote>
               </Card.Text>
-          </Link>
+            </Link>
           </Card>
         </div>
       ))}

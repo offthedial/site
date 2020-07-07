@@ -1,9 +1,8 @@
 import React from "react"
-import gray from "gray-percentage"
 import { graphql } from "gatsby"
 import { css } from "@emotion/core"
 
-import { rhythm } from "src/utils/typography"
+import { rhythm, gray } from "src/utils/typography"
 import Layout from "src/components/layout"
 
 export default function Post({ data }) {
