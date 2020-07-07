@@ -6,7 +6,7 @@ import { rhythm } from "src/utils/typography"
 import colors from "src/static/colors"
 
 const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1.5rem` }}>
+  <li style={{ display: `inline-block`, marginRight: rhythm(1) }}>
     <Link to={props.to} style={props.style}>
       {props.children}
     </Link>
