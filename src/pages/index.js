@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "src/components/layout"
 import Footer from "src/components/footer"
 
-const IndexPage = () => (
+const Index = () => (
   <Layout pageTitle="Welcome">
     <p>
       Off the Dial is a unique tournament organisation for Splatoon 2, dedicated
@@ -60,5 +60,3 @@ const IndexPage = () => (
     <Footer msg="This website is currently in beta, more features are to come. Stay tuned"/>
   </Layout>
 )
-
-export default IndexPage
