@@ -1,6 +1,6 @@
 import React from "react"
 import gray from "gray-percentage"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 
 import { rhythm } from "src/utils/typography"
@@ -32,25 +32,30 @@ export default function Posts({ data }) {
       </h1>
       <hr />
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          <h3
+        <div key={node.fields.slug}>
+          <Link
+            to={`.${node.fields.slug}`}
             css={css`
-              margin-bottom: ${rhythm(1 / 4)};
-            `}
-          >
-            {node.frontmatter.title}{" "}
-            <span
+              text-decoration: none;
+              color: inherit;
+            `}>
+            <h3
               css={css`
-                color: ${gray(35)};
-                font-size: 80%;
+                margin-bottom: ${rhythm(1 / 4)};
               `}
             >
-              — {node.frontmatter.date}
-            </span>
-          </h3>
-          <blockquote>
-            <i>{node.excerpt}</i>
-          </blockquote>
+              {node.frontmatter.title}{" "}
+              <span
+                css={css`
+                color: ${gray(35)};
+                  font-size: 80%;
+                `}
+              >
+                — {node.frontmatter.date}
+              </span>
+            </h3>
+            <blockquote><i>{node.excerpt}</i></blockquote>
+          </Link>
         </div>
       ))}
     </Layout>
@@ -63,11 +68,13 @@ export const query = graphql`
       totalCount
       edges {
         node {
-          id
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
             author
+          }
+          fields {
+            slug
           }
           excerpt
         }
