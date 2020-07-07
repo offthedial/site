@@ -18,17 +18,17 @@ const typography = new Typography({
     overrideStyles: ({ rhythm }) => {
         const styles = {
             a: {
-                color: colors.dark_blue,
+                color: colors.primary,
                 textDecoration: "none",
             },
             "a:hover": {
                 opacity: "75%",
             },
             blockquote: {                
-                color: gray(41),
+                color: gray(40),
                 marginLeft: rhythm(1 / 6),
                 paddingLeft: rhythm(6 / 9),
-                borderLeft: `${rhythm(1 / 9)} solid ${colors.dark_blue}`,
+                borderLeft: `${rhythm(1 / 9)} solid ${colors.primary}`,
             },
         }
         return styles

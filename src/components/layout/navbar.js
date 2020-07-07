@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { rhythm } from "src/utils/typography"
+import colors from "src/static/colors"
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1.5rem` }}>
@@ -15,7 +16,7 @@ const ListLink = props => (
 const NavBar = ({ siteTitle }) => (
   <header
     style={{
-      background: `#5d9194`,
+      background: `${colors.primary}`,
       marginBottom: `${rhythm(1)}`,
     }}
   >
@@ -23,7 +24,7 @@ const NavBar = ({ siteTitle }) => (
       style={{
         margin: `0 auto`,
         maxWidth: 1000,
-        padding: `${rhythm(1)} 0`,
+        padding: `${rhythm(1)} ${rhythm(.2)}`,
       }}
     >
       <h1 style={{ margin: 0 }}>

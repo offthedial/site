@@ -1,7 +1,7 @@
 export default {
-    light_blue: `#1abfc7`,
-    dark_blue: `#5d9194`,
-    green: `#39fa96`,
-    pink: `#fb788b`,
-    purple: `#c71a8a`
+    primary: `#5d9194`,
+    primary_light: `#1abfc7`,
+    mid: `#39fa96`,
+    secondary: `#c71a8a`,
+    secondary_light: `#fb788b`,
 }
