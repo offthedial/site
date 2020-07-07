@@ -1,7 +1,7 @@
 import Typography from "typography"
 import gray from "gray-percentage"
 
-import colors from "../static/colors"
+import colors from "src/static/colors"
 
 const typography = new Typography({
     googleFonts: [
