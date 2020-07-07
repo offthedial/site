@@ -60,3 +60,5 @@ const Index = () => (
     <Footer msg="This website is currently in beta, more features are to come. Stay tuned"/>
   </Layout>
 )
+
+export default Index

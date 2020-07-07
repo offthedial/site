@@ -8,3 +8,5 @@ const NotFound = () => (
     <h2>There's nothing here.</h2>
   </Layout>
 )
+
+export default NotFound
