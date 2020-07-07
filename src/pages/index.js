@@ -6,11 +6,11 @@ import Footer from "src/components/footer"
 
 const Index = () => (
   <Layout pageTitle="Welcome">
-    <p>
+    <h2>
       Off the Dial is a unique tournament organisation for Splatoon 2, dedicated
       to providing fresh tournament opportunities for free agents and teams
       alike.
-    </p>
+    </h2>
     <h2>
       <Link to="/faq">faq</Link>
     </h2>
