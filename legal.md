@@ -1,8 +1,7 @@
 # Terms and Conditions
+By registering into any tournament organised by 'Off the Dial' you have read and agreed to the following conditions below, it's not that much.
 
-Off the Dial follows the [Splatoon Safety - Code of Conduct](https://docs.google.com/document/d/1Pf6S25d2rFDAP5JUJzaVeEkb0OGYIaGo-LQ3KGXUOpA).
-
-By registering into any tournament organised by 'Off the Dial' you are agreeing to the following conditions:
+1. All tournaments Off the Dial organises are Signatory Events as defined by the [Splatoon Safety - Code of Conduct](https://docs.google.com/document/d/1Pf6S25d2rFDAP5JUJzaVeEkb0OGYIaGo-LQ3KGXUOpA).
 1. Matches of the tournament may be streamed on the official 'Off the Dial' livestream or by players who may be also participating in the tournament. By registering in the tournament, players are giving their permission for their in-game avatars to be showcased on social media platforms (such as YouTube, Twitch, Twitter, etc), and for the use of promotional material made by Off the Dial or by players in the tournament.
 1. If a player breaks any rules or any of these terms and conditions stated in the documents available online that state the rules for each tournament, they may be banned from one or more seasons of 'It's Dangerous to go Alone', 'Weakest Link' and any other competition that Off the Dial may announce in the future.
 1. Any data collected by 'Off the Dial' or the tournament organisers of 'Off the Dial' can and may be used in future events until updated by the player. This information will not be shared with anyone else (excluding tournament organisers) without the player's permission. This excludes information that is used or seen publically during the tournament's duration (IGN, friend code, ranks). 'Off the Dial' is not in the buisness of selling your data.
