@@ -1,7 +1,7 @@
 import Typography from "typography"
 import gray from "gray-percentage"
 
-import colors from "src/static/colors"
+import colors from "./colors"
 
 const typography = new Typography({
   googleFonts: [
@@ -43,6 +43,6 @@ const typography = new Typography({
     return styles
   },
 })
-
 export var rhythm = typography.rhythm
+export var gray = gray
 export default typography

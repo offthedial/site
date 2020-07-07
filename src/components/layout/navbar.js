@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 import { rhythm } from "src/utils/typography"
 import ListLink from "src/components/listlink"
-import colors from "src/static/colors"
+import colors from "src/utils/colors"
 
 const NavBar = ({ siteTitle }) => (
   <header
