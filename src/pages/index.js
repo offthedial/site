@@ -12,7 +12,7 @@ const Index = () => (
       alike.
     </h2>
     <h2>
-      <Link to="/faq">faq</Link>
+      <Link to="/faq">FAQ</Link>
     </h2>
     <p>
       We get asked a lot of questions, so a FAQ necessary. You will find
@@ -20,7 +20,7 @@ const Index = () => (
       recommend you check out this page.
     </p>
     <h2>
-      <Link to="/posts">posts</Link>
+      <Link to="/posts">Posts</Link>
     </h2>
     <p>Stay up to date with the newest updates on Off the Dial!</p>
 
