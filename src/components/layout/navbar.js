@@ -24,7 +24,7 @@ const NavBar = ({ siteTitle }) => (
       style={{
         margin: `0 auto`,
         maxWidth: 1000,
-        padding: `${rhythm(1)} ${rhythm(.2)}`,
+        padding: `${rhythm(1)} ${rhythm(0.2)}`,
       }}
     >
       <h1 style={{ margin: 0 }}>
