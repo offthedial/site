@@ -18,7 +18,7 @@ const typography = new Typography({
   overrideStyles: ({ rhythm }) => {
     const styles = {
       li: {
-        margin: rhythm(1 / 9),
+        margin: rhythm(1 / 6),
       },
       code: {
         padding: rhythm(.1),
