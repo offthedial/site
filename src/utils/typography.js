@@ -44,5 +44,4 @@ const typography = new Typography({
   },
 })
 export var rhythm = typography.rhythm
-export var gray = gray
 export default typography
