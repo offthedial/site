@@ -34,7 +34,7 @@ export default function Posts({ data }) {
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.fields.slug}>
           <Link
-            to={`.${node.fields.slug}`}
+            to={node.fields.slug}
             css={css`
               text-decoration: none;
               color: inherit;
@@ -75,6 +75,11 @@ export const query = graphql`
           }
           fields {
             slug
+          }
+          parent {
+            ... on File {
+              relativeDirectory
+            }
           }
           excerpt
         }

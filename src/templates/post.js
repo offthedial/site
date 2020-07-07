@@ -6,7 +6,7 @@ import { css } from "@emotion/core"
 import { rhythm } from "src/utils/typography"
 import Layout from "src/components/layout"
 
-export default function BlogPost({ data }) {
+export default function Post({ data }) {
   const post = data.markdownRemark
   return (
     <Layout>
