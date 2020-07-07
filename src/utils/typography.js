@@ -17,11 +17,20 @@ const typography = new Typography({
   boldWeight: 500,
   overrideStyles: ({ rhythm }) => {
     const styles = {
+      li: {
+        margin: rhythm(1 / 9),
+      },
+      code: {
+        padding: rhythm(.1),
+        borderRadius: rhythm(.2),
+        background: gray(98),
+      },
       a: {
         color: colors.primary,
         textDecoration: "none",
       },
       "a:hover": {
+        borderBottom: `${rhythm(.01)} solid ${colors.primary}`,
         opacity: "75%",
       },
       blockquote: {
