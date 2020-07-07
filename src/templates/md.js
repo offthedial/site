@@ -7,7 +7,7 @@ export default function MarkdownPage({ data }) {
   const post = data.markdownRemark
   return (
     <Layout pageTitle="Page">
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
 }

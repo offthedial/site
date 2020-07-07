@@ -57,7 +57,7 @@ const Index = () => (
         </blockquote>
       </li>
     </ul>
-    <Footer msg="This website is currently in beta, more features are to come. Stay tuned!"/>
+    <Footer msg="This website is currently in beta, more features are to come. Stay tuned!" />
   </Layout>
 )
 

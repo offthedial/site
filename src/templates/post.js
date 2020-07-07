@@ -11,24 +11,24 @@ export default function Post({ data }) {
     <Layout>
       <div>
         <h1
+          css={css`
+            margin-bottom: ${rhythm(1 / 4)};
+          `}
+        >
+          {post.frontmatter.title}{" "}
+          <span
             css={css`
-              margin-bottom: ${rhythm(1 / 4)};
+              color: ${gray(33)};
+              font-size: ${rhythm(1)};
             `}
           >
-            {post.frontmatter.title}{" "}
-            <span
-              css={css`
-                color: ${gray(33)};
-                font-size: ${rhythm(1)};
-              `}
-            >
-              — {post.frontmatter.date}
-            </span>
+            — {post.frontmatter.date}
+          </span>
         </h1>
         <h2
           css={css`
             color: ${gray(33)};
-            font-size: ${rhythm(.8)}
+            font-size: ${rhythm(0.8)};
           `}
         >
           Written By: {post.frontmatter.author}

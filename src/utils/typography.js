@@ -21,8 +21,8 @@ const typography = new Typography({
         margin: rhythm(1 / 6),
       },
       code: {
-        padding: rhythm(.1),
-        borderRadius: rhythm(.2),
+        padding: rhythm(0.1),
+        borderRadius: rhythm(0.2),
         background: gray(98),
       },
       a: {
@@ -30,7 +30,7 @@ const typography = new Typography({
         textDecoration: "none",
       },
       "a:hover": {
-        borderBottom: `${rhythm(.01)} solid ${colors.primary}`,
+        borderBottom: `${rhythm(0.01)} solid ${colors.primary}`,
         opacity: "75%",
       },
       blockquote: {
@@ -44,4 +44,5 @@ const typography = new Typography({
   },
 })
 export var rhythm = typography.rhythm
+export { gray }
 export default typography
