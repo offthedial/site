@@ -1,13 +1,77 @@
 import React from "react"
+import gray from "gray-percentage"
+import { graphql } from "gatsby"
+import { css } from "@emotion/core"
 
+import { rhythm } from "src/utils/typography"
 import Layout from "src/components/layout"
 
 export default function Posts({ data }) {
-    console.log(data)
-    return (
-        <Layout pageTitle="Posts">
-            <h1>Posts</h1>
-
-        </Layout>
-    )
+  return (
+    <Layout pageTitle="Posts">
+      <h4>
+        Check out the latest blog posts, news, and updates that we’re making to
+        Off the Dial below! Posts may consist of patch notes, new features or
+        just anything that we feel has a need to be said.
+      </h4>
+      <h1
+        css={css`
+          margin-bottom: ${rhythm(1 / 6)};
+        `}
+      >
+        <h3
+          css={css`
+            color: ${gray(40)};
+            float: right;
+            margin-top: ${rhythm(1 / 2)};
+          `}
+        >
+          Total Posts: {data.allMarkdownRemark.totalCount}
+        </h3>
+        Posts:
+      </h1>
+      <hr />
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id}>
+          <h3
+            css={css`
+              margin-bottom: ${rhythm(1 / 4)};
+            `}
+          >
+            {node.frontmatter.title}{" "}
+            <span
+              css={css`
+                color: ${gray(35)};
+                font-size: 80%;
+              `}
+            >
+              — {node.frontmatter.date}
+            </span>
+          </h3>
+          <blockquote>
+            <i>{node.excerpt}</i>
+          </blockquote>
+        </div>
+      ))}
+    </Layout>
+  )
 }
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            author
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
