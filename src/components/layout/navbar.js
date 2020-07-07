@@ -3,15 +3,8 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import { rhythm } from "src/utils/typography"
+import ListLink from "src/components/listlink"
 import colors from "src/static/colors"
-
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: rhythm(1) }}>
-    <Link to={props.to} style={props.style}>
-      {props.children}
-    </Link>
-  </li>
-)
 
 const NavBar = ({ siteTitle }) => (
   <header
