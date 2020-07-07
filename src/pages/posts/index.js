@@ -47,7 +47,7 @@ export default function Posts({ data }) {
               {node.frontmatter.title}{" "}
               <span
                 css={css`
-                color: ${gray(35)};
+                  color: ${gray(33)};
                   font-size: 80%;
                 `}
               >

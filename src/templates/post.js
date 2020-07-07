@@ -19,7 +19,7 @@ export default function BlogPost({ data }) {
             {post.frontmatter.title}{" "}
             <span
               css={css`
-                color: ${gray(35)};
+                color: ${gray(33)};
                 font-size: ${rhythm(1)};
               `}
             >
@@ -28,7 +28,7 @@ export default function BlogPost({ data }) {
         </h1>
         <h2
           css={css`
-            color: ${gray(35)};
+            color: ${gray(33)};
             font-size: ${rhythm(.8)}
           `}
         >
