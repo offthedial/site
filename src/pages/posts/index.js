@@ -33,17 +33,22 @@ export default function Posts({ data }) {
       <hr />
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.fields.slug}>
-          <Link
+          <Card style={{
+            margin: rhythm(2 / 3)
+          }}>
+            <Link style={{
+              padding: rhythm(2 / 3)
+            }}
             to={node.fields.slug}
             css={css`
               text-decoration: none;
               color: inherit;
+              border-bottom: 0 !important;
             `}>
-            <h3
-              css={css`
-                margin-bottom: ${rhythm(1 / 4)};
-              `}
-            >
+              <Card.Title>
+                <h3 css={css`
+                    margin-bottom: ${rhythm(1 / 4)}
+                  `}>
               {node.frontmatter.title}{" "}
               <span
                 css={css`
@@ -54,8 +59,12 @@ export default function Posts({ data }) {
                 — {node.frontmatter.date}
               </span>
             </h3>
+              </Card.Title>
+              <Card.Text>
             <blockquote><i>{node.excerpt}</i></blockquote>
+              </Card.Text>
           </Link>
+          </Card>
         </div>
       ))}
     </Layout>
