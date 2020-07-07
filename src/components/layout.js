@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import { rhythm } from "src/utils/typography"
 import SEO from "./layout/seo"
 import NavBar from "./layout/navbar"
 
@@ -27,7 +28,7 @@ const Layout = ({ pageTitle, children }) => {
         style={{
           margin: `0 auto`,
           maxWidth: 1000,
-          padding: `0 1.0875rem 1.45rem`,
+          padding: `0 ${rhythm(1 / 4)} ${rhythm(1 / 4)}`,
         }}
       >
         {/* Main section */}

@@ -1,6 +1,8 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import PropTypes from "prop-types"
+import { Link } from "gatsby"
+
+import { rhythm } from "src/utils/typography"
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1.5rem` }}>
@@ -14,14 +16,14 @@ const NavBar = ({ siteTitle }) => (
   <header
     style={{
       background: `#5d9194`,
-      marginBottom: `1.45rem`,
+      marginBottom: `${rhythm(1)}`,
     }}
   >
     <div
       style={{
         margin: `0 auto`,
         maxWidth: 1000,
-        padding: `1.45rem 1.0875rem`,
+        padding: `${rhythm(1)} 0`,
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -30,7 +32,7 @@ const NavBar = ({ siteTitle }) => (
           style={{
             color: `white`,
             textDecoration: `none`,
-            fontSize: `2rem`,
+            fontSize: `${rhythm(3 / 2)}`,
           }}
         >
           {siteTitle}

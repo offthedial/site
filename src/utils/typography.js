@@ -35,4 +35,5 @@ const typography = new Typography({
     }
 })
 
+export var rhythm = typography.rhythm
 export default typography
