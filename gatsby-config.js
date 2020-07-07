@@ -18,6 +18,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-emotion`,
   ],
