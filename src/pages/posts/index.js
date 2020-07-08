@@ -14,23 +14,17 @@ export default function Posts({ data }) {
         Off the Dial below! Posts may consist of patch notes, new features or
         just anything that we feel has a need to be said.
       </h4>
-      <h1
-        css={css`
-          margin-bottom: ${rhythm(1 / 6)};
-        `}
-      >
-        <h3
-          css={css`
-            color: ${gray(40)};
-            float: right;
-            margin-top: ${rhythm(1 / 2)};
-          `}
-        >
+      <h1 style={{ marginBottom: rhythm(1 / 6) }}>
+        <h3 style={{
+          color: gray(40),
+          float: "right",
+          marginTop: rhythm(1 / 2)
+        }}>
           Total Posts: {data.allMarkdownRemark.totalCount}
         </h3>
         Posts:
       </h1>
-      <hr />
+      <hr/>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.fields.slug}>
           <Card
@@ -39,33 +33,21 @@ export default function Posts({ data }) {
             }}
           >
             <Link
-              style={{
-                padding: rhythm(2 / 3),
-              }}
-              to={node.fields.slug}
               css={css`
-                text-decoration: none;
+                padding: ${rhythm(2 / 3)};
                 color: inherit;
                 border-bottom: 0 !important;
               `}
+              to={node.fields.slug}
             >
               <Card.Title>
-                <h3
-                  css={css`
-                    margin-bottom: ${rhythm(1 / 4)};
-                  `}
-                >
-                  {node.frontmatter.title}{" "}
-                  <span
-                    css={css`
-                      color: ${gray(33)};
-                      font-size: 80%;
-                    `}
-                  >
-                    — {node.frontmatter.date}
-                  </span>
-                </h3>
+                <h1 style={{ marginBottom: rhythm(1 / 4) }}>
+                  {node.frontmatter.title}
+                </h1>
               </Card.Title>
+              <Card.Subtitle className="mb-2" style={{ color: gray(33) }}>
+                Written on {node.frontmatter.date}
+              </Card.Subtitle>
               <Card.Text>
                 <blockquote>
                   <i>{node.excerpt}</i>
