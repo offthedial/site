@@ -7,7 +7,7 @@ import Layout from "src/components/layout"
 export default function Post({ data }) {
   const post = data.markdownRemark
   return (
-    <Layout pageTitle={" Posts | " + post.frontmatter.title} >
+    <Layout pageTitle={" Posts | " + post.frontmatter.title}>
       <div>
         <h1 style={{ marginBottom: rhythm(1 / 4) }}>
           {post.frontmatter.title}{" "}

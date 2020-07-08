@@ -8,19 +8,22 @@ const Idtga = () => (
   <Layout pageTitle="It's Dangerous to Go Alone">
     <h1>About It's Dangerous to Go Alone</h1>
     <blockquote>
-      <Link style={{ display: `inline-block`, marginRight: rhythm(1) }} to="rules">
-        <h3>Rules</h3>
+      <Link
+        style={{ display: `inline-block`, marginRight: rhythm(1) }}
+        to="rules"
+      >
+        <h2>Rules</h2>
       </Link>
-      <Link style={{ display: `inline-block`, marginRight: rhythm(1) }} to="https://smash.gg/idtga">
-        <h3>smash.gg Page</h3>
+      <Link
+        style={{ display: `inline-block`, marginRight: rhythm(1) }}
+        to="https://smash.gg/idtga"
+      >
+        <h2>smash.gg Page</h2>
       </Link>
     </blockquote>
     <h4>
-      <u>It’s Dangerous to go Alone</u> is a free agent tournament for Splatoon
-      2! In a free agent tournament, you don’t sign up with a team. We place you
-      into teams balanced by playstyles, tournament experience and ranks. This
-      tournament is open to anyone, no matter the skill level. Better yet, each
-      team has a chance of winning.
+      <u>It's Dangerous to go Alone</u> is a free agent tournament focused on
+      creating balanced teams, and being accessible to everyone.
     </h4>
     <h4>All you need to do is sign up! The world is waiting…</h4>
 

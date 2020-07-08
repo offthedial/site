@@ -15,16 +15,18 @@ export default function Posts({ data }) {
         just anything that we feel has a need to be said.
       </h4>
       <h1 style={{ marginBottom: rhythm(1 / 6) }}>
-        <h3 style={{
-          color: gray(40),
-          float: "right",
-          marginTop: rhythm(1 / 2)
-        }}>
+        <h3
+          style={{
+            color: gray(40),
+            float: "right",
+            marginTop: rhythm(1 / 2),
+          }}
+        >
           Total Posts: {data.allMarkdownRemark.totalCount}
         </h3>
         Posts:
       </h1>
-      <hr/>
+      <hr />
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.fields.slug}>
           <Card

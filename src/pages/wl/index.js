@@ -9,20 +9,24 @@ const WeakestLink = () => (
   <Layout pageTitle="Weakest Link">
     <h1>About Weakest link</h1>
     <blockquote>
-      <Link style={{ display: `inline-block`, marginRight: rhythm(1) }} to="rules">
-        <h3>Rules</h3>
+      <Link
+        style={{ display: `inline-block`, marginRight: rhythm(1) }}
+        to="rules"
+      >
+        <h2>Rules</h2>
       </Link>
-      <Link style={{ display: `inline-block`, marginRight: rhythm(1) }} to="https://smash.gg/wl">
-        <h3>smash.gg Page</h3>
+      <Link
+        style={{ display: `inline-block`, marginRight: rhythm(1) }}
+        to="https://smash.gg/wl"
+      >
+        <h2>smash.gg Page</h2>
       </Link>
     </blockquote>
     <h4>
       <u>Weakest Link</u> is a unique, Off the Dial exclusive, free agent{" "}
-      <b>and</b> team tournament for Splatoon 2! Sign up as a 3-player team or a
-      lone free agent, and we will pair each team to each link. This tournament
-      provides the opportunity for free agents to get coaching experience in a
-      team setting, and for teams to test their communication and teaching
-      skills.
+      <i>and</i> team tournament. Originally an experiment, this unique
+      tournament provides coaching opportunities for free agents, and teaching
+      opportunities for teams.
     </h4>
     <h4>All you need to do is sign up! The world is waiting…</h4>
 
