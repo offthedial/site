@@ -2,19 +2,19 @@ import React from "react"
 import { Link } from "gatsby"
 import { Row, Col } from "react-bootstrap"
 
+import { rhythm } from "src/utils/typography"
 import Layout from "src/components/layout"
-import ListLink from "src/components/listlink"
 
 const WeakestLink = () => (
   <Layout pageTitle="Weakest Link">
     <h1>About Weakest link</h1>
     <blockquote>
-      <ListLink to="rules">
+      <Link style={{ display: `inline-block`, marginRight: rhythm(1) }} to="rules">
         <h3>Rules</h3>
-      </ListLink>
-      <ListLink to="https://smash.gg/wl">
+      </Link>
+      <Link style={{ display: `inline-block`, marginRight: rhythm(1) }} to="https://smash.gg/wl">
         <h3>smash.gg Page</h3>
-      </ListLink>
+      </Link>
     </blockquote>
     <h4>
       <u>Weakest Link</u> is a unique, Off the Dial exclusive, free agent{" "}

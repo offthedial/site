@@ -1,19 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import { rhythm } from "src/utils/typography"
 import Layout from "src/components/layout"
-import ListLink from "src/components/listlink"
 
 const Idtga = () => (
   <Layout pageTitle="It's Dangerous to Go Alone">
     <h1>About It's Dangerous to Go Alone</h1>
     <blockquote>
-      <ListLink to="rules">
+      <Link style={{ display: `inline-block`, marginRight: rhythm(1) }} to="rules">
         <h3>Rules</h3>
-      </ListLink>
-      <ListLink to="https://smash.gg/idtga">
+      </Link>
+      <Link style={{ display: `inline-block`, marginRight: rhythm(1) }} to="https://smash.gg/idtga">
         <h3>smash.gg Page</h3>
-      </ListLink>
+      </Link>
     </blockquote>
     <h4>
       <u>It’s Dangerous to go Alone</u> is a free agent tournament for Splatoon
