@@ -36,7 +36,7 @@ export default function Posts({ data }) {
               css={css`
                 padding: ${rhythm(2 / 3)};
                 color: inherit;
-                border-bottom: 0 !important;
+                text-decoration: none !important;
               `}
               to={node.fields.slug}
             >
@@ -83,7 +83,7 @@ export const query = graphql`
               relativeDirectory
             }
           }
-          excerpt
+          excerpt(pruneLength: 200)
         }
       }
     }

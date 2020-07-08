@@ -1,58 +1,28 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { css } from "@emotion/core"
+import { Navbar, Nav } from "react-bootstrap"
 
 import { rhythm } from "src/utils/typography"
-import ListLink from "src/components/listlink"
 import colors from "src/utils/colors"
 
 const NavBar = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `${colors.primary}`,
-      marginBottom: `${rhythm(1)}`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1000,
-        padding: `${rhythm(1)} ${rhythm(0.2)}`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-            fontSize: `${rhythm(3 / 2)}`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-        <ul style={{ listStyle: `none`, float: `right` }}>
-          <ListLink
-            to="/idtga"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            <h3>It's Dangerous to Go Alone</h3>
-          </ListLink>
-          <ListLink
-            to="/wl"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-          >
-            <h3>Weakest Link</h3>
-          </ListLink>
-        </ul>
-      </h1>
-    </div>
+  <header style={{
+    background: `${colors.primary}`,
+    marginBottom: rhythm(1),
+  }}>
+    <Navbar collapseOnSelect expand="lg" variant="dark" className="container" style={{ fontWeight: "bolder" }}>
+      <Navbar.Brand href="/" css={css`font-size: ${rhythm(1.8)}`}>
+        {siteTitle}
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
+        <Nav>
+          <Nav.Link css={css`font-size: ${rhythm(1)}; color: white !important`} href="/idtga">It's Dangerous to go Alone</Nav.Link>
+          <Nav.Link css={css`font-size: ${rhythm(1)}; color: white !important`} href="/wl">Weakest Link</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   </header>
 )
 

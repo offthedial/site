@@ -7,7 +7,7 @@ const typography = new Typography({
   googleFonts: [
     {
       name: "DM Sans",
-      styles: ["400", "400i", "500", "500i"],
+      styles: ["400", "400i", "500", "500i", "700", "700i"],
     },
   ],
   headerFontFamily: ["DM Sans", "Noto Sans", "sans-serif"],
@@ -30,7 +30,7 @@ const typography = new Typography({
         textDecoration: "none",
       },
       "a:hover": {
-        borderBottom: `${rhythm(0.01)} solid ${colors.primary}`,
+        textDecoration: "underline",
         opacity: "75%",
       },
       blockquote: {
