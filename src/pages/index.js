@@ -74,8 +74,8 @@ const Index = () => (
             <Card.Text>
               <blockquote style={{ fontSize: "88%" }}>
                 Our server has a custom Off the Dial Bot used for tournament
-                running assistance. If you would like to know more, we have a page
-                dedicated to about the bot right here!
+                running assistance. If you would like to know more, we have a
+                page dedicated to about the bot right here!
               </blockquote>
             </Card.Text>
           </Card.Body>
@@ -108,8 +108,8 @@ const Index = () => (
             </Card.Title>
             <Card.Text>
               <blockquote style={{ fontSize: "88%" }}>
-                Off the Dial has many media outlets, you can find a list of all of
-                them right here!
+                Off the Dial has many media outlets, you can find a list of all
+                of them right here!
               </blockquote>
             </Card.Text>
           </Card.Body>
@@ -126,8 +126,8 @@ const Index = () => (
             <Card.Text>
               <blockquote style={{ fontSize: "88%" }}>
                 Many of our assets are public and free. Assets include logos and
-                banners related to Off the Dial and its tournaments. You can find
-                them all right here!
+                banners related to Off the Dial and its tournaments. You can
+                find them all right here!
               </blockquote>
             </Card.Text>
           </Card.Body>

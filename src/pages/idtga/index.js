@@ -31,9 +31,10 @@ const Idtga = () => (
     <h2>Registration</h2>
     <p>
       To register, simply enter <code>$signup</code> in{" "}
-      <Mention>#bot-commands</Mention> on <Link to="/discord">Discord</Link>! The bot
-      will guide you through the complete process. If you have any questions or
-      issues with the bot, feel free to ask in <Mention>#helpdesk</Mention>.
+      <Mention>#bot-commands</Mention> on <Link to="/discord">Discord</Link>!
+      The bot will guide you through the complete process. If you have any
+      questions or issues with the bot, feel free to ask in{" "}
+      <Mention>#helpdesk</Mention>.
     </p>
   </Layout>
 )
