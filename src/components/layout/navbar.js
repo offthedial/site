@@ -11,8 +11,8 @@ const NavBar = ({ siteTitle }) => (
     background: `${colors.primary}`,
     marginBottom: rhythm(1),
   }}>
-    <Navbar collapseOnSelect expand="lg" variant="dark" className="container" style={{ fontWeight: "bolder" }}>
-      <Navbar.Brand href="/" css={css`font-size: ${rhythm(1.5)}`}>
+    <Navbar collapseOnSelect expand="lg" variant="dark" className="container" style={{ fontWeight: 500 }}>
+      <Navbar.Brand href="/" css={css`font-size: ${rhythm(1.5)}; font-weight: 700`}>
         {siteTitle}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
