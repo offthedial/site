@@ -1,62 +1,131 @@
 import React from "react"
 import { Link } from "gatsby"
+import { CardColumns, Card, Row, Col } from "react-bootstrap"
 
 import Layout from "src/components/layout"
 import Footer from "src/components/footer"
 
 const Index = () => (
   <Layout pageTitle="Welcome">
-    <h2>
-      Off the Dial is a unique tournament organisation for Splatoon 2, dedicated
-      to providing fresh tournament opportunities for free agents and teams
-      alike.
-    </h2>
-    <h2>
-      <Link to="/faq">FAQ</Link>
-    </h2>
-    <p>
-      We get asked a lot of questions, so a FAQ necessary. You will find
-      everything from "What is IDTGA" to what is does FA stand for. We highly
-      recommend you check out this page.
-    </p>
-    <h2>
-      <Link to="/posts">Posts</Link>
-    </h2>
-    <p>Stay up to date with the newest updates on Off the Dial!</p>
-
+    <Row>
+      <Col>
+        <h1>Who are we?</h1>
+        <p>
+          Off the Dial is a unique tournament organisation for Splatoon 2,
+          dedicated to providing fresh tournament opportunities for free agents
+          and teams alike.
+        </p>
+        <p>
+          Our flagship tournament, It's Dangerous to go Alone, is a free agent
+          tournament focused on creating balanced teams, and being accessible to
+          everyone. For more information, select "It's Dangerous to go Alone" at
+          the top.
+        </p>
+        <p>
+          We also run a unique, Off the Dial exclusive, free agent <i>and</i>{" "}
+          team tournament called Weakest Link. Originally an experiment, this
+          unique tournament provides coaching opportunities for free agents, and
+          teaching opportunities for teams. For more information, select
+          "Weakest Link" at the top.
+        </p>
+      </Col>
+      <Col>
+        <br />
+        <h2>Important Pages</h2>
+        <CardColumns style={{ columnCount: 1 }}>
+          <Card>
+            <Card.Body>
+              <Card.Title>
+                <h3>
+                  <Link to="/faq">FAQ</Link>
+                </h3>
+              </Card.Title>
+              <Card.Text>
+                We get asked a lot of questions, so a FAQ necessary. We highly
+                recommend you check out this page.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Body>
+              <Card.Title>
+                <h3>
+                  <Link to="/posts">Posts</Link>
+                </h3>
+              </Card.Title>
+              <Card.Text>
+                Stay up to date with the newest updates on Off the Dial!
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </CardColumns>
+      </Col>
+    </Row>
     <h2>More Information</h2>
-    <ul>
-      <li>
-        <Link to="/bot">Off the Dial Bot</Link>
-        <blockquote>
-          Our server has a custom Off the Dial Bot used for tournament running
-          assistance. If you would like to know more, we have a page dedicated
-          to about the bot right here!
-        </blockquote>
-      </li>
-      <li>
-        <Link to="/community">Community</Link>
-        <blockquote>
-          Off the Dial is thankful to have such an awesome team and community!
-          And you can check each one of them out right here!
-        </blockquote>
-      </li>
-      <li>
-        <Link to="/media">Media</Link>
-        <blockquote>
-          Off the Dial has many media outlets, you can find a list of all of
-          them right here!
-        </blockquote>
-      </li>
-      <li>
-        <Link to="https://github.com/offthedial/assets">Assets</Link>
-        <blockquote>
-          Many of our assets are public and free. Assets include logos and
-          banners related to Off the Dial and its tournaments. You can find them
-          all right here!
-        </blockquote>
-      </li>
-    </ul>
+    <CardColumns style={{ columnCount: 4 }}>
+      <Card>
+        <Card.Body>
+          <Card.Title>
+            <h3>
+              <Link to="/bot">Off the Dial Bot</Link>
+            </h3>
+          </Card.Title>
+          <Card.Text>
+            <blockquote style={{ fontSize: "88%" }}>
+              Our server has a custom Off the Dial Bot used for tournament
+              running assistance. If you would like to know more, we have a page
+              dedicated to about the bot right here!
+            </blockquote>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card>
+        <Card.Body>
+          <Card.Title>
+            <h3>
+              <Link to="/community">Community</Link>
+            </h3>
+          </Card.Title>
+          <Card.Text>
+            <blockquote style={{ fontSize: "88%" }}>
+              Off the Dial is thankful to have such an awesome team and
+              community! And you can check each one of them out right here!
+            </blockquote>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card>
+        <Card.Body>
+          <Card.Title>
+            <h3>
+              <Link to="/media">Media</Link>
+            </h3>
+          </Card.Title>
+          <Card.Text>
+            <blockquote style={{ fontSize: "88%" }}>
+              Off the Dial has many media outlets, you can find a list of all of
+              them right here!
+            </blockquote>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <Card>
+        <Card.Body>
+          <Card.Title>
+            <h3>
+              <Link to="https://github.com/offthedial/assets">Assets</Link>
+            </h3>
+          </Card.Title>
+          <Card.Text>
+            <blockquote style={{ fontSize: "88%" }}>
+              Many of our assets are public and free. Assets include logos and
+              banners related to Off the Dial and its tournaments. You can find
+              them all right here!
+            </blockquote>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </CardColumns>
     <Footer msg="This website is currently in beta, more features are to come. Stay tuned!" />
   </Layout>
 )
