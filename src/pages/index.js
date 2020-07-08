@@ -8,7 +8,7 @@ import Footer from "src/components/footer"
 const Index = () => (
   <Layout pageTitle="Welcome">
     <Row>
-      <Col>
+      <Col lg="6">
         <h1>Who are we?</h1>
         <p>
           Off the Dial is a unique tournament organisation for Splatoon 2,
@@ -32,7 +32,7 @@ const Index = () => (
       <Col>
         <br />
         <h2>Important Pages</h2>
-        <CardColumns style={{ columnCount: 1 }}>
+        <CardColumns className="mb-3" style={{ columnCount: 1 }}>
           <Card>
             <Card.Body>
               <Card.Title>
@@ -62,70 +62,78 @@ const Index = () => (
       </Col>
     </Row>
     <h2>More Information</h2>
-    <CardColumns style={{ columnCount: 4 }}>
-      <Card>
-        <Card.Body>
-          <Card.Title>
-            <h3>
-              <Link to="/bot">Off the Dial Bot</Link>
-            </h3>
-          </Card.Title>
-          <Card.Text>
-            <blockquote style={{ fontSize: "88%" }}>
-              Our server has a custom Off the Dial Bot used for tournament
-              running assistance. If you would like to know more, we have a page
-              dedicated to about the bot right here!
-            </blockquote>
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>
-            <h3>
-              <Link to="/community">Community</Link>
-            </h3>
-          </Card.Title>
-          <Card.Text>
-            <blockquote style={{ fontSize: "88%" }}>
-              Off the Dial is thankful to have such an awesome team and
-              community! And you can check each one of them out right here!
-            </blockquote>
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>
-            <h3>
-              <Link to="/media">Media</Link>
-            </h3>
-          </Card.Title>
-          <Card.Text>
-            <blockquote style={{ fontSize: "88%" }}>
-              Off the Dial has many media outlets, you can find a list of all of
-              them right here!
-            </blockquote>
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Body>
-          <Card.Title>
-            <h3>
-              <Link to="https://github.com/offthedial/assets">Assets</Link>
-            </h3>
-          </Card.Title>
-          <Card.Text>
-            <blockquote style={{ fontSize: "88%" }}>
-              Many of our assets are public and free. Assets include logos and
-              banners related to Off the Dial and its tournaments. You can find
-              them all right here!
-            </blockquote>
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </CardColumns>
+    <Row>
+      <Col xl="3" md="6" className="mb-3">
+        <Card>
+          <Card.Body>
+            <Card.Title>
+              <h3>
+                <Link to="/bot">Off the Dial Bot</Link>
+              </h3>
+            </Card.Title>
+            <Card.Text>
+              <blockquote style={{ fontSize: "88%" }}>
+                Our server has a custom Off the Dial Bot used for tournament
+                running assistance. If you would like to know more, we have a page
+                dedicated to about the bot right here!
+              </blockquote>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
+      <Col xl="3" md="6" className="mb-3">
+        <Card>
+          <Card.Body>
+            <Card.Title>
+              <h3>
+                <Link to="/community">Community</Link>
+              </h3>
+            </Card.Title>
+            <Card.Text>
+              <blockquote style={{ fontSize: "88%" }}>
+                Off the Dial is thankful to have such an awesome team and
+                community! And you can check each one of them out right here!
+              </blockquote>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
+      <Col xl="3" md="6" className="mb-3">
+        <Card>
+          <Card.Body>
+            <Card.Title>
+              <h3>
+                <Link to="/media">Media</Link>
+              </h3>
+            </Card.Title>
+            <Card.Text>
+              <blockquote style={{ fontSize: "88%" }}>
+                Off the Dial has many media outlets, you can find a list of all of
+                them right here!
+              </blockquote>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
+      <Col xl="3" md="6" className="mb-3">
+        <Card>
+          <Card.Body>
+            <Card.Title>
+              <h3>
+                <Link to="https://github.com/offthedial/assets">Assets</Link>
+              </h3>
+            </Card.Title>
+            <Card.Text>
+              <blockquote style={{ fontSize: "88%" }}>
+                Many of our assets are public and free. Assets include logos and
+                banners related to Off the Dial and its tournaments. You can find
+                them all right here!
+              </blockquote>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
+    </Row>
     <Footer msg="This website is currently in beta, more features are to come. Stay tuned!" />
   </Layout>
 )
