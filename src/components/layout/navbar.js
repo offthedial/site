@@ -12,14 +12,14 @@ const NavBar = ({ siteTitle }) => (
     marginBottom: rhythm(1),
   }}>
     <Navbar collapseOnSelect expand="lg" variant="dark" className="container" style={{ fontWeight: "bolder" }}>
-      <Navbar.Brand href="/" css={css`font-size: ${rhythm(1.8)}`}>
+      <Navbar.Brand href="/" css={css`font-size: ${rhythm(1.5)}`}>
         {siteTitle}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
         <Nav>
-          <Nav.Link css={css`font-size: ${rhythm(1)}; color: white !important`} href="/idtga">It's Dangerous to go Alone</Nav.Link>
-          <Nav.Link css={css`font-size: ${rhythm(1)}; color: white !important`} href="/wl">Weakest Link</Nav.Link>
+          <Nav.Link css={css`font-size: ${rhythm(.8)}; color: white !important`} href="/idtga">It's Dangerous to go Alone</Nav.Link>
+          <Nav.Link css={css`font-size: ${rhythm(.8)}; color: white !important`} href="/wl">Weakest Link</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
