@@ -2,8 +2,8 @@ import React from "react"
 
 const Footer = ({ msg }) => (
   <footer>
-    <br></br>
-    <hr></hr>
+    <br/>
+    <hr/>
     <div
       style={{
         fontSize: `80%`,
@@ -13,6 +13,7 @@ const Footer = ({ msg }) => (
     >
       {msg}
     </div>
+    <br/>
   </footer>
 )
 
