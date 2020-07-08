@@ -43,9 +43,9 @@ export default function Posts({ data }) {
               to={node.fields.slug}
             >
               <Card.Title>
-                <h1 style={{ marginBottom: rhythm(1 / 4) }}>
+                <h2 style={{ marginBottom: rhythm(1 / 4) }}>
                   {node.frontmatter.title}
-                </h1>
+                </h2>
               </Card.Title>
               <Card.Subtitle className="mb-2" style={{ color: gray(33) }}>
                 Written on {node.frontmatter.date}

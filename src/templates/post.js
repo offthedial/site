@@ -16,7 +16,7 @@ export default function Post({ data }) {
           </span>
         </h1>
         <h2 style={{ color: gray(33), fontSize: rhythm(0.8) }}>
-          Written By: {post.frontmatter.author}
+          <text style={{ color: gray(40) }}>Written By:</text> {post.frontmatter.author}
         </h2>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
