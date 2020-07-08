@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import { rhythm } from "src/utils/typography"
 import Layout from "src/components/layout"
+import Mention from "../../components/mention"
 
 const Idtga = () => (
   <Layout pageTitle="It's Dangerous to Go Alone">
@@ -30,9 +31,9 @@ const Idtga = () => (
     <h2>Registration</h2>
     <p>
       To register, simply enter <code>$signup</code> in{" "}
-      <code>#bot-commands</code> on <Link to="/discord">Discord</Link>! The bot
+      <Mention>#bot-commands</Mention> on <Link to="/discord">Discord</Link>! The bot
       will guide you through the complete process. If you have any questions or
-      issues with the bot, feel free to ask in <code>#helpdesk</code>.
+      issues with the bot, feel free to ask in <Mention>#helpdesk</Mention>.
     </p>
   </Layout>
 )

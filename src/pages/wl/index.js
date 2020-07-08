@@ -4,6 +4,7 @@ import { Row, Col } from "react-bootstrap"
 
 import { rhythm } from "src/utils/typography"
 import Layout from "src/components/layout"
+import Mention from "../../components/mention"
 
 const WeakestLink = () => (
   <Layout pageTitle="Weakest Link">
@@ -33,9 +34,9 @@ const WeakestLink = () => (
     <h2>Registration</h2>
     <p>
       To register, simply enter <code>$signup</code> in{" "}
-      <code>#bot-commands</code> on <Link to="/discord">Discord</Link>! The bot
+      <Mention>#bot-commands</Mention> on <Link to="/discord">Discord</Link>! The bot
       will guide you through the complete process. If you have any questions or
-      issues with the bot, feel free to ask in <code>#helpdesk</code>.
+      issues with the bot, feel free to ask in <Mention>#helpdesk</Mention>.
     </p>
     <p>
       There are 2 ways to register, either as an FA (free agent), or a 3-player
@@ -55,7 +56,7 @@ const WeakestLink = () => (
         <p>FA’s have a skill ceiling of no X ranks.</p>
         <p>
           If your rank is too high, you can create a pickup team. Pickups can be
-          formed in the <code>#build-a-team</code> channel or any of the pickup
+          formed in the <Mention>#build-a-team</Mention> channel or any of the pickup
           channels/servers listed on the{" "}
           <Link to="https://discord.io/inkademy">Inkademy</Link> discord server.
         </p>

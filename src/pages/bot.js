@@ -3,8 +3,9 @@ import { Row, Col } from "react-bootstrap"
 
 import Layout from "src/components/layout"
 import logo from "src/static/images/bot.png"
+import Mention from "../components/mention"
 
-const NotFound = () => (
+const Bot = () => (
   <Layout pageTitle="Bot">
     <h1>Off the Dial Bot</h1>
     <Row>
@@ -25,13 +26,13 @@ const NotFound = () => (
         </ul>
         <h3>Help</h3>        
           <p>For assistance, you can use <code>$help</code>. You can also add help to the beginning of any command for more specific help.</p>
-          <p>All directions are in the embed, to navigate  the commands, simply read the bot message! If you are still stuck, you can ask for help in <code>#helpdesk</code>.</p>
+          <p>All directions are in the embed, to navigate  the commands, simply read the bot message! If you are still stuck, you can ask for help in <Mention>#helpdesk</Mention>.</p>
       </Col>
     </Row>
     <h2>Contributing</h2>
     <p>This bot is open sourced, the source code is hosted on Github.</p>
-    <p>If you have a suggestion/bug report for Off the Dial Bot, please make a Github Issue. This lets us track all of the suggestions and reports permanently in one place, as opposed to the <code>#suggestions</code> channel, where the messages can get easily lost.</p>
+    <p>If you have a suggestion/bug report for Off the Dial Bot, please make a Github Issue. This lets us track all of the suggestions and reports permanently in one place, as opposed to the <Mention>#suggestions</Mention> channel, where the messages can get easily lost.</p>
   </Layout>
 )
 
-export default NotFound
+export default Bot
