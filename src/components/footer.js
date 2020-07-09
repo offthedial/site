@@ -1,6 +1,6 @@
 import React from "react"
 
-const Footer = ({ msg }) => (
+const Footer = ({ children }) => (
   <footer>
     <br />
     <hr />
@@ -11,7 +11,7 @@ const Footer = ({ msg }) => (
         fontStyle: `italic`,
       }}
     >
-      {msg}
+      {children}
     </div>
     <br />
   </footer>

@@ -1,4 +1,8 @@
-# IDTGA Rules
+---
+title: IDTGA Rules
+---
+
+# It's Dangerous to go Alone Rules
 ## Format
 Complete teams will consist of 4-5 players.
 
@@ -34,7 +38,7 @@ In the case of a dropout, an emergency sub may be needed.
 
 - Emergency subs must be of similar rank and play style to the missing player
 - Must be approved by a TO.
-- Players can apply to be an emergency sub before the tournament by sending a dm to `@DJam98`.
+- Players can apply to be an emergency sub before the tournament by sending a dm to <Mention>@DJam98</Mention>.
 
 ## DC's Redo Decision Rules
 ### Redo the match if:
@@ -52,6 +56,8 @@ In the case of a dropout, an emergency sub may be needed.
 If either 2 DC’s occur in the same lobby or the host DC’s, the team currently not hosting must host a new lobby.
 
 To reduce the chances of a dc happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
+
+If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
 
 ## Dropouts
 For everyone's sake, ***please*** do not drop out.
@@ -73,7 +79,7 @@ For everyone's sake, ***please*** do not drop out.
 
 #### Matches with a dropout:
 - A 3v3 game will occur.
-- By pinging `@DJam98`, he will tell you the player that should sit out to be an even match-up.
+- By pinging <Mention>@DJam98</Mention>, he will tell you the player that should sit out to be an even match-up.
 
 ## Cheating
 Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on smash.gg, anything considered cheating by Nintendo, and failure to comply with any of the rules on this document.
@@ -86,11 +92,8 @@ If you cheat:
 This is a strict no-chances policy, and we do not make exceptions to this.
 
 ## Other Rules
-- If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
-- Teams will be released 24 hours before the tournament begins.
-- Before asking a question in the `#helpdesk` channel, please refer to `#faq`.
 - All rules are subject to change between seasons, please make sure you read the rules each season before entering.
 
-------
-
-*That’s it! If you have any questions or concerns, feel free to ask at the `#helpdesk` or DM the TO’s: `@DJam98` and `@LeptoFlare`. Good luck with the tournament!*
+<Footer>
+  That’s it! If you have any questions or concerns, feel free to ask at the <Mention>#helpdesk</Mention> or DM the TO’s: <Mention>@DJam98</Mention> and <Mention>@LeptoFlare</Mention>. Good luck with the tournament!
+</Footer>

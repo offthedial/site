@@ -22,13 +22,13 @@ export default function Posts({ data }) {
             marginTop: rhythm(1 / 2),
           }}
         >
-          Total Posts: {data.allMarkdownRemark.totalCount}
+          Total Posts: {data.allMdx.totalCount}
         </h3>
         Posts:
       </h1>
       <hr />
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.fields.slug}>
+      {data.allMdx.edges.map(({ node }) => (
+        <div key={node.parent.name}>
           <Card
             style={{
               margin: rhythm(2 / 3),
@@ -40,7 +40,7 @@ export default function Posts({ data }) {
                 color: inherit;
                 text-decoration: none !important;
               `}
-              to={node.fields.slug}
+              to={node.parent.name}
             >
               <Card.Title>
                 <h2 style={{ marginBottom: rhythm(1 / 4) }}>
@@ -48,7 +48,7 @@ export default function Posts({ data }) {
                 </h2>
               </Card.Title>
               <Card.Subtitle className="mb-2" style={{ color: gray(33) }}>
-                Written on {node.frontmatter.date}
+              <span style={{ color: gray(40) }}>Written on</span> {node.frontmatter.date}
               </Card.Subtitle>
               <Card.Text>
                 <blockquote>
@@ -65,7 +65,7 @@ export default function Posts({ data }) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
+    allMdx(
       filter: { fileAbsolutePath: { regex: "/(pages)/(posts)/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
@@ -77,12 +77,9 @@ export const query = graphql`
             date(formatString: "MMMM DD, YYYY")
             author
           }
-          fields {
-            slug
-          }
           parent {
             ... on File {
-              relativeDirectory
+              name
             }
           }
           excerpt(pruneLength: 200)

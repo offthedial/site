@@ -134,7 +134,7 @@ const Index = () => (
         </Card>
       </Col>
     </Row>
-    <Footer msg="This website is currently in beta, more features are to come. Stay tuned!" />
+    <Footer>This website is currently in beta, more features are to come. Stay tuned!</Footer>
   </Layout>
 )
 

@@ -1,3 +1,7 @@
+---
+title: Terms and Conditions
+---
+
 # Terms and Conditions
 By registering into any event organised by 'Off the Dial' you have read and agreed to the following conditions below.
 

@@ -10,7 +10,7 @@ const Bot = () => (
     <h1>Off the Dial Bot</h1>
     <Row>
       <Col md={{ order: "last" }}>
-        <img src={logo} />
+        <img alt="" src={ logo }/>
       </Col>
       <Col md="8" lg="7">
         <p>

@@ -21,9 +21,9 @@ const typography = new Typography({
         margin: rhythm(1 / 6),
       },
       code: {
-        padding: rhythm(0.1),
-        borderRadius: rhythm(0.2),
-        background: gray(98),
+        padding: "2px",
+        borderRadius: "2px",
+        background: "rgba(128,128,128,.1)",
       },
       a: {
         color: colors.primary,

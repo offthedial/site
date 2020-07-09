@@ -1,24 +1,19 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "src/components/layout"
 
-export default function MarkdownPage({ data }) {
-  const post = data.markdownRemark
+import Mention from "src/components/mention"
+import Footer from "src/components/footer"
+
+const shortcodes = { Mention, Footer }
+
+const Post = ({ pageContext, children }) => {
   return (
-    <Layout pageTitle={post.headings[0].value}>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+    <Layout pageTitle={pageContext.frontmatter.title}>
+      <MDXProvider components={shortcodes}>{children}</MDXProvider>
     </Layout>
   )
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      headings(depth: h1) {
-        value
-      }
-    }
-  }
-`
+export default Post
