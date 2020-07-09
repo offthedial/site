@@ -6,7 +6,6 @@ import { rhythm } from "src/utils/typography"
 import colors from "src/utils/colors"
 
 import discord from "src/static/images/discord.svg"
-import logo from "src/static/images/brand.svg"
 
 import Navlink from "./navlink"
 
@@ -34,11 +33,7 @@ const NavBar = ({ siteTitle }) => (
             maxHeight: rhythm(8 / 3)
           }}
         >
-          <Image
-            className="m-0 p-0"
-            style={{ maxHeight: rhythm(8 / 3)}}
-            src={logo}
-          />
+          Off the Dial
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
