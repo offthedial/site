@@ -23,7 +23,7 @@ const Idtga = () => (
       </Link>
     </blockquote>
     <h4>
-      <u>It's Dangerous to go Alone</u> is a free agent tournament focused on
+      <u>It's Dangerous to go Alone</u> is our flagship, free agent tournament. Focused on
       creating balanced teams, and being accessible to everyone.
     </h4>
     <h4>All you need to do is sign up! The world is waiting…</h4>
