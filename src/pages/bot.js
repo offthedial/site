@@ -1,5 +1,6 @@
 import React from "react"
 import { Row, Col } from "react-bootstrap"
+import Image from "react-bootstrap/Image"
 
 import Layout from "src/components/layout"
 import logo from "src/static/images/bot.png"
@@ -10,7 +11,7 @@ const Bot = () => (
     <h1>Off the Dial Bot</h1>
     <Row>
       <Col md={{ order: "last" }}>
-        <img alt="" src={logo} />
+        <Image src={logo} />
       </Col>
       <Col md="8" lg="7">
         <p>
