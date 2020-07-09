@@ -38,7 +38,7 @@ const Index = () => (
             <Card.Body>
               <Card.Title>
                 <h3>
-                  <Link to="/faq">FAQ</Link>
+                  <Link to="faq">FAQ</Link>
                 </h3>
               </Card.Title>
               <Card.Text>
@@ -51,7 +51,7 @@ const Index = () => (
             <Card.Body>
               <Card.Title>
                 <h3>
-                  <Link to="/posts">Posts</Link>
+                  <Link to="posts">Posts</Link>
                 </h3>
               </Card.Title>
               <Card.Text>
@@ -69,7 +69,7 @@ const Index = () => (
           <Card.Body>
             <Card.Title>
               <h3>
-                <Link to="/bot">Off the Dial Bot</Link>
+                <Link to="bot">Off the Dial Bot</Link>
               </h3>
             </Card.Title>
             <blockquote style={{ fontSize: "88%" }}>
@@ -87,7 +87,7 @@ const Index = () => (
           <Card.Body>
             <Card.Title>
               <h3>
-                <Link to="/community">Community</Link>
+                <Link to="community">Community</Link>
               </h3>
             </Card.Title>
             <blockquote style={{ fontSize: "88%" }}>
@@ -104,7 +104,7 @@ const Index = () => (
           <Card.Body>
             <Card.Title>
               <h3>
-                <Link to="/media">Media</Link>
+                <Link to="media">Media</Link>
               </h3>
             </Card.Title>
             <blockquote style={{ fontSize: "88%" }}>
