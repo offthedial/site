@@ -1,4 +1,5 @@
 import React from "react"
+import emoji from "react-easy-emoji"
 import { Link } from "gatsby"
 import { CardColumns, Card, Row, Col } from "react-bootstrap"
 
@@ -71,13 +72,13 @@ const Index = () => (
                 <Link to="/bot">Off the Dial Bot</Link>
               </h3>
             </Card.Title>
-            <Card.Text>
-              <blockquote style={{ fontSize: "88%" }}>
+            <blockquote style={{ fontSize: "88%" }}>
+              <Card.Text>
                 Our server has a custom Off the Dial Bot used for tournament
                 running assistance. If you would like to know more, we have a
                 page dedicated to about the bot right here!
-              </blockquote>
-            </Card.Text>
+              </Card.Text>
+            </blockquote>
           </Card.Body>
         </Card>
       </Col>
@@ -89,12 +90,12 @@ const Index = () => (
                 <Link to="/community">Community</Link>
               </h3>
             </Card.Title>
-            <Card.Text>
-              <blockquote style={{ fontSize: "88%" }}>
+            <blockquote style={{ fontSize: "88%" }}>
+              <Card.Text>
                 Off the Dial is thankful to have such an awesome team and
                 community! And you can check each one of them out right here!
-              </blockquote>
-            </Card.Text>
+              </Card.Text>
+            </blockquote>
           </Card.Body>
         </Card>
       </Col>
@@ -106,12 +107,12 @@ const Index = () => (
                 <Link to="/media">Media</Link>
               </h3>
             </Card.Title>
-            <Card.Text>
-              <blockquote style={{ fontSize: "88%" }}>
+            <blockquote style={{ fontSize: "88%" }}>
+              <Card.Text>
                 Off the Dial has many media outlets, you can find a list of all
                 of them right here!
-              </blockquote>
-            </Card.Text>
+              </Card.Text>
+            </blockquote>
           </Card.Body>
         </Card>
       </Col>
@@ -120,22 +121,25 @@ const Index = () => (
           <Card.Body>
             <Card.Title>
               <h3>
-                <Link to="https://github.com/offthedial/assets">Assets</Link>
+                <a href="https://github.com/offthedial/assets">Assets</a>
               </h3>
             </Card.Title>
-            <Card.Text>
-              <blockquote style={{ fontSize: "88%" }}>
+            <blockquote style={{ fontSize: "88%" }}>
+              <Card.Text>
                 Many of our assets are public and free. Assets include logos and
                 banners related to Off the Dial and its tournaments. You can
                 find them all right here!
-              </blockquote>
-            </Card.Text>
+              </Card.Text>
+            </blockquote>
           </Card.Body>
         </Card>
       </Col>
     </Row>
     <Footer>
-      This website is currently in beta, more features are to come. Stay tuned!
+      Built with{" "}
+      <a href="https://github.com/offthedial/site">{emoji('\u2764')}</a> &{" "}
+      <a href="https://www.gatsbyjs.org/">Gatsby</a>. This website is currently
+      in beta, more features are to come. Stay tuned!
     </Footer>
   </Layout>
 )
