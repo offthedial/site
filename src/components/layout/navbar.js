@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { css } from "@emotion/core"
 import { Navbar, Nav } from "react-bootstrap"
 
@@ -58,13 +57,5 @@ const NavBar = ({ siteTitle }) => (
     </Navbar>
   </header>
 )
-
-NavBar.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-NavBar.defaultProps = {
-  siteTitle: ``,
-}
 
 export default NavBar
