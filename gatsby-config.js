@@ -63,6 +63,12 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           `gatsby-remark-images`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: false,
+            },
+          },
           `gatsby-remark-prismjs`,
         ],
         remarkPlugins: [require(`remark-emoji`)],
