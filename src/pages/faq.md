@@ -1,3 +1,7 @@
+---
+title: FAQ
+---
+
 # FAQ
 ## General
 ### What is my 'Signal Strength'?

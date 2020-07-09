@@ -1,3 +1,7 @@
+---
+title: Weakest Link Rules
+---
+
 # Weakest Link Rules
 ## Format
 Complete teams will consist of 4-5 players.

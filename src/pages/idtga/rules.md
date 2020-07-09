@@ -1,3 +1,7 @@
+---
+title: IDTGA Rules
+---
+
 # IDTGA Rules
 ## Format
 Complete teams will consist of 4-5 players.
