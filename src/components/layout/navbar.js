@@ -46,9 +46,9 @@ const NavBar = ({ siteTitle }) => (
           id="responsive-navbar-nav"
         >
           <Nav>
-            <Navlink className="d-lg-none">Discord</Navlink>
-            <Navlink>It's Dangerous to go Alone</Navlink>
-            <Navlink>Weakest Link</Navlink>
+            <Navlink href="/discord" className="d-lg-none">Discord</Navlink>
+            <Navlink href="/idtga">It's Dangerous to go Alone</Navlink>
+            <Navlink href="/wl">Weakest Link</Navlink>
           </Nav>
         </Navbar.Collapse>
         <a
