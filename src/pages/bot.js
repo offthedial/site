@@ -10,7 +10,7 @@ const Bot = () => (
     <h1>Off the Dial Bot</h1>
     <Row>
       <Col md={{ order: "last" }}>
-        <img src={ logo }/>
+        <img alt="" src={ logo }/>
       </Col>
       <Col md="8" lg="7">
         <p>A custom made bot, it’s built from the ground up by LeptoFlare and used for all kinds of stuff, tournament management, profile storage, and generating minesweepers at your convenience.</p>
