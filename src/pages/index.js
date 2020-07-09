@@ -55,16 +55,17 @@ const Index = () => (
                 </h3>
               </Card.Title>
               <Card.Text>
-                Stay up to date with the newest updates on Off the Dial!
+                Stay up to date with the latest blog posts, news, and updates on everything Off the Dial!
               </Card.Text>
             </Card.Body>
           </Card>
         </CardColumns>
       </Col>
     </Row>
+    <h2 id="media">Media</h2>
     <h2>More Information</h2>
     <Row>
-      <Col xl="3" md="6" className="mb-3">
+      <Col xl="4" md="6" className="mb-3">
         <Card>
           <Card.Body>
             <Card.Title>
@@ -82,7 +83,7 @@ const Index = () => (
           </Card.Body>
         </Card>
       </Col>
-      <Col xl="3" md="6" className="mb-3">
+      <Col xl="4" md="6" className="mb-3">
         <Card>
           <Card.Body>
             <Card.Title>
@@ -99,24 +100,7 @@ const Index = () => (
           </Card.Body>
         </Card>
       </Col>
-      <Col xl="3" md="6" className="mb-3">
-        <Card>
-          <Card.Body>
-            <Card.Title>
-              <h3>
-                <Link to="/media">Media</Link>
-              </h3>
-            </Card.Title>
-            <blockquote style={{ fontSize: "88%" }}>
-              <Card.Text>
-                Off the Dial has many media outlets, you can find a list of all
-                of them right here!
-              </Card.Text>
-            </blockquote>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col xl="3" md="6" className="mb-3">
+      <Col xl="4" md="6" className="mb-3">
         <Card>
           <Card.Body>
             <Card.Title>
