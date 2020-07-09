@@ -21,14 +21,18 @@ const Community = () => (
       linkRef="https://twitter.com/djam987"
     >
       <p>
-        Hey there! I'm DJam98 and I am the creator of this little discord
-        server on the internet.
+        Hey there! I'm DJam98 and I am the creator of this little discord server
+        on the internet.
       </p>
       <p>
         I spend most of my spare time on Off the Dial and playing games on the
-        Switch (and spending way too much time in Splatoon.</p><p>I have a
-        twitter, if you want to check that out, where I sometimes post upcoming updates that may be coming to the
-        server and tournaments. Follows appreciated!</p>
+        Switch (and spending way too much time in Splatoon.
+      </p>
+      <p>
+        I have a twitter, if you want to check that out, where I sometimes post
+        upcoming updates that may be coming to the server and tournaments.
+        Follows appreciated!
+      </p>
     </CommunityCard>
     <CommunityCard
       name="LeptoFlare"
@@ -37,9 +41,10 @@ const Community = () => (
       linkRef="https://lepto.tech"
     >
       <p>
-        You may know me as the rewriter of Off the Dial Bot,
-        and my decision to make it open-sourced. I've saved DJam98 lots of headaches, and made it much easier to track
-        ranks, manage profiles, and generate minesweepers at your convenience.
+        You may know me as the rewriter of Off the Dial Bot, and my decision to
+        make it open-sourced. I've saved DJam98 lots of headaches, and made it
+        much easier to track ranks, manage profiles, and generate minesweepers
+        at your convenience.
       </p>
       <p>
         I'm currently a junior software developer, working on many different
@@ -54,12 +59,16 @@ const Community = () => (
       linkRef="https://twitch.tv/zadafrex"
     >
       <p>I'm the main streamer and commentator for Off the Dial.</p>
-      <p>I've been
-      streaming since 2018 and hosts a weekly on-stream 1v1 Splatoon
-      tournaments. In the last two years I have participated in several
-      Splatoon LANs around the United States.</p><p>Outside of streaming Splatoon
-      and a few other Nintendo Switch games, I serve on two boards of
-      directors and works full-time as an information technology manager.</p>
+      <p>
+        I've been streaming since 2018 and hosts a weekly on-stream 1v1 Splatoon
+        tournaments. In the last two years I have participated in several
+        Splatoon LANs around the United States.
+      </p>
+      <p>
+        Outside of streaming Splatoon and a few other Nintendo Switch games, I
+        serve on two boards of directors and works full-time as an information
+        technology manager.
+      </p>
     </CommunityCard>
   </Layout>
 )
