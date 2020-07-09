@@ -13,7 +13,7 @@ module.exports = {
       options: {
         name: `pages`,
         path: `${__dirname}/src/pages`,
-        ignore: `../**/posts/**`,
+        ignore: `../**/posts/**`,  // Except posts
       },
     },
     {
@@ -42,7 +42,11 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
 
+    /* Image Processing */
+    `gatsby-plugin-sharp`,
+    
     /* MDX */
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
@@ -57,6 +61,11 @@ module.exports = {
           default: path.resolve("src/templates/md.js"),
           posts: path.resolve("src/templates/post.js"),
         },
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-images`,
+          `gatsby-remark-prismjs`,
+        ],
+        remarkPlugins: [require(`remark-emoji`)],
       },
     },
   ],
