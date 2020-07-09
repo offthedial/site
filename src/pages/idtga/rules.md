@@ -2,7 +2,7 @@
 title: IDTGA Rules
 ---
 
-# IDTGA Rules
+# It's Dangerous to go Alone Rules
 ## Format
 Complete teams will consist of 4-5 players.
 

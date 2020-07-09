@@ -1,5 +1,5 @@
 ---
-title: Weakest Link Rules
+title: WL Rules
 ---
 
 # Weakest Link Rules
