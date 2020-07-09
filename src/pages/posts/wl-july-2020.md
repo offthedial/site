@@ -17,7 +17,7 @@ July has hit the stacks, and this month, we'll be playing __Weakest Link__. In t
 
 ## Registration
 1. Head over to our [Discord](https://otd.ink/discord)
-2. Find an open `#bot-commands` channel
+2. Find an open <Mention>#bot-commands</Mention> channel
 3. Type `$signup` and follow the instructions.
 
 For more details, you can check the [tournament page](https://otd.ink/wl) on our website.

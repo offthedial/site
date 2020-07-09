@@ -39,13 +39,13 @@ Yes! If there are at-least 4 teams, 1 match from each preliminary round will be 
 All issues are sorted here on discord.
 
 ### I need to contact someone, how should I do it?
-There are many ways to contact us. If you need help and it's not in here ask in `#helpdesk` and either one of the organisers will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the `@Organiser` role (please only do so when needed). You can also dm us here on discord. If you want to do it off discord we regularly check the [Twitter](https://twitter.com/Off_The_Dial) so you can find us there. While on Twitter feel free to use the hashtags `#idtga` and `#WeakestLink` and mention `@Off_The_Dial` or `@DJam987`.
+There are many ways to contact us. If you need help and it's not in here ask in <Mention>#helpdesk</Mention> and either one of the organisers will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the <Mention>@Organiser</Mention> role (please only do so when needed). You can also dm us here on discord. If you want to do it off discord we regularly check the [Twitter](https://twitter.com/Off_The_Dial) so you can find us there. While on Twitter feel free to use the hashtags `#idtga` and `#WeakestLink` and mention `@Off_The_Dial` or `@DJam987`.
 
 ### I need help using smash.gg, where can I get it?
 DJam98 is in charge of smash.gg. If he cannot help, you can contact [smash.gg](https://help.smash.gg/) directly on their website or on their discord.
 
 ### I've got a question, where do I ask?
-`#helpdesk` is the best place to go, and if it's a question you think should go in here let us know with all your other suggestions for Off the Dial in `#suggestions`.
+<Mention>#helpdesk</Mention> is the best place to go, and if it's a question you think should go in here let us know with all your other suggestions for Off the Dial in <Mention>#suggestions</Mention>.
 
 ## It’s Dangerous to go Alone
 ### What is It’s Dangerous to go Alone?
@@ -87,14 +87,14 @@ There is a skill limit for teams, and there is a skill cap for players, if you a
 
 ## Off the Dial Story Mode
 ### What is the Off the Dial Story Mode
-There is an ongoing story with Off the Dial behind the scenes and it is your job to find out what is happening. Leading up to the tournament, there are be lore drops. The result of the tournament will decide what happens next. For more information ask other people on the server and make your predictions and dicsuss lore in `#crime-scene` If you want to be serious about lore, you can give yourself the `@Detective` role with `$flairme flairs` to ensure you get notified of each new lore drop. Plus, you get a fancy role.
+There is an ongoing story with Off the Dial behind the scenes and it is your job to find out what is happening. Leading up to the tournament, there are be lore drops. The result of the tournament will decide what happens next. For more information ask other people on the server and make your predictions and dicsuss lore in <Mention>#crime-scene</Mention> If you want to be serious about lore, you can give yourself the <Mention>@Detective</Mention> role with <Mention>$flairme flairs</Mention> to ensure you get notified of each new lore drop. Plus, you get a fancy role.
 
 ### What’s different about this to regular IDTGA?
 In terms of the actual competition, very little. It is still a free agent tournament at it’s core. The only difference is that after the regular finals match there will be an additional finals round against a pre-determined team called the final boss. This is kept secret until the round begins or may be disclosed in clues prior to the tournament’s commencement
 
 ## Off the Dial Bot
 ### What is Off the Dial Bot?
-Off the Dial Bot is a custom built bot by `@LeptoFlare`, It provides many commands that help us run tournaments more smoothly. You can find a page regarding the bot [here](https://otd.ink/bot).
+Off the Dial Bot is a custom built bot by LeptoFlare, It provides many commands that help us run tournaments more smoothly. You can find a page regarding the bot [here](https://otd.ink/bot).
 
 ### Is Off the Dial Bot open-sourced?
 Yes! You can find all the code on [Github](https://github.com/LeptoFlare/offthedialbot).
