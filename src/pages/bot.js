@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap"
 import Image from "react-bootstrap/Image"
 
 import Layout from "src/components/layout"
-import logo from "src/static/images/bot.png"
+import logo from "src/static/images/logo/square.png"
 import Mention from "../components/mention"
 
 const Bot = () => (
