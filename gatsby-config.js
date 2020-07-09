@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require("path")
 
 module.exports = {
   pathPrefix: "/gatsby-test",
@@ -54,8 +54,8 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
-          default: path.resolve('src/templates/md.js'),
-          posts: path.resolve('src/templates/post.js')
+          default: path.resolve("src/templates/md.js"),
+          posts: path.resolve("src/templates/post.js"),
         },
       },
     },

@@ -48,7 +48,8 @@ export default function Posts({ data }) {
                 </h2>
               </Card.Title>
               <Card.Subtitle className="mb-2" style={{ color: gray(33) }}>
-              <span style={{ color: gray(40) }}>Written on</span> {node.frontmatter.date}
+                <span style={{ color: gray(40) }}>Written on</span>{" "}
+                {node.frontmatter.date}
               </Card.Subtitle>
               <Card.Text>
                 <blockquote>
