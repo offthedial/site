@@ -71,7 +71,7 @@ module.exports = {
           },
           `gatsby-remark-prismjs`,
         ],
-        remarkPlugins: [require(`remark-emoji`)],
+        remarkPlugins: [require(`remark-emoji`), require('remark-twemoji')],
       },
     },
   ],
