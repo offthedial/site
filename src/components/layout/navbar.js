@@ -1,14 +1,12 @@
 import React from "react"
-import { Container, Navbar, Nav } from "react-bootstrap"
 import Image from "react-bootstrap/Image"
+import { Container, Navbar, Nav } from "react-bootstrap"
+import { css } from "@emotion/core"
 
 import { rhythm } from "src/utils/typography"
 import colors from "src/utils/colors"
-
 import discord from "src/static/images/discord.svg"
 import logo from "src/static/images/brand.svg"
-
-import Navlink from "./navlink"
 
 const NavBar = ({ siteTitle }) => (
   <header
@@ -67,6 +65,19 @@ const NavBar = ({ siteTitle }) => (
       </Navbar>
     </Container>
   </header>
+)
+
+const Navlink = ({ className, href, children }) => (
+  <Nav.Link
+    className={className}
+    href={href}
+    css={css`
+      font-size: ${rhythm(0.8)};
+      color: white !important;
+    `}
+  >
+    {children}
+  </Nav.Link>
 )
 
 export default NavBar
