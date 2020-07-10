@@ -1,10 +1,11 @@
 import React from "react"
 import emoji from "react-easy-emoji"
 import { Link } from "gatsby"
-import { CardColumns, Card, Row, Col } from "react-bootstrap"
+import { Image, CardColumns, Card, Row, Col } from "react-bootstrap"
 
 import Layout from "src/components/Layout"
 import Footer from "src/components/Footer"
+import InLi from "src/components/InLi"
 
 const Index = () => (
   <Layout pageTitle="Welcome">
@@ -12,6 +13,7 @@ const Index = () => (
       <WhoAreWe />
       <ImportantPages />
     </Row>
+    <Media />
     <MoreInformation />
     <Footer>
       Built with{" "}
@@ -61,6 +63,32 @@ const ImportantPages = () => (
       </CardPage>
     </CardColumns>
   </Col>
+)
+
+const Media = () => (
+  <>
+    <h2 id="media">Media</h2>
+    <blockquote>
+      <InLi link="twitch">
+        <h3>Twitch</h3>
+      </InLi>
+      <InLi link="discord">
+        <h3>Discord</h3>
+      </InLi>
+      <InLi link="twitter">
+        <h3>Twitter</h3>
+      </InLi>
+      <InLi link="youtube">
+        <h3>YouTube</h3>
+      </InLi>
+      <InLi link="patreon">
+        <h3>Patreon</h3>
+      </InLi>
+      <InLi link="github">
+        <h3>Github</h3>
+      </InLi>
+    </blockquote>
+  </>
 )
 
 const MoreInformation = () => (
