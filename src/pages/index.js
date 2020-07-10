@@ -63,35 +63,6 @@ const ImportantPages = () => (
   </Col>
 )
 
-const Media = () => (
-  <>
-    <h2 id="media">Media</h2>
-    <Row>
-      <MediaLink link="twitch">Twitch</MediaLink>
-      <MediaLink link="twitch">Twitch</MediaLink>
-      <MediaLink link="twitch">Twitch</MediaLink>
-      <MediaLink link="twitch">Twitch</MediaLink>
-    </Row>
-  </>
-)
-
-const MediaLink = ({ link, children }) => (
-  <Col>
-    <Card className="mb-4">
-      <Card.Body>
-        <Card.Title>
-          <h3>
-            <Link to={link}>
-              {emoji("\uD83D\uDD17 ")}
-              {children}
-            </Link>
-          </h3>
-        </Card.Title>
-      </Card.Body>
-    </Card>
-  </Col>
-)
-
 const MoreInformation = () => (
   <>
     <h2>More Information</h2>
