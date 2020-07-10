@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import { rhythm } from "src/utils/typography"
 import Layout from "src/components/layout"
-import Mention from "../../components/mention"
+import Mention from "src/components/mention"
 
 const Idtga = () => (
   <Layout pageTitle="It's Dangerous to Go Alone">

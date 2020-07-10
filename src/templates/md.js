@@ -2,7 +2,6 @@ import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "src/components/layout"
-
 import Mention from "src/components/mention"
 import Footer from "src/components/footer"
 

@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap"
 
 import { rhythm } from "src/utils/typography"
 import Layout from "src/components/layout"
-import Mention from "../../components/mention"
+import Mention from "src/components/mention"
 
 const WeakestLink = () => (
   <Layout pageTitle="Weakest Link">
