@@ -4,18 +4,18 @@ import { Row, Col } from "react-bootstrap"
 
 import Layout from "src/components/Layout"
 import Mention from "src/components/Mention"
-import TourneyLink from "src/components/TourneyLink"
+import InLi from "src/components/InLi"
 
 const WeakestLink = () => (
   <Layout pageTitle="Weakest Link">
     <h1>About Weakest link</h1>
     <blockquote>
-      <TourneyLink link="rules">
+      <InLi link="rules">
         <h2>Rules</h2>
-      </TourneyLink>
-      <TourneyLink link="https://smash.gg/wl">
+      </InLi>
+      <InLi link="https://smash.gg/wl">
         <h2>smash.gg Page</h2>
-      </TourneyLink>
+      </InLi>
     </blockquote>
     <h4>
       <u>Weakest Link</u> is a unique, Off the Dial exclusive, free agent{" "}
