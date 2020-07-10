@@ -8,13 +8,13 @@ title: FAQ
 Your Signal Strength is our internal way of calculating your tournament experience while being here on Off the Dial. As it was only introduced at the start of 2020, we'll still be asking for your previous OTD experience in registration forms until the Signal Strength is an accurate representation. You gain strength by playing in tournaments as well as by placing high in the tournaments.
 
 ### What is the social media for Off the Dial?
-We have many different social media page. All of these can be seen at [otd.ink/media](https://otd.ink/media).
+We have many different social media page. All of these can be seen at [otd.ink/media](media).
 
 ### Why are the admins and TOs always chatting with everyone?
 A happy server is a good server. We strive to make sure everyone is having a good time here and striking up conversations are a means to that end (and we also enjoy it).
 
 ### What is the community page?
-The community is everyone who helps make Off the Dial what it is behind the scenes and the community channel shows who they are and what they do, you can find the page at [otd.ink/community](https://otd.ink/community)
+The community is everyone who helps make Off the Dial what it is behind the scenes and the community channel shows who they are and what they do, you can find the page at [otd.ink/community](community)
 
 ### What time do tournaments begin?
 All tournaments begin on the same minute/hour, but due to timezones that time may differ. Daylight savings times have been listed as well.
@@ -94,7 +94,7 @@ In terms of the actual competition, very little. It is still a free agent tourna
 
 ## Off the Dial Bot
 ### What is Off the Dial Bot?
-Off the Dial Bot is a custom built bot by LeptoFlare, It provides many commands that help us run tournaments more smoothly. You can find a page regarding the bot [here](https://otd.ink/bot).
+Off the Dial Bot is a custom built bot by LeptoFlare, It provides many commands that help us run tournaments more smoothly. You can find a page regarding the bot [here](bot).
 
 ### Is Off the Dial Bot open-sourced?
 Yes! You can find all the code on [Github](https://github.com/LeptoFlare/offthedialbot).

@@ -16,11 +16,11 @@ It's a new month, that means another Off the Dial tournament! This month it'll b
 ### Registration closes 48 hours before the tournament commences.
 
 ## Registration
-1. Head over to our [Discord](https://otd.ink/discord)
+1. Head over to our [Discord](/discord)
 2. Find an open <Mention>#bot-commands</Mention> channel
 3. Type `$signup` and follow the instructions.
 
-For more details, you can check out our brand new [tournament page](https://otd.ink/idtga) on our website.
+For more details, you can check out our brand new [tournament page](/idtga) on our website.
 
 ## Patch Notes
 There hasn't been many changes this season, as we've been focusing greatly on getting this website up and running, as well as working towards a huge update that's coming later this year.

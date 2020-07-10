@@ -4,7 +4,7 @@ import InLi from "src/components/InLi"
 
 const Links = () => (
   <>
-    <p>These are all the places you can catch Off the Dial.</p>
+    <p>Off the Dial has many media outlets, Here's a list of all the platforms you can catch us on. We'd appreciate if you supported us there.</p>
     <blockquote>
       <InLi link="twitch">
         <h3>Twitch</h3>

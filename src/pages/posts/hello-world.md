@@ -13,7 +13,7 @@ As of right now, the website is simply hosting static documents regarding Off th
 Below, we've listed a few questions that you might have.
 
 #### Where can I find the website?
-To get to our main homepage, click the **Off the Dial** text above or enter [`otd.ink`](https://otd.ink) into your browser.
+To get to our main homepage, click the **Off the Dial** text above or enter [`otd.ink`](/) into your browser.
 
 #### What has changed for me?
 There are a few things that have changed, let's go through them:
@@ -25,8 +25,8 @@ There are a few things that have changed, let's go through them:
   Additionally, Off the Dial bot is able to scrape the webpage to embed sections of the rules directly through a bot command, more on that later.
 
 - ##### Other Pages:
-  Channels like the [<Mention>#community</Mention>](https://otd.ink/community) and [<Mention>#faq</Mention>](https://otd.ink/faq) are migrated to the website as well.
-  There is additionally a [new page](https://otd.ink/bot) for the bot that serves as a simple place to find information on Off the Dial Bot.
+  Channels like the [<Mention>#community</Mention>](/community) and [<Mention>#faq</Mention>](/faq) are migrated to the website as well.
+  There is additionally a [new page](/bot) for the bot that serves as a simple place to find information on Off the Dial Bot.
 
   This provides a good balance between the freedom to edit parts of the page at any time on a google doc, and the accessibility of a discord channel.
 
