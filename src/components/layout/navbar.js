@@ -31,12 +31,12 @@ const NavBar = ({ siteTitle }) => (
           style={{
             fontSize: rhythm(1.5),
             fontWeight: "700",
-            maxHeight: rhythm(8 / 3)
+            maxHeight: rhythm(8 / 3),
           }}
         >
           <Image
             className="m-0 p-0"
-            style={{ maxHeight: rhythm(8 / 3)}}
+            style={{ maxHeight: rhythm(8 / 3) }}
             src={logo}
           />
         </Navbar.Brand>
@@ -46,7 +46,9 @@ const NavBar = ({ siteTitle }) => (
           id="responsive-navbar-nav"
         >
           <Nav>
-            <Navlink href="discord" className="d-lg-none">Discord</Navlink>
+            <Navlink href="discord" className="d-lg-none">
+              Discord
+            </Navlink>
             <Navlink href="idtga">It's Dangerous to go Alone</Navlink>
             <Navlink href="wl">Weakest Link</Navlink>
           </Nav>
@@ -57,7 +59,7 @@ const NavBar = ({ siteTitle }) => (
           style={{ maxHeight: rhythm(8 / 3) }}
         >
           <Image
-          className="m-0 ml-4"
+            className="m-0 ml-4"
             style={{ maxHeight: rhythm(8 / 3) }}
             src={discord}
           />

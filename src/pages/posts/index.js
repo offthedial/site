@@ -43,9 +43,7 @@ export default function Posts({ data }) {
               to={node.parent.name}
             >
               <Card.Title>
-                <h2 className="mb-0">
-                  {node.frontmatter.title}
-                </h2>
+                <h2 className="mb-0">{node.frontmatter.title}</h2>
               </Card.Title>
               <Card.Subtitle className="text-muted mb-2">
                 {node.frontmatter.author} · {node.frontmatter.date}

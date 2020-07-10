@@ -2,9 +2,8 @@ import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import { format } from "date-fns"
 
-import { rhythm, gray } from "src/utils/typography"
+import { rhythm } from "src/utils/typography"
 import Layout from "src/components/layout"
-
 import Mention from "src/components/mention"
 import Footer from "src/components/footer"
 
@@ -17,7 +16,8 @@ const Post = ({ pageContext, children }) => (
         {pageContext.frontmatter.title}
       </h1>
       <h2 className="text-muted" style={{ fontSize: rhythm(0.8) }}>
-      {pageContext.frontmatter.author} · {format(new Date(pageContext.frontmatter.date), "MMMM dd, yyyy")}
+        {pageContext.frontmatter.author} ·{" "}
+        {format(new Date(pageContext.frontmatter.date), "MMMM dd, yyyy")}
       </h2>
       <MDXProvider components={shortcodes}>{children}</MDXProvider>
     </div>

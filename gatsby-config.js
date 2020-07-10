@@ -13,7 +13,7 @@ module.exports = {
       options: {
         name: `pages`,
         path: `${__dirname}/src/pages`,
-        ignore: `../**/posts/**`,  // Except posts
+        ignore: `../**/posts/**`, // Except posts
       },
     },
     {
@@ -44,7 +44,7 @@ module.exports = {
 
     /* Image Processing */
     `gatsby-plugin-sharp`,
-    
+
     /* MDX */
     `gatsby-remark-images`,
     {
@@ -71,7 +71,7 @@ module.exports = {
           },
           `gatsby-remark-prismjs`,
         ],
-        remarkPlugins: [require(`remark-emoji`), require('remark-twemoji')],
+        remarkPlugins: [require(`remark-emoji`), require(`remark-twemoji`)],
       },
     },
   ],

@@ -55,7 +55,8 @@ const Index = () => (
                 </h3>
               </Card.Title>
               <Card.Text>
-                Stay up to date with the latest blog posts, news, and updates on everything Off the Dial!
+                Stay up to date with the latest blog posts, news, and updates on
+                everything Off the Dial!
               </Card.Text>
             </Card.Body>
           </Card>
@@ -121,7 +122,7 @@ const Index = () => (
     </Row>
     <Footer>
       Built with{" "}
-      <a href="https://github.com/offthedial/site">{emoji('\u2764')}</a> &{" "}
+      <a href="https://github.com/offthedial/site">{emoji("\u2764")}</a> &{" "}
       <a href="https://www.gatsbyjs.org/">Gatsby</a>. This website is currently
       in beta, more features are to come. Stay tuned!
     </Footer>

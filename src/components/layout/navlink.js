@@ -6,14 +6,14 @@ import { rhythm } from "src/utils/typography"
 
 const Navlink = ({ className, href, children }) => (
   <Nav.Link
-    className={ className }
-    href={ href }
+    className={className}
+    href={href}
     css={css`
       font-size: ${rhythm(0.8)};
       color: white !important;
     `}
   >
-    { children }
+    {children}
   </Nav.Link>
 )
 
