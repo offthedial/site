@@ -2,26 +2,20 @@ import React from "react"
 import { Link } from "gatsby"
 import { Row, Col } from "react-bootstrap"
 
-import { rhythm } from "src/utils/typography"
-import Layout from "src/components/layout"
-import Mention from "../../components/mention"
+import Layout from "src/components/Layout"
+import Mention from "src/components/Mention"
+import TourneyLink from "src/components/TourneyLink"
 
 const WeakestLink = () => (
   <Layout pageTitle="Weakest Link">
     <h1>About Weakest link</h1>
     <blockquote>
-      <Link
-        style={{ display: `inline-block`, marginRight: rhythm(1) }}
-        to="rules"
-      >
+      <TourneyLink link="rules">
         <h2>Rules</h2>
-      </Link>
-      <Link
-        style={{ display: `inline-block`, marginRight: rhythm(1) }}
-        to="https://smash.gg/wl"
-      >
+      </TourneyLink>
+      <TourneyLink link="https://smash.gg/wl">
         <h2>smash.gg Page</h2>
-      </Link>
+      </TourneyLink>
     </blockquote>
     <h4>
       <u>Weakest Link</u> is a unique, Off the Dial exclusive, free agent{" "}

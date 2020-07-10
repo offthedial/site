@@ -1,10 +1,9 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 
-import Layout from "src/components/layout"
-
-import Mention from "src/components/mention"
-import Footer from "src/components/footer"
+import Layout from "src/components/Layout"
+import Mention from "src/components/Mention"
+import Footer from "src/components/Footer"
 
 const shortcodes = { Mention, Footer }
 

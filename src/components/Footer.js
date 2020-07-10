@@ -5,6 +5,7 @@ const Footer = ({ children }) => (
     <br />
     <hr />
     <div
+      className="mx-1"
       style={{
         fontSize: `80%`,
         opacity: `80%`,

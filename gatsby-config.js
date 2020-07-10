@@ -13,7 +13,7 @@ module.exports = {
       options: {
         name: `pages`,
         path: `${__dirname}/src/pages`,
-        ignore: `../**/posts/**`,  // Except posts
+        ignore: `../**/posts/**`, // Except posts
       },
     },
     {
@@ -44,7 +44,7 @@ module.exports = {
 
     /* Image Processing */
     `gatsby-plugin-sharp`,
-    
+
     /* MDX */
     `gatsby-remark-images`,
     {
@@ -63,9 +63,15 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           `gatsby-remark-images`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: false,
+            },
+          },
           `gatsby-remark-prismjs`,
         ],
-        remarkPlugins: [require(`remark-emoji`)],
+        remarkPlugins: [require(`remark-emoji`), require(`remark-twemoji`)],
       },
     },
   ],
