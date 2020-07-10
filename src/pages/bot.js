@@ -2,9 +2,9 @@ import React from "react"
 import Image from "react-bootstrap/Image"
 import { Row, Col } from "react-bootstrap"
 
-import Layout from "src/components/layout"
+import Layout from "src/components/Layout"
 import logo from "src/static/images/bot.png"
-import Mention from "../components/mention"
+import Mention from "../components/Mention"
 
 const Bot = () => (
   <Layout pageTitle="Bot">

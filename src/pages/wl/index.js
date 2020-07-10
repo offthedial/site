@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import { Row, Col } from "react-bootstrap"
 
 import { rhythm } from "src/utils/typography"
-import Layout from "src/components/layout"
-import Mention from "src/components/mention"
+import Layout from "src/components/Layout"
+import Mention from "src/components/Mention"
 
 const WeakestLink = () => (
   <Layout pageTitle="Weakest Link">

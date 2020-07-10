@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 
 import { rhythm, gray } from "src/utils/typography"
-import Layout from "src/components/layout"
+import Layout from "src/components/Layout"
 
 export default function Posts({ data }) {
   return (

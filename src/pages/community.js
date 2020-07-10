@@ -1,7 +1,7 @@
 import React from "react"
 import { Card } from "react-bootstrap"
 
-import Layout from "src/components/layout"
+import Layout from "src/components/Layout"
 
 const Community = () => (
   <Layout pageTitle="Community">

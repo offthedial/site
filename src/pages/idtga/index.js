@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm } from "src/utils/typography"
-import Layout from "src/components/layout"
-import Mention from "src/components/mention"
+import Layout from "src/components/Layout"
+import Mention from "src/components/Mention"
 
 const Idtga = () => (
   <Layout pageTitle="It's Dangerous to Go Alone">
