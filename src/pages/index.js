@@ -26,22 +26,22 @@ const WhoAreWe = () => (
   <Col lg="6">
     <h1>Who are we?</h1>
     <p>
-      Off the Dial is a unique tournament organisation for Splatoon 2,
-      dedicated to providing fresh tournament opportunities for free agents
-      and teams alike.
+      Off the Dial is a unique tournament organisation for Splatoon 2, dedicated
+      to providing fresh tournament opportunities for free agents and teams
+      alike.
     </p>
     <p>
       Our flagship tournament, It's Dangerous to go Alone, is a free agent
       tournament focused on creating balanced teams, and being accessible to
-      everyone. For more information, select "It's Dangerous to go Alone" at
-      the top.
+      everyone. For more information, select "It's Dangerous to go Alone" at the
+      top.
     </p>
     <p>
-      We also run a unique, Off the Dial exclusive, free agent <i>and</i>{" "}
-      team tournament called Weakest Link. Originally an experiment, this
-      unique tournament provides coaching opportunities for free agents, and
-      teaching opportunities for teams. For more information, select
-      "Weakest Link" at the top.
+      We also run a unique, Off the Dial exclusive, free agent <i>and</i> team
+      tournament called Weakest Link. Originally an experiment, this unique
+      tournament provides coaching opportunities for free agents, and teaching
+      opportunities for teams. For more information, select "Weakest Link" at
+      the top.
     </p>
   </Col>
 )
@@ -52,10 +52,12 @@ const ImportantPages = () => (
     <h2>Important Pages</h2>
     <CardColumns className="mb-3" style={{ columnCount: 1 }}>
       <CardPage title="FAQ" link="faq">
-        We get asked a lot of questions, so a FAQ necessary. We highly recommend you check out this page.
+        We get asked a lot of questions, so a FAQ necessary. We highly recommend
+        you check out this page.
       </CardPage>
       <CardPage title="Posts" link="posts">
-        Stay up to date with the latest blog posts, news, and updates on everything Off the Dial!
+        Stay up to date with the latest blog posts, news, and updates on
+        everything Off the Dial!
       </CardPage>
     </CardColumns>
   </Col>
@@ -79,7 +81,10 @@ const MediaLink = ({ link, children }) => (
       <Card.Body>
         <Card.Title>
           <h3>
-            <Link to={ link }>{ emoji("\uD83D\uDD17 ")}{children}</Link>
+            <Link to={link}>
+              {emoji("\uD83D\uDD17 ")}
+              {children}
+            </Link>
           </h3>
         </Card.Title>
       </Card.Body>
@@ -92,18 +97,18 @@ const MoreInformation = () => (
     <h2>More Information</h2>
     <Row>
       <CardPageOther title="Off the Dial Bot" link="bot">
-        Our server has a custom Off the Dial Bot used for tournament
-        running assistance. If you would like to know more, we have a
-        page dedicated to about the bot right here!
+        Our server has a custom Off the Dial Bot used for tournament running
+        assistance. If you would like to know more, we have a page dedicated to
+        about the bot right here!
       </CardPageOther>
       <CardPageOther title="Community" link="community">
-        Off the Dial is thankful to have such an awesome team and
-        community! And you can check each one of them out right here!
+        Off the Dial is thankful to have such an awesome team and community! And
+        you can check each one of them out right here!
       </CardPageOther>
       <CardPageOther title="Assets" link="assets">
-        Many of our assets are public and free. Assets include logos and
-        banners related to Off the Dial and its tournaments. You can
-        find them all right here!
+        Many of our assets are public and free. Assets include logos and banners
+        related to Off the Dial and its tournaments. You can find them all right
+        here!
       </CardPageOther>
     </Row>
   </>
@@ -114,12 +119,10 @@ const CardPage = ({ title, link, children }) => (
     <Card.Body>
       <Card.Title>
         <h3>
-          <Link to={ link }>{ title }</Link>
+          <Link to={link}>{title}</Link>
         </h3>
       </Card.Title>
-      <Card.Text>
-        { children }
-      </Card.Text>
+      <Card.Text>{children}</Card.Text>
     </Card.Body>
   </Card>
 )
@@ -130,13 +133,11 @@ const CardPageOther = ({ title, link, children }) => (
       <Card.Body>
         <Card.Title>
           <h3>
-            <Link to={ link }>{ title }</Link>
+            <Link to={link}>{title}</Link>
           </h3>
         </Card.Title>
         <blockquote style={{ fontSize: "88%" }}>
-          <Card.Text>
-            { children }
-          </Card.Text>
+          <Card.Text>{children}</Card.Text>
         </blockquote>
       </Card.Body>
     </Card>
