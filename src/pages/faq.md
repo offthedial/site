@@ -39,7 +39,7 @@ Yes! If there are at-least 4 teams, 1 match from each preliminary round will be 
 All issues are sorted here on discord.
 
 ### I need to contact someone, how should I do it?
-There are many ways to contact us. If you need help and it's not in here ask in <Mention>#helpdesk</Mention> and either one of the organisers will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the <Mention>@Organiser</Mention> role (please only do so when needed). You can also dm us here on discord. If you want to do it off discord we regularly check the [Twitter](https://twitter.com/Off_The_Dial) so you can find us there. While on Twitter feel free to use the hashtags `#idtga` and `#WeakestLink` and mention `@Off_The_Dial` or `@DJam987`.
+There are many ways to contact us. If you need help and it's not in here ask in <Mention>#helpdesk</Mention> and either one of the organisers will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the <Mention>@Organiser</Mention> role (please only do so when needed). You can also dm us here on discord. If you want to do it off discord we regularly check the [Twitter](https://twitter.com/Off_The_Dial) so you can find us there. While on Twitter feel free to use the hashtags [#idtga](https://twitter.com/search?q=%23idtga) and [#weakestlink](https://twitter.com/search?q=%23idtga) and mention [@Off_The_Dial](https://twitter.com/Off_the_Dial) or [@DJam987](https://twitter.com/DJam987).
 
 ### I need help using smash.gg, where can I get it?
 DJam98 is in charge of smash.gg. If he cannot help, you can contact [smash.gg](https://help.smash.gg/) directly on their website or on their discord.
