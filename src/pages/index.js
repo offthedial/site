@@ -9,41 +9,86 @@ import Footer from "src/components/Footer"
 const Index = () => (
   <Layout pageTitle="Welcome">
     <Row>
-      <Col lg="6">
-        <h1>Who are we?</h1>
-        <p>
-          Off the Dial is a unique tournament organisation for Splatoon 2,
-          dedicated to providing fresh tournament opportunities for free agents
-          and teams alike.
-        </p>
-        <p>
-          Our flagship tournament, It's Dangerous to go Alone, is a free agent
-          tournament focused on creating balanced teams, and being accessible to
-          everyone. For more information, select "It's Dangerous to go Alone" at
-          the top.
-        </p>
-        <p>
-          We also run a unique, Off the Dial exclusive, free agent <i>and</i>{" "}
-          team tournament called Weakest Link. Originally an experiment, this
-          unique tournament provides coaching opportunities for free agents, and
-          teaching opportunities for teams. For more information, select
-          "Weakest Link" at the top.
-        </p>
-      </Col>
-      <Col>
-        <br />
-        <h2>Important Pages</h2>
-        <CardColumns className="mb-3" style={{ columnCount: 1 }}>
-          <CardPage title="FAQ" link="faq">
-            We get asked a lot of questions, so a FAQ necessary. We highly recommend you check out this page.
-          </CardPage>
-          <CardPage title="Posts" link="posts">
-            Stay up to date with the latest blog posts, news, and updates on everything Off the Dial!
-          </CardPage>
-        </CardColumns>
-      </Col>
+      <WhoAreWe />
+      <ImportantPages />
     </Row>
+    <MoreInformation />
+    <Footer>
+      Built with{" "}
+      <a href="https://github.com/offthedial/site">{emoji("\u2764")}</a> &{" "}
+      <a href="https://www.gatsbyjs.org/">Gatsby</a>. This website is currently
+      in beta, more features are to come. Stay tuned!
+    </Footer>
+  </Layout>
+)
+
+const WhoAreWe = () => (
+  <Col lg="6">
+    <h1>Who are we?</h1>
+    <p>
+      Off the Dial is a unique tournament organisation for Splatoon 2,
+      dedicated to providing fresh tournament opportunities for free agents
+      and teams alike.
+    </p>
+    <p>
+      Our flagship tournament, It's Dangerous to go Alone, is a free agent
+      tournament focused on creating balanced teams, and being accessible to
+      everyone. For more information, select "It's Dangerous to go Alone" at
+      the top.
+    </p>
+    <p>
+      We also run a unique, Off the Dial exclusive, free agent <i>and</i>{" "}
+      team tournament called Weakest Link. Originally an experiment, this
+      unique tournament provides coaching opportunities for free agents, and
+      teaching opportunities for teams. For more information, select
+      "Weakest Link" at the top.
+    </p>
+  </Col>
+)
+
+const ImportantPages = () => (
+  <Col>
+    <br />
+    <h2>Important Pages</h2>
+    <CardColumns className="mb-3" style={{ columnCount: 1 }}>
+      <CardPage title="FAQ" link="faq">
+        We get asked a lot of questions, so a FAQ necessary. We highly recommend you check out this page.
+      </CardPage>
+      <CardPage title="Posts" link="posts">
+        Stay up to date with the latest blog posts, news, and updates on everything Off the Dial!
+      </CardPage>
+    </CardColumns>
+  </Col>
+)
+
+const Media = () => (
+  <>
     <h2 id="media">Media</h2>
+    <Row>
+      <MediaLink link="twitch">Twitch</MediaLink>
+      <MediaLink link="twitch">Twitch</MediaLink>
+      <MediaLink link="twitch">Twitch</MediaLink>
+      <MediaLink link="twitch">Twitch</MediaLink>
+    </Row>
+  </>
+)
+
+const MediaLink = ({ link, children }) => (
+  <Col>
+    <Card className="mb-4">
+      <Card.Body>
+        <Card.Title>
+          <h3>
+            <Link to={ link }>{ emoji("\uD83D\uDD17 ")}{children}</Link>
+          </h3>
+        </Card.Title>
+      </Card.Body>
+    </Card>
+  </Col>
+)
+
+const MoreInformation = () => (
+  <>
     <h2>More Information</h2>
     <Row>
       <CardPageOther title="Off the Dial Bot" link="bot">
@@ -61,13 +106,7 @@ const Index = () => (
         find them all right here!
       </CardPageOther>
     </Row>
-    <Footer>
-      Built with{" "}
-      <a href="https://github.com/offthedial/site">{emoji("\u2764")}</a> &{" "}
-      <a href="https://www.gatsbyjs.org/">Gatsby</a>. This website is currently
-      in beta, more features are to come. Stay tuned!
-    </Footer>
-  </Layout>
+  </>
 )
 
 const CardPage = ({ title, link, children }) => (
