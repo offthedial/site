@@ -6,7 +6,7 @@ import { css } from "@emotion/core"
 import { rhythm } from "src/utils/typography"
 import colors from "src/utils/colors"
 import discord from "src/static/images/discord.svg"
-import logo from "src/static/images/brand.svg"
+import brand from "src/static/images/brand.svg"
 
 const NavBar = ({ siteTitle }) => (
   <header
@@ -35,7 +35,7 @@ const NavBar = ({ siteTitle }) => (
           <Image
             className="m-0 p-0"
             style={{ maxHeight: rhythm(8 / 3) }}
-            src={logo}
+            src={brand}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
