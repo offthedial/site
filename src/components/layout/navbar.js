@@ -33,7 +33,7 @@ const NavBar = ({ siteTitle }) => (
             maxHeight: rhythm(8 / 3)
           }}
         >
-          Off the Dial
+          OFF THE DIAL
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
