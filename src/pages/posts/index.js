@@ -43,13 +43,12 @@ export default function Posts({ data }) {
               to={node.parent.name}
             >
               <Card.Title>
-                <h2 style={{ marginBottom: rhythm(1 / 4) }}>
+                <h2 className="mb-0">
                   {node.frontmatter.title}
                 </h2>
               </Card.Title>
-              <Card.Subtitle className="mb-2" style={{ color: gray(33) }}>
-                <span style={{ color: gray(40) }}>Written on</span>{" "}
-                {node.frontmatter.date}
+              <Card.Subtitle className="text-muted mb-2">
+                {node.frontmatter.author} · {node.frontmatter.date}
               </Card.Subtitle>
               <Card.Text>
                 <blockquote>

@@ -14,15 +14,10 @@ const Post = ({ pageContext, children }) => (
   <Layout pageTitle={pageContext.frontmatter.title}>
     <div>
       <h1 style={{ marginBottom: rhythm(1 / 4) }}>
-        {pageContext.frontmatter.title}{" "}
-        <span style={{ color: gray(33), fontSize: rhythm(0.85) }}>
-          — <span style={{ color: gray(40) }}>By:</span>{" "}
-          {pageContext.frontmatter.author}
-        </span>
+        {pageContext.frontmatter.title}
       </h1>
-      <h2 style={{ color: gray(33), fontSize: rhythm(0.8) }}>
-        <span style={{ color: gray(40) }}>Written on</span>{" "}
-        {format(new Date(pageContext.frontmatter.date), "MMMM dd, yyyy")}
+      <h2 className="text-muted" style={{ fontSize: rhythm(0.8) }}>
+      {pageContext.frontmatter.author} · {format(new Date(pageContext.frontmatter.date), "MMMM dd, yyyy")}
       </h2>
       <MDXProvider components={shortcodes}>{children}</MDXProvider>
     </div>
