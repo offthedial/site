@@ -3,6 +3,8 @@ title: FAQ
 ---
 
 # FAQ
+We get asked a lot of questions, so a FAQ necessary. You can find everything here from "What time do tournaments begin?" to "What is Weakest Link?".
+
 ## General
 #### What is my 'Signal Strength'?
 Your Signal Strength is our internal way of calculating your tournament experience while being here on Off the Dial. As it was only introduced at the start of 2020, we'll still be asking for your previous OTD experience in registration forms until the Signal Strength is an accurate representation. You gain strength by playing in tournaments as well as by placing high in the tournaments.
