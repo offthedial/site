@@ -9,11 +9,11 @@ import Layout from "src/components/Layout"
 export default function Posts({ data }) {
   return (
     <Layout pageTitle="Posts">
-      <h4>
+      <p>
         Check out the latest blog posts, news, and updates that we’re making to
         Off the Dial below! Posts may consist of patch notes, new features or
         just anything that we feel has a need to be said.
-      </h4>
+      </p>
       <h1 style={{ marginBottom: rhythm(1 / 6) }}>
         <h3
           style={{

@@ -5,14 +5,15 @@ import Layout from "src/components/Layout"
 
 const Community = () => (
   <Layout pageTitle="Community">
-    <h3>
+    <h1>Our Community</h1>
+    <p>
       Off the Dial is thankful to have such an awesome team and community of
       Moderators, including Streamers & Organisers! They are a crucial part of
       Off the Dial and the server would not be where it is today without them.
       Each person in the community also has their own unique skills and
       backgrounds. If you want to learn more about them, or if they interest
       you, you can check each one of them out, right here!
-    </h3>
+    </p>
     <hr />
     <CommunityCard
       name="DJam98"
