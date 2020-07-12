@@ -4,9 +4,8 @@ date: 2020-07-06
 author: DJam98
 ---
 
-July has hit the stacks, and this month, we'll be playing __Weakest Link__! A tournament where you can sign up either as a Free Agent, or a 3-player team.  
-We pair each FA to each team 1 week before tournament day.
-- Sign up as a **FA** and recieve coaching from the team you are paired with.
+July has hit the stacks, and this month, we'll be playing __Weakest Link__! A tournament where you can sign up either as a Free Agent, or a 3-player team, and we pair each FA to each team 1 week before tournament day. Leaving enough time to coaching your Weakest Link.
+- Sign up as a **FA**, and recieve coaching from the team you are paired with.
 - Sign up as a **3-player team**, and practice your teachng skills.
 
 For more details, you can check the [tournament page](/wl) on our website.
@@ -20,7 +19,7 @@ Please note that registration closes exactly 1 week before tournament day.
 - AEST: Sunday, July 26th, 6am
 
 ## Registration
-1. Head over to our [Discord](/discord)
+1. Head over to our [Discord](/discord).
 2. Find an open <Mention>#bot-commands</Mention> channel.
 3. Type `$signup` and follow the instructions.
 
