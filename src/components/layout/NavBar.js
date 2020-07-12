@@ -44,11 +44,11 @@ const NavBar = ({ siteTitle }) => (
           id="responsive-navbar-nav"
         >
           <Nav>
-            <Navlink href="discord" className="d-lg-none">
+            <Navlink href="/discord" className="d-lg-none">
               Discord
             </Navlink>
-            <Navlink href="idtga">It's Dangerous to go Alone</Navlink>
-            <Navlink href="wl">Weakest Link</Navlink>
+            <Navlink href="/idtga">It's Dangerous to go Alone</Navlink>
+            <Navlink href="/wl">Weakest Link</Navlink>
           </Nav>
         </Navbar.Collapse>
         <a
