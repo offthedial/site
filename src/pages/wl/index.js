@@ -45,6 +45,10 @@ const WeakestLink = () => (
           If your team does not meet those requirements, each member of your
           team can sign up as an individual FA.
         </p>
+        <p>
+          You can also sign up with 1 sub. You are completely in control how you
+          manage your sub. The sub cannot substitute for the Weakest Link.
+        </p>
       </Col>
       <Col>
         <h3>Registering as an FA (the Weakest Link)</h3>
