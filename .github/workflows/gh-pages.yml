@@ -2,7 +2,7 @@ name: Github Pages
 on:
   push:
     branches:
-      - gatsby/predesign
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
