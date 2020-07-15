@@ -29,7 +29,10 @@ module.exports = {
         path: `${__dirname}/src/static/images`,
       },
     },
+
+    /* Utilities */
     `gatsby-plugin-root-import`,
+    `gatsby-plugin-remove-trailing-slashes`,
 
     /* Styles & CSS */
     {
