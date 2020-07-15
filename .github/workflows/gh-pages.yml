@@ -1,4 +1,4 @@
-name: Github Pages
+name: Github Pages - Redesign Prototype 
 on:
   push:
     branches:
