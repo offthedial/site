@@ -1,10 +1,11 @@
 import React from "react"
 import emoji from "react-easy-emoji"
 import { Link } from "gatsby"
-import { CardColumns, Card, Row, Col } from "react-bootstrap"
+import { Card, Row, Col } from "react-bootstrap"
 
 import Layout from "src/components/Layout"
 import Footer from "src/components/Footer"
+import MediaLinks from "src/components/MediaLinks"
 
 const Index = () => (
   <Layout pageTitle="Welcome">
@@ -12,6 +13,10 @@ const Index = () => (
       <WhoAreWe />
       <ImportantPages />
     </Row>
+    <div>
+      <h2 id="media">Media</h2>
+      <MediaLinks />
+    </div>
     <MoreInformation />
     <Footer>
       Built with{" "}
@@ -50,16 +55,14 @@ const ImportantPages = () => (
   <Col>
     <br />
     <h2>Important Pages</h2>
-    <CardColumns className="mb-3" style={{ columnCount: 1 }}>
-      <CardPage title="FAQ" link="faq">
-        We get asked a lot of questions, so a FAQ necessary. We highly recommend
-        you check out this page.
-      </CardPage>
-      <CardPage title="Posts" link="posts">
-        Stay up to date with the latest blog posts, news, and updates on
-        everything Off the Dial!
-      </CardPage>
-    </CardColumns>
+    <CardPage title="FAQ" link="faq">
+      We get asked a lot of questions, so a FAQ necessary. We highly recommend
+      you check out this page.
+    </CardPage>
+    <CardPage title="Posts" link="posts">
+      Stay up to date with the latest blog posts, news, and updates on
+      everything Off the Dial!
+    </CardPage>
   </Col>
 )
 
@@ -86,7 +89,7 @@ const MoreInformation = () => (
 )
 
 const CardPage = ({ title, link, children }) => (
-  <Card>
+  <Card className="mb-4">
     <Card.Body>
       <Card.Title>
         <h3>

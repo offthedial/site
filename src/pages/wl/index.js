@@ -4,26 +4,26 @@ import { Row, Col } from "react-bootstrap"
 
 import Layout from "src/components/Layout"
 import Mention from "src/components/Mention"
-import TourneyLink from "src/components/TourneyLink"
+import InLi from "src/components/InLi"
 
 const WeakestLink = () => (
   <Layout pageTitle="Weakest Link">
     <h1>About Weakest link</h1>
     <blockquote>
-      <TourneyLink link="rules">
+      <InLi link="rules">
         <h2>Rules</h2>
-      </TourneyLink>
-      <TourneyLink link="https://smash.gg/wl">
+      </InLi>
+      <InLi link="https://smash.gg/wl">
         <h2>smash.gg Page</h2>
-      </TourneyLink>
+      </InLi>
     </blockquote>
-    <h4>
+    <p>
       <u>Weakest Link</u> is a unique, Off the Dial exclusive, free agent{" "}
       <i>and</i> team tournament. Originally an experiment, this unique
       tournament provides coaching opportunities for free agents, and teaching
       opportunities for teams.
-    </h4>
-    <h4>All you need to do is sign up! The world is waiting…</h4>
+    </p>
+    <p>All you need to do is sign up! The world is waiting…</p>
 
     <h2>Registration</h2>
     <p>
@@ -44,6 +44,10 @@ const WeakestLink = () => (
         <p>
           If your team does not meet those requirements, each member of your
           team can sign up as an individual FA.
+        </p>
+        <p>
+          You can also sign up with 1 sub. You are completely in control how you
+          manage your sub. The sub cannot substitute for the Weakest Link.
         </p>
       </Col>
       <Col>

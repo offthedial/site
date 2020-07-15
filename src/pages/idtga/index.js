@@ -3,24 +3,24 @@ import { Link } from "gatsby"
 
 import Layout from "src/components/Layout"
 import Mention from "src/components/Mention"
-import TourneyLink from "src/components/TourneyLink"
+import InLi from "src/components/InLi"
 
 const Idtga = () => (
   <Layout pageTitle="It's Dangerous to Go Alone">
     <h1>About It's Dangerous to Go Alone</h1>
     <blockquote>
-      <TourneyLink link="rules">
+      <InLi link="rules">
         <h2>Rules</h2>
-      </TourneyLink>
-      <TourneyLink link="https://smash.gg/idtga">
+      </InLi>
+      <InLi link="https://smash.gg/idtga">
         <h2>smash.gg Page</h2>
-      </TourneyLink>
+      </InLi>
     </blockquote>
-    <h4>
+    <p>
       <u>It's Dangerous to go Alone</u> is our flagship, free agent tournament.
       Focused on creating balanced teams, and being accessible to everyone.
-    </h4>
-    <h4>All you need to do is sign up! The world is waiting…</h4>
+    </p>
+    <p>All you need to do is sign up! The world is waiting…</p>
 
     <h2>Registration</h2>
     <p>
