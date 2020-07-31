@@ -44,7 +44,7 @@ const Bot = () => (
       </Col>
     </Row>
     <h2>Contributing</h2>
-    <p>This bot is open sourced, the source code is hosted on Github.</p>
+    <p>This bot is <a href="https://github.com/offthedial/bot">open-sourced</a> on Github.</p>
     <p>
       If you have a suggestion/bug report for Off the Dial Bot, please make a
       Github Issue. This lets us track all of the suggestions and reports
