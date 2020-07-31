@@ -25,7 +25,7 @@ But don't fret! The story is *not needed* to play in the tournament. The actual 
 - JST - Sunday the 30th of August, 5am
 - AEST - Sunday the 30th of August, 6am
 
-## Registration
+### Registration
 1. Head over to our [Discord](/discord).
 2. Find an open <Mention>#bot-commands</Mention> channel.
 3. Type `$signup` and follow the instructions.
