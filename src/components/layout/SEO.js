@@ -49,7 +49,12 @@ function SEO({ description, lang, meta, title }) {
       link={[
         { rel: "icon", type: "image/png", sizes: "64x64", href: `${favicon}` },
       ]}
-    />
+    >
+      <script
+        defer
+        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+      />
+    </Helmet>
   )
 }
 

@@ -35,12 +35,6 @@ module.exports = {
     `gatsby-plugin-remove-trailing-slashes`,
 
     /* Styles & CSS */
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
 

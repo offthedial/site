@@ -1,11 +1,11 @@
 import React from "react"
 
 const Footer = ({ children }) => (
-  <footer>
+  <footer class="section">
     <br />
     <hr />
     <div
-      className="mx-1"
+      class="container"
       style={{
         fontSize: `80%`,
         opacity: `80%`,
