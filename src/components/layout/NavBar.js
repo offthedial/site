@@ -5,11 +5,7 @@ import brand from "src/static/images/brand.svg"
 const NavBar = ({ siteTitle }) => (
   <nav class="navbar is-primary is-transparent" role="navigation" aria-label="main navigation">
     <div class="container">
-      <div class="navbar-brand">
-        <a class="navbar-item py-0" href="/">
-          <img src={brand} />
-        </a>
-      </div>
+      <NavBrand />
       <div class="navbar-menu is-paddingless">
         <div class="navbar-end">
           <a href="/idtga" class="navbar-item">
@@ -26,4 +22,20 @@ const NavBar = ({ siteTitle }) => (
     </div>
   </nav>
 )
+
+const NavBrand = () => (
+  <div class="navbar-brand">
+    <div class="is-hidden-desktop">
+      <a class="navbar-item py-0 pl-5" href="/">
+        <img src={brand} />
+      </a>
+    </div>
+    <div class="is-hidden-touch">
+      <a class="navbar-item py-0" href="/">
+        <img src={brand} />
+      </a>
+    </div>
+  </div>  
+)
+
 export default NavBar
