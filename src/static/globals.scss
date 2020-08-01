@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* Colors */
 $slate: #5d9194;
 $cyan: #1abfc7;
 $green: #39fa96;
@@ -10,9 +11,20 @@ $orange: #fb788b;
 $primary: $slate;
 $link: $primary;
 
-$navbar-item-img-max-height: 3.25rem;
-
+/* Typography */
 $family-sans-serif: "DM Sans", "Noto Sans", sans-serif;
+$weight-semibold: 500;
+
+/* Element Styles */
+$code: hsl(0, 0%, 29%);
+$code-background: rgba(128,128,128,.1);
+
+$content-blockquote-background-color: none;
+$content-blockquote-padding: 0 1em;
+$content-blockquote-border-left: 2px solid $primary;
+
+/* Component Styles */
+$navbar-item-img-max-height: 3.25rem;
 
 $gap: 128px;
 
