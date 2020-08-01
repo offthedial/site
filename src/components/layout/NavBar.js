@@ -6,7 +6,7 @@ const NavBar = ({ siteTitle }) => (
   <nav class="navbar is-primary is-transparent" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item is-fullsize" href="/">
+        <a class="navbar-item py-0" href="/">
           <img src={brand} />
         </a>
       </div>
@@ -18,7 +18,7 @@ const NavBar = ({ siteTitle }) => (
           <a href="/idtga" class="navbar-item">
             Weakest Link
           </a>
-          <a class="navbar-item" href="/" style={{ padding: "0" }}>
+          <a class="navbar-item py-0" href="/">
             <img src={discord} />
           </a>
         </div>
