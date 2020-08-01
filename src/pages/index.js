@@ -27,7 +27,7 @@ const Index = () => (
           We get asked a lot of questions, so a FAQ necessary. We highly
           recommend you check out this page.
         </p>
-        <div class="button is-link">Go to FAQ</div>
+        <a href="/faq" class="button is-link">Go to FAQ</a>
       </div>
       <div class="column">{/*  */}</div>
     </Section>
@@ -39,7 +39,7 @@ const Index = () => (
           Stay up to date with the latest blog posts, news, and updates on
           everything Off the Dial!
         </p>
-        <div class="button is-primary">View Posts</div>
+        <a href="/posts" class="button is-primary">View Posts</a>
       </div>
     </Section>
     <SectionBackground>
@@ -50,7 +50,7 @@ const Index = () => (
           banners related to Off the Dial and its tournaments. You can find them
           all right here!
         </p>
-        <a href="https://otd.ink/assets" class="button is-primary">
+        <a href="/assets" class="button is-primary">
           Assets Repository
         </a>
       </div>
@@ -63,7 +63,7 @@ const Index = () => (
           assistance. If you would like to know more, we have a page dedicated
           to about the bot!
         </p>
-        <div class="button is-primary">About the Bot</div>
+        <a href="/bot" class="button is-primary">About the Bot</a>
       </div>
       <div class="column">{/*  */}</div>
     </Section>
@@ -75,7 +75,7 @@ const Index = () => (
           Off the Dial is thankful to have such an awesome team and community!
           You can find out more about everyone here!
         </p>
-        <div class="button is-primary">Our Community</div>
+        <a href="/community" class="button is-primary">Our Community</a>
       </div>
     </Section>
     <SectionBackground>
