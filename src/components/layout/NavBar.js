@@ -3,7 +3,11 @@ import discord from "src/static/images/discord.svg"
 import brand from "src/static/images/brand.svg"
 
 const NavBar = ({ siteTitle }) => (
-  <nav class="navbar is-primary is-transparent" role="navigation" aria-label="main navigation">
+  <nav
+    class="navbar is-primary is-transparent"
+    role="navigation"
+    aria-label="main navigation"
+  >
     <div class="container">
       <NavBrand />
       <div class="navbar-menu is-paddingless">
@@ -27,15 +31,15 @@ const NavBrand = () => (
   <div class="navbar-brand">
     <div class="is-hidden-desktop">
       <a class="navbar-item py-0 pl-5" href="/">
-        <img src={brand} />
+        <img src={brand} alt="" />
       </a>
     </div>
     <div class="is-hidden-touch">
       <a class="navbar-item py-0" href="/">
-        <img src={brand} />
+        <img src={brand} alt="" />
       </a>
     </div>
-  </div>  
+  </div>
 )
 
 export default NavBar
