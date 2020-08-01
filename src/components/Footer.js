@@ -1,7 +1,7 @@
 import React from "react"
 
 const Footer = ({ children }) => (
-  <footer class="section">
+  <footer class="section py-1">
     <br />
     <hr />
     <div
