@@ -17,7 +17,7 @@ const Index = () => (
         </p>
       </div>
       <div class="column is-2">
-        <img src={Logo} />
+        <img src={Logo} alt="" />
       </div>
     </SectionBackground>
     <Section>
@@ -27,7 +27,9 @@ const Index = () => (
           We get asked a lot of questions, so a FAQ necessary. We highly
           recommend you check out this page.
         </p>
-        <a href="/faq" class="button is-link">Go to FAQ</a>
+        <a href="/faq" class="button is-link">
+          Go to FAQ
+        </a>
       </div>
       <div class="column">{/*  */}</div>
     </Section>
@@ -39,7 +41,9 @@ const Index = () => (
           Stay up to date with the latest blog posts, news, and updates on
           everything Off the Dial!
         </p>
-        <a href="/posts" class="button is-primary">View Posts</a>
+        <a href="/posts" class="button is-primary">
+          View Posts
+        </a>
       </div>
     </Section>
     <SectionBackground>
@@ -63,7 +67,9 @@ const Index = () => (
           assistance. If you would like to know more, we have a page dedicated
           to about the bot!
         </p>
-        <a href="/bot" class="button is-primary">About the Bot</a>
+        <a href="/bot" class="button is-primary">
+          About the Bot
+        </a>
       </div>
       <div class="column">{/*  */}</div>
     </Section>
@@ -75,12 +81,16 @@ const Index = () => (
           Off the Dial is thankful to have such an awesome team and community!
           You can find out more about everyone here!
         </p>
-        <a href="/community" class="button is-primary">Our Community</a>
+        <a href="/community" class="button is-primary">
+          Our Community
+        </a>
       </div>
     </Section>
     <SectionBackground>
       <div class="column is-8 has-text-centered">
-        <h2 class="title is-2" id="media">Media</h2>
+        <h2 class="title is-2" id="media">
+          Media
+        </h2>
         <p class="subtitle is-5">
           Off the Dial has many media outlets, Here's a list of all the
           platforms you can catch us on. We'd appreciate if you supported us
