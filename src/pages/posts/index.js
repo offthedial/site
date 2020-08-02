@@ -20,7 +20,7 @@ const Posts = ({ data }) => (
       </h6>
       <hr class="my-2" />
       {data.allMdx.edges.map(({ node }) => (
-        <div key={node.parent.name} class="card mx-3 my-3">
+        <div key={node.parent.name} class="post card mx-3 my-3">
           <Link to={node.parent.name}>
             <div class="card-content">
               <h2 class="mb-0">{node.frontmatter.title}</h2>

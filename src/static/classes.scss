@@ -1,0 +1,11 @@
+.post {
+  &:hover {
+    opacity: 70%;
+  }
+}
+
+.is-hover-underline {
+  &:hover {
+    text-decoration: underline;
+  }
+}

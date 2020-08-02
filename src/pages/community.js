@@ -1,10 +1,11 @@
 import React from "react"
-import { Card } from "react-bootstrap"
 
 import Layout from "src/components/Layout"
+import PageContainer from "src/components/PageContainer"
 
 const Community = () => (
   <Layout pageTitle="Community">
+    <PageContainer>
     <h1>Our Community</h1>
     <p>
       Off the Dial is thankful to have such an awesome team and community of
@@ -71,22 +72,23 @@ const Community = () => (
         technology manager.
       </p>
     </CommunityCard>
+    </PageContainer>
   </Layout>
 )
 
 const CommunityCard = ({ name, role, link, linkRef, children }) => (
-  <Card className="m-4">
-    <Card.Body>
-      <Card.Title>
-        <Card.Subtitle className="mt-1 text-muted">{role}</Card.Subtitle>
-        <h2 className="mb-2">{name}</h2>
-        <Card.Link href={linkRef}>
-          <h4 style={{ textDecoration: "underline" }}>{link}</h4>
-        </Card.Link>
-      </Card.Title>
-      <Card.Text>{children}</Card.Text>
-    </Card.Body>
-  </Card>
+  <div class="card mx-3 my-3">
+    <div class="card-content">
+      <div class="has-text-grey">
+        {role}
+      </div>
+      <h2 class="my-1">{name}</h2>
+      <a href={linkRef}>
+        <p class="mb-3 is-link is-hover-underline has-text-weight-medium">{link}</p>
+      </a>
+      {children}
+    </div>
+  </div>
 )
 
 export default Community
