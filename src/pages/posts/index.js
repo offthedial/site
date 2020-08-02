@@ -16,9 +16,7 @@ const Posts = ({ data }) => (
         <div class="has-text-grey is-pulled-right is-size-4">
           Total Posts: {data.allMdx.totalCount}
         </div>
-        <div>
-          Posts:
-        </div>
+        <div>Posts:</div>
       </h6>
       <hr class="my-2" />
       {data.allMdx.edges.map(({ node }) => (
