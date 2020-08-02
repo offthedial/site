@@ -6,7 +6,7 @@ import Footer from "src/components/Footer"
 import Logo from "src/static/images/logo/circle.png"
 
 const Index = () => (
-  <Layout pageTitle="Welcome">
+  <Layout>
     <SectionBackground>
       <div class="column is-6">
         <h1 class="title is-1">Who are we?</h1>
