@@ -1,7 +1,7 @@
 @import "./classes.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /* Colors */
 $slate: #5d9194;
@@ -12,7 +12,7 @@ $orange: #fb788b;
 
 $primary: $slate;
 $link: $primary;
-$link-hover: $link;
+$link-hover: #5d9194bf;
 
 /* Typography */
 $family-sans-serif: "DM Sans", "Noto Sans", sans-serif;
@@ -37,7 +37,7 @@ $gap: 128px;
 img.emoji {
   height: 1em;
   width: 1em;
-  margin: 0 .05em 0 .1em;
+  margin: 0 0.05em 0 0.1em;
   vertical-align: -0.1em;
 }
 
