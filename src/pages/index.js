@@ -16,7 +16,7 @@ const Index = () => (
           and teams alike.
         </p>
       </div>
-      <div class="column is-2">
+      <div class="column is-2 is-hidden-mobile">
         <img src={Logo} alt="" />
       </div>
     </SectionBackground>
@@ -148,7 +148,7 @@ const Index = () => (
 const Section = ({ children }) => (
   <div class="section">
     <div class="container">
-      <div class="columns">{children}</div>
+      <div class="columns is-vcentered">{children}</div>
     </div>
   </div>
 )
@@ -156,7 +156,7 @@ const Section = ({ children }) => (
 const SectionBackground = ({ children }) => (
   <div class="section is-medium has-background-white-ter">
     <div class="container">
-      <div class="columns is-centered">{children}</div>
+      <div class="columns is-centered is-vcentered">{children}</div>
     </div>
   </div>
 )
