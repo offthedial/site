@@ -18,7 +18,7 @@ const Bot = () => (
             and generating minesweepers at your convenience.
           </p>
           <h3>Getting Started</h3>
-          <p className="mb-2">Some commands to get you started:</p>
+          <p>Some commands to get you started:</p>
           <ul>
             <li>
               Use <code>$profile create</code> to create your profile so you
@@ -39,7 +39,6 @@ const Bot = () => (
             read the bot message! If you are still stuck, you can ask for help
             in <Mention>#helpdesk</Mention>.
           </p>
-
         </div>
         <div class="column is-hidden-mobile">
           <img src={logo} />
@@ -51,12 +50,12 @@ const Bot = () => (
         on Github.
       </p>
       <p>
-            If you have a suggestion/bug report for Off the Dial Bot, please
-            make a Github Issue. This lets us track all of the suggestions and
-            reports permanently in one place, as opposed to the{" "}
-            <Mention>#suggestions</Mention> channel, where the messages can get
-            easily lost.
-          </p>
+        If you have a suggestion/bug report for Off the Dial Bot, please make a
+        Github Issue. This lets us track all of the suggestions and reports
+        permanently in one place, as opposed to the{" "}
+        <Mention>#suggestions</Mention> channel, where the messages can get
+        easily lost.
+      </p>
     </PageContainer>
   </Layout>
 )

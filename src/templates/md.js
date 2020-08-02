@@ -12,9 +12,7 @@ const shortcodes = { Mention, Footer }
 const Post = ({ pageContext, children }) => (
   <Layout pageTitle={pageContext.frontmatter.title}>
     <PageContainer>
-      <MDXProvider components={shortcodes}>
-        {children}
-      </MDXProvider>
+      <MDXProvider components={shortcodes}>{children}</MDXProvider>
     </PageContainer>
   </Layout>
 )
