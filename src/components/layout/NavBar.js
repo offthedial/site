@@ -19,7 +19,7 @@ const NavBar = ({ siteTitle }) => (
             Weakest Link
           </a>
           <a class="navbar-item py-0" href="/">
-            <img src={discord} alt=""/>
+            <img src={discord} alt="" />
           </a>
         </div>
       </div>
