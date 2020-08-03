@@ -1,6 +1,6 @@
 .nav-a a {
   &:hover {
-    opacity: 85%;
+    opacity: 0.85;
   }
 }
 
@@ -17,42 +17,42 @@
 }
 
 .fa-youtube {
-  transition: 0.25s;
+  transition: 0.155s;
   &:hover {
     color: #ff0000;
   }
 }
 
 .fa-twitter {
-  transition: 0.25s;
+  transition: 0.155s;
   &:hover {
     color: #1da1f2;
   }
 }
 
 .fa-discord {
-  transition: 0.25s;
+  transition: 0.155s;
   &:hover {
     color: #7289da;
   }
 }
 
 .fa-patreon {
-  transition: 0.25s;
+  transition: 0.155s;
   &:hover {
     color: #f96854;
   }
 }
 
 .fa-twitch {
-  transition: 0.25s;
+  transition: 0.155s;
   &:hover {
     color: #9146ff;
   }
 }
 
 .fa-github {
-  transition: 0.25s;
+  transition: 0.155s;
   &:hover {
     color: #24292e;
   }
