@@ -14,7 +14,7 @@ const Post = ({ pageContext, children }) => (
   <Layout pageTitle={pageContext.frontmatter.title}>
     <PageContainer>
       <h1 class="title">{pageContext.frontmatter.title}</h1>
-      <h2 class="subtitle has-text-grey is-size-5">
+      <h2 class="subtitle has-text-weight-normal has-text-grey is-size-5">
         {pageContext.frontmatter.author} ·{" "}
         {format(new Date(pageContext.frontmatter.date), "MMMM dd, yyyy")}
       </h2>
