@@ -3,7 +3,7 @@ import React from "react"
 const Mention = ({ children }) => (
   <span
     style={{
-      fontSize: ".875rem",
+      fontSize: "87.5%",
       lineHeight: "1.5",
       color: "#7289da",
       padding: "1px",
