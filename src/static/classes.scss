@@ -1,12 +1,12 @@
-.nav-a a {
-  &:hover {
-    opacity: 0.85;
-  }
-}
-
 .post {
   &:hover {
     background-color: hsl(0, 0%, 98%);
+  }
+}
+
+.has-a-hover-translucent a {
+  &:hover {
+    opacity: 0.85;
   }
 }
 

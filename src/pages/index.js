@@ -138,9 +138,11 @@ const Index = () => (
 
     <Footer>
       Built with{" "}
-      <a href="https://github.com/offthedial/site">{emoji("\u2764")}</a> &{" "}
-      <a href="https://www.gatsbyjs.org/">Gatsby</a>. This website is currently
-      in beta, more features are to come. Stay tuned!
+      <span class="has-a-hover-translucent">
+        <a href="https://github.com/offthedial/site">{emoji("\u2764")}</a>
+      </span>{" "}
+      & <a href="https://www.gatsbyjs.org/">Gatsby</a>. This website is
+      currently in beta, more features are to come. Stay tuned!
     </Footer>
   </Layout>
 )

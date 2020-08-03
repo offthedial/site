@@ -4,15 +4,8 @@ const Footer = ({ children }) => (
   <footer class="section py-1">
     <br />
     <hr />
-    <div
-      class="container"
-      style={{
-        fontSize: `80%`,
-        opacity: `80%`,
-        fontStyle: `italic`,
-      }}
-    >
-      {children}
+    <div class="container">
+      <p class="is-size-7 has-text-grey is-italic">{children}</p>
     </div>
     <br />
   </footer>
