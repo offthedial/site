@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
+import MediaFooter from "src/components/MediaFooter"
 
 const Posts = ({ data }) => (
   <Layout pageTitle="Posts">
@@ -35,6 +36,7 @@ const Posts = ({ data }) => (
         </div>
       ))}
     </PageContainer>
+    <MediaFooter />
   </Layout>
 )
 

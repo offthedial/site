@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
+import MediaFooter from "src/components/MediaFooter"
 
 const Community = () => (
   <Layout pageTitle="Community">
@@ -73,6 +74,7 @@ const Community = () => (
         </p>
       </CommunityCard>
     </PageContainer>
+    <MediaFooter />
   </Layout>
 )
 
