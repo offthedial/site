@@ -42,7 +42,7 @@ const Bot = () => (
           </p>
         </div>
         <div class="column is-hidden-mobile">
-          <img src={logo} />
+          <img src={logo} alt="" />
         </div>
       </div>
       <h2>Contributing</h2>
