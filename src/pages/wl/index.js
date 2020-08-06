@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
