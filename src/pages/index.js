@@ -22,7 +22,7 @@ const Index = () => (
       </div>
     </SectionBackground>
     <Section>
-      <Promoted slug="wl-july-2020" />
+      <Promoted slug="site-refresh" />
     </Section>
     <Section>
       <div class="column">
