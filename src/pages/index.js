@@ -2,6 +2,7 @@ import React from "react"
 import emoji from "react-easy-emoji"
 
 import Layout from "src/components/Layout"
+import Promoted from "src/components/Promoted"
 import Footer from "src/components/Footer"
 import Logo from "src/static/images/logo/circle.png"
 
@@ -20,6 +21,9 @@ const Index = () => (
         <img src={Logo} alt="" />
       </div>
     </SectionBackground>
+    <Section>
+      <Promoted slug="wl-july-2020" />
+    </Section>
     <Section>
       <div class="column">
         <h2 class="title is-2">FAQ</h2>
