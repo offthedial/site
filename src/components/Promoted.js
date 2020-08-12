@@ -58,7 +58,6 @@ const Promoted = ({ slug }) => {
           <a href={`/posts/${node.parent.name}`} class="button is-warning">
             Read More
           </a>
-          {console.log(node.frontmatter.tournament)}
           {null === node.frontmatter.tournament ? null : (
             <a
               href={`/${node.frontmatter.tournament}`}
