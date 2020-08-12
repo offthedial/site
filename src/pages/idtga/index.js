@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
+import MediaFooter from "src/components/MediaFooter"
 import ScheduleTime from "src/components/ScheduleTime"
 
 import logo from "src/static/images/idtga.png"
@@ -67,6 +68,7 @@ const Idtga = () => (
         </table>
       </div>
     </PageContainer>
+    <MediaFooter />
   </Layout>
 )
 
