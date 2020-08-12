@@ -35,7 +35,11 @@ const Promoted = ({ slug }) => {
   return (
     <article class="card message is-info">
       <div class="message-header">
-        <p class="is-size-4 has-text-weight-medium">Upcoming Tournament Info</p>
+        <p class="is-size-4 has-text-weight-medium">
+          {null === node.frontmatter.tournament
+            ? "Recent Post"
+            : "Upcoming Tournament Info"}
+        </p>
       </div>
       <div class="message-body">
         <div class="is-size-3 has-text-weight-medium">
@@ -54,12 +58,15 @@ const Promoted = ({ slug }) => {
           <a href={`/posts/${node.parent.name}`} class="button is-warning">
             Read More
           </a>
-          <a
-            href={`/${node.frontmatter.tournament}`}
-            class="button is-info is-outlined"
-          >
-            Tournament Page
-          </a>
+          {console.log(node.frontmatter.tournament)}
+          {null === node.frontmatter.tournament ? null : (
+            <a
+              href={`/${node.frontmatter.tournament}`}
+              class="button is-info is-outlined"
+            >
+              Tournament Page
+            </a>
+          )}
         </div>
       </div>
     </article>
