@@ -2,6 +2,7 @@
 title: It's Dangerous to go Alone | June 2020
 date: 2020-06-02
 author: DJam98
+tournament: idtga
 ---
 
 It's a new month, that means another Off the Dial tournament! This month it'll be __It's Dangerous to go Alone__, a free agent tournament for all skill levels. With your play-styles, ranks and previous tournament experience, we create balanced teams so that matches are as fair as possible. Look forward to a brand new season with a fresh collection of tongue twisting team tags!

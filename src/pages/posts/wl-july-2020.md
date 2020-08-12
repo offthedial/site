@@ -2,6 +2,7 @@
 title: Weakest Link | July 2020
 date: 2020-07-06
 author: DJam98
+tournament: wl
 ---
 
 July has hit the stacks, and this month, we'll be playing __Weakest Link__! A tournament where you can sign up either as a Free Agent, or a 3-player team, and we pair each FA to each team 1 week before tournament day. Leaving enough time to coaching your Weakest Link.
