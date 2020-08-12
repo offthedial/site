@@ -33,39 +33,34 @@ const Promoted = ({ slug }) => {
   })
   let node = nodes[0].node
   return (
-    <div class="card">
-      <article class="message is-info">
-        <div class="message-header">
-          <p class="is-size-4">Current Tournament Info</p>
+    <article class="card message is-info">
+      <div class="message-header">
+        <p class="is-size-4">Current Tournament Info</p>
+      </div>
+      <div class="message-body">
+        <div class="is-size-3">{node.frontmatter.title}</div>
+        <div class="is-size-5">
+          {node.frontmatter.author} · {node.frontmatter.date}
         </div>
-        <div class="message-body">
-          <div class="is-size-3">{node.frontmatter.title}</div>
-          <div class="is-size-5">
-            {node.frontmatter.author} · {node.frontmatter.date}
-          </div>
-          <blockquote
-            class="is-italic my-3"
-            style={{ borderLeftColor: "#1abfc7" }}
+        <blockquote
+          class="is-italic my-3"
+          style={{ borderLeftColor: "#1abfc7" }}
+        >
+          {node.excerpt}
+        </blockquote>
+        <div class="mt-4 buttons">
+          <a href={`/posts/${node.parent.name}`} class="button is-warning">
+            Read More
+          </a>
+          <a
+            href={`/${node.frontmatter.tournament}`}
+            class="button is-info is-outlined"
           >
-            {node.excerpt}
-          </blockquote>
-          <div class="mt-4 buttons">
-            <a
-              href={`/posts/${node.parent.name}`}
-              class="button is-info is-outlined"
-            >
-              Read More
-            </a>
-            <a
-              href={`/${node.frontmatter.tournament}`}
-              class="button is-info is-outlined"
-            >
-              Tournament Page
-            </a>
-          </div>
+            Tournament Page
+          </a>
         </div>
-      </article>
-    </div>
+      </div>
+    </article>
   )
 }
 
