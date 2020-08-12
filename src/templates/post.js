@@ -22,7 +22,7 @@ const Post = ({ pageContext, children }) => (
           <div>
             <a
               href={`/${pageContext.frontmatter.tournament}`}
-              class="button mt-3 is-primary is-outlined"
+              class="button mt-2 is-primary is-outlined"
             >
               Tournament Page
             </a>
