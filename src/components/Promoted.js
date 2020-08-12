@@ -35,10 +35,12 @@ const Promoted = ({ slug }) => {
   return (
     <article class="card message is-info">
       <div class="message-header">
-        <p class="is-size-4">Current Tournament Info</p>
+        <p class="is-size-4 has-text-weight-medium">Upcoming Tournament Info</p>
       </div>
       <div class="message-body">
-        <div class="is-size-3">{node.frontmatter.title}</div>
+        <div class="is-size-3 has-text-weight-medium">
+          {node.frontmatter.title}
+        </div>
         <div class="is-size-5">
           {node.frontmatter.author} · {node.frontmatter.date}
         </div>
