@@ -4,7 +4,7 @@ import countdownStyles from "src/static/countdown.module.scss"
 
 const Countdown = () => {
     var x = setInterval(function() {
-    var countDownDate = new Date(Date.UTC(2020, 7, 15, 16)).getTime();
+    var countDownDate = new Date(Date.UTC(2020, 7, 20, 20)).getTime();
     var now = new Date().getTime();
     var distance = countDownDate - now;
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
