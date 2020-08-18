@@ -8,9 +8,9 @@ A website to serve as a centralized place to find everything Off the Dial. This 
 - Embedded signup page (soon).
 
 ## Usage
-Go to [`otd.ink`](https://otd.ink).
+The live version of the website can be found at [`otd.ink`](https://otd.ink).
 
-## Contributing <!-- Using the source -->
+## Contributing
 1. Fork the repository and clone it.
 2. Make a new branch to submit your pull request from.
 
