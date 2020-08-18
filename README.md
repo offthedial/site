@@ -19,6 +19,7 @@ Go to [`otd.ink`](https://otd.ink).
 
    ```shell
    cd site/
+   npm i
    gatsby develop
    ```
 
