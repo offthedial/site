@@ -6,7 +6,7 @@ author: DJam98
 
 ## Past Tournaments
 
-Here's a list of all the our previous tournaments as of the date writing this. I hope you find the information you're looking for! *Note: Some of these links may not work after 2020.*
+Here's a list of all the our previous tournaments as of the date writing this. I hope you find the information you're looking for! We may be creating a new page that will be dynamic that keeps an active list of all previous tournaments *Note: Some of these links may not work after 2020. This list is only relevant as of the 24th of August 2020*
 
 **It's Dangerous to go Alone**
 - [Season 9 | March 2019](https://smash.gg/idtga-mar-2019)
