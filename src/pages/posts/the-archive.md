@@ -1,5 +1,5 @@
 ---
-title: The archives 
+title: The Archive  
 date: 2020-08-24
 author: DJam98
 ---
