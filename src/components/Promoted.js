@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Promoted = ({ slug }) => {
   const data = useStaticQuery(graphql`
