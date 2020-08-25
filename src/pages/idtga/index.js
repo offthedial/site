@@ -6,8 +6,6 @@ import MediaFooter from "src/components/MediaFooter"
 import Highlight from "src/components/Highlight"
 import ScheduleTime from "src/components/ScheduleTime"
 
-import logo from "src/static/images/idtga.png"
-
 const Idtga = () => (
   <Layout pageTitle="It's Dangerous to go Alone">
     <PageContainer>
@@ -30,7 +28,7 @@ const Idtga = () => (
           </div>
         </div>
         <div class="column is-4">
-          <img src={logo} alt="" />
+          <img src="https://raw.githubusercontent.com/offthedial/assets/version-2.0/idtga/logo-nobg.png" alt="" />
         </div>
       </Highlight>
       <div class="section px-0">

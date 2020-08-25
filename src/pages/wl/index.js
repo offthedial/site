@@ -7,8 +7,6 @@ import ScheduleTime from "src/components/ScheduleTime"
 import Mention from "src/components/Mention"
 import Highlight from "src/components/Highlight"
 
-import logo from "src/static/images/wl.png"
-
 const WeakestLink = () => (
   <Layout pageTitle="Weakest Link">
     <PageContainer>
@@ -32,7 +30,7 @@ const WeakestLink = () => (
           </div>
         </div>
         <div class="column is-4">
-          <img src={logo} alt="" />
+          <img src="https://raw.githubusercontent.com/offthedial/assets/version-2.0/wl/logo-nobg.png" alt="" />
         </div>
       </Highlight>
       <div class="section px-0">

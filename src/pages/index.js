@@ -20,7 +20,7 @@ const Index = () => (
         </div>
         <div class="column is-3 is-hidden-mobile">
           <img
-            src="https://raw.githubusercontent.com/offthedial/assets/version-2.0/Main/logoNoBKG.png"
+            src="https://raw.githubusercontent.com/offthedial/assets/version-2.0/logo-nobg.png"
             alt=""
           />
         </div>
