@@ -46,7 +46,7 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
       link={[
-        { rel: "icon", type: "image/png", sizes: "64x64", href: `https://raw.githubusercontent.com/offthedial/assets/version-2.0/logo-squircle.png` },
+        { rel: "icon", type: "image/png", sizes: "64x64", href: `https://assets.otd.ink/logo-squircle.png` },
       ]}
     >
       <script
