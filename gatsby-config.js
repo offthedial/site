@@ -42,7 +42,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
 
     /* MDX */
-    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-page-creator`,
       options: {
