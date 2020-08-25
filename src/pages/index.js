@@ -4,23 +4,28 @@ import emoji from "react-easy-emoji"
 import Layout from "src/components/Layout"
 import Promoted from "src/components/Promoted"
 import Footer from "src/components/Footer"
-import Logo from "src/static/images/logo/circle.png"
+import Highlight from "src/components/Highlight"
 
 const Index = () => (
   <Layout>
-    <SectionBackground>
-      <div class="column is-6">
-        <h1 class="title is-1">Who are we?</h1>
-        <p class="subtitle is-4">
-          Off the Dial is a unique tournament organisation for Splatoon 2,
-          dedicated to providing fresh tournament opportunities for free agents
-          and teams alike.
-        </p>
-      </div>
-      <div class="column is-2 is-hidden-mobile">
-        <img src={Logo} alt="" />
-      </div>
-    </SectionBackground>
+    <div class="section is-medium has-background-white-ter">
+      <Highlight>
+        <div class="column is-9">
+          <h1 class="title is-1 has-text-white">Who are we?</h1>
+          <p class="subtitle is-4 has-text-white">
+            Off the Dial is a unique tournament organisation for Splatoon 2,
+            dedicated to providing fresh tournament opportunities for free
+            agents and teams alike.
+          </p>
+        </div>
+        <div class="column is-3 is-hidden-mobile">
+          <img
+            src="https://raw.githubusercontent.com/offthedial/assets/version-2.0/Main/logoNoBKG.png"
+            alt=""
+          />
+        </div>
+      </Highlight>
+    </div>
     <Section>
       <Promoted slug="wl-july-2020" />
     </Section>

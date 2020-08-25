@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
 import MediaFooter from "src/components/MediaFooter"
+import Highlight from "src/components/Highlight"
 import ScheduleTime from "src/components/ScheduleTime"
 
 import logo from "src/static/images/idtga.png"
@@ -10,30 +11,28 @@ import logo from "src/static/images/idtga.png"
 const Idtga = () => (
   <Layout pageTitle="It's Dangerous to go Alone">
     <PageContainer>
-      <div class="section px-0">
-        <div class="columns is-centered">
-          <div class="column is-6">
-            <h1>About It's Dangerous to go Alone</h1>
-            <p>
-              <u>It's Dangerous to go Alone</u> is our flagship, free agent
-              tournament. Focused on creating balanced teams, and being
-              accessible to everyone.
-            </p>
-            <p>All you need to do is sign up! The world is waiting…</p>
-            <div class="buttons">
-              <a href="/idtga/rules" class="button is-primary is-outlined">
-                Rules
-              </a>
-              <a href="/signup" class="button is-primary is-outlined">
-                Register
-              </a>
-            </div>
-          </div>
-          <div class="column is-3">
-            <img src={logo} alt="" />
+      <Highlight>
+        <div class="column is-8 has-text-white">
+          <h1 class="has-text-white">About It's Dangerous to go Alone</h1>
+          <p>
+            <u>It's Dangerous to go Alone</u> is our flagship, free agent
+            tournament. Focused on creating balanced teams, and being accessible
+            to everyone.
+          </p>
+          <p>All you need to do is sign up! The world is waiting…</p>
+          <div class="buttons">
+            <a href="/idtga/rules" class="button is-white is-outlined">
+              Rules
+            </a>
+            <a href="/signup" class="button is-white is-outlined">
+              Register
+            </a>
           </div>
         </div>
-      </div>
+        <div class="column is-4">
+          <img src={logo} alt="" />
+        </div>
+      </Highlight>
       <div class="section px-0">
         <h2>Registration Details</h2>
         <p>
