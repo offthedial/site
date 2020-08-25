@@ -30,7 +30,7 @@ const WeakestLink = () => (
           </div>
         </div>
         <div class="column is-4">
-          <img src="https://raw.githubusercontent.com/offthedial/assets/version-2.0/wl/logo-nobg.png" alt="" />
+          <img src="https://assets.otd.ink/wl/logo-nobg.png" alt="" />
         </div>
       </Highlight>
       <div class="section px-0">

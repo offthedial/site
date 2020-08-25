@@ -41,7 +41,7 @@ const Bot = () => (
           </p>
         </div>
         <div class="column is-hidden-mobile">
-          <img src="https://raw.githubusercontent.com/offthedial/assets/version-2.0/bot/logo.png" alt="" />
+          <img src="https://assets.otd.ink/bot/logo.png" alt="" />
         </div>
       </div>
       <h2>Contributing</h2>

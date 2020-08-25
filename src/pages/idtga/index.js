@@ -28,7 +28,7 @@ const Idtga = () => (
           </div>
         </div>
         <div class="column is-4">
-          <img src="https://raw.githubusercontent.com/offthedial/assets/version-2.0/idtga/logo-nobg.png" alt="" />
+          <img src="https://assets.otd.ink/idtga/logo-nobg.png" alt="" />
         </div>
       </Highlight>
       <div class="section px-0">
