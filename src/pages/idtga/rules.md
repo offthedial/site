@@ -5,6 +5,7 @@ title: IDTGA Rules
 # It's Dangerous to go Alone Rules
 ## Format
 Complete teams will consist of 4-5 players.
+> If there are four teams or less, the format will alter to better suit the amount of players, however there still will be a prelimiary round followed by a top cut round.
 
 ### Preliminaries:
 - Swiss Pools
