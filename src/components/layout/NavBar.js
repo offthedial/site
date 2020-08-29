@@ -1,5 +1,6 @@
 import React from "react"
 import discord from "src/static/images/discord.svg"
+import brand from "src/static/images/brand.svg"
 
 const NavBrand = () => (
   <div class="navbar-brand">
