@@ -9,7 +9,7 @@ We've been working on a complete recolour of the entirety of Off the Dial, and w
 ### Blue is the new orange
 The first thing to note is the colour palette. Originally we used completely yellows and oranges. Our new colour palette is very different. We have blues, greens and pinks. We worked very hard on the new colour pallete, I hope you like it!
 
-[![Palette](https://raw.githubusercontent.com/offthedial/assets/version-2.0/palette.png)](https://coolors.co/5d9194-1abfc7-39fa96-fb788b-c71a8a)
+[![Palette](https://assets.otd.ink/palette.png)](https://coolors.co/5d9194-1abfc7-39fa96-fb788b-c71a8a)
 
 ### New Website Update?
 We didn't forget about our website, as part of the redesign, we have also completely redesigned the website.
