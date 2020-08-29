@@ -3,8 +3,6 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-import favicon from "src/static/images/logo/squircle.png"
-
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -27,7 +25,8 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`${site.siteMetadata.title} | %s`}
+      titleTemplate={`%s - ${site.siteMetadata.title}`}
+      defaultTitle={site.siteMetadata.title}
       meta={[
         {
           name: `description`,
@@ -47,9 +46,14 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
       link={[
-        { rel: "icon", type: "image/png", sizes: "64x64", href: `${favicon}` },
+        { rel: "icon", type: "image/png", sizes: "64x64", href: `https://raw.githubusercontent.com/offthedial/assets/version-2.0/logo-squircle.png` },
       ]}
-    />
+    >
+      <script
+        defer
+        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+      />
+    </Helmet>
   )
 }
 

@@ -1,65 +1,44 @@
 import React from "react"
-import { Card } from "react-bootstrap"
 import { Link, graphql } from "gatsby"
-import { css } from "@emotion/core"
 
-import { rhythm, gray } from "src/utils/typography"
 import Layout from "src/components/Layout"
+import PageContainer from "src/components/PageContainer"
+import MediaFooter from "src/components/MediaFooter"
 
-export default function Posts({ data }) {
-  return (
-    <Layout pageTitle="Posts">
+const Posts = ({ data }) => (
+  <Layout pageTitle="Posts">
+    <PageContainer>
       <p>
         Check out the latest blog posts, news, and updates that we’re making to
         Off the Dial below! Posts may consist of patch notes, new features or
         just anything that we feel has a need to be said.
       </p>
-      <h1 style={{ marginBottom: rhythm(1 / 6) }}>
-        <h3
-          style={{
-            color: gray(40),
-            float: "right",
-            marginTop: rhythm(1 / 2),
-          }}
-        >
+      <h6 class="mb-0 is-size-3">
+        <div class="has-text-grey is-pulled-right is-size-4">
           Total Posts: {data.allMdx.totalCount}
-        </h3>
-        Posts:
-      </h1>
-      <hr />
+        </div>
+        <div>Posts:</div>
+      </h6>
+      <hr class="my-2" />
       {data.allMdx.edges.map(({ node }) => (
-        <div key={node.parent.name}>
-          <Card
-            style={{
-              margin: rhythm(2 / 3),
-            }}
-          >
-            <Link
-              css={css`
-                padding: ${rhythm(2 / 3)};
-                color: inherit;
-                text-decoration: none !important;
-              `}
-              to={node.parent.name}
-            >
-              <Card.Title>
-                <h2 className="mb-0">{node.frontmatter.title}</h2>
-              </Card.Title>
-              <Card.Subtitle className="text-muted mb-2">
+        <div key={node.parent.name} class="post card mx-3 my-3">
+          <Link to={node.parent.name}>
+            <div class="card-content">
+              <h2 class="mb-0">{node.frontmatter.title}</h2>
+              <p class="has-text-grey mb-3 is-size-5">
                 {node.frontmatter.author} · {node.frontmatter.date}
-              </Card.Subtitle>
-              <Card.Text>
-                <blockquote>
-                  <i>{node.excerpt}</i>
-                </blockquote>
-              </Card.Text>
-            </Link>
-          </Card>
+              </p>
+              <blockquote class="has-text-grey">
+                <i>{node.excerpt}</i>
+              </blockquote>
+            </div>
+          </Link>
         </div>
       ))}
-    </Layout>
-  )
-}
+    </PageContainer>
+    <MediaFooter />
+  </Layout>
+)
 
 export const query = graphql`
   query {
@@ -86,3 +65,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Posts

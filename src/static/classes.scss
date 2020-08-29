@@ -1,0 +1,59 @@
+.post {
+  &:hover {
+    background-color: hsl(0, 0%, 98%);
+  }
+}
+
+.has-a-hover-translucent a {
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.is-hover-underline {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.fa-youtube {
+  transition: 0.155s;
+  &:hover {
+    color: #ff0000;
+  }
+}
+
+.fa-twitter {
+  transition: 0.155s;
+  &:hover {
+    color: #1da1f2;
+  }
+}
+
+.fa-discord {
+  transition: 0.155s;
+  &:hover {
+    color: #7289da;
+  }
+}
+
+.fa-patreon {
+  transition: 0.155s;
+  &:hover {
+    color: #f96854;
+  }
+}
+
+.fa-twitch {
+  transition: 0.155s;
+  &:hover {
+    color: #9146ff;
+  }
+}
+
+.fa-github {
+  transition: 0.155s;
+  &:hover {
+    color: #24292e;
+  }
+}

@@ -1,78 +1,44 @@
 import React from "react"
-import Image from "react-bootstrap/Image"
-import { Container, Navbar, Nav } from "react-bootstrap"
-import { css } from "@emotion/core"
-
-import { rhythm } from "src/utils/typography"
-import colors from "src/utils/colors"
 import discord from "src/static/images/discord.svg"
 
-const NavBar = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `${colors.primary}`,
-      marginBottom: rhythm(1),
-    }}
-  >
-    <Container>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        variant="dark"
-        className="p-0"
-        style={{ fontWeight: 500 }}
-      >
-        <Navbar.Brand
-          href="/"
-          className="m-0 p-0"
-          style={{
-            fontSize: rhythm(1.5),
-            fontWeight: "700",
-            maxHeight: rhythm(8 / 3),
-          }}
-        >
-          OFF THE DIAL
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse
-          className="justify-content-end"
-          id="responsive-navbar-nav"
-        >
-          <Nav>
-            <Navlink href="/discord" className="d-lg-none">
-              Discord
-            </Navlink>
-            <Navlink href="/idtga">It's Dangerous to go Alone</Navlink>
-            <Navlink href="/wl">Weakest Link</Navlink>
-          </Nav>
-        </Navbar.Collapse>
-        <a
-          className="d-none d-lg-block"
-          href="/discord"
-          style={{ maxHeight: rhythm(8 / 3) }}
-        >
-          <Image
-            className="m-0 ml-4"
-            style={{ maxHeight: rhythm(8 / 3) }}
-            src={discord}
-          />
-        </a>
-      </Navbar>
-    </Container>
-  </header>
+const NavBrand = () => (
+  <div class="navbar-brand">
+    <div class="is-hidden-desktop">
+      <a class="navbar-item py-0 px-5" href="/">
+        <img src={brand} alt="" />
+      </a>
+    </div>
+    <div class="is-hidden-touch">
+      <a class="navbar-item py-0" href="/">
+        <img src={brand} alt="" />
+      </a>
+    </div>
+  </div>
 )
 
-const Navlink = ({ className, href, children }) => (
-  <Nav.Link
-    className={className}
-    href={href}
-    css={css`
-      font-size: ${rhythm(0.8)};
-      color: white !important;
-    `}
+const NavBar = () => (
+  <nav
+    class="navbar is-transparent is-primary"
+    role="navigation"
+    aria-label="main navigation"
   >
-    {children}
-  </Nav.Link>
+    <div class="container has-a-hover-translucent">
+      <NavBrand />
+      <div class="navbar-menu is-paddingless">
+        <div class="navbar-end">
+          <a href="/idtga" class="navbar-item has-text-weight-medium">
+            It's Dangerous to go Alone
+          </a>
+          <a href="/wl" class="navbar-item has-text-weight-medium">
+            Weakest Link
+          </a>
+          <a class="navbar-item py-0" href="/discord">
+            <img src={discord} alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
 )
 
 export default NavBar
