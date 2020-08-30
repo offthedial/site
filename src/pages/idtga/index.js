@@ -22,9 +22,6 @@ const Idtga = () => (
             <a href="/idtga/rules" class="button is-white is-outlined">
               Rules
             </a>
-            <a href="/signup" class="button is-white is-outlined">
-              Register
-            </a>
           </div>
         </div>
         <div class="column is-4">
