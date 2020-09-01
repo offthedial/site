@@ -11,7 +11,7 @@ const Index = () => (
     <div class="section is-medium has-background-white-ter">
       <Highlight>
         <div class="column is-9">
-          <h1 class="title is-1 has-text-white">What are we?</h1>
+          <h1 class="title is-1 has-text-white">Who are we?</h1>
           <p class="subtitle is-4 has-text-white">
             Off the Dial is a unique tournament organisation for Splatoon 2,
             dedicated to providing fresh tournament opportunities for free
