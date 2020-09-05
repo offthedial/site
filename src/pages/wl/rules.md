@@ -13,9 +13,14 @@ Complete teams will consist of 4-5 players.
 - 4 Rounds
 - PA3
 
-### Finals:
+### Top Cut:
 - Single Elimination - No 3rd place match.
-- At least 1 team per pool will make finals, with a minimum of 4 teams total.
+- At least 1 team per pool, with a minimum of 4 teams total.
+- BO5
+
+### 4 or less teams
+If there are 4 or less teams, there will only be one bracket:
+- Double Elimination.
 - BO5
 
 ## Timing & Round Duration
