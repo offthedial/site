@@ -17,7 +17,6 @@ const Post = ({ pageContext, children }) => (
       <h2 class="subtitle has-text-weight-normal has-text-grey is-size-5">
         {pageContext.frontmatter.author} ·{" "}
         {format(new Date(pageContext.frontmatter.date), "MMMM dd, yyyy")}
-        {console.log(pageContext.frontmatter.tournament)}
         {undefined === pageContext.frontmatter.tournament ? null : (
           <div>
             <a
