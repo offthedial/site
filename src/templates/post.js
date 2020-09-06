@@ -1,6 +1,6 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
-import { format } from "date-fns"
+import { addDays, format } from "date-fns"
 
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
@@ -16,7 +16,7 @@ const Post = ({ pageContext, children }) => (
       <h1 class="title">{pageContext.frontmatter.title}</h1>
       <h2 class="subtitle has-text-weight-normal has-text-grey is-size-5">
         {pageContext.frontmatter.author} ·{" "}
-        {format(new Date(pageContext.frontmatter.date), "MMMM dd, yyyy")}
+        {format(addDays(new Date(pageContext.frontmatter.date), 1), "MMMM dd, yyyy")}
         {undefined === pageContext.frontmatter.tournament ? null : (
           <div>
             <a
