@@ -5,8 +5,11 @@ author: DJam98
 tournament: wl
 ---
 
-Time for the first tournament since our redesign, and off the bat we're playing Weakest Link! In this tournament, you register as either a **FA** or a **3-player team**. As a free agent, you'll be learning the ins and outs of how to play together with a higher level team. As a member of a 3-player team, you'll learn how to train up members of the Splatoon community to your advantage. 
-> While everyone can play regardless of your skill levels, there are rank floors and caps for both categories.
+Time for the first tournament since our redesign, and off the bat we're playing Weakest Link! 
+
+Weakest Link is a unique, Off the Dial exclusive, free agent and team tournament. Originally an experiment, this unique tournament provides coaching opportunities for free agents, and teaching opportunities for teams.
+
+All you need to do is sign up! The world is waiting…
 
 For more details, you can check the [tournament page](/wl) on our website.
 
