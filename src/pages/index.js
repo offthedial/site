@@ -13,7 +13,7 @@ const Index = () => (
         <div class="column is-9">
           <h1 class="title is-1 has-text-white">Who are we?</h1>
           <p class="subtitle is-4 has-text-white">
-            We are Off the Dial, a unique tournament organisation for Splatoon 2,
+            We are Off the Dial, an unique tournament organisation for Splatoon 2,
             dedicated to providing fresh tournament opportunities for free
             agents and teams alike.
           </p>
