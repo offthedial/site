@@ -35,6 +35,12 @@ const Idtga = () => (
           There are no skill caps or ceilings.
         </p>
       </div>
+	  <div class="section px-0">
+        <h2>How to Register</h2>
+		<p>1. Head to our <a href="/discord">Discord</a> server<p>
+		<p>2. Say <strong>$signup</strong> in an open bot commands.<p>
+		<p>3. Follow the prompts<p>
+      </div>
       <div class="section px-0">
         <h2>Schedule</h2>
         <table class="table">
