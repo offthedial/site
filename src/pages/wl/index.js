@@ -39,6 +39,12 @@ const WeakestLink = () => (
           If you are unsure of what category you are, contact one of the
           Organisers and we’ll sort you out.
         </p>
+	  <div class="section px-0">
+        <h2>How to Register</h2>
+		<p>1. Head to our <a href="/discord">Discord</a> server<p>
+		<p>2. Say <strong>$signup</strong> in an open bot commands.<p>
+		<p>3. Follow the prompts<p>
+      </div>
         <p>Exceptions can be made! Contact the TO’s for more details.</p>
         <div class="columns">
           <div class="column">
