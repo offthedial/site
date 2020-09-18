@@ -10,9 +10,15 @@ $green: #39fa96;
 $pink: #c71a8a;
 $orange: #fb788b;
 
+$custom-colors: (
+  "slate": $slate,
+  "cyan": $cyan,
+  "green": $green,
+  "pink": $pink,
+  "orange": $orange
+);
+
 $primary: $slate;
-$warning: $orange;
-$danger: $pink;
 $link: $primary;
 $link-hover: #5d9194bf;
 

@@ -33,7 +33,7 @@ const Promoted = ({ slug }) => {
   })
   let node = nodes[0].node
   return (
-    <article class="card message is-info">
+    <article class="card message is-cyan">
       <div class="message-header">
         <p class="is-size-4 has-text-weight-medium">
           {null === node.frontmatter.tournament
@@ -55,13 +55,13 @@ const Promoted = ({ slug }) => {
           {node.excerpt}
         </blockquote>
         <div class="mt-4 buttons">
-          <a href={`/posts/${node.parent.name}`} class="button is-warning">
+          <a href={`/posts/${node.parent.name}`} class="button is-orange">
             Read More
           </a>
           {null === node.frontmatter.tournament ? null : (
             <a
               href={`/${node.frontmatter.tournament}`}
-              class="button is-info is-outlined"
+              class="button is-cyan is-outlined"
             >
               Tournament Page
             </a>
