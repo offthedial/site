@@ -28,7 +28,7 @@ function SEO({ description, lang, meta, title }) {
       titleTemplate={`%s - ${site.siteMetadata.title}`}
       defaultTitle={site.siteMetadata.title}
       link={[
-        { rel: "icon", type: "image/png", sizes: "64x64", href: `https://assets.otd.ink/logo-squircle.png` },
+        { rel: "icon", type: "image/png", sizes: "64x64", href: `https://assets.otd.ink/icon.png` },
       ]}
     >
       <script
@@ -39,7 +39,7 @@ function SEO({ description, lang, meta, title }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://assets.otd.ink/logo-squircle.png" />
+        <meta property="og:image" content="https://assets.otd.ink/icon.png" />
     </Helmet>
   )
 }
