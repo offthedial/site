@@ -51,7 +51,7 @@ While this is an international server, the owner is Australian. So you may see m
 
 #### I need to contact someone, how should I do it?
 
-There are many ways to contact us. If you need help and it's not in here ask in <Mention>#helpdesk</Mention> and either one of the organisers will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the <Mention>@Organiser</Mention> role (please only do so when needed). You can also dm us here on discord. If you want to do it off discord we regularly check the [Twitter](https://twitter.com/Off_The_Dial) so you can find us there. While on Twitter feel free to use the hashtags [#idtga](https://twitter.com/search?q=%23idtga) and [#weakestlink](https://twitter.com/search?q=%23idtga) and mention [@Off_The_Dial](https://twitter.com/Off_the_Dial) or [@DJam987](https://twitter.com/DJam987).
+There are many ways to contact us. If you need help and it's not in here ask in <Mention>#helpdesk</Mention> and either one of the organisers will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the <Mention>@Organiser</Mention> role (please only do so when needed). You can also dm us here on discord. If you want to do it off discord we regularly check the [Twitter](https://twitter.com/Off_The_Dial) so you can find us there. While on Twitter feel free to use the hashtags [#otd-idtga](https://twitter.com/search?q=(%23idtga)) and [#otd-wl](https://twitter.com/search?q=(%23otd-wl)) and mention [@Off_The_Dial](https://twitter.com/Off_the_Dial) or [@DJam987](https://twitter.com/DJam987).
 
 #### I need help using smash.gg, where can I get it?
 
@@ -112,16 +112,6 @@ Weakest link is a unique, Off the Dial exclusive, tournament featuring both team
 #### Is there a skill limit/cap?
 
 There is a skill limit for teams, and there is a skill cap for players, if you are a FA above the skill cap, you can create a pickup team, if you are a team below the skill limit, you can sign up as a FA instead.
-
-## Off the Dial Story Mode
-
-#### What is the Off the Dial Story Mode
-
-There is an ongoing story with Off the Dial behind the scenes and it is your job to find out what is happening. Leading up to the tournament, there are be lore drops. The result of the tournament will decide what happens next. For more information ask other people on the server and make your predictions and dicsuss lore in <Mention>#crime-scene</Mention> If you want to be serious about lore, you can give yourself the <Mention>@Detective</Mention> role with <Mention>\$flairme flairs</Mention> to ensure you get notified of each new lore drop. Plus, you get a fancy role.
-
-#### What’s different about this to regular IDTGA?
-
-In terms of the actual competition, very little. It is still a free agent tournament at it’s core. The only difference is that after the regular finals match there will be an additional finals round against a pre-determined team called the final boss. This is kept secret until the round begins or may be disclosed in clues prior to the tournament’s commencement
 
 ## Off the Dial Bot
 
