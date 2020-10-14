@@ -31,15 +31,12 @@ function SEO({ description, lang, meta, title }) {
         { rel: "icon", type: "image/png", sizes: "64x64", href: `https://assets.otd.ink/icon.png` },
       ]}
     >
-      <script
-        defer
-        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-      />
-        <meta name="theme-color" content="#5d9194" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content="https://assets.otd.ink/icon.png" />
+      <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" />
+      <meta name="theme-color" content="#5d9194" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content="https://assets.otd.ink/icon.png" />
     </Helmet>
   )
 }
