@@ -3,21 +3,16 @@ title: FAQ
 ---
 
 # FAQ
-
 We get asked a lot of questions, so a FAQ necessary. You can find everything here from "What time do tournaments begin?" to "What is Weakest Link?".
 
 ## General
-
 #### What is my 'Signal Strength'?
-
 Your Signal Strength is our internal way of calculating your tournament experience while being here on Off the Dial. As it was only introduced at the start of 2020, we'll still be asking for your previous OTD experience in registration forms until the Signal Strength is an accurate representation. You gain strength by playing in tournaments as well as by placing high in the tournaments.
 
 #### Why are the admins and TOs always chatting with everyone?
-
 A happy server is a good server. We strive to make sure everyone is having a good time here and striking up conversations are a means to that end (and we also enjoy it).
 
 #### What is the community page?
-
 The community is everyone who helps make Off the Dial what it is behind the scenes and the community channel shows who they are and what they do, you can find the page at [otd.ink/community](community)
 
 #### What time do tournaments begin?
@@ -35,16 +30,16 @@ Refer to your corresponding time-zone.
 - `AEDT` 7am Sunday
 
 #### What time do tournaments end?
-
 Tournaments usually last anywhere between 2 and 5 hours (generally around the four hour mark)
 
 #### Will tournaments be streamed?
-
 Yes! If there are at-least 4 teams, 1 match from each preliminary round will be streamed. There will be a five-minute break before the first finals match. All finals matches will be streamed as well.
 
 #### How are disputes/issues resolved?
-
 All issues are sorted here on discord.
+
+### Am I able to scrim other teams competing in the tournament?
+Yes! We have no issue with you setting up a scrim with other competitors.
 
 #### Why organization spelled with an 's'?
 While this is an international server, the owner is Australian. So you may see many words are spelled differently outside of the United States, namely 'organisation'.
