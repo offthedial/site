@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
-import MediaFooter from "src/components/MediaFooter"
 import ScheduleTime from "src/components/ScheduleTime"
 import Mention from "src/components/Mention"
 import Highlight from "src/components/Highlight"
@@ -93,7 +92,6 @@ const WeakestLink = () => (
         </table>
       </div>
     </PageContainer>
-    <MediaFooter />
   </Layout>
 )
 

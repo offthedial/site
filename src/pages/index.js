@@ -7,7 +7,7 @@ import Footer from "src/components/Footer"
 import Highlight from "src/components/Highlight"
 
 const Index = () => (
-  <Layout>
+  <Layout mediaFooter={false}>
     <div class="section is-medium has-background-white-ter">
       <Highlight>
         <div class="column is-9">
@@ -85,13 +85,13 @@ const Index = () => (
     <Section>
       <div class="column">{/*  */}</div>
       <div class="column has-text-right">
-        <h2 class="title is-2">Community</h2>
+        <h2 class="title is-2">Staff</h2>
         <p class="subtitle is-5">
-          Off the Dial is thankful to have such an awesome team and community!
+          Off the Dial is thankful to have such an awesome staff team!
           You can find out more about everyone here!
         </p>
-        <a href="/community" class="button is-primary">
-          Our Community
+        <a href="/staff" class="button is-primary">
+          Our Staff
         </a>
       </div>
     </Section>

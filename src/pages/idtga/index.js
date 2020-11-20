@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
-import MediaFooter from "src/components/MediaFooter"
 import Highlight from "src/components/Highlight"
 import ScheduleTime from "src/components/ScheduleTime"
 
@@ -62,7 +61,6 @@ const Idtga = () => (
         </table>
       </div>
     </PageContainer>
-    <MediaFooter />
   </Layout>
 )
 

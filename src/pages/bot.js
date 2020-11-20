@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
-import MediaFooter from "src/components/MediaFooter"
 
 import Mention from "src/components/Mention"
 
@@ -57,7 +56,6 @@ const Bot = () => (
         easily lost.
       </p>
     </PageContainer>
-    <MediaFooter />
   </Layout>
 )
 
