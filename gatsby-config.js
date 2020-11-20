@@ -12,7 +12,7 @@ module.exports = {
       options: {
         name: `pages`,
         path: `${__dirname}/src/pages`,
-        ignore: `../**/posts/**`, // Except posts
+        ignore: [`../**/posts/**`], // Except posts
       },
     },
     {
