@@ -2,22 +2,20 @@ import React from "react"
 
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
-import MediaFooter from "src/components/MediaFooter"
 
-const Community = () => (
-  <Layout pageTitle="Community">
+const Staff = () => (
+  <Layout pageTitle="Staff">
     <PageContainer>
-      <h1>Our Community</h1>
+      <h1>Our Staff</h1>
       <p>
-        Off the Dial is thankful to have such an awesome team and community of
-        Moderators, including Streamers & Organisers! They are a crucial part of
+        Off the Dial is thankful to have such an awesome staff team! They are a crucial part of
         Off the Dial and the server would not be where it is today without them.
         Each person in the community also has their own unique skills and
         backgrounds. If you want to learn more about them, or if they interest
         you, you can check each one of them out, right here!
       </p>
       <hr />
-      <CommunityCard
+      <StaffCard
         name="DJam98"
         role={`Owner & Twitter Addict`}
         link="Twitter"
@@ -36,10 +34,10 @@ const Community = () => (
           post upcoming updates that may be coming to the server and
           tournaments. Follows appreciated!
         </p>
-      </CommunityCard>
-      <CommunityCard
+      </StaffCard>
+      <StaffCard
         name="LeptoFlare"
-        role={`Bot Developer & Open Source Supporter`}
+        role={`Technical Lead & Open Source Supporter`}
         link="Website"
         linkRef="https://lepto.tech"
       >
@@ -54,8 +52,8 @@ const Community = () => (
           side projects. Including the bot, this site, and many other things.
         </p>
         <p>If you're curious who I am, check out my website!</p>
-      </CommunityCard>
-      <CommunityCard
+      </StaffCard>
+      <StaffCard
         name="Zada"
         role={`Commentator/Streamer & World Traveler`}
         link="Twitch"
@@ -72,13 +70,12 @@ const Community = () => (
           serve on two boards of directors and works full-time as an information
           technology manager.
         </p>
-      </CommunityCard>
+      </StaffCard>
     </PageContainer>
-    <MediaFooter />
   </Layout>
 )
 
-const CommunityCard = ({ name, role, link, linkRef, children }) => (
+const StaffCard = ({ name, role, link, linkRef, children }) => (
   <div class="card mx-3 my-3">
     <div class="card-content">
       <div class="mb-3">
@@ -97,4 +94,4 @@ const CommunityCard = ({ name, role, link, linkRef, children }) => (
   </div>
 )
 
-export default Community
+export default Staff
