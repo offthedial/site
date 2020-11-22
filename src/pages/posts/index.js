@@ -12,12 +12,14 @@ const Posts = ({ data }) => (
         Off the Dial below! Posts may consist of patch notes, new features or
         just anything that we feel has a need to be said.
       </p>
-      <h6 class="mb-0 is-size-3">
-        <div class="has-text-grey is-pulled-right is-size-4">
-          Total Posts: {data.allMdx.totalCount}
+      <div class="mb-0">
+        <div class="is-size-4 is-align-self-flex-end has-text-grey is-pulled-right">
+          <span>
+            Total Posts: {data.allMdx.totalCount}
+          </span>
         </div>
-        <div>Posts:</div>
-      </h6>
+        <div class="is-size-3">Posts:</div>
+      </div>
       <hr class="my-2" />
       {data.allMdx.edges.map(({ node }) => (
         <div key={node.parent.name} class="post card mx-3 my-3">
