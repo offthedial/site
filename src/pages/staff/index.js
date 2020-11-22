@@ -37,7 +37,7 @@ const Staff = () => (
       </StaffCard>
       <StaffCard
         name="LeptoFlare"
-        role={`Technical Lead & Open Source Supporter`}
+        role={`Lead Technical & Open Source Supporter`}
         link="Website"
         linkRef="https://lepto.tech"
       >
@@ -55,7 +55,7 @@ const Staff = () => (
       </StaffCard>
       <StaffCard
         name="Zada"
-        role={`Commentator/Streamer & World Traveler`}
+        role={`Lead Streamer & World Traveler`}
         link="Twitch"
         linkRef="https://twitch.tv/zadafrex"
       >
