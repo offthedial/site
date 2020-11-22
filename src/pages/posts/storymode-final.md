@@ -34,7 +34,7 @@ But don't fret! The story is *not needed* to play in the tournament. The actual 
 Ah, here's all the juicy details.
 
 ### The Countdown
-You might of noticed the [countdown](https://otd.ink/countdown) that has begun ticking down.
+You might of noticed the ~~[countdown](/countdown)~~ that has begun ticking down.
 
 This is the countdown until when we start releasing lore for this chapter of the story mode. In previous chapters, we've had a lot of time, but not much lore that was released.
 
