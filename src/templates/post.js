@@ -17,7 +17,7 @@ const Post = ({ pageContext, children }) => (
       <h2 class="subtitle has-text-weight-normal has-text-grey is-size-5">
         {pageContext.frontmatter.author} ·{" "}
         {format(addDays(new Date(pageContext.frontmatter.date), 1), "MMMM dd, yyyy")}
-        {undefined === pageContext.frontmatter.tournament ? null : (
+        {pageContext.frontmatter.tournament && (
           <div>
             <a
               href={`/${pageContext.frontmatter.tournament}`}
