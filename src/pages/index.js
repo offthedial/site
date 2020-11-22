@@ -6,6 +6,13 @@ import Promoted from "src/components/Promoted"
 import Footer from "src/components/Footer"
 import Highlight from "src/components/Highlight"
 
+/**
+ * This variable decides which post to display on the index page.
+ * Set the variable to the slug of the post.
+ * Or set it to null to remove the section entirely.
+ */
+const promoted = "a-brief-hiatus";
+
 const Index = () => (
   <Layout mediaFooter={false}>
     <div class="section is-medium has-background-white-ter">
@@ -26,9 +33,13 @@ const Index = () => (
         </div>
       </Highlight>
     </div>
-    <Section>
-      <Promoted slug="a-brief-hiatus" />
-    </Section>
+    {
+      promoted && (
+        <Section>
+          <Promoted slug={promoted} />
+        </Section>
+      )
+    }
     <Section>
       <div class="column">
         <h2 class="title is-2">FAQ</h2>

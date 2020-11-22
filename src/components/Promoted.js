@@ -58,7 +58,7 @@ const Promoted = ({ slug }) => {
           <a href={`/posts/${node.parent.name}`} class="button is-orange">
             Read More
           </a>
-          {null === node.frontmatter.tournament ? null : (
+          {node.frontmatter.tournament && (
             <a
               href={`/${node.frontmatter.tournament}`}
               class="button is-cyan is-outlined"
