@@ -124,14 +124,13 @@ I'd love it if you made a Github Issue using [this link](https://github.com/Lept
 
 ## Definitions
 
-- **FA**: Free agent (any player who isn’t on a team)
-- **Pools**: In order to finish large events in a timely manner, most organisers will split up the attendees into groups. By having multiple player pools, you can have more matches running concurrently.
+- **FA**: Free Agent, a player who is not **playing** on a team.
+- **Pools**: A group of entrants. Entrants in a pool will only play other entrants in the same pool. 
 - **Round**: A group of sets in a bracket.
   > _Ex: I lost in round 1 of winners, so now I’m in round 1 of losers._
-- **Match/Set**: A group of games, there are multiple per round. Each match/set of the same round has different competitors and are usually played concurrently.
-- **Game**: An actual in-game game.
+- **Set**: A group of games, there are multiple sets per round. Each set of the same round has different competitors and are usually played concurrently.
+- **Game**: An actual in-game... game.
 - **Best of**: Number of games required to determine a winner of a set, once a comeback is impossible, the set it over.
   > _Ex: We don't play the last game, because I won the set already._
-- **Play All**: Number of games to be played in a set, but unlike a Best Of, this requires all games in a set to be played
+- **Play All**: Number of games to be played in a set, but unlike a Best Of, this requires all games in a set to be played.
   > _Ex: I already won the set, but we play the last game anyways._
-- **Open Bracket**: A bracket/event that anyone can register and enter to compete in, such as IDTGA.
