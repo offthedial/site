@@ -11,7 +11,7 @@ import Highlight from "src/components/Highlight"
  * Set the variable to the slug of the post.
  * Or set it to null to remove the section entirely.
  */
-const promoted = "a-brief-hiatus";
+const promoted = "dial-in-2020";
 
 const Index = () => (
   <Layout mediaFooter={false}>
