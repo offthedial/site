@@ -28,13 +28,6 @@ const Idtga = () => (
         </div>
       </Highlight>
       <div class="section px-0">
-        <h2>Registration Details</h2>
-        <p>
-          As this is a Free Agent tournament, you must register as a free-agent.
-          There are no skill caps or ceilings.
-        </p>
-      </div>
-      <div class="section px-0">
         <h2>Schedule</h2>
         <table class="table">
           <tbody>
