@@ -55,7 +55,5 @@ It's true that you may not be as skilled as the 3-player-team. But don't let thi
 
 Don't be afraid to experiment on your own, and tell your team your own ideas.
 
----
-
-That's all I have to say, I hope some of these were helpful to you.  
-If you have any suggestions on what I should add, you can message me on discord <Mention>@LeptoFlare</Mention>.
+<Footer>That's all I have to say, I hope some of these were helpful to you.  
+If you have any suggestions on what I should add, you can message me on discord <Mention>@LeptoFlare</Mention>.</Footer>
