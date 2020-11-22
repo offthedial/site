@@ -5,12 +5,12 @@ import NavBar from "./layout/NavBar"
 import MediaFooter from "./layout/MediaFooter"
 
 const Layout = ({ pageTitle, mediaFooter = true, children }) => (
-  <>
+  <div class="layout">
     <SEO title={pageTitle} />
     <NavBar siteTitle="Off the Dial" />
-    <div class="content">{children}</div>
+    <div class="content layout-content">{children}</div>
     {mediaFooter && <MediaFooter />}
-  </>
+  </div>
 )
 
 export default Layout
