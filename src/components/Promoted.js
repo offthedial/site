@@ -33,7 +33,7 @@ const Promoted = ({ slug }) => {
   })
   let node = nodes[0].node
   return (
-    <article class="card message is-cyan">
+    <div class="card message is-cyan">
       <div class="message-header">
         <p class="is-size-4 has-text-weight-medium">
           {null === node.frontmatter.tournament
@@ -68,7 +68,7 @@ const Promoted = ({ slug }) => {
           )}
         </div>
       </div>
-    </article>
+    </div>
   )
 }
 

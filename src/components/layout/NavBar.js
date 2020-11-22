@@ -13,7 +13,7 @@ const NavBar = () => (
   <nav
     class="navbar is-transparent is-primary"
     role="navigation"
-    aria-label="main navigation"
+    aria-label="main"
   >
     <div class="container has-a-hover-translucent">
       <NavBrand />
