@@ -4,7 +4,7 @@ date: 2020-11-23
 author: LeptoFlare
 ---
 
-Looks like the hiatus is getting cut short this year; we got a lot of important news to show.
+What's this? It's December already? Well let's cut to the chase shall we; we've got a lot of important news to show.
 
 #### Off the Dial Staffing
 I'm very excited to announce that I've put a system in place to manage staff for Off the Dial. This means Off the Dial will be able to scale and accept more staff members as we grow. With this, the community page has been changed to a staff page and has been moved to [otd.ink/staff](/staff).
