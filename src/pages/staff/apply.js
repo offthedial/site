@@ -6,6 +6,8 @@ const StaffApply = () => {
   
     useEffect(() => {
       typeformEmbed.makeWidget(typeformRef.current, 'https://form.typeform.com/to/bpH2Ai1E', {
+        buttonText: "Let's start",
+        hideScrollbars: true,
         hideFooter: true,
         hideHeaders: true,
         opacity: 100,
@@ -13,7 +15,7 @@ const StaffApply = () => {
     }, [typeformRef]);
     
     return (
-      <div ref={typeformRef} style={{ height: '100vh', width: '100%'}}></div>
+      <div ref={typeformRef} style={{ height: '100vh', width: '100%'}} />
     );
 }
 
