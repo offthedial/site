@@ -29,7 +29,7 @@ Many features are still in development!
 - I'm working overtime to make signup on-site a reality before the upcoming IDTGA. Speaking of which... 
 
 #### Upcoming IDTGA
-The date for the next IDTGA is to be announced. Since this is our first one back from the hiatus, there's a lot planned.
+The date for the next IDTGA is yet to be announced. Since this is our first one back from the hiatus, there's a lot planned.
 
 You can look forward to...
 1. Signing up for IDTGA on the Off the Dial website.
