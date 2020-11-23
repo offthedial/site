@@ -1,20 +1,17 @@
 import React from "react"
 
 import Layout from "src/components/Layout"
-import PageContainer from "src/components/PageContainer"
 
 const Staff = () => (
   <Layout pageTitle="Staff">
-    <PageContainer>
-      <h1>Our Staff</h1>
+    <div class="section has-text-centered">
+      <h1>Our staff team</h1>
       <p>
-        Off the Dial is thankful to have such an awesome staff team! They are a crucial part of
-        Off the Dial and the server would not be where it is today without them.
-        Each person in the community also has their own unique skills and
-        backgrounds. If you want to learn more about them, or if they interest
-        you, you can check each one of them out, right here!
+        Off the Dial is thankful to have such an awesome staff team! If they interest you, check each one of them out right here!
       </p>
-      <hr />
+    </div>
+    <div class="section pt-0">
+      <div class="container">
       <StaffCard
         name="DJam98"
         role={`Owner & Twitter Addict`}
@@ -71,7 +68,8 @@ const Staff = () => (
           technology manager.
         </p>
       </StaffCard>
-    </PageContainer>
+      </div>
+    </div>
   </Layout>
 )
 
