@@ -5,7 +5,7 @@ import PageHero from "src/components/PageHero"
 
 const Staff = () => (
   <Layout pageTitle="Staff">
-    <PageHero title="Our staff team">
+    <PageHero title="Our Staff Team">
       Off the Dial is thankful to have such an awesome staff team, each staff member contributes a key part to Off the Dial as a whole. If any of them interest you, feel free to read about them here.
     </PageHero>
     <div class="section pt-0">
