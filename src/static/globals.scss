@@ -43,6 +43,10 @@ $gap: 128px;
 @import "~bulma/bulma.sass";
 
 /* Directly modify classes */
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+
 img.emoji {
   height: 1em;
   width: 1em;
