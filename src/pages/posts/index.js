@@ -2,21 +2,15 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "src/components/Layout"
+import PageHero from "src/components/PageHero"
 
 const Posts = ({ data }) => (
   <Layout pageTitle="Posts">
-    <div class="section has-text-centered">
-      <div class="container">
-        <h1>Posts</h1>
-        <div class="columns is-centered">
-          <div class="column is-7 is-size-6">
-            Check out the latest blog posts, news, and updates that we’re making to
-            Off the Dial below! Posts may consist of patch notes, new features or
-            just anything that we feel has a need to be said.
-          </div>
-        </div>
-      </div>
-    </div>
+    <PageHero title="Posts">
+      Check out the latest blog posts, news, and updates that we’re making to
+      Off the Dial below! Posts may consist of patch notes, new features or just
+      anything that we feel has a need to be said.
+    </PageHero>
     <div class="section pt-0">
       <div class="container">
         {data.allMdx.edges.map(({ node }) => (
