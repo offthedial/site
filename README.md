@@ -12,7 +12,14 @@ The live version of the website can be found at [`otd.ink`](https://otd.ink).
 
 ## Contributing
 1. Fork the repository and clone it.
-2. Make a new branch to submit your pull request from.
+2. Create a new branch to submit your pull request from.
+
+### Creating a new branch
+All branch names should be in `kebab-case` (lowercase, words seperated by dashes).
+- If you are creating a post, format your branch like this: `posts/<post-slug>`.
+- If you are creating a feature, format your branch like this: `feature/<name-of-feature>`.
+
+You should not touch the `master` or `gh-pages` branches.
 
 ### Running locally
 1. Navigate into your new site’s directory and start it up.
