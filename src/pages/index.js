@@ -11,7 +11,7 @@ import Highlight from "src/components/Highlight"
  * Set the variable to the slug of the post.
  * Or set it to null to remove the section entirely.
  */
-const promoted = "a-brief-hiatus";
+const promoted = "a-brief-hiatus"
 
 const Index = () => (
   <Layout mediaFooter={false}>
@@ -20,26 +20,21 @@ const Index = () => (
         <div class="column is-9">
           <h1 class="title is-1 has-text-white">Who are we?</h1>
           <p class="subtitle is-4 has-text-white">
-            A unique tournament organisation for Splatoon 2,
-            dedicated to providing fresh tournament opportunities for free
-            agents and teams alike.
+            A unique tournament organisation for Splatoon 2, dedicated to
+            providing fresh tournament opportunities for free agents and teams
+            alike.
           </p>
         </div>
         <div class="column is-3 is-hidden-mobile">
-          <img
-            src="https://assets.otd.ink/logo-nobg.png"
-            alt=""
-          />
+          <img src="https://assets.otd.ink/logo-nobg.png" alt="" />
         </div>
       </Highlight>
     </div>
-    {
-      promoted && (
-        <Section>
-          <Promoted slug={promoted} />
-        </Section>
-      )
-    }
+    {promoted && (
+      <Section>
+        <Promoted slug={promoted} />
+      </Section>
+    )}
     <Section>
       <div class="column">
         <h2 class="title is-2">FAQ</h2>
@@ -98,8 +93,8 @@ const Index = () => (
       <div class="column has-text-right">
         <h2 class="title is-2">Staff</h2>
         <p class="subtitle is-5">
-          Off the Dial is thankful to have such an awesome staff team!
-          You can find out more about everyone here!
+          Off the Dial is thankful to have such an awesome staff team! You can
+          find out more about everyone here!
         </p>
         <a href="/staff" class="button is-primary">
           Our Staff
