@@ -17,7 +17,7 @@ const Staff = ({ data }) => (
         <div class="grid-2">
           {mapMdx(data).map(({ node }) => (
             <StaffCard
-              id={node.parent.name}
+              id={node.frontmatter.name}
               name={node.frontmatter.name}
               role={node.frontmatter.role + " & " + node.frontmatter.hobby}
               link={node.frontmatter.link[0]}
@@ -69,7 +69,6 @@ export const query = graphql`
       filter: { fileAbsolutePath: { regex: "/(pages)/(staff)/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
-      totalCount
       edges {
         node {
           frontmatter {
@@ -77,11 +76,6 @@ export const query = graphql`
             role
             hobby
             link
-          }
-          parent {
-            ... on File {
-              name
-            }
           }
           slug
           body
