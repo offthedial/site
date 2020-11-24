@@ -2,41 +2,40 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "src/components/Layout"
-import PageContainer from "src/components/PageContainer"
 
 const Posts = ({ data }) => (
   <Layout pageTitle="Posts">
-    <PageContainer>
-      <p>
-        Check out the latest blog posts, news, and updates that we’re making to
-        Off the Dial below! Posts may consist of patch notes, new features or
-        just anything that we feel has a need to be said.
-      </p>
-      <div class="mb-0">
-        <div class="is-size-4 is-align-self-flex-end has-text-grey is-pulled-right">
-          <span>
-            Total Posts: {data.allMdx.totalCount}
-          </span>
+    <div class="section has-text-centered">
+      <div class="container">
+        <h1>Posts</h1>
+        <div class="columns is-centered">
+          <div class="column is-7 is-size-6">
+            Check out the latest blog posts, news, and updates that we’re making to
+            Off the Dial below! Posts may consist of patch notes, new features or
+            just anything that we feel has a need to be said.
+          </div>
         </div>
-        <div class="is-size-3">Posts:</div>
       </div>
-      <hr class="my-2" />
-      {data.allMdx.edges.map(({ node }) => (
-        <div key={node.parent.name} class="post card mx-3 my-3">
-          <Link to={node.parent.name}>
-            <div class="card-content">
-              <h2 class="mb-0">{node.frontmatter.title}</h2>
-              <p class="has-text-grey mb-3 is-size-5">
-                {node.frontmatter.author} · {node.frontmatter.date}
-              </p>
-              <blockquote class="has-text-grey">
-                <i>{node.excerpt}</i>
-              </blockquote>
-            </div>
-          </Link>
-        </div>
-      ))}
-    </PageContainer>
+    </div>
+    <div class="section pt-0">
+      <div class="container">
+        {data.allMdx.edges.map(({ node }) => (
+          <div key={node.parent.name} class="post card mx-3 my-3">
+            <Link to={node.parent.name}>
+              <div class="card-content">
+                <h2 class="mb-0">{node.frontmatter.title}</h2>
+                <p class="has-text-grey mb-3 is-size-5">
+                  {node.frontmatter.author} · {node.frontmatter.date}
+                </p>
+                <blockquote class="has-text-grey">
+                  <i>{node.excerpt}</i>
+                </blockquote>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
   </Layout>
 )
 
