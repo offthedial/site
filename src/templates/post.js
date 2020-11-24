@@ -30,7 +30,7 @@ const Post = ({ pageContext, children }) => (
     </div>
     <div class="section pt-0">
       <div class="columns is-centered">
-        <div class="column is-6 post-text">
+        <div class="column is-6 is-size-6">
           <MDXProvider components={shortcodes}>{children}</MDXProvider>
         </div>
       </div>
