@@ -18,10 +18,10 @@ Since this is the very first opening of staff applications, we are going to be v
 ###### If you're interested, please visit [otd.ink/staff/apply](/staff/apply).
 
 #### Website Updates
-I've tweaked some minor things about the website and changed some internal stuff. Here's a breakdown.
+I've tweaked some minor things about the website and changed some internal stuff. Here's an overview.
 
-1. **Updated post layout** - You may have already noticed the different layout for posts. I did this because I read some random web-dev article about how this looks better...
-2. **Migrated community page** - As mentioned above, the community page has migrated to [otd.ink/staff](/staff).
+1. **Updated post layout** - You may have already noticed the different layout for posts. I did this because I read some random web-dev article about how this looks better... I also changed the look of the posts page.
+2. **Migrated community page** - As mentioned above, the community page has migrated to [otd.ink/staff](/staff). I also changed the look of the staff page.
 3. **Tweaked Footer** - The media footer now has a light-grey background as opposed to a horizontal line. No this was not in another random web-dev article.
 
 Many features are still in development!
