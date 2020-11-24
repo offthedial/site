@@ -1,9 +1,7 @@
 ---
 title: FAQ
+hero: We get asked a lot of questions, so a FAQ necessary. You can find everything here from "What time do tournaments begin?" to "What is Weakest Link?".
 ---
-
-# FAQ
-We get asked a lot of questions, so a FAQ necessary. You can find everything here from "What time do tournaments begin?" to "What is Weakest Link?".
 
 ## General
 #### What is my 'Signal Strength'?
@@ -38,7 +36,7 @@ Yes! If there are at-least 4 teams, 1 match from each preliminary round will be 
 #### How are disputes/issues resolved?
 All issues are sorted here on discord.
 
-### Am I able to scrim other teams competing in the tournament?
+#### Am I able to scrim other teams competing in the tournament?
 Yes! We have no issue with you setting up a scrim with other competitors.
 
 #### Why organization spelled with an 's'?
