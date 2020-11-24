@@ -11,7 +11,7 @@ import Highlight from "src/components/Highlight"
  * Set the variable to the slug of the post.
  * Or set it to null to remove the section entirely.
  */
-const promoted = "a-brief-hiatus"
+const promoted = "dial-in-2020"
 
 const Index = () => (
   <Layout mediaFooter={false}>
@@ -65,7 +65,8 @@ const Index = () => (
       <div class="column is-8 has-text-centered">
         <h2 class="title is-2">Staff</h2>
         <p class="subtitle is-5">
-          Off the Dial is thankful to have such an awesome staff team, you can learn more about each of them here.
+          Off the Dial is thankful to have such an awesome staff team, you can
+          learn more about each of them here.
         </p>
         <a href="/staff" class="button is-primary">
           Our Staff Team
