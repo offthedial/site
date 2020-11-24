@@ -3,6 +3,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { addMinutes, format } from "date-fns"
 
 import Layout from "src/components/Layout"
+import PostContent from "src/components/PostContent"
 
 import Mention from "src/components/Mention"
 import Footer from "src/components/Footer"
@@ -29,17 +30,15 @@ const Post = ({ pageContext, children }) => (
       </h2>
     </div>
     <div class="section pt-0">
-      <div class="columns is-centered">
-        <div class="column is-6 post-text">
-          <MDXProvider components={shortcodes}>{children}</MDXProvider>
-        </div>
-      </div>
+      <PostContent>
+        <MDXProvider components={shortcodes}>{children}</MDXProvider>
+      </PostContent>
     </div>
   </Layout>
 )
 
 function formatPostDate(date) {
-  let postDate = new Date(date);
+  let postDate = new Date(date)
   postDate = addMinutes(postDate, postDate.getTimezoneOffset())
   return format(postDate, "MMMM dd, yyyy")
 }

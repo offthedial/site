@@ -20,26 +20,21 @@ const Index = () => (
         <div class="column is-9">
           <h1 class="title is-1 has-text-white">Who are we?</h1>
           <p class="subtitle is-4 has-text-white">
-            A unique tournament organisation for Splatoon 2,
-            dedicated to providing fresh tournament opportunities for free
-            agents and teams alike.
+            A unique tournament organisation for Splatoon 2, dedicated to
+            providing fresh tournament opportunities for free agents and teams
+            alike.
           </p>
         </div>
         <div class="column is-3 is-hidden-mobile">
-          <img
-            src="https://assets.otd.ink/logo-nobg.png"
-            alt=""
-          />
+          <img src="https://assets.otd.ink/logo-nobg.png" alt="" />
         </div>
       </Highlight>
     </div>
-    {
-      promoted && (
-        <Section>
-          <Promoted slug={promoted} />
-        </Section>
-      )
-    }
+    {promoted && (
+      <Section>
+        <Promoted slug={promoted} />
+      </Section>
+    )}
     <Section>
       <div class="column">
         <h2 class="title is-2">FAQ</h2>
@@ -68,14 +63,12 @@ const Index = () => (
     </Section>
     <SectionBackground>
       <div class="column is-8 has-text-centered">
-        <h2 class="title is-2">Assets</h2>
+        <h2 class="title is-2">Staff</h2>
         <p class="subtitle is-5">
-          Many of our assets are public and free. Assets include logos and
-          banners related to Off the Dial and its tournaments. You can find them
-          all right here!
+          Off the Dial is thankful to have such an awesome staff team, you can learn more about each of them here.
         </p>
-        <a href="/assets" class="button is-primary">
-          Assets Repository
+        <a href="/staff" class="button is-primary">
+          Our Staff Team
         </a>
       </div>
     </SectionBackground>
@@ -96,13 +89,14 @@ const Index = () => (
     <Section>
       <div class="column">{/*  */}</div>
       <div class="column has-text-right">
-        <h2 class="title is-2">Staff</h2>
+        <h2 class="title is-2">Assets</h2>
         <p class="subtitle is-5">
-          Off the Dial is thankful to have such an awesome staff team!
-          You can find out more about everyone here!
+          Many of our assets are public and free. Assets include logos and
+          banners related to Off the Dial and its tournaments. You can find them
+          all right here!
         </p>
-        <a href="/staff" class="button is-primary">
-          Our Staff
+        <a href="https://assets.otd.ink" class="button is-primary">
+          Assets Repository
         </a>
       </div>
     </Section>
@@ -155,15 +149,16 @@ const Index = () => (
         </div>
       </div>
     </SectionBackground>
-
-    <Footer>
-      Built with{" "}
-      <span class="has-a-hover-translucent">
-        <a href="https://github.com/offthedial/site">{emoji("\u2764")}</a>
-      </span>{" "}
-      & <a href="https://www.gatsbyjs.org/">Gatsby</a>. This website is
-      currently in beta, more features are to come. Stay tuned!
-    </Footer>
+    <div class="section py-0">
+      <Footer>
+        Built with{" "}
+        <span class="has-a-hover-translucent">
+          <a href="https://github.com/offthedial/site">{emoji("\u2764")}</a>
+        </span>{" "}
+        & <a href="https://www.gatsbyjs.org/">Gatsby</a>. This website is
+        currently in beta, more features are to come. Stay tuned!
+      </Footer>
+    </div>
   </Layout>
 )
 
