@@ -1,10 +1,9 @@
 ---
 role: Lead Technical
 hobby: Open Source Supporter
-name: LeptoFlare
-links: {
-    Website: https://lepto.tech
-}
+link:
+  - Website
+  - https://lepto.tech
 ---
 
 You may know me as the rewriter of Off the Dial Bot, and my decision to make it open-sourced. I've saved DJam98 lots of headaches, and made it much easier to track ranks, manage profiles, and generate minesweepers at your convenience.
