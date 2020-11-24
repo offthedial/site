@@ -13,21 +13,25 @@ const Posts = ({ data }) => (
     </PageHero>
     <div class="section pt-0">
       <div class="container">
-        {data.allMdx.edges.map(({ node }) => (
-          <div key={node.parent.name} class="post card mx-3 my-3">
-            <Link to={node.parent.name}>
-              <div class="card-content">
-                <h2 class="mb-0">{node.frontmatter.title}</h2>
-                <p class="has-text-grey mb-3 is-size-5">
-                  {node.frontmatter.author} · {node.frontmatter.date}
-                </p>
-                <blockquote class="has-text-grey">
-                  <i>{node.excerpt}</i>
-                </blockquote>
+        <div class="columns is-centered">
+          <div class="column is-9">
+            {data.allMdx.edges.map(({ node }) => (
+              <div key={node.parent.name} class="post card mx-3 my-3">
+                <Link to={node.parent.name}>
+                  <div class="card-content">
+                    <h2 class="mb-0">{node.frontmatter.title}</h2>
+                    <p class="has-text-grey mb-3 is-size-5">
+                      {node.frontmatter.author} · {node.frontmatter.date}
+                    </p>
+                    <blockquote class="has-text-grey">
+                      <i>{node.excerpt}</i>
+                    </blockquote>
+                  </div>
+                </Link>
               </div>
-            </Link>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   </Layout>
