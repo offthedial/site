@@ -36,7 +36,6 @@ module.exports = {
 
     /* Styles & CSS */
     `gatsby-plugin-sass`,
-    `gatsby-plugin-emotion`,
 
     /* Image Processing */
     `gatsby-plugin-sharp`,
