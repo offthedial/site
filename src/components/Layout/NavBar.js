@@ -7,7 +7,7 @@ import discord from "src/static/images/discord.svg"
 const NavBrand = () => (
   <div class="navbar-brand">
     <Link to="/">
-      <div class="navbar-item py-0">
+      <div class="navbar-item py-0 is-hover-translucent">
         <img class="py-3" src="https://assets.otd.ink/title.png" alt="" />
       </div>
     </Link>
@@ -20,11 +20,11 @@ const NavBar = () => (
     role="navigation"
     aria-label="main"
   >
-    <div class="container has-a-hover-translucent">
+    <div class="container">
       <NavBrand />
       <div class="navbar-menu is-paddingless">
         <div class="navbar-end">
-          <div class="navbar-item has-text-weight-medium">
+          <div class="navbar-item has-text-weight-medium is-hover-translucent">
             <Link
               to="/idtga"
               style={{
@@ -35,7 +35,7 @@ const NavBar = () => (
               It's Dangerous to go Alone
             </Link>
           </div>
-          <div class="navbar-item has-text-weight-medium">
+          <div class="navbar-item has-text-weight-medium is-hover-translucent">
             <Link
               to="/wl"
               style={{
@@ -46,7 +46,7 @@ const NavBar = () => (
               Weakest Link
             </Link>
           </div>
-          <a class="navbar-item py-0" href="/discord">
+          <a class="navbar-item py-0 is-hover-translucent" href="/discord">
             <img src={discord} alt="" />
           </a>
         </div>

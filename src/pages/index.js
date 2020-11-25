@@ -183,9 +183,9 @@ const SectionBackground = ({ children }) => (
 )
 
 const Love = () => (
-  <a href="https://github.com/offthedial/site" class="has-a-hover-translucent">
+  <a href="https://github.com/offthedial/site">
     <Twemoji noWrapper={true}>
-      <a>{"\u2764"}</a>
+      <span class="is-hover-translucent">{"\u2764"}</span>
     </Twemoji>
   </a>
 )

@@ -19,7 +19,7 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
-.has-a-hover-translucent a {
+.is-hover-translucent {
   &:hover {
     opacity: 0.85;
   }
