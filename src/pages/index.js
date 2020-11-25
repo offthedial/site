@@ -1,7 +1,7 @@
 import React from "react"
 
-import { emoji } from "react-easy-emoji"
 import { Link } from "gatsby"
+import Twemoji from "react-twemoji"
 import Layout from "src/components/Layout"
 import Promoted from "src/components/Promoted"
 import Footer from "src/components/Footer"
@@ -19,8 +19,12 @@ const Index = () => (
     <div class="section is-medium has-background-white-ter">
       <Highlight>
         <div class="column is-9">
-          <h1 class="title is-1 is-hidden-mobile has-text-white">Who are we?</h1>
-          <h6 class="title is-3 is-hidden-tablet has-text-white">Who are we?</h6>
+          <h1 class="title is-1 is-hidden-mobile has-text-white">
+            Who are we?
+          </h1>
+          <h6 class="title is-3 is-hidden-tablet has-text-white">
+            Who are we?
+          </h6>
           <p class="subtitle is-4 has-text-white">
             A unique tournament organisation for Splatoon 2, dedicated to
             providing fresh tournament opportunities for free agents and teams
@@ -154,12 +158,9 @@ const Index = () => (
     </SectionBackground>
     <div class="section py-0">
       <Footer>
-        Built with{" "}
-        <span class="has-a-hover-translucent">
-          <a href="https://github.com/offthedial/site">{emoji("\u2764")}</a>
-        </span>{" "}
-        & <a href="https://www.gatsbyjs.org/">Gatsby</a>. This website is
-        currently in beta, more features are to come. Stay tuned!
+        Built with <Love /> & <a href="https://www.gatsbyjs.org/">Gatsby</a>.
+        This website is currently in beta, more features are to come. Stay
+        tuned!
       </Footer>
     </div>
   </Layout>
@@ -179,6 +180,14 @@ const SectionBackground = ({ children }) => (
       <div class="columns is-centered is-vcentered">{children}</div>
     </div>
   </div>
+)
+
+const Love = () => (
+  <a href="https://github.com/offthedial/site" class="has-a-hover-translucent">
+    <Twemoji noWrapper={true}>
+      <a>{"\u2764"}</a>
+    </Twemoji>
+  </a>
 )
 
 export default Index
