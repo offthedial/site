@@ -1,7 +1,7 @@
 import React from "react"
 
-import { Link } from "gatsby"
 import { emoji } from "react-easy-emoji"
+import { Link } from "gatsby"
 import Layout from "src/components/Layout"
 import Promoted from "src/components/Promoted"
 import Footer from "src/components/Footer"
