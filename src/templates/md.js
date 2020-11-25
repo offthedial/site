@@ -1,9 +1,8 @@
 import React from "react"
-import { MDXProvider } from "@mdx-js/react"
 
+import { MDXProvider } from "@mdx-js/react"
 import Layout from "src/components/Layout"
 import PageHero from "src/components/PageHero"
-
 import Mention from "src/components/Mention"
 import Footer from "src/components/Footer"
 

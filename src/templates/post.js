@@ -1,13 +1,12 @@
 import React from "react"
+
+import { Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { addMinutes, format } from "date-fns"
-
 import Layout from "src/components/Layout"
 import PostContent from "src/components/PostContent"
-
 import Mention from "src/components/Mention"
 import Footer from "src/components/Footer"
-import { Link } from "gatsby"
 
 const shortcodes = { Mention, Footer }
 

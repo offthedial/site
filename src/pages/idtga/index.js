@@ -1,7 +1,6 @@
 import React from "react"
 
 import { Link } from "gatsby"
-
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
 import Highlight from "src/components/Highlight"

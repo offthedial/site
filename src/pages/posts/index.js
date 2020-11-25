@@ -1,6 +1,6 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
 
+import { graphql, Link } from "gatsby"
 import Layout from "src/components/Layout"
 import PageHero from "src/components/PageHero"
 

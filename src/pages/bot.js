@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
-
 import Mention from "src/components/Mention"
 
 const Bot = () => (

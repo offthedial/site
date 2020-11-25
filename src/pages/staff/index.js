@@ -1,7 +1,7 @@
 import React from "react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { graphql } from "gatsby"
 
+import { graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "src/components/Layout"
 import PageHero from "src/components/PageHero"
 
