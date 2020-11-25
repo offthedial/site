@@ -7,6 +7,7 @@ import PostContent from "src/components/PostContent"
 
 import Mention from "src/components/Mention"
 import Footer from "src/components/Footer"
+import { Link } from "gatsby"
 
 const shortcodes = { Mention, Footer }
 
@@ -19,12 +20,12 @@ const Post = ({ pageContext, children }) => (
         {formatPostDate(pageContext.frontmatter.date)}
         {pageContext.frontmatter.tournament && (
           <div>
-            <a
-              href={`/${pageContext.frontmatter.tournament}`}
+            <Link
+              to={`/${pageContext.frontmatter.tournament}`}
               class="button mt-2 is-primary is-outlined"
             >
               Tournament Page
-            </a>
+            </Link>
           </div>
         )}
       </h2>

@@ -1,11 +1,15 @@
 import React from "react"
 import discord from "src/static/images/discord.svg"
 
+import { Link } from "gatsby"
+
 const NavBrand = () => (
   <div class="navbar-brand">
-    <a class="navbar-item py-0" href="/">
-      <img class="py-3" src="https://assets.otd.ink/title.png" alt="" />
-    </a>
+    <Link to="/">
+      <div class="navbar-item py-0">
+        <img class="py-3" src="https://assets.otd.ink/title.png" alt="" />
+      </div>
+    </Link>
   </div>
 )
 
@@ -19,12 +23,28 @@ const NavBar = () => (
       <NavBrand />
       <div class="navbar-menu is-paddingless">
         <div class="navbar-end">
-          <a href="/idtga" class="navbar-item has-text-weight-medium">
-            It's Dangerous to go Alone
-          </a>
-          <a href="/wl" class="navbar-item has-text-weight-medium">
-            Weakest Link
-          </a>
+          <div class="navbar-item has-text-weight-medium">
+            <Link
+              to="/idtga"
+              style={{
+                color: "white",
+                textDecoration: "none",
+              }}
+            >
+              It's Dangerous to go Alone
+            </Link>
+          </div>
+          <div class="navbar-item has-text-weight-medium">
+            <Link
+              to="/wl"
+              style={{
+                color: "white",
+                textDecoration: "none",
+              }}
+            >
+              Weakest Link
+            </Link>
+          </div>
           <a class="navbar-item py-0" href="/discord">
             <img src={discord} alt="" />
           </a>

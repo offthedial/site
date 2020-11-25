@@ -1,5 +1,7 @@
 import React from "react"
 
+import { Link } from "gatsby"
+
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
 import Highlight from "src/components/Highlight"
@@ -18,9 +20,9 @@ const Idtga = () => (
           </p>
           <p>All you need to do is sign up! The world is waiting…</p>
           <div class="buttons">
-            <a href="/idtga/rules" class="button is-white is-outlined">
+            <Link to="/idtga/rules" class="button is-white is-outlined">
               Rules
-            </a>
+            </Link>
           </div>
         </div>
         <div class="column is-4">
@@ -48,7 +50,7 @@ const Idtga = () => (
               Players are requested to be online on both Splatoon 2 and Discord.
             </ScheduleTime>
             <ScheduleTime date="10 Minutes">
-              Stream begins on <a href="/twitch">twitch</a>.
+              Stream begins on <Link to="/twitch">twitch</Link>.
             </ScheduleTime>
           </tbody>
         </table>

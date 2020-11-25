@@ -1,42 +1,44 @@
 import React from "react"
 
+import { Link } from "gatsby"
+
 const MediaFooter = () => (
   <footer class="has-background-white-bis py-5">
     <div class="container">
       <div class="columns my-0 is-centered has-text-centered is-mobile">
         <div class="column py-0 is-narrow">
           <p class="is-size-5">
-            <a href="/twitch">
+            <Link to="/twitch">
               <i class="fab fa-twitch" />
-            </a>
+            </Link>
           </p>
         </div>
         <div class="column py-0 is-narrow">
           <p class="is-size-5">
-            <a href="/twitter">
+            <Link to="/twitter">
               <i class="fab fa-twitter" />
-            </a>
+            </Link>
           </p>
         </div>
         <div class="column py-0 is-narrow">
           <p class="is-size-5">
-            <a href="/youtube">
+            <Link to="/youtube">
               <i class="fab fa-youtube" />
-            </a>
+            </Link>
           </p>
         </div>
         <div class="column py-0 is-narrow">
           <p class="is-size-5">
-            <a href="/patreon">
+            <Link to="/patreon">
               <i class="fab fa-patreon" />
-            </a>
+            </Link>
           </p>
         </div>
         <div class="column py-0 is-narrow">
           <p class="is-size-5">
-            <a href="/github">
+            <Link to="/github">
               <i class="fab fa-github" />
-            </a>
+            </Link>
           </p>
         </div>
       </div>

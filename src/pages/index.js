@@ -1,5 +1,6 @@
 import React from "react"
 import emoji from "react-easy-emoji"
+import { Link } from "gatsby"
 
 import Layout from "src/components/Layout"
 import Promoted from "src/components/Promoted"
@@ -43,9 +44,9 @@ const Index = () => (
           We get asked a lot of questions, so a FAQ necessary. We highly
           recommend you check out this page.
         </p>
-        <a href="/faq" class="button is-link">
+        <Link to="/faq" class="button is-link">
           Go to FAQ
-        </a>
+        </Link>
       </div>
       <div class="column">{/*  */}</div>
     </Section>
@@ -57,9 +58,9 @@ const Index = () => (
           Stay up to date with the latest blog posts, news, and updates on
           everything Off the Dial!
         </p>
-        <a href="/posts" class="button is-primary">
+        <Link to="/posts" class="button is-primary">
           View Posts
-        </a>
+        </Link>
       </div>
     </Section>
     <SectionBackground>
@@ -69,9 +70,9 @@ const Index = () => (
           Off the Dial is thankful to have such an awesome staff team, you can
           learn more about each of them here.
         </p>
-        <a href="/staff" class="button is-primary">
+        <Link to="/staff" class="button is-primary">
           Our Staff Team
-        </a>
+        </Link>
       </div>
     </SectionBackground>
     <Section>
@@ -82,9 +83,9 @@ const Index = () => (
           assistance. If you would like to know more, we have a page dedicated
           to about the bot!
         </p>
-        <a href="/bot" class="button is-primary">
+        <Link to="/bot" class="button is-primary">
           About the Bot
-        </a>
+        </Link>
       </div>
       <div class="column">{/*  */}</div>
     </Section>
@@ -115,37 +116,37 @@ const Index = () => (
         <div class="columns is-mobile">
           <div class="column">
             <h1>
-              <a href="/twitch">
+              <Link to="/twitch">
                 <i class="fab fa-twitch" />
-              </a>
+              </Link>
             </h1>
           </div>
           <div class="column">
             <h1>
-              <a href="/twitter">
+              <Link to="/twitter">
                 <i class="fab fa-twitter" />
-              </a>
+              </Link>
             </h1>
           </div>
           <div class="column">
             <h1>
-              <a href="/youtube">
+              <Link to="/youtube">
                 <i class="fab fa-youtube" />
-              </a>
+              </Link>
             </h1>
           </div>
           <div class="column">
             <h1>
-              <a href="/patreon">
+              <Link to="/patreon">
                 <i class="fab fa-patreon" />
-              </a>
+              </Link>
             </h1>
           </div>
           <div class="column">
             <h1>
-              <a href="/github">
+              <Link to="/github">
                 <i class="fab fa-github" />
-              </a>
+              </Link>
             </h1>
           </div>
         </div>

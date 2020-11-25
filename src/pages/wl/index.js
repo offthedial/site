@@ -1,5 +1,7 @@
 import React from "react"
 
+import { Link } from "gatsby"
+
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
 import ScheduleTime from "src/components/ScheduleTime"
@@ -20,9 +22,9 @@ const WeakestLink = () => (
           </p>
           <p>All you need to do is sign up! The world is waiting…</p>
           <div class="buttons">
-            <a href="/wl/rules" class="button is-white is-outlined">
+            <Link to="/wl/rules" class="button is-white is-outlined">
               Rules
-            </a>
+            </Link>
           </div>
         </div>
         <div class="column is-4">
@@ -86,7 +88,7 @@ const WeakestLink = () => (
               Players are requested to be online on both Splatoon 2 and Discord.
             </ScheduleTime>
             <ScheduleTime date="10 Minutes">
-              Stream begins on <a href="/twitch">twitch</a>.
+              Stream begins on <Link to="/twitch">twitch</Link>.
             </ScheduleTime>
           </tbody>
         </table>

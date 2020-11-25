@@ -1,5 +1,6 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 const Promoted = ({ slug }) => {
   const data = useStaticQuery(graphql`
@@ -55,16 +56,16 @@ const Promoted = ({ slug }) => {
           {node.excerpt}
         </blockquote>
         <div class="mt-4 buttons">
-          <a href={`/posts/${node.parent.name}`} class="button is-orange">
+          <Link to={`/posts/${node.parent.name}`} class="button is-orange">
             Read More
-          </a>
+          </Link>
           {node.frontmatter.tournament && (
-            <a
-              href={`/${node.frontmatter.tournament}`}
+            <Link
+              to={`/${node.frontmatter.tournament}`}
               class="button is-cyan is-outlined"
             >
               Tournament Page
-            </a>
+            </Link>
           )}
         </div>
       </div>
