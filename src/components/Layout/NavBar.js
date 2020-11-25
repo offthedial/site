@@ -1,7 +1,8 @@
 import React from "react"
-import discord from "src/static/images/discord.svg"
 
 import { Link } from "gatsby"
+
+import discord from "src/static/images/discord.svg"
 
 const NavBrand = () => (
   <div class="navbar-brand">

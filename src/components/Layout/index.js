@@ -1,8 +1,8 @@
 import React from "react"
 
-import SEO from "./Layout/SEO"
-import NavBar from "./Layout/NavBar"
-import MediaFooter from "./Layout/MediaFooter"
+import SEO from "./SEO"
+import NavBar from "./NavBar"
+import MediaFooter from "./MediaFooter"
 
 const Layout = ({ pageTitle, mediaFooter = true, children }) => (
   <div class="layout">
