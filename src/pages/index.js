@@ -18,7 +18,8 @@ const Index = () => (
     <div class="section is-medium has-background-white-ter">
       <Highlight>
         <div class="column is-9">
-          <h1 class="title is-1 has-text-white">Who are we?</h1>
+          <h1 class="title is-1 is-hidden-mobile has-text-white">Who are we?</h1>
+          <h6 class="title is-3 is-hidden-tablet has-text-white">Who are we?</h6>
           <p class="subtitle is-4 has-text-white">
             A unique tournament organisation for Splatoon 2, dedicated to
             providing fresh tournament opportunities for free agents and teams
