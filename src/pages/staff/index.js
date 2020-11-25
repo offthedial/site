@@ -37,9 +37,7 @@ const StaffCard = ({ id, name, role, link, linkRef, children }) => (
     <div class="card-content">
       <div class="mb-3">
         <div class="has-text-grey">{role}</div>
-        <h2 class="my-1">
-          {name}
-        </h2>
+        <h2 class="my-1">{name}</h2>
         <a
           class="is-link is-hover-underline has-text-weight-medium"
           href={linkRef}
