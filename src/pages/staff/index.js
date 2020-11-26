@@ -5,6 +5,25 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "src/components/Layout"
 import PageHero from "src/components/PageHero"
 
+const mapStaffCards = (data) => {
+  let edges = data.allMdx.edges
+  console.log(edges)
+  edges.sort((a, b) =>
+    a.node.slug > b.node.slug ? 1 : b.node.slug > a.node.slug ? -1 : 0
+  )
+  return edges.map(({ node }) => (
+    <StaffCard
+      id={node.frontmatter.name}
+      name={node.frontmatter.name}
+      role={node.frontmatter.role + " & " + node.frontmatter.hobby}
+      link={node.frontmatter.link[0]}
+      linkRef={node.frontmatter.link[1]}
+    >
+      <MDXRenderer>{node.body}</MDXRenderer>
+    </StaffCard>
+  ))
+}
+
 const Staff = ({ data }) => (
   <Layout pageTitle="Staff">
     <PageHero title="Our Staff Team">
@@ -14,18 +33,11 @@ const Staff = ({ data }) => (
     </PageHero>
     <div class="section pt-0">
       <div class="container layout-content">
-        <div class="grid-2">
-          {mapMdx(data).map(({ node }) => (
-            <StaffCard
-              id={node.frontmatter.name}
-              name={node.frontmatter.name}
-              role={node.frontmatter.role + " & " + node.frontmatter.hobby}
-              link={node.frontmatter.link[0]}
-              linkRef={node.frontmatter.link[1]}
-            >
-              <MDXRenderer>{node.body}</MDXRenderer>
-            </StaffCard>
-          ))}
+        <div class="grid-2 is-hidden-mobile">
+          {mapStaffCards(data)}
+        </div>
+        <div class="is-hidden-tablet">
+          {mapStaffCards(data)}
         </div>
       </div>
     </div>
@@ -50,16 +62,6 @@ const StaffCard = ({ id, name, role, link, linkRef, children }) => (
     </div>
   </div>
 )
-
-function mapMdx(data) {
-  let edges = data.allMdx.edges
-  console.log(edges)
-  edges.sort((a, b) =>
-    a.node.slug > b.node.slug ? 1 : b.node.slug > a.node.slug ? -1 : 0
-  )
-  console.log(edges)
-  return edges
-}
 
 export const query = graphql`
   query {
