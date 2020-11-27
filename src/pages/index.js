@@ -68,7 +68,7 @@ const Index = () => (
       </div>
     </Section>
     <SectionBackground>
-      <div class="column is-8 has-text-centered">
+      <div class="column is-7 has-text-centered">
         <h2 class="title is-2">Staff</h2>
         <p class="subtitle is-5">
           Off the Dial is thankful to have such an awesome staff team, you can
@@ -108,7 +108,7 @@ const Index = () => (
       </div>
     </Section>
     <SectionBackground>
-      <div class="column is-8 has-text-centered">
+      <div class="column is-7 has-text-centered">
         <h2 class="title is-2" id="media">
           Media
         </h2>

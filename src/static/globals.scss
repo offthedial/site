@@ -1,3 +1,4 @@
+@import "~bulma/sass/utilities/initial-variables.sass";
 @import "./classes.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
@@ -28,7 +29,7 @@ $content-heading-weight: 500;
 $size-6: 1.1rem;
 
 /* Element Styles */
-$code: hsl(0, 0%, 29%);
+$code: $grey-dark;
 $code-padding: 2px;
 
 $content-blockquote-background-color: transparent;
@@ -36,6 +37,13 @@ $content-blockquote-padding: 0 1em;
 $content-blockquote-border-left: 2px solid $primary;
 
 $section-padding-medium: 6rem 0rem;
+
+/* Form Styles */
+$input-border-color: transparent;
+$input-shadow: none;
+$input-focus-box-shadow-size: none;
+$input-background-color: $grey-lightest;
+$input-hover-border-color: $grey-lighter;
 
 /* Component Styles */
 $navbar-item-img-max-height: 4rem;
