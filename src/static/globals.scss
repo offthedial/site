@@ -38,6 +38,13 @@ $content-blockquote-border-left: 2px solid $primary;
 
 $section-padding-medium: 6rem 0rem;
 
+/* Form Styles */
+$input-border-color: transparent;
+$input-shadow: none;
+$input-focus-box-shadow-size: none;
+$input-background-color: $grey-lightest;
+$input-hover-border-color: $grey-lighter;
+
 /* Component Styles */
 $navbar-item-img-max-height: 4rem;
 $gap: 128px;
