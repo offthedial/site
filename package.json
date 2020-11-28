@@ -16,6 +16,7 @@
     "gatsby-plugin-react-helmet": "^3.4.0",
     "gatsby-plugin-remove-trailing-slashes": "^2.5.0",
     "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-sass": "^2.6.0",
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-remark-autolink-headers": "^2.6.0",
     "gatsby-remark-images": "^3.6.0",
