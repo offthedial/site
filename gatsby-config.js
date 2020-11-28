@@ -33,9 +33,15 @@ module.exports = {
     /* Utilities */
     `gatsby-plugin-root-import`,
     `gatsby-plugin-remove-trailing-slashes`,
+    `gatsby-plugin-react-helmet`,
 
     /* Styles & CSS */
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
+      },
+    },
 
     /* Image Processing */
     `gatsby-plugin-sharp`,
