@@ -1,14 +1,11 @@
 import { auth } from "src/services/firebase/apps"
+import { getUser, setUser, isLoggedIn } from "./user"
 
 const login = ({ email, password }) => {
-  auth
-    .signInWithEmailAndPassword(email, password)
-    .then(user => {
-      return [true, user]
-    })
-    .catch(error => {
-      return [false, error]
-    })
+  auth.signInWithEmailAndPassword(email, password).then(user => setUser(user))
+  // .catch(error => {
+  //   return [false, error]
+  // })
 }
 
 const logout = () => {
@@ -22,4 +19,4 @@ const logout = () => {
     })
 }
 
-export { login, logout }
+export { getUser, login, logout }
