@@ -1,5 +1,5 @@
 # Off the Dial Site
-> The website for Off the Dial. 
+> The central website for Off the Dial. 
 
 ![Stars][stars-shield]
 # <!-- ![Banner](banner.png) -->
