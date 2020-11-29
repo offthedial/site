@@ -6,14 +6,14 @@ import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
 
 const Login = () => {
-  const [form, setForm] = useState({email: '', password: ''});
+  const [form, setForm] = useState({ email: "", password: "" })
 
   const submitForm = e => {
-    e.preventDefault();
-    auth.login(form);
+    e.preventDefault()
+    auth.login(form)
   }
   const changeForm = e => {
-    e.persist();
+    e.persist()
     setForm(currentValues => ({
       ...currentValues,
       [e.target.name]: e.target.value,

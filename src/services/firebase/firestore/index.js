@@ -1,1 +1,1 @@
-import { firestore } from "src/services/firebase/init"
+import { firestore } from "src/services/firebase/apps"

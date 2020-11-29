@@ -1,4 +1,4 @@
-import { auth } from "src/services/firebase/init"
+import { auth } from "src/services/firebase/apps"
 
 const login = ({ email, password }) => {
   auth
