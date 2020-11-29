@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import { navigate } from "gatsby"
-import * as auth from "src/services/firebase/auth"
+import { auth } from "src/services/firebase"
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
 
@@ -33,7 +33,7 @@ const Login = () => {
                   <input
                     class="input"
                     type="email"
-                    onChange={changeFormValues}
+                    onChange={changeForm}
                     name="email"
                     placeholder="Email"
                   />
@@ -47,7 +47,7 @@ const Login = () => {
                   <input
                     class="input"
                     type="password"
-                    onChange={changeFormValues}
+                    onChange={changeForm}
                     name="password"
                     placeholder="Password"
                   />

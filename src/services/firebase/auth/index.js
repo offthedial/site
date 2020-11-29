@@ -1,9 +1,4 @@
-import firebase from "src/services/firebase"
-
-let auth
-if (typeof window !== "undefined") {
-  auth = firebase.auth()
-}
+import { auth } from "src/services/firebase/init"
 
 const login = ({ email, password }) => {
   auth
