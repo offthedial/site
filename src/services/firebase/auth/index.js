@@ -8,14 +8,8 @@ const login = ({ email, password }) => {
 }
 
 const logout = () => {
-  auth
-    .signOut()
-    .then(() => {
-      return true
-    })
-    .catch(error => {
-      return error
-    })
+  auth.signOut()
+  userAuth.setUser({})
 }
 
 export { userAuth, login, logout }
