@@ -37,7 +37,7 @@ const Post = ({ pageContext, children }) => (
   </Layout>
 )
 
-const formatPostDate = (date) => {
+const formatPostDate = date => {
   let postDate = new Date(date)
   postDate = addMinutes(postDate, postDate.getTimezoneOffset())
   return format(postDate, "MMMM dd, yyyy")

@@ -1,22 +1,22 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 
-import { auth } from "src/services/firebase"
+import * as auth from "src/services/firebase/auth"
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
 
 const Login = () => {
-  const [formValues, setFormValues] = useState({email: '', password: ''});
+  const [formValues, setFormValues] = useState({ email: "", password: "" })
 
-  function submit(e){
-    e.preventDefault();
-    auth.login({email: formValues.email, password: formValues.password});
+  function submit(e) {
+    e.preventDefault()
+    auth.login({ email: formValues.email, password: formValues.password })
   }
 
   function changeFormValues(e) {
-    e.persist();
+    e.persist()
     setFormValues(currentValues => ({
       ...currentValues,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }))
     console.log(formValues)
   }
@@ -30,7 +30,13 @@ const Login = () => {
             <form onSubmit={submit}>
               <div class="field">
                 <p class="control has-icons-left">
-                  <input class="input" type="email" onChange={changeFormValues} name="email" placeholder="Email" />
+                  <input
+                    class="input"
+                    type="email"
+                    onChange={changeFormValues}
+                    name="email"
+                    placeholder="Email"
+                  />
                   <span class="icon is-small is-left">
                     <i class="fas fa-envelope" />
                   </span>
@@ -38,7 +44,13 @@ const Login = () => {
               </div>
               <div class="field">
                 <p class="control has-icons-left">
-                  <input class="input" type="password" onChange={changeFormValues} name="password" placeholder="Password" />
+                  <input
+                    class="input"
+                    type="password"
+                    onChange={changeFormValues}
+                    name="password"
+                    placeholder="Password"
+                  />
                   <span class="icon is-small is-left">
                     <i class="fas fa-lock" />
                   </span>
