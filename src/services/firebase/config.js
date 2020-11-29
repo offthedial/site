@@ -8,7 +8,7 @@ const config = {
   projectId: "off-the-dial-26e93",
   storageBucket: "off-the-dial-26e93.appspot.com",
   messagingSenderId: "822224581984",
-  appId: "1:822224581984:web:951aa8d85c77e6209e5a05"
-};
+  appId: "1:822224581984:web:951aa8d85c77e6209e5a05",
+}
 
-export default config;
+export default config

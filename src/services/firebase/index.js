@@ -1,7 +1,15 @@
 /**
  * Export front-facing firebase modules
  */
-import * as auth from "./auth"
-import * as firestore from "./firestore"
+import firebase from "firebase/app"
+import "firebase/auth"
+import "firebase/firestore"
 
-export { auth, firestore }
+import config from "./config"
+
+// Initialize firebase
+if (!firebase.apps.length) {
+  firebase.initializeApp(config)
+}
+
+export default firebase

@@ -1,23 +1,30 @@
-import auth from "src/services/firebase/apps"
+import firebase from "src/services/firebase"
+
+let auth
+if (typeof window !== "undefined") {
+  auth = firebase.auth()
+}
 
 const login = ({ email, password }) => {
-  auth.signInWithEmailAndPassword(email, password)
-    .then((user) => {
-      return [true, user];
+  auth
+    .signInWithEmailAndPassword(email, password)
+    .then(user => {
+      return [true, user]
     })
-    .catch((error) => {
-      return [false, error];
-    });
+    .catch(error => {
+      return [false, error]
+    })
 }
 
 const logout = () => {
-  auth.signOut()
+  auth
+    .signOut()
     .then(() => {
-      return true;
+      return true
     })
-    .catch((error) => {
-      return error;
-    });
+    .catch(error => {
+      return error
+    })
 }
 
 export { login, logout }

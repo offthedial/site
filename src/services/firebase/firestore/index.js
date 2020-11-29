@@ -1,1 +1,3 @@
-import firestore from "src/services/firebase/apps"
+import firebase from "src/services/firebase"
+
+const firestore = firebase.firestore()
