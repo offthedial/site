@@ -1,15 +1,14 @@
 const getUser = () =>
-  typeof window !== "undefined" && window.localStorage.getItem("gatsbyUser")
-    ? JSON.parse(window.localStorage.getItem("gatsbyUser"))
+  typeof window !== "undefined" && window.localStorage.getItem("user")
+    ? JSON.parse(window.localStorage.getItem("user"))
     : {}
 
 const setUser = user => {
-  window.localStorage.setItem("gatsbyUser", JSON.stringify(user))
+  window.localStorage.setItem("user", JSON.stringify(user))
 }
 
 const isLoggedIn = () => {
-  const user = getUser()
-  return user !== {}
+  return getUser() !== {}
 }
 
 export { getUser, setUser, isLoggedIn }

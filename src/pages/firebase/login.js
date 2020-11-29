@@ -11,6 +11,7 @@ const Login = () => {
   const submitForm = e => {
     e.preventDefault()
     auth.login(form)
+    navigate("/")
   }
   const changeForm = e => {
     e.persist()
@@ -18,7 +19,6 @@ const Login = () => {
       ...currentValues,
       [e.target.name]: e.target.value,
     }))
-    console.log(form)
   }
 
   return (
