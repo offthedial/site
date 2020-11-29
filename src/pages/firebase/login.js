@@ -1,24 +1,24 @@
 import React, { useState } from "react"
 
+import { navigate } from "gatsby"
 import * as auth from "src/services/firebase/auth"
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
 
 const Login = () => {
-  const [formValues, setFormValues] = useState({ email: "", password: "" })
+  const [form, setForm] = useState({email: '', password: ''});
 
-  function submit(e) {
-    e.preventDefault()
-    auth.login({ email: formValues.email, password: formValues.password })
+  const submitForm = e => {
+    e.preventDefault();
+    auth.login(form);
   }
-
-  function changeFormValues(e) {
-    e.persist()
-    setFormValues(currentValues => ({
+  const changeForm = e => {
+    e.persist();
+    setForm(currentValues => ({
       ...currentValues,
       [e.target.name]: e.target.value,
     }))
-    console.log(formValues)
+    console.log(form)
   }
 
   return (
@@ -27,7 +27,7 @@ const Login = () => {
         <div class="columns is-centered my-5 py-5">
           <div class="column is-7 my-5 py-5">
             <h1 class="title">Login</h1>
-            <form onSubmit={submit}>
+            <form onSubmit={submitForm}>
               <div class="field">
                 <p class="control has-icons-left">
                   <input
@@ -57,7 +57,7 @@ const Login = () => {
                 </p>
               </div>
               <div class="field">
-                <input type="submit" block class="button is-primary" />
+                <input type="submit" block="true" class="button is-primary" />
               </div>
             </form>
           </div>
