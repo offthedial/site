@@ -7,7 +7,6 @@ import PageHero from "src/components/PageHero"
 
 const mapStaffCards = data => {
   let edges = data.allMdx.edges
-  console.log(edges)
   edges.sort((a, b) =>
     a.node.slug > b.node.slug ? 1 : b.node.slug > a.node.slug ? -1 : 0
   )
