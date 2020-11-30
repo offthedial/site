@@ -45,7 +45,7 @@ function SEO({ description, lang, meta, title }) {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" content="https://assets.otd.ink/icon.png?v=2" />
+      <meta property="og:image" content="https://assets.otd.ink/favicon.png" />
     </Helmet>
   )
 }
