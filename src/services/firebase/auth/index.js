@@ -1,15 +1,18 @@
 import { auth } from "src/services/firebase/apps"
-import * as userAuth from "./user"
 
 const login = ({ email, password }) => {
   auth
     .signInWithEmailAndPassword(email, password)
-    .then(user => userAuth.setUser(user))
+    .then(user => {
+      console.log("USER", user)
+    })
+    .catch(error => {
+      console.log("ERROR", error)
+    })
 }
 
 const logout = () => {
   auth.signOut()
-  userAuth.setUser({})
 }
 
-export { userAuth, login, logout }
+export { login, logout }
