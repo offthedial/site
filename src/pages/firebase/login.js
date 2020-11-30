@@ -11,7 +11,7 @@ const Login = () => {
   const submitForm = e => {
     e.preventDefault()
     auth.login(form)
-    navigate("/")
+    navigate("/firebase")
   }
   const changeForm = e => {
     e.persist()
