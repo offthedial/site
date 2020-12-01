@@ -39,7 +39,7 @@ function SEO({ description, lang, meta, title }) {
     >
       <script
         defer
-        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+        src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
       />
       <meta name="theme-color" content="#5d9194" />
       <meta property="og:type" content="website" />
