@@ -1,18 +1,25 @@
-import { auth } from "src/services/firebase/apps"
+/**
+ * Create context provider and export auth functions
+ */
+import React, { useEffect, useState } from "react"
 
-const login = ({ email, password }) => {
-  auth
-    .signInWithEmailAndPassword(email, password)
-    .then(user => {
-      console.log("USER", user)
-    })
-    .catch(error => {
-      console.log("ERROR", error)
-    })
+import AuthContext from "src/context/AuthContext"
+import { auth } from "../apps"
+import * as functions from "./functions"
+
+const AuthProvider = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState(null)
+
+  useEffect(() => {
+    auth.onAuthStateChanged(setCurrentUser)
+  }, [])
+
+  return (
+    <AuthContext.Provider value={{ auth: functions, currentUser }}>
+      {children}
+    </AuthContext.Provider>
+  )
 }
 
-const logout = () => {
-  auth.signOut()
-}
-
-export { login, logout }
+export { functions }
+export default AuthProvider

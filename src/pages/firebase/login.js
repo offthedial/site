@@ -1,11 +1,12 @@
 import React, { useState } from "react"
 
 import { navigate } from "gatsby"
-import { auth } from "src/services/firebase"
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
+import AuthContext from "src/context/AuthContext"
 
 const Login = () => {
+  const { auth } = React.useContext(AuthContext)
   const [form, setForm] = useState({ email: "", password: "" })
 
   const submitForm = e => {
