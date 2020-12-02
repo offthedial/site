@@ -25,10 +25,9 @@ $link: $primary;
 $link-hover: #5d9194bf;
 
 /* Typography */
-$family-sans-serif: "DM Sans", BlinkMacSystemFont, -apple-system, "Segoe UI",
-  "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-  "Helvetica Neue", "Helvetica", "Noto Sans", "Arial", sans-serif;
-$family-monospace: "DM Mono", "Operator Mono A", "Operator Mono A",
+$family-sans-serif: "DM Sans", BlinkMacSystemFont, -apple-system, "Noto Sans",
+  Cantarell, Helvetica, Arial, sans-serif;
+$family-monospace: "DM Mono", "Operator Mono A", "Operator Mono B",
   "Source Code Pro", Menlo, Consolas, Monaco, monospace;
 $content-heading-weight: 500;
 $size-6: 1.1rem;
