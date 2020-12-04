@@ -1,4 +1,4 @@
-import { app } from "../apps"
+import { auth as app } from "../apps"
 
 const login = customToken => {
   app
