@@ -4,24 +4,20 @@ import { Link } from "gatsby"
 
 import discord from "src/static/images/discord.svg"
 
-const NavBrand = () => (
-  <div class="navbar-brand">
-    <Link to="/">
-      <div class="navbar-item py-0 is-hover-translucent">
-        <img class="py-3" src="https://assets.otd.ink/title.png" alt="" />
-      </div>
-    </Link>
-  </div>
-)
-
 const NavBar = () => (
   <nav
-    class="navbar is-transparent is-primary"
+    class="navbar is-transparent is-primary is-flex-touch"
     role="navigation"
     aria-label="main"
   >
     <div class="container">
-      <NavBrand />
+      <div class="navbar-brand">
+        <Link to="/">
+          <div class="navbar-item py-0 is-hover-translucent">
+            <img class="py-3" src="https://assets.otd.ink/title.png" alt="" />
+          </div>
+        </Link>
+      </div>
       <div class="navbar-menu is-paddingless">
         <div class="navbar-end">
           <div class="navbar-item has-text-weight-medium is-hover-translucent">
@@ -32,7 +28,10 @@ const NavBar = () => (
                 textDecoration: "none",
               }}
             >
-              It's Dangerous to go Alone
+              <span class="is-hidden-desktop-only">
+                It's Dangerous to go Alone
+              </span>
+              <span class="is-hidden-widescreen">IDTGA</span>
             </Link>
           </div>
           <div class="navbar-item has-text-weight-medium is-hover-translucent">
@@ -43,7 +42,8 @@ const NavBar = () => (
                 textDecoration: "none",
               }}
             >
-              Weakest Link
+              <span class="is-hidden-desktop-only">Weakest Link</span>
+              <span class="is-hidden-widescreen">WL</span>
             </Link>
           </div>
           <a class="navbar-item py-0 is-hover-translucent" href="/discord">
