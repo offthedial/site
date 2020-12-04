@@ -8,11 +8,19 @@ import { auth as app } from "../apps"
 import * as auth from "./auth"
 
 const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null)
+  const [currentUser, setCurrentUser] = useState(undefined)
+  const [pending, setPending] = useState(true)
 
   useEffect(() => {
-    app.onAuthStateChanged(setCurrentUser)
+    app.onAuthStateChanged(user => {
+      setCurrentUser(user)
+      setPending(false)
+    })
   }, [])
+
+  if (pending) {
+    return <></>
+  }
 
   return (
     <AuthContext.Provider value={{ auth, currentUser }}>

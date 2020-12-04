@@ -1,8 +1,8 @@
-import { auth } from "../apps"
+import { app } from "../apps"
 
-const login = ({ email, password }) => {
-  auth
-    .signInWithEmailAndPassword(email, password)
+const login = customToken => {
+  app
+    .signInWithCustomToken(customToken)
     .then(user => {
       console.log("USER", user)
     })
@@ -11,8 +11,9 @@ const login = ({ email, password }) => {
     })
 }
 
-const logout = () => {
-  auth.signOut()
+const logout = callback => {
+  app.signOut()
+  callback()
 }
 
 export { login, logout }
