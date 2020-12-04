@@ -1,5 +1,5 @@
 /**
- * Manages firebase configuration
+ * Manages firebase configuration (yes, it's safe to be in version control)
  */
 const config = {
   apiKey: "AIzaSyCOiE5yw09RbRjgZf7B_t7rvgGfa49j6fU",
@@ -12,3 +12,4 @@ const config = {
 }
 
 export default config
+export const cloudFunctionsApi = `http://localhost:5000/${config.projectId}/us-central`
