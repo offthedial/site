@@ -32,15 +32,18 @@ const Idtga = () => (
         <h2>Schedule</h2>
         <table class="table">
           <tbody>
-            <ScheduleTime date="3 Days">
+            <ScheduleTime date="4 Days">
               Check-in opens and registration remains <strong>open</strong>.
             </ScheduleTime>
-            <ScheduleTime date="2 Days">
+            <ScheduleTime date="3 Days">
               Check-in and registration will close, invalid attendees will be
               removed, and team creation will start.
             </ScheduleTime>
-            <ScheduleTime date="24 Hours">
-              Players will receive their teams, and maplist is released.
+            <ScheduleTime date="2 Days">
+              Players will receive their teams
+            </ScheduleTime>
+    	 	<ScheduleTime date="24 Hours">
+              The maplist will be published
             </ScheduleTime>
             <ScheduleTime date="1 Hour">
               Players will be alerted and preparations will commence.

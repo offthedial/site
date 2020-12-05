@@ -48,22 +48,31 @@ If your team is consistently acting disrespectful towards you, you can request 1
 
 If a team has requested to replace you, you will be removed from the tournament and marked as a dropout (See **[Dropouts](#dropouts)**).
 
-## DC's Redo Decision Rules
-### Redo the match if:
+## Disconnections (DCs)
+There are two types of DCs - *Early DCs* and *Game DCs*. Each team is has a quota of one *Ealy DC* and one *Game DC* per match.
+
+### Early DCs
+- An *Early DC* is when a DC occurs anytime before the the game actually starts (when the in-game timer starts ticking down). This includes the lobby screen and the flyover at the start of the game.
+- Each team is allowed one *Early DC* per match.
+
+### Game DCs
+- A *Game DC* is a DC that occurs during the actual game.
+- A *Game DC* can only occur if the following circumstances are met;
+
+#### Redo the match if:
 - The team with the DC stops playing and allows the other team to KO.
 - The team with the DC stays inside their spawn barrier.
-- The team with the DC uses the same weapons/gear shown in the results screen.
+- Both teams use the same weapons and gear
 
 ### Do NOT redo the match if:
 - **Any player** on the same team DC's again in the same round.
-- The same player DC's again **any other time** in the tournament.
 - The host DC's.
 - The match has passed 2:30 before the DC'ing team has forfeited.
 - The team without a DC has 50 or less objective remaining (excluding penalty).
 
-If either 2 DC’s occur in the same lobby or the host DC’s, the team currently not hosting must host a new lobby.
+If either 2 DC’s occur in the same lobby or the host DC’s, the team currently not hosting must host a new lobby. If this occurs again when the other team is hosting, players may request a staff member to host the game.
 
-To reduce the chances of a dc happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
+To reduce the chances of a DC happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
 
 If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
 
