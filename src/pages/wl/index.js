@@ -21,7 +21,10 @@ const WeakestLink = () => (
           </p>
           <p>All you need to do is sign up! The world is waiting…</p>
           <div class="buttons">
-            <Link to="/wl/rules" class="button is-white is-outlined">
+            <Link
+              to="/wl/rules"
+              class="button is-primary is-outlined is-inverted"
+            >
               Rules
             </Link>
           </div>
