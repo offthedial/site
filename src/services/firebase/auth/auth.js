@@ -13,9 +13,7 @@ const login = (customToken, callback) => {
 }
 
 const logout = callback => {
-  app.signOut().then(() => {
-    callback()
-  })
+  app.signOut().then(() => callback())
 }
 
 const currentUser = () => {
