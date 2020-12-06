@@ -30,8 +30,9 @@ const tokenEndpoint = ({ auth }, { code, state }) => {
     .then(data => callback(data))
   // Use token from data to log in, and redirect
   const callback = ({ token }) => {
-    auth.login(token)
-    navigate("/profile")
+    auth.login(token, () => {
+      navigate("/profile")
+    })
   }
 }
 
