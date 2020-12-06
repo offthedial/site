@@ -19,6 +19,8 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaTitle =
+    `${pageTitle} - ${site.siteMetadata.title}` || site.siteMetadata.title
 
   return (
     <Helmet
@@ -36,16 +38,48 @@ function SEO({ description, lang, meta, title }) {
           href: `https://assets.otd.ink/icon.png?v=2`,
         },
       ]}
+      meta={[
+        {
+          property: `og:title`,
+          content:
+            `${pageTitle} - ${site.siteMetadata.title}` ||
+            site.siteMetadata.title,
+        },
+        {
+          property: `og:site_name`,
+          content: site.siteMetadata.title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: `https://assets.otd.ink/icon.png?v=2`,
+        },
+        {
+          property: `theme-color`,
+          content: `#5d9194`,
+        },
+      ].concat(meta)}
     >
       <script
         defer
         src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
       />
-      <meta name="theme-color" content="#5d9194" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" content="https://assets.otd.ink/icon.png?v=2" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content={site.siteMetadata.twitter} />
+      <meta name="twitter:title" content={metaTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content="https://assets.otd.ink/banner.png" />
+      <meta
+        name="twitter:image:alt"
+        content={`${site.siteMetadata.title} Banner`}
+      />
     </Helmet>
   )
 }

@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `Off the Dial`,
     description: `Off the Dial is a unique tournament organisation for Splatoon 2, dedicated to providing fresh tournament opportunities for free agents and teams alike.`,
+    twitter: `@Off_The_Dial`,
   },
   plugins: [
     /* Filesystem stuff */
@@ -34,6 +35,12 @@ module.exports = {
     `gatsby-plugin-root-import`,
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/profile`, `/404`],
+      },
+    },
 
     /* Styles & CSS */
     {
