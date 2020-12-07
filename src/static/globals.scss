@@ -22,7 +22,7 @@ $custom-colors: (
 
 $primary: $slate;
 $link: $primary;
-$link-hover: #5d9194bf;
+$link-hover: rgba($link, 0.75);
 
 /* Typography */
 $family-sans-serif: "DM Sans", BlinkMacSystemFont, -apple-system, "Noto Sans",
@@ -50,6 +50,7 @@ $input-background-color: $white-ter;
 $input-hover-border-color: $grey-lighter;
 
 /* Component Styles */
+$dropdown-menu-min-width: 18rem;
 $navbar-item-img-max-height: 4rem;
 $gap: 128px;
 

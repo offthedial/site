@@ -4,14 +4,14 @@
   flex-direction: column;
 }
 
-.layout-content {
-  flex: 1;
+.bg-hover-shade {
+  &:hover {
+    background-color: $white-bis;
+  }
 }
 
-.post {
-  &:hover {
-    background-color: hsl(0, 0%, 98%);
-  }
+.layout-content {
+  flex: 1;
 }
 
 .grid-2 {

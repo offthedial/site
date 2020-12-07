@@ -134,13 +134,13 @@ const NavBar = () => {
               class="navbar-item py-0 is-hover-translucent is-hidden-desktop-only"
               href="/discord"
             >
-              <img class="pb-1" src={discord} alt="" />
+              <img class="py-2" src={discord} alt="" />
             </a>
             <a
               class="navbar-item py-0 is-hover-translucent is-hidden-widescreen"
               href="/discord"
             >
-              <img class="pb-1" src={discordi} alt="" />
+              <img class="py-2" src={discordi} alt="" />
             </a>
             <div class="navbar-item py-0">
               <ProfileLogo href="/profile" />
