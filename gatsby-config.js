@@ -3,7 +3,7 @@ const path = require("path")
 module.exports = {
   siteMetadata: {
     title: `Off the Dial`,
-    description: `Off the Dial is a unique tournament organisation for Splatoon 2, dedicated to providing fresh tournament opportunities for free agents and teams alike.`,
+    description: `Off the Dial is a unique tournament organisation for Splatoon 2. Dedicated to providing fresh tournament opportunities for free agents.`,
     twitter: `@Off_The_Dial`,
   },
   plugins: [
@@ -43,6 +43,7 @@ module.exports = {
     },
 
     /* Styles & CSS */
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
