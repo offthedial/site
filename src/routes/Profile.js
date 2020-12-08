@@ -1,44 +1,63 @@
-import React, { useContext } from "react"
-import { navigate } from "gatsby"
+import React, { useState, useContext } from "react"
+import { Link, navigate } from "gatsby"
 import Layout from "src/components/Layout"
+import Alert from "src/components/Alert"
 import AuthContext from "src/context/AuthContext"
 
 const Profile = () => {
   const { auth, currentUser } = useContext(AuthContext)
+  const inServer = true
+  const signalStrength = 120
 
   return (
     <Layout pageTitle="Profile">
       <div class="section">
         <div class="container">
           <div class="columns is-centered">
-            <div class="column is-10">
-              <div class="mb-0 is-size-3 has-text-grey">Profile</div>
+            <div class="column is-9">
+              {!inServer && (
+                <Alert type="warning">
+                  <span>
+                    You are not in the Off the Dial Discord server, this is
+                    required to sign up for any tournaments.{" "}
+                    <Link to="/discord">Join the discord</Link>.
+                  </span>
+                </Alert>
+              )}
+              <div class="mb-5 is-size-4 has-text-weight-bold">My Profile</div>
               <div
-                class="pb-6 pt-6 px-6 has-background-white-ter"
+                class="p-4 has-background-white-bis"
                 style={{ borderRadius: 4 }}
               >
                 <div class="level">
                   <div class="level-left">
                     <div class="level-item">
-                      <p class="image is-64x64">
+                      <p class="image is-96x96">
                         <img class="is-rounded" src={currentUser()?.photoURL} />
                       </p>
                     </div>
                     <div class="level-item">
-                      <div class="is-size-2">{currentUser()?.displayName}</div>
+                      <div>
+                        <div class="is-size-2 has-text-weight-semibold">
+                          {currentUser()?.displayName}
+                        </div>
+                        {/* Tags maybe? Idk what to put here */}
+                        <div class="field is-grouped is-grouped-multiline">
+                          <SignalStrength value={signalStrength} />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="pb-6 pt-6 px-6 has-background-white-bis"
+                {/* <div
+                  class="block has-background-white-bis"
                   style={{ borderRadius: 4 }}
-                ></div>
-                <h1 class="subtitle is-inlig"></h1>
+                >
+                  OTD Profile Data (firestore)
+                </div> */}
                 <div class="buttons">
-                  <button disabled class="button is-primary">
-                    Update Profile
-                  </button>
-                  {currentUser && (
+                  <button class="button is-primary">Edit Profile</button>
+                  {currentUser() && (
                     <button
                       class="button is-danger is-outlined"
                       onClick={() => auth.logout(() => navigate("/"))}
@@ -55,5 +74,24 @@ const Profile = () => {
     </Layout>
   )
 }
+
+const SignalStrength = ({ value }) => (
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-rounded is-cyan" style={{ fontSize: ".85rem" }}>
+        <span class="icon is-large">
+          <i class="fas fa-signal" />
+        </span>
+        Signal Strength
+      </span>
+      <span
+        class="tag is-rounded is-cyan is-light"
+        style={{ fontSize: ".85rem" }}
+      >
+        <span class="is-family-monospace">{value}</span>
+      </span>
+    </div>
+  </div>
+)
 
 export default Profile
