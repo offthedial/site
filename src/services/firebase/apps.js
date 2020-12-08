@@ -18,7 +18,7 @@ if (typeof window !== "undefined") {
 }
 
 // Initialize firestore
-const firestore = firebase.firestore()
+const db = firebase.firestore()
 
-export { auth, firestore }
+export { auth, db }
 export default firebase
