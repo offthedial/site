@@ -29,9 +29,9 @@ const NavLink = styled(Link).attrs(props => ({
   to: props.to,
   color: props.color,
 }))`
-  ${props => !props.transparent && "color: white;"}
+  ${props => !props.nocolor && "color: white;"}
   &:hover {
-    ${props => !props.transparent && "color: white;"}
+    ${props => !props.nocolor && "color: white;"}
     opacity: 0.75;
   }
   line-height: 0;
@@ -98,18 +98,18 @@ const NavBar = () => {
                 <div class="dropdown-menu" id="dropdown-menu2" role="menu">
                   <div class="dropdown-content has-text-centered has-text-weight-medium">
                     <div class="dropdown-item p-0" style={{ lineHeight: 0 }}>
-                      <NavLink transparent to="/discord">
+                      <NavLink nocolor="true" to="/discord">
                         <img class="px-6 py-1" src={discordw} alt="" />
                       </NavLink>
                     </div>
                     <hr class="dropdown-divider" />
                     <DropdownItem>
-                      <NavLink transparent to="/wl">
+                      <NavLink nocolor="true" to="/wl">
                         Weakest Link
                       </NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <NavLink transparent to="/idtga">
+                      <NavLink nocolor="true" to="/idtga">
                         It's Dangerous to go Alone
                       </NavLink>
                     </DropdownItem>
