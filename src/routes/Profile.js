@@ -78,16 +78,13 @@ const Profile = () => {
 const SignalStrength = ({ value }) => (
   <div class="control">
     <div class="tags has-addons">
-      <span class="tag is-rounded is-cyan" style={{ fontSize: ".85rem" }}>
+      <span class="tag is-rounded is-cyan is-size-7">
         <span class="icon is-large">
           <i class="fas fa-signal" />
         </span>
         Signal Strength
       </span>
-      <span
-        class="tag is-rounded is-cyan is-light"
-        style={{ fontSize: ".85rem" }}
-      >
+      <span class="tag is-rounded is-cyan is-light is-size-7">
         <span class="is-family-monospace">{value}</span>
       </span>
     </div>
