@@ -71,23 +71,23 @@ const WeakestLink = () => (
         <table class="table">
           <tbody>
             <ScheduleTime date="9 Days">
-              Check-in opens and registration remains <strong>open</strong>.
+              Check-in opens and registration <strong>remains open</strong>.
             </ScheduleTime>
             <ScheduleTime date="8 Days">
-              Check-in and registration will close, invalid attendees will be
-              removed, and team creation will start.
+              Both check-in and registration will close, invalid attendees will
+              be removed, and we start assembling teams.
             </ScheduleTime>
             <ScheduleTime date="7 Days">
-              Players will receive their teams, and maplist is released.
+              Players receive their teams, and the maplist is published. You can
+              now practice with your team.
             </ScheduleTime>
             <ScheduleTime date="1 Hour">
-              Players will be alerted and preparations will commence.
-            </ScheduleTime>
-            <ScheduleTime date="30 Minutes">
-              Players are requested to be online on both Splatoon 2 and Discord.
+              Players will be alerted and preparations will commence. We request
+              that you be online on both Splatoon 2 and Discord.
             </ScheduleTime>
             <ScheduleTime date="10 Minutes">
-              Stream begins on <Link to="/twitch">twitch</Link>.
+              Stream begins on <Link to="/twitch">twitch</Link>, check it out if
+              you're not playing!
             </ScheduleTime>
           </tbody>
         </table>
