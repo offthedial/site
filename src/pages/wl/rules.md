@@ -48,6 +48,7 @@ If your team is consistently acting disrespectful towards you, you can request 1
 
 If a team has requested to replace you, you will be removed from the tournament and marked as a dropout (See **[Dropouts](#dropouts)**).
 
+
 ## DC's Redo Decision Rules
 ### Redo the match if:
 - The team with the DC stops playing and allows the other team to KO.
