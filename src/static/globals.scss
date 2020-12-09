@@ -55,7 +55,17 @@ $dropdown-menu-min-width: 18rem;
 $navbar-item-img-max-height: 4rem;
 $gap: 128px;
 
+$checkbox-border: 2px solid $grey-lightest;
+$checkbox-block-background: $input-background-color;
+$checkradio-focus: none;
+
+$slider-track-background: $input-background-color;
+$slider-thumb-background: $input-background-color;
+$slider-thumb-border: 2px solid $input-hover-border-color;
+
 @import "~bulma/bulma.sass";
+@import "~bulma-checkradio/dist/css/bulma-checkradio.sass";
+@import "~bulma-slider";
 
 /* Directly modify classes */
 body {
@@ -71,4 +81,15 @@ img.emoji {
 
 code {
   border-radius: 2px;
+}
+
+.input {
+  border-width: 2px;
+}
+
+.is-checkradio[type="radio"]:hover:not([disabled]) + label::before,
+.is-checkradio[type="radio"]:hover:not([disabled]) + label:before,
+.is-checkradio[type="checkbox"]:hover:not([disabled]) + label::before,
+.is-checkradio[type="checkbox"]:hover:not([disabled]) + label:before {
+  border-color: $input-hover-border-color !important;
 }
