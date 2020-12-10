@@ -134,8 +134,8 @@ const Form = () => {
                       type="range"
                       name={stylepointsName(field)}
                       id={field[0]}
-                      min="0"
-                      max="8"
+                      min="1"
+                      max="9"
                       step="1"
                     />
                   </div>
