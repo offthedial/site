@@ -24,8 +24,10 @@ const Complete = ({ location }) => {
         <div class="hero is-medium">
           <div class="hero-body has-text-centered">
             <h1 class="title is-size-1">Thank you for registering!</h1>
-            <Link to="/">
-              <button class="button is-large is-primary">Back to Home</button>
+            <Link to="/profile">
+              <button class="button is-large is-primary">
+                View your profile
+              </button>
             </Link>
           </div>
         </div>
