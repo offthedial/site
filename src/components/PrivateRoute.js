@@ -9,6 +9,7 @@ const PrivateRoute = ({ component: Component, location, ...rest }) => {
 
   if (!currentUser() && location.pathname !== loginRoute) {
     navigate(loginRoute)
+    return <></>
   }
   return <Component {...rest} />
 }
