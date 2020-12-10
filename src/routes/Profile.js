@@ -3,6 +3,7 @@ import { Link, navigate } from "gatsby"
 import Layout from "src/components/Layout"
 import Alert from "src/components/Alert"
 import AuthContext from "src/context/AuthContext"
+import Twemoji from "react-twemoji"
 
 const Profile = () => {
   const { auth, currentUser } = useContext(AuthContext)
@@ -49,6 +50,15 @@ const Profile = () => {
                     </div>
                   </div>
                 </div>
+                <blockquote class="is-size-3 my-6">
+                  <Twemoji>
+                    <span>🚧</span>{" "}
+                    <span class="has-text-weight-medium">
+                      Under construction
+                    </span>{" "}
+                    <span>🏗️</span>
+                  </Twemoji>
+                </blockquote>
                 {/* <div
                   class="block has-background-white-bis"
                   style={{ borderRadius: 4 }}
