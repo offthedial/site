@@ -201,7 +201,7 @@ const Form = () => {
             Register on smash.gg, copy the confirmation code when it pops up.
           </blockquote>
           <div style={{ height: "600px" }}>
-            {/* <iframe title="smashgg" src={smashgg} height="100%" width="100%" /> */}
+            <iframe title="smashgg" src={smashgg} height="100%" width="100%" />
           </div>
           <div class="field">
             <div class="section px-0 py-4">
