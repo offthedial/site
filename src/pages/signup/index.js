@@ -159,16 +159,13 @@ const Form = () => {
                 "I've played in a lot of tournaments.",
               ].map((field, index) => (
                 <div key={index} class="field">
-                  <Controller
-                    control={control}
-                    defaultValue={false}
-                    rules={{ required: "This field is required" }}
-                    as={<input />}
-                    class="is-checkradio is-medium"
-                    type="radio"
-                    name="cxp.amount"
-                    id={field}
+                  <input
+                    ref={register({ required: "This field is required" })}
                     value={field}
+                    class="is-checkradio is-medium"
+                    name="cxp.amount"
+                    type="radio"
+                    id={field}
                   />
                   <label htmlFor={field}>{field}</label>
                 </div>
