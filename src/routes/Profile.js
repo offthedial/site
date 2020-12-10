@@ -56,7 +56,7 @@ const Profile = () => {
                   OTD Profile Data (firestore)
                 </div> */}
                 <div class="buttons">
-                  <button class="button is-primary">Edit Profile</button>
+                  {/* <button class="button is-primary">Refresh Profile</button> TODO: support this */}
                   {currentUser() && (
                     <button
                       class="button is-danger is-outlined"
