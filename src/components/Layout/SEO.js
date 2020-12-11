@@ -35,7 +35,7 @@ function SEO({ description, lang, meta, title }) {
           rel: "icon",
           type: "image/png",
           sizes: "64x64",
-          href: `https://assets.otd.ink/icon.png?v=2`,
+          href: `https://assets.otd.ink/favicon.png`,
         },
       ]}
       meta={[
