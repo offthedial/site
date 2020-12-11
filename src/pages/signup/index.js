@@ -36,113 +36,108 @@ const Form = () => {
           </blockquote>
           <div class="columns is-2 is-variable">
             <div class="column">
-              <div class="field">
-                <Control label="IGN" expanded={true}>
-                  <Input
-                    name="ign"
-                    control={control}
-                    errors={errors}
-                    options={{
-                      blocks: [10],
-                    }}
-                    rules={{ required: "This field is required" }}
-                  />
-                  <ErrorMessage options={[errors, "ign"]} />
-                </Control>
-              </div>
+              <Field label="IGN" expanded={true}>
+                <Input
+                  name="ign"
+                  control={control}
+                  errors={errors}
+                  options={{
+                    blocks: [10],
+                  }}
+                  rules={{ required: "This field is required" }}
+                />
+                <ErrorMessage options={[errors, "ign"]} />
+              </Field>
             </div>
             <div class="column is-7">
-              <div class="field">
-                <Control label="Friend Code" expanded={true}>
-                  <Input
-                    name="sw"
-                    control={control}
-                    errors={errors}
-                    defaultValue="SW-"
-                    options={{
-                      prefix: "SW",
-                      blocks: [2, 4, 4, 4],
-                      delimiter: "-",
-                      numericOnly: true,
-                    }}
-                    rules={{
-                      minLength: {
-                        value: 17,
-                        message: "This field is required",
-                      },
-                    }}
-                  />
-                  <ErrorMessage options={[errors, "sw"]} />
-                </Control>
-              </div>
+              <Field label="Friend Code" expanded={true}>
+                <Input
+                  name="sw"
+                  control={control}
+                  errors={errors}
+                  defaultValue="SW-"
+                  options={{
+                    prefix: "SW",
+                    blocks: [2, 4, 4, 4],
+                    delimiter: "-",
+                    numericOnly: true,
+                  }}
+                  rules={{
+                    minLength: {
+                      value: 17,
+                      message: "This field is required",
+                    },
+                  }}
+                />
+                <ErrorMessage options={[errors, "sw"]} />
+              </Field>
             </div>
           </div>
           <div class="field">
-            <Control label="Ranks">
+            <Field label="Ranks">
               <div class="columns is-2 is-variable">
                 <div class="column">
                   <div class="columns is-2 is-variable is-mobile">
-                    <RankControl label="Splat Zones">
+                    <RankField label="Splat Zones">
                       <Input {...rankProps("ranks.sz", control, errors)} />
                       <ErrorMessage
                         options={[errors, "ranks.sz", <InvalidRank />]}
                       />
-                    </RankControl>
-                    <RankControl label="Tower Control">
+                    </RankField>
+                    <RankField label="Tower Control">
                       <Input {...rankProps("ranks.tc", control, errors)} />
                       <ErrorMessage
                         options={[errors, "ranks.tc", <InvalidRank />]}
                       />
-                    </RankControl>
+                    </RankField>
                   </div>
                 </div>
                 <div class="column">
                   <div class="columns is-2 is-variable is-mobile">
-                    <RankControl label="Rainmaker">
+                    <RankField label="Rainmaker">
                       <Input {...rankProps("ranks.rm", control, errors)} />
                       <ErrorMessage
                         options={[errors, "ranks.rm", <InvalidRank />]}
                       />
-                    </RankControl>
-                    <RankControl label="Clam Blitz">
+                    </RankField>
+                    <RankField label="Clam Blitz">
                       <Input {...rankProps("ranks.cb", control, errors)} />
                       <ErrorMessage
                         options={[errors, "ranks.cb", <InvalidRank />]}
                       />
-                    </RankControl>
+                    </RankField>
                   </div>
                 </div>
               </div>
-            </Control>
+            </Field>
           </div>
         </div>
 
         <div class="section px-0 pt-5">
           <div class="title">Stylepoints</div>
           <blockquote class="subtitle">What's your playstyle?</blockquote>
-          <div class="field">
-            {sliders.map((field, index) => (
-              <div key={index} class="section px-0 py-4">
-                <Control label={field[2]}>
-                  <div class="is-size-5 is-pulled-right">{field[1]}</div>
-                  <div class="is-size-5">{field[0]}</div>
-                  <div class="field">
-                    <Controller
-                      control={control}
-                      as={<input />}
-                      class="slider is-fullwidth is-large is-circle mt-0"
-                      type="range"
-                      name={stylepointsName(field)}
-                      id={field[0]}
-                      min="1"
-                      max="9"
-                      step="1"
-                    />
-                  </div>
-                </Control>
-              </div>
-            ))}
-          </div>
+          {sliders.map((field, index) => (
+            <div key={index} class="section px-0 py-4">
+              <Field label={field[2]}>
+                <div class="is-size-5 is-pulled-right">{field[1]}</div>
+                <div class="is-size-5">{field[0]}</div>
+                <div class="field">
+                  <Controller
+                    control={control}
+                    as={<input />}
+                    defaultValue={5}
+                    class="slider is-fullwidth is-large is-circle mt-0"
+                    type="range"
+                    name={stylepointsName(field)}
+                    id={field[0]}
+                    min="1"
+                    max="9"
+                    step="1"
+                  />
+                </div>
+              </Field>
+            </div>
+          ))}
         </div>
 
         <div class="section px-0">
@@ -151,7 +146,7 @@ const Form = () => {
             What's your past Splatoon competitive experience?
           </blockquote>
           <div class="section px-0 py-4">
-            <Control label="How many tournaments have you competed in?">
+            <Field label="How many tournaments have you competed in?">
               {[
                 "This is my first tournament :0",
                 "I've played in one or two tournaments.",
@@ -171,27 +166,23 @@ const Form = () => {
                 </div>
               ))}
               <ErrorMessage options={[errors, "cxp.amount"]} />
-            </Control>
+            </Field>
           </div>
           <div class="section px-0 py-4">
-            <div class="field">
-              <Control label="What is the highest number of teams you've placed above?">
-                <div style={{ maxWidth: "15rem" }}>
-                  <Input
-                    name="cxp.placement"
-                    control={control}
-                    errors={errors}
-                    options={{
-                      numericOnly: true,
-                      blocks: [4],
-                    }}
-                  />
-                  <div class="help">
-                    You can skip this if it's not applicable
-                  </div>
-                </div>
-              </Control>
-            </div>
+            <Field label="What is the highest number of teams you've placed above?">
+              <div style={{ maxWidth: "15rem" }}>
+                <Input
+                  name="cxp.placement"
+                  control={control}
+                  errors={errors}
+                  options={{
+                    numericOnly: true,
+                    blocks: [4],
+                  }}
+                />
+                <div class="help">You can skip this if it's not applicable</div>
+              </div>
+            </Field>
           </div>
         </div>
 
@@ -207,7 +198,7 @@ const Form = () => {
             <div class="section px-0 py-4">
               <div class="columns">
                 <div class="column is-7">
-                  <Control label="User ID">
+                  <Field label="User ID">
                     <Input
                       name="smashgg.link"
                       control={control}
@@ -236,10 +227,10 @@ const Form = () => {
                       and copy your ID from the url.
                     </p>
                     <ErrorMessage options={[errors, "smashgg.link"]} />
-                  </Control>
+                  </Field>
                 </div>
                 <div class="column">
-                  <Control label="Confirmation Code">
+                  <Field label="Confirmation Code">
                     <div class="field has-addons">
                       <div class="control is-expanded">
                         <Input
@@ -272,63 +263,56 @@ const Form = () => {
                       </div>
                     </div>
                     <ErrorMessage options={[errors, "smashgg.code"]} />
-                  </Control>
+                  </Field>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <div class="section px-0 pt-5">
           <div class="title">Final steps</div>
           <blockquote class="subtitle">
             Misc stuff, are donuts considered bagels.
           </blockquote>
           <div class="section px-0 py-4">
-            <div class="field">
-              <div class="control">
-                <input
-                  ref={register}
-                  value={true}
-                  class="is-checkradio is-medium"
-                  name="recruiting"
-                  type="checkbox"
-                  id="cx-1"
-                />
-                <label htmlFor="cx-1">Are you currently recruiting?</label>
-              </div>
-            </div>
-            <div class="field">
-              <div class="control">
-                <input
-                  ref={register({
-                    required: "Please accept the terms and conditions",
-                  })}
-                  value={true}
-                  class="is-checkradio is-medium"
-                  name="legal"
-                  type="checkbox"
-                  id="cx-2"
-                />
-                <label htmlFor="cx-2">
-                  I agree to the <Link to="/legal">terms and conditions</Link>.
-                </label>
-                <ErrorMessage options={[errors, "legal"]} />
-              </div>
-            </div>
+            <Field>
+              <input
+                ref={register}
+                value={true}
+                class="is-checkradio is-medium"
+                name="recruiting"
+                type="checkbox"
+                id="cx-1"
+              />
+              <label htmlFor="cx-1">Are you currently recruiting?</label>
+            </Field>
+            <Field>
+              <input
+                ref={register({
+                  required: "Please accept the terms and conditions",
+                })}
+                value={true}
+                class="is-checkradio is-medium"
+                name="legal"
+                type="checkbox"
+                id="cx-2"
+              />
+              <label htmlFor="cx-2">
+                I agree to the <Link to="/legal">terms and conditions</Link>.
+              </label>
+              <ErrorMessage options={[errors, "legal"]} />
+            </Field>
           </div>
         </div>
-        <div class="field">
-          <div class="control">
-            <button
-              type="button"
-              onClick={handleSubmit(onSubmit)}
-              class="button is-centered is-primary is-large"
-            >
-              Submit
-            </button>
-          </div>
-        </div>
+        <Field>
+          <button
+            type="button"
+            onClick={handleSubmit(onSubmit)}
+            class="button is-centered is-primary is-large"
+          >
+            Submit
+          </button>
+        </Field>
       </form>
     </FormContainer>
   )
@@ -346,14 +330,14 @@ const FormContainer = ({ children }) => (
   </Layout>
 )
 
-const Control = ({ label, expanded, children }) => (
+const Field = ({ label, expanded, children }) => (
   <div class={`control ${expanded && "is-expanded"}`}>
-    <div class="is-size-4">{label}</div>
-    {children}
+    {label && <div class="is-size-4">{label}</div>}
+    <div class="field">{children}</div>
   </div>
 )
 
-const RankControl = ({ label, children }) => (
+const RankField = ({ label, children }) => (
   <div class="column">
     <div class="control is-expanded">
       <div class="has-text-weight-medium is-size-7">{label}</div>
