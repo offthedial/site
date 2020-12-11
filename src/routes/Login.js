@@ -7,22 +7,22 @@ import { cloudFunctionsApi } from "src/services/firebase/config"
 
 const LoginRoute = ({ location }) => {
   login({
-    authContext: useContext(AuthContext),
+    auth: useContext(AuthContext),
     params: parse(location.search),
   })
   return null
 }
 
-const login = ({ authContext, params }) => {
+const login = ({ auth, params }) => {
   if (Object.keys(params).length === 0) {
     window.location.href = `${cloudFunctionsApi}/authorize`
   } else {
     console.log(params)
-    tokenEndpoint(authContext, params)
+    tokenEndpoint(auth, params)
   }
 }
 
-const tokenEndpoint = ({ auth }, { code, state }) => {
+const tokenEndpoint = ({ login }, { code, state }) => {
   const endpoint = `${cloudFunctionsApi}/token?code=${code}&state=${state}`
   // Fetch token endpoint data, and send it to callback
   fetch(endpoint, { credentials: "include" })
@@ -30,7 +30,7 @@ const tokenEndpoint = ({ auth }, { code, state }) => {
     .then(data => callback(data))
   // Use token from data to log in, and redirect
   const callback = ({ token }) => {
-    auth.login(token, () => navigate("/profile"))
+    login(token, () => navigate("/profile"))
   }
 }
 

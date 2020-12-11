@@ -6,7 +6,7 @@ import AuthContext from "src/context/AuthContext"
 import Twemoji from "react-twemoji"
 
 const Profile = () => {
-  const { auth, currentUser } = useContext(AuthContext)
+  const { currentUser, logout } = useContext(AuthContext)
   const inServer = true
   const signalStrength = 120
 
@@ -70,7 +70,7 @@ const Profile = () => {
                   {currentUser() && (
                     <button
                       class="button is-danger is-outlined"
-                      onClick={() => auth.logout(() => navigate("/"))}
+                      onClick={() => logout(() => navigate("/"))}
                     >
                       Logout
                     </button>
