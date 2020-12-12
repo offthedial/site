@@ -331,9 +331,11 @@ const FormContainer = ({ children }) => (
 )
 
 const Field = ({ label, expanded, children }) => (
-  <div class={`control ${expanded && "is-expanded"}`}>
-    {label && <div class="is-size-4">{label}</div>}
-    <div class="field">{children}</div>
+  <div class="field">
+    <div class={`control ${expanded && "is-expanded"}`}>
+      {label && <div class="is-size-4">{label}</div>}
+      {children}
+    </div>
   </div>
 )
 
