@@ -17,7 +17,6 @@ const login = ({ auth, params }) => {
   if (Object.keys(params).length === 0) {
     window.location.href = `${cloudFunctionsApi}/authorize`
   } else {
-    console.log(params)
     tokenEndpoint(auth, params)
   }
 }
