@@ -69,7 +69,7 @@ const getUser = id => {
 }
 
 const userSignedUp = async () => {
-  const ref = currentTourney.collection("signups").doc(auth.currentUser.uid)
+  const ref = currentTourney().collection("signups").doc(auth.currentUser.uid)
   const doc = await ref.get()
   return doc.exists
 }

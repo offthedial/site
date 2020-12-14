@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react"
 
 import DBContext from "src/context/DBContext"
 // import { db } from "../apps"
-import { handleLogin, handleSignup, getUser } from "./db"
+import { handleLogin, handleSignup, getUser, userSignedUp } from "./db"
 
 const DBProvider = ({ children }) => {
   const [user, setUser] = useState(undefined)
@@ -21,7 +21,9 @@ const DBProvider = ({ children }) => {
   }
 
   return (
-    <DBContext.Provider value={{ handleLogin, handleSignup, user }}>
+    <DBContext.Provider
+      value={{ handleLogin, handleSignup, user, userSignedUp }}
+    >
       {children}
     </DBContext.Provider>
   )

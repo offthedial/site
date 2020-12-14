@@ -3,6 +3,7 @@ import { useForm, Controller } from "react-hook-form"
 import { Link, navigate } from "gatsby"
 import Cleave from "cleave.js/react"
 import Layout from "src/components/Layout"
+import Alert from "src/components/Alert"
 import PrivateRoute from "src/components/PrivateRoute"
 import DBContext from "src/context/DBContext"
 
@@ -16,16 +17,13 @@ const sliders = [
 ]
 
 const Form = () => {
-  const { handleSignup, user } = useContext(DBContext)
-  const defaultValues = obj => ({
-    ...obj,
-    stylepoints: {
-      "sup-agg": obj.stylepoints["aggressive"],
-      "obj-sla": obj.stylepoints["slayer"],
-      "anc-mob": obj.stylepoints["mobile"],
-      "fle-foc": obj.stylepoints["focused"],
-    },
-    smashgg: { link: `smash.gg/user/${obj.smashgg}` },
+  const { handleSignup, user, userSignedUp } = useContext(DBContext)
+  const [signedUp, setSignedUp] = useState()
+
+  useEffect(() => {
+    userSignedUp().then(result => {
+      setSignedUp(result)
+    })
   })
 
   const { control, errors, register, watch, handleSubmit } = useForm({
@@ -42,6 +40,12 @@ const Form = () => {
 
   return (
     <FormContainer>
+      <Alert type="info" condition={() => signedUp}>
+        <span>
+          <b>You've already signed up</b>. Re-submitting this form will update
+          your current signup.
+        </span>
+      </Alert>
       <form class="form">
         <div class="section px-0">
           <div class="title">In-game Info</div>
@@ -382,6 +386,17 @@ const ErrorMessage = ({ options: [errors, name, longest] }) => {
     return <p class="help is-danger is-invisible">{longest || <br />}</p>
   }
 }
+
+const defaultValues = obj => ({
+  ...obj,
+  stylepoints: {
+    "sup-agg": obj.stylepoints["aggressive"],
+    "obj-sla": obj.stylepoints["slayer"],
+    "anc-mob": obj.stylepoints["mobile"],
+    "fle-foc": obj.stylepoints["focused"],
+  },
+  smashgg: { link: `smash.gg/user/${obj.smashgg}` },
+})
 
 const get = (obj, path) => path.split(".").reduce((acc, cur) => acc?.[cur], obj)
 
