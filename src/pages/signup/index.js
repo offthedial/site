@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useState, useEffect, useContext } from "react"
 import { useForm, Controller } from "react-hook-form"
 import { Link, navigate } from "gatsby"
 import Cleave from "cleave.js/react"
 import Layout from "src/components/Layout"
 import PrivateRoute from "src/components/PrivateRoute"
+import DBContext from "src/context/DBContext"
 
 const smashgg = "https://smash.gg/idtga/register/embed"
 
@@ -15,12 +16,25 @@ const sliders = [
 ]
 
 const Form = () => {
+  const { handleSignup, user } = useContext(DBContext)
+  const defaultValues = obj => ({
+    ...obj,
+    stylepoints: {
+      "sup-agg": obj.stylepoints["aggressive"],
+      "obj-sla": obj.stylepoints["slayer"],
+      "anc-mob": obj.stylepoints["mobile"],
+      "fle-foc": obj.stylepoints["focused"],
+    },
+    smashgg: { link: `smash.gg/user/${obj.smashgg}` },
+  })
+
   const { control, errors, register, watch, handleSubmit } = useForm({
     mode: "onTouched",
+    defaultValues: defaultValues(user.profile),
   })
+
   const onSubmit = submitted => {
-    // var offset = new Date().getTimezoneOffset(); // Get their timezone
-    console.log(submitted)
+    handleSignup(submitted)
     navigate("complete", { state: { complete: true } })
   }
 
@@ -192,7 +206,7 @@ const Form = () => {
             Register on smash.gg, copy the confirmation code when it pops up.
           </blockquote>
           <div style={{ height: "600px" }}>
-            <iframe title="smashgg" src={smashgg} height="100%" width="100%" />
+            {/* <iframe title="smashgg" src={smashgg} height="100%" width="100%" /> */}
           </div>
           <div class="field">
             <div class="section px-0 py-4">
