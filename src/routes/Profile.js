@@ -7,7 +7,6 @@ import Twemoji from "react-twemoji"
 
 const Profile = () => {
   const { currentUser, logout } = useContext(AuthContext)
-  const inServer = true
   const signalStrength = 120
 
   return (
@@ -16,15 +15,13 @@ const Profile = () => {
         <div class="container">
           <div class="columns is-centered">
             <div class="column is-9">
-              {!inServer && (
-                <Alert type="warning">
-                  <span>
-                    You are not in the Off the Dial Discord server, this is
-                    required to sign up for any tournaments.{" "}
-                    <Link to="/discord">Join the discord</Link>.
-                  </span>
-                </Alert>
-              )}
+              <Alert type="warning" condition={() => false}>
+                <span>
+                  You are not in the Off the Dial Discord server, this is
+                  required to sign up for any tournaments.{" "}
+                  <Link to="/discord">Join the discord</Link>.
+                </span>
+              </Alert>
               <div class="mb-5 is-size-4 has-text-weight-bold">My Profile</div>
               <div
                 class="p-4 has-background-white-bis"
