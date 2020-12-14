@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
 import { Link, navigate } from "gatsby"
 import Layout from "src/components/Layout"
 import Alert from "src/components/Alert"
@@ -34,7 +34,11 @@ const Profile = () => {
                   <div class="level-left">
                     <div class="level-item">
                       <p class="image is-96x96">
-                        <img class="is-rounded" src={currentUser()?.photoURL} />
+                        <img
+                          class="is-rounded"
+                          src={currentUser()?.photoURL}
+                          alt="Profile"
+                        />
                       </p>
                     </div>
                     <div class="level-item">
