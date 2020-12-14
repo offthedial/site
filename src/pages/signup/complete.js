@@ -1,17 +1,6 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
 import Layout from "src/components/Layout"
-import styled from "styled-components"
-
-const Center = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-const Content = styled.div`
-  flex-direction: column;
-`
 
 const Complete = ({ location }) => {
   if (!location.state?.complete) {
