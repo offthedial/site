@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const Notification = ({ type, icon, deleteButton = false, children }) => {
+const Alert = ({ type, icon, deleteButton = false, children }) => {
   const [visible, setVisible] = useState(true)
 
   const iconMap = {
@@ -50,4 +50,4 @@ const Notification = ({ type, icon, deleteButton = false, children }) => {
   )
 }
 
-export default Notification
+export default Alert
