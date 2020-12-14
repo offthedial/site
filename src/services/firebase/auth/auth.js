@@ -1,10 +1,12 @@
 import { auth as app } from "../apps"
+import { handleLogin } from "../db/db"
 
 const login = (customToken, callback) => {
   app
     .signInWithCustomToken(customToken)
     .then(user => {
       console.log("USER", user)
+      handleLogin(currentUser())
       callback()
     })
     .catch(error => {
