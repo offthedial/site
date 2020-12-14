@@ -36,7 +36,7 @@ const handleSignup = reg => {
   getUser().update({ profile })
 
   // Add registration to tournament
-  currentTourney
+  currentTourney()
     .collection("signups")
     .doc(auth.currentUser.uid)
     .set({

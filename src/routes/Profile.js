@@ -3,11 +3,12 @@ import { Link, navigate } from "gatsby"
 import Layout from "src/components/Layout"
 import Alert from "src/components/Alert"
 import AuthContext from "src/context/AuthContext"
+import DBContext from "src/context/DBContext"
 import Twemoji from "react-twemoji"
 
 const Profile = () => {
   const { currentUser, logout } = useContext(AuthContext)
-  const signalStrength = 120
+  const { user, signedUp } = useContext(DBContext)
 
   return (
     <Layout pageTitle="Profile">
@@ -43,9 +44,9 @@ const Profile = () => {
                         <div class="is-size-2 has-text-weight-semibold">
                           {currentUser()?.displayName}
                         </div>
-                        {/* Tags maybe? Idk what to put here */}
                         <div class="field is-grouped is-grouped-multiline">
-                          <SignalStrength value={signalStrength} />
+                          {signedUp && <SignedUp />}
+                          <SignalStrength value={user.meta.signal} />
                         </div>
                       </div>
                     </div>
@@ -90,7 +91,7 @@ const SignalStrength = ({ value }) => (
   <div class="control">
     <div class="tags has-addons">
       <span class="tag is-rounded is-cyan is-size-7">
-        <span class="icon is-large">
+        <span class="icon is-medium pr-1">
           <i class="fas fa-signal" />
         </span>
         Signal Strength
@@ -99,6 +100,17 @@ const SignalStrength = ({ value }) => (
         <span class="is-family-monospace">{value}</span>
       </span>
     </div>
+  </div>
+)
+
+const SignedUp = () => (
+  <div class="control">
+    <span class="tag is-rounded is-orange is-size-7">
+      <span class="icon is-medium pr-1">
+        <i class="fas fa-user-check" />
+      </span>
+      Signed Up!
+    </span>
   </div>
 )
 

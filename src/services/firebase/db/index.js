@@ -9,6 +9,13 @@ import { handleLogin, handleSignup, getUser, userSignedUp } from "./db"
 
 const DBProvider = ({ children }) => {
   const [user, setUser] = useState(undefined)
+  const [signedUp, setSignedUp] = useState()
+
+  useEffect(() => {
+    userSignedUp().then(result => {
+      setSignedUp(result)
+    })
+  }, [])
   useEffect(() => {
     getUser()
       .get()
@@ -16,14 +23,12 @@ const DBProvider = ({ children }) => {
         setUser(doc.data())
       })
   }, [])
+
   if (user === undefined) {
     return <></>
   }
-
   return (
-    <DBContext.Provider
-      value={{ handleLogin, handleSignup, user, userSignedUp }}
-    >
+    <DBContext.Provider value={{ handleLogin, handleSignup, user, signedUp }}>
       {children}
     </DBContext.Provider>
   )
