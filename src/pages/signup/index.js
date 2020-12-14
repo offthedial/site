@@ -6,6 +6,7 @@ import Layout from "src/components/Layout"
 import Alert from "src/components/Alert"
 import PrivateRoute from "src/components/PrivateRoute"
 import DBContext from "src/context/DBContext"
+import useServerState from "src/hooks/useServerState"
 
 const smashgg = "https://smash.gg/idtga/register/embed"
 
@@ -17,14 +18,8 @@ const sliders = [
 ]
 
 const Form = () => {
-  const { handleSignup, user, userSignedUp } = useContext(DBContext)
-  const [signedUp, setSignedUp] = useState()
-
-  useEffect(() => {
-    userSignedUp().then(result => {
-      setSignedUp(result)
-    })
-  })
+  const { handleSignup, user, signedUp } = useContext(DBContext)
+  const [inServer, refreshInServer] = useServerState()
 
   const { control, errors, register, watch, handleSubmit } = useForm({
     mode: "onTouched",
@@ -42,9 +37,34 @@ const Form = () => {
     <FormContainer>
       <Alert type="info" condition={() => signedUp}>
         <span>
-          <b>You've already signed up</b>. Re-submitting this form will update
-          your current signup.
+          <b>You've already signed up</b>. Re-submitting this form will
+          overwrite your current signup information.
         </span>
+      </Alert>
+      <Alert type="danger" condition={() => !inServer}>
+        <span>
+          You must be in the Off the Dial discord server to participate.
+        </span>
+        <div class="field has-addons pl-4">
+          <p class="control m-0">
+            <a
+              href="/discord"
+              target="_blank"
+              rel="noreferrer"
+              class="button is-danger is-outlined"
+            >
+              Join
+            </a>
+          </p>
+          <p class="control m-0">
+            <button
+              class="button is-danger is-outlined"
+              onClick={refreshInServer}
+            >
+              Refresh
+            </button>
+          </p>
+        </div>
       </Alert>
       <form class="form">
         <div class="section px-0">
@@ -327,9 +347,23 @@ const Form = () => {
             type="button"
             onClick={handleSubmit(onSubmit)}
             class="button is-centered is-primary is-large"
+            disabled={!inServer}
           >
             Submit
           </button>
+          {!inServer && (
+            <ErrorMessage
+              options={[
+                {
+                  submit: {
+                    message:
+                      "You must be in the Off the Dial discord server to participate",
+                  },
+                },
+                "submit",
+              ]}
+            />
+          )}
         </Field>
       </form>
     </FormContainer>
