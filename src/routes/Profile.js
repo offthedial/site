@@ -1,14 +1,16 @@
 import React, { useContext } from "react"
-import { Link, navigate } from "gatsby"
+import { navigate } from "gatsby"
 import Layout from "src/components/Layout"
 import Alert from "src/components/Alert"
 import AuthContext from "src/context/AuthContext"
 import DBContext from "src/context/DBContext"
+import useServerState from "src/hooks/useServerState"
 import Twemoji from "react-twemoji"
 
 const Profile = () => {
   const { currentUser, logout } = useContext(AuthContext)
   const { user, signedUp } = useContext(DBContext)
+  const [inServer, refreshInServer] = useServerState()
 
   return (
     <Layout pageTitle="Profile">
@@ -16,13 +18,11 @@ const Profile = () => {
         <div class="container">
           <div class="columns is-centered">
             <div class="column is-9">
-              <Alert type="warning" condition={() => false}>
-                <span>
-                  You are not in the Off the Dial Discord server, this is
-                  required to sign up for any tournaments.{" "}
-                  <Link to="/discord">Join the discord</Link>.
-                </span>
-              </Alert>
+              <NotInServerAlert
+                inServer={refreshInServer}
+                refreshInServer={inServer}
+                signedUp={signedUp}
+              />
               <div class="mb-5 is-size-4 has-text-weight-bold">My Profile</div>
               <div
                 class="p-4 has-background-white-bis"
@@ -84,6 +84,47 @@ const Profile = () => {
         </div>
       </div>
     </Layout>
+  )
+}
+
+const NotInServerAlert = ({ inServer, refreshInServer, signedUp }) => {
+  let type
+  if (!inServer) {
+    type = signedUp ? "danger" : "warning"
+  } else {
+    type = null
+  }
+  if (!type) {
+    return <></>
+  }
+  return (
+    <Alert type={type}>
+      <span>
+        {type === "warning"
+          ? "You are not in the Off the Dial discord server. This is required to sign up for any tournaments."
+          : "You are not in the Off the Dial discord server, but you have signed up. You will be removed if you do not join the server."}
+      </span>
+      <div class="field has-addons pl-4">
+        <p class="control m-0">
+          <a
+            href="/discord"
+            target="_blank"
+            rel="noreferrer"
+            class={`button is-${type} is-outlined`}
+          >
+            Join
+          </a>
+        </p>
+        <p class="control m-0">
+          <button
+            class={`button is-${type} is-outlined`}
+            onClick={refreshInServer}
+          >
+            Refresh
+          </button>
+        </p>
+      </div>
+    </Alert>
   )
 }
 

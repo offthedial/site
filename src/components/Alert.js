@@ -1,6 +1,12 @@
 import React, { useState } from "react"
 
-const Alert = ({ type, icon, condition, deleteButton = false, children }) => {
+const Alert = ({
+  type,
+  icon,
+  condition = () => true,
+  deleteButton = false,
+  children,
+}) => {
   const [visible, setVisible] = useState(true)
 
   const iconMap = {
