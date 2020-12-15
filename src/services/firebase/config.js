@@ -12,4 +12,4 @@ const config = {
 }
 
 export default config
-export const cloudFunctionsApi = `http://localhost:5000/${config.projectId}/us-central`
+export const cloudFunctionsApi = `https://us-central1-off-the-dial-26e93.cloudfunctions.net`
