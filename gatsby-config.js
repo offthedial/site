@@ -51,12 +51,7 @@ module.exports = {
     `gatsby-plugin-root-import`,
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: [`/profile`, `/404`],
-      },
-    },
+    `gatsby-plugin-sitemap`,
 
     /* Styles & CSS */
     `gatsby-plugin-styled-components`,
