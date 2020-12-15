@@ -1,27 +1,37 @@
 /**
  * Create context provider
  */
-import React, { useState, useEffect } from "react"
+import React, { useState, useContext, useEffect } from "react"
 
+import AuthContext from "src/context/AuthContext"
 import DBContext from "src/context/DBContext"
 // import { db } from "../apps"
 import { handleLogin, handleSignup, getUser, userSignedUp } from "./db"
 
 const DBProvider = ({ children }) => {
+  const { currentUser } = useContext(AuthContext)
   const [user, setUser] = useState(undefined)
   const [signedUp, setSignedUp] = useState()
 
   useEffect(() => {
-    userSignedUp().then(result => {
-      setSignedUp(result)
-    })
+    if (currentUser() !== null) {
+      setSignedUp(null)
+    } else {
+      userSignedUp().then(result => {
+        setSignedUp(result)
+      })
+    }
   }, [])
   useEffect(() => {
-    getUser()
-      .get()
-      .then(doc => {
-        setUser(doc.data())
-      })
+    if (currentUser() !== null) {
+      getUser()
+        .get()
+        .then(doc => {
+          setUser(doc.data())
+        })
+    } else {
+      setUser({})
+    }
   }, [])
 
   if (user === undefined) {

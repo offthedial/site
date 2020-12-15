@@ -59,7 +59,7 @@ const currentTourney = () => {
 }
 
 const getUser = id => {
-  const user = db.collection("users").doc(id || auth.currentUser.uid)
+  const user = db.collection("users").doc(id || auth.currentUser?.uid)
   user.get().then(doc => {
     if (!doc.exists) {
       user.set({ profile: {}, meta: { signal: 0 } })
@@ -69,7 +69,7 @@ const getUser = id => {
 }
 
 const userSignedUp = async () => {
-  const ref = currentTourney().collection("signups").doc(auth.currentUser.uid)
+  const ref = currentTourney().collection("signups").doc(auth.currentUser?.uid)
   const doc = await ref.get()
   return doc.exists
 }
