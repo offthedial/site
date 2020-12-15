@@ -35,24 +35,24 @@ const Idtga = () => (
         <h2>Schedule</h2>
         <table class="table">
           <tbody>
+            <ScheduleTime date="4 Days">
+              Check-in opens and registration <strong>remains open</strong>.
+            </ScheduleTime>
             <ScheduleTime date="3 Days">
-              Check-in opens and registration remains <strong>open</strong>.
+              Both check-in and registration will close, invalid attendees will
+              be removed, and we start assembling teams.
             </ScheduleTime>
             <ScheduleTime date="2 Days">
-              Check-in and registration will close, invalid attendees will be
-              removed, and team creation will start.
-            </ScheduleTime>
-            <ScheduleTime date="24 Hours">
-              Players will receive their teams, and maplist is released.
+              Players receive their teams, and the maplist is published. You can
+              now practice with your team.
             </ScheduleTime>
             <ScheduleTime date="1 Hour">
-              Players will be alerted and preparations will commence.
-            </ScheduleTime>
-            <ScheduleTime date="30 Minutes">
-              Players are requested to be online on both Splatoon 2 and Discord.
+              Players will be alerted and preparations will commence. We request
+              that you be online on both Splatoon 2 and Discord.
             </ScheduleTime>
             <ScheduleTime date="10 Minutes">
-              Stream begins on <Link to="/twitch">twitch</Link>.
+              Stream begins on <Link to="/twitch">twitch</Link>, check it out if
+              you're not playing!
             </ScheduleTime>
           </tbody>
         </table>

@@ -26,9 +26,8 @@ const Index = () => (
             Who are we?
           </h6>
           <p class="subtitle is-4 has-text-white">
-            A unique tournament organisation for Splatoon 2, dedicated to
-            providing fresh tournament opportunities for free agents and teams
-            alike.
+            Off the Dial is a unique tournament organisation for Splatoon 2. Dedicated to
+            providing fresh tournament opportunities for free agents.
           </p>
         </div>
         <div class="column is-3 is-hidden-mobile">
