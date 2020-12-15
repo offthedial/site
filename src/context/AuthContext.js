@@ -1,5 +1,11 @@
 import { createContext } from "react"
 
-const AuthContext = createContext()
+const defaultState = {
+  currentUser: () => {},
+  login: () => {},
+  logout: () => {},
+}
+
+const AuthContext = createContext(defaultState)
 
 export default AuthContext

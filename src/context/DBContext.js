@@ -1,5 +1,12 @@
 import { createContext } from "react"
 
-const DBContext = createContext()
+const defaultState = {
+  handleLogin: () => {},
+  handleSignup: () => {},
+  user: {},
+  signedUp: false,
+}
+
+const DBContext = createContext(defaultState)
 
 export default DBContext
