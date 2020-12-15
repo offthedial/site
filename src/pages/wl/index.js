@@ -15,13 +15,16 @@ const WeakestLink = () => (
           <h1 class="has-text-white">About Weakest link</h1>
           <p>
             <u>Weakest Link</u> is a unique, Off the Dial exclusive, free agent{" "}
-            <i>and</i> team tournament. Originally an experiment, this unique
-            tournament provides coaching opportunities for free agents, and
-            teaching opportunities for teams.
+            <i>and</i> team tournament. Originally an experiment, The tournament
+            provides learning opportunities for free agents, and coaching
+            opportunities for teams.
           </p>
           <p>All you need to do is sign up! The world is waiting…</p>
           <div class="buttons">
-            <Link to="/wl/rules" class="button is-white is-outlined">
+            <Link
+              to="/wl/rules"
+              class="button is-primary is-outlined is-inverted"
+            >
               Rules
             </Link>
           </div>

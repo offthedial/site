@@ -19,7 +19,10 @@ const Idtga = () => (
           </p>
           <p>All you need to do is sign up! The world is waiting…</p>
           <div class="buttons">
-            <Link to="/idtga/rules" class="button is-white is-outlined">
+            <Link
+              to="/idtga/rules"
+              class="button is-primary is-outlined is-inverted"
+            >
               Rules
             </Link>
           </div>

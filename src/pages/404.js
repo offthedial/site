@@ -2,21 +2,36 @@ import React from "react"
 
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
+import JumboPad from "src/components/JumboPad"
 
 const NotFound = () => (
   <Layout pageTitle="404">
-    <div>
-      <PageContainer>
-        <div class="columns mt-5 is-centered">
-          <div class="column is-5">
-            <h1 class="title is-1 has-text-weight-bold">404</h1>
-            <h2 class="subtitle is-2 has-text-weight-bold">
-              There's nothing here.
-            </h2>
+    <PageContainer>
+      <JumboPad>
+        <div class="is-hidden-mobile">
+          <div class="title has-text-weight-bold" style={{ fontSize: "10em" }}>
+            404
+          </div>
+          <div
+            class="subtitle has-text-weight-medium"
+            style={{ fontSize: "5em" }}
+          >
+            There's nothing here.
           </div>
         </div>
-      </PageContainer>
-    </div>
+        <div class="is-hidden-tablet">
+          <div class="title has-text-weight-bold" style={{ fontSize: "8em" }}>
+            404
+          </div>
+          <div
+            class="subtitle has-text-weight-medium"
+            style={{ fontSize: "4em" }}
+          >
+            There's nothing here.
+          </div>
+        </div>
+      </JumboPad>
+    </PageContainer>
   </Layout>
 )
 

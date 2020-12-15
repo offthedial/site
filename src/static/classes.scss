@@ -8,17 +8,6 @@
   flex: 1;
 }
 
-.post {
-  &:hover {
-    background-color: hsl(0, 0%, 98%);
-  }
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .is-hover-translucent {
   &:hover {
     opacity: 0.85;
@@ -31,43 +20,60 @@
   }
 }
 
+.bg-hover-shade {
+  &:hover {
+    background-color: $white-bis;
+  }
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ease {
+  transition: 0.155s ease-in;
+}
+
+.media-icon {
+  @extend .ease;
+  &:hover {
+    opacity: 100%;
+  }
+}
+
 .fa-youtube {
-  transition: 0.155s;
+  @extend .media-icon;
   &:hover {
     color: #ff0000;
   }
 }
-
 .fa-twitter {
-  transition: 0.155s;
+  @extend .media-icon;
   &:hover {
     color: #1da1f2;
   }
 }
-
 .fa-discord {
-  transition: 0.155s;
+  @extend .media-icon;
   &:hover {
     color: #7289da;
   }
 }
-
 .fa-patreon {
-  transition: 0.155s;
+  @extend .media-icon;
   &:hover {
     color: #f96854;
   }
 }
-
 .fa-twitch {
-  transition: 0.155s;
+  @extend .media-icon;
   &:hover {
     color: #9146ff;
   }
 }
-
 .fa-github {
-  transition: 0.155s;
+  @extend .media-icon;
   &:hover {
     color: #24292e;
   }

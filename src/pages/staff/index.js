@@ -5,9 +5,8 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "src/components/Layout"
 import PageHero from "src/components/PageHero"
 
-const mapStaffCards = (data) => {
+const mapStaffCards = data => {
   let edges = data.allMdx.edges
-  console.log(edges)
   edges.sort((a, b) =>
     a.node.slug > b.node.slug ? 1 : b.node.slug > a.node.slug ? -1 : 0
   )
@@ -33,12 +32,8 @@ const Staff = ({ data }) => (
     </PageHero>
     <div class="section pt-0">
       <div class="container layout-content">
-        <div class="grid-2 is-hidden-mobile">
-          {mapStaffCards(data)}
-        </div>
-        <div class="is-hidden-tablet">
-          {mapStaffCards(data)}
-        </div>
+        <div class="grid-2 is-hidden-mobile">{mapStaffCards(data)}</div>
+        <div class="is-hidden-tablet">{mapStaffCards(data)}</div>
       </div>
     </div>
   </Layout>

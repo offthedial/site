@@ -2,6 +2,7 @@
 @import "./classes.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /* Colors */
@@ -16,17 +17,21 @@ $custom-colors: (
   "cyan": $cyan,
   "green": $green,
   "pink": $pink,
-  "orange": $orange
+  "orange": $orange,
 );
 
 $primary: $slate;
 $link: $primary;
-$link-hover: #5d9194bf;
+$link-hover: rgba($link, 0.75);
 
 /* Typography */
-$family-sans-serif: "DM Sans", "Noto Sans", sans-serif;
+$family-sans-serif: "DM Sans", BlinkMacSystemFont, -apple-system, "Noto Sans",
+  Cantarell, Helvetica, Arial, sans-serif;
+$family-monospace: "DM Mono", "Operator Mono A", "Operator Mono B",
+  "Source Code Pro", Menlo, Consolas, Monaco, monospace;
 $content-heading-weight: 500;
 $size-6: 1.1rem;
+$size-7: 0.85rem;
 
 /* Element Styles */
 $code: $grey-dark;
@@ -42,14 +47,25 @@ $section-padding-medium: 6rem 0rem;
 $input-border-color: transparent;
 $input-shadow: none;
 $input-focus-box-shadow-size: none;
-$input-background-color: $grey-lightest;
+$input-background-color: $white-ter;
 $input-hover-border-color: $grey-lighter;
 
 /* Component Styles */
+$dropdown-menu-min-width: 18rem;
 $navbar-item-img-max-height: 4rem;
 $gap: 128px;
 
+$checkbox-border: 2px solid $grey-lightest;
+$checkbox-block-background: $input-background-color;
+$checkradio-focus: none;
+
+$slider-track-background: $input-background-color;
+$slider-thumb-background: $input-background-color;
+$slider-thumb-border: 2px solid $input-hover-border-color;
+
 @import "~bulma/bulma.sass";
+@import "~bulma-checkradio/dist/css/bulma-checkradio.sass";
+@import "~bulma-slider";
 
 /* Directly modify classes */
 body {
@@ -65,4 +81,15 @@ img.emoji {
 
 code {
   border-radius: 2px;
+}
+
+.input {
+  border-width: 2px;
+}
+
+.is-checkradio[type="radio"]:hover:not([disabled]) + label::before,
+.is-checkradio[type="radio"]:hover:not([disabled]) + label:before,
+.is-checkradio[type="checkbox"]:hover:not([disabled]) + label::before,
+.is-checkradio[type="checkbox"]:hover:not([disabled]) + label:before {
+  border-color: $input-hover-border-color !important;
 }

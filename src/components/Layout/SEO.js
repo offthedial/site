@@ -19,6 +19,8 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaTitle =
+    `${title} - ${site.siteMetadata.title}` || site.siteMetadata.title
 
   return (
     <Helmet
@@ -33,19 +35,50 @@ function SEO({ description, lang, meta, title }) {
           rel: "icon",
           type: "image/png",
           sizes: "64x64",
-          href: `https://assets.otd.ink/icon.png?v=2`,
+          href: `https://assets.otd.ink/favicon.png`,
         },
       ]}
+      meta={[
+        {
+          property: `og:title`,
+          content:
+            `${title} - ${site.siteMetadata.title}` || site.siteMetadata.title,
+        },
+        {
+          property: `og:site_name`,
+          content: site.siteMetadata.title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: `https://assets.otd.ink/icon.png?v=2`,
+        },
+        {
+          property: `theme-color`,
+          content: `#5d9194`,
+        },
+      ].concat(meta)}
     >
       <script
         defer
-        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+        src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
       />
-      <meta name="theme-color" content="#5d9194" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" content="https://assets.otd.ink/favicon.png" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content={site.siteMetadata.twitter} />
+      <meta name="twitter:title" content={metaTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content="https://assets.otd.ink/banner.png" />
+      <meta
+        name="twitter:image:alt"
+        content={`${site.siteMetadata.title} Banner`}
+      />
     </Helmet>
   )
 }
@@ -60,7 +93,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default SEO
