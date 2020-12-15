@@ -424,12 +424,12 @@ const ErrorMessage = ({ options: [errors, name, longest] }) => {
 const defaultValues = obj => ({
   ...obj,
   stylepoints: {
-    "sup-agg": obj.stylepoints["aggressive"],
-    "obj-sla": obj.stylepoints["slayer"],
-    "anc-mob": obj.stylepoints["mobile"],
-    "fle-foc": obj.stylepoints["focused"],
+    "sup-agg": obj?.stylepoints["aggressive"],
+    "obj-sla": obj?.stylepoints["slayer"],
+    "anc-mob": obj?.stylepoints["mobile"],
+    "fle-foc": obj?.stylepoints["focused"],
   },
-  smashgg: { link: `smash.gg/user/${obj.smashgg}` },
+  smashgg: { link: `smash.gg/user/${obj?.smashgg}` },
 })
 
 const get = (obj, path) => path.split(".").reduce((acc, cur) => acc?.[cur], obj)

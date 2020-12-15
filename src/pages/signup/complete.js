@@ -3,7 +3,7 @@ import { Link, navigate } from "gatsby"
 import Layout from "src/components/Layout"
 
 const Complete = ({ location }) => {
-  if (!location.state?.complete) {
+  if (!location.state?.complete && typeof window !== "undefined") {
     navigate("/")
     return <></>
   }

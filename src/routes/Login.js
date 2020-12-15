@@ -15,7 +15,9 @@ const LoginRoute = ({ location }) => {
 
 const login = ({ auth, params }) => {
   if (Object.keys(params).length === 0) {
-    window.location.href = `${cloudFunctionsApi}/authorize`
+    if (typeof window !== "undefined") {
+      window.location.href = `${cloudFunctionsApi}/authorize`
+    }
   } else {
     tokenEndpoint(auth, params)
   }

@@ -5,6 +5,7 @@ module.exports = {
     title: `Off the Dial`,
     description: `Off the Dial is a unique tournament organisation for Splatoon 2. Dedicated to providing fresh tournament opportunities for free agents.`,
     twitter: `@Off_The_Dial`,
+    siteUrl: `https://otd.ink`,
   },
   plugins: [
     /* Firebase */
