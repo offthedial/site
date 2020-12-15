@@ -26,7 +26,7 @@ const login = ({ auth, params }) => {
 const tokenEndpoint = ({ login }, { code, state }) => {
   const endpoint = `${cloudFunctionsApi}/token?code=${code}&state=${state}`
   // Fetch token endpoint data, and send it to callback
-  fetch(endpoint, { credentials: "same-origin" })
+  fetch(endpoint, { credentials: "include" })
     .then(res => res.json())
     .then(data => callback(data))
   // Use token from data to log in, and redirect
