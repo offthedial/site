@@ -9,11 +9,12 @@ const LoginRoute = ({ location }) => {
   login({
     auth: useContext(AuthContext),
     params: parse(location.search),
+    redirect: location?.state?.redirect,
   })
   return null
 }
 
-const login = ({ auth, params }) => {
+const login = ({ auth, params, redirect }) => {
   if (Object.keys(params).length === 0) {
     if (typeof window !== "undefined") {
       window.location.href = `${cloudFunctionsApi}/authorize`
@@ -21,11 +22,11 @@ const login = ({ auth, params }) => {
   } else if (params.error) {
     navigateError(params.error_description)
   } else {
-    tokenEndpoint(auth, params)
+    tokenEndpoint(auth, params, redirect)
   }
 }
 
-const tokenEndpoint = ({ login }, { code, state }) => {
+const tokenEndpoint = ({ login }, { code, state }, redirect) => {
   const endpoint = `${cloudFunctionsApi}/token?code=${code}&state=${state}`
   // Fetch token endpoint data, and send it to callback
   fetch(endpoint, { credentials: "include" })
@@ -34,6 +35,7 @@ const tokenEndpoint = ({ login }, { code, state }) => {
   // Use token from data to log in, and redirect
   const callback = ({ token, error }) => {
     if (token && !error) {
+      login(token, () => navigate(redirect || "/profile"))
     } else {
       navigateError(error)
     }

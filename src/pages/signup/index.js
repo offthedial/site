@@ -28,7 +28,7 @@ const Form = () => {
 
   const onSubmit = submitted => {
     handleSignup(submitted)
-    navigate("complete", { state: { complete: true } })
+    navigate("complete", { state: { complete: true }, replace: true })
   }
 
   const smashggCode = watch("smashgg.code", "#dbdbdb")
@@ -478,7 +478,7 @@ const InvalidRank = () => (
 )
 
 const Signup = ({ location }) => (
-  <PrivateRoute location={location} component={Form} />
+  <PrivateRoute location={location} redirect="/signup" component={Form} />
 )
 
 export default Signup
