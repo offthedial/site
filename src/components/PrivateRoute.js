@@ -17,7 +17,7 @@ const PrivateRoute = ({
     location.pathname !== loginRoute &&
     typeof window !== "undefined"
   ) {
-    navigate(loginRoute, { state: { redirect }, replace: true })
+    navigate(loginRoute, { state: { redirect } })
     return <></>
   } else {
     return <Component {...rest} />
