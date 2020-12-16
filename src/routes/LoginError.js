@@ -13,9 +13,7 @@ const LoginError = ({ location }) => {
         <div class="hero is-medium">
           <div class="hero-body has-text-centered">
             <h1 class="title is-size-1">Error</h1>
-            <h1 class="subtitle is-size-2">
-              <code>{location.state?.error}</code>
-            </h1>
+            <div class="subtitle is-size-3">{location.state?.error}</div>
             <Link to="..">
               <button class="button is-large is-primary">Retry</button>
             </Link>
