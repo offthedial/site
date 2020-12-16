@@ -3,10 +3,10 @@ import { Link, navigate } from "gatsby"
 import Layout from "src/components/Layout"
 
 const LoginError = ({ location }) => {
-  // if (!location.state?.error && typeof window !== "undefined") {
-  //   navigate("/")
-  //   return <></>
-  // }
+  if (!location.state?.error && typeof window !== "undefined") {
+    navigate("/")
+    return <></>
+  }
   return (
     <Layout pageTitle="Login Error" class="is-flex">
       <section class="my-6">
