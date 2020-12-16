@@ -2,9 +2,9 @@ import { useState, useEffect } from "react"
 import { currentUser } from "src/services/firebase/auth/auth"
 
 const useServerState = () => {
-  const [serverState, setServerState] = useState(true)
+  const [inServer, setInServer] = useState(true)
 
-  const refreshServerState = () => {
+  const refreshInServer = () => {
     currentUser()
       .getIdTokenResult()
       .then(jwt => {
@@ -19,16 +19,16 @@ const useServerState = () => {
             const guilds = data.filter(
               guild => guild.id === "374715620052172800"
             )
-            setServerState(guilds.length)
+            setInServer(guilds.length)
           })
       })
   }
 
   useEffect(() => {
-    refreshServerState()
+    refreshInServer()
   }, [])
 
-  return [serverState, refreshServerState]
+  return [inServer, refreshInServer]
 }
 
 export default useServerState
