@@ -7,6 +7,7 @@ import Alert from "src/components/Alert"
 import PrivateRoute from "src/components/PrivateRoute"
 import DBContext from "src/context/DBContext"
 import useServerState from "src/hooks/useServerState"
+import useSignedUp from "src/hooks/useSignedUp"
 
 const smashgg = "https://smash.gg/idtga/register/embed"
 
@@ -18,8 +19,9 @@ const sliders = [
 ]
 
 const Form = () => {
-  const { handleSignup, user, signedUp } = useContext(DBContext)
+  const { handleSignup, user } = useContext(DBContext)
   const [inServer, refreshInServer] = useServerState()
+  const [signedUp] = useSignedUp()
 
   const { control, errors, register, watch, handleSubmit } = useForm({
     mode: "onTouched",

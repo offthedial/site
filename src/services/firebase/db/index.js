@@ -7,22 +7,12 @@ import Loading from "src/components/Loading"
 import AuthContext from "src/context/AuthContext"
 import DBContext from "src/context/DBContext"
 // import { db } from "../apps"
-import { handleLogin, handleSignup, getUser, userSignedUp } from "./db"
+import { handleLogin, handleSignup, getUser } from "./db"
 
 const DBProvider = ({ children }) => {
   const { currentUser } = useContext(AuthContext)
   const [user, setUser] = useState(undefined)
-  const [signedUp, setSignedUp] = useState()
 
-  useEffect(() => {
-    if (currentUser() !== null) {
-      setSignedUp(null)
-    } else {
-      userSignedUp().then(result => {
-        setSignedUp(result)
-      })
-    }
-  }, [])
   useEffect(() => {
     if (currentUser() !== null) {
       getUser()
@@ -39,7 +29,7 @@ const DBProvider = ({ children }) => {
     return <Loading />
   }
   return (
-    <DBContext.Provider value={{ handleLogin, handleSignup, user, signedUp }}>
+    <DBContext.Provider value={{ user, handleLogin, handleSignup }}>
       {children}
     </DBContext.Provider>
   )

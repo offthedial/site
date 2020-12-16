@@ -5,12 +5,14 @@ import Alert from "src/components/Alert"
 import AuthContext from "src/context/AuthContext"
 import DBContext from "src/context/DBContext"
 import useServerState from "src/hooks/useServerState"
+import useSignedUp from "src/hooks/useSignedUp"
 import Twemoji from "react-twemoji"
 
 const Profile = () => {
   const { currentUser, logout } = useContext(AuthContext)
-  const { user, signedUp } = useContext(DBContext)
+  const { user } = useContext(DBContext)
   const [inServer, refreshInServer] = useServerState()
+  const [signedUp] = useSignedUp()
 
   return (
     <Layout pageTitle="Profile">

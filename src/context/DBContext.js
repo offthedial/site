@@ -1,10 +1,9 @@
 import { createContext } from "react"
 
 const defaultState = {
+  user: {},
   handleLogin: () => {},
   handleSignup: () => {},
-  user: {},
-  signedUp: false,
 }
 
 const DBContext = createContext(defaultState)
