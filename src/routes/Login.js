@@ -18,6 +18,8 @@ const login = ({ auth, params }) => {
     if (typeof window !== "undefined") {
       window.location.href = `${cloudFunctionsApi}/authorize`
     }
+  } else if (params.error) {
+    navigateError(params.error_description)
   } else {
     tokenEndpoint(auth, params)
   }
@@ -30,9 +32,16 @@ const tokenEndpoint = ({ login }, { code, state }) => {
     .then(res => res.json())
     .then(data => callback(data))
   // Use token from data to log in, and redirect
-  const callback = ({ token }) => {
-    login(token, () => navigate("/profile"))
+  const callback = ({ token, error }) => {
+    if (token && !error) {
+    } else {
+      navigateError(error)
+    }
   }
+}
+
+const navigateError = error => {
+  navigate("error", { state: { error } })
 }
 
 export default LoginRoute
