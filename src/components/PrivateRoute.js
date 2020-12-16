@@ -1,6 +1,7 @@
 import React from "react"
 
 import { navigate } from "gatsby"
+import Loading from "src/components/Loading"
 import AuthContext from "src/context/AuthContext"
 
 const PrivateRoute = ({
@@ -18,7 +19,7 @@ const PrivateRoute = ({
     typeof window !== "undefined"
   ) {
     navigate(loginRoute, { state: { redirect } })
-    return <></>
+    return <Loading />
   } else {
     return <Component {...rest} />
   }

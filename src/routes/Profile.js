@@ -35,7 +35,7 @@ const Profile = () => {
                         <img
                           class="is-rounded"
                           src={currentUser()?.photoURL}
-                          alt="Profile"
+                          alt=""
                         />
                       </p>
                     </div>

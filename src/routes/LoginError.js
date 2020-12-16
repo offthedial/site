@@ -1,11 +1,12 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
 import Layout from "src/components/Layout"
+import Loading from "src/components/Loading"
 
 const LoginError = ({ location }) => {
   if (!location.state?.error && typeof window !== "undefined") {
     navigate("/")
-    return <></>
+    return <Loading />
   }
   return (
     <Layout pageTitle="Login Error" class="is-flex">

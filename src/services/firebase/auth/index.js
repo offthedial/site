@@ -3,6 +3,7 @@
  */
 import React, { useEffect, useState } from "react"
 
+import Loading from "src/components/Loading"
 import AuthContext from "src/context/AuthContext"
 import { auth } from "../apps"
 import { currentUser, login, logout } from "./auth"
@@ -17,7 +18,7 @@ const AuthProvider = ({ children }) => {
   }, [])
 
   if (pending) {
-    return <></>
+    return <Loading />
   }
 
   return (

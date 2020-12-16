@@ -3,6 +3,7 @@
  */
 import React, { useState, useContext, useEffect } from "react"
 
+import Loading from "src/components/Loading"
 import AuthContext from "src/context/AuthContext"
 import DBContext from "src/context/DBContext"
 // import { db } from "../apps"
@@ -35,7 +36,7 @@ const DBProvider = ({ children }) => {
   }, [])
 
   if (user === undefined) {
-    return <></>
+    return <Loading />
   }
   return (
     <DBContext.Provider value={{ handleLogin, handleSignup, user, signedUp }}>
