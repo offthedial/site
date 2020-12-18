@@ -7,7 +7,7 @@ import MediaFooter from "./MediaFooter"
 const Layout = ({ pageTitle, mediaFooter = true, children }) => (
   <div class="layout">
     <SEO title={pageTitle} />
-    <NavBar siteTitle="Off the Dial" />
+    <NavBar />
     <div class="content layout-content">{children}</div>
     {mediaFooter && <MediaFooter />}
   </div>

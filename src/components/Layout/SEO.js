@@ -3,7 +3,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
 
-function SEO({ title }) {
+const SEO = ({ title }) => {
   const {
     site: { siteMetadata },
   } = useStaticQuery(
@@ -28,12 +28,10 @@ function SEO({ title }) {
 
   return (
     <Helmet htmlAttributes={{ lang: "en" }}>
-      <meta property="og:type" content="website" />
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta content={metaTitle} name="title" />
+      <title>{metaTitle}</title>
+      <description>{siteMetadata.description}</description>
       <meta content={metaTitle} property="og:title" />
       <meta content={metaTitle} property="twitter:title" />
-      <meta content={siteMetadata.description} name="description" />
       <meta content={siteMetadata.description} property="og:description" />
       <meta content={siteMetadata.description} property="twitter:description" />
       <meta content={siteMetadata.image} property="og:image" />
@@ -41,6 +39,9 @@ function SEO({ title }) {
       <meta content={siteMetadata.siteUrl} property="og:url" />
       <meta content={siteMetadata.siteUrl} property="twitter:url" />
       <meta content={siteMetadata.twitter} property="twitter:creator" />
+      <meta property="og:type" content="website" />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta name="theme-color" content="#5d9194" />
       <script
         defer
         src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
