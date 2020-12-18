@@ -11,7 +11,7 @@ With a lot of new players coming to test out Splatoon thanks to the #FreeMelee m
 
 Likewise, if you know anyone from Smash who may be interesting in testing the waters of competitive splatoon, Invite them to signup!
 
-We're a bit late to announce this tournament (so sorry!!), you have **less than 2 weeks to register** at the time this post is being made. So please don't *delay* signing up!
+We're a bit late to announce this tournament (so sorry!!), you have **less than 2 weeks to register** at the time this post is being made. So please don't wait to signup!
 
 ## What's this tournament?
 It's Dangerous to go Alone is our flagship, free agent tournament. Focused on creating balanced teams, and being accessible to everyone.
