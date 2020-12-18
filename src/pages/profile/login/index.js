@@ -16,7 +16,7 @@ const ProfileLogin = ({ location }) => {
 const login = ({ auth, params }) => {
   if (Object.keys(params).length === 0) {
     if (typeof window !== "undefined") {
-      window.location.href = `${cloudFunctionsApi}/authorize`
+      window.location.replace(`${cloudFunctionsApi}/authorize`)
     }
   } else if (params.error) {
     navigateError(params.error_description)
@@ -34,7 +34,7 @@ const tokenEndpoint = ({ login }, { code, state }) => {
   // Use token from data to log in, and redirect
   const callback = ({ token, error }) => {
     if (token && !error) {
-      login(token, () => navigate("/profile"))
+      login(token, () => navigate(-2))
     } else {
       navigateError(error)
     }
