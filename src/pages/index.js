@@ -12,7 +12,7 @@ import Highlight from "src/components/Highlight"
  * Set the variable to the slug of the post.
  * Or set it to null to remove the section entirely.
  */
-const promoted = "dial-in-2020"
+const promoted = "idtga-dec-2020"
 
 const Index = () => (
   <Layout mediaFooter={false}>
@@ -26,8 +26,9 @@ const Index = () => (
             Who are we?
           </h6>
           <p class="subtitle is-4 has-text-white">
-            Off the Dial is a unique tournament organisation for Splatoon 2. Dedicated to
-            providing fresh tournament opportunities for free agents.
+            Off the Dial is a unique tournament organisation for Splatoon 2.
+            Dedicated to providing fresh tournament opportunities for free
+            agents.
           </p>
         </div>
         <div class="column is-3 is-hidden-mobile">
