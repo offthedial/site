@@ -1,8 +1,10 @@
 import React from "react"
 
 const Redirect = ({ to }) => {
-  const content = `0; url=${to}`
-  return <meta http-equiv="refresh" content={content} />
+  if (typeof window !== "undefined") {
+    window.location.replace(to)
+  }
+  return <></>
 }
 
 export default Redirect
