@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { navigate } from "gatsby"
+import PrivateRoute from "src/components/PrivateRoute"
 import Layout from "src/components/Layout"
 import Alert from "src/components/Alert"
 import AuthContext from "src/context/AuthContext"
@@ -8,7 +9,7 @@ import useServerState from "src/hooks/useServerState"
 import useSignedUp from "src/hooks/useSignedUp"
 import Twemoji from "react-twemoji"
 
-const Profile = () => {
+const ProfileRoute = () => {
   const { currentUser, logout } = useContext(AuthContext)
   const { user } = useContext(DBContext)
   const [inServer, refreshInServer] = useServerState()
@@ -155,6 +156,10 @@ const SignedUp = () => (
       Signed Up!
     </span>
   </div>
+)
+
+const Profile = ({ location }) => (
+  <PrivateRoute location={location} component={ProfileRoute} />
 )
 
 export default Profile

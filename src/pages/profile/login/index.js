@@ -5,7 +5,7 @@ import { parse } from "query-string"
 import AuthContext from "src/context/AuthContext"
 import { cloudFunctionsApi } from "src/services/firebase/config"
 
-const LoginRoute = ({ location }) => {
+const ProfileLogin = ({ location }) => {
   login({
     auth: useContext(AuthContext),
     params: parse(location.search),
@@ -45,4 +45,4 @@ const navigateError = error => {
   navigate("error", { state: { error } })
 }
 
-export default LoginRoute
+export default ProfileLogin

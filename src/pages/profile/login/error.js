@@ -3,7 +3,7 @@ import { Link, navigate } from "gatsby"
 import Layout from "src/components/Layout"
 import Loading from "src/components/Loading"
 
-const LoginError = ({ location }) => {
+const ProfileLoginError = ({ location }) => {
   if (!location.state?.error && typeof window !== "undefined") {
     navigate("/")
     return <Loading />
@@ -25,4 +25,4 @@ const LoginError = ({ location }) => {
   )
 }
 
-export default LoginError
+export default ProfileLoginError
