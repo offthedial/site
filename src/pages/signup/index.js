@@ -23,6 +23,16 @@ const Form = () => {
   const [inServer, refreshInServer] = useServerState()
   const [signedUp] = useSignedUp()
 
+  const defaultValues = obj => ({
+    ...obj,
+    stylepoints: {
+      "sup-agg": obj?.stylepoints?.["aggressive"],
+      "obj-sla": obj?.stylepoints?.["slayer"],
+      "anc-mob": obj?.stylepoints?.["mobile"],
+      "fle-foc": obj?.stylepoints?.["focused"],
+    },
+    smashgg: { link: `smash.gg/user/${obj?.smashgg}` },
+  })
   const { control, errors, register, watch, handleSubmit } = useForm({
     mode: "onTouched",
     defaultValues: defaultValues(user.profile),
@@ -422,17 +432,6 @@ const ErrorMessage = ({ options: [errors, name, longest] }) => {
     return <p class="help is-danger is-invisible">{longest || <br />}</p>
   }
 }
-
-const defaultValues = obj => ({
-  ...obj,
-  stylepoints: {
-    "sup-agg": obj?.stylepoints["aggressive"],
-    "obj-sla": obj?.stylepoints["slayer"],
-    "anc-mob": obj?.stylepoints["mobile"],
-    "fle-foc": obj?.stylepoints["focused"],
-  },
-  smashgg: { link: `smash.gg/user/${obj?.smashgg}` },
-})
 
 const get = (obj, path) => path.split(".").reduce((acc, cur) => acc?.[cur], obj)
 
