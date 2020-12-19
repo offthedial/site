@@ -4,12 +4,7 @@ import { navigate } from "gatsby"
 import Loading from "src/components/Loading"
 import AuthContext from "src/context/AuthContext"
 
-const PrivateRoute = ({
-  component: Component,
-  location,
-  redirect,
-  ...rest
-}) => {
+const PrivateRoute = ({ component: Component, location, ...rest }) => {
   const { currentUser } = React.useContext(AuthContext)
   const loginRoute = "/profile/login"
 
@@ -18,7 +13,7 @@ const PrivateRoute = ({
     location.pathname !== loginRoute &&
     typeof window !== "undefined"
   ) {
-    navigate(loginRoute, { state: { redirect } })
+    navigate(loginRoute, { state: { from: location.pathname } })
     return <Loading />
   } else {
     return <Component {...rest} />

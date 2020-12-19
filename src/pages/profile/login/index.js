@@ -9,23 +9,31 @@ const ProfileLogin = ({ location }) => {
   login({
     auth: useContext(AuthContext),
     params: parse(location.search),
+    from: location.state?.from,
   })
   return null
 }
 
-const login = ({ auth, params }) => {
+const login = ({ auth, params, from }) => {
   if (Object.keys(params).length === 0) {
-    if (typeof window !== "undefined") {
+    if (auth.currentUser()) {
+      navigate("/profile")
+    } else if (typeof window !== "undefined") {
+      from && localStorage.setItem("loginFrom", from)
       window.location.replace(`${cloudFunctionsApi}/authorize`)
     }
-  } else if (params.error) {
-    navigateError(params.error_description)
   } else {
-    tokenEndpoint(auth, params)
+    const redirect = localStorage.getItem("loginFrom")
+    localStorage.removeItem("loginFrom")
+    if (params.error) {
+      navigateError(params.error_description)
+    } else {
+      tokenEndpoint(auth, params, redirect)
+    }
   }
 }
 
-const tokenEndpoint = ({ login }, { code, state }) => {
+const tokenEndpoint = ({ login }, { code, state }, redirect) => {
   const endpoint = `${cloudFunctionsApi}/token?code=${code}&state=${state}`
   // Fetch token endpoint data, and send it to callback
   fetch(endpoint, { credentials: "include" })
@@ -34,7 +42,9 @@ const tokenEndpoint = ({ login }, { code, state }) => {
   // Use token from data to log in, and redirect
   const callback = ({ token, error }) => {
     if (token && !error) {
-      login(token, () => navigate(-2))
+      login(token, () => {
+        navigate(redirect || "/profile")
+      })
     } else {
       navigateError(error)
     }
