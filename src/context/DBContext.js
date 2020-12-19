@@ -1,7 +1,7 @@
 import { createContext } from "react"
 
 const defaultState = {
-  user: {},
+  user: () => {},
   handleLogin: () => {},
   handleSignup: () => {},
 }
