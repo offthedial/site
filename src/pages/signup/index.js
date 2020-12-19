@@ -31,7 +31,9 @@ const Form = () => {
       "anc-mob": obj?.stylepoints?.["mobile"],
       "fle-foc": obj?.stylepoints?.["focused"],
     },
-    smashgg: { link: `smash.gg/user/${obj?.smashgg}` },
+    smashgg: {
+      link: obj?.smashgg ? `smash.gg/user/${obj?.smashgg}` : ``,
+    },
   })
   const { control, errors, register, watch, handleSubmit } = useForm({
     mode: "onTouched",
