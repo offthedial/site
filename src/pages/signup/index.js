@@ -37,7 +37,7 @@ const Form = () => {
   })
   const { control, errors, register, watch, handleSubmit } = useForm({
     mode: "onTouched",
-    defaultValues: defaultValues(user.profile),
+    defaultValues: defaultValues(user().profile),
   })
 
   const onSubmit = submitted => {
@@ -389,7 +389,7 @@ const FormContainer = ({ children }) => (
     <div class="section">
       <div class="container is-desktop">
         <div class="columns is-centered">
-          <div class="column is-8">{children}</div>
+          <div class="column is-9">{children}</div>
         </div>
       </div>
     </div>

@@ -12,6 +12,7 @@ import { handleLogin, handleSignup, getUser } from "./db"
 
 const DBProvider = ({ children }) => {
   const [user, setUser] = useState(undefined)
+  const [pending, setPending] = useState(true)
 
   useEffect(() => {
     auth.onAuthStateChanged(authUser => {
@@ -20,18 +21,28 @@ const DBProvider = ({ children }) => {
           .get()
           .then(doc => {
             setUser(doc.data())
+            setPending(false)
           })
       } else {
         setUser({})
+        setPending(false)
       }
     })
   }, [])
 
-  if (user === undefined) {
+  if (pending) {
     return <Loading />
   }
   return (
-    <DBContext.Provider value={{ user, handleLogin, handleSignup }}>
+    <DBContext.Provider
+      value={{
+        user: () => {
+          return user
+        },
+        handleLogin,
+        handleSignup,
+      }}
+    >
       {children}
     </DBContext.Provider>
   )
