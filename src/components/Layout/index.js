@@ -4,9 +4,9 @@ import SEO from "./SEO"
 import NavBar from "./NavBar"
 import MediaFooter from "./MediaFooter"
 
-const Layout = ({ pageTitle, mediaFooter = true, children }) => (
+const Layout = ({ pageTitle, meta, mediaFooter = true, children }) => (
   <div class="layout">
-    <SEO title={pageTitle} />
+    <SEO title={pageTitle} {...meta} />
     <NavBar />
     <div class="content layout-content">{children}</div>
     {mediaFooter && <MediaFooter />}

@@ -3,7 +3,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Helmet } from "react-helmet"
 
-const SEO = ({ title }) => {
+const SEO = ({ title, description, image, creator }) => {
   const {
     site: { siteMetadata },
   } = useStaticQuery(
@@ -13,7 +13,6 @@ const SEO = ({ title }) => {
           siteMetadata {
             title
             description
-            image
             siteUrl
             twitter
           }
@@ -21,26 +20,35 @@ const SEO = ({ title }) => {
       }
     `
   )
+  if (typeof window === "undefined") {
+    return
+  }
+
+  console.log(description)
 
   const metaTitle = title
     ? `${title} - ${siteMetadata.title}`
     : siteMetadata.title
+  const metaDesc = description
+    ? `${description} - ${siteMetadata.description}`
+    : siteMetadata.description
+  let [metaImage, card] =
+    window.location.pathname === "/"
+      ? ["https://assets.otd.ink/banner.png", "summary_large_image"]
+      : [image ? image : "https://assets.otd.ink/icon.png", "summary"]
 
   return (
     <Helmet htmlAttributes={{ lang: "en" }}>
       <title>{metaTitle}</title>
       <description>{siteMetadata.description}</description>
-      <meta content={metaTitle} property="og:title" />
-      <meta content={metaTitle} property="twitter:title" />
-      <meta content={siteMetadata.description} property="og:description" />
-      <meta content={siteMetadata.description} property="twitter:description" />
-      <meta content={siteMetadata.image} property="og:image" />
-      <meta content={siteMetadata.image} property="twitter:image" />
-      <meta content={siteMetadata.siteUrl} property="og:url" />
-      <meta content={siteMetadata.siteUrl} property="twitter:url" />
-      <meta content={siteMetadata.twitter} property="twitter:creator" />
       <meta property="og:type" content="website" />
-      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="og:title" content={metaTitle} />
+      <meta property="og:description" content={metaDesc} />
+      <meta property="og:url" content={siteMetadata.siteUrl} />
+      <meta property="og:image" content={metaImage} />
+      <meta property="twitter:site" content={siteMetadata.twitter} />
+      <meta property="twitter:card" content={card} />
+      {creator && <meta property="twitter:creator" content={creator} />}
       <meta name="theme-color" content="#5d9194" />
       <script
         defer
