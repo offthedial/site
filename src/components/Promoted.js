@@ -56,7 +56,7 @@ const Promoted = ({ slug }) => {
           {node.excerpt}
         </blockquote>
         <div class="mt-4 buttons">
-          <Link to={`/posts/${node.parent.name}`} class="button is-orange">
+          <Link to={`/posts/${node.parent.name}`} class="button is-cyan">
             Read More
           </Link>
           {node.frontmatter.tournament && (
