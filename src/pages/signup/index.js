@@ -413,7 +413,7 @@ const Field = ({ label, expanded, children }) => (
 const RankField = ({ label, children }) => (
   <div class="column">
     <div class="control is-expanded">
-      <div class="has-text-weight-medium is-size-7">{label}</div>
+      <div class="has-text-weight-medium">{label}</div>
       {children}
     </div>
   </div>
