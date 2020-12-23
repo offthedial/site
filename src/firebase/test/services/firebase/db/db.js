@@ -2,7 +2,7 @@ import { db, auth } from "../apps"
 
 const handleSignup = reg => {
   // Create profile
-  const div = n => [Math.abs(n), Number(n)]
+  const div = n => [Math.abs(n) - 10, Number(n)]
   const [support, aggressive] = div(reg.stylepoints["sup-agg"])
   const [objective, slayer] = div(reg.stylepoints["obj-sla"])
   const [anchor, mobile] = div(reg.stylepoints["anc-mob"])
