@@ -31,9 +31,9 @@ const Form = () => {
       "anc-mob": obj?.stylepoints?.["mobile"],
       "fle-foc": obj?.stylepoints?.["focused"],
     },
-    smashgg: {
-      link: obj?.smashgg ? `smash.gg/user/${obj?.smashgg}` : ``,
-    },
+    smashgg: obj?.smashgg
+      ? { link: `smash.gg/user/${obj?.smashgg}` }
+      : undefined,
   })
   const { control, errors, register, watch, handleSubmit } = useForm({
     mode: "onTouched",
@@ -257,9 +257,14 @@ const Form = () => {
                       errors={errors}
                       defaultValue="smash.gg/user/"
                       options={{
+                        lowercase: true,
                         prefix: "smash.gg/user/",
                       }}
                       rules={{
+                        pattern: {
+                          value: /^smash\.gg\/user\/[0-9A-Fa-f]+$/,
+                          message: "Invalid confirmation code",
+                        },
                         minLength: {
                           value: 15,
                           message: "This field is required",
