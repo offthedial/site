@@ -12,7 +12,7 @@ import useSignedUp from "src/hooks/useSignedUp"
 const smashgg = "https://smash.gg/idtga/register/embed"
 
 const sliders = [
-  ["Supportive", "Aggresive", "How would you characterize your play?"],
+  ["Supportive", "Aggressive", "How would you characterize your play?"],
   ["Objective", "Slayer", "What do you focus on when playing?"],
   ["Anchor", "Mobile", "What does your position look like?"],
   ["Flexible", "Focused", "How would you describe your weapon pool?"],
