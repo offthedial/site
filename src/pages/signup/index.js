@@ -49,6 +49,12 @@ const Form = () => {
 
   return (
     <FormContainer>
+      <Alert type="warning" condition={() => !signedUp}>
+        <span>
+          <b>Signups have closed</b>. You can still submit this form and sign up
+          as a sub.
+        </span>
+      </Alert>
       <Alert type="info" condition={() => signedUp}>
         <span>
           <b>You've already signed up</b>. Re-submitting this form will
@@ -82,13 +88,10 @@ const Form = () => {
       </Alert>
       <form class="form">
         <div class="section px-0">
-          <div class="title">In-game Info</div>
-          <blockquote class="subtitle">
-            What are your in-game name and stats?
-          </blockquote>
+          <div class="title">Enter your in-game info</div>
           <div class="columns is-2 is-variable">
             <div class="column">
-              <Field label="IGN" expanded={true}>
+              <Field label="In-game name" expanded={true}>
                 <Input
                   name="ign"
                   control={control}
@@ -102,7 +105,7 @@ const Form = () => {
               </Field>
             </div>
             <div class="column is-7">
-              <Field label="Friend Code" expanded={true}>
+              <Field label="Friend-code" expanded={true}>
                 <Input
                   name="sw"
                   control={control}
@@ -166,8 +169,7 @@ const Form = () => {
         </div>
 
         <div class="section px-0 pt-5">
-          <div class="title">Stylepoints</div>
-          <blockquote class="subtitle">What's your playstyle?</blockquote>
+          <div class="title">Set your stylepoints (playstyle)</div>
           {sliders.map((field, index) => (
             <div key={index} class="section px-0 py-4">
               <Field label={field[2]}>
@@ -193,30 +195,29 @@ const Form = () => {
         </div>
 
         <div class="section px-0">
-          <div class="title">Competitive Experience</div>
-          <blockquote class="subtitle">
-            What's your past Splatoon competitive experience?
-          </blockquote>
+          <div class="title">Enter your competitive experience</div>
           <div class="section px-0 py-4">
             <Field label="How many tournaments have you competed in?">
-              {[
-                "This is my first tournament :0",
-                "I've played in one or two tournaments.",
-                "I've played in some tournaments.",
-                "I've played in a lot of tournaments.",
-              ].map((field, index) => (
-                <div key={index} class="field">
-                  <input
-                    ref={register({ required: "This field is required" })}
-                    value={field}
-                    class="is-checkradio is-medium"
-                    name="cxp.amount"
-                    type="radio"
-                    id={field}
-                  />
-                  <label htmlFor={field}>{field}</label>
-                </div>
-              ))}
+              <div class="py-3">
+                {[
+                  "This is my first tournament :0",
+                  "I've played in one or two tournaments.",
+                  "I've played in some tournaments.",
+                  "I've played in a lot of tournaments.",
+                ].map((field, index) => (
+                  <div key={index} class="field">
+                    <input
+                      ref={register({ required: "This field is required" })}
+                      value={field}
+                      class="is-checkradio is-medium"
+                      name="cxp.amount"
+                      type="radio"
+                      id={field}
+                    />
+                    <label htmlFor={field}>{field}</label>
+                  </div>
+                ))}
+              </div>
               <ErrorMessage options={[errors, "cxp.amount"]} />
             </Field>
           </div>
@@ -239,92 +240,113 @@ const Form = () => {
         </div>
 
         <div class="section px-0">
-          <div class="title">Smash.gg</div>
-          <blockquote class="subtitle">
-            Register on smash.gg, copy the confirmation code when it pops up.
-          </blockquote>
-          <div style={{ height: "600px" }}>
-            <iframe title="smashgg" src={smashgg} height="100%" width="100%" />
-          </div>
-          <div class="field">
-            <div class="section px-0 py-4">
-              <div class="columns">
-                <div class="column is-7">
-                  <Field label="User ID">
-                    <Input
-                      name="smashgg.link"
-                      control={control}
-                      errors={errors}
-                      defaultValue="smash.gg/user/"
-                      options={{
-                        lowercase: true,
-                        prefix: "smash.gg/user/",
-                      }}
-                      rules={{
-                        pattern: {
-                          value: /^smash\.gg\/user\/[0-9A-Fa-f]+$/,
-                          message: "Invalid confirmation code",
-                        },
-                        minLength: {
-                          value: 15,
-                          message: "This field is required",
-                        },
-                      }}
-                    />
-                    <p class="help">
-                      Go to your{" "}
-                      <a
-                        href="https://smash.gg/profile"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {" "}
-                        smash.gg profile
-                      </a>{" "}
-                      and copy your ID from the url.
-                    </p>
-                    <ErrorMessage options={[errors, "smashgg.link"]} />
-                  </Field>
-                </div>
-                <div class="column">
-                  <Field label="Confirmation Code">
-                    <div class="field has-addons">
-                      <div class="control is-expanded">
-                        <Input
-                          name="smashgg.code"
-                          control={control}
-                          errors={errors}
-                          defaultValue="#"
-                          options={{
-                            lowercase: true,
-                            blocks: [7],
-                            prefix: "#",
-                          }}
-                          rules={{
-                            pattern: {
-                              value: /^#[0-9A-Fa-f]+$/,
-                              message: "Invalid confirmation code",
-                            },
-                            minLength: {
-                              value: 7,
-                              message: "This field is required",
-                            },
-                          }}
-                        />
-                      </div>
-                      <div class="control">
-                        <span
-                          class="input ease is-medium px-5 is-static"
-                          style={{ backgroundColor: smashggCode }}
-                        />
-                      </div>
-                    </div>
-                    <ErrorMessage options={[errors, "smashgg.code"]} />
-                  </Field>
-                </div>
+          <div class="title">Set up smash.gg</div>
+          <Field label="Register on smash.gg, copy the confirmation code when it pops up.">
+            <div class="input p-1" style={{ height: "600px" }}>
+              <div
+                style={{
+                  borderRadius: "4px",
+                  width: "100%",
+                  height: "100%",
+                  overflow: "hidden",
+                }}
+              >
+                <iframe
+                  style={{ borderWidth: "10px" }}
+                  title="smashgg"
+                  src={smashgg}
+                  height="100%"
+                  width="100%"
+                />
               </div>
             </div>
+          </Field>
+          <div class="field">
+            <div class="section px-0 py-4">
+              <Field label="Enter your smash.gg confirmation code.">
+                <div style={{ maxWidth: "20em" }}>
+                  <div class="field has-addons">
+                    <div class="control is-expanded">
+                      <Input
+                        name="smashgg.code"
+                        control={control}
+                        errors={errors}
+                        defaultValue="#"
+                        options={{
+                          lowercase: true,
+                          blocks: [7],
+                          prefix: "#",
+                        }}
+                        rules={{
+                          pattern: {
+                            value: /^#[0-9A-Fa-f]{6}$/,
+                            message: "Invalid confirmation code",
+                          },
+                          minLength: {
+                            value: 2,
+                            message: "This field is required",
+                          },
+                        }}
+                      />
+                    </div>
+                    <div class="control">
+                      <span
+                        class="input ease is-medium px-5 is-static"
+                        style={{ backgroundColor: smashggCode }}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <ErrorMessage options={[errors, "smashgg.code"]} />
+              </Field>
+            </div>
           </div>
+          <Field
+            label={
+              <div class="is-size-4">
+                Paste the url of your{" "}
+                <a
+                  href="https://smash.gg/profile"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {" "}
+                  smash.gg profile
+                </a>
+                .
+              </div>
+            }
+          >
+            <div style={{ maxWidth: "20em" }}>
+              <div class="control is-medium has-icons-right">
+                <Input
+                  name="smashgg.link"
+                  control={control}
+                  errors={errors}
+                  defaultValue="smash.gg/user/"
+                  options={{
+                    lowercase: true,
+                    prefix: "smash.gg/user/",
+                    blocks: [22],
+                  }}
+                  rules={{
+                    pattern: {
+                      value: /^smash\.gg\/user\/[0-9A-Fa-f]{8}$/,
+                      message: "Invalid user slug",
+                    },
+                    minLength: {
+                      value: 15,
+                      message: "This field is required",
+                    },
+                  }}
+                />
+                {/* <span class="icon is-right">
+                  <i class="fas fa-user-check" />
+                </span> */}
+              </div>
+            </div>
+            <ErrorMessage options={[errors, "smashgg.link"]} />
+          </Field>
         </div>
         <div class="section px-0 pt-5">
           <div class="title">Final steps</div>
@@ -392,7 +414,7 @@ const Form = () => {
 const FormContainer = ({ children }) => (
   <Layout>
     <div class="section">
-      <div class="container is-desktop">
+      <div class="container is-fullhd">
         <div class="columns is-centered">
           <div class="column is-9">{children}</div>
         </div>
@@ -413,7 +435,7 @@ const Field = ({ label, expanded, children }) => (
 const RankField = ({ label, children }) => (
   <div class="column">
     <div class="control is-expanded">
-      <div class="has-text-weight-medium">{label}</div>
+      <div class="is-size-5">{label}</div>
       {children}
     </div>
   </div>

@@ -36,15 +36,29 @@ const handleSignup = reg => {
   getUser().update({ profile })
 
   // Add registration to tournament
-  currentTourney()
-    .collection("signups")
-    .doc(auth.currentUser.uid)
-    .set({
-      tzOffset: new Date().getTimezoneOffset(),
-      recruiting: Boolean(reg.recruiting),
-      confirmationCode: reg.smashgg.code,
-      legal: Boolean(reg.legal),
-    })
+  userSignedUp().then(result => {
+    if (result) {
+      currentTourney()
+        .collection("signups")
+        .doc(auth.currentUser.uid)
+        .set({
+          tzOffset: new Date().getTimezoneOffset(),
+          recruiting: Boolean(reg.recruiting),
+          confirmationCode: reg.smashgg.code,
+          legal: Boolean(reg.legal),
+        })
+    } else {
+      currentTourney()
+        .collection("subs")
+        .doc(auth.currentUser.uid)
+        .set({
+          tzOffset: new Date().getTimezoneOffset(),
+          recruiting: Boolean(reg.recruiting),
+          confirmationCode: reg.smashgg.code,
+          legal: Boolean(reg.legal),
+        })
+    }
+  })
 }
 
 const handleLogin = async ({ uid }) => {
@@ -70,7 +84,9 @@ const getUser = id => {
 const userSignedUp = async () => {
   const ref = currentTourney().collection("signups").doc(auth.currentUser?.uid)
   const doc = await ref.get()
-  return doc.exists
+  const ref2 = currentTourney().collection("subs").doc(auth.currentUser?.uid)
+  const doc2 = await ref2.get()
+  return doc.exists || doc2.exists
 }
 
 // const updateUserMeta = (id, meta) => {
