@@ -11,7 +11,7 @@ import { auth } from "../apps"
 import { handleLogin, handleSignup, getUser } from "./db"
 
 const DBProvider = ({ children }) => {
-  const [user, setUser] = useState(undefined)
+  const [user, setUser] = useState()
   const [pending, setPending] = useState(true)
 
   useEffect(() => {
@@ -36,9 +36,7 @@ const DBProvider = ({ children }) => {
   return (
     <DBContext.Provider
       value={{
-        user: () => {
-          return user
-        },
+        user,
         handleLogin,
         handleSignup,
       }}
