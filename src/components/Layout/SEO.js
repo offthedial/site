@@ -20,12 +20,10 @@ const SEO = ({ title, description, image, creator }) => {
       }
     `
   )
+
   if (typeof window === "undefined") {
-    return
+    return <></>
   }
-
-  console.log(description)
-
   const metaTitle = title
     ? `${title} - ${siteMetadata.title}`
     : siteMetadata.title
