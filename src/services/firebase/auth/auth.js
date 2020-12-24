@@ -6,8 +6,9 @@ const login = (customToken, callback) => {
     .signInWithCustomToken(customToken)
     .then(user => {
       console.log("USER", user)
-      handleLogin(currentUser())
-      callback()
+      handleLogin(currentUser()).then(data => {
+        callback(data)
+      })
     })
     .catch(error => {
       console.log("ERROR", error)

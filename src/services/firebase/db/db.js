@@ -47,11 +47,10 @@ const handleSignup = reg => {
     })
 }
 
-const handleLogin = ({ uid }) => {
+const handleLogin = async ({ uid }) => {
   const user = getUser(uid)
-  return user.get().then(doc => {
-    return doc.data()
-  })
+  const doc = await user.get()
+  return doc.data()
 }
 
 const currentTourney = () => {
