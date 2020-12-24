@@ -3,7 +3,7 @@ import React, { useContext } from "react"
 import { navigate } from "gatsby"
 import { parse } from "query-string"
 import Loading from "src/components/Loading"
-import AuthContext from "../../test/services/firebase/auth/node_modules/src/context/AuthContext"
+import AuthContext from "src/context/AuthContext"
 import { cloudFunctionsApi } from "src/services/firebase/config"
 
 const ProfileLogin = ({ location }) => {
