@@ -412,7 +412,7 @@ const Form = () => {
 }
 
 const FormContainer = ({ children }) => (
-  <Layout>
+  <Layout pageTitle="Signup">
     <div class="section">
       <div class="container is-fullhd">
         <div class="columns is-centered">
