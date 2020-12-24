@@ -3,17 +3,23 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
-import Highlight from "src/components/Highlight"
 import ScheduleTime from "src/components/ScheduleTime"
+import Highlight from "src/components/Highlight"
 
 const Idtga = () => (
-  <Layout pageTitle="It's Dangerous to go Alone">
+  <Layout
+    pageTitle="It's Dangerous to go Alone"
+    meta={{
+      image: "https://assets.otd.ink/idtga/logo.png",
+      description: `It's Dangerous to go Alone is our flagship, solo registration tournament. Focused on creating balanced teams, and being accessible to everyone.`,
+    }}
+  >
     <PageContainer>
       <Highlight>
         <div class="column is-8 has-text-white">
           <h1 class="has-text-white">About It's Dangerous to go Alone</h1>
           <p>
-            <u>It's Dangerous to go Alone</u> is our flagship, free agent
+            <u>It's Dangerous to go Alone</u> is our flagship, solo registration
             tournament. Focused on creating balanced teams, and being accessible
             to everyone.
           </p>

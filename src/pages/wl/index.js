@@ -4,19 +4,25 @@ import { Link } from "gatsby"
 import Layout from "src/components/Layout"
 import PageContainer from "src/components/PageContainer"
 import ScheduleTime from "src/components/ScheduleTime"
-import Mention from "src/components/Mention"
 import Highlight from "src/components/Highlight"
+import Mention from "src/components/Mention"
 
 const WeakestLink = () => (
-  <Layout pageTitle="Weakest Link">
+  <Layout
+    pageTitle="Weakest Link"
+    meta={{
+      image: "https://assets.otd.ink/wl/logo.png",
+      description: `Weakest Link is a unique, Off the Dial exclusive, free agent and team tournament. Originally an experiment, It focuses on providing learning opportunities for free agents, and coaching opportunities for teams.`,
+    }}
+  >
     <PageContainer>
       <Highlight>
         <div class="column is-8 has-text-white">
           <h1 class="has-text-white">About Weakest link</h1>
           <p>
             <u>Weakest Link</u> is a unique, Off the Dial exclusive, free agent{" "}
-            <i>and</i> team tournament. Originally an experiment, The tournament
-            provides learning opportunities for free agents, and coaching
+            <i>and</i> team tournament. Originally an experiment, It focuses on
+            providing learning opportunities for free agents, and coaching
             opportunities for teams.
           </p>
           <p>All you need to do is sign up! The world is waiting…</p>
