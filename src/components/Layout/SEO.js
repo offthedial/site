@@ -33,7 +33,7 @@ const SEO = ({ title, description, image, creator }) => {
   let [metaImage, card] =
     window.location.pathname === "/"
       ? ["https://assets.otd.ink/banner.png", "summary_large_image"]
-      : [image ? image : "https://assets.otd.ink/icon.png", "summary"]
+      : [image || "https://assets.otd.ink/icon.png", "summary"]
 
   return (
     <Helmet htmlAttributes={{ lang: "en" }}>
@@ -44,9 +44,9 @@ const SEO = ({ title, description, image, creator }) => {
       <meta property="og:description" content={metaDesc} />
       <meta property="og:url" content={siteMetadata.siteUrl} />
       <meta property="og:image" content={metaImage} />
-      <meta property="twitter:site" content={siteMetadata.twitter} />
-      <meta property="twitter:card" content={card} />
-      {creator && <meta property="twitter:creator" content={creator} />}
+      <meta name="twitter:site" content={siteMetadata.twitter} />
+      <meta name="twitter:card" content={card} />
+      {creator && <meta name="twitter:creator" content={creator} />}
       <meta name="theme-color" content="#5d9194" />
       <script
         defer
