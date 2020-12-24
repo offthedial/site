@@ -49,7 +49,7 @@ const ProfileRoute = () => {
                         </div>
                         <div class="field is-grouped is-grouped-multiline">
                           {signedUp && <SignedUp />}
-                          <SignalStrength value={user().meta?.signal} />
+                          <SignalStrength value={user.meta?.signal} />
                         </div>
                       </div>
                     </div>

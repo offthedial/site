@@ -37,7 +37,7 @@ const Form = () => {
   })
   const { control, errors, register, watch, handleSubmit } = useForm({
     mode: "onTouched",
-    defaultValues: defaultValues(user().profile),
+    defaultValues: defaultValues(user.profile),
   })
 
   const onSubmit = submitted => {
