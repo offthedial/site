@@ -11,10 +11,10 @@ const handleSignup = reg => {
     ign: reg.ign,
     sw: reg.sw,
     ranks: {
-      sz: reg.ranks.tc,
-      tc: reg.ranks.rm,
-      rm: reg.ranks.cb,
-      cb: reg.ranks.sz,
+      sz: reg.ranks.sz,
+      tc: reg.ranks.tc,
+      rm: reg.ranks.rm,
+      cb: reg.ranks.cb,
     },
     stylepoints: {
       support,
