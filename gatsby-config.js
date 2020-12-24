@@ -4,7 +4,6 @@ module.exports = {
   siteMetadata: {
     title: `Off the Dial`,
     description: `Off the Dial is a unique tournament organisation for Splatoon 2. Dedicated to providing fresh tournament opportunities for free agents.`,
-    image: `https://assets.otd.ink/banner.png`,
     siteUrl: `https://otd.ink`,
     twitter: `@Off_The_Dial`,
   },
