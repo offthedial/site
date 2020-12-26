@@ -20,7 +20,7 @@ const login = ({ auth, params, from }) => {
       navigate("/profile")
     } else if (typeof window !== "undefined") {
       from && localStorage.setItem("loginFrom", from)
-      window.location.replace(`${cloudFunctionsApi}/authorize`)
+      window.location.replace(`${cloudFunctionsApi}/auth/redirect`)
     }
   } else {
     const redirect = localStorage.getItem("loginFrom")
@@ -34,7 +34,7 @@ const login = ({ auth, params, from }) => {
 }
 
 const tokenEndpoint = ({ login }, { code, state }, redirect) => {
-  const endpoint = `${cloudFunctionsApi}/token?code=${code}&state=${state}`
+  const endpoint = `${cloudFunctionsApi}/auth/token?code=${code}&state=${state}`
   // Fetch token endpoint data, and send it to callback
   fetch(endpoint, { credentials: "include" })
     .then(res => res.json())
