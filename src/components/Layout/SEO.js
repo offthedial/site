@@ -21,19 +21,15 @@ const SEO = ({ title, description, image, creator }) => {
     `
   )
 
-  if (typeof window === "undefined") {
-    return <></>
-  }
   const metaTitle = title
     ? `${title} - ${siteMetadata.title}`
     : siteMetadata.title
   const metaDesc = description
     ? `${description} - ${siteMetadata.description}`
     : siteMetadata.description
-  let [metaImage, card] =
-    window.location.pathname === "/"
-      ? ["https://assets.otd.ink/banner.png", "summary_large_image"]
-      : [image || "https://assets.otd.ink/icon.png", "summary"]
+  let [metaImage, card] = title
+    ? [image || "https://assets.otd.ink/icon.png", "summary"]
+    : ["https://assets.otd.ink/banner.png", "summary_large_image"]
 
   return (
     <Helmet htmlAttributes={{ lang: "en" }}>
