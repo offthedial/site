@@ -34,7 +34,15 @@ Tournaments usually last anywhere between 2 and 5 hours (generally around the fo
 Yes! If there are at-least 4 teams, 1 match from each preliminary round will be streamed. There will be a five-minute break before the first finals match. All finals matches will be streamed as well.
 
 #### How are disputes/issues resolved?
-All issues are sorted here on discord.
+If you have any problems before the tournament, <Mention>#helpdesk</Mention> is the place to go. During the tournament we use smash.gg chat, if you have a dispute you can call a moderator directly on the website.
+
+#### What is ELO?
+In general, the ELO rating system is a way of calculating the relative skill levels of players. In our case, we calculate your in-game ELO when you enter your ranks and use it as one of the factors when balancing teams.
+
+You can read more about ELO on [wikipedia](https://en.wikipedia.org/wiki/Elo_rating_system).
+
+#### How are teams balanced?
+Off the Dial Bot will assign players numerical values for all aspects of play. This includes ranks, play style and previous tournament experience.
 
 #### Am I able to scrim other teams competing in the tournament?
 Yes! We have no issue with you setting up a scrim with other competitors.
@@ -71,10 +79,6 @@ No, we understand that if you don't have a team and want to experience a tournam
 #### Can I still play if I'm already on a team?
 
 Even if you're already on a team you and your teammates can still play, just don't expect to be on the same team.
-
-#### How does the balancing system works?
-
-When exporting attendees, Off the Dial Bot assigns players numerical values for all aspects of teams. This includes ranks, play style and previous tournament experience.
 
 #### When do we receive our teams?
 
