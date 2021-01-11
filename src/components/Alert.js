@@ -23,9 +23,7 @@ const Alert = ({
   return (
     <>
       {condition() && (
-        <article
-          class={`box p-0 message is-${type} ${!visible && "is-hidden"}`}
-        >
+        <div class={`box p-0 message is-${type} ${!visible && "is-hidden"}`}>
           <div class="message-body p-0">
             <div
               class="columns is-paddingless is-mobile mr-0"
@@ -56,7 +54,7 @@ const Alert = ({
               )}
             </div>
           </div>
-        </article>
+        </div>
       )}
     </>
   )
