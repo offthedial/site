@@ -37,6 +37,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.12.2",
     "react-is": "^17.0.1",
+    "react-query": "^3.5.5",
     "react-twemoji": "^0.3.0",
     "remark-emoji": "^2.1.0",
     "remark-twemoji": "^0.1.1",

@@ -1,11 +1,7 @@
 import React from "react"
-
-import { AuthProvider } from "src/services/firebase/auth"
-import { DBProvider } from "src/services/firebase/db"
+import QueryClientProvider from "src/app"
 import "src/static/globals.scss"
 
 export const wrapRootElement = ({ element }) => (
-  <AuthProvider>
-    <DBProvider>{element}</DBProvider>
-  </AuthProvider>
+  <QueryClientProvider>{element}</QueryClientProvider>
 )
