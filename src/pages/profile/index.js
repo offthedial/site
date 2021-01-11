@@ -1,19 +1,21 @@
-import React, { useContext } from "react"
+import React from "react"
 import { navigate } from "gatsby"
-import PrivateRoute from "src/components/PrivateRoute"
 import Layout from "src/components/Layout"
 import Alert from "src/components/Alert"
-import AuthContext from "src/context/AuthContext"
-import DBContext from "src/context/DBContext"
-import useServerState from "src/hooks/useServerState"
-import useSignedUp from "src/hooks/useSignedUp"
-import Twemoji from "react-twemoji"
+import {
+  useLogoutMut,
+  useUserData,
+  useUserDiscord,
+  useUserJoined,
+  useUserSignup,
+} from "src/app/hooks"
 
-const ProfileRoute = () => {
-  const { currentUser, logout } = useContext(AuthContext)
-  const { user } = useContext(DBContext)
-  const [inServer, refreshInServer] = useServerState()
-  const [signedUp] = useSignedUp()
+const Profile = () => {
+  const user = useUserData()
+  const userDiscord = useUserDiscord()
+  const userJoined = useUserJoined()
+  const userSignup = useUserSignup()
+  const logoutMut = useLogoutMut()
 
   return (
     <Layout pageTitle="Profile">
@@ -21,11 +23,7 @@ const ProfileRoute = () => {
         <div class="container">
           <div class="columns is-centered">
             <div class="column is-9">
-              <NotInServerAlert
-                inServer={refreshInServer}
-                refreshInServer={inServer}
-                signedUp={signedUp}
-              />
+              <NotInServerAlert {...{ userJoined, userSignup }} />
               <div class="mb-5 is-size-4 has-text-weight-bold">My Profile</div>
               <div
                 class="p-4 has-background-white-bis"
@@ -37,32 +35,26 @@ const ProfileRoute = () => {
                       <p class="image is-96x96">
                         <img
                           class="is-rounded"
-                          src={currentUser()?.photoURL}
+                          src={userDiscord.data?.avatarUrl}
                           alt=""
                         />
                       </p>
                     </div>
                     <div class="level-item">
                       <div>
-                        <div class="is-size-2 has-text-weight-semibold">
-                          {currentUser()?.displayName}
+                        <div class="is-size-2 has-text-weight-semibold has-text-centered-mobile">
+                          {userDiscord.data?.username}
                         </div>
                         <div class="field is-grouped is-grouped-multiline">
-                          {signedUp && <SignedUp />}
-                          <SignalStrength value={user?.meta?.signal} />
+                          {userSignup.data && <SignedUp />}
+                          <SignalStrength value={user.data?.meta?.signal} />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <blockquote class="is-size-3 my-6">
-                  <Twemoji>
-                    <span>🚧</span>{" "}
-                    <span class="has-text-weight-medium">
-                      Under construction
-                    </span>{" "}
-                    <span>🏗️</span>
-                  </Twemoji>
+                  Under construction
                 </blockquote>
                 {/* <div
                   class="block has-background-white-bis"
@@ -71,15 +63,17 @@ const ProfileRoute = () => {
                   OTD Profile Data (firestore)
                 </div> */}
                 <div class="buttons">
-                  {/* <button class="button is-primary">Refresh Profile</button> TODO: support this */}
-                  {currentUser() && (
-                    <button
-                      class="button is-danger is-outlined"
-                      onClick={() => logout(() => navigate("/"))}
-                    >
-                      Logout
-                    </button>
-                  )}
+                  <button class="button is-cyan" onClick={userDiscord.refetch}>
+                    Refresh Profile
+                  </button>
+                  <button
+                    class="button is-danger is-outlined"
+                    onClick={() =>
+                      logoutMut.mutate({ callback: () => navigate("/") })
+                    }
+                  >
+                    Logout
+                  </button>
                 </div>
               </div>
             </div>
@@ -90,14 +84,18 @@ const ProfileRoute = () => {
   )
 }
 
-const NotInServerAlert = ({ inServer, refreshInServer, signedUp }) => {
-  let type
-  if (!inServer) {
-    type = signedUp ? "danger" : "warning"
-  } else {
-    type = null
+const NotInServerAlert = ({ userJoined, userSignup }) => {
+  if (userSignup.isLoading || userJoined.isLoading) {
+    return <></>
   }
-  if (!type) {
+  let type
+  if (!userJoined.data) {
+    if (!userSignup.data) {
+      type = "danger"
+    } else {
+      type = "warning"
+    }
+  } else {
     return <></>
   }
   return (
@@ -117,14 +115,6 @@ const NotInServerAlert = ({ inServer, refreshInServer, signedUp }) => {
           >
             Join
           </a>
-        </p>
-        <p class="control m-0">
-          <button
-            class={`button is-${type} is-outlined`}
-            onClick={refreshInServer}
-          >
-            Refresh
-          </button>
         </p>
       </div>
     </Alert>
@@ -158,8 +148,8 @@ const SignedUp = () => (
   </div>
 )
 
-const Profile = ({ location }) => (
-  <PrivateRoute location={location} component={ProfileRoute} />
-)
+// const Profile = ({ location }) => (
+//   <PrivateRoute location={location} component={ProfileRoute} />
+// )
 
 export default Profile
