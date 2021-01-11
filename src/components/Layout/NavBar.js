@@ -1,13 +1,13 @@
-import React, { useContext } from "react"
+import React from "react"
 
 import { Link } from "gatsby"
 
 import styled from "styled-components"
-import AuthContext from "src/context/AuthContext"
 import userDefault from "src/static/images/user_default.svg"
 import discord from "src/static/images/discord.svg"
 import discordi from "src/static/images/discordi.svg"
 import discordw from "src/static/images/discordw.svg"
+import useUserDiscord from "src/app/hooks/useUserDiscord"
 
 const NavArrow = styled.div.attrs(() => ({
   className: "px-3",
@@ -51,20 +51,9 @@ const DropdownItem = styled.div.attrs(props => ({
 const ProfileImg = styled.img.attrs(() => ({ className: "p-1" }))`
   border-radius: 50%;
 `
-
-const ProfileLogo = ({ href }) => {
-  const { currentUser } = useContext(AuthContext)
-
-  return (
-    <NavWrapper>
-      <a href={href}>
-        <ProfileImg src={currentUser()?.photoURL || userDefault} />
-      </a>
-    </NavWrapper>
-  )
-}
-
 const NavBar = () => {
+  const query = useUserDiscord()
+
   return (
     <nav
       class="navbar is-transparent is-primary is-flex-touch"
@@ -114,7 +103,11 @@ const NavBar = () => {
               </div>
             </div>
             <div class="py-0">
-              <ProfileLogo href="/profile" />
+              <NavWrapper>
+                <Link to="/profile">
+                  <ProfileImg src={query.data?.avatarUrl || userDefault} />
+                </Link>
+              </NavWrapper>
             </div>
           </div>
         </div>
@@ -126,20 +119,24 @@ const NavBar = () => {
             <div class="navbar-item py-0 has-text-weight-medium">
               <NavLink to="/wl">Weakest Link</NavLink>
             </div>
-            <a
+            <Link
               class="navbar-item py-0 is-hover-translucent is-hidden-desktop-only"
-              href="/discord"
+              to="/discord"
             >
               <img class="py-2" src={discord} alt="" />
-            </a>
-            <a
+            </Link>
+            <Link
               class="navbar-item py-0 is-hover-translucent is-hidden-widescreen"
-              href="/discord"
+              to="/discord"
             >
               <img class="py-2" src={discordi} alt="" />
-            </a>
+            </Link>
             <div class="navbar-item py-0">
-              <ProfileLogo href="/profile" />
+              <NavWrapper>
+                <Link to="/profile">
+                  <ProfileImg src={query.data?.avatarUrl || userDefault} />
+                </Link>
+              </NavWrapper>
             </div>
           </div>
         </div>
