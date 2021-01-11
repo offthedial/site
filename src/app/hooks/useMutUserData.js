@@ -9,6 +9,6 @@ export default () =>
       await doc.update({ profile })
     },
     {
-      onSuccess: queryClient.invalidateQueries(["user", "data"]),
+      onSuccess: () => queryClient.invalidateQueries(["user", "data"]),
     }
   )

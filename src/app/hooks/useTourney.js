@@ -9,6 +9,7 @@ export default () =>
         .collection("tournaments")
         .doc("2KnLtpnPNjz2AE0OxwX5")
         .get()
+
       return doc.data()
     },
     {

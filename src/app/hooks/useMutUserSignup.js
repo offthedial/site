@@ -14,6 +14,6 @@ export default () =>
         .set(signup)
     },
     {
-      onSuccess: queryClient.invalidateQueries(["user", "signup"]),
+      onSuccess: () => queryClient.invalidateQueries(["user", "signup"]),
     }
   )

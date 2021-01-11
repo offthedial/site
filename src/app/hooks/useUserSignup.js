@@ -14,11 +14,13 @@ export default () =>
       if (signupsDoc.exists) {
         return { type: "signup", data: signupsDoc.data() }
       }
+
       const subsRef = tourney.collection("subs").doc(auth.currentUser?.uid)
       const subsDoc = await subsRef.get()
       if (subsDoc.exists) {
         return { type: "sub", data: subsDoc.data() }
       }
+
       return {}
     },
     {

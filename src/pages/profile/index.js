@@ -3,7 +3,7 @@ import { navigate } from "gatsby"
 import Layout from "src/components/Layout"
 import Alert from "src/components/Alert"
 import {
-  useLogoutMut,
+  useMutLogout,
   useUserData,
   useUserDiscord,
   useUserJoined,
@@ -15,7 +15,7 @@ const Profile = () => {
   const userDiscord = useUserDiscord()
   const userJoined = useUserJoined()
   const userSignup = useUserSignup()
-  const logoutMut = useLogoutMut()
+  const mutLogout = useMutLogout()
 
   return (
     <Layout pageTitle="Profile">
@@ -69,7 +69,7 @@ const Profile = () => {
                   <button
                     class="button is-danger is-outlined"
                     onClick={() =>
-                      logoutMut.mutate({ callback: () => navigate("/") })
+                      mutLogout.mutate({ callback: () => navigate("/") })
                     }
                   >
                     Logout

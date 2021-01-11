@@ -1,14 +1,14 @@
 import { navigate } from "gatsby"
 import { parse } from "query-string"
-import { useLoginMut } from "src/app/hooks"
+import { useMutLogin } from "src/app/hooks"
 import { auth } from "src/app/firebase"
 
 const api = "http://localhost:5000"
 
 const ProfileLogin = ({ location }) => {
-  const loginMut = useLoginMut()
+  const mutLogin = useMutLogin()
   login({
-    loginMut,
+    mutLogin,
     auth,
     params: parse(location.search),
     from: location.state?.from,
@@ -16,7 +16,7 @@ const ProfileLogin = ({ location }) => {
   return null
 }
 
-const login = ({ loginMut, auth, params, from }) => {
+const login = ({ mutLogin, auth, params, from }) => {
   if (Object.keys(params).length === 0) {
     if (auth.currentUser) {
       navigate("/profile")
@@ -30,12 +30,12 @@ const login = ({ loginMut, auth, params, from }) => {
     if (params.error) {
       navigateError(params.error_description)
     } else {
-      tokenEndpoint(loginMut, params, redirect)
+      tokenEndpoint(mutLogin, params, redirect)
     }
   }
 }
 
-const tokenEndpoint = (loginMut, { code, state }, redirect) => {
+const tokenEndpoint = (mutLogin, { code, state }, redirect) => {
   const endpoint = `${api}/auth/token?code=${code}&state=${state}`
   // Fetch token endpoint data, and send it to callback
   fetch(endpoint, { credentials: "include" })
@@ -44,7 +44,7 @@ const tokenEndpoint = (loginMut, { code, state }, redirect) => {
   // Use token from data to log in, and redirect
   const callback = ({ token, error }) => {
     if (token && !error) {
-      loginMut.mutate(token, {
+      mutLogin.mutate(token, {
         callback: () => navigate(redirect || "/profile"),
       })
     } else {
