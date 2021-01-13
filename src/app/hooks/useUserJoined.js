@@ -6,7 +6,7 @@ export default () =>
     ["user", "joined"],
     async () => {
       if (!auth.currentUser) {
-        return null
+        return true
       }
       const jwt = await auth.currentUser.getIdTokenResult()
 
@@ -22,6 +22,7 @@ export default () =>
       return !!inGuilds.length
     },
     {
-      staleTime: 0,
+      staleTime: 1000,
+      placeholderData: true,
     }
   )
