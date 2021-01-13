@@ -21,5 +21,7 @@ export default () =>
 
       return !!inGuilds.length
     },
-    {}
+    {
+      staleTime: 0,
+    }
   )

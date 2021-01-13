@@ -10,6 +10,6 @@ export default () =>
       return doc.data()
     },
     {
-      staleTime: Infinity,
+      cacheTime: Infinity,
     }
   )

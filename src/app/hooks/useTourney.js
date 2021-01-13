@@ -13,6 +13,6 @@ export default () =>
       return doc.data()
     },
     {
-      staleTime: Infinity,
+      staleTime: 5 * 60 * 1000,
     }
   )

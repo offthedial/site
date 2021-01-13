@@ -24,7 +24,6 @@ export default () =>
       return {}
     },
     {
-      staleTime: Infinity,
       cacheTime: Infinity,
     }
   )
