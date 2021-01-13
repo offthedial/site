@@ -1,5 +1,6 @@
 import { useQuery } from "react-query"
-import { auth, db } from "../firebase"
+import { auth } from "../firebase"
+import { queryClient } from ".."
 
 export default () =>
   useQuery(
@@ -8,26 +9,21 @@ export default () =>
       if (!auth.currentUser) {
         return {}
       }
+      const doc = queryClient.getQueryData(["tourney"]).ref
 
-      const tourney = db.collection("tournaments").doc("2Kn")
-
-      const signupsRef = tourney
-        .collection("signups")
-        .doc(auth.currentUser?.uid)
+      const signupsRef = doc.collection("signups").doc(auth.currentUser?.uid)
       const signupsDoc = await signupsRef.get()
       if (signupsDoc.exists) {
-        return { type: "signup", data: signupsDoc.data() }
+        return { type: "signup", data: signupsDoc.data(), ref: signupsRef }
       }
 
-      const subsRef = tourney.collection("subs").doc(auth.currentUser?.uid)
+      const subsRef = doc.collection("subs").doc(auth.currentUser?.uid)
       const subsDoc = await subsRef.get()
       if (subsDoc.exists) {
-        return { type: "sub", data: subsDoc.data() }
+        return { type: "sub", data: subsDoc.data(), ref: subsRef }
       }
 
       return {}
     },
-    {
-      cacheTime: Infinity,
-    }
+    {}
   )

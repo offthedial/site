@@ -9,9 +9,7 @@ export default () =>
         return {}
       }
 
-      const doc = await db.collection("users").doc(auth.currentUser.uid).get()
-
-      return doc.data()
+      return { ...doc.data(), ref: doc.ref }
     },
     {
       cacheTime: Infinity,

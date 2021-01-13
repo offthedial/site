@@ -40,6 +40,7 @@ export default () =>
         ...tourneyData,
         isEnded: isPast(endAt),
         isRegistrationOpen: smashggData?.isRegistrationOpen,
+        ref: tourney.ref,
       }
     },
     {
