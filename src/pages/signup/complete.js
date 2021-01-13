@@ -1,12 +1,11 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
 import Layout from "src/components/Layout"
-import Loading from "src/components/Loading"
 
 const Complete = ({ location }) => {
   if (!location.state?.complete && typeof window !== "undefined") {
     navigate("/")
-    return <Loading />
+    return <></>
   }
   return (
     <Layout pageTitle="Thank you for registering">
