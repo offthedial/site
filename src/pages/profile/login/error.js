@@ -5,7 +5,6 @@ import Layout from "src/components/Layout"
 const ProfileLoginError = ({ location }) => {
   if (!location.state?.error && typeof window !== "undefined") {
     navigate("/")
-    return <></>
   }
   return (
     <Layout pageTitle="Login Error" class="is-flex">
