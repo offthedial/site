@@ -1,4 +1,5 @@
 import { useQuery } from "react-query"
+import { queryClient } from ".."
 import { db } from "../firebase"
 import { fromUnixTime, isPast } from "date-fns"
 
@@ -6,17 +7,17 @@ export default () =>
   useQuery(
     ["tourney"],
     async () => {
-      const docs = await db
-        .collection("tournaments")
-        .orderBy("date", "desc")
-        .limit(1)
-        .get()
-      let doc
-      docs.forEach(d => {
-        doc = d
+      const tourney = (
+        await db
+          .collection("tournaments")
+          .orderBy("date", "desc")
+          .limit(1)
+          .get()
+      ).docs[0]
+      tourney.ref.onSnapshot(doc => {
+        queryClient.invalidateQueries(["tourney"])
       })
-      const tourneyData = doc.data()
-      console.log(doc.id, tourneyData)
+      const tourneyData = tourney.data()
 
       const smashggRes = await fetch("https://api.smash.gg/gql/alpha", {
         method: "POST",
@@ -34,16 +35,13 @@ export default () =>
         }),
       })
       const smashggData = (await smashggRes.json()).data?.tournament
-      const endAt = fromUnixTime(smashggData?.endAt)
 
       return {
         ...tourneyData,
-        isEnded: isPast(endAt),
+        hasEnded: isPast(fromUnixTime(smashggData?.endAt)),
         isRegistrationOpen: smashggData?.isRegistrationOpen,
         ref: tourney.ref,
       }
     },
-    {
-      staleTime: 5 * 60 * 1000,
-    }
+    {}
   )
