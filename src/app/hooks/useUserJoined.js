@@ -1,14 +1,14 @@
 import { useQuery } from "react-query"
-import { getUserToken } from "../firebase"
+import { auth } from "../firebase"
 
 export default () =>
   useQuery(
     ["user", "joined"],
     async () => {
-      const jwt = await getUserToken()
-      if (!jwt) {
+      if (!auth.currentUser) {
         return null
       }
+      const jwt = await auth.currentUser.getIdTokenResult()
 
       const guildRes = await fetch("https://discord.com/api/users/@me/guilds", {
         method: "GET",

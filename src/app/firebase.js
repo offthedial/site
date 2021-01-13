@@ -9,15 +9,5 @@ if (typeof window !== "undefined") {
 }
 const db = firebase.firestore()
 
-// Helper functions
-const getUserToken = async () => {
-  if (auth.currentUser) {
-    return await auth.currentUser.getIdTokenResult()
-  } else {
-    return null
-  }
-}
-
 export { auth, db }
-export { getUserToken }
 export default firebase
