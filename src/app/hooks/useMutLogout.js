@@ -9,7 +9,5 @@ export default () =>
     },
     {
       onSuccess: () => queryClient.invalidateQueries("user"),
-      onSettled: (data, error, variables) =>
-        variables.callback({ data, error }),
     }
   )

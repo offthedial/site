@@ -1,4 +1,3 @@
-import useMutLogin from "./useMutLogin"
 import useMutLogout from "./useMutLogout"
 import useMutUserData from "./useMutUserData"
 import useMutUserSignup from "./useMutUserSignup"
@@ -9,7 +8,6 @@ import useUserJoined from "./useUserJoined"
 import useUserSignup from "./useUserSignup"
 
 export {
-  useMutLogin,
   useMutLogout,
   useMutUserData,
   useMutUserSignup,
