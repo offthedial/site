@@ -1,14 +1,11 @@
 import { navigate } from "gatsby"
 import { parse } from "query-string"
-import { useMutLogin } from "src/app/hooks"
 import { auth } from "src/app/firebase"
 
 const api = "http://localhost:5000"
 
 const ProfileLogin = ({ location }) => {
-  const mutLogin = useMutLogin()
   login({
-    mutLogin,
     auth,
     params: parse(location.search),
     from: location.state?.from,
@@ -16,26 +13,26 @@ const ProfileLogin = ({ location }) => {
   return null
 }
 
-const login = ({ mutLogin, auth, params, from }) => {
+const login = ({ auth, params, from }) => {
   if (Object.keys(params).length === 0) {
     if (auth.currentUser) {
       navigate("/profile")
     } else if (typeof window !== "undefined") {
-      from && localStorage.setItem("loginFrom", from)
+      from && localStorage.setItem("otd__from", from)
       window.location.replace(`${api}/auth/redirect`)
     }
   } else {
-    const redirect = localStorage.getItem("loginFrom")
-    localStorage.removeItem("loginFrom")
+    const redirect = localStorage.getItem("otd__from")
+    localStorage.removeItem("otd__from")
     if (params.error) {
       navigateError(params.error_description)
     } else {
-      tokenEndpoint(mutLogin, params, redirect)
+      tokenEndpoint(auth, params, redirect)
     }
   }
 }
 
-const tokenEndpoint = (mutLogin, { code, state }, redirect) => {
+const tokenEndpoint = (auth, { code, state }, redirect) => {
   const endpoint = `${api}/auth/token?code=${code}&state=${state}`
   // Fetch token endpoint data, and send it to callback
   fetch(endpoint, { credentials: "include" })
@@ -44,17 +41,17 @@ const tokenEndpoint = (mutLogin, { code, state }, redirect) => {
   // Use token from data to log in, and redirect
   const callback = ({ token, error }) => {
     if (token && !error) {
-      mutLogin.mutate(token, {
-        callback: () => navigate(redirect || "/profile"),
+      auth.signInWithCustomToken(token).then(() => {
+        navigate(redirect || "/profile")
       })
     } else {
-      navigateError(error, redirect)
+      navigateError(error)
     }
   }
 }
 
-const navigateError = (error, redirect) => {
-  navigate("error", { state: { error, redirect } })
+const navigateError = error => {
+  navigate("error", { state: { error } })
 }
 
 export default ProfileLogin
