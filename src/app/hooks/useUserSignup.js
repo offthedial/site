@@ -5,6 +5,10 @@ export default () =>
   useQuery(
     ["user", "signup"],
     async () => {
+      if (!auth.currentUser) {
+        return {}
+      }
+
       const tourney = db.collection("tournaments").doc("2Kn")
 
       const signupsRef = tourney
