@@ -1,9 +1,11 @@
 import { useQuery } from "react-query"
 import { auth } from "../firebase"
 import { queryClient } from ".."
+import useTourney from "./useTourney"
 
-export default () =>
-  useQuery(
+export default () => {
+  const tourney = useTourney()
+  return useQuery(
     ["user", "signup"],
     async () => {
       if (!auth.currentUser) {
@@ -25,5 +27,6 @@ export default () =>
 
       return {}
     },
-    {}
+    { enabled: !!tourney.data }
   )
+}

@@ -1,9 +1,13 @@
 import { useMutation } from "react-query"
-import { queryClient } from ".."
 import { auth } from "../firebase"
+import { queryClient } from ".."
+import useTourney from "./useTourney"
+import useUserSignup from "./useUserSignup"
 
-export default () =>
-  useMutation(
+export default () => {
+  useTourney()
+  useUserSignup()
+  return useMutation(
     async signup => {
       const tourney = queryClient.getQueryData(["tourney"])
       const userSignup = queryClient.getQueryData(["user", "signup"])
@@ -24,3 +28,4 @@ export default () =>
       onSuccess: () => queryClient.invalidateQueries(["user", "signup"]),
     }
   )
+}
