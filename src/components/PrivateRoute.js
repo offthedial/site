@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 import { navigate } from "gatsby"
 import { auth } from "src/app/firebase"
