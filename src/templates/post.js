@@ -18,10 +18,13 @@ const Post = ({ pageContext, children }) => (
         {pageContext.frontmatter.author} ·{" "}
         {formatPostDate(pageContext.frontmatter.date)}
         {pageContext.frontmatter.tournament && (
-          <div>
+          <div class="buttons is-centered">
+            <Link to={`/signup`} class="button mt-2 is-orange is-outlined">
+              Signup!
+            </Link>
             <Link
               to={`/${pageContext.frontmatter.tournament}`}
-              class="button mt-2 is-primary is-outlined"
+              class="button mt-2 is-primary is-inverted"
             >
               Tournament Page
             </Link>
