@@ -50,7 +50,7 @@ const Profile = ({ location }) => {
                             {userDiscord.data?.username}
                           </div>
                           <div class="field is-grouped is-grouped-multiline">
-                            {userSignup.data && (
+                            {userSignup.data?.type && (
                               <div class="control">
                                 <div class="tags has-addons">
                                   <span class="tag is-rounded is-orange is-size-7">
