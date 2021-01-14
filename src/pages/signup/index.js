@@ -282,13 +282,13 @@ const Signup = ({ location }) => {
                       overflow: "hidden",
                     }}
                   >
-                    {/* <iframe
-                style={{ borderWidth: "10px" }}
-                title="smashgg"
-                src={`https://smash.gg/${tourneyQuery.data?.smashgg}/register/embed`}
-                height="100%"
-                width="100%"
-              /> */}
+                    <iframe
+                      style={{ borderWidth: "10px" }}
+                      title="smashgg"
+                      src={`https://smash.gg/${tourneyQuery.data?.smashgg}/register/embed`}
+                      height="100%"
+                      width="100%"
+                    />
                   </div>
                 </div>
               </Field>
