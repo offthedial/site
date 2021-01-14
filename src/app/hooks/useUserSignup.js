@@ -11,7 +11,11 @@ export default () => {
       if (!auth.currentUser) {
         return {}
       }
-      const doc = queryClient.getQueryData(["tourney"]).ref
+      const tourney = queryClient.getQueryData(["tourney"])
+      if (tourney.hasEnded) {
+        return {}
+      }
+      const doc = tourney.ref
 
       const signupsRef = doc.collection("signups").doc(auth.currentUser?.uid)
       const signupsDoc = await signupsRef.get()
