@@ -378,9 +378,6 @@ const Signup = ({ location }) => {
                     },
                   }}
                 />
-                {/* <span class="icon is-right">
-                  <i class="fas fa-user-check" />
-                </span> */}
               </div>
             </div>
             <ErrorMessage options={[form.errors, "smashgg.link"]} />

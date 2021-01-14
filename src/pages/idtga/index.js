@@ -18,20 +18,17 @@ const Idtga = () => (
       <Highlight>
         <div class="column is-8 has-text-white">
           <h1 class="has-text-white">About It's Dangerous to go Alone</h1>
-          <p>
+          <p class="is-size-6">
             <u>It's Dangerous to go Alone</u> is our flagship, solo registration
             tournament. Focused on creating balanced teams, and being accessible
             to everyone.
           </p>
           <p>All you need to do is sign up! The world is waiting…</p>
           <div class="buttons">
-            <Link to="/signup" class="button is-orange is-inverted">
+            <Link to="/signup" class="button is-medium is-orange is-inverted">
               Signup
             </Link>
-            <Link
-              to="/idtga/rules"
-              class="button is-primary is-outlined is-inverted"
-            >
+            <Link to="/idtga/rules" class="button is-medium is-primary is-text">
               Rules
             </Link>
           </div>
