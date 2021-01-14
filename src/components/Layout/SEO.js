@@ -28,7 +28,7 @@ const SEO = ({ title, description, image, creator }) => {
     ? `${description} - ${siteMetadata.description}`
     : siteMetadata.description
   let [metaImage, card] = title
-    ? [image || "https://assets.otd.ink/icon.png", "summary"]
+    ? [image || "https://assets.otd.ink/logo.png", "summary"]
     : ["https://assets.otd.ink/banner.png", "summary_large_image"]
 
   return (
