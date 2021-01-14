@@ -14,7 +14,7 @@ import {
   useTourney,
 } from "src/app/hooks"
 
-const Signup = () => {
+const Signup = ({ location }) => {
   const form = useForm({ mode: "onTouched" })
   const tourneyQuery = useTourney()
   const userSignupMut = useMutUserSignup()
@@ -90,7 +90,7 @@ const Signup = () => {
   }
 
   return (
-    <FormContainer>
+    <FormContainer location={location}>
       <FromStatusAlerts
         {...{ tourneyQuery, userSignupQuery, userJoinedQuery }}
       />
@@ -461,16 +461,18 @@ const Signup = () => {
   )
 }
 
-const FormContainer = ({ children }) => (
-  <Layout pageTitle="Signup">
-    <div class="section">
-      <div class="container is-fullhd">
-        <div class="columns is-centered">
-          <div class="column is-9">{children}</div>
+const FormContainer = ({ location, children }) => (
+  <PrivateRoute location={location}>
+    <Layout pageTitle="Signup">
+      <div class="section">
+        <div class="container is-fullhd">
+          <div class="columns is-centered">
+            <div class="column is-9">{children}</div>
+          </div>
         </div>
       </div>
-    </div>
-  </Layout>
+    </Layout>
+  </PrivateRoute>
 )
 
 const FromStatusAlerts = ({
