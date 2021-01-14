@@ -1,13 +1,13 @@
 import React from "react"
-import { navigate } from "gatsby"
+import { Link, navigate } from "gatsby"
 import Layout from "src/components/Layout"
 import Alert from "src/components/Alert"
 import {
-  useMutLogout,
   useUserData,
   useUserDiscord,
   useUserJoined,
   useUserSignup,
+  useMutLogout,
 } from "src/app/hooks"
 
 const Profile = () => {
@@ -23,7 +23,7 @@ const Profile = () => {
         <div class="container">
           <div class="columns is-centered">
             <div class="column is-9">
-              <NotInServerAlert {...{ userJoined, userSignup }} />
+              <JoinedAlert {...{ userJoined, userSignup }} />
               <div class="mb-5 is-size-4 has-text-weight-bold">My Profile</div>
               <div
                 class="p-4 has-background-white-bis"
@@ -46,31 +46,61 @@ const Profile = () => {
                           {userDiscord.data?.username}
                         </div>
                         <div class="field is-grouped is-grouped-multiline">
-                          {userSignup.data && <SignedUp />}
-                          <SignalStrength value={user.data?.meta?.signal} />
+                          {userSignup.data && (
+                            <div class="control">
+                              <div class="tags has-addons">
+                                <span class="tag is-rounded is-orange is-size-7">
+                                  <span class="icon is-medium pr-1">
+                                    <i class="fas fa-user-check" />
+                                  </span>
+                                  Signed Up!
+                                </span>
+                                {userSignup.data?.type === "sub" && (
+                                  <span class="tag is-rounded is-orange is-light is-size-7">
+                                    As a Sub
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                          )}
+                          <div class="control">
+                            <div class="tags has-addons">
+                              <span class="tag is-rounded is-cyan is-size-7">
+                                <span class="icon is-medium pr-1">
+                                  <i class="fas fa-signal" />
+                                </span>
+                                Signal Strength
+                              </span>
+                              <span class="tag is-rounded is-cyan is-light is-size-7">
+                                <span class="is-family-monospace">
+                                  {user.data?.meta?.signal || 0}
+                                </span>
+                              </span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                {/* OTD Profile Data */}
                 <blockquote class="is-size-3 my-6">
                   Under construction
                 </blockquote>
                 {/* <div
                   class="block has-background-white-bis"
                   style={{ borderRadius: 4 }}
-                >
-                  OTD Profile Data (firestore)
-                </div> */}
+                ></div> */}
                 <div class="buttons">
-                  <button class="button is-cyan" onClick={userDiscord.refetch}>
+                  {/* <button class="button is-cyan" onClick={userDiscord.refetch}>
                     Refresh Profile
-                  </button>
+                  </button> */}
                   <button
-                    class="button is-danger is-outlined"
-                    onClick={() =>
-                      mutLogout.mutate({ callback: () => navigate("/") })
-                    }
+                    class="button is-danger is-inverted is-light"
+                    onClick={() => {
+                      mutLogout.mutate()
+                      navigate("/")
+                    }}
                   >
                     Logout
                   </button>
@@ -84,13 +114,13 @@ const Profile = () => {
   )
 }
 
-const NotInServerAlert = ({ userJoined, userSignup }) => {
+const JoinedAlert = ({ userJoined, userSignup }) => {
   if (userSignup.isLoading || userJoined.isLoading) {
     return <></>
   }
   let type
   if (!userJoined.data) {
-    if (!userSignup.data) {
+    if (!!userSignup.data?.type) {
       type = "danger"
     } else {
       type = "warning"
@@ -100,53 +130,25 @@ const NotInServerAlert = ({ userJoined, userSignup }) => {
   }
   return (
     <Alert type={type}>
-      <span>
-        {type === "warning"
-          ? "You are not in the Off the Dial discord server. This is required to sign up for any tournaments."
-          : "You are not in the Off the Dial discord server, but you have signed up. You will be removed if you do not join the server."}
-      </span>
-      <div class="field has-addons pl-4">
-        <p class="control m-0">
-          <a
-            href="/discord"
-            target="_blank"
-            rel="noreferrer"
-            class={`button is-${type} is-outlined`}
+      <div>
+        <div>
+          {type === "warning"
+            ? "You are not in the Off the Dial discord server. This is required before you sign up for any tournaments."
+            : "You are not in the Off the Dial discord server, but you have signed up. You will be removed if you do not join the server."}
+        </div>
+        <div class="pt-3">
+          <Link
+            class="has-text-weight-bold"
+            style={{ textDecoration: "none" }}
+            to="/discord"
           >
-            Join
-          </a>
-        </p>
+            Join Server
+          </Link>
+        </div>
       </div>
     </Alert>
   )
 }
-
-const SignalStrength = ({ value }) => (
-  <div class="control">
-    <div class="tags has-addons">
-      <span class="tag is-rounded is-cyan is-size-7">
-        <span class="icon is-medium pr-1">
-          <i class="fas fa-signal" />
-        </span>
-        Signal Strength
-      </span>
-      <span class="tag is-rounded is-cyan is-light is-size-7">
-        <span class="is-family-monospace">{value}</span>
-      </span>
-    </div>
-  </div>
-)
-
-const SignedUp = () => (
-  <div class="control">
-    <span class="tag is-rounded is-orange is-size-7">
-      <span class="icon is-medium pr-1">
-        <i class="fas fa-user-check" />
-      </span>
-      Signed Up!
-    </span>
-  </div>
-)
 
 // const Profile = ({ location }) => (
 //   <PrivateRoute location={location} component={ProfileRoute} />
