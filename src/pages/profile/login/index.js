@@ -25,7 +25,7 @@ const login = ({ auth, params, from }) => {
     const redirect = localStorage.getItem("otd__from")
     localStorage.removeItem("otd__from")
     if (params.error) {
-      navigateError(params.error_description)
+      navigateError(params.error_description, redirect)
     } else {
       tokenEndpoint(auth, params, redirect)
     }
@@ -45,13 +45,13 @@ const tokenEndpoint = (auth, { code, state }, redirect) => {
         navigate(redirect || "/profile")
       })
     } else {
-      navigateError(error)
+      navigateError(error, redirect)
     }
   }
 }
 
-const navigateError = error => {
-  navigate("error", { state: { error } })
+const navigateError = (error, from) => {
+  navigate("error", { state: { error, from } })
 }
 
 export default ProfileLogin

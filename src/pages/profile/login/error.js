@@ -6,6 +6,7 @@ const ProfileLoginError = ({ location }) => {
   if (!location.state?.error && typeof window !== "undefined") {
     navigate("/")
   }
+  console.log(location.state?.from)
   return (
     <Layout pageTitle="Login Error" class="is-flex">
       <section class="my-6">
@@ -13,7 +14,7 @@ const ProfileLoginError = ({ location }) => {
           <div class="hero-body has-text-centered">
             <h1 class="title is-size-1">Error</h1>
             <div class="subtitle is-size-3">{location.state?.error}</div>
-            <Link to="..">
+            <Link to=".." state={{ from: location.state?.from }}>
               <button class="button is-large is-primary">Retry</button>
             </Link>
           </div>
