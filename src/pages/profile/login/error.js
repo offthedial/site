@@ -6,7 +6,6 @@ const ProfileLoginError = ({ location }) => {
   if (!location.state?.error && typeof window !== "undefined") {
     navigate("/")
   }
-  console.log(location.state?.from)
   return (
     <Layout pageTitle="Login Error" class="is-flex">
       <section class="my-6">
