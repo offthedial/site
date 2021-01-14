@@ -2,7 +2,7 @@ import { navigate } from "gatsby"
 import { parse } from "query-string"
 import { auth } from "src/app/firebase"
 
-const api = "http://localhost:5000"
+const api = "https://api.otd.ink"
 
 const ProfileLogin = ({ location }) => {
   login({
