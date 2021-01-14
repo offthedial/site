@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useLayoutEffect } from "react"
 
 import { navigate } from "gatsby"
 import { auth } from "src/app/firebase"
@@ -6,7 +6,7 @@ import { auth } from "src/app/firebase"
 const PrivateRoute = ({ location, children }) => {
   const loginRoute = "/profile/login"
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (
         !user &&
