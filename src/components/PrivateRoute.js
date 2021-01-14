@@ -1,23 +1,26 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import { navigate } from "gatsby"
-import Loading from "src/components/Loading"
-import AuthContext from "src/context/AuthContext"
+import { auth } from "src/app/firebase"
 
-const PrivateRoute = ({ component: Component, location, ...rest }) => {
-  const { currentUser } = React.useContext(AuthContext)
+const PrivateRoute = ({ location, children }) => {
   const loginRoute = "/profile/login"
 
-  if (
-    !currentUser() &&
-    location.pathname !== loginRoute &&
-    typeof window !== "undefined"
-  ) {
-    navigate(loginRoute, { state: { from: location.pathname } })
-    return <Loading />
-  } else {
-    return <Component {...rest} />
-  }
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (
+        !user &&
+        location.pathname !== loginRoute &&
+        typeof window !== "undefined"
+      ) {
+        navigate(loginRoute, { state: { from: location.pathname } })
+        return <></>
+      }
+    })
+    unsubscribe()
+  }, [])
+
+  return <>{children}</>
 }
 
 export default PrivateRoute
