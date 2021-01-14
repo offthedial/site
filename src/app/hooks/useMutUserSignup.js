@@ -16,8 +16,10 @@ export default () => {
       }
 
       if (userSignup?.type) {
+        // Set existing signup
         return await userSignup.ref.set(signup)
       } else {
+        // Add document to "signups" or "subs" based on registration status
         return await tourney.ref
           .collection(tourney.isRegistrationOpen ? "signups" : "subs")
           .doc(auth.currentUser.uid)
