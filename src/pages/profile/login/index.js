@@ -15,11 +15,13 @@ const ProfileLogin = ({ location }) => {
 
 const login = ({ auth, params, from }) => {
   if (Object.keys(params).length === 0) {
-    if (auth.currentUser) {
-      navigate("/profile")
-    } else if (typeof window !== "undefined") {
-      from && localStorage.setItem("otd__from", from)
-      window.location.replace(`${api}/auth/redirect`)
+    if (typeof window !== "undefined") {
+      if (auth.currentUser) {
+        navigate("/profile")
+      } else {
+        from && localStorage.setItem("otd__from", from)
+        window.location.replace(`${api}/auth/redirect`)
+      }
     }
   } else {
     const redirect = localStorage.getItem("otd__from")
