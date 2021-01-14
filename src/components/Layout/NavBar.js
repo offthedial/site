@@ -48,9 +48,18 @@ const DropdownItem = styled.div.attrs(props => ({
   className: "mb-2 is-size-5 dropdown-item py-0",
 }))``
 
-const ProfileImg = styled.img.attrs(() => ({ className: "p-1" }))`
-  border-radius: 50%;
-`
+const ProfileImage = ({ props }) => (
+  <NavWrapper>
+    <Link to="/profile">
+      <img
+        class={`p-1 ${props.query.isLoading && "is-invisible"}`}
+        style={{ borderRadius: "50%" }}
+        src={props.query.data?.avatarUrl || props.userDefault}
+      />
+    </Link>
+  </NavWrapper>
+)
+
 const NavBar = () => {
   const query = useUserDiscord()
 
@@ -103,11 +112,7 @@ const NavBar = () => {
               </div>
             </div>
             <div class="py-0">
-              <NavWrapper>
-                <Link to="/profile">
-                  <ProfileImg src={query.data?.avatarUrl || userDefault} />
-                </Link>
-              </NavWrapper>
+              <ProfileImage props={{ query, userDefault }} />
             </div>
           </div>
         </div>
@@ -132,11 +137,7 @@ const NavBar = () => {
               <img class="py-2" src={discordi} alt="" />
             </Link>
             <div class="navbar-item py-0">
-              <NavWrapper>
-                <Link to="/profile">
-                  <ProfileImg src={query.data?.avatarUrl || userDefault} />
-                </Link>
-              </NavWrapper>
+              <ProfileImage props={{ query, userDefault }} />
             </div>
           </div>
         </div>
