@@ -448,7 +448,7 @@ const Signup = ({ location }) => {
               options={[
                 {
                   submit: {
-                    message: "Tournament has ended",
+                    message: "Registration is closed",
                   },
                 },
                 "submit",
@@ -486,8 +486,8 @@ const FromStatusAlerts = ({
       type: "info",
       message: (
         <>
-          <b>Tournament has ended</b>. Be on the look out for tournaments in the
-          future!
+          <b>Registration is closed</b>. Be on the look out for tournaments in
+          the future!
         </>
       ),
     })

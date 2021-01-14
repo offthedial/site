@@ -12,7 +12,7 @@ export default () => {
       const tourney = queryClient.getQueryData(["tourney"])
       const userSignup = queryClient.getQueryData(["user", "signup"])
       if (tourney.hasEnded) {
-        throw Error("Tournament has ended.")
+        throw Error("Registration is closed.")
       }
 
       if (userSignup?.type) {
