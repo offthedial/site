@@ -28,7 +28,7 @@ const SEO = ({ title, description, image, creator }) => {
     ? `${description} - ${siteMetadata.description}`
     : siteMetadata.description
   let [metaImage, card] = title
-    ? [image || "https://assets.otd.ink/logo.png", "summary"]
+    ? [image || "https://assets.otd.ink/logo.svg", "summary"]
     : ["https://assets.otd.ink/banner.png", "summary_large_image"]
 
   return (
@@ -52,7 +52,7 @@ const SEO = ({ title, description, image, creator }) => {
         rel="icon"
         type="image/png"
         sizes="64x64"
-        href="https://assets.otd.ink/favicon.png"
+        href="https://assets.otd.ink/favicon.svg"
       />
     </Helmet>
   )

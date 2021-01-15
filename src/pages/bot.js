@@ -39,7 +39,7 @@ const Bot = () => (
           </p>
         </div>
         <div class="column is-hidden-mobile">
-          <img src="https://assets.otd.ink/bot/logo.png" alt="" />
+          <img src="https://assets.otd.ink/bot/logo.svg" alt="" />
         </div>
       </div>
       <h2>Contributing</h2>

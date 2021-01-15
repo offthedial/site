@@ -10,7 +10,7 @@ const Idtga = () => (
   <Layout
     pageTitle="It's Dangerous to go Alone"
     meta={{
-      image: "https://assets.otd.ink/idtga/logo.png",
+      image: "https://assets.otd.ink/idtga/logo.svg",
       description: `It's Dangerous to go Alone is our flagship, solo registration tournament. Focused on creating balanced teams, and being accessible to everyone.`,
     }}
   >
@@ -34,7 +34,7 @@ const Idtga = () => (
           </div>
         </div>
         <div class="column is-4">
-          <img src="https://assets.otd.ink/idtga/logo-nobg.png" alt="" />
+          <img src="https://assets.otd.ink/idtga/logo-nobg.svg" alt="" />
         </div>
       </Highlight>
       <div class="section px-0">

@@ -11,7 +11,7 @@ const WeakestLink = () => (
   <Layout
     pageTitle="Weakest Link"
     meta={{
-      image: "https://assets.otd.ink/wl/logo.png",
+      image: "https://assets.otd.ink/wl/logo.svg",
       description: `Weakest Link is a unique, Off the Dial exclusive, free agent and team tournament. Originally an experiment, It focuses on providing learning opportunities for free agents, and coaching opportunities for teams.`,
     }}
   >
@@ -36,7 +36,7 @@ const WeakestLink = () => (
           </div>
         </div>
         <div class="column is-4">
-          <img src="https://assets.otd.ink/wl/logo-nobg.png" alt="" />
+          <img src="https://assets.otd.ink/wl/logo-nobg.svg" alt="" />
         </div>
       </Highlight>
       <div class="section px-0">

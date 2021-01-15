@@ -73,7 +73,7 @@ const NavBar = () => {
         <div class="navbar-brand">
           <div class="navbar-item py-0" style={{ flexShrink: 1 }}>
             <NavLink to="/">
-              <img class="py-3" src="https://assets.otd.ink/title.png" alt="" />
+              <img class="py-3" src="https://assets.otd.ink/title.svg" alt="" />
             </NavLink>
           </div>
           <div
