@@ -44,7 +44,7 @@ const Index = () => {
             </p>
           </div>
           <div class="column is-3 is-hidden-mobile">
-            <img src="https://assets.otd.ink/logo-nobg.png" alt="" />
+            <img src="https://assets.otd.ink/logo-nobg.svg" alt="" />
           </div>
         </Highlight>
       </div>
