@@ -1,6 +1,8 @@
 {
   "name": "site",
   "dependencies": {
+    "@fontsource/dm-mono": "^4.1.0",
+    "@fontsource/dm-sans": "^4.1.0",
     "@mdx-js/mdx": "^1.6.21",
     "@mdx-js/react": "^1.6.21",
     "@typeform/embed": "^0.29.0",
