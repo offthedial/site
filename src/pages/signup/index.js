@@ -268,7 +268,7 @@ const Signup = ({ location }) => {
 
         <div class="section px-0">
           <div class="title">Set up smash.gg</div>
-          {(tourneyQuery.data?.isRegistrationOpen ||
+          {(tourneyQuery.data?.hasClosed ||
             tourneyQuery.data?.hasEnded ||
             userSignupQuery.data?.type === "signup") && (
             <>
@@ -500,7 +500,7 @@ const FromStatusAlerts = ({
         ),
       })
     } else if (!userSignupQuery.isLoading) {
-      if (!tourneyQuery.data?.isRegistrationOpen) {
+      if (tourneyQuery.data?.hasClosed) {
         alerts.push({
           type: "warning",
           message: (
