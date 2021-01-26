@@ -17,10 +17,9 @@ export default () =>
 
       return {
         ...tourneyData,
-        hasEnded: isPast(fromUnixTime(tourneyData.smashgg.endAt)),
-        hasClosed: isPast(
-          fromUnixTime(tourneyData.smashgg.registrationClosesAt)
-        ),
+        hasEnded: () => isPast(fromUnixTime(tourneyData.smashgg.endAt)),
+        hasClosed: () =>
+          isPast(fromUnixTime(tourneyData.smashgg.registrationClosesAt)),
         ref: tourney.ref,
       }
     },

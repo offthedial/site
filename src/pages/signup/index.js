@@ -268,8 +268,8 @@ const Signup = ({ location }) => {
 
         <div class="section px-0">
           <div class="title">Set up smash.gg</div>
-          {(tourneyQuery.data?.hasClosed ||
-            tourneyQuery.data?.hasEnded ||
+          {(tourneyQuery.data?.hasClosed() ||
+            tourneyQuery.data?.hasEnded() ||
             userSignupQuery.data?.type === "signup") && (
             <>
               <Field label="Register on smash.gg, copy the confirmation code when it pops up.">
@@ -423,7 +423,7 @@ const Signup = ({ location }) => {
             type="button"
             onClick={form.handleSubmit(handleSignup)}
             class="button is-centered is-primary is-large"
-            disabled={!userJoinedQuery.data || tourneyQuery.data?.hasEnded}
+            disabled={!userJoinedQuery.data || tourneyQuery.data?.hasEnded()}
           >
             Submit
           </button>
@@ -440,7 +440,7 @@ const Signup = ({ location }) => {
               ]}
             />
           )}
-          {tourneyQuery.data?.hasEnded && (
+          {tourneyQuery.data?.hasEnded() && (
             <ErrorMessage
               options={[
                 {
@@ -478,7 +478,7 @@ const FromStatusAlerts = ({
   userJoinedQuery,
 }) => {
   const alerts = []
-  if (tourneyQuery.data?.hasEnded) {
+  if (tourneyQuery.data?.hasEnded()) {
     alerts.push({
       type: "info",
       message: (
@@ -500,7 +500,7 @@ const FromStatusAlerts = ({
         ),
       })
     } else if (!userSignupQuery.isLoading) {
-      if (tourneyQuery.data?.hasClosed) {
+      if (tourneyQuery.data?.hasClosed()) {
         alerts.push({
           type: "warning",
           message: (

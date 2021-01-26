@@ -12,7 +12,7 @@ export default () => {
         return {}
       }
       const tourney = queryClient.getQueryData(["tourney"])
-      if (tourney.hasEnded) {
+      if (tourney.hasEnded()) {
         return {}
       }
       const doc = tourney.ref

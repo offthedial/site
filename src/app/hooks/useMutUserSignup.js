@@ -11,7 +11,7 @@ export default () => {
     async signup => {
       const tourney = queryClient.getQueryData(["tourney"])
       const userSignup = queryClient.getQueryData(["user", "signup"])
-      if (tourney.hasEnded) {
+      if (tourney.hasEnded()) {
         throw Error("Registration is closed.")
       }
 
@@ -21,7 +21,7 @@ export default () => {
       } else {
         // Add document to "signups" or "subs" based on registration status
         return await tourney.ref
-          .collection(!tourney.hasClosed ? "signups" : "subs")
+          .collection(tourney.hasClosed() ? "subs" : "signups")
           .doc(auth.currentUser.uid)
           .set(signup)
       }
