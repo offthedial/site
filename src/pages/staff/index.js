@@ -15,8 +15,8 @@ const mapStaffCards = data => {
       id={node.frontmatter.name}
       name={node.frontmatter.name}
       role={node.frontmatter.role + " & " + node.frontmatter.hobby}
-      link={node.frontmatter.link[0]}
-      linkRef={node.frontmatter.link[1]}
+      link={node.frontmatter?.link?.[0]}
+      linkRef={node.frontmatter?.link?.[1]}
     >
       <MDXRenderer>{node.body}</MDXRenderer>
     </StaffCard>
@@ -45,14 +45,15 @@ const StaffCard = ({ id, name, role, link, linkRef, children }) => (
       <div class="mb-3">
         <div class="has-text-grey">{role}</div>
         <h2 class="my-1">{name}</h2>
-        <a
-          class="is-link is-hover-underline has-text-weight-medium"
-          href={linkRef}
-        >
-          {link}
-        </a>
+        {link && (
+          <a
+            class="is-link is-hover-underline has-text-weight-medium"
+            href={linkRef}
+          >
+            {link}
+          </a>
+        )}
       </div>
-
       {children}
     </div>
   </div>
