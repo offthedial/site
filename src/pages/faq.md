@@ -44,6 +44,9 @@ You can read more about ELO on [wikipedia](https://en.wikipedia.org/wiki/Elo_rat
 #### How are teams balanced?
 Off the Dial Bot will assign players numerical values for all aspects of play. This includes ranks, play style and previous tournament experience.
 
+#### What is Swiss?
+Swiss is a bracket format, like Single Elimination or Round Robin. However, there are some things that set Swiss apart from other systems. First of all, it's non-eliminating, meaning you play the same amount of rounds regardless of if you lose or not. Swiss pairs you up with people that are closest to the same win/loss record as you, making sure all rounds are as balanced as possible.
+
 #### Am I able to scrim other teams competing in the tournament?
 Yes! We have no issue with you setting up a scrim with other competitors.
 
