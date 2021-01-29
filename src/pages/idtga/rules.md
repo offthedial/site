@@ -60,14 +60,14 @@ Whatever the case may be, Off the Dial has an extensive system for reporting suc
 
 - Your team is able to report players 24 hours after teams are released.
 - Everyone on your team (besides the player getting reported) must approve of the report.
-- Once your sub is assigned, the reported player is no longer able to play, **this is an irreversable action**, so be thoughtful when you report!
+- Once your sub is assigned, the reported player is no longer able to play, **this is an irreversible action**, so be thoughtful when you report!
 - Your sub is not allowed to play for any other player on your team except for the reported player they were replacing.
 
 #### How to report
 To report a player, send a message in the `#reporting` channel, formatted like this:
 > `@Mention - Reason for reporting`
 
-If you don't feel comfortable reporting them publically, you can send any staff member a DM instead :blue_heart:.
+If you don't feel comfortable reporting them publicly, you can send any staff member a DM instead :blue_heart:.
 
 - Please ping the person that you are reporting, don't just give their username.
 - For better chances of approval, make sure your reason is specific and detailed. Such as:
