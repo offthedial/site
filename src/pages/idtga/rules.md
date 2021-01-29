@@ -8,20 +8,19 @@ Complete teams will consist of 4-5 players.
 
 ### Preliminaries:
 - Swiss Pools
-- Each pool has a maximum of 16 teams.
 - Teams are evenly distributed across pools.
-- 4 Rounds
-- PA3
+- 4 Rounds (Each pool has a maximum of 16 teams)
+- Play all 3
 
 ### Top Cut:
 - Single Elimination - No 3rd place match.
 - At least 1 team per pool, with a minimum of 4 teams total.
-- BO5
+- Best of 5
 
 ### 4 or less teams
 If there are 4 or less teams, there will only be one bracket:
 - Double Elimination.
-- BO5
+- Best of 5
 
 ## Timing & Round Duration
 - The first round of the day goes for 45 minutes.
@@ -29,21 +28,6 @@ If there are 4 or less teams, there will only be one bracket:
 - There is no time limit on the finals.
 - After the round has completed, any unreported games will automatically be reported as empty.
 - If you finish a round early, you must wait for the next round to begin.
-
-## Subs
-### Rotational Subs
-Due to an uneven amount of players, TO’s may assign a team an extra player.
-
-- Certain players in the team will be predetermined as the rotational subs
-- Only players designated as the subs can rotate with each other
-- After each **round**, the player who subbed out must rotate with another of the rotational subs.
-
-### Emergency Subs
-In the case of a dropout, an emergency sub may be needed.
-
-- Emergency subs must be of similar rank and play style to the missing player
-- Must be approved by a TO.
-- Players can apply to be an emergency sub before the tournament by sending a dm to <Mention>@DJam98</Mention>.
 
 ## DC's Redo Decision Rules
 ### Redo the match if:
@@ -64,27 +48,43 @@ To reduce the chances of a dc happening, please check you have a good internet c
 
 If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
 
-## Dropouts
-For everyone's sake, ***please*** do not drop out.
+## Registering as a sub
+If you missed the registration deadline, you can still sign up as a sub by going to the same link used to sign up. I highly recommend doing this if you miss the signup date as many players end up either dropping out or needing a sub.
 
-### The Dropout
-#### If you refuse to play after teams have been created:
-- You will not be able to play in the next month **and** season of IDTGA.
-- You will not be given the winner’s role if your team wins.
-- You will not receive any Signal Strength for the tournament.
+If you are needed, you will recieve a dm asking whether you are available to sub and specific details, please make sure you have turned on DMs for the server.
 
-#### This can be avoided if:
-- You have an approved sub ready to go **before** you drop out, or you let us know **before** teams are created.
+## Reporting players
+Sometimes, someone on your team just isn't responding at all, or perhaps they are really toxic, or maybe they are making everyone else on your team uncomfortable.
 
-### For the teams who suffer:
-#### If one on your team has dropped out:
-- Your team (Including the dropout) are responsible for finding a substitute.
-- The substitute must be approved by one of the TO’s.
-- You may be granted a little bit of time to search if in the first round, but you may have to do a 3v3 scenario, (see below).
+Whatever the case may be, Off the Dial has an extensive system for reporting such players and receiving a sub replacement, so you can be sure you'll have a good team experience.
 
-#### Matches with a dropout:
-- A 3v3 game will occur.
-- By pinging <Mention>@DJam98</Mention>, he will tell you the player that should sit out to be an even match-up.
+- Your team is able to report players 24 hours after teams are released.
+- Everyone on your team (besides the player getting reported) must approve of the report.
+- Once your sub is assigned, the reported player is no longer able to play, **this is an irreversable action**, so be thoughtful when you report!
+- Your sub is not allowed to play for any other player on your team except for the reported player they were replacing.
+
+#### How to report
+To report a player, send a message in the `#reporting` channel, formatted like this:
+> `@Mention - Reason for reporting`
+
+If you don't feel comfortable reporting them publically, you can send any staff member a DM instead :blue_heart:.
+
+- Please ping the person that you are reporting, don't just give their username.
+- For better chances of approval, make sure your reason is specific and detailed. Such as:
+  > "Despite their status being set to online, they haven't responded to any of our DMs since teams have been created, multiple of our team members have attempted to get in contact with them, but to no avail".
+
+Once you have made your report, our staff members will update you with the status of your report by reacting to your report message:
+- :spiral_note_pad: - We've noted your report, and are working on matching a sub. This step usually takes 6-12 hours.
+- :white_check_mark: - The report has been resolved, we have assigned a sub.
+- :no_entry_sign: - We don't approve of the report. This usually doesn't happen, assuming you did everything correctly.
+
+If there is no reaction, we haven't seen your report yet.
+
+#### Receiving your sub
+Once you've been assigned your sub, you should see a reply to your original report, usually formatted like this:
+> `@Sub > @Mention`
+
+You now know your sub. Friend them on discord, add them to your group chat, and hopefully get some practice in!
 
 ## Cheating
 Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on smash.gg, anything considered cheating by Nintendo, and failure to comply with any of the rules on this document.
@@ -96,10 +96,10 @@ If you cheat:
 
 This is a strict no-chances policy, and we do not make exceptions to this.
 
-## Other Rules
+## Others
 - All rules are subject to change between seasons, please make sure you read the rules each season before entering.
-- By registering you agree to abide by our [terms and conditions](/legal)
+- By registering you agree to abide by our [terms and conditions](/legal).
 
 <Footer>
-  That’s it! If you have any questions or concerns, feel free to ask at the <Mention>#helpdesk</Mention> or DM the TO’s: <Mention>@DJam98</Mention> and <Mention>@LeptoFlare</Mention>. Good luck with the tournament!
+  That’s it! If you have any questions or concerns, feel free to ask in <Mention>#helpdesk</Mention> or DM <Mention>@DJam98</Mention> / <Mention>@LeptoFlare</Mention>. Good luck with the tournament!
 </Footer>
