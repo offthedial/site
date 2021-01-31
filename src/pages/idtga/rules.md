@@ -48,13 +48,6 @@ To reduce the chances of a dc happening, please check you have a good internet c
 
 If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
 
-## Registering as a sub
-If you missed the registration deadline, you can still sign up as a sub by going to the same signup link. I highly recommend doing this if you miss the signup date, as many players end up either dropping out or needing a sub.
-
-If you are needed, you will recieve a dm asking whether you are available to sub and specific details about what team you will be subbing for. Once you agree, you will be given the competing and team roles, then you should get in contact with your other team members.
-
-Please make sure you have turned on DMs for the server, and try your best to avaliable to reply during the tournament.
-
 ## Reporting players
 Sometimes, your team needs a replacement for one of your team members. Some examples may include:
 - A team member notifies you that something has come up and they need to drop out.
@@ -71,8 +64,8 @@ Thankfully, Off the Dial has an extensive system for reporting such players and 
 - **This is an irreversible action**, so be thoughtful when you report!
 
 ### How to report
-To report a player, send a message in the `#reporting` channel, formatted like this:
-> `@Mention - Reason for reporting`
+To report a player, send a message in the <Mention>#reporting</Mention> channel, formatted like this:
+> <Mention>@ReportedPlayer</Mention> - Reason for reporting
 
 If you don't feel comfortable reporting them publicly, you can send any staff member a DM instead :blue_heart:.
 
@@ -89,7 +82,7 @@ If there is no reaction, we haven't seen your report yet.
 
 ### Receiving your sub
 Once you've been assigned your sub, you should see a reply to your original report, usually formatted like this:
-> `@Sub > @Mention`
+> <Mention>@Sub</Mention> > <Mention>@ReportedPlayer</Mention>
 
 You now know your sub. Friend them on discord, add them to your group chat, and hopefully get some practice in!
 
