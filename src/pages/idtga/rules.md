@@ -48,29 +48,29 @@ To reduce the chances of a dc happening, please check you have a good internet c
 
 If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
 
-## Subs / Dropouts
-### Registering as a sub
+## Registering as a sub
 If you missed the registration deadline, you can still sign up as a sub by going to the same signup link. I highly recommend doing this if you miss the signup date, as many players end up either dropping out or needing a sub.
 
 If you are needed, you will recieve a dm asking whether you are available to sub and specific details about what team you will be subbing for. Once you agree, you will be given the competing and team roles, then you should get in contact with your other team members.
 
-Please make sure you have turned on DMs for the server.
+Please make sure you have turned on DMs for the server, and try your best to avaliable to reply during the tournament.
 
-### Reporting players
-Sometimes, your team needs a sub for one of your team members. Examples may include:
+## Reporting players
+Sometimes, your team needs a replacement for one of your team members. Some examples may include:
 - A team member notifies you that something has come up and they need to drop out.
 - A team member just isn't responding at all to any messages.
-- A team member is really toxic to the rest of your team.
+- A team member is acting really toxic to the rest of your team.
 - A team member is making one or more of your other team members uncomfortable.
 
-Whatever the case may be, Off the Dial has an extensive system for reporting such players and receiving a sub replacement, so you can be sure you'll have a good team experience.
+Thankfully, Off the Dial has an extensive system for reporting such players and receiving a sub, so you can be sure you'll have a good team experience.
 
 - Your team is able to report players 24 hours after teams are released.
 - Everyone on your team (besides the player getting reported) must approve of the report.
-- Once your sub is assigned, the reported player is no longer able to play, **this is an irreversible action**, so be thoughtful when you report!
 - Your sub is not allowed to play for any other player on your team except for the reported player they are replacing.
+- Once your sub is assigned, the reported player is no longer allowed to play.
+- **This is an irreversible action**, so be thoughtful when you report!
 
-##### How to report
+### How to report
 To report a player, send a message in the `#reporting` channel, formatted like this:
 > `@Mention - Reason for reporting`
 
@@ -87,7 +87,7 @@ Once you have made your report, our staff members will update you with the statu
 
 If there is no reaction, we haven't seen your report yet.
 
-##### Receiving your sub
+### Receiving your sub
 Once you've been assigned your sub, you should see a reply to your original report, usually formatted like this:
 > `@Sub > @Mention`
 
