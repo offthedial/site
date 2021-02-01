@@ -5,7 +5,8 @@
 # <!-- ![Banner](banner.png) -->
 
 A website to serve as a centralized place to find everything Off the Dial. This websites is currently in beta, more features are to come. Stay tuned!
-- Embedded signup page (soon).
+- Logging in with Discord.
+- Embedded signup page.
 
 ## Usage
 The live version of the website can be found at [`otd.ink`](https://otd.ink).
