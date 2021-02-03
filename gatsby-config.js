@@ -28,7 +28,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`,
+        path: path.join(__dirname, `src`, `pages`),
         ignore: [`**/posts/*`], // Except posts
       },
     },
@@ -36,14 +36,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/pages/posts`,
+        path: path.join(__dirname, `src`, `pages`, `posts`),
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/static/images`,
+        path: path.join(__dirname, `src`, `static`, `images`),
       },
     },
 
