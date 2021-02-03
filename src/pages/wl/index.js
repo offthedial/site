@@ -74,6 +74,23 @@ const WeakestLink = () => (
             </p>
           </div>
         </div>
+        <h3>Registering as a sub</h3>
+        <p>
+          If you missed the registration deadline, you can still sign up as a
+          sub by going to the same signup link. I highly recommend doing this if
+          you miss the signup date, as many players end up either dropping out
+          or needing a sub.
+        </p>
+        <p>
+          If you are needed, you will recieve a dm asking whether you are
+          available to sub and specific details about what team you will be
+          subbing for. Once you agree, you will be given the competing and team
+          roles, then you should get in contact with your other team members.
+        </p>
+        <p>
+          Please make sure you have turned on DMs for the server, and try your
+          best to avaliable to reply during the tournament.
+        </p>
       </div>
       <div class="section px-0">
         <h2>Schedule</h2>
