@@ -171,8 +171,7 @@ const Index = () => {
       <div class="section py-0">
         <Footer>
           Built with <Love /> & <a href="https://www.gatsbyjs.org/">Gatsby</a>.
-          This website is currently in beta, more features are to come. Stay
-          tuned!
+          More features are to come. Stay tuned!
         </Footer>
       </div>
     </Layout>
