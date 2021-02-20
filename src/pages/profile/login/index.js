@@ -1,8 +1,7 @@
 import { navigate } from "gatsby"
 import { parse } from "query-string"
 import { auth } from "src/app/firebase"
-
-const api = "https://localhost:5000"
+import { api } from "/config"
 
 const ProfileLogin = ({ location }) => {
   login({

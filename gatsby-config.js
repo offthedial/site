@@ -1,4 +1,5 @@
 const path = require("path")
+const firebaseConfig = require("./config").firebaseConfig
 
 module.exports = {
   siteMetadata: {
@@ -12,15 +13,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-firebase",
       options: {
-        credentials: {
-          apiKey: "AIzaSyCwAhc1DyT1Ln5U3K8f-ldWT3Z0w9xm_4Q",
-          authDomain: "off-the-dial-26e93.firebaseapp.com",
-          databaseURL: "https://off-the-dial-26e93.firebaseio.com",
-          projectId: "off-the-dial-26e93",
-          storageBucket: "off-the-dial-26e93.appspot.com",
-          messagingSenderId: "822224581984",
-          appId: "1:822224581984:web:9510ee9ec192f4d19e5a05",
-        },
+        credentials: firebaseConfig,
       },
     },
     /* Filesystem stuff */
