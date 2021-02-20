@@ -26,11 +26,6 @@
   }
 }
 
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .ease {
   transition: 0.155s ease-in;
 }
