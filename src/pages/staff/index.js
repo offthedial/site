@@ -1,6 +1,7 @@
 import React from "react"
 
 import { graphql } from "gatsby"
+import { SimpleGrid } from "@chakra-ui/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "src/components/Layout"
 import PageHero from "src/components/PageHero"
@@ -32,8 +33,7 @@ const Staff = ({ data }) => (
     </PageHero>
     <div class="section pt-0">
       <div class="container layout-content">
-        <div class="grid-2 is-hidden-mobile">{mapStaffCards(data)}</div>
-        <div class="is-hidden-tablet">{mapStaffCards(data)}</div>
+        <SimpleGrid columns={[null, 1, 2]}>{mapStaffCards(data)}</SimpleGrid>
       </div>
     </div>
   </Layout>
