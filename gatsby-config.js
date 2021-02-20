@@ -61,6 +61,10 @@ module.exports = {
         implementation: require("sass"),
       },
     },
+    {
+      resolve: `@chakra-ui/gatsby-plugin`,
+      options: {},
+    },
 
     /* Image Processing */
     `gatsby-plugin-sharp`,
