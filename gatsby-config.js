@@ -54,7 +54,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
 
     /* Styles & CSS */
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {

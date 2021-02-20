@@ -1,14 +1,8 @@
 import React from "react"
 
 import { graphql, Link } from "gatsby"
-import styled from "styled-components"
 import Layout from "src/components/Layout"
 import PageHero from "src/components/PageHero"
-
-const Post = styled.div.attrs(props => ({
-  className: "bg-hover-shade card mx-3 my-3",
-  key: props.name,
-}))``
 
 const Posts = ({ data }) => (
   <Layout pageTitle="Posts">
@@ -22,7 +16,7 @@ const Posts = ({ data }) => (
         <div class="columns is-centered">
           <div class="column is-10">
             {data.allMdx.edges.map(({ node }) => (
-              <Post name={node.parent.name}>
+              <div class="bg-hover-shade card mx-3 my-3" key={node.parent.name}>
                 <Link to={node.parent.name}>
                   <div class="card-content">
                     <h2 class="mb-0">{node.frontmatter.title}</h2>
@@ -34,7 +28,7 @@ const Posts = ({ data }) => (
                     </blockquote>
                   </div>
                 </Link>
-              </Post>
+              </div>
             ))}
           </div>
         </div>
