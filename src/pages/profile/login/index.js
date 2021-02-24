@@ -2,6 +2,7 @@ import { navigate } from "gatsby"
 import { parse } from "query-string"
 import { auth } from "src/app/firebase"
 import { api } from "/config"
+import { createStandaloneToast } from "@chakra-ui/react"
 
 const ProfileLogin = ({ location }) => {
   login({
@@ -51,8 +52,16 @@ const tokenEndpoint = (auth, { code, state }, redirect) => {
   }
 }
 
-const navigateError = (error, from) => {
-  navigate("error", { state: { error, from } })
+const navigateError = (error, redirect) => {
+  const toast = createStandaloneToast()
+  navigate("/")
+  toast({
+    title: "Login Error",
+    description: error,
+    status: "error",
+    duration: null,
+    isClosable: true,
+  })
 }
 
 export default ProfileLogin
