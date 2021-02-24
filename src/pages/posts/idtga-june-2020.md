@@ -18,7 +18,7 @@ It's a new month, that means another Off the Dial tournament! This month it'll b
 
 ## Registration
 1. Head over to our [Discord](/discord)
-2. Find an open <Mention>#bot-commands</Mention> channel
+2. Find an open <span class="mention">#bot-commands</span> channel
 3. Type `$signup` and follow the instructions.
 
 For more details, you can check out our brand new [tournament page](/idtga) on our website.
