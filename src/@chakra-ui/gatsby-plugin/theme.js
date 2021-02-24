@@ -82,7 +82,7 @@ const theme = extendTheme({
         hr: { my: 8 },
       },
       main: {
-        flex: "1",
+        flex: "1 1 0%",
       },
       ".layout": {
         display: "flex",
