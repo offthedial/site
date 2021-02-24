@@ -1,8 +1,11 @@
 import React, { useState } from "react"
 
 import { Link } from "gatsby"
-import { Box, Image, Flex, Text, Stack } from "@chakra-ui/react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import * as Chakra from "@chakra-ui/react"
 import useUserDiscord from "src/app/hooks/useUserDiscord"
+import title from "src/static/title.svg"
+import abbv from "src/static/abbreviation.svg"
 
 const NavBar = props => {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,7 +15,8 @@ const NavBar = props => {
   return (
     <NavBarContainer {...props}>
       <Link to="/">
-        <Logo src="https://assets.otd.ink/title.svg" />
+        <Logo src={title} display={["none", "block"]} />
+        <Logo src={abbv} display={[null, "none"]} />
       </Link>
       <MenuToggle {...{ isOpen, toggle }} />
       <MenuLinks {...{ isOpen, avatar: data?.avatarUrl }} />
@@ -20,52 +24,12 @@ const NavBar = props => {
   )
 }
 
-const Logo = ({ src, ...rest }) => (
-  <Box h={10}>
-    <Image style={{ maxHeight: "100%" }} src={src} {...rest} />
-  </Box>
-)
-
-const MenuToggle = ({ toggle, isOpen }) => (
-  <Box display={{ base: "block", md: "none" }} onClick={toggle}>
-    {isOpen ? <CloseIcon /> : <MenuIcon />}
-  </Box>
-)
-
-const MenuItem = ({ children, isLast, to = "/", ...rest }) => (
-  <Link to={to}>
-    <Text display="block" as="b" {...rest}>
-      {children}
-    </Text>
-  </Link>
-)
-
-const MenuLinks = ({ isOpen, avatar }) => (
-  <Box
-    display={{ base: isOpen ? "block" : "none", md: "block" }}
-    flexBasis={{ base: "100%", md: "auto" }}
-  >
-    <Stack
-      spacing={8}
-      align="center"
-      justify={["center", "space-between", "flex-end", "flex-end"]}
-      direction={["column", "row", "row", "row"]}
-      pt={[4, 4, 0, 0]}
-    >
-      <MenuItem to="/idtga">It's Dangerous to go Alone</MenuItem>
-      <MenuItem to="/wl">Weakest Link</MenuItem>
-      <MenuItem to="/profile" isLast>
-        <Logo src={avatar} rounded="full" />
-      </MenuItem>
-    </Stack>
-  </Box>
-)
-
 const NavBarContainer = ({ children, ...props }) => (
-  <Flex
+  <Chakra.Flex
     as="nav"
     align="center"
     justify="space-between"
+    shrink="1"
     wrap="wrap"
     w="100%"
     p={3}
@@ -74,43 +38,132 @@ const NavBarContainer = ({ children, ...props }) => (
     {...props}
   >
     {children}
-  </Flex>
+  </Chakra.Flex>
+)
+
+const MenuLinks = ({ isOpen, avatar }) => (
+  <Chakra.Box
+    display={{ base: isOpen ? "block" : "none", lg: "block" }}
+    flexBasis={{ base: "100%", lg: "auto" }}
+  >
+    <Chakra.Stack
+      spacing={8}
+      align="center"
+      justify={["center", "space-between", "space-between", "flex-end"]}
+      direction={["column", "row", "row", "row"]}
+      pt={[4, 4, 4, 0]}
+    >
+      <MenuItem to="/idtga">
+        <Chakra.Text fontWeight="bold">It's Dangerous to go Alone</Chakra.Text>
+      </MenuItem>
+      <MenuItem to="/wl">
+        <Chakra.Text fontWeight="bold">Weakest Link</Chakra.Text>
+      </MenuItem>
+      <MenuItem to="/discord">
+        <Chakra.Button
+          color="otd.slate.50"
+          leftIcon={<FontAwesomeIcon icon={["fab", "discord"]} />}
+          rightIcon={<FontAwesomeIcon icon={["fas", "chevron-right"]} />}
+          variant="outline"
+          _hover={{ background: "#7289DA" }}
+          _active={{ background: "#7289DA" }}
+        >
+          <Chakra.Text color="white">Discord</Chakra.Text>
+        </Chakra.Button>
+      </MenuItem>
+      <MenuItem to="/profile">
+        {avatar ? <Logo src={avatar} /> : <UserDefault />}
+      </MenuItem>
+    </Chakra.Stack>
+  </Chakra.Box>
+)
+
+const MenuItem = ({ children, to = "/" }) => (
+  <Chakra.Link to={to} as={Link} _hover={{ textDecoration: "none" }}>
+    {children}
+  </Chakra.Link>
+)
+
+const MenuToggle = ({ toggle, isOpen }) => (
+  <Chakra.Box display={{ base: "block", lg: "none" }} onClick={toggle}>
+    {isOpen ? <CloseIcon /> : <OpenIcon />}
+  </Chakra.Box>
+)
+
+const Logo = ({ src, ...rest }) => (
+  <Chakra.Box h={10} {...rest}>
+    <Chakra.Image style={{ maxHeight: "100%" }} src={src} />
+  </Chakra.Box>
+)
+
+const OpenIcon = () => (
+  <Chakra.IconButton
+    aria-label="open navigation"
+    variant="unstyled"
+    icon={
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    }
+  />
 )
 
 const CloseIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    width="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      fill="white"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M6 18L18 6M6 6l12 12"
-    />
-  </svg>
+  <Chakra.IconButton
+    aria-label="close navigation"
+    variant="unstyled"
+    icon={
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    }
+  />
 )
 
-const MenuIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    width="24"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      fill="white"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M4 6h16M4 12h16M4 18h16"
-    />
-  </svg>
+const UserDefault = () => (
+  <Chakra.IconButton
+    aria-label="profile"
+    isRound={true}
+    bg="white"
+    borderWidth={0}
+    colorScheme="otd.slate"
+    color="otd.slate.0"
+    _hover={{ color: "otd.slate.600" }}
+    _active={{ color: "otd.slate.700" }}
+    icon={
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fillRule="evenodd"
+          d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+          clipRule="evenodd"
+        />
+      </svg>
+    }
+  />
 )
 
 export default NavBar

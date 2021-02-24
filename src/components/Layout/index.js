@@ -2,14 +2,16 @@ import React from "react"
 
 import SEO from "./SEO"
 import NavBar from "./NavBar"
-import MediaFooter from "./MediaFooter"
+import Footer from "./Footer"
 
-const Layout = ({ pageTitle, meta, mediaFooter = true, children }) => (
+const Layout = ({ pageTitle, meta, children }) => (
   <div class="layout">
     <SEO title={pageTitle} {...meta} />
     <NavBar />
-    <div class="content layout-content">{children}</div>
-    {mediaFooter && <MediaFooter />}
+    <main>
+      <div>{children}</div>
+    </main>
+    <Footer />
   </div>
 )
 
