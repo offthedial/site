@@ -1,37 +1,43 @@
 import React from "react"
 
 import Layout from "src/components/Layout"
-import PageContainer from "src/components/PageContainer"
-import JumboPad from "src/components/JumboPad"
+import * as Chakra from "@chakra-ui/react"
+
+const choose = choices => {
+  var index = Math.floor(Math.random() * choices.length)
+  return choices[index]
+}
 
 const NotFound = () => (
   <Layout pageTitle="404">
-    <PageContainer>
-      <JumboPad>
-        <div class="is-hidden-mobile">
-          <div class="title has-text-weight-bold" style={{ fontSize: "10em" }}>
-            404
-          </div>
-          <div
-            class="subtitle has-text-weight-medium"
-            style={{ fontSize: "5em" }}
+    <Chakra.Flex align="center" justify="center">
+      <Chakra.Box py={16}>
+        <Chakra.Container maxW="container.xl">
+          <Chakra.Text
+            as="kbd"
+            fontSize={["7xl", "8xl", "9xl"]}
+            fontWeight="light"
+            lineHeight="none"
+            letterSpacing={10}
+            color="gray.400"
           >
-            There's nothing here.
-          </div>
-        </div>
-        <div class="is-hidden-tablet">
-          <div class="title has-text-weight-bold" style={{ fontSize: "8em" }}>
             404
-          </div>
-          <div
-            class="subtitle has-text-weight-medium"
-            style={{ fontSize: "4em" }}
+          </Chakra.Text>
+          <Chakra.Text
+            fontSize={["4xl", "6xl", "7xl"]}
+            fontWeight="bold"
+            lineHeight="none"
+            color="gray.600"
           >
-            There's nothing here.
-          </div>
-        </div>
-      </JumboPad>
-    </PageContainer>
+            {choose([
+              "There's nothing here.",
+              "Lost, bud?",
+              "Looks pretty empty.",
+            ])}
+          </Chakra.Text>
+        </Chakra.Container>
+      </Chakra.Box>
+    </Chakra.Flex>
   </Layout>
 )
 
