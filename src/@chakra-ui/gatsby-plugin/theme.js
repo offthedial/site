@@ -44,15 +44,18 @@ const theme = extendTheme({
       boxShadow: "lg",
     },
   },
+  textStyles: {
+    mention: {
+      fontSize: "87.5%",
+      borderRadius: "sm",
+      padding: 0.5,
+      color: "#7289da",
+      bg: "rgba(114,137,218,.1)",
+      display: "inline",
+    },
+  },
   styles: {
     global: {
-      ".mention": {
-        fontSize: "87.5%",
-        borderRadius: "sm",
-        padding: 0.5,
-        color: "#7289da",
-        bg: "rgba(114,137,218,.1)",
-      },
       code: {
         fontFamily: "mono",
         fontSize: "87.5%",

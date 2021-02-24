@@ -25,7 +25,7 @@ There are a few things that have changed, let's go through them:
   Additionally, Off the Dial bot is able to scrape the webpage to embed sections of the rules directly through a bot command, more on that later.
 
 - ##### Other Pages:
-  Channels like the [<span class="mention">#community</span>](/staff) and [<span class="mention">#faq</span>](/faq) are migrated to the website as well.
+  Channels like the [<Mention>#community</Mention>](/staff) and [<Mention>#faq</Mention>](/faq) are migrated to the website as well.
   There is additionally a new page for the [bot](/bot) that serves as a simple place to find information on Off the Dial Bot.
 
   This provides a good balance between the freedom to edit parts of the page at any time on a google doc, and the accessibility of a discord channel.

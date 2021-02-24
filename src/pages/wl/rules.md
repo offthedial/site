@@ -97,4 +97,4 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 
 ---
 
-That’s it! If you have any questions or concerns, feel free to ask at the <span class="mention">#helpdesk</span> or DM the TO’s: <span class="mention">@DJam98</span> and <span class="mention">@LeptoFlare</span>. Good luck with the tournament!
+That’s it! If you have any questions or concerns, feel free to ask at the <Mention>#helpdesk</Mention> or DM the TO’s: <Mention>@DJam98</Mention> and <Mention>@LeptoFlare</Mention>. Good luck with the tournament!

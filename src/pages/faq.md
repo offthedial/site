@@ -33,7 +33,7 @@ Tournaments usually last anywhere between 2 and 5 hours (generally around the fo
 Yes! If there are at-least 4 teams, 1 match from each preliminary round will be streamed. There will be a five-minute break before the first finals match. All finals matches will be streamed as well.
 
 #### How are disputes/issues resolved?
-If you have any problems before the tournament, <span class="mention">#helpdesk</span> is the place to go. During the tournament we use smash.gg chat, if you have a dispute you can call a moderator directly on the website.
+If you have any problems before the tournament, <Mention>#helpdesk</Mention> is the place to go. During the tournament we use smash.gg chat, if you have a dispute you can call a moderator directly on the website.
 
 #### What is ELO?
 In general, the ELO rating system is a way of calculating the relative skill levels of players. In our case, we calculate your in-game ELO when you enter your ranks and use it as one of the factors when balancing teams.
@@ -56,7 +56,7 @@ While this is an international server, the owner is Australian. So you may see m
 We regularly check [Twitter](https://twitter.com/Off_The_Dial) so free to use the hashtags [#idtga](https://twitter.com/search?q=(%23idtga)) & [#wl](https://twitter.com/search?q=(%23wl)), and mention [@Off_The_Dial](https://twitter.com/Off_the_Dial). :heart:
 
 #### I have a question?
-If you need help and it's not in here ask in <span class="mention">#helpdesk</span> and either one of the staff or another person will help. You can also DM us if you so choose.
+If you need help and it's not in here ask in <Mention>#helpdesk</Mention> and either one of the staff or another person will help. You can also DM us if you so choose.
 
 #### I need help using smash.gg, where can I get it?
 Assuming no one in helpdesk is able to help, you can contact [smash.gg](https://help.smash.gg/) directly through their website or on their [discord](https://discord.gg/smashgg).

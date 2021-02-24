@@ -5,28 +5,31 @@ import { MDXProvider } from "@mdx-js/react"
 import { addMinutes, format } from "date-fns"
 import Layout from "src/components/Layout"
 import Title from "src/components/Title"
+import Mention from "src/components/Mention"
 
-const Post = ({ pageContext, children }) => (
-  <Layout pageTitle={pageContext.frontmatter.title}>
-    <Title title={pageContext.frontmatter.title}>
-      <Chakra.Text mb={2}>
-        {pageContext.frontmatter.author}
-        {` · `}
-        {formatPostDate(pageContext.frontmatter.date)}
-      </Chakra.Text>
-    </Title>
-    <Chakra.Container fontSize="sl">
-      <MDXProvider components={{ Title }}>
-        <article>{children}</article>
-      </MDXProvider>
-    </Chakra.Container>
-  </Layout>
-)
+const shortcodes = { Mention, Title }
 
-const formatPostDate = date => {
-  let postDate = new Date(date)
-  postDate = addMinutes(postDate, postDate.getTimezoneOffset())
-  return format(postDate, "MMMM dd, yyyy")
+const Post = ({ pageContext, children }) => {
+  let date = new Date(pageContext.frontmatter.date)
+  date = addMinutes(date, date.getTimezoneOffset())
+  date = format(date, "MMMM dd, yyyy")
+
+  return (
+    <Layout pageTitle={pageContext.frontmatter.title}>
+      <Title title={pageContext.frontmatter.title}>
+        <Chakra.Text mb={2}>
+          {pageContext.frontmatter.author}
+          {` · `}
+          {date}
+        </Chakra.Text>
+      </Title>
+      <Chakra.Container fontSize="sl">
+        <MDXProvider components={shortcodes}>
+          <article>{children}</article>
+        </MDXProvider>
+      </Chakra.Container>
+    </Layout>
+  )
 }
 
 export default Post
