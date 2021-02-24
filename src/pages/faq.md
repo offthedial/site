@@ -8,7 +8,7 @@ title: FAQ
 
 ## General
 #### What is my 'Signal Strength'?
-Your Signal Strength is our internal way of calculating your tournament experience while being here on Off the Dial. As it was only introduced at the start of 2020, we'll still be asking for your previous OTD experience in registration forms until the Signal Strength is an accurate representation. You gain strength by playing in tournaments as well as by placing high in the tournaments.
+Your Signal Strength is our internal way of calculating your tournament experience while being here on Off the Dial. It was introduced at the start of 2020. You gain signal strength based on the amount of tournaments and your placing in tournaments.
 
 #### Why are the admins and TOs always chatting with everyone?
 A happy server is a good server. We strive to make sure everyone is having a good time here and striking up conversations are a means to that end (and we also enjoy it).
