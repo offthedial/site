@@ -67,19 +67,29 @@ const MenuLinks = ({ isOpen, avatar }) => (
           variant="outline"
           _hover={{ background: "#7289DA" }}
           _active={{ background: "#7289DA" }}
+          _focus="none"
         >
           <Chakra.Text color="white">Discord</Chakra.Text>
         </Chakra.Button>
       </MenuItem>
       <MenuItem to="/profile">
-        {avatar ? <Logo src={avatar} /> : <UserDefault />}
+        {avatar ? (
+          <Logo src={avatar} image={{ borderRadius: "full" }} />
+        ) : (
+          <UserDefault />
+        )}
       </MenuItem>
     </Chakra.Stack>
   </Chakra.Box>
 )
 
 const MenuItem = ({ children, to = "/" }) => (
-  <Chakra.Link to={to} as={Link} _hover={{ textDecoration: "none" }}>
+  <Chakra.Link
+    to={to}
+    as={Link}
+    _hover={{ textDecoration: "none" }}
+    _focus="none"
+  >
     {children}
   </Chakra.Link>
 )
@@ -90,9 +100,9 @@ const MenuToggle = ({ toggle, isOpen }) => (
   </Chakra.Box>
 )
 
-const Logo = ({ src, ...rest }) => (
+const Logo = ({ src, image, ...rest }) => (
   <Chakra.Box h={10} {...rest}>
-    <Chakra.Image style={{ maxHeight: "100%" }} src={src} />
+    <Chakra.Image style={{ maxHeight: "100%" }} src={src} {...image} />
   </Chakra.Box>
 )
 
