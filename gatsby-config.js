@@ -32,13 +32,6 @@ module.exports = {
         path: path.join(__dirname, `src`, `pages`, `posts`),
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `static`, `images`),
-      },
-    },
 
     /* Utilities */
     `gatsby-plugin-root-import`,
