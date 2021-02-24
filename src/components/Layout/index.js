@@ -4,13 +4,11 @@ import SEO from "./SEO"
 import NavBar from "./NavBar"
 import Footer from "./Footer"
 
-const Layout = ({ pageTitle, meta, children }) => (
+const Layout = ({ pageTitle, meta, main, children }) => (
   <div class="layout">
     <SEO title={pageTitle} {...meta} />
     <NavBar />
-    <main>
-      <div>{children}</div>
-    </main>
+    <main style={{ ...main }}>{children}</main>
     <Footer />
   </div>
 )

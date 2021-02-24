@@ -9,9 +9,17 @@ const choose = choices => {
 }
 
 const NotFound = () => (
-  <Layout pageTitle="404">
-    <Chakra.Flex align="center" justify="center">
-      <Chakra.Box py={16}>
+  <Layout pageTitle="404" main={{ position: "relative" }}>
+    <Chakra.Flex
+      direction="column"
+      h="full"
+      sx={{ top: 0, bottom: 0, left: 0, right: 0 }}
+      align="center"
+      position="absolute"
+      p={6}
+      justify="space-between"
+    >
+      <Chakra.Box bg="white" zIndex="overlay" borderRadius="xl">
         <Chakra.Container maxW="container.xl">
           <Chakra.Text
             as="kbd"
@@ -19,7 +27,7 @@ const NotFound = () => (
             fontWeight="light"
             lineHeight="none"
             letterSpacing={10}
-            color="gray.400"
+            color="gray.600"
           >
             404
           </Chakra.Text>
@@ -27,7 +35,7 @@ const NotFound = () => (
             fontSize={["4xl", "6xl", "7xl"]}
             fontWeight="bold"
             lineHeight="none"
-            color="gray.600"
+            color="gray.400"
           >
             {choose([
               "There's nothing here.",
