@@ -1,7 +1,10 @@
 ---
 title: FAQ
-hero: We get asked a lot of questions, so a FAQ necessary. You can find everything here from "What time do tournaments begin?" to "What is Weakest Link?".
 ---
+
+<Title title="FAQ">
+  We get asked a lot of questions, so a FAQ necessary. You can find anything from "What is Signal Strength?" to "What is Swiss?".
+</Title>
 
 ## General
 #### What is my 'Signal Strength'?
@@ -10,11 +13,7 @@ Your Signal Strength is our internal way of calculating your tournament experien
 #### Why are the admins and TOs always chatting with everyone?
 A happy server is a good server. We strive to make sure everyone is having a good time here and striking up conversations are a means to that end (and we also enjoy it).
 
-#### What is the community page?
-The community is everyone who helps make Off the Dial what it is behind the scenes and the community channel shows who they are and what they do, you can find the page at [otd.ink/community](community)
-
 #### What time do tournaments begin?
-
 All tournaments begin on the same minute/hour, but due to timezones that time may differ. Daylight savings times have been listed as well.
 
 Refer to your corresponding time-zone.
@@ -34,18 +33,18 @@ Tournaments usually last anywhere between 2 and 5 hours (generally around the fo
 Yes! If there are at-least 4 teams, 1 match from each preliminary round will be streamed. There will be a five-minute break before the first finals match. All finals matches will be streamed as well.
 
 #### How are disputes/issues resolved?
-If you have any problems before the tournament, <Mention>#helpdesk</Mention> is the place to go. During the tournament we use smash.gg chat, if you have a dispute you can call a moderator directly on the website.
+If you have any problems before the tournament, <span class="mention">#helpdesk</span> is the place to go. During the tournament we use smash.gg chat, if you have a dispute you can call a moderator directly on the website.
 
 #### What is ELO?
 In general, the ELO rating system is a way of calculating the relative skill levels of players. In our case, we calculate your in-game ELO when you enter your ranks and use it as one of the factors when balancing teams.
 
 You can read more about ELO on [wikipedia](https://en.wikipedia.org/wiki/Elo_rating_system).
 
-#### How are teams balanced?
-Off the Dial Bot will assign players numerical values for all aspects of play. This includes ranks, play style and previous tournament experience.
-
 #### What is Swiss?
 Swiss is a bracket format, like Single Elimination or Round Robin. However, there are some things that set Swiss apart from other systems. First of all, it's non-eliminating, meaning you play the same amount of rounds regardless of if you lose or not. Swiss pairs you up with people that are closest to the same win/loss record as you, making sure all rounds are as balanced as possible.
+
+#### How are teams balanced?
+Off the Dial Bot will assign players numerical values for all aspects of play. This includes ranks, play style and previous tournament experience.
 
 #### Am I able to scrim other teams competing in the tournament?
 Yes! We have no issue with you setting up a scrim with other competitors.
@@ -53,17 +52,14 @@ Yes! We have no issue with you setting up a scrim with other competitors.
 #### Why organization spelled with an 's'?
 While this is an international server, the owner is Australian. So you may see many words are spelled differently outside of the United States, namely 'organisation'.
 
-#### I need to contact someone, how should I do it?
+#### I want to share a cool moment from the previous tournament!
+We regularly check [Twitter](https://twitter.com/Off_The_Dial) so free to use the hashtags [#idtga](https://twitter.com/search?q=(%23idtga)) & [#wl](https://twitter.com/search?q=(%23wl)), and mention [@Off_The_Dial](https://twitter.com/Off_the_Dial). :heart:
 
-There are many ways to contact us. If you need help and it's not in here ask in <Mention>#helpdesk</Mention> and either one of the organisers will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the <Mention>@Organiser</Mention> role (please only do so when needed). You can also dm us here on discord. If you want to do it off discord we regularly check the [Twitter](https://twitter.com/Off_The_Dial) so you can find us there. While on Twitter feel free to use the hashtags [#otd-idtga](https://twitter.com/search?q=(%23idtga)) and [#otd-wl](https://twitter.com/search?q=(%23otd-wl)) and mention [@Off_The_Dial](https://twitter.com/Off_the_Dial) or [@DJam987](https://twitter.com/DJam987).
+#### I have a question?
+If you need help and it's not in here ask in <span class="mention">#helpdesk</span> and either one of the staff or another person will help. You can also DM us if you so choose.
 
 #### I need help using smash.gg, where can I get it?
-
-DJam98 is in charge of smash.gg. If he cannot help, you can contact [smash.gg](https://help.smash.gg/) directly on their website or on their discord.
-
-#### I've got a question, where do I ask?
-
-<Mention>#helpdesk</Mention> is the best place to go, and if it's a question you think should go in here let us know with all your other suggestions for Off the Dial in <Mention>#suggestions</Mention>.
+Assuming no one in helpdesk is able to help, you can contact [smash.gg](https://help.smash.gg/) directly through their website or on their [discord](https://discord.gg/smashgg).
 
 ## It’s Dangerous to go Alone
 
@@ -130,7 +126,7 @@ I'd love it if you made a Github Issue using [this link](https://github.com/Lept
 ## Definitions
 
 - **FA**: Free Agent, a player who is not **playing** on a team.
-- **Pools**: A group of entrants. Entrants in a pool will only play other entrants in the same pool. 
+- **Pools**: A group of entrants. Entrants in a pool will only play other entrants in the same pool.
 - **Round**: A group of sets in a bracket.
   > _Ex: I lost in round 1 of winners, so now I’m in round 1 of losers._
 - **Set**: A group of games, there are multiple sets per round. Each set of the same round has different competitors and are usually played concurrently.
