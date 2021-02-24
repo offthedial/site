@@ -31,7 +31,7 @@ const NavBarContainer = ({ children, ...props }) => (
     justify="space-between"
     shrink="1"
     wrap="wrap"
-    w="100%"
+    w="full"
     p={3}
     bg="otd.slate.0"
     color="white"
@@ -44,7 +44,7 @@ const NavBarContainer = ({ children, ...props }) => (
 const MenuLinks = ({ isOpen, avatar }) => (
   <Chakra.Box
     display={{ base: isOpen ? "block" : "none", lg: "block" }}
-    flexBasis={{ base: "100%", lg: "auto" }}
+    flexBasis={{ base: "full", lg: "auto" }}
   >
     <Chakra.Stack
       spacing={8}
@@ -102,7 +102,7 @@ const MenuToggle = ({ toggle, isOpen }) => (
 
 const Logo = ({ src, image, ...rest }) => (
   <Chakra.Box h={10} {...rest}>
-    <Chakra.Image style={{ maxHeight: "100%" }} src={src} {...image} />
+    <Chakra.Image maxH="full" src={src} {...image} />
   </Chakra.Box>
 )
 
