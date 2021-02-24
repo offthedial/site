@@ -1,10 +1,25 @@
 import React from "react"
 
 import { graphql } from "gatsby"
-import { SimpleGrid } from "@chakra-ui/react"
+import * as Chakra from "@chakra-ui/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "src/components/Layout"
-import PageHero from "src/components/PageHero"
+import Title from "src/components/Title"
+
+const Staff = ({ data }) => (
+  <Layout pageTitle="Staff">
+    <Title title="Our Staff Team">
+      Off the Dial is thankful to have such an awesome staff team, each staff
+      member contributes a key part to Off the Dial as a whole. If any of them
+      interest you, feel free to read about them here.
+    </Title>
+    <Chakra.Container maxW="container.xl">
+      <Chakra.SimpleGrid columns={[null, 1, 1, 2]}>
+        {mapStaffCards(data)}
+      </Chakra.SimpleGrid>
+    </Chakra.Container>
+  </Layout>
+)
 
 const mapStaffCards = data => {
   let edges = data.allMdx.edges
@@ -12,52 +27,32 @@ const mapStaffCards = data => {
     a.node.slug > b.node.slug ? 1 : b.node.slug > a.node.slug ? -1 : 0
   )
   return edges.map(({ node }) => (
-    <StaffCard
-      id={node.frontmatter.name}
-      name={node.frontmatter.name}
-      role={node.frontmatter.role + " & " + node.frontmatter.hobby}
-      link={node.frontmatter?.link?.[0]}
-      linkRef={node.frontmatter?.link?.[1]}
-    >
-      <MDXRenderer>{node.body}</MDXRenderer>
-    </StaffCard>
+    <Chakra.Box key={node.slug} layerStyle="card" m={6}>
+      <Chakra.Box p={8}>
+        <Chakra.Box pb={8}>
+          <Chakra.Text color="gray.500">
+            {node.frontmatter.role + " & " + node.frontmatter.hobby}
+          </Chakra.Text>
+          <Chakra.Text fontSize="3xl" lineHeight="short" fontWeight="bold">
+            {node.frontmatter.name}
+          </Chakra.Text>
+          {node.frontmatter?.link?.[0] && (
+            <Chakra.Link
+              fontWeight="bold"
+              color="otd.slate.0"
+              href={node.frontmatter?.link?.[1]}
+            >
+              {node.frontmatter?.link?.[0]}
+            </Chakra.Link>
+          )}
+        </Chakra.Box>
+        <article>
+          <MDXRenderer>{node.body}</MDXRenderer>
+        </article>
+      </Chakra.Box>
+    </Chakra.Box>
   ))
 }
-
-const Staff = ({ data }) => (
-  <Layout pageTitle="Staff">
-    <PageHero title="Our Staff Team">
-      Off the Dial is thankful to have such an awesome staff team, each staff
-      member contributes a key part to Off the Dial as a whole. If any of them
-      interest you, feel free to read about them here.
-    </PageHero>
-    <div class="section pt-0">
-      <div class="container layout-content">
-        <SimpleGrid columns={[null, 1, 2]}>{mapStaffCards(data)}</SimpleGrid>
-      </div>
-    </div>
-  </Layout>
-)
-
-const StaffCard = ({ id, name, role, link, linkRef, children }) => (
-  <div id={id} class="card mx-3 my-3">
-    <div class="card-content">
-      <div class="mb-3">
-        <div class="has-text-grey">{role}</div>
-        <h2 class="my-1">{name}</h2>
-        {link && (
-          <a
-            class="is-link is-hover-underline has-text-weight-medium"
-            href={linkRef}
-          >
-            {link}
-          </a>
-        )}
-      </div>
-      {children}
-    </div>
-  </div>
-)
 
 export const query = graphql`
   query {
