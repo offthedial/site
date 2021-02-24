@@ -269,7 +269,6 @@ const Signup = ({ location }) => {
         <div class="section px-0">
           <div class="title">Set up smash.gg</div>
           {(!tourneyQuery.data?.hasClosed() ||
-            !tourneyQuery.data?.hasEnded() ||
             userSignupQuery.data?.type === "signup") && (
             <>
               <Field label="Register on smash.gg, copy the confirmation code when it pops up.">
