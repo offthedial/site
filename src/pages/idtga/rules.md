@@ -2,7 +2,8 @@
 title: IDTGA Rules
 ---
 
-# It's Dangerous to go Alone Rules
+<Title title="It's Dangerous to go Alone Rules" />
+
 ## Format
 Complete teams will consist of 4-5 players.
 
@@ -64,8 +65,8 @@ Thankfully, Off the Dial has an extensive system for reporting such players and 
 - **This is an irreversible action**, so be thoughtful when you report!
 
 ### How to report
-To report a player, send a message in the <Mention>#reporting</Mention> channel, formatted like this:
-> <Mention>@ReportedPlayer</Mention> - Reason for reporting
+To report a player, send a message in the <span class="mention">#reporting</span> channel, formatted like this:
+> <span class="mention">@ReportedPlayer</span> - Reason for reporting
 
 If you don't feel comfortable reporting them publicly, you can send any staff member a DM instead :blue_heart:.
 
@@ -82,7 +83,7 @@ If there is no reaction, we haven't seen your report yet.
 
 ### Receiving your sub
 Once you've been assigned your sub, you should see a reply to your original report, usually formatted like this:
-> <Mention>@Sub</Mention> > <Mention>@ReportedPlayer</Mention>
+> <span class="mention>@Sub</span> > <span class="mention>@ReportedPlayer</span>
 
 You now know your sub. Friend them on discord, add them to your group chat, and hopefully get some practice in!
 
@@ -100,6 +101,6 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 - All rules are subject to change between seasons, please make sure you read the rules each season before entering.
 - By registering you agree to abide by our [terms and conditions](/legal).
 
-<Footer>
-  That’s it! If you have any questions or concerns, feel free to ask in <Mention>#helpdesk</Mention> or DM <Mention>@DJam98</Mention> / <Mention>@LeptoFlare</Mention>. Good luck with the tournament!
-</Footer>
+---
+
+That’s it! If you have any questions or concerns, feel free to ask in <span class="mention">#helpdesk</span> or DM <span class="mention">@DJam98</span> / <span class="mention">@LeptoFlare</span>. Good luck with the tournament!
