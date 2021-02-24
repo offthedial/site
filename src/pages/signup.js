@@ -3,7 +3,7 @@ import { useForm, Controller } from "react-hook-form"
 import { Link, navigate } from "gatsby"
 import Cleave from "cleave.js/react"
 import Layout from "src/components/Layout"
-import Alert from "src/components/Alert"
+import * as Chakra from "@chakra-ui/react"
 import PrivateRoute from "src/components/PrivateRoute"
 import {
   useUserData,
@@ -86,7 +86,15 @@ const Signup = ({ location }) => {
     }
     userDataMut.mutate(profile)
     userSignupMut.mutate(signup)
-    navigate("complete", { state: { complete: true } })
+    const toast = Chakra.createStandaloneToast()
+    navigate("/profile")
+    toast({
+      title: "Signup Complete",
+      description: "Thank you for registering!",
+      status: "success",
+      duration: null,
+      isClosable: true,
+    })
   }
 
   return (
@@ -525,9 +533,9 @@ const FromStatusAlerts = ({
   return (
     <>
       {alerts.map((alert, i) => (
-        <Alert type={alert.type} key={i}>
+        <Chakra.Alert type={alert.type} key={i}>
           <span>{alert.message}</span>
-        </Alert>
+        </Chakra.Alert>
       ))}
     </>
   )
