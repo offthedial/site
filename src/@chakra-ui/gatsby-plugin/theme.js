@@ -32,7 +32,7 @@ const theme = extendTheme({
   },
   layerStyles: {
     tint: () => ({ bg: modeValue("gray.50", "gray.900") }),
-    card: () => ({
+    lifted: () => ({
       borderRadius: "lg",
       borderWidth: 1,
       borderColor: modeValue("gray.100", "gray.900"),

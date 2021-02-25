@@ -27,7 +27,7 @@ const mapStaffCards = data => {
     a.node.slug > b.node.slug ? 1 : b.node.slug > a.node.slug ? -1 : 0
   )
   return edges.map(({ node }) => (
-    <Chakra.Box key={node.slug} layerStyle="card" m={6}>
+    <Chakra.Box key={node.slug} layerStyle="lifted" m={6}>
       <Chakra.Box p={8}>
         <Chakra.Box pb={8}>
           <Chakra.Text textStyle="mute">
