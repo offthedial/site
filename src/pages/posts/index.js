@@ -13,15 +13,20 @@ const Posts = ({ data }) => (
       say.
     </Title>
     <Chakra.Container maxW="container.md">
-      <Chakra.Stack spacing={6}>
+      <Chakra.Stack spacing={8}>
         {data.allMdx.edges.map(({ node }) => (
           <Link to={node.parent.name} key={node.parent.name}>
-            <Chakra.Box layerStyle="lifted" p={6} _hover={{ layerStyle: "tint" }}>
+            <Chakra.Box
+              layerStyle="lifted"
+              p={8}
+              transition="all 250ms"
+              _hover={{ layerStyle: "tint", boxShadow: "xl" }}
+            >
               <Chakra.Box fontSize="lg">
                 <Chakra.Text fontSize="2xl" fontWeight="bold" lineHeight="none">
                   {node.frontmatter.title}
                 </Chakra.Text>
-                <Chakra.Text textStyle="mute" mb={2}>
+                <Chakra.Text textStyle="mute" mb={6}>
                   {node.frontmatter.author} · {node.frontmatter.date}
                 </Chakra.Text>
               </Chakra.Box>
