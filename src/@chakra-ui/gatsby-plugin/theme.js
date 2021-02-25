@@ -1,5 +1,5 @@
-import { extendTheme } from "@chakra-ui/react"
-import { createBreakpoints } from "@chakra-ui/theme-tools"
+import { extendTheme, useColorModeValue as modeValue } from "@chakra-ui/react"
+import { createBreakpoints, mode } from "@chakra-ui/theme-tools"
 
 import "@fontsource/dm-sans/400.css"
 import "@fontsource/dm-sans/500.css"
@@ -16,62 +16,56 @@ import "@fontsource/dm-mono/400-italic.css"
 import "@fontsource/dm-mono/500-italic.css"
 
 const theme = extendTheme({
-  fonts: {
-    body: `"DM Sans", system-ui, sans-serif`,
-    heading: `"DM Sans", Georgia, serif`,
-    mono: `"DM Mono", Menlo, monospace`,
-  },
-  fontWeights: {
-    semibold: 500,
-    bold: 500,
-    extrabold: 700,
-    black: 700,
-  },
-  fontSizes: {
-    sl: "1.1rem",
-  },
-  breakpoints: createBreakpoints({
-    sm: "608px",
-    md: "768px",
-    lg: "960px",
-    xl: "1200px",
-  }),
-  layerStyles: {
-    card: {
-      borderRadius: "lg",
-      borderWidth: 1,
-      borderColor: "gray.100",
-      boxShadow: "lg",
-    },
-  },
   textStyles: {
+    semimute: () => ({ color: modeValue("gray.600", "gray.300") }),
+    mute: () => ({ color: modeValue("gray.500", "gray.400") }),
+    silent: () => ({ color: modeValue("gray.400", "gray.600") }),
+    slate: () => ({ color: modeValue("otd.slate.600", "otd.slate.300") }),
     mention: {
       fontSize: "87.5%",
       borderRadius: "sm",
-      padding: 0.5,
+      p: 0.5,
       color: "#7289da",
       bg: "rgba(114,137,218,.1)",
       display: "inline",
     },
   },
+  layerStyles: {
+    tint: () => ({ bg: modeValue("gray.50", "gray.900") }),
+    card: () => ({
+      borderRadius: "lg",
+      borderWidth: 1,
+      borderColor: modeValue("gray.100", "gray.900"),
+      boxShadow: "lg",
+    }),
+  },
   styles: {
-    global: {
+    global: props => ({
       code: {
         fontFamily: "mono",
         fontSize: "87.5%",
         borderRadius: "sm",
         padding: 0.5,
-        color: "gray.800",
-        bg: "gray.100",
+        layerStyle: "tint",
       },
       blockquote: {
         pl: [3, 6],
         ml: 0.5,
         borderLeftWidth: 2,
-        borderColor: "otd.slate.0",
+        borderColor: mode("otd.slate.500", "otd.slate.400")(props),
+      },
+      "img.emoji": {
+        height: "1em",
+        width: "1em",
+        margin: "0 0.05em 0 0.1em",
+        verticalAlign: "-0.1em",
+        display: "inline",
       },
       article: {
-        a: { color: "otd.slate.600", _hover: { color: "otd.slate.0" } },
+        a: {
+          textStyle: "slate",
+          _hover: { textDecoration: "underline" },
+        },
         h1: { fontSize: "4xl" },
         h2: { fontSize: "3xl" },
         h3: { fontSize: "2xl" },
@@ -92,17 +86,30 @@ const theme = extendTheme({
         minHeight: "100vh",
         flexDirection: "column",
       },
-      "html, body": {
-        color: "gray.700",
-      },
-      "img.emoji": {
-        height: "1em",
-        width: "1em",
-        margin: "0 0.05em 0 0.1em",
-        verticalAlign: "-0.1em",
-        display: "inline",
-      },
-    },
+    }),
+  },
+  fonts: {
+    body: `"DM Sans", system-ui, sans-serif`,
+    heading: `"DM Sans", Georgia, serif`,
+    mono: `"DM Mono", Menlo, monospace`,
+  },
+  fontWeights: {
+    semibold: 500,
+    bold: 500,
+    extrabold: 700,
+    black: 700,
+  },
+  fontSizes: {
+    sl: "1.1rem",
+  },
+  breakpoints: createBreakpoints({
+    sm: "608px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
+  }),
+  config: {
+    initialColorMode: "system",
   },
   colors: {
     otd: {

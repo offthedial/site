@@ -30,7 +30,7 @@ const mapStaffCards = data => {
     <Chakra.Box key={node.slug} layerStyle="card" m={6}>
       <Chakra.Box p={8}>
         <Chakra.Box pb={8}>
-          <Chakra.Text color="gray.500">
+          <Chakra.Text textStyle="mute">
             {node.frontmatter.role + " & " + node.frontmatter.hobby}
           </Chakra.Text>
           <Chakra.Text fontSize="3xl" lineHeight="short" fontWeight="bold">
@@ -39,7 +39,7 @@ const mapStaffCards = data => {
           {node.frontmatter?.link?.[0] && (
             <Chakra.Link
               fontWeight="bold"
-              color="otd.slate.0"
+              textStyle="slate"
               href={node.frontmatter?.link?.[1]}
             >
               {node.frontmatter?.link?.[0]}

@@ -6,7 +6,7 @@ const Title = ({ title, children }) => (
     <Chakra.Text as="h1" fontSize="3xl" fontWeight="bold" lineHeight="none">
       {title}
     </Chakra.Text>
-    <Chakra.Container maxW="container.lg" color="gray.500">
+    <Chakra.Container maxW="container.lg" textStyle="mute">
       {children}
     </Chakra.Container>
   </Chakra.Box>

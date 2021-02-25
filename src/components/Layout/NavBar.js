@@ -13,14 +13,16 @@ const NavBar = props => {
   const { data } = useUserDiscord()
 
   return (
-    <NavBarContainer {...props}>
-      <Link to="/">
-        <Logo src={title} display={["none", "block"]} />
-        <Logo src={abbv} display={[null, "none"]} />
-      </Link>
-      <MenuToggle {...{ isOpen, toggle }} />
-      <MenuLinks {...{ isOpen, avatar: data?.avatarUrl }} />
-    </NavBarContainer>
+    <Chakra.LightMode>
+      <NavBarContainer {...props}>
+        <Link to="/">
+          <Logo src={title} display={["none", "block"]} />
+          <Logo src={abbv} display={[null, "none"]} />
+        </Link>
+        <MenuToggle {...{ isOpen, toggle }} />
+        <MenuLinks {...{ isOpen, avatar: data?.avatarUrl }} />
+      </NavBarContainer>
+    </Chakra.LightMode>
   )
 }
 

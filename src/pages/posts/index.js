@@ -16,16 +16,20 @@ const Posts = ({ data }) => (
       <Chakra.Stack spacing={6}>
         {data.allMdx.edges.map(({ node }) => (
           <Link to={node.parent.name} key={node.parent.name}>
-            <Chakra.Box layerStyle="card" p={6} _hover={{ bg: "gray.50" }}>
+            <Chakra.Box layerStyle="card" p={6} _hover={{ layerStyle: "tint" }}>
               <Chakra.Box fontSize="lg">
                 <Chakra.Text fontSize="2xl" fontWeight="bold" lineHeight="none">
                   {node.frontmatter.title}
                 </Chakra.Text>
-                <Chakra.Text color="gray.500" mb={2}>
+                <Chakra.Text textStyle="mute" mb={2}>
                   {node.frontmatter.author} · {node.frontmatter.date}
                 </Chakra.Text>
               </Chakra.Box>
-              <Chakra.Text color="gray.600" as="blockquote" fontStyle="italic">
+              <Chakra.Text
+                textStyle="semimute"
+                as="blockquote"
+                fontStyle="italic"
+              >
                 {node.excerpt}
               </Chakra.Text>
             </Chakra.Box>

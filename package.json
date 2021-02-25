@@ -2,6 +2,7 @@
   "name": "site",
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^1.0.1",
+    "@chakra-ui/icons": "^1.0.5",
     "@chakra-ui/react": "^1.3.3",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
