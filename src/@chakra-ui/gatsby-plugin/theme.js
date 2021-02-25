@@ -81,6 +81,9 @@ const theme = extendTheme({
       main: {
         flex: "1 1 0%",
       },
+      "html, body": {
+        color: mode("gray.700", "gray.100")(props),
+      },
       ".layout": {
         display: "flex",
         minHeight: "100vh",
