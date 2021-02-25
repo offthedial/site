@@ -19,7 +19,8 @@ const NotFound = () => (
       p={6}
       justify="space-between"
     >
-      <Chakra.Box bg="white" zIndex="overlay" borderRadius="xl">
+      <Chakra.Spacer />
+      <Chakra.Box zIndex="overlay" borderRadius="xl">
         <Chakra.Container maxW="container.xl">
           <Chakra.Text
             as="kbd"
@@ -27,7 +28,7 @@ const NotFound = () => (
             fontWeight="light"
             lineHeight="none"
             letterSpacing={10}
-            color="gray.600"
+            textStyle="mute"
           >
             404
           </Chakra.Text>
@@ -35,7 +36,7 @@ const NotFound = () => (
             fontSize={["4xl", "6xl", "7xl"]}
             fontWeight="bold"
             lineHeight="none"
-            color="gray.400"
+            textStyle="silent"
           >
             {choose([
               "There's nothing here.",
@@ -45,6 +46,8 @@ const NotFound = () => (
           </Chakra.Text>
         </Chakra.Container>
       </Chakra.Box>
+
+      <Chakra.Spacer />
     </Chakra.Flex>
   </Layout>
 )
