@@ -111,9 +111,6 @@ const theme = extendTheme({
     lg: "960px",
     xl: "1200px",
   }),
-  config: {
-    initialColorMode: "system",
-  },
   colors: {
     otd: {
       slate: {
