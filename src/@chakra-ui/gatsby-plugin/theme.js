@@ -19,19 +19,27 @@ const theme = extendTheme({
   textStyles: {
     semimute: () => ({
       color: "gray.600",
-      ".chakra-ui-dark &": { color: "gray.300" },
+      ".chakra-ui-dark &": {
+        color: "gray.300",
+      },
     }),
     mute: () => ({
       color: "gray.500",
-      ".chakra-ui-dark &": { color: "gray.400" },
+      ".chakra-ui-dark &": {
+        color: "gray.400",
+      },
     }),
     silent: () => ({
       color: "gray.400",
-      ".chakra-ui-dark &": { color: "gray.600" },
+      ".chakra-ui-dark &": {
+        color: "gray.600",
+      },
     }),
     slate: () => ({
       color: "otd.slate.600",
-      ".chakra-ui-dark &": { color: "otd.slate.300" },
+      ".chakra-ui-dark &": {
+        color: "otd.slate.300",
+      },
     }),
     mention: {
       fontSize: "87.5%",
@@ -45,14 +53,18 @@ const theme = extendTheme({
   layerStyles: {
     tint: () => ({
       bg: "gray.50",
-      ".chakra-ui-dark &": { bg: "gray.900" },
+      ".chakra-ui-dark &": {
+        bg: "gray.900",
+      },
     }),
     lifted: () => ({
       borderRadius: "lg",
       borderWidth: 1,
-      borderColor: "gray.100",
       boxShadow: "lg",
-      ".chakra-ui-dark &": { borderColor: "gray.900" },
+      borderColor: "gray.100",
+      ".chakra-ui-dark &": {
+        borderColor: "gray.900",
+      },
     }),
   },
   styles: {
