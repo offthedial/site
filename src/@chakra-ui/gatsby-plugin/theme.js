@@ -1,4 +1,4 @@
-import { extendTheme, useColorModeValue as modeValue } from "@chakra-ui/react"
+import { extendTheme } from "@chakra-ui/react"
 import { createBreakpoints, mode } from "@chakra-ui/theme-tools"
 
 import "@fontsource/dm-sans/400.css"
@@ -17,10 +17,22 @@ import "@fontsource/dm-mono/500-italic.css"
 
 const theme = extendTheme({
   textStyles: {
-    semimute: () => ({ color: modeValue("gray.600", "gray.300") }),
-    mute: () => ({ color: modeValue("gray.500", "gray.400") }),
-    silent: () => ({ color: modeValue("gray.400", "gray.600") }),
-    slate: () => ({ color: modeValue("otd.slate.600", "otd.slate.300") }),
+    semimute: () => ({
+      color: "gray.600",
+      ".chakra-ui-dark &": { color: "gray.300" },
+    }),
+    mute: () => ({
+      color: "gray.500",
+      ".chakra-ui-dark &": { color: "gray.400" },
+    }),
+    silent: () => ({
+      color: "gray.400",
+      ".chakra-ui-dark &": { color: "gray.600" },
+    }),
+    slate: () => ({
+      color: "otd.slate.600",
+      ".chakra-ui-dark &": { color: "otd.slate.300" },
+    }),
     mention: {
       fontSize: "87.5%",
       borderRadius: "sm",
@@ -31,12 +43,16 @@ const theme = extendTheme({
     },
   },
   layerStyles: {
-    tint: () => ({ bg: modeValue("gray.50", "gray.900") }),
+    tint: () => ({
+      bg: "gray.50",
+      ".chakra-ui-dark &": { bg: "gray.900" },
+    }),
     lifted: () => ({
       borderRadius: "lg",
       borderWidth: 1,
-      borderColor: modeValue("gray.100", "gray.900"),
+      borderColor: "gray.100",
       boxShadow: "lg",
+      ".chakra-ui-dark &": { borderColor: "gray.900" },
     }),
   },
   styles: {
