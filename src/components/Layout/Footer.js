@@ -35,6 +35,7 @@ const Footer = () => {
             variant="ghost"
             color="inherit"
             icon={colorMode === "light" ? <SunIcon /> : <MoonIcon />}
+            _focus="none"
           />
         </Chakra.HStack>
         <Chakra.HStack
