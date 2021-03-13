@@ -40,16 +40,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
 
     /* Styles & CSS */
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        implementation: require("sass"),
-      },
-    },
-    {
-      resolve: `@chakra-ui/gatsby-plugin`,
-      options: {},
-    },
+    `@chakra-ui/gatsby-plugin`,
 
     /* Image Processing */
     `gatsby-plugin-sharp`,
