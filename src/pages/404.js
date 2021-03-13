@@ -23,7 +23,7 @@ const NotFound = () => (
       <Chakra.Box borderRadius="xl">
         <Chakra.Container maxW="container.xl">
           <Chakra.Text
-            as="kbd"
+            fontFamily="mono"
             fontSize={["7xl", "8xl", "9xl"]}
             fontWeight="light"
             lineHeight="none"
