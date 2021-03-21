@@ -3,6 +3,16 @@ title: IDTGA Rules
 ---
 
 # It's Dangerous to go Alone Rules
+
+## Eligibility
+To be eligible for this event, players must meet ALL of these conditions:
+- Players must signup on the official Off the Dial signup page ([https://otd.ink/signup](https://otd.ink/signup))
+- During this signup phase, players will be instructed to signup on a html embed for smash.gg, players must complete this.
+- Prior to the tournament, a check in phase will open up. Players must check in on Discord using the specified command within 24 hours of check in opening.
+- If the number of players aren't divisible by four, up to the last three players who registered will become emergency subs so that the number of players will be divisible by four (to create teams of four players). In other words; FIRST IN BEST DRESSED!
+- Players must adhere to the rules in this document.
+- Players must adhere to the Off the Dial terms and conditions, found at [https://otd.ink/legal](https://otd.ink/legal).
+
 ## Format
 Complete teams will consist of 4-5 players.
 
