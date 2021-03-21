@@ -49,7 +49,7 @@ The official IDTGA rules has been *entirely reworked* for reporting players (pre
 We saw a beta of this last season with the <Mention>#reporting-dropouts</Mention> channel, but now it's fully thought-out. [Take a look](https://otd.ink/idtga/rules#reporting-players)!
 
 #### :trophy: Prize?
-For this coming IDTGA, we have the *utmost luxurious, expensive, and generous prize* of 1 month nitro classic ;) depending on how many people attend.
+For this coming IDTGA, we have the *utmost luxurious, expensive, and generous prize* of 1 month nitro classic ;) depending on how many people attend. Because of this, we've added another section to our [legal document](https://otd.ink/legal).
 
 Seriously, we're broke...
 
