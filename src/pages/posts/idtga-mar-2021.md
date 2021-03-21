@@ -32,6 +32,8 @@ For more info, check out the [tournament page](https://otd.ink/idtga).
 - EDT: 10th of April @ 4pm
 - AEDT: 11th of April @ 7am
 
+**AUSTRALIA ONLY: Daylight savings will be concluding on April 4th, so times listed will actually be 6am AEST.**
+
 ### How do I register?
 1. ##### :sparkles: Simply go to [otd.ink/signup](https://otd.ink/signup)!
 
