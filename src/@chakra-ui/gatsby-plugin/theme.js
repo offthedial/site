@@ -17,30 +17,30 @@ import "@fontsource/dm-mono/500-italic.css"
 
 const theme = extendTheme({
   textStyles: {
-    semimute: () => ({
+    semimute: {
       color: "gray.600",
       ".chakra-ui-dark &": {
         color: "gray.300",
       },
-    }),
-    mute: () => ({
+    },
+    mute: {
       color: "gray.500",
       ".chakra-ui-dark &": {
         color: "gray.400",
       },
-    }),
-    silent: () => ({
+    },
+    silent: {
       color: "gray.400",
       ".chakra-ui-dark &": {
         color: "gray.600",
       },
-    }),
-    slate: () => ({
+    },
+    slate: {
       color: "otd.slate.600",
       ".chakra-ui-dark &": {
         color: "otd.slate.300",
       },
-    }),
+    },
     mention: {
       fontSize: "87.5%",
       borderRadius: "sm",
@@ -110,7 +110,7 @@ const theme = extendTheme({
         flex: "1 1 0%",
       },
       "html, body": {
-        color: mode("gray.700", "gray.100")(props),
+        color: mode("gray.800", "gray.100")(props),
       },
       ".layout": {
         display: "flex",
