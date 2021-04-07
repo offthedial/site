@@ -91,6 +91,14 @@ Teams are released 24 hours before the tournament commences.
 
 This is so we can confirm you are playing before we sort players into teams. It is a way we minimise dropouts.
 
+#### I'm on the list of 'Invalid Attendees - Only on smash.gg'. How can I fix this?
+
+This is a list of smash.gg tags that have signed up on the smash.gg tournament page, but could not be traced back to any signup on otd.ink. If you're on this list, you will be removed from the tournament due to your signup being invalid, so it's important that you fix this.
+
+The most common reason is that players will have signed up on the smash.gg page, however, they will fail to return back to [otd.ink](https://otd.ink) to complete the signup process. If you see that you do not have the "Signed Up!" role on discord, make sure you return back to the signup page to complete the signup, just scroll past the smash.gg section as you have completed that step already.
+
+Another common reason is signing up with a different smash.gg account than the one that you have linked on your otd.ink profile. Make sure that the smash.gg user slug that you set on otd.ink points to the correct account, and that the account's smash.gg tag matches your smash.gg tag that is listed under invalid attendees.
+
 #### Why is there also check-in for each match on smash.gg?
 
 This is a setting that comes default with smash.gg and there is no way to disable it, so make sure you check in for every match you play!
