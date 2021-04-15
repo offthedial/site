@@ -35,6 +35,12 @@ const theme = extendTheme({
         color: "gray.600",
       },
     },
+    tinted: {
+      color: "gray.50",
+      ".chakra-ui-dark &": {
+        color: "gray.900",
+      },
+    },
     slate: {
       color: "otd.slate.600",
       ".chakra-ui-dark &": {
