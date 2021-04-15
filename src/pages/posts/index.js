@@ -13,7 +13,7 @@ const Posts = ({ data }) => (
       say.
     </Title>
     <Chakra.Container maxW="container.md">
-      <Chakra.Stack spacing={8}>
+      <Chakra.Stack spacing={8} pb={12}>
         {data.allMdx.edges.map(({ node }) => (
           <Link to={node.parent.name} key={node.parent.name}>
             <Chakra.Box
