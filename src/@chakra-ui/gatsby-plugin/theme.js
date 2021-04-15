@@ -51,13 +51,13 @@ const theme = extendTheme({
     },
   },
   layerStyles: {
-    tint: () => ({
+    tint: {
       bg: "gray.50",
       ".chakra-ui-dark &": {
         bg: "gray.900",
       },
-    }),
-    lifted: () => ({
+    },
+    lifted: {
       borderRadius: "lg",
       borderWidth: 1,
       boxShadow: "lg",
@@ -65,7 +65,7 @@ const theme = extendTheme({
       ".chakra-ui-dark &": {
         borderColor: "gray.900",
       },
-    }),
+    },
   },
   styles: {
     global: props => ({
