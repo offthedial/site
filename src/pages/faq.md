@@ -5,16 +5,12 @@ hero: We get asked a lot of questions, so a FAQ necessary. You can find everythi
 
 ## General
 #### What is my 'Signal Strength'?
-Your Signal Strength is our internal way of calculating your tournament experience while being here on Off the Dial. As it was only introduced at the start of 2020, we'll still be asking for your previous OTD experience in registration forms until the Signal Strength is an accurate representation. You gain strength by playing in tournaments as well as by placing high in the tournaments.
+Consider it your experience within Off the Dial. You earn points for every tournament you play in as well as how well you place in the tournament. There are bonus roles for those who strive to earn as much signal strength as they can, good luck!
 
-#### Why are the admins and TOs always chatting with everyone?
-A happy server is a good server. We strive to make sure everyone is having a good time here and striking up conversations are a means to that end (and we also enjoy it).
-
-#### What is the community page?
-The community is everyone who helps make Off the Dial what it is behind the scenes and the community channel shows who they are and what they do, you can find the page at [otd.ink/community](community)
+#### Why is my 'Signal Strength' is lower than last time I checked?
+Every now and then we revise our systems and often this may result in your signal strength unfortunately being reset. The last time this was reset was at the end of 2020.
 
 #### What time do tournaments begin?
-
 All tournaments begin on the same minute/hour, but due to timezones that time may differ. Daylight savings times have been listed as well.
 
 Refer to your corresponding time-zone.
@@ -34,15 +30,10 @@ Tournaments usually last anywhere between 2 and 5 hours (generally around the fo
 Yes! If there are at-least 4 teams, 1 match from each preliminary round will be streamed. There will be a five-minute break before the first finals match. All finals matches will be streamed as well.
 
 #### How are disputes/issues resolved?
-If you have any problems before the tournament, <Mention>#helpdesk</Mention> is the place to go. During the tournament we use smash.gg chat, if you have a dispute you can call a moderator directly on the website.
-
-#### What is ELO?
-In general, the ELO rating system is a way of calculating the relative skill levels of players. In our case, we calculate your in-game ELO when you enter your ranks and use it as one of the factors when balancing teams.
-
-You can read more about ELO on [wikipedia](https://en.wikipedia.org/wiki/Elo_rating_system).
+If you have any problems before the tournament, <Mention>#helpdesk</Mention> is the place to go. If you've registered, there's also a <Mention>#tourney-helpdesk</Mention>. During the tournament, we would prefer if you 
 
 #### How are teams balanced?
-Off the Dial Bot will assign players numerical values for all aspects of play. This includes ranks, play style and previous tournament experience.
+Teams are calculated based on your ranks, play style and previous competitive experience. All of these are converted into numerical values and then teams are created into drafts using code, and then balanced using human balancing.
 
 #### What is Swiss?
 Swiss is a bracket format, like Single Elimination or Round Robin. However, there are some things that set Swiss apart from other systems. First of all, it's non-eliminating, meaning you play the same amount of rounds regardless of if you lose or not. Swiss pairs you up with people that are closest to the same win/loss record as you, making sure all rounds are as balanced as possible.
@@ -55,7 +46,7 @@ While this is an international server, the owner is Australian. So you may see m
 
 #### I need to contact someone, how should I do it?
 
-There are many ways to contact us. If you need help and it's not in here ask in <Mention>#helpdesk</Mention> and either one of the organisers will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the <Mention>@Organiser</Mention> role (please only do so when needed). You can also dm us here on discord. If you want to do it off discord we regularly check the [Twitter](https://twitter.com/Off_The_Dial) so you can find us there. While on Twitter feel free to use the hashtags [#otd-idtga](https://twitter.com/search?q=(%23idtga)) and [#otd-wl](https://twitter.com/search?q=(%23otd-wl)) and mention [@Off_The_Dial](https://twitter.com/Off_the_Dial) or [@DJam987](https://twitter.com/DJam987).
+There are many ways to contact us. If you need help and it's not in here ask in <Mention>#helpdesk</Mention> and any of the <Mention>@Staff<Mention> will help you or someone who knows the answer will help. If it requires one of the organisers feel free to ping either of us or the <Mention>@Organiser</Mention> role (please only do so when needed). You can also DM us on discord. If you want to do it off Discord we regularly check the [Twitter](https://twitter.com/Off_The_Dial) so you can find us there. While on Twitter feel free to use the hashtags [#otd-idtga](https://twitter.com/search?q=(%23idtga)) and [#otd-wl](https://twitter.com/search?q=(%23otd-wl)) and mention [@Off_The_Dial](https://twitter.com/Off_the_Dial) or [@DJam987](https://twitter.com/DJam987).
 
 #### I need help using smash.gg, where can I get it?
 
@@ -63,7 +54,7 @@ DJam98 is in charge of smash.gg. If he cannot help, you can contact [smash.gg](h
 
 #### I've got a question, where do I ask?
 
-<Mention>#helpdesk</Mention> is the best place to go, and if it's a question you think should go in here let us know with all your other suggestions for Off the Dial in <Mention>#suggestions</Mention>.
+<Mention>#helpdesk</Mention> is the best place to go.
 
 ## It’s Dangerous to go Alone
 
@@ -85,7 +76,7 @@ Even if you're already on a team you and your teammates can still play, just don
 
 #### When do we receive our teams?
 
-Teams are released 24 hours before the tournament commences.
+Teams are released 48 hours before the tournament commences.
 
 #### Why is check-in so early?
 
@@ -103,13 +94,9 @@ Another common reason is signing up with a different smash.gg account than the o
 
 This is a setting that comes default with smash.gg and there is no way to disable it, so make sure you check in for every match you play!
 
-#### What is the IDTGA league?
-
-So we have a simple leaderboard for players who often play in the tournament and to group the tournaments on a single page.
-
 #### I’ve just finished a season of IDTGA, what do I do now?
 
-If you’re playing in Swiss or Round Robin, make sure that all your rounds are completed. If you didn’t make the finals feel free to watch the rest of the stream on [twitch](https://twitch.tv/offthedial). Shortly after the tournament finishes, a feedback forum will be released. We would appreciate it if you gave honest feedback that can improve the next season.
+If you’re playing in Swiss, make sure that all your rounds are completed. If you didn’t make the finals feel free to watch the rest of the stream on [Twitch](https://twitch.tv/offthedial). Shortly after the tournament finishes, a feedback forum will be released. We would appreciate it if you gave honest feedback that can improve the next season.
 
 ## Weakest Link
 
@@ -133,15 +120,13 @@ Yes! You can find all the code on [Github](https://github.com/LeptoFlare/offthed
 
 #### I have a suggestion/bug report for Off the Dial Bot.
 
-I'd love it if you made a Github Issue using [this link](https://github.com/LeptoFlare/offthedialbot/issues/new/choose). This lets us track all of the suggestions and reports permanently in one place, as opposed to the suggestions channel, where the messages can get easily lost.
+We'd love it if you made a Github Issue using [this link](https://github.com/LeptoFlare/offthedialbot/issues/new/choose). This lets us track all of the suggestions and reports permanently in one place, as opposed to the suggestions channel, where the messages can get easily lost.
 
 ## Definitions
 
 - **FA**: Free Agent, a player who is not **playing** on a team.
 - **Pools**: A group of entrants. Entrants in a pool will only play other entrants in the same pool. 
-- **Round**: A group of sets in a bracket.
-  > _Ex: I lost in round 1 of winners, so now I’m in round 1 of losers._
-- **Set**: A group of games, there are multiple sets per round. Each set of the same round has different competitors and are usually played concurrently.
+- **Round**: A group of games, there are multiple sets per round. Each round has different competitors and are played concurrently.
 - **Game**: An actual in-game... game.
 - **Best of**: Number of games required to determine a winner of a set, once a comeback is impossible, the set it over.
   > _Ex: We don't play the last game, because I won the set already._
