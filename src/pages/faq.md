@@ -30,7 +30,7 @@ Tournaments usually last anywhere between 2 and 5 hours (generally around the fo
 Yes! If there are at-least 4 teams, 1 match from each preliminary round will be streamed. There will be a five-minute break before the first finals match. All finals matches will be streamed as well.
 
 #### How are disputes/issues resolved?
-If you have any problems before the tournament, <Mention>#helpdesk</Mention> is the place to go. If you've registered, there's also a <Mention>#tourney-helpdesk</Mention>. During the tournament, we would prefer if you 
+If you have any problems before the tournament, <Mention>#helpdesk</Mention> is the place to go. If you've registered, there's also a <Mention>#tourney-helpdesk</Mention>. During the tournament, we would prefer if you used the smash.gg chat and called for a moderator to assist, however we will be still monitoring the helpdesk channels.
 
 #### How are teams balanced?
 Teams are calculated based on your ranks, play style and previous competitive experience. All of these are converted into numerical values and then teams are created into drafts using code, and then balanced using human balancing.
