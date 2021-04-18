@@ -101,7 +101,7 @@ Once you've been assigned your sub, you should see a reply to your original repo
 You now know your sub. Friend them on discord, add them to your group chat, and hopefully get some practice in!
 
 ## Cheating
-Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on smash.gg, anything considered cheating by Nintendo, and failure to comply with any of the rules on this document.
+Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, any form or variation of machine/bot assisted button mashing (known as "turbo mode", or similar names), providing false information in your profile or on smash.gg, anything considered cheating by Nintendo, and failure to comply with any of the rules on this document.
 
 If you cheat:
 
