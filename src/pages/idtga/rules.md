@@ -43,7 +43,6 @@ If there are 4 or less teams, there will only be one bracket:
 ### Redo the match if:
 - The team with the DC stops playing and allows the other team to KO.
 - The team with the DC stays inside their spawn barrier.
-- The team with the DC uses the same weapons/gear shown in the results.
 
 ### Do NOT redo the match if:
 - **Any player** on the same team DC's again in the same round.
@@ -52,11 +51,16 @@ If there are 4 or less teams, there will only be one bracket:
 - The match has passed 2:30 before the DC'ing team has forfeited.
 - The team without a DC has 50 or less objective remaining (excluding penalty).
 
-If either 2 DC’s occur in the same lobby or the host DC’s, the team currently not hosting must host a new lobby.
+### After the DC
+- The player who had a DC must rejoin/be ready within 60 seconds of the lobby reopening.
+- All players must ready up immediately
+- All players must use the same weapons/gear as shown in the results.
+- The only exemption to the three rules above are if a substitute is replacing the player who had a DC.
+- If either 2 DC’s occur in the same lobby or the host DC’s, the team currently not hosting must host a new lobby.
+> *Note: To reduce the chances of a dc happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.*
 
-To reduce the chances of a dc happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
-
-If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
+### Lag Complaints
+- If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
 
 ## Reporting players
 Sometimes, your team needs a replacement for one of your team members. Some examples may include:
