@@ -46,7 +46,7 @@ const Idtga = () => (
         <h3>Registering as a sub</h3>
         <p>
           If you missed the registration deadline, you can still sign up as a
-          sub by going to the same signup link. I highly recommend doing this if
+          sub by going to the same signup link. We highly recommend doing this if
           you miss the signup date, as many players end up either dropping out
           or needing a sub.
         </p>
@@ -81,7 +81,7 @@ const Idtga = () => (
               that you be online on both Splatoon 2 and Discord.
             </ScheduleTime>
             <ScheduleTime date="10 Minutes">
-              Stream begins on <Link to="/twitch">twitch</Link>, check it out if
+              Stream begins on <Link to="/twitch">Twitch</Link>, check it out if
               you're not playing!
             </ScheduleTime>
           </tbody>

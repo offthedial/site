@@ -95,7 +95,7 @@ const WeakestLink = () => (
               that you be online on both Splatoon 2 and Discord.
             </ScheduleTime>
             <ScheduleTime date="10 Minutes">
-              Stream begins on <Link to="/twitch">twitch</Link>, check it out if
+              Stream begins on <Link to="/twitch">Twitch</Link>, check it out if
               you're not playing!
             </ScheduleTime>
           </tbody>
