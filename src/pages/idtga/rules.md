@@ -33,8 +33,8 @@ If there are 4 or less teams, there will only be one bracket:
 - Best of 5
 
 ## Timing & Round Duration
-- The first round of the day goes for 45 minutes.
-- All other preliminary matches will go for 40 minutes.
+- The first round of the day goes for 40 minutes.
+- All other preliminary matches will go for 35 minutes.
 - There is no time limit on the finals.
 - After the round has completed, any unreported games will automatically be reported as empty.
 - If you finish a round early, you must wait for the next round to begin.
