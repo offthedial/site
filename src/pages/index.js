@@ -12,7 +12,7 @@ import Highlight from "src/components/Highlight"
  * Set the variable to the slug of the post.
  * Or set it to null to remove the section entirely.
  */
-const promoted = "idtga-feb-2021"
+const promoted = "idtga-mar-2021"
 
 const Index = () => {
   const {
