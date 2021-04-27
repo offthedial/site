@@ -6,43 +6,40 @@ title: IDTGA Rules
 ## Format
 Complete teams will consist of 4-5 players.
 
-### Preliminaries:
-- Swiss Pools
-- Teams are evenly distributed across pools.
+### Pools:
+- Swiss
 - 4 Rounds (Each pool has a maximum of 16 teams)
+- Teams are evenly distributed across pools.
 - Play all 3
 
 ### Top Cut:
-- Single Elimination - No 3rd place match.
-- At least 1 team per pool, with a minimum of 4 teams total.
-- Best of 5
-
-### 4 or less teams
-If there are 4 or less teams, there will only be one bracket:
-- Double Elimination.
+- Single Elimination
+- No 3rd place match
+- At least 4 teams total advance into top cut, with at least 1 team from each pool.
 - Best of 5
 
 ## Timing & Round Duration
-- The first round of the day goes for 45 minutes.
-- All other preliminary matches will go for 40 minutes.
-- There is no time limit on the finals.
-- After the round has completed, any unreported games will automatically be reported as empty.
-- If you finish a round early, you must wait for the next round to begin.
+- Each swiss round lasts 30 minutes.
+- Each top cut round lasts 40 minutes.
+- The very first swiss round lasts 5 more minutes, for 35 minutes total.
+- Players must start their matches within 5 minutes of the round.
+  - If the match has not started yet, the first game is automatically awarded to the team that's waiting.
+  - For each additional 5 minutes that the match still hasn't started, an additional game will be awarded.
+- There is a 5-minute break before finals starts.
 
 ## DC's Redo Decision Rules
 ### Redo the match if:
 - The team with the DC stops playing and allows the other team to KO.
 - The team with the DC stays inside their spawn barrier.
-- The team with the DC uses the same weapons/gear shown in the results.
+- Both teams use the same weapons/gear shown on the results screen.
 
 ### Do NOT redo the match if:
-- **Any player** on the same team DC's again in the same round.
-- The same player DC's again **any other time** in the tournament.
+- **Any player** on the same team DC's again the same round.
 - The host DC's.
 - The match has passed 2:30 before the DC'ing team has forfeited.
-- The team without a DC has 50 or less objective remaining (excluding penalty).
+- Either team has 50 or less objective remaining (excluding penalty).
 
-If either 2 DC’s occur in the same lobby or the host DC’s, the team currently not hosting must host a new lobby.
+If either 2 DC’s occur in the same lobby or the host DC’s, the team currently not hosting must host the new lobby.
 
 To reduce the chances of a dc happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
 
@@ -87,7 +84,7 @@ Once you've been assigned your sub, you should see a reply to your original repo
 You now know your sub. Friend them on discord, add them to your group chat, and hopefully get some practice in!
 
 ## Cheating
-Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on smash.gg, anything considered cheating by Nintendo, and failure to comply with any of the rules on this document.
+Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on smash.gg, anything considered cheating by Nintendo, controller modifications, such as "turbo mode", and failure to comply with any of the rules on this document.
 
 If you cheat:
 
@@ -100,6 +97,6 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 - All rules are subject to change between seasons, please make sure you read the rules each season before entering.
 - By registering you agree to abide by our [terms and conditions](/legal).
 
-<Footer>
-  That’s it! If you have any questions or concerns, feel free to ask in <Mention>#helpdesk</Mention> or DM <Mention>@DJam98</Mention> / <Mention>@LeptoFlare</Mention>. Good luck with the tournament!
-</Footer>
+---
+
+That’s it! If you have any questions or concerns, feel free to ask in <Mention>#helpdesk</Mention>. Good luck in the tournament!
