@@ -39,11 +39,10 @@ const Idtga = () => {
       }}
     >
       <Chakra.Box bg="otd.slate.0">
-        <Chakra.Box p={4}>
+        <Chakra.Box pb={6} px={4}>
           <Chakra.Text
             fontSize={["4xl", "5xl", null, "6xl"]}
-            fontWeight="bold"
-            color="white"
+            color="otd.slate.100"
             textAlign="center"
           >
             It's Dangerous to go Alone
@@ -71,7 +70,7 @@ const Idtga = () => {
             colStart={[null, 2]}
             colSpan={[3, 2]}
           >
-            <Chakra.Box p={4} rounded="xl" borderWidth={2} borderColor="white">
+            <Chakra.Box p={4} rounded="xl" bgColor="otd.slate.500">
               <Chakra.Flex
                 maxW="lg"
                 direction="column"
@@ -102,18 +101,18 @@ const Idtga = () => {
                     to="/signup"
                     size="xl"
                     variant="outline"
-                    rounded={["xl", "2xl"]}
-                    h={[12, 16, null, 20]}
-                    minW={[12, 16, null, 20]}
-                    px={[6, 8, null, 10]}
+                    rounded={["lg", null, null, "2xl"]}
+                    h={[12, null, null, 20]}
+                    minW={[12, null, null, 20]}
+                    px={[6, null, null, 10]}
                     fontSize={["2xl", null, null, "4xl"]}
                     fontWeight="normal"
                     borderWidth={[3, null, null, 4]}
-                    borderColor="otd.pink.100"
-                    bg="otd.pink.0"
-                    color="otd.pink.800"
-                    _hover={{ bg: "otd.pink.200" }}
-                    _active={{ bg: "otd.pink.200" }}
+                    color="white"
+                    bg="otd.purple.0"
+                    _hover={{ bg: "otd.purple.500" }}
+                    _active={{ bg: "otd.purple.500" }}
+                    borderColor="otd.purple.400"
                     _focus="none"
                   >
                     {signupButtonText}
@@ -211,6 +210,7 @@ const CardHeading = ({ children }) => (
     color="otd.slate.200"
     fontSize={["xl", "2xl", null, "3xl"]}
     fontFamily="mono"
+    fontWeight="light"
     letterSpacing={4}
     lineHeight="sm"
     textTransform="uppercase"
@@ -237,7 +237,9 @@ const CardCount = ({ text, value }) => (
       <CardText color="otd.slate.100" fontFamily="mono">
         {value}
       </CardText>
-      <CardText fontSize={["2xl", "3xl", null, "4xl"]}>{text}</CardText>
+      <CardText fontSize={["2xl", "3xl", null, "4xl"]} fontWeight="normal">
+        {text}
+      </CardText>
     </Chakra.Stack>
   </Chakra.Box>
 )
@@ -307,7 +309,11 @@ const WhooshPromo = ({ title, description, reversed = false, children }) => {
       >
         <Chakra.GridItem {...props[0]}>
           <Chakra.Box>
-            <Chakra.Text fontSize={["3xl", "4xl"]} fontWeight="bold" mb={2}>
+            <Chakra.Text
+              fontSize={["3xl", null, null, "4xl"]}
+              fontWeight="bold"
+              mb={2}
+            >
               {title}
             </Chakra.Text>
             <Chakra.Text fontSize="2xl" textStyle="semimute">
