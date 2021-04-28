@@ -42,7 +42,7 @@ const Idtga = () => {
         <Chakra.Box pb={6} px={4}>
           <Chakra.Text
             fontSize={["4xl", "5xl", null, "6xl"]}
-            color="otd.slate.100"
+            color="otd.slate.50"
             textAlign="center"
           >
             It's Dangerous to go Alone
@@ -101,6 +101,9 @@ const Idtga = () => {
                     to="/signup"
                     size="xl"
                     variant="outline"
+                    color="white"
+                    _hover={{ bg: "otd.slate.500" }}
+                    _active={{ bg: "otd.slate.400" }}
                     rounded={["lg", null, null, "2xl"]}
                     h={[12, null, null, 20]}
                     minW={[12, null, null, 20]}
@@ -108,12 +111,6 @@ const Idtga = () => {
                     fontSize={["2xl", null, null, "4xl"]}
                     fontWeight="normal"
                     borderWidth={[3, null, null, 4]}
-                    color="white"
-                    bg="otd.purple.0"
-                    _hover={{ bg: "otd.purple.500" }}
-                    _active={{ bg: "otd.purple.500" }}
-                    borderColor="otd.purple.400"
-                    _focus="none"
                   >
                     {signupButtonText}
                   </Chakra.Button>
@@ -167,20 +164,20 @@ const Idtga = () => {
       <Whoosh>
         <WhooshPromo
           title="No team, no problem"
-          description="From recent team disbands to being brand new to the scene. It's always accessible to gain competitive experience here."
+          description="Whether you are brand new to the scene, or just a Free Agent. We make it always accessible to gain competitive experience."
         >
           <Chakra.Box p={12} bg="otd.slate.300" />
         </WhooshPromo>
         <WhooshPromo
           title="Put yourself out there"
-          description="Show the scene what you're made of. Test your chemistry with different people, you might just find your new teammates."
+          description="Test your chemistry with different people, and show the scene what you're made of. You might just find your new teammates."
           reversed={true}
         >
           <Chakra.Box p={12} bg="otd.slate.300" />
         </WhooshPromo>
         <WhooshPromo
           title="Have some fun"
-          description="Open weekend? Meet some new people, make some new friends, and have a whole lot of fun in a unique kind of tournament!"
+          description="Got an open weekend? Meet new people, make new friends, and just have a whole lot of fun!"
         >
           <Chakra.Box p={12} bg="otd.slate.300" />
         </WhooshPromo>
