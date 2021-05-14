@@ -164,13 +164,13 @@ const Idtga = () => {
       <Whoosh>
         <WhooshPromo
           title="No team, no problem"
-          description="Whether you are brand new to the scene, or just a Free Agent. We make it always accessible to gain competitive experience."
+          description="Whether you are brand new to the scene, or a skilled free agent. We make it always accessible to gain competitive experience."
         >
           <Chakra.Box p={12} bg="otd.slate.300" />
         </WhooshPromo>
         <WhooshPromo
           title="Put yourself out there"
-          description="Test your chemistry with different people, and show the scene what you're made of. You might just find your new teammates."
+          description="Test your chemistry with different folks, and show the scene what you're made of. You might just find your new teammates."
           reversed={true}
         >
           <Chakra.Box p={12} bg="otd.slate.300" />
