@@ -17,10 +17,10 @@ const Posts = ({ data }) => (
         {data.allMdx.edges.map(({ node }) => (
           <Link to={node.parent.name} key={node.parent.name}>
             <Chakra.Box
-              layerStyle="lifted"
+              borderRadius="lg"
               p={8}
               transition="all 250ms"
-              _hover={{ layerStyle: "tint", boxShadow: "xl" }}
+              _hover={{ layerStyle: "tint", boxShadow: "lg" }}
             >
               <Chakra.Box fontSize="lg">
                 <Chakra.Text fontSize="2xl" fontWeight="bold" lineHeight="none">
