@@ -102,15 +102,14 @@ const Idtga = () => {
                     size="xl"
                     variant="outline"
                     color="white"
-                    _hover={{ bg: "otd.slate.500" }}
-                    _active={{ bg: "otd.slate.400" }}
+                    _hover={{ bg: "otd.purple.0" }}
+                    _active={{ bg: "otd.purple.0" }}
                     rounded={["lg", null, null, "2xl"]}
                     h={[12, null, null, 20]}
                     minW={[12, null, null, 20]}
                     px={[6, null, null, 10]}
                     fontSize={["2xl", null, null, "4xl"]}
                     fontWeight="normal"
-                    borderWidth={[3, null, null, 4]}
                   >
                     {signupButtonText}
                   </Chakra.Button>
