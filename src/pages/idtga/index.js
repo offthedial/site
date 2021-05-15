@@ -318,7 +318,9 @@ const WhooshPromo = ({ title, description, reversed = false, children }) => {
             </Chakra.Text>
           </Chakra.Box>
         </Chakra.GridItem>
-        <Chakra.GridItem {...props[1]}>{children}</Chakra.GridItem>
+        <Chakra.GridItem alignSelf="center" {...props[1]}>
+          {children}
+        </Chakra.GridItem>
       </Chakra.Grid>
     </Chakra.Box>
   )
