@@ -50,9 +50,9 @@ const theme = extendTheme({
     mention: {
       fontSize: "87.5%",
       borderRadius: "sm",
+      fontWeight: "bold",
       p: 0.5,
-      color: "#7289da",
-      bg: "rgba(114,137,218,.1)",
+      bg: "rgba(114, 137, 218, 0.3)",
       display: "inline",
     },
   },
