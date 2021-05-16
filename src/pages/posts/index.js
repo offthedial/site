@@ -23,7 +23,7 @@ const Posts = ({ data }) => (
               _hover={{ layerStyle: "tint", boxShadow: "lg" }}
             >
               <Chakra.Box fontSize="lg">
-                <Chakra.Text fontSize="2xl" fontWeight="bold" lineHeight="none">
+                <Chakra.Text fontSize="2xl" fontWeight="bold">
                   {node.frontmatter.title}
                 </Chakra.Text>
                 <Chakra.Text textStyle="mute" mb={6}>
