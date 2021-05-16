@@ -20,7 +20,7 @@ const NotFound = () => (
       justify="space-between"
     >
       <Chakra.Spacer />
-      <Chakra.Box borderRadius="xl">
+      <Chakra.Box>
         <Chakra.Container maxW="container.xl">
           <Chakra.Text
             fontFamily="mono"

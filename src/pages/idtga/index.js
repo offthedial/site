@@ -70,7 +70,7 @@ const Idtga = () => {
             colStart={[null, 2]}
             colSpan={[3, 2]}
           >
-            <Chakra.Box p={4} rounded="xl" bgColor="otd.slate.500">
+            <Chakra.Box p={4} rounded="md" bgColor="otd.slate.500">
               <Chakra.Flex
                 maxW="lg"
                 direction="column"
@@ -81,7 +81,7 @@ const Idtga = () => {
               >
                 <CardSection>
                   <CardHeading>Tournament Date:</CardHeading>
-                  <CardText>February 21</CardText>
+                  <CardText>February 21 @ 3pm</CardText>
                 </CardSection>
                 <CardSection>
                   <CardHeading>Signups Close:</CardHeading>
@@ -102,13 +102,13 @@ const Idtga = () => {
                     size="xl"
                     variant="outline"
                     color="white"
-                    _hover={{ bg: "otd.purple.0" }}
-                    _active={{ bg: "otd.purple.0" }}
-                    rounded={["lg", null, null, "2xl"]}
-                    h={[12, null, null, 20]}
-                    minW={[12, null, null, 20]}
-                    px={[6, null, null, 10]}
-                    fontSize={["2xl", null, null, "4xl"]}
+                    bg="otd.purple.0"
+                    _hover={{ bg: "otd.purple.500" }}
+                    _active={{ bg: "otd.purple.500" }}
+                    h={[12, 14, null, 16]}
+                    minW={[12, 14, null, 16]}
+                    px={[6, 7, null, 10]}
+                    fontSize={["2xl", "3xl", null, "4xl"]}
                     fontWeight="normal"
                   >
                     {signupButtonText}
@@ -118,7 +118,7 @@ const Idtga = () => {
                   fontSize={["lg", null, null, "xl"]}
                   color="otd.slate.200"
                 >
-                  For more information, see{" "}
+                  Times are listed in your timezone. For more information, see{" "}
                   <Chakra.Link
                     as={Link}
                     to="/idtga#details"
