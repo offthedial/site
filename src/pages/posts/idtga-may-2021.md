@@ -1,6 +1,6 @@
 ---
 title: It's Dangerous to go Alone | May 2021
-date: 2021-03-21
+date: 2021-05-16
 author: LeptoFlare
 tournament: idtga
 ---
