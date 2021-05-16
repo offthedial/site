@@ -49,9 +49,10 @@ const theme = extendTheme({
     },
     mention: {
       fontSize: "87.5%",
-      borderRadius: "sm",
+      borderRadius: "3px",
       fontWeight: "bold",
       p: 0.5,
+      my: -0.5,
       bg: "rgba(114, 137, 218, 0.3)",
       display: "inline",
     },
@@ -76,10 +77,11 @@ const theme = extendTheme({
   styles: {
     global: props => ({
       code: {
-        fontFamily: "mono",
         fontSize: "87.5%",
-        borderRadius: "sm",
-        padding: 0.5,
+        borderRadius: "3px",
+        fontFamily: "mono",
+        p: 0.5,
+        my: -0.5,
         layerStyle: "tint",
       },
       blockquote: {
