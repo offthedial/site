@@ -4,28 +4,31 @@ title: IDTGA Rules
 
 # It's Dangerous to go Alone Rules
 ## Format
-Complete teams will consist of 4-5 players.
-
 ### Pools:
-- Swiss
-- 4 Rounds (Each pool has a maximum of 16 teams)
+- Bracket: `Swiss`
+- Matches: `Play-all-3`
+- There are `4` total rounds (Each pool has a maximum of 16 teams)
 - Teams are evenly distributed across pools.
-- Play all 3
 
 ### Top Cut:
-- Single Elimination
-- No 3rd place match
-- At least 4 teams total advance into top cut, with at least 1 team from each pool.
-- Best of 5
+- Bracket: `Single Elimination`
+- Matches: `Best-of-5`
+- At least `4` teams total advance into top cut, with at least 1 team from each pool.
+- There is no 3rd-place match
 
-## Timing & Round Duration
-- Each swiss round lasts 30 minutes.
-- Each top cut round lasts 40 minutes.
-- The very first swiss round lasts 5 more minutes, for 35 minutes total.
-- Players must start their matches within 5 minutes of the round.
+## Timing
+The tournament is scheduled to last `3:40` hours total.
+- Pools takes approximately `2:05` hours in total.
+- Top cut takes approximately `1:35` hours in total.
+
+### Round Durations
+- Each swiss round lasts `30` minutes.
+- Each top cut round lasts `40` minutes.
+- The very first swiss round lasts `5` more minutes, for `35` minutes total.
+- Players must start their matches within `5` minutes of the round.
   - If the match has not started yet, the first game is automatically awarded to the team that's waiting.
-  - For each additional 5 minutes that the match still hasn't started, an additional game will be awarded.
-- There is a 5-minute break before finals starts.
+  - For each additional `5` minutes that the match still hasn't started, an additional game will be awarded.
+- There is a `5-minute` break before finals starts.
 
 ## DC's Redo Decision Rules
 ### Redo the match if:
@@ -36,8 +39,8 @@ Complete teams will consist of 4-5 players.
 ### Do NOT redo the match if:
 - **Any player** on the same team DC's again the same round.
 - The host DC's.
-- The match has passed 2:30 before the DC'ing team has forfeited.
-- Either team has 50 or less objective remaining (excluding penalty).
+- The match has passed `2:30` before the DC'ing team has forfeited.
+- Either team has `50` or less objective remaining (excluding penalty).
 
 If either 2 DC’s occur in the same lobby or the host DC’s, the team currently not hosting must host the new lobby.
 
