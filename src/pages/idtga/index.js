@@ -99,17 +99,16 @@ const Idtga = () => {
                   <Chakra.Button
                     as={Link}
                     to="/signup"
-                    size="xl"
                     variant="outline"
-                    color="white"
+                    borderColor="white"
                     bg="otd.purple.0"
                     _hover={{ bg: "otd.purple.500" }}
                     _active={{ bg: "otd.purple.500" }}
+                    fontSize={["2xl", "3xl", null, "4xl"]}
+                    fontWeight="normal"
                     h={[12, 14, null, 16]}
                     minW={[12, 14, null, 16]}
                     px={[6, 7, null, 10]}
-                    fontSize={["2xl", "3xl", null, "4xl"]}
-                    fontWeight="normal"
                   >
                     {signupButtonText}
                   </Chakra.Button>
@@ -207,7 +206,7 @@ const CardHeading = ({ children }) => (
     fontSize={["xl", "2xl", null, "3xl"]}
     fontFamily="mono"
     fontWeight="light"
-    letterSpacing={4}
+    letterSpacing={2}
     lineHeight="sm"
     textTransform="uppercase"
   >
