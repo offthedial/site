@@ -28,10 +28,6 @@ Refer to your corresponding time-zone.
 - `AEST` 6am Sunday
 - `AEDT` 7am Sunday
 
-#### What time do tournaments end?
-Tournaments are scheduled to last 3:30 hours.
-Each pools round lasts 30 minutes and each top cut round lasts 40.
-
 #### Will tournaments be streamed?
 Yes, one match from each round will be streamed. There will be a five-minute break before top cut.
 
