@@ -41,96 +41,83 @@ const Idtga = () => {
       <Chakra.Box bg="otd.slate.0">
         <Chakra.Box pb={6} px={4}>
           <Chakra.Text
-            fontSize={["4xl", "5xl", null, "6xl"]}
+            fontSize={["4xl", null, null, "6xl"]}
             color="otd.slate.50"
             textAlign="center"
           >
             It's Dangerous to go Alone
           </Chakra.Text>
         </Chakra.Box>
-        <Chakra.Grid
-          templateColumns="repeat(3, minmax(0, 1fr))"
-          pb={[6, null, null, 10]}
-          px={[4, null, null, 10]}
-          gap={[6, null, null, 10]}
+        <Chakra.Stack
+          direction={["column", "row"]}
+          pb={6}
+          px={4}
+          align="center"
+          justify="center"
         >
-          <Chakra.GridItem colSpan={[3, 1]} alignSelf="center" h="full">
-            <Chakra.Stack
-              alignItems="center"
-              h="full"
-              justify={["center", null, null, "space-around"]}
+          <Chakra.Box maxW="xs">
+            <Chakra.Image maxW="full" src={idtga} />
+          </Chakra.Box>
+          <Chakra.Box>
+            <Chakra.Flex
+              direction="column"
+              align="center"
+              justify="center"
+              textAlign="center"
             >
-              <Chakra.Box maxW="xs">
-                <Chakra.Image maxW="full" src={idtga} />
-              </Chakra.Box>
-            </Chakra.Stack>
-          </Chakra.GridItem>
-          <Chakra.GridItem
-            rowStart={[2, 1]}
-            colStart={[null, 2]}
-            colSpan={[3, 2]}
-          >
-            <Chakra.Box p={4} rounded="md" bgColor="otd.slate.500">
-              <Chakra.Flex
-                maxW="lg"
-                direction="column"
-                align="center"
-                justify="center"
-                textAlign="center"
-                mx="auto"
-              >
-                <CardSection>
-                  <CardHeading>Tournament Date:</CardHeading>
-                  <CardText>February 21 @ 3pm</CardText>
-                </CardSection>
-                <CardSection>
-                  <CardHeading>Signups Close:</CardHeading>
-                  <Chakra.Stack
-                    direction={["column", "row"]}
-                    justify={["space-around", "space-evenly"]}
-                    spacing={[6, 2]}
-                  >
-                    <CardCount value={5} text="Days" />
-                    <CardCount value={12} text="Hours" />
-                    <CardCount value={32} text="Minutes" />
-                  </Chakra.Stack>
-                </CardSection>
-                <CardSection>
-                  <Chakra.Button
-                    as={Link}
-                    to="/signup"
-                    variant="outline"
-                    borderColor="white"
-                    bg="otd.purple.0"
-                    _hover={{ bg: "otd.purple.500" }}
-                    _active={{ bg: "otd.purple.500" }}
-                    fontSize={["2xl", "3xl", null, "4xl"]}
-                    fontWeight="normal"
-                    h={[12, 14, null, 16]}
-                    minW={[12, 14, null, 16]}
-                    px={[6, 7, null, 10]}
-                  >
-                    {signupButtonText}
-                  </Chakra.Button>
-                </CardSection>
-                <Chakra.Text
-                  fontSize={["lg", null, null, "xl"]}
-                  color="otd.slate.200"
+              <CardSection>
+                <CardHeading>Tournament Date:</CardHeading>
+                <CardText>February 21 @ 3pm</CardText>
+              </CardSection>
+              <CardSection>
+                <CardHeading>Signups Close:</CardHeading>
+                <Chakra.Stack
+                  maxW="lg"
+                  mx="auto"
+                  direction={["column", "row"]}
+                  justify={["space-around", "center"]}
+                  spacing={[6, 2]}
                 >
-                  Times are listed in your timezone. For more information, see{" "}
-                  <Chakra.Link
-                    as={Link}
-                    to="/idtga#details"
-                    color="otd.slate.100"
-                  >
-                    details
-                  </Chakra.Link>
-                  .
-                </Chakra.Text>
-              </Chakra.Flex>
-            </Chakra.Box>
-          </Chakra.GridItem>
-        </Chakra.Grid>
+                  <CardCount value={5} text="Days" />
+                  <CardCount value={12} text="Hours" />
+                  <CardCount value={32} text="Minutes" />
+                </Chakra.Stack>
+              </CardSection>
+              <CardSection>
+                <Chakra.Button
+                  as={Link}
+                  to="/signup"
+                  variant="outline"
+                  borderColor="white"
+                  bg="otd.purple.0"
+                  _hover={{ bg: "otd.purple.500" }}
+                  _active={{ bg: "otd.purple.500" }}
+                  fontSize={["2xl", "3xl", null, "4xl"]}
+                  fontWeight="normal"
+                  h={[12, 14, null, 16]}
+                  minW={[12, 14, null, 16]}
+                  px={[6, 7, null, 10]}
+                >
+                  {signupButtonText}
+                </Chakra.Button>
+              </CardSection>
+              <Chakra.Text
+                fontSize={["lg", null, null, "xl"]}
+                color="otd.slate.200"
+              >
+                Times are listed in your timezone. For more information, see{" "}
+                <Chakra.Link
+                  as={Link}
+                  to="/idtga#details"
+                  color="otd.slate.100"
+                >
+                  details
+                </Chakra.Link>
+                .
+              </Chakra.Text>
+            </Chakra.Flex>
+          </Chakra.Box>
+        </Chakra.Stack>
       </Chakra.Box>
       <Chakra.Box py={[8, null, null, 16]} pl={[8, null, null, 16]}>
         <Chakra.Grid templateColumns="repeat(12, minmax(0, 1fr))">
@@ -180,15 +167,11 @@ const Idtga = () => {
           <Chakra.Box p={12} bg="otd.slate.300" />
         </WhooshPromo>
       </Whoosh>
-      <Chakra.Box p={36}>
-        {/* Updates / Changes from last season */}
-        <Chakra.Alert colorScheme="yellow">
-          <Chakra.AlertTitle>Changes from last season:</Chakra.AlertTitle>
-          <Chakra.AlertDescription>
-            Each swiss round has been shortened from 40 minutes to 30.
-          </Chakra.AlertDescription>
-        </Chakra.Alert>
-        <Chakra.Box>{/* Schedule */}</Chakra.Box>
+      <Chakra.Box p={[8, null, null, 16]}>
+        <Chakra.Box p={8} layerStyle="lifted">
+          <Chakra.Text>Details for...</Chakra.Text>
+          <Chakra.Text>It's Dangerous to go Alone</Chakra.Text>
+        </Chakra.Box>
       </Chakra.Box>
     </Layout>
   )
