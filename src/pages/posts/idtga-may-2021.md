@@ -20,14 +20,14 @@ For more info, check out the [tournament page](https://otd.ink/idtga).
 
 ### What are the dates?
 #### Registration closes
-- UTC: 25th of April @ 8pm
-- EDT: 25th of April @ 4pm
-- AEDT: 26th of April @ 7am
+- May 25th @ 8pm UTC
+- May 25th @ 4pm EDT
+- May 26th @ 7am AEST
 
 #### Tournament begins
-- UTC: 29th of May @ 8pm
-- EDT: 29th of May @ 4pm
-- AEDT: 30th of May @ 7am
+- May 29th @ 8pm UTC
+- May 29th @ 4pm EDT
+- May 30th @ 7am AEST
 
 ### How do I register?
 1. ##### :sparkles: Simply go to [otd.ink/signup](https://otd.ink/signup)!
