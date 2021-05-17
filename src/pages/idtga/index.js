@@ -54,11 +54,13 @@ const Idtga = () => {
           px={4}
           align="center"
           justify="center"
+          maxW="5xl"
+          mx="auto"
         >
-          <Chakra.Box maxW="xs">
+          <Chakra.Box flex="1">
             <Chakra.Image maxW="full" src={idtga} />
           </Chakra.Box>
-          <Chakra.Box>
+          <Chakra.Box flex="2">
             <Chakra.Flex
               direction="column"
               align="center"
@@ -89,6 +91,7 @@ const Idtga = () => {
                   to="/signup"
                   variant="outline"
                   borderColor="white"
+                  color="white"
                   bg="otd.purple.0"
                   _hover={{ bg: "otd.purple.500" }}
                   _active={{ bg: "otd.purple.500" }}
