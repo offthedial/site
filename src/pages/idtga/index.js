@@ -1,34 +1,24 @@
 import React, { useEffect, useState } from "react"
 
 import { useTourney, useUserSignup } from "src/app/hooks"
+import {
+  fromUnixTime,
+  format,
+  addHours,
+  addMinutes,
+  differenceInDays,
+} from "date-fns"
 
 import { Link } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import * as Chakra from "@chakra-ui/react"
+import { InfoOutlineIcon } from "@chakra-ui/icons"
 import Layout from "src/components/Layout"
 import skate from "src/static/skate.svg"
 import idtga from "src/static/idtga.svg"
 
-const Idtga = () => {
+const Idtga = ({ data }) => {
   const tourney = useTourney()
-  const userSignup = useUserSignup()
-
-  const [signupButtonText, setSignupButtonText] = useState("Signup")
-  useEffect(() => {
-    if (userSignup.data?.type === "signup") {
-      setSignupButtonText("Update Signup Form")
-    } else if (userSignup.data?.type === "sub") {
-      setSignupButtonText("Update Sub Form")
-    } else if (tourney.data?.hasClosed() && !tourney.data?.hasEnded()) {
-      setSignupButtonText("Signup as a Sub")
-    } else {
-      setSignupButtonText("Signup")
-    }
-  }, [tourney, userSignup])
-
-  // const countdown = useState([null, null, null])
-  // useEffect(() => {
-  //   tourneyData.smashgg.registrationClosesAt
-  // })
 
   return (
     <Layout
@@ -48,79 +38,11 @@ const Idtga = () => {
             It's Dangerous to go Alone
           </Chakra.Text>
         </Chakra.Box>
-        <Chakra.Stack
-          direction={["column", "row"]}
-          pb={6}
-          px={4}
-          align="center"
-          justify="center"
-          maxW="5xl"
-          mx="auto"
-        >
-          <Chakra.Box flex="1">
-            <Chakra.Image maxW="full" src={idtga} />
-          </Chakra.Box>
-          <Chakra.Box flex="2">
-            <Chakra.Flex
-              direction="column"
-              align="center"
-              justify="center"
-              textAlign="center"
-            >
-              <CardSection>
-                <CardHeading>Tournament Date:</CardHeading>
-                <CardText>February 21 @ 3pm</CardText>
-              </CardSection>
-              <CardSection>
-                <CardHeading>Signups Close:</CardHeading>
-                <Chakra.Stack
-                  maxW="lg"
-                  mx="auto"
-                  direction={["column", "row"]}
-                  justify={["space-around", "center"]}
-                  spacing={[6, 2]}
-                >
-                  <CardCount value={5} text="Days" />
-                  <CardCount value={12} text="Hours" />
-                  <CardCount value={32} text="Minutes" />
-                </Chakra.Stack>
-              </CardSection>
-              <CardSection>
-                <Chakra.Button
-                  as={Link}
-                  to="/signup"
-                  variant="outline"
-                  borderColor="white"
-                  color="white"
-                  bg="otd.purple.0"
-                  _hover={{ bg: "otd.purple.500" }}
-                  _active={{ bg: "otd.purple.500" }}
-                  fontSize={["2xl", "3xl", null, "4xl"]}
-                  fontWeight="normal"
-                  h={[12, 14, null, 16]}
-                  minW={[12, 14, null, 16]}
-                  px={[6, 7, null, 10]}
-                >
-                  {signupButtonText}
-                </Chakra.Button>
-              </CardSection>
-              <Chakra.Text
-                fontSize={["lg", null, null, "xl"]}
-                color="otd.slate.200"
-              >
-                Times are listed in your timezone. For more information, see{" "}
-                <Chakra.Link
-                  as={Link}
-                  to="/idtga#details"
-                  color="otd.slate.100"
-                >
-                  details
-                </Chakra.Link>
-                .
-              </Chakra.Text>
-            </Chakra.Flex>
-          </Chakra.Box>
-        </Chakra.Stack>
+
+        <Card
+          tourney={tourney}
+          signupButton={<SignupButton tourney={tourney} />}
+        />
       </Chakra.Box>
       <Chakra.Box py={[8, null, null, 16]} pl={[8, null, null, 16]}>
         <Chakra.Grid templateColumns="repeat(12, minmax(0, 1fr))">
@@ -170,13 +92,294 @@ const Idtga = () => {
           <Chakra.Box p={12} bg="otd.slate.300" />
         </WhooshPromo>
       </Whoosh>
-      <Chakra.Box p={[8, null, null, 16]}>
-        <Chakra.Box p={8} layerStyle="lifted">
-          <Chakra.Text>Details for...</Chakra.Text>
-          <Chakra.Text>It's Dangerous to go Alone</Chakra.Text>
-        </Chakra.Box>
+      <Chakra.Box py={[8, null, null, 20]} px={[8, null, null, 40]}>
+        <DetailsCard tourney={tourney} mdx={data.mdx} />
       </Chakra.Box>
     </Layout>
+  )
+}
+
+const Card = ({ tourney, signupButton }) => {
+  const now = new Date()
+  const countdownDate = field => {
+    if (tourney.data?.hasClosed !== false) {
+      return 0
+    }
+
+    if (field === "d") {
+      return differenceInDays(
+        now,
+        fromUnixTime(tourney.data.smashgg.registrationClosesAt)
+      )
+    }
+    return format(
+      fromUnixTime(tourney.data.smashgg.registrationClosesAt) - now,
+      field
+    )
+  }
+  const state = {
+    date: tourney.data ? format(tourney.data.date, "MMM d, h:mm aa") : "...",
+    days: countdownDate("d"),
+    hours: countdownDate("h"),
+    minutes: countdownDate("m"),
+  }
+  return (
+    <Chakra.Stack
+      direction={["column", "row"]}
+      pb={6}
+      px={4}
+      align="center"
+      justify="center"
+      maxW="5xl"
+      mx="auto"
+    >
+      <Chakra.Box flex="1">
+        <Chakra.Image maxW="full" src={idtga} />
+      </Chakra.Box>
+      <Chakra.Box flex="3">
+        <Chakra.Flex
+          direction="column"
+          align="center"
+          justify="center"
+          textAlign="center"
+        >
+          <CardSection>
+            <CardHeading>Tournament Date:</CardHeading>
+            <CardText>{state.date}</CardText>
+          </CardSection>
+          <CardSection>
+            <CardHeading>Signups Close:</CardHeading>
+            <Chakra.Stack
+              maxW="lg"
+              mx="auto"
+              direction={["column", "row"]}
+              justify={["space-around", "center"]}
+              spacing={[6, 2]}
+            >
+              <CardCount value={state.days} text="Days" />
+              <CardCount value={state.hours} text="Hours" />
+              <CardCount value={state.minutes} text="Minutes" />
+            </Chakra.Stack>
+          </CardSection>
+          <CardSection>{signupButton}</CardSection>
+          <Chakra.Text
+            fontSize={["lg", null, null, "xl"]}
+            color="otd.slate.200"
+          >
+            Times are listed in your timezone. For more information, see{" "}
+            <Chakra.Link as={Link} to="/idtga#details" color="otd.slate.100">
+              details
+            </Chakra.Link>
+            .
+          </Chakra.Text>
+        </Chakra.Flex>
+      </Chakra.Box>
+    </Chakra.Stack>
+  )
+}
+
+const WhooshPromo = ({ title, description, reversed = false, children }) => {
+  const props = reversed
+    ? [
+        { colStart: [1, null, 2], colEnd: 3, rowStart: [2, null, 1] },
+        { colStart: 1, colEnd: [3, null, 2] },
+      ]
+    : [
+        { colStart: 1, colEnd: [3, null, 2], rowStart: [2, null, 1] },
+        { colStart: [1, null, 2], colEnd: 3 },
+      ]
+  return (
+    <Chakra.Box px={[4, null, 8, 16]} py={[16, null, 32, 44]}>
+      <Chakra.Grid
+        gap={[4, null, 12, 36]}
+        templateColumns="repeat(2, minmax(0, 1fr))"
+      >
+        <Chakra.GridItem {...props[0]}>
+          <Chakra.Box>
+            <Chakra.Text
+              fontSize={["3xl", null, null, "4xl"]}
+              fontWeight="bold"
+              mb={2}
+            >
+              {title}
+            </Chakra.Text>
+            <Chakra.Text fontSize="2xl" textStyle="semimute">
+              {description}
+            </Chakra.Text>
+          </Chakra.Box>
+        </Chakra.GridItem>
+        <Chakra.GridItem alignSelf="center" {...props[1]}>
+          {children}
+        </Chakra.GridItem>
+      </Chakra.Grid>
+    </Chakra.Box>
+  )
+}
+
+const DetailsCard = ({ tourney, mdx }) => {
+  const state =
+    tourney?.data?.hasEnded() !== false
+      ? {
+          title: "It's Dangerous to go Alone",
+          details:
+            "There's no tournament currently happening, but here's some general information!",
+          changelogTitle: "Changes from last season",
+        }
+      : {
+          title: tourney.data.smashgg.name,
+          details: (
+            <article>
+              <MDXRenderer>{mdx.body}</MDXRenderer>
+            </article>
+          ),
+          changelogTitle: "What's New",
+        }
+  const dates = [
+    [
+      "4 days before",
+      date => addHours(date, -24),
+      <>
+        Check-in begins for 24 hours, if you are registered, don't forget to
+        check in!
+      </>,
+    ],
+    [
+      "3 days before",
+      date => date,
+      <>
+        Check-in and registration closes, invalid attendees will be removed, and
+        we start assembling teams.
+      </>,
+    ],
+    [
+      "2 days before",
+      date => addHours(date, 24),
+      <>
+        Players recieve their teams, and the maplist is published. You can now
+        start practicing with your team
+      </>,
+    ],
+    [
+      "1 hour before",
+      date => addHours(date, 71),
+      <>
+        The tournament is about to begin! We request that you be online on both
+        Splatoon 2 and Discord.
+      </>,
+    ],
+    [
+      "10 minutes before",
+      date => addMinutes(addHours(date, 72), -10),
+      <>
+        The stream goes live on <Link to="/twitch">twitch</Link>!
+      </>,
+    ],
+  ]
+
+  return (
+    <Chakra.Box p={[8, null, null, 12]} layerStyle="lifted">
+      <Chakra.Stack spacing={8}>
+        <Chakra.Box>
+          <Chakra.Text id="details" fontSize="2xl" textStyle="semimute">
+            Details for...
+          </Chakra.Text>
+          <Chakra.Text lineHeight="1.125" fontSize="4xl">
+            {state.title}
+          </Chakra.Text>
+        </Chakra.Box>
+        <Chakra.Text
+          fontSize="xl"
+          textStyle="semimute"
+          as="blockquote"
+          fontStyle="italic"
+        >
+          {state.details}
+        </Chakra.Text>
+        <Chakra.Box
+          display="flex"
+          flexDirection="column"
+          alignItems="stretch"
+          gridGap={[8, null, null, 12]}
+        >
+          <Chakra.Box flexGrow="1" flexBasis="0">
+            <Chakra.Table fontSize="lg" variant="unstyled">
+              <Chakra.Thead>
+                <Chakra.Tr>
+                  <Chakra.Th></Chakra.Th>
+                  <Chakra.Th lineHeight="1.5" fontSize="lg" textStyle="mute">
+                    Schedule
+                  </Chakra.Th>
+                </Chakra.Tr>
+              </Chakra.Thead>
+              <Chakra.Tbody>
+                {dates.map((row, i) => (
+                  <Chakra.Tr key={i}>
+                    <Chakra.Td
+                      lineHeight="1.5"
+                      verticalAlign="top"
+                      pr={0}
+                      fontWeight="bold"
+                      textAlign="right"
+                      width="25%"
+                    >
+                      {tourney?.data?.hasEnded() !== false
+                        ? row[0]
+                        : format(
+                            row[1](
+                              fromUnixTime(
+                                tourney.data.smashgg.registrationClosesAt
+                              )
+                            ),
+                            "MMM d, h:mm aa"
+                          )}
+                    </Chakra.Td>
+                    <Chakra.Td lineHeight="1.5" verticalAlign="top">
+                      {row[2]}
+                    </Chakra.Td>
+                  </Chakra.Tr>
+                ))}
+              </Chakra.Tbody>
+            </Chakra.Table>
+          </Chakra.Box>
+          <Chakra.Box flexGrow="1" flexBasis="0">
+            <Chakra.Table fontSize="lg" variant="unstyled">
+              <Chakra.Thead>
+                <Chakra.Tr>
+                  <Chakra.Th></Chakra.Th>
+                  <Chakra.Th lineHeight="1.5" fontSize="lg" textStyle="mute">
+                    {state.changelogTitle}
+                  </Chakra.Th>
+                </Chakra.Tr>
+              </Chakra.Thead>
+              <Chakra.Tbody>
+                {mdx.frontmatter.changelog.map((row, i) => (
+                  <Chakra.Tr key={i}>
+                    <Chakra.Td
+                      width="25%"
+                      lineHeight="1.5"
+                      verticalAlign="top"
+                      pr={0}
+                    >
+                      <Chakra.Box
+                        display="flex"
+                        justifyContent="flex-end"
+                        alignItems="center"
+                        height="1.5em"
+                      >
+                        <InfoOutlineIcon />
+                      </Chakra.Box>
+                    </Chakra.Td>
+                    <Chakra.Td lineHeight="1.5" verticalAlign="top">
+                      {row}
+                    </Chakra.Td>
+                  </Chakra.Tr>
+                ))}
+              </Chakra.Tbody>
+            </Chakra.Table>
+          </Chakra.Box>
+        </Chakra.Box>
+      </Chakra.Stack>
+    </Chakra.Box>
   )
 }
 
@@ -225,6 +428,44 @@ const CardCount = ({ text, value }) => (
   </Chakra.Box>
 )
 
+const SignupButton = ({ tourney }) => {
+  const userSignup = useUserSignup()
+
+  const [signupButtonText, setSignupButtonText] = useState("Signup")
+  useEffect(() => {
+    if (userSignup.data?.type === "signup") {
+      setSignupButtonText("Update Signup Form")
+    } else if (userSignup.data?.type === "sub") {
+      setSignupButtonText("Update Sub Form")
+    } else if (tourney.data?.hasClosed() && !tourney.data?.hasEnded()) {
+      setSignupButtonText("Signup as a Sub")
+    } else {
+      setSignupButtonText("Signup")
+    }
+  }, [tourney, userSignup])
+
+  return (
+    <Chakra.Button
+      as={Link}
+      to={tourney.data?.hasEnded() ? undefined : "/signup"}
+      variant="outline"
+      borderColor="white"
+      color="white"
+      bg="otd.purple.0"
+      _hover={{ bg: "otd.purple.500" }}
+      _active={{ bg: "otd.purple.500" }}
+      fontSize={["2xl", "3xl", null, "4xl"]}
+      fontWeight="normal"
+      h={[12, 14, null, 16]}
+      minW={[12, 14, null, 16]}
+      px={[6, 7, null, 10]}
+      disabled={tourney.data?.hasEnded()}
+    >
+      {signupButtonText}
+    </Chakra.Button>
+  )
+}
+
 const Whoosh = ({ children }) => (
   <>
     <WhooshWave />
@@ -272,42 +513,15 @@ const WhooshWave = ({ reversed = false }) => (
   </Chakra.Box>
 )
 
-const WhooshPromo = ({ title, description, reversed = false, children }) => {
-  const props = reversed
-    ? [
-        { colStart: [1, null, 2], colEnd: 3, rowStart: [2, null, 1] },
-        { colStart: 1, colEnd: [3, null, 2] },
-      ]
-    : [
-        { colStart: 1, colEnd: [3, null, 2], rowStart: [2, null, 1] },
-        { colStart: [1, null, 2], colEnd: 3 },
-      ]
-  return (
-    <Chakra.Box px={[4, null, 8, 16]} py={[16, null, 32, 44]}>
-      <Chakra.Grid
-        gap={[4, null, 12, 36]}
-        templateColumns="repeat(2, minmax(0, 1fr))"
-      >
-        <Chakra.GridItem {...props[0]}>
-          <Chakra.Box>
-            <Chakra.Text
-              fontSize={["3xl", null, null, "4xl"]}
-              fontWeight="bold"
-              mb={2}
-            >
-              {title}
-            </Chakra.Text>
-            <Chakra.Text fontSize="2xl" textStyle="semimute">
-              {description}
-            </Chakra.Text>
-          </Chakra.Box>
-        </Chakra.GridItem>
-        <Chakra.GridItem alignSelf="center" {...props[1]}>
-          {children}
-        </Chakra.GridItem>
-      </Chakra.Grid>
-    </Chakra.Box>
-  )
-}
+export const query = graphql`
+  query {
+    mdx(slug: { eq: "idtga/_details" }) {
+      frontmatter {
+        changelog
+      }
+      body
+    }
+  }
+`
 
 export default Idtga
