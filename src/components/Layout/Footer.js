@@ -26,7 +26,7 @@ const Footer = () => {
             ["/legal", "Terms"],
             ["https://assets.otd.ink", "Assets"],
           ].map(([to, name]) => (
-            <Chakra.Link as={Link} to={to}>
+            <Chakra.Link as={Link} to={to} key={to}>
               {name}
             </Chakra.Link>
           ))}
