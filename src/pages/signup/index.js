@@ -266,78 +266,7 @@ const Signup = ({ location }) => {
           </div>
         </div>
 
-        <div class="section px-0">
-          <div class="title">Set up smash.gg</div>
-          {(!tourneyQuery.data?.hasClosed() ||
-            userSignupQuery.data?.type === "signup") && (
-            <>
-              <Field label="Register on smash.gg, copy the confirmation code when it pops up.">
-                <div class="input is-normal p-1" style={{ height: "600px" }}>
-                  <div
-                    style={{
-                      borderRadius: "4px",
-                      width: "100%",
-                      height: "100%",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <iframe
-                      style={{ borderWidth: "10px" }}
-                      title="smashgg"
-                      src={`https://smash.gg/${tourneyQuery.data?.slug}/register/embed`}
-                      height="100%"
-                      width="100%"
-                    />
-                  </div>
-                </div>
-              </Field>
-              <div class="field">
-                <div class="section px-0 py-4">
-                  <Field label="Enter your smash.gg confirmation code.">
-                    <div style={{ maxWidth: "20em" }}>
-                      <div class="field has-addons">
-                        <div class="control is-expanded">
-                          <Input
-                            name="smashgg.code"
-                            control={form.control}
-                            errors={form.errors}
-                            defaultValue="#"
-                            options={{
-                              lowercase: true,
-                              blocks: [7],
-                              prefix: "#",
-                            }}
-                            rules={{
-                              pattern: {
-                                value: /^#[0-9A-Fa-f]{6}$/,
-                                message: "Invalid confirmation code",
-                              },
-                              minLength: {
-                                value: 2,
-                                message: "This field is required",
-                              },
-                            }}
-                          />
-                        </div>
-                        <div class="control">
-                          <span
-                            class="input ease is-medium px-5 is-static"
-                            style={{
-                              backgroundColor: form.watch(
-                                "smashgg.code",
-                                "#dbdbdb"
-                              ),
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <ErrorMessage options={[form.errors, "smashgg.code"]} />
-                  </Field>
-                </div>
-              </div>
-            </>
-          )}
+       
           <Field
             label={
               <div class="is-size-4">
