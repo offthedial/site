@@ -267,11 +267,11 @@ const Signup = ({ location }) => {
         </div>
 
         <div class="section px-0">
-          <div class="title">Set up smash.gg</div>
+          <div class="title">IGNORE THIS BIT</div>
           {(!tourneyQuery.data?.hasClosed() ||
             userSignupQuery.data?.type === "signup") && (
             <>
-              <Field label="Register on smash.gg, copy the confirmation code when it pops up.">
+              <Field label="WE WILL ADD YOU TO SMASH.GG, IF I DELETE THIS NOW IT WILL BREAK THE WEBSITE. Just make sure your profile url slug below is correct">
                 <div class="input is-normal p-1" style={{ height: "600px" }}>
                   <div
                     style={{
@@ -293,7 +293,7 @@ const Signup = ({ location }) => {
               </Field>
               <div class="field">
                 <div class="section px-0 py-4">
-                  <Field label="Enter your smash.gg confirmation code.">
+                  <Field label="PLEASE ENTER 000001 BELOW">
                     <div style={{ maxWidth: "20em" }}>
                       <div class="field has-addons">
                         <div class="control is-expanded">
