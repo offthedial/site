@@ -5,15 +5,15 @@ author: DJam98
 tournament: idtga
 ---
 
-It's been a while so I need to actually check what month it is... and the survey says it's September! Get your Earth, Wind and Fire ready, as we're about to bring another season of It's Dangerous to go Alone!
+It's been a while so I need to check what month it is... and the survey says it's September! Get your Earth, Wind and Fire ready, as we're about to bring another season of It's Dangerous to go Alone!
 
 ### Patch Notes
 - This season there have been no rule modifications. But make sure you're aware of our [rules for IDTGA](https://otd.ink/idtga/rules) and our [Terms and Conditions](https://otd.ink/legal).
 
 ### Coming Soon
-In case you missed our Discord announcement there are two changes coming soon to Off the Dial (once the code actually works).
+In case you missed our Discord announcement two changes are coming soon to Off the Dial (once the code works).
 ##### Removal of Smash.gg embed
-- We know that it can be tiresome to do the smash.gg embed when you signup for each tournament (and to be honest not everyone does it correctly) so we’re removing it, however, you will still have to enter in your smash.gg user profile url so we can add you. More details later.
+- We know that it can be tiresome to do the smash.gg embed when you signup for each tournament (and to be honest not everyone does it correctly) so we’re removing it, however, you will still have to enter in your smash.gg user profile URL so we can add you. More details later.
 ##### Spectator Passes
 - This will allow team captains to use IDTGA as a place to tryout and discover players for their teams. Everyone who registers for a spectator pass will be thoroughly examined before and during the tournament to make sure there is no secret communication involved. More details later.
 
