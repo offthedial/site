@@ -58,6 +58,12 @@ const theme = extendTheme({
     },
   },
   layerStyles: {
+    normal: {
+      bg: "white",
+      ".chakra-ui-dark &": {
+        bg: "gray.800",
+      },
+    },
     tint: {
       bg: "gray.50",
       ".chakra-ui-dark &": {

@@ -148,7 +148,7 @@ const Card = ({ tourney, signupButton }) => {
             <CardText>{state.date}</CardText>
           </CardSection>
           <CardSection>
-            <CardHeading>Signups Close:</CardHeading>
+            <CardHeading>Registration Closes:</CardHeading>
             <Chakra.Stack
               maxW="lg"
               mx="auto"
