@@ -34,7 +34,7 @@ The winning team of the top bracket will now receive [sendou.ink](https://sendou
 - The [staff page](https://otd.ink/staff) is being changed as there have been some staff changes. Note that this is not yet complete.
 
 ### Here's a rundown on what IDTGA is:
-No stress, it's been a while since our last tournament. It's Dangerous to go Alone is our flagship, **solo registration** tournament. Focused on creating balanced teams, and being accessible to everyone.
+It's Dangerous to go Alone is our flagship, **solo registration** tournament. Focused on creating balanced teams, and being accessible to everyone.
 
 1. New to the scene and want an accessible entrance into competitive?
 2. Currently a free agent and want to show off your skill?
