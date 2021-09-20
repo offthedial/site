@@ -31,7 +31,7 @@ The winning team of the top bracket will now receive [sendou.ink](https://sendou
 - Added new section in subs to clarify what happens when there are no eligible subs that have signed up.
 - The [bot page](https://otd.ink/bot) has been updated to reflect active commands.
 - The [feedback page](https://otd.ink/feedback) has been changed to be a redirection to the google form that has feedback.
-- The [staff page] is being changed as there have been some staff changes. Note that this is not yet complete.
+- The [staff page](https://otd.ink/staff) is being changed as there have been some staff changes. Note that this is not yet complete.
 
 ### Here's a rundown on what IDTGA is:
 No stress, it's been a while since our last tournament. It's Dangerous to go Alone is our flagship, **solo registration** tournament. Focused on creating balanced teams, and being accessible to everyone.
