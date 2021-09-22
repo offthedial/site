@@ -1,6 +1,6 @@
 ---
 title: Season 25 Is Coming!
-date: 2021-09-21
+date: 2021-09-22
 author: DJam98
 tournament: idtga
 ---
@@ -20,6 +20,11 @@ All players in the top team of **each** bracket will receive a prize of one mont
 ### Sendou.ink Badges
 The winning team of the top bracket will now receive [sendou.ink](https://sendou.ink) badges!
 
+### Staff Changes
+There have been a few staff changes recently, but the major ones are that <mention>@LeptoFlare<mention> has unfortunately left us (due to personal reasons). Lepto played a major role in developing both the Off the Dial Bot and this website you're on now and while we're sad to see them go, we wish you all the best in your future endeavours! However, this does leave us without a proper developer to work on both the website and bot, so you may not some highly requested (or previously announced) changes until we find a new developer.
+
+On a more positive note, <mention>@rose!<mention> will be stepping up as a Head TO! We hope to see that the future of Off the Dial goes as positively as you are yourself!
+
 ### Other Patch Notes
 - Updated the [FAQ](https://otd.ink/faq) to add some new questions and remove some pointless ones.
 - Added an eligibility section to the [rules](https://otd.ink/idtga/rules).
@@ -30,8 +35,9 @@ The winning team of the top bracket will now receive [sendou.ink](https://sendou
 - Added new section in reporting, which adds a new rule that teams must try to resolve all incidents internally before reporting (unless an exemption applies - see [rules](https://otd.ink/idtga/rules).
 - Added new section in subs to clarify what happens when there are no eligible subs that have signed up.
 - The [bot page](https://otd.ink/bot) has been updated to reflect active commands.
-- The [feedback page](https://otd.ink/feedback) has been changed to be a redirection to the google form that has feedback.
+- The [feedback page](https://otd.ink/feedback) has been changed to be a redirection to the google form that has feedback form.
 - The [staff page](https://otd.ink/staff) is being changed as there have been some staff changes. Note that this is not yet complete.
+- Naming of seasons has reverted back to numbers (in this case IDTGA 25) instead of month/year.
 
 ### Here's a rundown on what IDTGA is:
 It's Dangerous to go Alone is our flagship, **solo registration** tournament. Focused on creating balanced teams, and being accessible to everyone.
@@ -44,14 +50,14 @@ For more info - including the schedule - check out the [tournament page](https:/
 
 ### What are the dates?
 #### Registration closes
-- October 8th @ 8pm UTC
-- October 8th @ 4pm EDT
-- October 9th @ 7am AEDT
+- October 13th @ 8pm UTC
+- October 13th @ 4pm EDT
+- October 14th @ 7am AEDT
 
 #### Tournament begins
-- October 11th @ 8pm UTC
-- October 11th @ 4pm EDT
-- October 12th @ 7am AEDT
+- October 16th @ 8pm UTC
+- October 16th @ 4pm EDT
+- October 17th @ 7am AEDT
 
 ### How do I register?
 1. ##### :sparkles: Simply go to [otd.ink/signup](https://otd.ink/signup)!
