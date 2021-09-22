@@ -12,7 +12,7 @@ const Bot = () => (
         <div class="column is-7">
           <p>
             A custom made bot, it’s built from the ground up by LeptoFlare and
-            used for all kinds of stuff, tournament management,
+            used for all kinds of stuff, tournament management, profile storage,
             and generating minesweepers at your convenience.
           </p>
           <h3>Getting Started</h3>
@@ -21,9 +21,6 @@ const Bot = () => (
             <li>
               Use <code>$flairme [flair]</code> to give yourself roles
               surrounding things you would like to get notified for things.
-            </li>
-            <li>
-            	Use <code>$minesweeper><code> to generate a minesweeper to cure your boredom.
             </li>
           </ul>
           <h3>Help</h3>
