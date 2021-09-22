@@ -32,12 +32,14 @@ On a more positive note, Rose will be stepping up as a Head TO! We hope to see t
 - Updated other progression phases to reflect tiered brackets (4 teams still move to top cut).
 - Pools renamed to Prelimiaries.
 - Added new text under timing about distributing games from an absent team.
-- Added new section in reporting, which adds a new rule that teams must try to resolve all incidents internally before reporting (unless an exemption applies - see [rules](https://otd.ink/idtga/rules).
+- Added new section in reporting, which adds a new rule that teams must try to resolve all incidents internally before reporting (unless an exemption applies - see [rules](https://otd.ink/idtga/rules)).
 - Added new section in subs to clarify what happens when there are no eligible subs that have signed up.
 - The [bot page](https://otd.ink/bot) has been updated to reflect active commands.
 - The [feedback page](https://otd.ink/feedback) has been changed to be a redirection to the google form that has feedback form.
 - The [staff page](https://otd.ink/staff) is being changed as there have been some staff changes. Note that this is not yet complete.
 - Naming of seasons has reverted back to numbers (in this case IDTGA 25) instead of month/year.
+
+Make sure to read the [rules](https://otd.ink/idtga/rules) and [terms and conditions](https://otd.ink/legal) before registering for the tournament.
 
 ### Here's a rundown on what IDTGA is:
 It's Dangerous to go Alone is our flagship, **solo registration** tournament. Focused on creating balanced teams, and being accessible to everyone.
