@@ -12,7 +12,7 @@ title: IDTGA Rules
 - Players have a valid Nintendo account
 - Players have online access through the 'Nintendo Online' system (by either free trial or by purchasing the service)
 - Players have a reliable internet access point for Nintendo Switch
-- Players have at least achieved C- in ALL ranked modes of Splatoon 2 and have a basic understanding of how the modes work.
+- Players have at least achieved `C-` in **ALL ranked modes** of Splatoon 2 and have a basic understanding of how the modes work.
 
 ### Player are not eligible if they have any one of the conditions below
 - Player is banned from Off the Dial's Discord server of services
@@ -23,6 +23,7 @@ title: IDTGA Rules
 Depending on the amount of signups, there may be multiple brackets which are tiered based on the cumulative ELO (numerical score of all ranks) and competitive experience. There will be an even number of players in all brackets. The top ranked players will be grouped in the higher brackets while the lower ranked players will be placed in lower brackets.
 - Minimum bracket size: `8` teams (`32` players)
 - Maximum bracket size: `15` teams (`60` players)
+
 All brackets will run independently of one another and will have their own preliminaries and top cut.
 
 ## Brackets and Progression

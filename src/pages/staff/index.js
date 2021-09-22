@@ -28,7 +28,7 @@ const Staff = ({ data }) => (
     <PageHero title="Our Staff Team">
       Off the Dial is thankful to have such an awesome staff team, each staff
       member contributes a key part to Off the Dial as a whole. If any of them
-      interest you, feel free to read about them here.
+      interest you, feel free to read about them here. The staff team is currently under revision, so watch this space.
     </PageHero>
     <div class="section pt-0">
       <div class="container layout-content">

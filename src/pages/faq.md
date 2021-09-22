@@ -39,13 +39,6 @@ You may also DM either Head Organiser about it.
 Teams are calculated based on your ranks, playstyle and previous competitive experience. All of these are converted into numerical values and then teams are created into drafts using code, and then balanced using human balancing.
 
 #### What is Swiss?
-Swiss is a bracket format, like Single Elimination or Round Robin. However, there are some things that set Swiss apart from other systems.
-
-First of all, it's non-eliminating, you play the same amount of rounds regardless of if you win or lose.
-
-Each round, swiss will attempt to give you as balanced of a match as possible by setting you up against a team with similar win/loss ratio.
-
-#### What is Swiss?
 Swiss is a bracket format, like Single Elimination or Round Robin. However, there are some things that set Swiss apart from other systems. First of all, it's non-eliminating, meaning you play the same amount of rounds regardless of if you lose or not. Swiss pairs you up with people that are closest to the same win/loss record as you, making sure all rounds are as balanced as possible.
 
 #### Am I able to scrim other teams competing in the tournament?
@@ -110,4 +103,4 @@ If you’re playing in Swiss, make sure you've played all round, you aren't out 
 
 If you didn’t make the finals, you can watch the rest of the stream on [Twitch](https://twitch.tv/offthedial).
 
-If you have any feedback on how we can improve the tournament in the future, please see [otd.ink/feedback](otd.ink/feedback).
+If you have any feedback on how we can improve the tournament in the future, please see [otd.ink/feedback](https://otd.ink/feedback).
