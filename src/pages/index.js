@@ -34,17 +34,17 @@ const Index = () => {
         <Highlight>
           <div class="column is-9">
             <h1 class="title is-1 is-hidden-mobile has-text-white">
-              Who are we?
+              Known Issue
             </h1>
             <h6 class="title is-3 is-hidden-tablet has-text-white">
-              Who are we?
+              Known Issue
             </h6>
             <p class="subtitle is-4 has-text-white">
-              {siteMetadata.description}
+              There is a known issue where users can't login with Discord, preventing signups. We are working on this issue. For all updates, please keep an eye on our announcements channel in our Discord server. We apologise for the inconvenience.
             </p>
           </div>
           <div class="column is-3 is-hidden-mobile">
-            <img src="https://assets.otd.ink/logo-nobg.svg" alt="" />
+            <img src="https://assets.otd.ink/warning.svg" alt="" />
           </div>
         </Highlight>
       </div>
