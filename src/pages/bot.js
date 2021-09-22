@@ -12,19 +12,18 @@ const Bot = () => (
         <div class="column is-7">
           <p>
             A custom made bot, it’s built from the ground up by LeptoFlare and
-            used for all kinds of stuff, tournament management, profile storage,
+            used for all kinds of stuff, tournament management,
             and generating minesweepers at your convenience.
           </p>
           <h3>Getting Started</h3>
           <p>Some commands to get you started:</p>
           <ul>
             <li>
-              Use <code>$profile create</code> to create your profile so you
-              don’t have to create one when you sign up for a tournament.
-            </li>
-            <li>
               Use <code>$flairme [flair]</code> to give yourself roles
               surrounding things you would like to get notified for things.
+            </li>
+            <li>
+            	Use <code>$minesweeper><code> to generate a minesweeper to cure your boredom.
             </li>
           </ul>
           <h3>Help</h3>
@@ -50,9 +49,7 @@ const Bot = () => (
       <p>
         If you have a suggestion/bug report for Off the Dial Bot, please make a
         Github Issue. This lets us track all of the suggestions and reports
-        permanently in one place, as opposed to the{" "}
-        <Mention>#suggestions</Mention> channel, where the messages can get
-        easily lost.
+        permanently in one place.
       </p>
     </PageContainer>
   </Layout>
