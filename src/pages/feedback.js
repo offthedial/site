@@ -1,7 +1,24 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 
-import Redirect from "src/components/Redirect"
+import * as typeformEmbed from "@typeform/embed"
 
-const Discord = () => <Redirect to="https://docs.google.com/forms/d/e/1FAIpQLSezygI_EfAbPAw-oopfhffRILuJ7WHoSRxUOfFA8nLDBEyhRA/viewform?usp=sf_link" />
+const Feedback = () => {
+  const typeformRef = useRef(null)
 
-export default Discord
+  useEffect(() => {
+    typeformEmbed.makeWidget(
+      typeformRef.current,
+      "https://form.typeform.com/to/Mc9Fg3sy",
+      {
+        hideScrollbars: true,
+        hideFooter: true,
+        hideHeaders: true,
+        opacity: 100,
+      }
+    )
+  }, [typeformRef])
+
+  return <div ref={typeformRef} style={{ height: "100vh", width: "100%" }} />
+}
+
+export default Feedback

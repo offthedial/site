@@ -3,38 +3,17 @@ title: IDTGA Rules
 ---
 
 # It's Dangerous to go Alone Rules
-
-## Eligibility
-### Players are eligible if they meet all of the conditions below
-- Players have a valid [smash.gg account](https://smash.gg).
-- Players have a valid Discord account
-- Players have a Nintendo Switch, as well as a copy of Splatoon 2
-- Players have a valid Nintendo account
-- Players have online access through the 'Nintendo Online' system (by either free trial or by purchasing the service)
-- Players have a reliable internet access point for Nintendo Switch
-- Players have at least achieved C- in ALL ranked modes of Splatoon 2 and have a basic understanding of how the modes work.
-
-### Player are not eligible if they have any one of the conditions below
-- Player is banned from Off the Dial's Discord server of services
-- Player is banned from Nintendo Online, Discord or smash.gg
-- Player is on the banned list of the [Splatoon Code of Conduct](https://docs.google.com/document/d/1-6qlRDNnNSId2U1vve1x9CisJKybtFka69TURVW8qqA/edit?usp=drivesdk).
-
 ## Format
-Depending on the amount of signups, there may be multiple brackets which are tiered based on the cumulative ELO (numerical score of all ranks) and competitive experience. There will be an even number of players in all brackets. The top ranked players will be grouped in the higher brackets while the lower ranked players will be placed in lower brackets.
-- Minimum bracket size: `8` teams (`32` players)
-- Maximum bracket size: `15` teams (`60` players)
-All brackets will run independently of one another and will have their own preliminaries and top cut.
-
-## Brackets and Progression
-### Prelimiaries:
+### Pools:
 - Bracket: `Swiss`
 - Matches: `Play-all-3`
-- There are `4` total rounds
+- There are `4` total rounds (Each pool has a maximum of 16 teams)
+- Teams are evenly distributed across pools.
 
 ### Top Cut:
 - Bracket: `Single Elimination`
 - Matches: `Best-of-5`
-- The top `4` teams advance from the preliminaries. 
+- At least `4` teams total advance into top cut, with at least 1 team from each pool.
 - There is no 3rd-place match
 
 ## Timing
@@ -49,7 +28,6 @@ The tournament is scheduled to last `3:40` hours total.
 - Players must start their matches within `5` minutes of the round.
   - If the match has not started yet, the first game is automatically awarded to the team that's waiting.
   - For each additional `5` minutes that the match still hasn't started, an additional game will be awarded.
-  - Please call a moderator in smash.gg when this occurs so the game may be awarded to your team.
 - There is a `5-minute` break before finals starts.
 
 ## DC's Redo Decision Rules
@@ -85,8 +63,6 @@ Thankfully, Off the Dial has an extensive system for reporting such players and 
 - Once your sub is assigned, the reported player is no longer allowed to play.
 - **This is an irreversible action**, so be thoughtful when you report!
 
-In all cases of player reporting, at least one of the team members must have at least tried to resolve the issue internally. If a player is non-responding, that means that it must have be proven there has been an attempt to contact them several times with enough of a gap from the first message to account for timezone difference. In the cases of toxicity or making players feel uncomfortable, this attempt at resolution doesn't have to be done by the person who received the unwanted behaviour. There is an exemption, however, if a team member is being disrespectful by means of racial, gender, financial, religion or sexuality (however, other team members not including the two involved must also verify that this is the case).
-
 ### How to report
 To report a player, send a message in the <Mention>#reporting</Mention> channel, formatted like this:
 > <Mention>@ReportedPlayer</Mention> - Reason for reporting
@@ -109,9 +85,6 @@ Once you've been assigned your sub, you should see a reply to your original repo
 > <Mention>@Sub</Mention> > <Mention>@ReportedPlayer</Mention>
 
 You now know your sub. Friend them on discord, add them to your group chat, and hopefully get some practice in!
-
-### When we have no available subs
-Sometimes, there are no available subs to substitute for missing players. Often, this will be because none of the emergency subs have ranks that are similar to the player who has dropped out. In this case, the team is responsible for finding a new sub. This can be done by using the <Mention>#lf-pickup</Mention> channel in Off the Dial, or on another server. All substations must be approved by a TO and have signed up as a sub at [otd.ink/signup](https://otd.ink/signup).
 
 ## Cheating
 Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on smash.gg, anything considered cheating by Nintendo, controller modifications, such as "turbo mode", and failure to comply with any of the rules on this document.
