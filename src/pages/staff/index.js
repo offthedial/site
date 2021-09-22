@@ -26,7 +26,9 @@ const mapStaffCards = data => {
 const Staff = ({ data }) => (
   <Layout pageTitle="Staff">
     <PageHero title="Our Staff Team">
-      Our staff team are currently being revised - as some have left and we have new faces. Stay tuned for the update (will be updated once IDTGA 25 blog post is released)!
+      Off the Dial is thankful to have such an awesome staff team, each staff
+      member contributes a key part to Off the Dial as a whole. If any of them
+      interest you, feel free to read about them here.
     </PageHero>
     <div class="section pt-0">
       <div class="container layout-content">
