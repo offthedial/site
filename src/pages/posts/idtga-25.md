@@ -21,7 +21,7 @@ All players in the top team of **each** bracket will receive a prize of one mont
 The winning team of the top bracket will now receive [sendou.ink](https://sendou.ink) badges!
 
 ### Staff Changes
-There have been a few staff changes recently, but the major ones are that LeptoFlare has unfortunately left us (due to personal reasons). Lepto played a major role in developing both the Off the Dial Bot and this website you're on now and while we're sad to see them go, we wish you all the best in your future endeavours! However, this does leave us without a proper developer to work on both the website and bot, so you may not some highly requested (or previously announced) changes until we find a new developer.
+There have been a few staff changes recently, but the major ones are that LeptoFlare has stepped down. Lepto played a major role in developing both the Off the Dial Bot and this website you're on now and while we're sad to see them go, we wish you all the best in your future endeavours! However, this does leave us without a proper developer to work on both the website and bot, so you may not some highly requested (or previously announced) changes until we find a new developer.
 
 On a more positive note, Rose will be stepping up as a Head TO! We hope to see that the future of Off the Dial goes as positively as you are yourself!
 
