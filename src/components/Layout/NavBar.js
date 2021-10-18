@@ -58,9 +58,6 @@ const MenuLinks = ({ isOpen, avatar }) => (
       <MenuItem to="/idtga">
         <Chakra.Text fontWeight="bold">It's Dangerous to go Alone</Chakra.Text>
       </MenuItem>
-      <MenuItem to="/wl">
-        <Chakra.Text fontWeight="bold">Weakest Link</Chakra.Text>
-      </MenuItem>
       <MenuItem to="/discord">
         <Chakra.Button
           color="otd.slate.50"
