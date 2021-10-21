@@ -5,8 +5,13 @@ import Layout from "src/components/Layout"
 
 const Signup = () => (
   <Layout layerStyle="tint">
-    <Chakra.Box px={60} pt={20}>
-      <Chakra.Box rounded="lg" layerStyle="lifted">
+    <Chakra.Box
+      px={[0, 16, 16, 32]}
+      pt={[0, 16]}
+      mx="auto"
+      maxWidth="container.xl"
+    >
+      <Chakra.Box rounded={[null, "lg"]} layerStyle={[null, "lifted"]}>
         <Chakra.Box
           flexBasis="0"
           flexGrow="4"
@@ -14,7 +19,7 @@ const Signup = () => (
           flexDir="column"
           gridGap={8}
           p={8}
-          roundedLeft="lg"
+          rounded={[null, "lg"]}
           layerStyle="normal"
         >
           <FormField
@@ -33,14 +38,14 @@ const Signup = () => (
           <hr />
           <FormField
             name="Peak Rank"
-            desc={`What is the highest rank you've achieved? (Include X power)`}
+            desc={`What is the highest rank you've achieved in the last 4 months? (If applicable, include X power)`}
           >
             <Chakra.Input size="lg" />
           </FormField>
           <hr />
           <FormField
             name="Weapon Pool"
-            desc={`You can list up to 5 weapons that you would be comfortable playing during the tournament`}
+            desc={`List up to 5 weapons that you would be comfortable playing during the tournament`}
           >
             <Chakra.Input size="lg" />
           </FormField>
@@ -67,7 +72,7 @@ const Signup = () => (
             <Chakra.Input size="lg" />
           </FormField>
           <hr />
-          <FormField>
+          <FormField signup={true}>
             <Chakra.Box display="flex" justifyContent="flex-end">
               <Chakra.Button colorScheme="otd.slate" size="lg">
                 Signup
@@ -80,23 +85,32 @@ const Signup = () => (
   </Layout>
 )
 
-const FormField = ({ name, desc, children }) => {
+const FormField = ({ name, desc, children, signup = false }) => {
   return (
-    <Chakra.Box display="flex" justifyContent="space-between">
-      <Chakra.Box
-        flexBasis="0"
-        flexGrow="4"
-        gridGap="4"
-        display="flex"
-        flexDir="column"
-      >
-        <Chakra.Text fontSize="4xl" lineHeight="none">
-          {name}
-        </Chakra.Text>
-        <Chakra.Text fontSize="xl" textStyle="semimute">
-          {desc}
-        </Chakra.Text>
-      </Chakra.Box>
+    <Chakra.Box
+      display="flex"
+      flexDir={["column", null, "row"]}
+      justifyContent="space-between"
+    >
+      {signup ? (
+        <Chakra.Box />
+      ) : (
+        <Chakra.Box
+          flexBasis="0"
+          flexGrow="4"
+          gridGap="4"
+          display="flex"
+          flexDir="column"
+          paddingBottom={[4, null, 0]}
+        >
+          <Chakra.Text fontSize={["3xl", "4xl"]} lineHeight="none">
+            {name}
+          </Chakra.Text>
+          <Chakra.Text fontSize={["lg", "xl"]} textStyle="semimute">
+            {desc}
+          </Chakra.Text>
+        </Chakra.Box>
+      )}
       <Chakra.Box flexBasis="0" flexGrow="2" />
       <Chakra.Box flexBasis="0" flexGrow="3">
         {children}
