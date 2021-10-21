@@ -222,6 +222,13 @@ const theme = extendTheme({
       },
     },
   },
+  components: {
+    Button: {
+      baseStyle: {
+        fontWeight: "black",
+      },
+    },
+  },
 })
 
 export default theme
