@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { Link } from "gatsby"
+import Link from "src/components/Link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import * as Chakra from "@chakra-ui/react"
 import useUserDiscord from "src/app/hooks/useUserDiscord"
@@ -55,13 +55,10 @@ const MenuLinks = ({ isOpen, avatar }) => (
       direction={["column", "row", "row", "row"]}
       pt={[4, 4, 4, 0]}
     >
-      <MenuItem to="/idtga">
+      <Link to="/idtga">
         <Chakra.Text fontWeight="bold">It's Dangerous to go Alone</Chakra.Text>
-      </MenuItem>
-      <MenuItem to="/wl">
-        <Chakra.Text fontWeight="bold">Weakest Link</Chakra.Text>
-      </MenuItem>
-      <MenuItem to="/discord">
+      </Link>
+      <Link to="/discord">
         <Chakra.Button
           color="otd.slate.50"
           leftIcon={<DiscordIcon />}
@@ -73,27 +70,16 @@ const MenuLinks = ({ isOpen, avatar }) => (
         >
           <Chakra.Text color="white">Discord</Chakra.Text>
         </Chakra.Button>
-      </MenuItem>
-      <MenuItem to="/profile">
+      </Link>
+      <Link to="/profile">
         {avatar ? (
           <Logo src={avatar} image={{ borderRadius: "full" }} />
         ) : (
           <UserDefault />
         )}
-      </MenuItem>
+      </Link>
     </Chakra.Stack>
   </Chakra.Box>
-)
-
-const MenuItem = ({ children, to = "/" }) => (
-  <Chakra.Link
-    to={to}
-    as={Link}
-    _hover={{ textDecoration: "none" }}
-    _focus="none"
-  >
-    {children}
-  </Chakra.Link>
 )
 
 const MenuToggle = ({ toggle, isOpen }) => (

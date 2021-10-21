@@ -148,10 +148,10 @@ const theme = extendTheme({
     sl: "1.1rem",
   },
   breakpoints: createBreakpoints({
-    sm: "608px",
+    sm: "640px",
     md: "768px",
-    lg: "960px",
-    xl: "1200px",
+    lg: "1024px",
+    xl: "1280px",
   }),
   colors: {
     otd: {
@@ -219,6 +219,13 @@ const theme = extendTheme({
         700: "#720b5c",
         800: "#47043d",
         900: "#1d001b",
+      },
+    },
+  },
+  components: {
+    Button: {
+      baseStyle: {
+        fontWeight: "black",
       },
     },
   },

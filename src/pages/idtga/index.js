@@ -9,7 +9,7 @@ import {
   differenceInDays,
 } from "date-fns"
 
-import { Link } from "gatsby"
+import Link from "src/components/Link"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import * as Chakra from "@chakra-ui/react"
 import { InfoOutlineIcon } from "@chakra-ui/icons"
@@ -29,16 +29,6 @@ const Idtga = ({ data }) => {
       }}
     >
       <Chakra.Box bg="otd.slate.0">
-        <Chakra.Box pb={6} px={4}>
-          <Chakra.Text
-            fontSize={["4xl", null, null, "6xl"]}
-            color="otd.slate.50"
-            textAlign="center"
-          >
-            It's Dangerous to go Alone
-          </Chakra.Text>
-        </Chakra.Box>
-
         <Card
           tourney={tourney}
           signupButton={<SignupButton tourney={tourney} />}
@@ -51,7 +41,7 @@ const Idtga = ({ data }) => {
           </Chakra.GridItem>
           <Chakra.GridItem
             pt={[4, 0]}
-            fontSize={["3xl", "4xl"]}
+            fontSize={["2xl", "3xl"]}
             rowStart={[2, null, null, 1]}
             colStart={[1, null, null, 5]}
             colEnd={[13, null, null, 12]}
@@ -126,17 +116,33 @@ const Card = ({ tourney, signupButton }) => {
   return (
     <Chakra.Stack
       direction={["column", "row"]}
-      pb={6}
+      py={6}
       px={4}
+      justify="space-evenly"
       align="center"
-      justify="center"
-      maxW="5xl"
+      maxW="container.lg"
       mx="auto"
     >
-      <Chakra.Box flex="1">
-        <Chakra.Image maxW="full" src={idtga} />
+      <Chakra.Box
+        display="flex"
+        flexDir="column"
+        justifyContent="center"
+        alignItems="center"
+        maxW={["full", "52"]}
+        pb={[8, 0]}
+      >
+        <Chakra.Image maxW={["32", "48"]} src={idtga} />
+        <Chakra.Text
+          fontSize={["2xl", "3xl"]}
+          fontWeight="black"
+          color="white"
+          lineHeight="shorter"
+          textAlign="center"
+        >
+          It's Dangerous to go Alone
+        </Chakra.Text>
       </Chakra.Box>
-      <Chakra.Box flex="3">
+      <Chakra.Box maxW="80">
         <Chakra.Flex
           direction="column"
           align="center"
@@ -150,11 +156,10 @@ const Card = ({ tourney, signupButton }) => {
           <CardSection>
             <CardHeading>Registration Closes:</CardHeading>
             <Chakra.Stack
-              maxW="lg"
               mx="auto"
               direction={["column", "row"]}
               justify={["space-around", "center"]}
-              spacing={[6, 2]}
+              spacing={4}
             >
               <CardCount value={state.days} text="Days" />
               <CardCount value={state.hours} text="Hours" />
@@ -162,14 +167,11 @@ const Card = ({ tourney, signupButton }) => {
             </Chakra.Stack>
           </CardSection>
           <CardSection>{signupButton}</CardSection>
-          <Chakra.Text
-            fontSize={["lg", null, null, "xl"]}
-            color="otd.slate.200"
-          >
+          <Chakra.Text color="otd.slate.200">
             Times are listed in your timezone. For more information, see{" "}
-            <Chakra.Link as={Link} to="/idtga#details" color="otd.slate.100">
+            <Link to="/idtga#details" color="otd.slate.100">
               details
-            </Chakra.Link>
+            </Link>
             .
           </Chakra.Text>
         </Chakra.Flex>
@@ -196,11 +198,7 @@ const WhooshPromo = ({ title, description, reversed = false, children }) => {
       >
         <Chakra.GridItem {...props[0]}>
           <Chakra.Box>
-            <Chakra.Text
-              fontSize={["3xl", null, null, "4xl"]}
-              fontWeight="bold"
-              mb={2}
-            >
+            <Chakra.Text fontSize={["2xl", "3xl"]} fontWeight="bold" mb={2}>
               {title}
             </Chakra.Text>
             <Chakra.Text fontSize="2xl" textStyle="semimute">
@@ -392,12 +390,13 @@ const CardSection = ({ children }) => (
 const CardHeading = ({ children }) => (
   <Chakra.Text
     color="otd.slate.200"
-    fontSize={["xl", "2xl", null, "3xl"]}
+    fontSize={["xl"]}
     fontFamily="mono"
     fontWeight="light"
     letterSpacing={2}
     lineHeight="sm"
     textTransform="uppercase"
+    pb={[2, 0]}
   >
     {children}
   </Chakra.Text>
@@ -406,7 +405,7 @@ const CardHeading = ({ children }) => (
 const CardText = ({ children, ...rest }) => (
   <Chakra.Text
     color="white"
-    fontSize={["4xl", null, null, "5xl"]}
+    fontSize={["2xl", "3xl"]}
     lineHeight="none"
     fontWeight="bold"
     {...rest}
@@ -421,7 +420,7 @@ const CardCount = ({ text, value }) => (
       <CardText color="otd.slate.100" fontFamily="mono">
         {value}
       </CardText>
-      <CardText fontSize={["2xl", "3xl", null, "4xl"]} fontWeight="normal">
+      <CardText fontSize={["2xl"]} fontWeight="normal">
         {text}
       </CardText>
     </Chakra.Stack>
@@ -445,24 +444,20 @@ const SignupButton = ({ tourney }) => {
   }, [tourney, userSignup])
 
   return (
-    <Chakra.Button
-      as={Link}
-      to={tourney.data?.hasEnded() ? undefined : "/signup"}
-      variant="outline"
-      borderColor="white"
-      color="white"
-      bg="otd.purple.0"
-      _hover={{ bg: "otd.purple.500" }}
-      _active={{ bg: "otd.purple.500" }}
-      fontSize={["2xl", "3xl", null, "4xl"]}
-      fontWeight="normal"
-      h={[12, 14, null, 16]}
-      minW={[12, 14, null, 16]}
-      px={[6, 7, null, 10]}
-      disabled={tourney.data?.hasEnded()}
-    >
-      {signupButtonText}
-    </Chakra.Button>
+    <Link to={tourney.data?.hasEnded() ? undefined : "/signup"}>
+      <Chakra.Button
+        variant="outline"
+        borderColor="white"
+        color="white"
+        bg="otd.purple.0"
+        _hover={{ bg: "otd.purple.500" }}
+        _active={{ bg: "otd.purple.500" }}
+        size="lg"
+        disabled={tourney.data?.hasEnded()}
+      >
+        {signupButtonText}
+      </Chakra.Button>
+    </Link>
   )
 }
 
