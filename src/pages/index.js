@@ -45,6 +45,7 @@ const Hero = () => (
       display="flex"
       justifyContent="center"
       alignItems="stretch"
+      p={8}
     >
       <Chakra.Box
         display="flex"
@@ -60,7 +61,13 @@ const Hero = () => (
         <Chakra.Text fontSize="xl" color="white">
           Showing in OTD theatres April 1st, 2022
         </Chakra.Text>
-        <Chakra.Box pt={20} display="flex" gridGap={4}>
+        <Chakra.Box
+          pt={20}
+          display="flex"
+          gridGap={4}
+          flexWrap="wrap"
+          justifyContent="center"
+        >
           <Chakra.Button
             size="lg"
             colorScheme="whiteAlpha"
