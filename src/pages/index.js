@@ -4,6 +4,7 @@ import * as Chakra from "@chakra-ui/react"
 import { graphql, Link } from "gatsby"
 import Layout from "src/components/Layout"
 import slateblobs from "src/static/slateblobs.svg"
+import community from "src/static/community.png"
 
 const Index = ({ data }) => (
   <Layout>
@@ -174,7 +175,7 @@ const Community = () => (
       <Chakra.Image
         height={[48, null, 96]}
         filter="drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1))"
-        src="https://cdn.discordapp.com/attachments/801233697830338584/901126768860221450/temp.png"
+        src={community}
       />
     </Chakra.Box>
     <Chakra.Box
