@@ -27,5 +27,4 @@ I'll be frank, IDTGA 25 didn't have the turnout that I was hoping for and becaus
 
 And that's all! There weren't that many feedback responses this time round but I hope to see some questions in the form after IDTGA 26. Regarding IDTGA 26, we plan to announce more details about it in the upcoming week!
 
-So stay tuned everyone,
-We'll see you all in Inkopolis Square soon!
+So stay tuned everyone, we'll see you all in Inkopolis Square soon!
