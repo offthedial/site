@@ -9,7 +9,9 @@ import community from "src/static/community.png"
 const Index = ({ data }) => (
   <Layout>
     <Chakra.Box layerStyle="tint" px={[8, null, null, 24]}>
-      <Hero />
+      <Chakra.Box pt={14} maxWidth="container.xl" mx="auto">
+        <Hero />
+      </Chakra.Box>
       <Chakra.Box py={28} maxWidth="container.xl" mx="auto">
         <About />
       </Chakra.Box>
@@ -17,7 +19,12 @@ const Index = ({ data }) => (
     <Chakra.Box layerStyle="tint">
       <Waves />
     </Chakra.Box>
-    <Chakra.Box px={[8, null, null, 24]}>
+    <Chakra.Box
+      py={28}
+      maxWidth="container.xl"
+      mx="auto"
+      px={[8, null, null, 24]}
+    >
       <Posts>
         <PostCard node={data.allMdx.edges[0].node} />
       </Posts>
@@ -30,65 +37,68 @@ const Index = ({ data }) => (
     >
       <Community />
     </Chakra.Box>
-    <Chakra.Box px={[8, null, null, 24]}>
+    <Chakra.Box
+      py={28}
+      maxWidth="container.xl"
+      mx="auto"
+      px={[8, null, null, 24]}
+    >
       <MakeAccount />
     </Chakra.Box>
   </Layout>
 )
 
 const Hero = () => (
-  <Chakra.Box pt={8} maxWidth="container.xl" mx="auto">
+  <Chakra.Box
+    minHeight="xs"
+    rounded="xl"
+    bgColor="otd.slate.800"
+    display="flex"
+    justifyContent="center"
+    alignItems="stretch"
+    p={8}
+  >
     <Chakra.Box
-      minHeight="xs"
-      rounded="xl"
-      bgColor="otd.slate.800"
       display="flex"
+      minHeight="100%"
+      alignItems="center"
       justifyContent="center"
-      alignItems="stretch"
-      p={8}
+      flexDir="column"
+      textAlign="center"
     >
+      <Chakra.Text fontSize={["3xl", "4xl"]} fontWeight="bold" color="white">
+        Susver my Beloved
+      </Chakra.Text>
+      <Chakra.Text fontSize="xl" color="white">
+        Showing in OTD theatres April 1st, 2022
+      </Chakra.Text>
       <Chakra.Box
+        pt={20}
         display="flex"
-        minHeight="100%"
-        alignItems="center"
+        gridGap={4}
+        flexWrap="wrap"
         justifyContent="center"
-        flexDir="column"
-        textAlign="center"
       >
-        <Chakra.Text fontSize={["3xl", "4xl"]} fontWeight="bold" color="white">
-          Susver my Beloved
-        </Chakra.Text>
-        <Chakra.Text fontSize="xl" color="white">
-          Showing in OTD theatres April 1st, 2022
-        </Chakra.Text>
-        <Chakra.Box
-          pt={20}
-          display="flex"
-          gridGap={4}
-          flexWrap="wrap"
-          justifyContent="center"
+        <Chakra.Button
+          size="lg"
+          colorScheme="whiteAlpha"
+          backgroundColor="white"
+          _hover={{ backgroundColor: "whiteAlpha.900" }}
+          _active={{ backgroundColor: "whiteAlpha.800" }}
+          textColor="black"
         >
-          <Chakra.Button
-            size="lg"
-            colorScheme="whiteAlpha"
-            backgroundColor="white"
-            _hover={{ backgroundColor: "whiteAlpha.900" }}
-            _active={{ backgroundColor: "whiteAlpha.800" }}
-            textColor="black"
-          >
-            Signup Now!
-          </Chakra.Button>
-          <Chakra.Button
-            size="lg"
-            colorScheme="whiteAlpha"
-            textColor="black"
-            textColor="white"
-            borderColor="white"
-            variant="outline"
-          >
-            More Info
-          </Chakra.Button>
-        </Chakra.Box>
+          Signup Now!
+        </Chakra.Button>
+        <Chakra.Button
+          size="lg"
+          colorScheme="whiteAlpha"
+          textColor="black"
+          textColor="white"
+          borderColor="white"
+          variant="outline"
+        >
+          More Info
+        </Chakra.Button>
       </Chakra.Box>
     </Chakra.Box>
   </Chakra.Box>
@@ -124,12 +134,9 @@ const About = () => (
 
 const Posts = ({ children }) => (
   <Chakra.Box
-    maxWidth="container.xl"
-    mx="auto"
     display="flex"
     alignItems="center"
     flexDir={["column", null, "row"]}
-    py={28}
     gridGap={[8, null, null, 24]}
   >
     <Chakra.Box
@@ -165,10 +172,10 @@ const Community = () => (
   <Chakra.Box
     maxWidth="container.xl"
     mx="auto"
+    py={20}
     display="flex"
     flexDir={["column", null, "row"]}
     alignItems={["flex-start", null, "center"]}
-    py={20}
     gridGap={[0, null, 8, 24]}
   >
     <Chakra.Box
@@ -220,12 +227,9 @@ const Community = () => (
 
 const MakeAccount = () => (
   <Chakra.Box
-    maxWidth="container.xl"
-    mx="auto"
     display="flex"
     alignItems={["flex-start", null, "center"]}
     flexDir={["column", null, "row"]}
-    py={28}
     gridGap={[4, 8, null, 24]}
   >
     <Chakra.Box
