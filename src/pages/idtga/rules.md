@@ -39,14 +39,14 @@ All brackets will run independently of one another and will have their own preli
 - There is no 3rd-place match
 
 ## Timing
-The tournament is scheduled to last `3:40` hours total.
-- Pools takes approximately `2:05` hours in total.
+The tournament is scheduled to last `4:00` hours total.
+- Pools takes approximately `2:25` hours in total.
 - Top cut takes approximately `1:35` hours in total.
 
 ### Round Durations
-- Each swiss round lasts `30` minutes.
+- Each swiss round lasts `35` minutes.
 - Each top cut round lasts `40` minutes.
-- The very first swiss round lasts `5` more minutes, for `35` minutes total.
+- The very first swiss round lasts `5` more minutes, for `40` minutes total.
 - Players must start their matches within `5` minutes of the round.
   - If the match has not started yet, the first game is automatically awarded to the team that's waiting.
   - For each additional `5` minutes that the match still hasn't started, an additional game will be awarded.
