@@ -73,7 +73,10 @@ const MenuLinks = ({ isOpen, avatar }) => (
       </Link>
       <Link to="/profile">
         {avatar ? (
-          <Logo src={avatar} image={{ borderRadius: "full" }} />
+          <Logo
+            src={avatar}
+            image={{ borderRadius: "full", boxShadow: "inner" }}
+          />
         ) : (
           <UserDefault />
         )}
@@ -100,6 +103,8 @@ const OpenIcon = () => (
     variant="unstyled"
     icon={
       <svg
+        width="100%"
+        height="100%"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -122,6 +127,8 @@ const CloseIcon = () => (
     variant="unstyled"
     icon={
       <svg
+        width="100%"
+        height="100%"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -159,6 +166,8 @@ const UserDefault = () => (
     _active={{ color: "otd.slate.700" }}
     icon={
       <svg
+        width="100%"
+        height="100%"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
