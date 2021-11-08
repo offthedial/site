@@ -79,26 +79,30 @@ const Hero = () => (
         flexWrap="wrap"
         justifyContent="center"
       >
-        <Chakra.Button
-          size="lg"
-          colorScheme="whiteAlpha"
-          backgroundColor="white"
-          _hover={{ backgroundColor: "whiteAlpha.900" }}
-          _active={{ backgroundColor: "whiteAlpha.800" }}
-          textColor="black"
-        >
-          Signup Now!
-        </Chakra.Button>
-        <Chakra.Button
-          size="lg"
-          colorScheme="whiteAlpha"
-          textColor="black"
-          textColor="white"
-          borderColor="white"
-          variant="outline"
-        >
-          More Info
-        </Chakra.Button>
+        <Link to="/signup">
+          <Chakra.Button
+            size="lg"
+            colorScheme="whiteAlpha"
+            backgroundColor="white"
+            _hover={{ backgroundColor: "whiteAlpha.900" }}
+            _active={{ backgroundColor: "whiteAlpha.800" }}
+            textColor="black"
+          >
+            Signup Now!
+          </Chakra.Button>
+        </Link>
+        <Link to="/idtga">
+          <Chakra.Button
+            size="lg"
+            colorScheme="whiteAlpha"
+            textColor="black"
+            textColor="white"
+            borderColor="white"
+            variant="outline"
+          >
+            More Info
+          </Chakra.Button>
+        </Link>
       </Chakra.Box>
     </Chakra.Box>
   </Chakra.Box>
@@ -210,7 +214,7 @@ const Community = () => (
         Here's what we have to say! Listen to us or we'll break your kneecaps!
       </Chakra.Text>
       <Chakra.Box pt={[2, null, null, 8]}>
-        <Link to="/posts">
+        <Link to="/discord">
           <Chakra.LightMode>
             <Chakra.Button color="black" leftIcon={<DiscordIcon />} size="lg">
               <Chakra.Box display="flex">
@@ -251,7 +255,7 @@ const MakeAccount = () => (
       </Chakra.Text>
     </Chakra.Box>
     <Chakra.Box display="flex" justifyContent="flex-end">
-      <Link to="/posts">
+      <Link to="/profile">
         <InvertedButton px={[6, 20]} py={1} size="lg">
           Sign Up
         </InvertedButton>
