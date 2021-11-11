@@ -1,8 +1,9 @@
 import { navigate } from "gatsby"
 import { parse } from "query-string"
 import { auth } from "src/app/firebase"
-import { api } from "/config"
 import { createStandaloneToast } from "@chakra-ui/react"
+
+const api = process.env.GATSBY_API_URL
 
 const ProfileLogin = ({ location }) => {
   login({

@@ -1,5 +1,4 @@
 const path = require("path")
-const firebaseConfig = require("./config").firebaseConfig
 
 module.exports = {
   siteMetadata: {
@@ -9,13 +8,6 @@ module.exports = {
     twitter: `@Off_The_Dial`,
   },
   plugins: [
-    /* Firebase */
-    {
-      resolve: "gatsby-plugin-firebase",
-      options: {
-        credentials: firebaseConfig,
-      },
-    },
     /* Filesystem stuff */
     {
       resolve: `gatsby-source-filesystem`,
@@ -69,8 +61,8 @@ module.exports = {
             },
           },
           `gatsby-remark-prismjs`,
+          `gatsby-remark-twemoji-shortcut`,
         ],
-        remarkPlugins: [require(`remark-emoji`), require(`remark-twemoji`)],
       },
     },
   ],

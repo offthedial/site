@@ -19,7 +19,7 @@
     "babel-plugin-styled-components": "^1.12.0",
     "cleave.js": "^1.6.0",
     "date-fns": "^2.16.1",
-    "firebase": "^8.1.1",
+    "firebase": "^9.4.1",
     "framer-motion": "^3.6.1",
     "gatsby": "^2.30.0",
     "gatsby-plugin-firebase": "^0.2.0-beta.4",
@@ -34,6 +34,7 @@
     "gatsby-remark-autolink-headers": "^2.6.0",
     "gatsby-remark-images": "^3.6.0",
     "gatsby-remark-prismjs": "^3.8.0",
+    "gatsby-remark-twemoji-shortcut": "^0.10.1",
     "gatsby-source-filesystem": "^2.5.0",
     "gh-pages": "^3.1.0",
     "prismjs": "^1.22.0",
@@ -42,12 +43,9 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "react-hook-form": "^6.12.2",
+    "react-hook-form": "^7.19.4",
     "react-is": "^17.0.1",
-    "react-query": "^3.5.5",
-    "react-twemoji": "^0.3.0",
-    "remark-emoji": "^2.1.0",
-    "remark-twemoji": "^0.1.1"
+    "react-query": "^3.5.5"
   },
   "devDependencies": {
     "prettier": "2.1.2"
