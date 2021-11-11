@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 
+import { graphql } from "gatsby"
 import { useTourney, useUserSignup } from "src/app/hooks"
 import {
   fromUnixTime,
