@@ -47,6 +47,12 @@ const theme = extendTheme({
         color: "otd.slate.300",
       },
     },
+    error: {
+      color: "red.500",
+      ".chakra-ui-dark &": {
+        color: "red.400",
+      },
+    },
     mention: {
       fontSize: "87.5%",
       borderRadius: "3px",
