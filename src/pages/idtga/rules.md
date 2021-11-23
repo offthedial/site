@@ -15,12 +15,14 @@ title: IDTGA Rules
 - Players have at least achieved `C-` in **ALL ranked modes** of Splatoon 2 and have a basic understanding of how the modes work.
 
 ### Player are not eligible if they have any one of the conditions below
-- Player is banned from Off the Dial's Discord server of services
+- Player is banned from Off the Dial's Discord server or services
 - Player is banned from Nintendo Online, Discord or smash.gg
 - Player is on the banned list of the [Splatoon Code of Conduct](https://docs.google.com/document/d/1-6qlRDNnNSId2U1vve1x9CisJKybtFka69TURVW8qqA/edit?usp=drivesdk).
 
 ## Format
 Depending on the amount of signups, there may be multiple brackets which are tiered based on the cumulative ELO (numerical score of all ranks) and competitive experience. There will be an even number of players in all brackets. The top ranked players will be grouped in the higher brackets while the lower ranked players will be placed in lower brackets.
+
+If there are enough players for a second bracket (64 players or more) the following rules will apply;
 - Minimum bracket size: `8` teams (`32` players)
 - Maximum bracket size: `15` teams (`60` players)
 
@@ -31,6 +33,15 @@ All brackets will run independently of one another and will have their own preli
 - Bracket: `Swiss`
 - Matches: `Play-all-3`
 - There are `4` total rounds
+- Points will be allocated for games won, matches won, byes as well as ties. The point allocations are as such;
+  - 1 point per game win
+  - 3 points per match won (in addition to the points allocated for individual game wins)
+  - 1 point per match tie (allocated to both teams, will be used if time has run out)
+  - 3 points per bye (no points will be allocated as game wins as no games have been played)
+- In the event a tiebreaker is needed, the following rules will be enacted sequentially until a winner has been determined
+  - Total sets won
+  - Head to head
+  - Game win %
 
 ### Top Cut:
 - Bracket: `Single Elimination`
