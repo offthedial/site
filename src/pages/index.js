@@ -95,7 +95,6 @@ const Hero = () => (
           <Chakra.Button
             size="lg"
             colorScheme="whiteAlpha"
-            textColor="black"
             textColor="white"
             borderColor="white"
             variant="outline"

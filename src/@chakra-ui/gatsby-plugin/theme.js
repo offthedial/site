@@ -50,7 +50,7 @@ const theme = extendTheme({
     error: {
       color: "red.500",
       ".chakra-ui-dark &": {
-        color: "red.400",
+        color: "red.300",
       },
     },
     mention: {
