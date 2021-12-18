@@ -83,11 +83,11 @@ const Index = () => {
         <div class="column is-7 has-text-centered">
           <h2 class="title is-2">Staff</h2>
           <p class="subtitle is-5">
-            Off the Dial is thankful to have such an awesome staff team, you can
+            Off the Dial is thankful to have such an awesome team working behind the scenes, you can
             learn more about each of them here.
           </p>
           <Link to="/staff" class="button is-primary">
-            Our Staff Team
+            Our Team
           </Link>
         </div>
       </SectionBackground>
@@ -110,9 +110,7 @@ const Index = () => {
         <div class="column has-text-right">
           <h2 class="title is-2">Assets</h2>
           <p class="subtitle is-5">
-            Many of our assets are public and free. Assets include logos and
-            banners related to Off the Dial and its tournaments. You can find
-            them all right here!
+            If you're participating or advertising our event, you may use the Off the Dial assets under certain circumstances. Please go to this link to find out more.
           </p>
           <a href="https://assets.otd.ink" class="button is-primary">
             Assets Repository
