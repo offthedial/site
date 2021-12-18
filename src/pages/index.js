@@ -87,7 +87,7 @@ const Index = () => {
             learn more about each of them here.
           </p>
           <Link to="/staff" class="button is-primary">
-            Our Team
+            Our Staff Team
           </Link>
         </div>
       </SectionBackground>
