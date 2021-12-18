@@ -14,13 +14,13 @@ title: IDTGA Rules
 - Players have a reliable internet access point for Nintendo Switch
 - Players have at least achieved `C-` in **ALL ranked modes** of Splatoon 2 and have a basic understanding of how the modes work.
 
-### Player are not eligible if they have any one of the conditions below
+### Players are not eligible if they have any one of the conditions below
 - Player is banned from Off the Dial's Discord server or services
 - Player is banned from Nintendo Online, Discord or smash.gg
 - Player is on the banned list of the [Splatoon Code of Conduct](https://docs.google.com/document/d/1-6qlRDNnNSId2U1vve1x9CisJKybtFka69TURVW8qqA/edit?usp=drivesdk).
 
 ## Format
-Depending on the amount of signups, there may be multiple brackets which are tiered based on the cumulative ELO (numerical score of all ranks) and competitive experience. There will be an even number of players in all brackets. The top ranked players will be grouped in the higher brackets while the lower ranked players will be placed in lower brackets.
+Depending on the number of signups, there may be multiple brackets that are tiered based on the cumulative ELO (numerical score of all ranks) and competitive experience. There will be an even number of players in all brackets. The top ranked players will be grouped in the higher brackets while the lower ranked players will be placed in lower brackets.
 
 If there are enough players for a second bracket (64 players or more) the following rules will apply;
 - Minimum bracket size: `8` teams (`32` players)
@@ -29,7 +29,7 @@ If there are enough players for a second bracket (64 players or more) the follow
 All brackets will run independently of one another and will have their own preliminaries and top cut.
 
 ## Brackets and Progression
-### Prelimiaries:
+### Preliminaries:
 - Bracket: `Swiss`
 - Matches: `Play-all-3`
 - There are `4` total rounds
@@ -51,8 +51,8 @@ All brackets will run independently of one another and will have their own preli
 
 ## Timing
 The tournament is scheduled to last `4:00` hours total.
-- Pools takes approximately `2:25` hours in total.
-- Top cut takes approximately `1:35` hours in total.
+- Preliminaries take approximately `2:25` hours in total.
+- Top cut take approximately `1:35` hours in total.
 
 ### Round Durations
 - Each swiss round lasts `35` minutes.
@@ -62,7 +62,7 @@ The tournament is scheduled to last `4:00` hours total.
   - If the match has not started yet, the first game is automatically awarded to the team that's waiting.
   - For each additional `5` minutes that the match still hasn't started, an additional game will be awarded.
   - Please call a moderator in smash.gg when this occurs so the game may be awarded to your team.
-- There is a `5-minute` break before finals starts.
+- There is a `5-minute` break before finals commence.
 
 ## DC's Redo Decision Rules
 ### Redo the match if:
@@ -86,18 +86,18 @@ If there's are complaints about lag from at least 3 people on the same team or 1
 Sometimes, your team needs a replacement for one of your team members. Some examples may include:
 - A team member notifies you that something has come up and they need to drop out.
 - A team member just isn't responding at all to any messages.
-- A team member is acting really toxic to the rest of your team.
+- A team member is acting toxic to the rest of your team.
 - A team member is making one or more of your other team members uncomfortable.
 
 Thankfully, Off the Dial has an extensive system for reporting such players and receiving a sub, so you can be sure you'll have a good team experience.
 
-- Your team is able to report players 24 hours after teams are released.
+- Your team can report players 24 hours after teams are released.
 - Everyone on your team (besides the player getting reported) must approve of the report.
 - Your sub is not allowed to play for any other player on your team except for the reported player they are replacing.
 - Once your sub is assigned, the reported player is no longer allowed to play.
 - **This is an irreversible action**, so be thoughtful when you report!
 
-In all cases of player reporting, at least one of the team members must have at least tried to resolve the issue internally. If a player is non-responding, that means that it must have be proven there has been an attempt to contact them several times with enough of a gap from the first message to account for timezone difference. In the cases of toxicity or making players feel uncomfortable, this attempt at resolution doesn't have to be done by the person who received the unwanted behaviour. There is an exemption, however, if a team member is being disrespectful by means of racial, gender, financial, religion or sexuality (however, other team members not including the two involved must also verify that this is the case).
+In all cases of player reporting, at least one of the team members must have at least tried to resolve the issue internally. If a player is non-responding, that means that it must be proven there has been an attempt to contact them several times with enough of a gap from the first message to account for timezone difference. In the cases of toxicity or making players feel uncomfortable, this attempt at resolution doesn't have to be done by the person who received the unwanted behaviour. There is an exemption, however, if a team member is being disrespectful through racial, gender, financial, religion or sexuality (however, other team members not including the two involved must also verify that this is the case).
 
 ### How to report
 To report a player, send a message in the <Mention>#reporting</Mention> channel, formatted like this:
