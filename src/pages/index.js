@@ -5,6 +5,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "src/components/Layout"
 import slateblobs from "src/static/slateblobs.svg"
 import community from "src/static/community.png"
+import { useTourney } from "src/app/hooks"
 
 const Index = ({ data }) => (
   <Layout>
@@ -48,64 +49,71 @@ const Index = ({ data }) => (
   </Layout>
 )
 
-const Hero = () => (
-  <Chakra.Box
-    minHeight="xs"
-    rounded="xl"
-    bgColor="otd.slate.800"
-    display="flex"
-    justifyContent="center"
-    alignItems="stretch"
-    p={8}
-  >
+const Hero = () => {
+  const { data } = useTourney()
+
+  return (
     <Chakra.Box
+      minHeight="xs"
+      rounded="xl"
+      bgColor="otd.slate.800"
       display="flex"
-      minHeight="100%"
-      alignItems="center"
       justifyContent="center"
-      flexDir="column"
-      textAlign="center"
+      alignItems="stretch"
+      p={8}
     >
-      <Chakra.Text fontSize={["3xl", "4xl"]} fontWeight="bold" color="white">
-        Susver my Beloved
-      </Chakra.Text>
-      <Chakra.Text fontSize="xl" color="white">
-        Showing in OTD theatres April 1st, 2022
-      </Chakra.Text>
       <Chakra.Box
-        pt={20}
         display="flex"
-        gridGap={4}
-        flexWrap="wrap"
+        minHeight="100%"
+        alignItems="center"
         justifyContent="center"
+        flexDir="column"
+        textAlign="center"
       >
-        <Link to="/signup">
-          <Chakra.Button
-            size="lg"
-            colorScheme="whiteAlpha"
-            backgroundColor="white"
-            _hover={{ backgroundColor: "whiteAlpha.900" }}
-            _active={{ backgroundColor: "whiteAlpha.800" }}
-            textColor="black"
-          >
-            Signup Now!
-          </Chakra.Button>
-        </Link>
-        <Link to="/idtga">
-          <Chakra.Button
-            size="lg"
-            colorScheme="whiteAlpha"
-            textColor="white"
-            borderColor="white"
-            variant="outline"
-          >
-            More Info
-          </Chakra.Button>
-        </Link>
+        <Chakra.Text fontSize={["3xl", "4xl"]} fontWeight="bold" color="white">
+          {data?.hasEnded ? "Welcome to Off the Dial!" : data?.smashgg.name}
+        </Chakra.Text>
+        <Chakra.Text fontSize="xl" color="white">
+          {data?.hasEnded
+            ? "The current tournament has ended, keep your eyes peeled for the next one!"
+            : "Signups are currently open!"}
+        </Chakra.Text>
+        <Chakra.Box
+          pt={20}
+          display="flex"
+          gridGap={4}
+          flexWrap="wrap"
+          justifyContent="center"
+        >
+          <Link to="/signup">
+            <Chakra.Button
+              size="lg"
+              colorScheme="whiteAlpha"
+              backgroundColor="white"
+              _hover={{ backgroundColor: "whiteAlpha.900" }}
+              _active={{ backgroundColor: "whiteAlpha.800" }}
+              textColor="black"
+              isDisabled={data?.hasEnded}
+            >
+              Signup Now!
+            </Chakra.Button>
+          </Link>
+          <Link to="/idtga">
+            <Chakra.Button
+              size="lg"
+              colorScheme="whiteAlpha"
+              textColor="white"
+              borderColor="white"
+              variant="outline"
+            >
+              More Info
+            </Chakra.Button>
+          </Link>
+        </Chakra.Box>
       </Chakra.Box>
     </Chakra.Box>
-  </Chakra.Box>
-)
+  )
+}
 
 const About = () => (
   <Chakra.Box
@@ -210,7 +218,8 @@ const Community = () => (
         Join our Community
       </Chakra.Text>
       <Chakra.Text color="white" fontSize={["xl", "2xl"]}>
-        Here's what we have to say! Listen to us or we'll break your kneecaps!
+        Come hang out! Talk to fellow players and competitors, and share us your
+        kirby memes. We also post regular announcements in the server.
       </Chakra.Text>
       <Chakra.Box pt={[2, null, null, 8]}>
         <Link to="/discord">
