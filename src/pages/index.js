@@ -71,12 +71,12 @@ const Hero = () => {
         textAlign="center"
       >
         <Chakra.Text fontSize={["3xl", "4xl"]} fontWeight="bold" color="white">
-          {data?.hasEnded ? "Welcome to Off the Dial!" : data?.smashgg.name}
+          {data?.hasEnded() ? "Welcome to Off the Dial!" : data?.smashgg.name}
         </Chakra.Text>
         <Chakra.Text fontSize="xl" color="white">
-          {data?.hasEnded
-            ? "The current tournament has ended, keep your eyes peeled for the next one!"
-            : "Signups are currently open!"}
+          {data?.hasEnded()
+            ? "The current season has ended, but keep your eyes peeled for the next one!"
+            : "Signups are currently open for the next season of It's Dangerous to go Alone!"}
         </Chakra.Text>
         <Chakra.Box
           pt={20}
@@ -93,7 +93,7 @@ const Hero = () => {
               _hover={{ backgroundColor: "whiteAlpha.900" }}
               _active={{ backgroundColor: "whiteAlpha.800" }}
               textColor="black"
-              isDisabled={data?.hasEnded}
+              disabled={data?.hasEnded()}
             >
               Signup Now!
             </Chakra.Button>
