@@ -209,7 +209,7 @@ const SubmitArea = () => {
   const userJoinedQuery = useUserJoined()
   // Get alert
   const alerts = getAlerts(tourneyQuery, userSignupQuery, userJoinedQuery)
-  let alert = alerts ? alerts.at(-1) : null
+  let alert = alerts ? alerts[alerts.length - 1] : null
   // Set alert style
   const colorWeight = Chakra.useColorModeValue("600", "200")
   const alertColor = {
