@@ -19,6 +19,7 @@ export default () => {
         // Set existing signup
         return await userSignup.ref.set({
           signupDate: userSignup.data.signupDate,
+          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
           modifiedDate: signupDate,
         })
       } else {
@@ -26,7 +27,10 @@ export default () => {
         return await tourney.ref
           .collection(tourney.hasClosed() ? "subs" : "signups")
           .doc(auth.currentUser.uid)
-          .set({ signupDate })
+          .set({
+            signupDate,
+            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+          })
       }
     },
     {
