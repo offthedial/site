@@ -30,8 +30,14 @@ You should not touch the `master` or `gh-pages` branches.
    npm i
    gatsby develop
    ```
+2. In order to test firebase features, create a new `.env.development` file in the root directory.
+   - Copy the contents of `.env.production`
+   - Download a new service account from your firebase project and replace each of the `GATSBY_FIREBASE_` environment variables.
+      > This is because the version controlled service account is restricted to the `otd.ink` domain, which won't work on `localhost`
+   - Start your local firebase emulator with `firebase serve`. You can find more detailed instructions in the [firebase documentation](https://firebase.google.com/docs/emulator-suite).
+   - Update the `GATSBY_API_URL` to wherever your local functions api is hosted (by default, the firebase emulator uses `localhost:5000`)
 
-2. Your site is now running at `http://localhost:8000`!
+3. Your site is now running at `http://localhost:8000`!
 
 ---
 

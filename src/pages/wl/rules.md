@@ -2,7 +2,8 @@
 title: WL Rules
 ---
 
-# Weakest Link Rules
+<Title title="Weakest Link Rules" />
+
 ## Format
 Complete teams will consist of 4-5 players.
 
@@ -94,6 +95,6 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 - All rules are subject to change between seasons, please make sure you read the rules each season before entering.
 - By registering you agree to abide by our [terms and conditions](/legal)
 
-<Footer>
-  That’s it! If you have any questions or concerns, feel free to ask at the <Mention>#helpdesk</Mention> or DM the TO’s: <Mention>@DJam98</Mention> and <Mention>@LeptoFlare</Mention>. Good luck with the tournament!
-</Footer>
+---
+
+That’s it! If you have any questions or concerns, feel free to ask at the <Mention>#helpdesk</Mention> or DM the TO’s: <Mention>@DJam98</Mention> and <Mention>@LeptoFlare</Mention>. Good luck with the tournament!

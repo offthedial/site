@@ -20,7 +20,7 @@ There are a few things that have changed, let's go through them:
 
 - ##### Rules:
   Originally we had the rules on a Google Doc, although this gave us a lot of customization regarding format compared to Discord, accessibility was limited. Now, you can find the rules for each tournament by going to `otd.ink/<tournament>/rules`.
-  
+
   One of the main advantages to using a website to host our rules is accessibility. A website url is much easier to display, type and remember than a google doc url.
   Additionally, Off the Dial bot is able to scrape the webpage to embed sections of the rules directly through a bot command, more on that later.
 
@@ -36,7 +36,7 @@ Yes! We're currently working towards improving the look to give the website a un
 However, that takes a lot longer to write and encode than simple markdown, so it's going to take some time. Eventually we'll have it ready.
 
 #### Can I register on here on the website?
-Not yet. However, we plan on having registration entirely done on the website in the future. 
+Not yet. However, we plan on having registration entirely done on the website in the future.
 
 #### Who's building this website?
 The base of the website was originally built by LeptoFlare, and is being currently maintained by both DJam98 and LeptoFlare. As the website continues to progress and mature, LeptoFlare and DJam98 will be working on it together.

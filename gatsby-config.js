@@ -8,27 +8,12 @@ module.exports = {
     twitter: `@Off_The_Dial`,
   },
   plugins: [
-    /* Firebase */
-    {
-      resolve: "gatsby-plugin-firebase",
-      options: {
-        credentials: {
-          apiKey: "AIzaSyCOiE5yw09RbRjgZf7B_t7rvgGfa49j6fU",
-          authDomain: "off-the-dial-26e93.firebaseapp.com",
-          databaseURL: "https://off-the-dial-26e93.firebaseio.com",
-          projectId: "off-the-dial-26e93",
-          storageBucket: "off-the-dial-26e93.appspot.com",
-          messagingSenderId: "822224581984",
-          appId: "1:822224581984:web:951aa8d85c77e6209e5a05",
-        },
-      },
-    },
     /* Filesystem stuff */
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`,
+        path: path.join(__dirname, `src`, `pages`),
         ignore: [`**/posts/*`], // Except posts
       },
     },
@@ -36,14 +21,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/pages/posts`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/static/images`,
+        path: path.join(__dirname, `src`, `pages`, `posts`),
       },
     },
 
@@ -54,13 +32,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
 
     /* Styles & CSS */
-    `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        implementation: require("sass"),
-      },
-    },
+    `@chakra-ui/gatsby-plugin`,
 
     /* Image Processing */
     `gatsby-plugin-sharp`,
@@ -89,8 +61,8 @@ module.exports = {
             },
           },
           `gatsby-remark-prismjs`,
+          `gatsby-remark-twemoji-shortcut`,
         ],
-        remarkPlugins: [require(`remark-emoji`), require(`remark-twemoji`)],
       },
     },
   ],

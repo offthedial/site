@@ -2,8 +2,9 @@
 title: Terms and Conditions
 ---
 
-# Terms and Conditions
-By registering into any event organised by 'Off the Dial' you have read and agreed to the following conditions below.
+<Title title="Terms and Conditions">
+  By registering into any event organised by 'Off the Dial' you have read and agreed to the following conditions below.
+</Title>
 
 1. All events Off the Dial organises are 'Signatory events' as defined by the [Splatoon Safety - Code of Conduct](https://docs.google.com/document/d/1-6qlRDNnNSId2U1vve1x9CisJKybtFka69TURVW8qqA/edit?usp=sharing). Players that have current bans as defined by the 'Splatoon Safety Council' are not permitted to be associated with any event that Off the Dial may organise as long as their ban remains valid.
 1. By registering for any of Off the Dial's events, you acknowledge that you read and agree to the tournament rules.

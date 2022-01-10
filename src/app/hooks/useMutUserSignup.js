@@ -8,7 +8,7 @@ export default () => {
   useTourney()
   useUserSignup()
   return useMutation(
-    async signup => {
+    async signupDate => {
       const tourney = queryClient.getQueryData(["tourney"])
       const userSignup = queryClient.getQueryData(["user", "signup"])
       if (tourney.hasEnded()) {
@@ -17,13 +17,20 @@ export default () => {
 
       if (userSignup?.type) {
         // Set existing signup
-        return await userSignup.ref.set(signup)
+        return await userSignup.ref.set({
+          signupDate: userSignup.data.signupDate,
+          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+          modifiedDate: signupDate,
+        })
       } else {
         // Add document to "signups" or "subs" based on registration status
         return await tourney.ref
           .collection(tourney.hasClosed() ? "subs" : "signups")
           .doc(auth.currentUser.uid)
-          .set(signup)
+          .set({
+            signupDate,
+            timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+          })
       }
     },
     {

@@ -1,14 +1,16 @@
 ---
 title: FAQ
-hero: We get asked a lot of questions, so a FAQ necessary. You can find everything here from "What time do tournaments begin?" to "What is Weakest Link?".
 ---
+
+<Title title="FAQ">
+  We get asked a lot of questions, so a FAQ necessary. You can find anything from "What is Signal Strength?" to "What is Swiss?".
+</Title>
 
 ## General
 #### What is my 'Signal Strength'?
 Consider it a numerical representation of your experience within Off the Dial. You earn 100 points for each tournament you participate in, and can earn up to 100 more depending on your placement. There are also <Mention>@Signal Strength: 1000+</Mention> and <Mention>@Signal Strength: 5000+</Mention> if you want an inconsequential amount of pointless clout, good luck!
 
 #### What time do tournaments begin?
-
 All tournaments begin on the same minute/hour, but due to timezones that time may differ. Daylight savings times have been listed as well.
 
 Refer to your corresponding time-zone.
@@ -39,7 +41,7 @@ You may also DM either Head Organiser about it.
 Teams are calculated based on your ranks, playstyle and previous competitive experience. All of these are converted into numerical values and then teams are created into drafts using code, and then balanced using human balancing.
 
 #### What is Swiss?
-Swiss is a bracket format, like Single Elimination or Round Robin. However, there are some things that set Swiss apart from other systems. First of all, it's non-eliminating, meaning you play the same amount of rounds regardless of if you lose or not. Swiss pairs you up with people that are closest to the same win/loss record as you, making sure all rounds are as balanced as possible.
+Swiss is a bracket format, like Single Elimination or Round Robin. However, there are some things that set Swiss apart from other systems.
 
 #### Am I able to scrim other teams competing in the tournament?
 We're completely fine with you setting up scrims with other competing teams, in fact, we encourage it. Please be respectful!

@@ -1,16 +1,17 @@
 import React from "react"
 
+import { chakra } from "@chakra-ui/react"
 import SEO from "./SEO"
 import NavBar from "./NavBar"
-import MediaFooter from "./MediaFooter"
+import Footer from "./Footer"
 
-const Layout = ({ pageTitle, meta, mediaFooter = true, children }) => (
-  <div class="layout">
+const Layout = ({ pageTitle, meta, main, children, ...rest }) => (
+  <chakra.div className="layout" {...rest}>
     <SEO title={pageTitle} {...meta} />
     <NavBar />
-    <div class="content layout-content">{children}</div>
-    {mediaFooter && <MediaFooter />}
-  </div>
+    <main style={{ ...main }}>{children}</main>
+    <Footer />
+  </chakra.div>
 )
 
 export default Layout

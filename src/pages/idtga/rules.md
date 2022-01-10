@@ -2,6 +2,8 @@
 title: IDTGA Rules
 ---
 
+<Title title="It's Dangerous to go Alone Rules" />
+
 # It's Dangerous to go Alone Rules
 
 ## Eligibility
