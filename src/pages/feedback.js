@@ -1,24 +1,9 @@
-import React, { useRef, useEffect } from "react"
+import React from "react"
 
-import * as typeformEmbed from "@typeform/embed"
+import Redirect from "src/components/Redirect"
 
-const Feedback = () => {
-  const typeformRef = useRef(null)
-
-  useEffect(() => {
-    typeformEmbed.makeWidget(
-      typeformRef.current,
-      "https://form.typeform.com/to/Mc9Fg3sy",
-      {
-        hideScrollbars: true,
-        hideFooter: true,
-        hideHeaders: true,
-        opacity: 100,
-      }
-    )
-  }, [typeformRef])
-
-  return <div ref={typeformRef} style={{ height: "100vh", width: "100%" }} />
-}
+const Feedback = () => (
+  <Redirect to="https://docs.google.com/forms/d/e/1FAIpQLSezygI_EfAbPAw-oopfhffRILuJ7WHoSRxUOfFA8nLDBEyhRA/viewform?usp=sf_link" />
+)
 
 export default Feedback
