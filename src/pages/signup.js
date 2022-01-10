@@ -78,7 +78,7 @@ const Form = () => {
   const userSignupMut = useMutUserSignup()
   const onSubmit = data => {
     userDataMut.mutate(data)
-    userSignupMut.mutate(format(new Date(), "yyyy-MM-dd HH:mm:ss z"))
+    userSignupMut.mutate(format(new Date(), "yyyy-MM-dd HH:mm:ss zzzz"))
   }
 
   return (
