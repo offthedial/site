@@ -78,7 +78,7 @@ const Form = () => {
   const userSignupMut = useMutUserSignup()
   const onSubmit = data => {
     userDataMut.mutate(data)
-    userSignupMut.mutate(format(new Date(), "yyyy-MM-dd HH:mm:ss Z"))
+    userSignupMut.mutate(format(new Date(), "yyyy-MM-dd HH:mm:ss z"))
   }
 
   return (
@@ -157,7 +157,9 @@ const Form = () => {
           title="Weapon Pool"
           desc={`List up to 5 weapons that you would be comfortable playing during the tournament`}
           validationRules={{ required: "This field is required" }}
-        />
+        >
+          {props => <Chakra.Input size="lg" {...props} />}
+        </Input>
         <hr />
         <Input
           name="cxp"
