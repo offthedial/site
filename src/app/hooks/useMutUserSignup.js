@@ -30,6 +30,7 @@ export default () => {
           .set({
             signupDate,
             timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            modifiedDate: signupDate,
           })
       }
     },
