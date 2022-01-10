@@ -17,7 +17,7 @@ export default () =>
 
       return {
         ...tourneyData,
-        date: () => fromUnixTime(tourneyData.smashgg.startAt),
+        date: fromUnixTime(tourneyData.smashgg.startAt),
         hasEnded: () => isPast(fromUnixTime(tourneyData.smashgg.endAt)),
         hasClosed: () =>
           isPast(fromUnixTime(tourneyData.smashgg.registrationClosesAt)),
