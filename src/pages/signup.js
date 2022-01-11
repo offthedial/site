@@ -81,6 +81,8 @@ const Form = () => {
     userSignupMut.mutate(format(new Date(), "yyyy-MM-dd HH:mm:ss zzzz"))
   }
 
+  console.log(formMethods.formState.isDirty)
+
   return (
     <FormProvider {...formMethods}>
       <Chakra.Box
@@ -245,7 +247,7 @@ const SubmitArea = () => {
           colorScheme="otd.slate"
           size="lg"
           type="submit"
-          disabled={alert?.status === "error"}
+          disable={alert?.status === "error"}
         >
           {userSignupQuery.data?.type ? "Update Profile" : "Signup"}
         </Chakra.Button>

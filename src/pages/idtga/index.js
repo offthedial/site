@@ -30,6 +30,7 @@ const Idtga = ({ data }) => {
       }}
     >
       <Chakra.Box bg="otd.slate.0">
+        <Chakra.Box mx={3} bgColor="otd.slate.300" minH="1px" />
         <Card
           tourney={tourney}
           signupButton={<SignupButton tourney={tourney} />}
@@ -117,7 +118,7 @@ const Card = ({ tourney, signupButton }) => {
   return (
     <Chakra.Stack
       direction={["column", "row"]}
-      py={6}
+      py={[8, null, null, 16]}
       px={4}
       justify="space-evenly"
       align="center"
