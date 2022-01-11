@@ -7,6 +7,7 @@ import PrivateRoute from "src/components/PrivateRoute"
 import {
   useForm,
   useFormContext,
+  useFormState,
   useController,
   FormProvider,
 } from "react-hook-form"
@@ -96,6 +97,7 @@ const Form = () => {
         rounded={[null, "lg"]}
         layerStyle="normal"
         as="form"
+        autocomplete="off"
       >
         <Input
           name="ign"
@@ -136,19 +138,30 @@ const Form = () => {
           desc={`What is the highest rank you've achieved in the last 4 months? (If applicable, include X power)`}
           validationRules={{
             required: "This field is required",
-            pattern: {
-              value: /(^C-$)|(^C$)|(^C\+$)|(^B-$)|(^B$)|(^B\+$)|(^A-$)|(^A$)|(^A\+$)|(^S$)|(^S\+\d$)|(^X[1-9]\d{3}(\.\d)?$)/,
-              message: (
+            validate: value => {
+              if (value.startsWith("X")) {
+                if (/^X[1-9]\d{3}(\.\d)?$/.test(value)) return true
+              }
+              if (value.startsWith("S+")) {
+                if (/^S\+\d$/.test(value)) return true
+              }
+              if (value === "S") {
+                return true
+              }
+              if (["A", "B", "C"].includes(value[0])) {
+                if (value.length === 2 && ["+", "-"].includes(value.at(-1)))
+                  return true
+                if (value.length === 1) return true
+              }
+              return (
                 <>
                   Invalid Rank. Please use the format{" "}
-                  {["C", "A-", "S+0", "X2350.1"].map((field, index) => (
-                    <span key={index}>
-                      <Chakra.Text as="code">{field}</Chakra.Text>
-                      {index !== 3 && ", "}
-                    </span>
-                  ))}
+                  <Chakra.Text as="code">C</Chakra.Text>,{" "}
+                  <Chakra.Text as="code">A-</Chakra.Text>,{" "}
+                  <Chakra.Text as="code">S+0</Chakra.Text>,{" "}
+                  <Chakra.Text as="code">X2350.1</Chakra.Text>
                 </>
-              ),
+              )
             },
           }}
           cleaveOptions={{ delimiter: ".", blocks: [5, 1], uppercase: true }}
@@ -221,6 +234,8 @@ const SubmitArea = () => {
     error: "red",
     info: "blue",
   }[alert?.status]
+  // Get form state
+  const { isDirty } = useFormState()
 
   return (
     <Chakra.Box
@@ -247,7 +262,7 @@ const SubmitArea = () => {
           colorScheme="otd.slate"
           size="lg"
           type="submit"
-          disable={alert?.status === "error"}
+          isDisabled={alert?.status === "error" || !isDirty}
         >
           {userSignupQuery.data?.type ? "Update Profile" : "Signup"}
         </Chakra.Button>
