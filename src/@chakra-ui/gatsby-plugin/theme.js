@@ -76,6 +76,12 @@ const theme = extendTheme({
         bg: "gray.900",
       },
     },
+    mute: {
+      bg: "gray.100",
+      ".chakra-ui-dark &": {
+        bg: "gray.800",
+      },
+    },
     lifted: {
       borderRadius: "lg",
       borderWidth: 1,
