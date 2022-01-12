@@ -3,6 +3,9 @@ import { auth } from "src/app/firebase"
 import { createStandaloneToast } from "@chakra-ui/react"
 
 const ProfileLogout = () => {
+  if (typeof window === "undefined") {
+    return null
+  }
   auth.onAuthStateChanged(user => {
     if (!user) {
       navigate("/")
