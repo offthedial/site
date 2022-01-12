@@ -5,9 +5,10 @@ import { useTourney, useUserSignup } from "src/app/hooks"
 import {
   fromUnixTime,
   format,
+  formatDuration,
+  intervalToDuration,
   addHours,
   addMinutes,
-  differenceInDays,
 } from "date-fns"
 
 import Link from "src/components/Link"
@@ -92,28 +93,21 @@ const Idtga = ({ data }) => {
 }
 
 const Card = ({ tourney, signupButton }) => {
-  const now = new Date()
-  const countdownDate = field => {
-    if (tourney.data?.hasClosed !== false) {
-      return 0
+  const duration = formatDuration(
+    intervalToDuration({
+      start: addHours(fromUnixTime(tourney.data.smashgg.registrationClosesAt)),
+      end: new Date(),
+    }),
+    {
+      format: ["days", "hours", "minutes"],
+      zero: true,
     }
-
-    if (field === "d") {
-      return differenceInDays(
-        now,
-        fromUnixTime(tourney.data.smashgg.registrationClosesAt)
-      )
-    }
-    return format(
-      fromUnixTime(tourney.data.smashgg.registrationClosesAt) - now,
-      field
-    )
-  }
+  ).split(" ")
   const state = {
     date: tourney.data ? format(tourney.data.date, "MMM d, h:mm aa") : "...",
-    days: countdownDate("d"),
-    hours: countdownDate("h"),
-    minutes: countdownDate("m"),
+    days: duration[duration.indexOf("days") - 1],
+    hours: duration[duration.indexOf("hours") - 1],
+    minutes: duration[duration.indexOf("minutes") - 1],
   }
   return (
     <Chakra.Stack
