@@ -386,6 +386,7 @@ const Timeline = ({ tourneyQuery }) => {
         registrationCloses,
         addHours(registrationCloses, 24),
         tourneyQuery.data?.date,
+        fromUnixTime(tourneyQuery.data?.smashgg.endAt),
       ]
   const getPhase = i => {
     if (steps === null) return { phase: "future", time: null }
@@ -479,7 +480,6 @@ const TimelineStep = ({
   const timelineBg = useColorModeValue("100", "700")
   const timelineColor = useColorModeValue("700", "200")
   const timelineLine = useColorModeValue("500", "400")
-
   return (
     <Chakra.Flex alignItems="stretch">
       <Chakra.Flex

@@ -93,15 +93,13 @@ const Idtga = ({ data }) => {
 }
 
 const Card = ({ tourney, signupButton }) => {
-  let state = {}
-  if (tourney.isLoading) {
-    state = {
-      date: "...",
-      days: 0,
-      hours: 0,
-      minutes: 0,
-    }
-  } else {
+  let state = {
+    date: "...",
+    days: 0,
+    hours: 0,
+    minutes: 0,
+  }
+  if (!tourney.isLoading) {
     const duration = formatDuration(
       intervalToDuration({
         start: fromUnixTime(tourney.data?.smashgg.registrationClosesAt),
@@ -112,13 +110,16 @@ const Card = ({ tourney, signupButton }) => {
         zero: true,
       }
     ).split(" ")
-    state = {
-      date: tourney.data ? format(tourney.data?.date, "MMM d, h:mm aa") : "...",
-      days: duration[duration.indexOf("days") - 1],
-      hours: duration[duration.indexOf("hours") - 1],
-      minutes: duration[duration.indexOf("minutes") - 1],
+    state.date = tourney.data
+      ? format(tourney.data?.date, "MMM d, h:mm aa")
+      : "..."
+    if (!tourney.data?.hasClosed()) {
+      state.days = duration[duration.indexOf("days") - 1]
+      state.hours = duration[duration.indexOf("hours") - 1]
+      state.minutes = duration[duration.indexOf("minutes") - 1]
     }
   }
+
   return (
     <Chakra.Stack
       direction={["column", "row"]}
