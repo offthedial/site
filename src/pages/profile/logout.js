@@ -10,7 +10,7 @@ const ProfileLogout = () => {
     if (!user) {
       navigate("/")
     }
-    user
+    auth
       .signOut()
       .then(() => {
         const toast = createStandaloneToast()
@@ -30,7 +30,6 @@ const ProfileLogout = () => {
           title: error.name,
           description: error.message,
           status: "error",
-          duration: 5000,
           isClosable: true,
         })
       })

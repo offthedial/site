@@ -30,7 +30,6 @@ const ProfileDelete = () => {
           title: error.name,
           description: error.message,
           status: "error",
-          duration: 5000,
           isClosable: true,
         })
       })
