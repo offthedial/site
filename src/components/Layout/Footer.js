@@ -52,7 +52,7 @@ const Footer = () => {
             icon={["fab", "github"]}
           />
         </Chakra.HStack>
-        <Chakra.Text>
+        <Chakra.Text align="center">
           This website is{" "}
           <Chakra.Link
             color="gray.500"

@@ -27,12 +27,14 @@ const Profile = ({ location }) => (
       <Chakra.Box
         px={[0, 16, 16, 32]}
         pt={[0, 16]}
-        pb={[0, 8]}
         mx="auto"
         maxWidth="container.xl"
       >
         <TopAlert />
         <UserProfile />
+      </Chakra.Box>
+      <Chakra.Box mb={[-8, 8]} layerStyle="tint">
+        <Chakra.Box h={["2px", 0]} layerStyle="mute" mx={8} />
       </Chakra.Box>
     </Layout>
   </PrivateRoute>
@@ -128,7 +130,7 @@ const UserProfile = () => {
         Tournament Dashboard
       </Chakra.Text>
       <TournamentDashboard />
-      <Chakra.Flex justifyContent="space-between" pt={3}>
+      <Chakra.Flex justifyContent="space-between" pt={2}>
         <Chakra.Box />
         <DeleteAccount />
       </Chakra.Flex>
