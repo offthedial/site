@@ -15,7 +15,6 @@ import {
   formatDuration,
   intervalToDuration,
 } from "date-fns"
-import { auth } from "src/app/firebase"
 import Layout from "src/components/Layout"
 import PrivateRoute from "src/components/PrivateRoute"
 import Link from "src/components/Link"
@@ -96,9 +95,7 @@ const UserProfile = () => {
             textStyle: "error",
           }}
           onClick={() => {
-            navigate("/").then(() => {
-              auth.currentUser.signOut()
-            })
+            navigate("/profile/logout")
           }}
           icon={
             <Chakra.Icon
@@ -161,9 +158,7 @@ const DeleteAccount = () => {
             textDecoration="underline"
             variant="link"
             onClick={() => {
-              navigate("/").then(() => {
-                auth.currentUser.delete()
-              })
+              navigate("/profile/delete")
             }}
           >
             Yes
