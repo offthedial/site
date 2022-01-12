@@ -93,21 +93,31 @@ const Idtga = ({ data }) => {
 }
 
 const Card = ({ tourney, signupButton }) => {
-  const duration = formatDuration(
-    intervalToDuration({
-      start: addHours(fromUnixTime(tourney.data.smashgg.registrationClosesAt)),
-      end: new Date(),
-    }),
-    {
-      format: ["days", "hours", "minutes"],
-      zero: true,
+  let state = {}
+  if (tourney.isLoading) {
+    state = {
+      date: "...",
+      days: 0,
+      hours: 0,
+      minutes: 0,
     }
-  ).split(" ")
-  const state = {
-    date: tourney.data ? format(tourney.data.date, "MMM d, h:mm aa") : "...",
-    days: duration[duration.indexOf("days") - 1],
-    hours: duration[duration.indexOf("hours") - 1],
-    minutes: duration[duration.indexOf("minutes") - 1],
+  } else {
+    const duration = formatDuration(
+      intervalToDuration({
+        start: fromUnixTime(tourney.data?.smashgg.registrationClosesAt),
+        end: new Date(),
+      }),
+      {
+        format: ["days", "hours", "minutes"],
+        zero: true,
+      }
+    ).split(" ")
+    state = {
+      date: tourney.data ? format(tourney.data?.date, "MMM d, h:mm aa") : "...",
+      days: duration[duration.indexOf("days") - 1],
+      hours: duration[duration.indexOf("hours") - 1],
+      minutes: duration[duration.indexOf("minutes") - 1],
+    }
   }
   return (
     <Chakra.Stack
