@@ -117,9 +117,12 @@ const Card = ({ tourney, signupButton }) => {
       ? format(tourney.data?.date, "MMM d, h:mm aa")
       : "..."
     if (!tourney.data?.hasClosed()) {
-      state.days = duration[duration.indexOf("days") - 1]
-      state.hours = duration[duration.indexOf("hours") - 1]
-      state.minutes = duration[duration.indexOf("minutes") - 1]
+      state.days =
+        duration[duration.findIndex(elem => elem.startsWith("day")) - 1]
+      state.hours =
+        duration[duration.findIndex(elem => elem.startsWith("hour")) - 1]
+      state.minutes =
+        duration[duration.findIndex(elem => elem.startsWith("minute")) - 1]
     }
   }
 
