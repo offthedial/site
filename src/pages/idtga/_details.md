@@ -1,6 +1,6 @@
 ---
 changelog:
-  - Signup page has been updated (see details below)
+  - Signup page has been updated (see details above)
   - Other pages have been updated as well, and some are still in the process of updating.
 
 ---
