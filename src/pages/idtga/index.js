@@ -18,6 +18,9 @@ import { InfoOutlineIcon } from "@chakra-ui/icons"
 import Layout from "src/components/Layout"
 import skate from "src/static/skate.svg"
 import idtga from "src/static/idtga.svg"
+import promoBlaster from "src/static/promo_blaster.png"
+import promoFriends from "src/static/promo_friends.png"
+import promoInvite from "src/static/promo_invite.png"
 
 const Idtga = ({ data }) => {
   const tourney = useTourney()
@@ -69,20 +72,20 @@ const Idtga = ({ data }) => {
           title="No team, no problem"
           description="Whether you are brand new to the scene, or a skilled free agent. We make it always accessible to gain competitive experience."
         >
-          <Chakra.Box p={12} bg="otd.slate.300" />
+          <Chakra.Image src={promoInvite} />
         </WhooshPromo>
         <WhooshPromo
           title="Put yourself out there"
           description="Test your chemistry with different folks, and show the scene what you're made of. You might just find your new teammates."
           reversed={true}
         >
-          <Chakra.Box p={12} bg="otd.slate.300" />
+          <Chakra.Image src={promoBlaster} />
         </WhooshPromo>
         <WhooshPromo
           title="Have some fun"
           description="Got an open weekend? Meet new people, make new friends, and just have a whole lot of fun!"
         >
-          <Chakra.Box p={12} bg="otd.slate.300" />
+          <Chakra.Image src={promoFriends} />
         </WhooshPromo>
       </Whoosh>
       <Chakra.Box py={[8, null, null, 20]} px={[8, null, null, 40]}>
@@ -198,12 +201,17 @@ const WhooshPromo = ({ title, description, reversed = false, children }) => {
         { colStart: [1, null, 2], colEnd: 3 },
       ]
   return (
-    <Chakra.Box px={[4, null, 8, 16]} py={[16, null, 32, 44]}>
+    <Chakra.Box px={[4, null, null, 8]} py={16}>
       <Chakra.Grid
-        gap={[4, null, 12, 36]}
+        gap={[4, null, null, 16]}
         templateColumns="repeat(2, minmax(0, 1fr))"
       >
-        <Chakra.GridItem {...props[0]}>
+        <Chakra.GridItem
+          {...props[0]}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+        >
           <Chakra.Box>
             <Chakra.Text fontSize={["2xl", "3xl"]} fontWeight="bold" mb={2}>
               {title}

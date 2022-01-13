@@ -5,6 +5,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "src/components/Layout"
 import slateblobs from "src/static/slateblobs.svg"
 import community from "src/static/community.png"
+import hero from "src/static/hero.png"
 import { useTourney } from "src/app/hooks"
 
 const Index = ({ data }) => (
@@ -56,7 +57,10 @@ const Hero = () => {
     <Chakra.Box
       minHeight="xs"
       rounded="xl"
-      bgColor="otd.slate.800"
+      backgroundColor="#213236"
+      backgroundImage={`url(${hero})`}
+      backgroundSize="cover"
+      backgroundPosition="center"
       display="flex"
       justifyContent="center"
       alignItems="stretch"
