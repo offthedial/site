@@ -53,15 +53,19 @@ const Footer = () => {
           />
         </Chakra.HStack>
         <Chakra.Text align="center">
-          This website is{" "}
+          built by lepto.{" "}
           <Chakra.Link
             color="gray.500"
             href="https://github.com/offthedial/site"
           >
-            open source
+            source code
           </Chakra.Link>
-          , contributions are welcome! Built with Gatsby & Chakra. More features
-          to come!
+          .
+          {/*
+          in memory of myself, to the community, for everything i tried, yet never acknowledged for.
+
+          whoever is maintaining this site, please don't delete this.
+          */}
         </Chakra.Text>
       </Chakra.Stack>
     </Chakra.Box>
