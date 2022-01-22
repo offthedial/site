@@ -7,7 +7,7 @@ tournament: idtga
 
 It's really been four years! What a journey! We've had our ups and downs *and our fair share of dropouts*, but we've made it! The video below shows the complete broadcast of our Dial In stream, where we showcased everything that's happening for our anniversary, but below that I'll be going into a bit more detail onto some things.
 
-INSERT VIDEO HERE
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fmtkAyQ22pE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # The Creator Clash
 
