@@ -1,7 +1,7 @@
 ---
 changelog:
   - For the top cut, the third place match will be played (this season only)
-  - There is a blog post regarding all you need to know with the prize pool [to view here](https://otd.ink/posts/prizepool).
+  - There is a blog post regarding all you need to know with the prize pool see above for the link.
 
 ---
 
