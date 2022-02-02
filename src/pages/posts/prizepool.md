@@ -18,7 +18,7 @@ If you wish to contribute to the prize pool, please go to [otd.ink/prizepool](ht
 - Drop Out/Dropped Out Player: Any player who stops playing the tournament before their team is no longer playing in the tournament.
 - Substitute: A replacement player for a dropped out player.
 - smash.gg The website that hosts the tournament bracket.
-- DJam98: The head of Off the Dial
+- <Mention>@DJam98</Mention>: The head of Off the Dial
 
 # Eligibility for Prize Pool
 To be eligible for the Prize Pool you must meet all of the following conditions:
@@ -26,6 +26,7 @@ To be eligible for the Prize Pool you must meet all of the following conditions:
 -  You must not violate any rules on our rules page at [otd.ink/idtga/rules](https://otd.ink/idtga/rules).
 - You must follow all of our Terms and Conditions at [otd.ink/legal](https://otd.ink/legal).
 - If you are below the age of 18 you must have parental consent to play in the tournament.
+
 You are not eligible if you meet ANY of the following:
 - You break/don't follow any of the conditions listed above
 - You are a substitute for a dropped out player.
