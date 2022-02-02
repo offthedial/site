@@ -49,7 +49,7 @@ All brackets will run independently of one another and will have their own preli
 - Bracket: `Single Elimination`
 - Matches: `Best-of-5`
 - The top `4` teams advance from the preliminaries. 
-- There is no 3rd-place match
+- **For this season only, there WILL be a 3rd place match**
 
 ## Timing
 The tournament is scheduled to last `4:00` hours total.
@@ -141,6 +141,7 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 - All rules are subject to change between seasons, please make sure you read the rules each season before entering.
 - If there are an uneven number of players, the latest signups will be set to emergency subs. Make sure to sign up early to reserve a team!
 - By registering you agree to abide by our [terms and conditions](/legal).
+- For this season, you must also read and agree to the [Prize Pool blog post](https://otd.ink/posts/prizepool)
 
 ---
 
