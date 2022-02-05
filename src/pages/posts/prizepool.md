@@ -46,7 +46,7 @@ The Prize Pool will be distributed using the following methods:
 
 **Distribution Across Brackets**
 - If there is one bracket of players, 100% of the Prize Pool will go to that bracket
-- If there are two brackets of players, 60% of the Prize Pool will go to the upper bracket, and the remain 40% will go to the lower bracket
+- If there are two brackets of players, 60% of the Prize Pool will go to the upper bracket, and the remaining 40% will go to the lower bracket
 - If there are three brackets of players, 50% of the Prize Pool will go the highest bracket, 30% will go to the middle bracket, and the remaining 20% will go to the lowest bracket.
 
 **Distribution Within Brackets**
