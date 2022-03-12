@@ -17,8 +17,8 @@ We hope you'll continue to play and enjoy our tournaments and we hope to see you
 
 ---
 
-To give us feedback, you can head to our feedback form at (otd.ink/feedback)[https://otd.ink/feedback], send a dm to either myself <Mention>@DJam98</Mention> or <Mention>@Rose</Mention> or you can also send an email at (djam98@otd.ink)[mailto:djam98@otd.ink].
+To give us feedback, you can head to our feedback form at [otd.ink/feedback](https://otd.ink/feedback), send a dm to either myself <Mention>@DJam98</Mention> or <Mention>@Rose</Mention> or you can also send an email at [djam98@otd.ink](mailto:djam98@otd.ink).
 
 ---
 
-To find out when the next season of It's Dangerous to go Alone is on, head over to the IDTGA homepage at (otd.ink/idtga)[https://otd.ink/idtga].
+To find out when the next season of It's Dangerous to go Alone is on, head over to the IDTGA homepage at [otd.ink/idtga](https://otd.ink/idtga).
