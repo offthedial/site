@@ -17,12 +17,13 @@ title: IDTGA Rules
 - Players have at least achieved `C-` in **ALL ranked modes** of Splatoon 2 and have a basic understanding of how the modes work.
 
 ### Players are not eligible if they have any one of the conditions below
-- Player is banned from Off the Dial's Discord server or services
-- Player is banned from Nintendo Online, Discord or smash.gg
+- The player is banned from Off the Dial's Discord server or services
+- The player is banned from Nintendo Online, Discord or smash.gg
 - Player is on the banned list of the [Splatoon Code of Conduct](https://docs.google.com/document/d/1-6qlRDNnNSId2U1vve1x9CisJKybtFka69TURVW8qqA/edit?usp=drivesdk).
+- Player is a dropout of the previous season of the tournament.
 
 ## Format
-Depending on the number of signups, there may be multiple brackets that are tiered based on the cumulative ELO (numerical score of all ranks) and competitive experience. There will be an even number of players in all brackets. The top ranked players will be grouped in the higher brackets while the lower ranked players will be placed in lower brackets.
+Depending on the number of signups, multiple brackets are tiered based on the cumulative ELO (numerical score of all ranks) and competitive experience. There will be an even number of players in all brackets. The top-ranked players will be grouped in the higher brackets while the lower-ranked players will be placed in lower brackets.
 
 If there are enough players for a second bracket (64 players or more) the following rules will apply;
 - Minimum bracket size: `8` teams (`32` players)
@@ -49,7 +50,7 @@ All brackets will run independently of one another and will have their own preli
 - Bracket: `Single Elimination`
 - Matches: `Best-of-5`
 - The top `4` teams advance from the preliminaries. 
-- **For this season only, there WILL be a 3rd place match**
+- There will be no 3rd place match played. 3rd place will be determined by preliminary results.
 
 ## Timing
 The tournament is scheduled to last `4:00` hours total.
@@ -74,11 +75,11 @@ The tournament is scheduled to last `4:00` hours total.
 
 ### Do NOT redo the match if:
 - **Any player** on the same team DC's again the same round.
-- The host DC's.
+- The host DCs.
 - The match has passed `2:30` before the DC'ing team has forfeited.
 - Either team has `50` or less objective remaining (excluding penalty).
 
-If either 2 DC’s occur in the same lobby or the host DC’s, the team currently not hosting must host the new lobby.
+If either 2 DCs occur in the same lobby or the host DCs, the team currently not hosting must host the new lobby.
 
 To reduce the chances of a dc happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
 
@@ -99,7 +100,7 @@ Thankfully, Off the Dial has an extensive system for reporting such players and 
 - Once your sub is assigned, the reported player is no longer allowed to play.
 - **This is an irreversible action**, so be thoughtful when you report!
 
-In all cases of player reporting, at least one of the team members must have at least tried to resolve the issue internally. If a player is non-responding, that means that it must be proven there has been an attempt to contact them several times with enough of a gap from the first message to account for timezone difference. In the cases of toxicity or making players feel uncomfortable, this attempt at resolution doesn't have to be done by the person who received the unwanted behaviour. There is an exemption, however, if a team member is being disrespectful through racial, gender, financial, religion or sexuality (however, other team members not including the two involved must also verify that this is the case).
+In all cases of player reporting, at least one of the team members must have at least tried to resolve the issue internally. If a player is non-responding, that means that it must be proven there has been an attempt to contact them several times with enough of a gap from the first message to account for timezone difference. In the cases of toxicity or making players feel uncomfortable, this attempt at resolution doesn't have to be done by the person who received the unwanted behaviour. However, there is an exemption if a team member is being disrespectful of race, gender, financial, religion or sexuality (however, other team members not including the two involved must also verify that this is the case).
 
 ### How to report
 To report a player, send a message in the <Mention>#reporting</Mention> channel, formatted like this:
@@ -125,7 +126,7 @@ Once you've been assigned your sub, you should see a reply to your original repo
 You now know your sub. Friend them on discord, add them to your group chat, and hopefully get some practice in!
 
 ### When we have no available subs
-Sometimes, there are no available subs to substitute for missing players. Often, this will be because none of the emergency subs have ranks that are similar to the player who has dropped out. In this case, the team is responsible for finding a new sub. This can be done by using the <Mention>#lf-pickup</Mention> channel in Off the Dial, or on another server. All substations must be approved by a TO and have signed up as a sub at [otd.ink/signup](https://otd.ink/signup).
+Sometimes, there are no available subs to substitute for missing players. Often, this will be because none of the emergency subs has ranks that are similar to the player who has dropped out. In this case, the team is responsible for finding a new sub. This can be done by using the <Mention>#lf-pickup</Mention> channel in Off the Dial, or on another server. All substations must be approved by a TO and have signed up as a sub at [otd.ink/signup](https://otd.ink/signup).
 
 ## Cheating
 Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on smash.gg, anything considered cheating by Nintendo, controller modifications, such as "turbo mode", and failure to comply with any of the rules on this document.
