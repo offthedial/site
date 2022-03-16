@@ -1,6 +1,6 @@
 ---
 title: ELO Update Version 3.0
-date: 2022-02-03
+date: 2022-03-13
 author: DJam98
 tournament: idtga
 ---
