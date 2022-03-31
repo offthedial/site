@@ -140,9 +140,8 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 
 ## Others
 - All rules are subject to change between seasons, please make sure you read the rules each season before entering.
-- If there are an uneven number of players, the latest signups will be set to emergency subs. Make sure to sign up early to reserve a team!
+- If there are an uneven number of players, the latest signups will be set to removed from the tournament. Make sure to sign up early to reserve a team!
 - By registering you agree to abide by our [terms and conditions](/legal).
-- For this season, you must also read and agree to the [Prize Pool blog post](https://otd.ink/posts/prizepool)
 
 ---
 
