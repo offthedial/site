@@ -1,8 +1,8 @@
 ---
 changelog:
   - Rank ELO balancing has had its numerical values updated.
-  - Dropouts will no longer be able to play for one month after the season they dropped out of.
+  - The amount of teams needed to make two brackets has been lowered to 12 teams.
 
 ---
 
-Welcome to season 29 of It's Dangerous to go Alone! We're testing out some different balancing formulas for this season so any and all feedback is greatly appreciated! Check out the latest blog post for more information.
+Welcome to Season 30 of It's Dangerous to go Alone!

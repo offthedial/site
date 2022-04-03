@@ -25,11 +25,16 @@ title: IDTGA Rules
 ## Format
 Depending on the number of signups, multiple brackets are tiered based on the cumulative ELO (numerical score of all ranks) and competitive experience. There will be an even number of players in all brackets. The top-ranked players will be grouped in the higher brackets while the lower-ranked players will be placed in lower brackets.
 
-If there are enough players for a second bracket (64 players or more) the following rules will apply;
-- Minimum bracket size: `8` teams (`32` players)
-- Maximum bracket size: `15` teams (`60` players)
+- If there are `11` or less teams, there will be one bracket.
+- If there are between `12` and `23` teams, there will be two brackets.
+- If there are `24` or more teams, there will be three brackets.
 
 All brackets will run independently of one another and will have their own preliminaries and top cut.
+
+Brackets will be named accordingly if there are two or three brackets
+- The top bracket will always be called the 'Power Bracket'
+- The bottom bracket will always be called the 'Courage Bracket'
+- The middle bracket, which will be only used if there are three brackets, will be called the 'Wisdom Bracket'.
 
 ## Brackets and Progression
 ### Preliminaries:
