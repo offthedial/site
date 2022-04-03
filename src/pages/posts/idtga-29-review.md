@@ -1,6 +1,6 @@
 ---
 title: IDTGA 29 Feedback and Review
-date: 2022-04-3
+date: 2022-04-03
 author: DJam98
 tournament: idtga
 ---
