@@ -15,8 +15,8 @@ We'll continue experimenting with our ELO system to create more balanced matchma
 We're lowering the number of teams needed to create a second bracket to 12 teams (from 16). This is so that there's a higher chance of reaching this point, making a more balanced tournament.
 
 In light of lowering this, I'll reveal the official names we'll be using for our brackets!
-- If there are two brackets, we'll have the 'Power Bracket' (higher )and 'Courage Bracket' (lower)
-- If there are three brackets, we'll have the 'Power Bracket (highest), 'Wisdom Bracket' (mid) and the 'Courage Bracket' (lower).
+- If there are two brackets, we'll have the *Power Bracket* (higher) and *Courage Bracket* (lower).
+- If there are three brackets, we'll have the *Power Bracket* (highest), *Wisdom Bracket* (mid) and the *Courage Bracket* (lower).
 If you missed it, we are doing these brackets based on the Triforce (from The Legend of Zelda) since our tournament is called 'It's Dangerous to go Alone' after all!
 
 ## Discussion on Feedback
