@@ -1,8 +1,10 @@
 ---
 changelog:
-  - Rank ELO balancing has had its numerical values updated.
-  - The amount of teams needed to make two brackets has been lowered to 12 teams.
+  - Added weapon and gear section to the rules
+  - Added missing player to the rules
+  - Added new rule to other section in the rules
 
 ---
 
-Welcome to Season 30 of It's Dangerous to go Alone!
+Hey, It's Dangerous to go Alone... take this team! 
+Welcome to season 31 of IDTGA, we wish you the best of luck in the tournament!

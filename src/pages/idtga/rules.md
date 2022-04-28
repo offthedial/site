@@ -133,6 +133,14 @@ You now know your sub. Friend them on discord, add them to your group chat, and 
 ### When we have no available subs
 Sometimes, there are no available subs to substitute for missing players. Often, this will be because none of the emergency subs has ranks that are similar to the player who has dropped out. In this case, the team is responsible for finding a new sub. This can be done by using the <Mention>#lf-pickup</Mention> channel in Off the Dial, or on another server. All substations must be approved by a TO and have signed up as a sub at [otd.ink/signup](https://otd.ink/signup).
 
+### Matches with a missing player
+If a dropout occurs during the tournament, you are still required to play. If you do not play your matches, regular round duration rules will still apply. So, in the event that a team is missing a player the __opposing team (the team without a dropout) will have the choice of whether to play in a 3v3 or a 3v4__. If the oppposing team wishes to do a 3v3, please let an organiser know and they will inform you of the best player to sub out to make the match as even as possible.
+
+## Permitted Weapons and Gear
+- All weapons and variations are allowed
+- All gear purchased in game (with some exclusions)
+- Any gear that is considered 'hacked gear' is not allowed. This is any gear that can't be obtained by normal means within the game. This includes having gear exclusive abilities, having brand favoured abilities as the main ability. No matter how the gear was obtained, it is not permitted. One warning will be given, if player continues they will be disqualified from the tournament.
+
 ## Cheating
 Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on smash.gg, anything considered cheating by Nintendo, controller modifications, such as "turbo mode", and failure to comply with any of the rules on this document.
 
@@ -145,6 +153,7 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 
 ## Others
 - All rules are subject to change between seasons, please make sure you read the rules each season before entering.
+- Head TOs reserve the right to alter the rules at any time due to unforseen circumstances on a case by case basis.
 - If there are an uneven number of players, the latest signups will be set to removed from the tournament. Make sure to sign up early to reserve a team!
 - By registering you agree to abide by our [terms and conditions](/legal).
 
