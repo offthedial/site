@@ -1,6 +1,6 @@
 ---
 title: Let's have a look a season 30!
-date: 2022-04-03
+date: 2022-04-28
 author: DJam98
 tournament: idtga
 ---
