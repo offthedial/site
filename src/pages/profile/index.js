@@ -460,9 +460,9 @@ const Timeline = ({ tourneyQuery }) => {
           textStyle="slate"
           textDecoration="underline"
           _hover={{ textDecoration: "none" }}
-          to="https://smash.gg/idtga"
+          to="https://start.gg/idtga"
         >
-          smash.gg/idtga
+          start.gg/idtga
         </Link>{" "}
         to report your scores and organize your brackets.
       </TimelineStep>

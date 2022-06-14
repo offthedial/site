@@ -185,12 +185,12 @@ const Form = () => {
         <hr />
         <Input
           name="smashgg"
-          title="Smash.gg User Slug"
+          title="Start.gg User Slug"
           desc={
             <>
               The 8 characters that are listed on your{" "}
-              <Chakra.Link textStyle="slate" href="https://smash.gg/profile">
-                smash.gg profile page
+              <Chakra.Link textStyle="slate" href="https://start.gg/profile">
+                start.gg profile page
               </Chakra.Link>
               .
             </>
@@ -199,13 +199,13 @@ const Form = () => {
             required: "This field is required",
             minLength: { value: 22, message: "This field is required" },
             pattern: {
-              value: /^smash\.gg\/user\/[0-9A-Fa-f]{8}$/,
+              value: /^start\.gg\/user\/[0-9A-Fa-f]{8}$/,
               message: "Invalid user slug",
             },
           }}
           cleaveOptions={{
             lowercase: true,
-            prefix: "smash.gg/user/",
+            prefix: "start.gg/user/",
             blocks: [22],
           }}
         />
