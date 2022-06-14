@@ -7,3 +7,4 @@ changelog:
 ---
 
 After the chaos that happened last season, let's hope for a calmer season 32!
+Also, we're now moving IDTGA to the start of the month to avoid the tournament overload that occurs at the end of the month!
