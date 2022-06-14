@@ -33,7 +33,7 @@ Yes, one match from each round will be streamed. There will be a five-minute bre
 #### How are disputes/issues resolved?
 When in doubt, use <Mention>#helpdesk</Mention>. Optionally, you can use <Mention>#tourney-helpdesk</Mention> for tournament-related questions.
 
-During the tournament, if there is a match dispute or any conflict, please use the smash.gg "Call a Moderator" feature.
+During the tournament, if there is a match dispute or any conflict, please use the start.gg "Call a Moderator" feature.
 
 You may also DM either Head Organiser about it.
 
@@ -49,8 +49,8 @@ We're completely fine with you setting up scrims with other competing teams, in 
 #### Why organization spelled with an 's'?
 This is an international server, some of us are part of Australia and EU, which spell certain words slightly differently, namely 'organisation'.
 
-#### I need help using smash.gg, where can I get it?
-If no staff is able to answer your question in <Mention>#helpdesk</Mention>, you can contact [smash.gg](https://help.smash.gg/) directly on their website or using their discord.
+#### I need help using start.gg, where can I get it?
+If no staff is able to answer your question in <Mention>#helpdesk</Mention>, you can contact [start.gg](https://help.start.gg/) directly on their website or using their discord.
 
 #### What is Weakest Link and when will it be returning?
 Weakest Link is a tournament where three experience players are teamed up with one inexperienced solo player. These teams are assigned by Off the Dial and teams have one week to practice. This tournament currently is not supported with the current code we have and will require a lot more tweaking to be released. However, we do plan to have another Weakest Link, it just won't be for a long time.
@@ -73,7 +73,7 @@ Tiered brackets are our way of dividing up players so that they are teamed up (a
 
 Players are divided into even groups based off their cumulative ELO (numerical score of all your ranks) and competitive experience. For example, if there were two brackets, the higher X rank players will be the higher bracket and the lower ranked players will be in the lower bracket. However, if over 50% of players are X rank, there will be some X rank players who will be in the lower bracket (and will be determined by their X rank power).
 
-There must be a minimum of 16 teams (64 players) registered for tiered brackets to be used. This is because is so brackets are smaller than 8 teams per bracket.
+There must be a minimum of 12 teams (48 players) registered for tiered brackets to be used. This is because is so brackets are smaller than 8 teams per bracket.
 
 #### Can I still play if I'm already on a team?
 Even if you're already on a team you and your teammates can still play, just don't expect to be on the same team.
@@ -86,17 +86,9 @@ This check-in is different from the check-in before the tournament.
 
 This is just so we can confirm you are playing before we sort players into teams. It is a way we minimise dropouts.
 
-There is also a seperate check-in on smash.gg that happens right before each match starts, make sure you check in!
+There is also a seperate check-in on start.gg that happens right before each match starts, make sure you check in!
 
-#### I'm on the list of 'Invalid Attendees - Only on smash.gg'. How can I fix this?
-
-This is a list of smash.gg tags that have signed up on the smash.gg tournament page, but could not be traced back to any signup on otd.ink. If you're on this list, you will be removed from the tournament due to your signup being invalid, so it's important that you fix this.
-
-The most common reason is that players will have signed up on the smash.gg page, however, they will fail to return back to [otd.ink](https://otd.ink) to complete the signup process. If you see that you do not have the "Signed Up!" role on discord, make sure you return back to the signup page to complete the signup, just scroll past the smash.gg section as you have completed that step already.
-
-Another common reason is signing up with a different smash.gg account than the one that you have linked on your otd.ink profile. Make sure that the smash.gg user slug that you set on otd.ink points to the correct account, and that the account's smash.gg tag matches your smash.gg tag that is listed under invalid attendees.
-
-#### Why is there also check-in for each match on smash.gg?
+#### Why is there also check-in for each match on start.gg?
 
 This is a feature we can't disable, but it's also a way to verify that you are attending your match. If you don't check in within 15 minutes of your match beginning you are automatically disqualified.
 
