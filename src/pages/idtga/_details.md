@@ -1,10 +1,9 @@
 ---
 changelog:
-  - Added weapon and gear section to the rules
-  - Added missing player to the rules
-  - Added new rule to other section in the rules
+  - If a 3v3 match occurs due to a dropout, the team without a dropout will now be awarded a free game.
+  - Added section to 'others' explaining what happens if the bracket fails to work
+  - Added section to 'others' explaining what happens if the online service fails to work
 
 ---
 
-Hey, It's Dangerous to go Alone... take this team! 
-Welcome to season 31 of IDTGA, we wish you the best of luck in the tournament!
+After the chaos that happened last season, let's hope for a calmer season 32!

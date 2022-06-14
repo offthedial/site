@@ -8,7 +8,7 @@ title: IDTGA Rules
 
 ## Eligibility
 ### Players are eligible if they meet all of the conditions below
-- Players have a valid [smash.gg account](https://smash.gg).
+- Players have a valid [start.gg account](https://start.gg).
 - Players have a valid Discord account
 - Players have a Nintendo Switch, as well as a copy of Splatoon 2
 - Players have a valid Nintendo account
@@ -18,7 +18,7 @@ title: IDTGA Rules
 
 ### Players are not eligible if they have any one of the conditions below
 - The player is banned from Off the Dial's Discord server or services
-- The player is banned from Nintendo Online, Discord or smash.gg
+- The player is banned from Nintendo Online, Discord or start.gg
 - Player is on the banned list of the [Splatoon Code of Conduct](https://docs.google.com/document/d/1-6qlRDNnNSId2U1vve1x9CisJKybtFka69TURVW8qqA/edit?usp=drivesdk).
 - Player is a dropout of the previous season of the tournament.
 
@@ -69,7 +69,7 @@ The tournament is scheduled to last `4:00` hours total.
 - Players must start their matches within `5` minutes of the round.
   - If the match has not started yet, the first game is automatically awarded to the team that's waiting.
   - For each additional `5` minutes that the match still hasn't started, an additional game will be awarded.
-  - Please call a moderator in smash.gg when this occurs so the game may be awarded to your team.
+  - Please call a moderator in start.gg when this occurs so the game may be awarded to your team.
 - There is a `5-minute` break before finals commence.
 
 ## DC's Redo Decision Rules
@@ -134,7 +134,7 @@ You now know your sub. Friend them on discord, add them to your group chat, and 
 Sometimes, there are no available subs to substitute for missing players. Often, this will be because none of the emergency subs has ranks that are similar to the player who has dropped out. In this case, the team is responsible for finding a new sub. This can be done by using the <Mention>#lf-pickup</Mention> channel in Off the Dial, or on another server. All substations must be approved by a TO and have signed up as a sub at [otd.ink/signup](https://otd.ink/signup).
 
 ### Matches with a missing player
-If a dropout occurs during the tournament, you are still required to play. If you do not play your matches, regular round duration rules will still apply. So, in the event that a team is missing a player the __opposing team (the team without a dropout) will have the choice of whether to play in a 3v3 or a 3v4__. If the oppposing team wishes to do a 3v3, please let an organiser know and they will inform you of the best player to sub out to make the match as even as possible.
+If a dropout occurs during the tournament, you are still required to play. If you do not play your matches, regular round duration rules will still apply. So, in the event that a team is missing a player the __opposing team (the team without a dropout) will have the choice of whether to play in a 3v3 or a 3v4__. If the oppposing team wishes to do a 3v3, please let an organiser know and they will inform you of the best player to sub out to make the match as even as possible. If a 3v3 match is agreed upon, the team without the missing player will be awarded **the first game as their win** as compensation and enticement for a more fair match. The round will then continue as a 3v3 match from the second game within the round. *Note that if a 3v3 match is not agreed upon, and the match ends up being a 3v4, then this compentation does not apply*.
 
 ## Permitted Weapons and Gear
 - All weapons and variations are allowed
@@ -142,7 +142,7 @@ If a dropout occurs during the tournament, you are still required to play. If yo
 - Any gear that is considered 'hacked gear' is not allowed. This is any gear that can't be obtained by normal means within the game. This includes having gear exclusive abilities, having brand favoured abilities as the main ability. No matter how the gear was obtained, it is not permitted. One warning will be given, if player continues they will be disqualified from the tournament.
 
 ## Cheating
-Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on smash.gg, anything considered cheating by Nintendo, controller modifications, such as "turbo mode", and failure to comply with any of the rules on this document.
+Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on start.gg, anything considered cheating by Nintendo, controller modifications, such as "turbo mode", and failure to comply with any of the rules on this document.
 
 If you cheat:
 
@@ -153,8 +153,10 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 
 ## Others
 - All rules are subject to change between seasons, please make sure you read the rules each season before entering.
-- Head TOs reserve the right to alter the rules at any time due to unforseen circumstances on a case by case basis.
+- Head TOs reserve the right to alter the rules, delay the tournament, or cancel the event in it's entirety at any time due to unforseen circumstances on a case by case basis.
 - If there are an uneven number of players, the latest signups will be set to removed from the tournament. Make sure to sign up early to reserve a team!
+- If the hosting site for the bracket and matchmaking is failing to operate, the matchmaking will move to a manual process on our Discord server. If this occurs, please be patient as this take more time to setup.
+- If the Nintendo Online or Splatoon 2's matchmaking is unavalible at the time of the event, the tournament will be delayed up to an hour until a fix is found. If the online service is still failing to operate after this time period, the tournament will be canceled.
 - By registering you agree to abide by our [terms and conditions](/legal).
 
 ---
