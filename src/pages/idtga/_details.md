@@ -1,10 +1,11 @@
 ---
 changelog:
-  - If a 3v3 match occurs due to a dropout, the team without a dropout will now be awarded a free game.
-  - Added section to 'others' explaining what happens if the bracket fails to work
-  - Added section to 'others' explaining what happens if the online service fails to work
+  - No rule changes this season, well excluding...
+  - Map pool: EVERYTHING
+  - The focus in the season break has been working on the staff team (which we're still in progress)
 
 ---
 
-After the chaos that happened last season, let's hope for a calmer season 32!
-Also, we're now moving IDTGA to the start of the month to avoid the tournament overload that occurs at the end of the month!
+We're in the endgame now.... as this will be the last season of IDTGA before we board a train and go to the splatlands in Splatoon 3! Because this will be the last season of IDTGA we'll be doing in Splatoon 2, we're not creating a maplist and the map pool will be everything. Every map with every mode combination to relish in Splatoon and rejoice it's greatness (and in some cases flaws).
+
+Best of luck to you all, and we hope to see you in the bracket!
