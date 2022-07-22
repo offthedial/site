@@ -1,7 +1,7 @@
 ---
 changelog:
   - No rule changes this season, well excluding...
-  - Map pool: EVERYTHING
+  - The map pool is everything
   - The focus in the season break has been working on the staff team (which we're still in progress)
 
 ---
