@@ -53,12 +53,12 @@ const Footer = () => {
           />
         </Chakra.HStack>
         <Chakra.Text align="center">
-          built by lepto.{" "}
+          Built by Lepto, supported by the community.{" "}
           <Chakra.Link
             color="gray.500"
             href="https://github.com/offthedial/site"
           >
-            source code
+            Source Code
           </Chakra.Link>
           .
           {/*
