@@ -23,6 +23,12 @@ title: WL Rules
 ## Format
 This will consist of a single bracket. Stage one will be the prelimaries, followed by the top cut.
 
+## Registration
+- Players will register as either a free agent, or as a three-player team.
+- The free agent not have **__any X ranks__**.
+- **__All__** members on the three player team **__must have at least one X rank__**.
+- Registration will close 5 days before the tournament begins.
+
 ## Brackets and Progression
 ### Preliminaries:
 - Bracket: `Swiss`
@@ -37,6 +43,7 @@ This will consist of a single bracket. Stage one will be the prelimaries, follow
   - Total sets won
   - Head to head
   - Game win %
+  - Opponent Game Win %
 
 ### Top Cut:
 - Bracket: `Single Elimination`
@@ -82,18 +89,19 @@ If a team has requested to replace you, you will be removed from the tournament 
 ### Redo the match if:
 - The team with the DC stops playing and allows the other team to KO.
 - The team with the DC stays inside their spawn barrier.
-- The team with the DC uses the same weapons/gear shown in the results screen.
+- Both teams use the same weapons/gear shown on the results screen.
 
 ### Do NOT redo the match if:
-- **Any player** on the same team DC's again in the same round.
-- The same player DC's again **any other time** in the tournament.
-- The host DC's.
-- The match has passed 2:30 before the DC'ing team has forfeited.
-- The team without a DC has 50 or less objective remaining (excluding penalty).
+- **Any player** on the same team DC's again the same round.
+- The host DCs.
+- The match has passed `2:30` before the DC'ing team has forfeited.
+- Either team has `50` or less objective remaining (excluding penalty).
 
-If either 2 DC’s occur in the same lobby or the host DC’s, the team currently not hosting must host a new lobby.
+If either 2 DCs occur in the same lobby or the host DCs, the team currently not hosting must host the new lobby.
 
 To reduce the chances of a dc happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
+
+### Lag
 
 If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
 
@@ -103,14 +111,19 @@ For everyone's sake, ***please*** do not drop out.
 A dropout occurs when either the Weakest Link or the 3-player team (as a whole) refuses to play after teams are created, for whatever reason.
 
 ### If you dropout:
-- You will not be able to play in the next month **and** season of Weakest Link.
+- You will not be able to play in the Off the Dial tournament.
 - You will not receive any Signal Strength for the tournament.
 
 ### If the FA/team you are paired with drops out:
 - Unfortunately, due to the nature of this tournament, you will not be able to compete anymore.
 
+## Permitted Weapons and Gear
+- All weapons and variations are allowed
+- All gear purchased in game (with some exclusions)
+- Any gear that is considered 'hacked gear' is not allowed. This is any gear that can't be obtained by normal means within the game. This includes having gear exclusive abilities, having brand favoured abilities as the main ability. No matter how the gear was obtained, it is not permitted. One warning will be given, if player continues they will be disqualified from the tournament.
+
 ## Cheating
-Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile / on smash.gg, anything considered cheating by Nintendo, and failure to comply with any of the rules on this document.
+Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on start.gg, anything considered cheating by Nintendo, controller modifications, such as "turbo mode", and failure to comply with any of the rules on this document.
 
 If you cheat:
 
@@ -119,10 +132,14 @@ If you cheat:
 
 This is a strict no-chances policy, and we do not make exceptions to this.
 
-## Other Rules
+## Others
 - All rules are subject to change between seasons, please make sure you read the rules each season before entering.
-- By registering you agree to abide by our [terms and conditions](/legal)
+- Head TOs reserve the right to alter the rules, delay the tournament, or cancel the event in it's entirety at any time due to unforseen circumstances on a case by case basis.
+- If there are an uneven number of players, the latest signups will be set to removed from the tournament. Make sure to sign up early to reserve a team!
+- If the hosting site for the bracket and matchmaking is failing to operate, the matchmaking will move to a manual process on our Discord server. If this occurs, please be patient as this take more time to setup.
+- If the Nintendo Online or Splatoon 2's matchmaking is unavalible at the time of the event, the tournament will be delayed up to an hour until a fix is found. If the online service is still failing to operate after this time period, the tournament will be canceled.
+- By registering you agree to abide by our [terms and conditions](/legal).
 
 ---
 
-That’s it! If you have any questions or concerns, feel free to ask at the <Mention>#helpdesk</Mention> or DM the TO’s: <Mention>@DJam98</Mention> and <Mention>@LeptoFlare</Mention>. Good luck with the tournament!
+That’s it! If you have any questions or concerns, feel free to ask in <Mention>#helpdesk</Mention>. Good luck in the tournament!
