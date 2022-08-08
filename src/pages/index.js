@@ -80,7 +80,7 @@ const Hero = () => {
         <Chakra.Text fontSize="xl" color="white">
           {data?.hasEnded()
             ? "The current season has ended, but keep your eyes peeled for the next one!"
-            : "Signups are currently open for the next season of It's Dangerous to go Alone!"}
+            : "Signups are currently open for the next season of Weakest Link!"}
         </Chakra.Text>
         <Chakra.Box
           pt={20}
