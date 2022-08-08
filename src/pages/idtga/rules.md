@@ -50,6 +50,7 @@ Brackets will be named accordingly if there are two or three brackets
   - Total sets won
   - Head to head
   - Game win %
+  - Opponent game win %
 
 ### Top Cut:
 - Bracket: `Single Elimination`
@@ -87,6 +88,8 @@ The tournament is scheduled to last `4:00` hours total.
 If either 2 DCs occur in the same lobby or the host DCs, the team currently not hosting must host the new lobby.
 
 To reduce the chances of a dc happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
+
+### Lag
 
 If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
 
