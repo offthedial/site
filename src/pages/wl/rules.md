@@ -4,32 +4,60 @@ title: WL Rules
 
 <Title title="Weakest Link Rules" />
 
-## Format
-Complete teams will consist of 4-5 players.
+# Eligibility
+### Players are eligible if they meet all of the conditions below
+- Players have a valid [start.gg account](https://start.gg).
+- Players have a valid Discord account
+- Players have a Nintendo Switch, as well as a copy of Splatoon 2
+- Players have a valid Nintendo account
+- Players have online access through the 'Nintendo Online' system (by either free trial or by purchasing the service)
+- Players have a reliable internet access point for Nintendo Switch
+- Players have at least achieved `C-` in **ALL ranked modes** of Splatoon 2 and have a basic understanding of how the modes work.
 
+### Players are not eligible if they have any one of the conditions below
+- The player is banned from Off the Dial's Discord server or services
+- The player is banned from Nintendo Online, Discord or start.gg
+- Player is on the banned list of the [Splatoon Code of Conduct](https://docs.google.com/document/d/1-6qlRDNnNSId2U1vve1x9CisJKybtFka69TURVW8qqA/edit?usp=drivesdk).
+- Player is a dropout of the previous season of the tournament.
+
+## Format
+This will consist of a single bracket. Stage one will be the prelimaries, followed by the top cut.
+
+## Brackets and Progression
 ### Preliminaries:
-- Swiss Pools
-- Each pool has a maximum of 16 teams.
-- Teams are evenly distributed across pools.
-- 4 Rounds
-- PA3
+- Bracket: `Swiss`
+- Matches: `Play-all-3`
+- There are `4` total rounds
+- Points will be allocated for games won, matches won, byes as well as ties. The point allocations are as such;
+  - 1 point per game win
+  - 3 points per match won (in addition to the points allocated for individual game wins)
+  - 1 point per match tie (allocated to both teams, will be used if time has run out)
+  - 3 points per bye (no points will be allocated as game wins as no games have been played)
+- In the event a tiebreaker is needed, the following rules will be enacted sequentially until a winner has been determined
+  - Total sets won
+  - Head to head
+  - Game win %
 
 ### Top Cut:
-- Single Elimination - No 3rd place match.
-- At least 1 team per pool, with a minimum of 4 teams total.
-- BO5
+- Bracket: `Single Elimination`
+- Matches: `Best-of-5`
+- The top `4` teams advance from the preliminaries. 
+- There will be no 3rd place match played. 3rd place will be determined by preliminary results.
 
-### 4 or less teams
-If there are 4 or less teams, there will only be one bracket:
-- Double Elimination.
-- BO5
+## Timing
+The tournament is scheduled to last `4:00` hours total.
+- Preliminaries take approximately `2:25` hours in total.
+- Top cut take approximately `1:35` hours in total.
 
-## Timing & Round Duration
-- The first round of the day goes for 45 minutes.
-- All other preliminary matches will go for 40 minutes.
-- There is no time limit on the finals.
-- After the round has completed, any unreported games will automatically be reported as a draw.
-- If you finish a round early, you must wait for the next round to begin.
+### Round Durations
+- Each swiss round lasts `35` minutes.
+- Each top cut round lasts `40` minutes.
+- The very first swiss round lasts `5` more minutes, for `40` minutes total.
+- Players must start their matches within `5` minutes of the round.
+  - If the match has not started yet, the first game is automatically awarded to the team that's waiting.
+  - For each additional `5` minutes that the match still hasn't started, an additional game will be awarded.
+  - Please call a moderator in start.gg when this occurs so the game may be awarded to your team.
+- There is a `5-minute` break before finals commence.
 
 ## Subs
 ### As a 3-player team
