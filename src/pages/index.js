@@ -102,7 +102,7 @@ const Hero = () => {
               Signup Now!
             </Chakra.Button>
           </Link>
-          <Link to="/idtga">
+          <Link to="/wl">
             <Chakra.Button
               size="lg"
               colorScheme="whiteAlpha"
