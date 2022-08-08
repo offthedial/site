@@ -1,5 +1,7 @@
 import React from "react"
 
+/*
+
 import * as Chakra from "@chakra-ui/react"
 import { format } from "date-fns"
 import Layout from "src/components/Layout"
@@ -22,7 +24,7 @@ import {
 } from "src/app/hooks"
 import Link from "src/components/Link"
 
-
+*/
 
 import Redirect from "src/components/Redirect"
 
