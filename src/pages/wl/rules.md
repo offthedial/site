@@ -27,7 +27,7 @@ This will consist of a single bracket. Stage one will be the prelimaries, follow
 - Players will register as either a free agent, or as a three-player team.
 - The free agent not have **__any X ranks__**.
 - **__All__** members on the three player team **__must have at least one X rank__**.
-- Registration will close 5 days before the tournament begins.
+- Registration will close `6` days before the tournament begins.
 
 ## Brackets and Progression
 ### Preliminaries:
