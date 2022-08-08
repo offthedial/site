@@ -37,7 +37,7 @@ import * as Chakra from "@chakra-ui/react"
 import { InfoOutlineIcon } from "@chakra-ui/icons"
 import Layout from "src/components/Layout"
 import skate from "src/static/skate.svg"
-import idtga from "src/static/idtga.svg"
+import idtga from "src/static/logo-nobg.svg"
 import promoBlaster from "src/static/promo_blaster.png"
 import promoFriends from "src/static/promo_friends.png"
 import promoInvite from "src/static/promo_invite.png"
@@ -74,23 +74,22 @@ const Idtga = ({ data }) => {
             zIndex={1}
           >
             <Chakra.Text fontWeight="black">
-              Our flagship,{" "}
+              A tournament putting together{" "}
               <Chakra.Text as="span" fontStyle="italic">
-                solo registration
+                free agents and teams.
               </Chakra.Text>{" "}
-              tournament.
+              That's the Weakest Link!
             </Chakra.Text>
             <Chakra.Text fontSize={["2xl", "3xl"]} textStyle="semimute">
-              Focused on creating balanced teams, and being accessible to
-              everyone.
+              Signup as a high powered team, or as a free agent, pair up together and over the course of a week, develop your skills together!
             </Chakra.Text>
           </Chakra.GridItem>
         </Chakra.Grid>
       </Chakra.Box>
       <Whoosh>
         <WhooshPromo
-          title="No team, no problem"
-          description="Whether you are brand new to the scene, or a skilled free agent. We make it always accessible to gain competitive experience."
+          title="Two ways to register"
+          description="Whether your an established team, or someone new to the scene, there's a spot in this tournament for you!"
         >
           <Chakra.Image src={promoInvite} />
         </WhooshPromo>
@@ -172,7 +171,7 @@ const Card = ({ tourney, signupButton }) => {
           lineHeight="shorter"
           textAlign="center"
         >
-          It's Dangerous to go Alone
+          Weakest Link
         </Chakra.Text>
       </Chakra.Box>
       <Chakra.Box maxW="80">
@@ -256,10 +255,10 @@ const DetailsCard = ({ tourney, mdx }) => {
   const state =
     tourney?.data?.hasEnded() !== false
       ? {
-          title: "It's Dangerous to go Alone",
+          title: "Weakest Link",
           details:
             "There's no tournament currently happening, but here's some general information!",
-          changelogTitle: "Changes from last season",
+          changelogTitle: "Some things to note",
         }
       : {
           title: tourney.data.smashgg.name,
@@ -272,7 +271,7 @@ const DetailsCard = ({ tourney, mdx }) => {
         }
   const dates = [
     [
-      "4 days before",
+      "7 days before",
       date => addHours(date, -24),
       <>
         Check-in begins for 24 hours, if you are registered, don't forget to
@@ -280,7 +279,7 @@ const DetailsCard = ({ tourney, mdx }) => {
       </>,
     ],
     [
-      "3 days before",
+      "6 days before",
       date => date,
       <>
         Check-in and registration closes, invalid attendees will be removed, and
@@ -288,10 +287,10 @@ const DetailsCard = ({ tourney, mdx }) => {
       </>,
     ],
     [
-      "2 days before",
+      "5 days before",
       date => addHours(date, 24),
       <>
-        Players recieve their teams, and the maplist is published. You can now
+        Players recieve their teams. You can now
         start practicing with your team
       </>,
     ],
