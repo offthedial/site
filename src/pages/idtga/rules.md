@@ -50,7 +50,8 @@ Brackets will be named accordingly if there are two or three brackets
   - Total sets won
   - Head to head
   - Game win %
-  - Opponent game win %
+  - Team with less dropouts
+  - Individal match point difference
 
 ### Top Cut:
 - Bracket: `Single Elimination`
