@@ -1,7 +1,5 @@
 import React from "react"
 
-/*
-
 import * as Chakra from "@chakra-ui/react"
 import { format } from "date-fns"
 import Layout from "src/components/Layout"
@@ -23,18 +21,6 @@ import {
   useTourney,
 } from "src/app/hooks"
 import Link from "src/components/Link"
-
-*/
-
-import Redirect from "src/components/Redirect"
-
-const Feedback = () => (
-  <Redirect to="https://docs.google.com/forms/d/e/1FAIpQLScV9jaEl7DDLd0zBcPHNN7WMSj8yn1IK5426xOTgiCSljEO6Q/viewform?usp=sf_link" />
-)
-
-export default Feedback
-
-/*
 
 const Signup = ({ location }) => (
   <PrivateRoute location={location}>
@@ -410,10 +396,6 @@ const StyledCleave = ({ isInvalid, ...rest }) => {
   )
 }
 
-
-
 const ChakraCleave = Chakra.chakra(Cleave, {})
 
 export default Signup
-
-*/
