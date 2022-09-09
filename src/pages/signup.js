@@ -141,7 +141,7 @@ const Form = () => {
                 if (/^X[1-9]\d{3}(\.\d)?$/.test(value)) return true
               }
               if (value.startsWith("S+")) {
-                if (/^S\+\d$/.test(value)) return true
+                if (/^S\+(?:[0-9]|[1-4][0-9]|50)$/.test(value)) return true
               }
               if (value === "S") {
                 return true
