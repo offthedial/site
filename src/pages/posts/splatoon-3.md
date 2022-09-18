@@ -1,5 +1,5 @@
 ---
-title: A Brief Hiatus
+title: Splatoon 3
 date: 2022-09-19
 author: DJam98
 ---
