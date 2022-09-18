@@ -141,7 +141,7 @@ const About = () => (
     </Chakra.Text>
     <Chakra.Text fontSize={["xl", "2xl"]} textAlign="center">
       We are a team of enthusiastic organisers, running a unique tournament
-      organisation for Splatoon 2, dedicated to providing fresh tournament
+      organisation for Splatoon 3, dedicated to providing fresh tournament
       opportunities for free agents!
     </Chakra.Text>
   </Chakra.Box>

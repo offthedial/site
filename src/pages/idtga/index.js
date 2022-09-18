@@ -280,7 +280,7 @@ const DetailsCard = ({ tourney, mdx }) => {
       date => addHours(date, 71),
       <>
         The tournament is about to begin! We request that you be online on both
-        Splatoon 2 and Discord.
+        Splatoon 3 and Discord.
       </>,
     ],
     [

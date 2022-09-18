@@ -10,11 +10,11 @@ title: IDTGA Rules
 ### Players are eligible if they meet all of the conditions below
 - Players have a valid [start.gg account](https://start.gg).
 - Players have a valid Discord account
-- Players have a Nintendo Switch, as well as a copy of Splatoon 2
+- Players have a Nintendo Switch, as well as a copy of Splatoon 3
 - Players have a valid Nintendo account
 - Players have online access through the 'Nintendo Online' system (by either free trial or by purchasing the service)
 - Players have a reliable internet access point for Nintendo Switch
-- Players have at least achieved `C-` in **ALL ranked modes** of Splatoon 2 and have a basic understanding of how the modes work.
+- Players have at least achieved `C-` in **ALL ranked modes** of Splatoon 3 and have a basic understanding of how the modes work.
 
 ### Players are not eligible if they have any one of the conditions below
 - The player is banned from Off the Dial's Discord server or services
@@ -42,10 +42,10 @@ Brackets will be named accordingly if there are two or three brackets
 - Matches: `Play-all-3`
 - There are `4` total rounds
 - Points will be allocated for games won, matches won, byes as well as ties. The point allocations are as such;
-  - 1 point per game win
-  - 3 points per match won (in addition to the points allocated for individual game wins)
-  - 1 point per match tie (allocated to both teams, will be used if time has run out)
-  - 3 points per bye (no points will be allocated as game wins as no games have been played)
+  - 3 point per game win
+  - 6 points per match won (in addition to the points allocated for individual game wins)
+  - 2 point per match tie (allocated to both teams, will be used if time has run out)
+  - 8 points per bye (no points will be allocated as game wins as no games have been played)
 - In the event a tiebreaker is needed, the following rules will be enacted sequentially until a winner has been determined
   - Total sets won
   - Head to head
@@ -77,7 +77,6 @@ The tournament is scheduled to last `4:00` hours total.
 ## DC's Redo Decision Rules
 ### Redo the match if:
 - The team with the DC stops playing and allows the other team to KO.
-- The team with the DC stays inside their spawn barrier.
 - Both teams use the same weapons/gear shown on the results screen.
 
 ### Do NOT redo the match if:
@@ -92,7 +91,7 @@ To reduce the chances of a dc happening, please check you have a good internet c
 
 ### Lag
 
-If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
+If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team. *Note that with Splatoon 3, it has been noted that some lag is normal, and may not be based on the host so please keep this in mind*.
 
 ## Reporting players
 Sometimes, your team needs a replacement for one of your team members. Some examples may include:
@@ -160,7 +159,7 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 - Head TOs reserve the right to alter the rules, delay the tournament, or cancel the event in it's entirety at any time due to unforseen circumstances on a case by case basis.
 - If there are an uneven number of players, the latest signups will be set to removed from the tournament. Make sure to sign up early to reserve a team!
 - If the hosting site for the bracket and matchmaking is failing to operate, the matchmaking will move to a manual process on our Discord server. If this occurs, please be patient as this take more time to setup.
-- If the Nintendo Online or Splatoon 2's matchmaking is unavalible at the time of the event, the tournament will be delayed up to an hour until a fix is found. If the online service is still failing to operate after this time period, the tournament will be canceled.
+- If the Nintendo Online or Splatoon 3's matchmaking is unavalible at the time of the event, the tournament will be delayed up to an hour until a fix is found. If the online service is still failing to operate after this time period, the tournament will be canceled.
 - By registering you agree to abide by our [terms and conditions](/legal).
 
 ---
