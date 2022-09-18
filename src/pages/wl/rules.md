@@ -8,11 +8,11 @@ title: WL Rules
 ### Players are eligible if they meet all of the conditions below
 - Players have a valid [start.gg account](https://start.gg).
 - Players have a valid Discord account
-- Players have a Nintendo Switch, as well as a copy of Splatoon 2
+- Players have a Nintendo Switch, as well as a copy of Splatoon 3
 - Players have a valid Nintendo account
 - Players have online access through the 'Nintendo Online' system (by either free trial or by purchasing the service)
 - Players have a reliable internet access point for Nintendo Switch
-- Players have at least achieved `C-` in **ALL ranked modes** of Splatoon 2 and have a basic understanding of how the modes work.
+- Players have at least achieved `C-` in **ALL ranked modes** of Splatoon 3 and have a basic understanding of how the modes work.
 
 ### Players are not eligible if they have any one of the conditions below
 - The player is banned from Off the Dial's Discord server or services
@@ -137,7 +137,7 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 - Head TOs reserve the right to alter the rules, delay the tournament, or cancel the event in it's entirety at any time due to unforseen circumstances on a case by case basis.
 - If there are an uneven number of players, the latest signups will be set to removed from the tournament. Make sure to sign up early to reserve a team!
 - If the hosting site for the bracket and matchmaking is failing to operate, the matchmaking will move to a manual process on our Discord server. If this occurs, please be patient as this take more time to setup.
-- If the Nintendo Online or Splatoon 2's matchmaking is unavalible at the time of the event, the tournament will be delayed up to an hour until a fix is found. If the online service is still failing to operate after this time period, the tournament will be canceled.
+- If the Nintendo Online or Splatoon 3's matchmaking is unavalible at the time of the event, the tournament will be delayed up to an hour until a fix is found. If the online service is still failing to operate after this time period, the tournament will be canceled.
 - By registering you agree to abide by our [terms and conditions](/legal).
 
 ---
