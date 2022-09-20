@@ -277,7 +277,7 @@ const DetailsCard = ({ tourney, mdx }) => {
     ],
     [
       "1 hour before",
-      date => addHours(date, 71),
+      date => addHours(date, 70),
       <>
         The tournament is about to begin! We request that you be online on both
         Splatoon 3 and Discord.
@@ -285,7 +285,7 @@ const DetailsCard = ({ tourney, mdx }) => {
     ],
     [
       "10 minutes before",
-      date => addMinutes(addHours(date, 72), -10),
+      date => addMinutes(addHours(date, 71), -10),
       <>
         The stream goes live on <Link to="/twitch">twitch</Link>!
       </>,
