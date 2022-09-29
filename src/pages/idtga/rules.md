@@ -94,7 +94,7 @@ To reduce the chances of a dc happening, please check you have a good internet c
 
 If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team. *Note that with Splatoon 3, it has been noted that some lag is normal, and may not be based on the host so please keep this in mind*.
 
-## Missuse of Ending the Game Early
+## Misuse of Ending the Game Early
 As of the current patch (1.1.2), anyone in the match can end the room. So because of this, some extra rules have been applied.
 - If a misuse has occured, the team that has done the act will have that entire round set against them as 3-0.
 - If a second missuse occurs again by the same player, that player forced to dropout (with regular dropout rules applying)
