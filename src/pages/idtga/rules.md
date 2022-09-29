@@ -76,14 +76,15 @@ The tournament is scheduled to last `4:00` hours total.
 
 ## DC's Redo Decision Rules
 ### Redo the match if:
-- The team with the DC stops playing and allows the other team to KO.
+- The objective does not have `50` or less objective remaining (excluding penalty) for either team.
+- The match has not passed `2:30` before the DC has occured.
 - Both teams use the same weapons/gear shown on the results screen.
 
 ### Do NOT redo the match if:
 - **Any player** on the same team DC's again the same round.
-- The host DCs.
-- The match has passed `2:30` before the DC'ing team has forfeited.
-- Either team has `50` or less objective remaining (excluding penalty).
+- There has been a misuse of ending the game early (see below for more details)
+
+To end the game, any player can push the `ZL`, `ZR`, `L`, `R` as well as pushing down the two sticks all at the same time for `3` seconds.
 
 If either 2 DCs occur in the same lobby or the host DCs, the team currently not hosting must host the new lobby.
 
@@ -92,6 +93,14 @@ To reduce the chances of a dc happening, please check you have a good internet c
 ### Lag
 
 If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team. *Note that with Splatoon 3, it has been noted that some lag is normal, and may not be based on the host so please keep this in mind*.
+
+## Missuse of Ending the Game Early
+As of the current patch (1.1.2), anyone in the match can end the room. So because of this, some extra rules have been applied.
+- If a misuse has occured, the team that has done the act will have that entire round set against them as 3-0.
+- If a second missuse occurs again by the same player, that player forced to dropout (with regular dropout rules applying)
+- If a second missuse ocurs again by someone in the same team, the entire team will be disqualified from the tournament.
+- If a player abuses this system in a second tournament, they will be permantly banned from Off the Dial.
+To report a misuse, use the Switch capture feature so we know who canceled the game, and make a report in the <Mention>#tourney-helpdesk</Mention>.  
 
 ## Reporting players
 Sometimes, your team needs a replacement for one of your team members. Some examples may include:
