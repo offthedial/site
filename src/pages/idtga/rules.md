@@ -97,9 +97,10 @@ If there's are complaints about lag from at least 3 people on the same team or 1
 ## Misuse of Ending the Game Early
 As of the current patch (1.1.2), anyone in the match can end the room. So because of this, some extra rules have been applied.
 - If a misuse has occured, the team that has done the act will have that entire round set against them as 3-0.
-- If a second missuse occurs again by the same player, that player forced to dropout (with regular dropout rules applying)
-- If a second missuse ocurs again by someone in the same team, the entire team will be disqualified from the tournament.
+- If a second misuse occurs again by the same player, that player forced to dropout (with regular dropout rules applying)
+- If a second misuse ocurs again by someone in the same team, the entire team will be disqualified from the tournament.
 - If a player abuses this system in a second tournament, they will be permantly banned from Off the Dial.
+
 To report a misuse, use the Switch capture feature so we know who canceled the game, and make a report in the <Mention>#tourney-helpdesk</Mention>.  
 
 ## Reporting players
