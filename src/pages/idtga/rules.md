@@ -97,8 +97,8 @@ The host must have the following settings when creating the room
 - Either team has `50` or less objective remaining (excluding penalty).
 
 ### Host DCs
-Depending on the point in the match when the host DCs, different rulings are in place.
-- If prior to `2:30` time remaining and either team has not reached `50` or less obective remaining, the match can be replayed.
+Depending on the point in the match when the host DCs, different rulings are in place. *Note that if a DC has already occured from any other member of the team earlier in the round, the match will be awarded to the opposing team*.
+- If prior to `2:30` time remaining and either team has not reached `50` or less obective remaining, the match can be replayed (counts as the match redo).
 - If the time remaining is between `2:30` and `0:20`, the game will count as a loss again the team with the host DC
 - If there is less than 20 seconds remaining, or the game is in overtime, then the score at the time of the disconnect will be taken as the final score *(note that if it is observed that this occurs more than once during the tournament, the entire team will be disqualifed from the tournament)*.
 
