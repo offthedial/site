@@ -6,6 +6,9 @@ title: IDTGA Rules
 
 # It's Dangerous to go Alone Rules
 
+## Overview
+It's Dangerous to go Alone is a draft (free agent) tournament where players signup as an indivudual player and get assigned a team based on the information provided in the [registration form](https://otd.ink/signup). The only form of registration allowed is as a free agent - NO TEAMS ALLOWED (if you are on a team, you can still play in the tournament, you just need to signup individually and may not be placed onto the same team).
+
 ## Eligibility
 ### Players are eligible if they meet all of the conditions below
 - Players have a valid [start.gg account](https://start.gg).
@@ -74,7 +77,14 @@ The tournament is scheduled to last `4:00` hours total.
   - Please call a moderator in start.gg when this occurs so the game may be awarded to your team.
 - There is a `5-minute` break before finals commence.
 
-## DC's Redo Decision Rules
+## Lobby Settings
+The host must have the following settings when creating the room
+- A password must be set to the room
+- Primary Gear Abilities Only must be set to off
+- Recon must be set to off
+- The correct stage and mode as displayed in <Mention>#maplist</Mention> must be used.
+
+ ## DC's Redo Decision Rules
 ### Redo the match if:
 - The objective does not have `50` or less objective remaining (excluding penalty) for either team.
 - The match has not passed `2:30` before the DC has occured.
@@ -82,7 +92,15 @@ The tournament is scheduled to last `4:00` hours total.
 
 ### Do NOT redo the match if:
 - **Any player** on the same team DC's again the same round.
-- There has been a misuse of ending the game early (see below for more details)
+- There has been a misuse of ending the game early (see below for more details), unless the match was ended in the first 15 seconds of the game commences (in which case treat it as a DC against the player that ended the match if it was an accident)
+- The match has passed `2:30` before the DC'ing team has forfeited.
+- Either team has `50` or less objective remaining (excluding penalty).
+
+### Host DCs
+Depending on the point in the match when the host DCs, different rulings are in place. *Note that if a DC has already occured from any other member of the team earlier in the round, the match will be awarded to the opposing team*.
+- If prior to `2:30` time remaining and either team has not reached `50` or less obective remaining, the match can be replayed (counts as the match redo).
+- If the time remaining is between `2:30` and `0:20`, the game will count as a loss again the team with the host DC
+- If there is less than 20 seconds remaining, or the game is in overtime, then the score at the time of the disconnect will be taken as the final score *(note that if it is observed that this occurs more than once during the tournament, the entire team will be disqualifed from the tournament)*.
 
 To end the game, any player can push the `ZL`, `ZR`, `L`, `R` as well as pushing down the two sticks all at the same time for `3` seconds.
 
@@ -94,7 +112,7 @@ To reduce the chances of a dc happening, please check you have a good internet c
 
 If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team. *Note that with Splatoon 3, it has been noted that some lag is normal, and may not be based on the host so please keep this in mind*.
 
-## Misuse of Ending the Game Early
+## Ending the Game Early
 As of the current patch (1.1.2), anyone in the match can end the room. So because of this, some extra rules have been applied.
 - If a misuse has occured, the team that has done the act will have that entire round set against them as 3-0.
 - If a second misuse occurs again by the same player, that player forced to dropout (with regular dropout rules applying)
@@ -102,6 +120,18 @@ As of the current patch (1.1.2), anyone in the match can end the room. So becaus
 - If a player abuses this system in a second tournament, they will be permantly banned from Off the Dial.
 
 To report a misuse, use the Switch capture feature so we know who canceled the game, and make a report in the <Mention>#tourney-helpdesk</Mention>.  
+
+## Teams
+Teams will be assigned 48 hours before the tournament begins. Once the rosters have been published, players must asign a team captain and let the tournament organisers know in the <Mention>#whos-captain</Mention> channel. If it reaches `12` hours before the tournament and no captain has been decided, the player with the highest signal strength (or ELO if n/a) will be assigned as the captain by the TOs.
+
+### Team Names
+Teams will be assigned randomly generated names when the roster is published. Once the roster has been published, teams have the option to rename their team, however, the following conditions must be met;
+- Must be posted in the <Mention>#whos-captain</Mention> 12 hours before the tournament commences
+- Must have `2` words
+- Must be alliterative, and the alliterative letters must be the same as the ones previously assigned
+- Must be appropriate, inoffensive and have no cursing
+- Must be under 25 characters
+- Must be approved by a staff member (indicated by a checkmark reaction to the message)
 
 ## Reporting players
 Sometimes, your team needs a replacement for one of your team members. Some examples may include:
