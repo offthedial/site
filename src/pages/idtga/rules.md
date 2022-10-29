@@ -182,10 +182,10 @@ If a dropout occurs during the tournament, you are still required to play. If yo
 ## Permitted Weapons and Gear
 - All weapons and variations are allowed
 - All gear purchased in game (with some exclusions)
-- Any gear that is considered 'hacked gear' is not allowed. This is any gear that can't be obtained by normal means within the game. This includes having gear exclusive abilities, having brand favoured abilities as the main ability. No matter how the gear was obtained, it is not permitted. One warning will be given, if player continues they will be disqualified from the tournament.
+- Any gear that is considered 'hacked gear' is not allowed. This is any gear that can't be obtained by normal means within the game. One such example includes having gear exclusive abilities on other pieces of gear (such as ninja squid on headgear). No matter how the gear was obtained, it is not permitted. One warning will be given, if player continues they will be disqualified from the tournament.
 
 ## Cheating
-Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on start.gg, anything considered cheating by Nintendo, controller modifications, such as "turbo mode", and failure to comply with any of the rules on this document.
+Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on start.gg, going out of bounds, anything considered cheating by Nintendo, controller modifications, such as "turbo mode", and failure to comply with any of the rules on this document.
 
 If you cheat:
 
@@ -197,8 +197,8 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 ## Others
 - All rules are subject to change between seasons, please make sure you read the rules each season before entering.
 - Head TOs reserve the right to alter the rules, delay the tournament, or cancel the event in it's entirety at any time due to unforseen circumstances on a case by case basis.
-- If there are an uneven number of players, the latest signups will be set to removed from the tournament. Make sure to sign up early to reserve a team!
-- If the hosting site for the bracket and matchmaking is failing to operate, the matchmaking will move to a manual process on our Discord server. If this occurs, please be patient as this take more time to setup.
+- If there are an uneven number of players, the latest signups will be removed from the tournament. Make sure to sign up early to reserve a team!
+- If the hosting site for the bracket / matchmaking is failing to operate, the matchmaking will move to a manual process on our Discord server. If this occurs, please be patient as this take more time to setup.
 - If the Nintendo Online or Splatoon 3's matchmaking is unavalible at the time of the event, the tournament will be delayed up to an hour until a fix is found. If the online service is still failing to operate after this time period, the tournament will be canceled.
 - By registering you agree to abide by our [terms and conditions](/legal).
 
