@@ -38,7 +38,7 @@ There are few flaws with this system however. The first being is that you there 
 > Our philisophy is to allow any player to have a competitive experience, so limiting players who may not have finicially have access to better internet is not something we will ever enforce in our tournaments. With people dropping, trust me, we don't like it either. That's why check in begins before teams are made to confirm that yes, they are playing and are checking the information on the Discord server. If players are late/not showing up, let us know in the reporting channels - we don't do a roll call for all 136 of you *(we already have enough on our plate)*.
 
 *Very nice tournament, however It would be helpful if there was a channel in discord just for the rules of the tournament so that we can check it quickly.*
-> I'll look into getting that, but the every link you could ever need will always be in <mention>#current-tourney-status<mention>
+> I'll look into getting that, but the every link you could ever need will always be in current tourney status channel.
 
 *I play almost every month and I have fun every time! The tournament is well organized and the TO’s work really hard to make sure it goes well!*
 > And it's great to see you return time and time again.
