@@ -9,10 +9,14 @@ title: IDTGA Rules
 ## Overview
 It's Dangerous to go Alone is a draft (free agent) tournament where players signup as an indivudual player and get assigned a team based on the information provided in the [registration form](https://otd.ink/signup). The only form of registration allowed is as a free agent - NO TEAMS ALLOWED (if you are on a team, you can still play in the tournament, you just need to signup individually and may not be placed onto the same team).
 
+## Registration Cap
+The maximum number of partipants is 192 (48 teams). If this threshold is reached, all signups after this will be removed, and sub registration will open.
+
 ## Eligibility
 ### Players are eligible if they meet all of the conditions below
-- Players have a valid [start.gg account](https://start.gg).
+- Players have a valid [start.gg account](https://start.gg)
 - Players have a valid Discord account
+- Players must be in the [Off the Dial Discord Server](https://otd.ink/discord)
 - Players have a Nintendo Switch, as well as a copy of Splatoon 3
 - Players have a valid Nintendo account
 - Players have online access through the 'Nintendo Online' system (by either free trial or by purchasing the service)
@@ -49,12 +53,15 @@ Brackets will be named accordingly if there are two or three brackets
   - 6 points per match won (in addition to the points allocated for individual game wins)
   - 2 point per match tie (allocated to both teams, will be used if time has run out)
   - 8 points per bye (no points will be allocated as game wins as no games have been played)
-- In the event a tiebreaker is needed, the following rules will be enacted sequentially until a winner has been determined
+
+#### Tiebreakers
+In the event a tiebreaker is needed, the following rules will be enacted sequentially until a winner has been determined
   - Total sets won
   - Head to head
   - Game win %
   - Team with less dropouts
-  - Individal match point difference
+If there still is a tie between two teams, a single head to head game of Turf War will be played on a random map.
+
 
 ### Top Cut:
 - Bracket: `Single Elimination`
@@ -96,7 +103,7 @@ The host must have the following settings when creating the room
 - The match has passed `2:30` before the DC'ing team has forfeited.
 - Either team has `50` or less objective remaining (excluding penalty).
 
-### Host DCs
+### Host Room Break
 Depending on the point in the match when the host DCs, different rulings are in place. *Note that if a DC has already occured from any other member of the team earlier in the round, the match will be awarded to the opposing team*.
 - If prior to `2:30` time remaining and either team has not reached `50` or less obective remaining, the match can be replayed (counts as the match redo).
 - If the time remaining is between `2:30` and `0:20`, the game will count as a loss again the team with the host DC
