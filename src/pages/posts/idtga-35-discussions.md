@@ -23,7 +23,7 @@ Overall, there were more complaints about the team balancing than usual, so I'll
 There are few flaws with this system however. The first being is that you there is no way to drop rank in Splatoon 3 (excluding at the end of a season), which makes it harder to see what someone's true rank is. Second, is that we're still trying to fully cailbrate our rank conversions to Splatoon 3. This will take some time to adjust, but hopefully with X rank arriving very shortly, we will be able to get some more balanced adjustments into our system.
 
 *Please have players stop chasing a single person and ignoring/barely playing objective.*
-> Unfortunutly this is not something I can fix. I understand that this did put a damper on your experience.
+> We don't condone toxic behavaviour, so if this does occur please let us know during the tournament (with evidence) and we can conduct an investigation (before contacting us though, please discuss it with the enemy team to see if it may have been a misubderstanding). However, I would like to point out that displacing an enemy player is a very real stratergy in any competive game. Even more so if the player is a backline/anchor as taking out that player then allows the team to advance the objective.
 
 *Thanks for hosting the tournament, It was really fun!*
 > Awesome to hear, I'm super glad you enjoyed it!
