@@ -1,26 +1,21 @@
-import React, { useState } from "react"
-
 import { navigate } from "gatsby"
-import { auth } from "src/app/firebase"
+import { auth } from "src/api/firebase"
+import { useAuthUser } from "@react-query-firebase/auth"
 
 const PrivateRoute = ({ location, children }) => {
-  const loginRoute = "/profile/login"
-  const [user, setUser] = useState("pending")
+  const userQuery = useAuthUser(["user"], auth)
+
   if (typeof window === "undefined") {
     return null
   }
-  const unsub = auth.onAuthStateChanged(setUser)
 
-  if (user === "pending") {
+  if (userQuery.isLoading) {
     return null
-  } else {
-    unsub()
-    if (!user) {
-      navigate(loginRoute, { state: { from: location.pathname } })
-      return null
-    }
+  } else if (!userQuery.data) {
+    navigate("/profile/login", { state: { from: location.pathname } })
+    return null
   }
-  return <>{children}</>
+  return children
 }
 
 export default PrivateRoute

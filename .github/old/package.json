@@ -1,0 +1,73 @@
+{
+  "name": "site",
+  "dependencies": {
+    "@chakra-ui/gatsby-plugin": "^1.0.1",
+    "@chakra-ui/icons": "^1.0.5",
+    "@chakra-ui/react": "^1.3.3",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "@fontsource/dm-mono": "^4.1.0",
+    "@fontsource/dm-sans": "^4.1.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@mdx-js/mdx": "^1.6.21",
+    "@mdx-js/react": "^1.6.21",
+    "@typeform/embed": "^0.29.0",
+    "babel-plugin-styled-components": "^1.12.0",
+    "cleave.js": "^1.6.0",
+    "date-fns": "^2.16.1",
+    "firebase": "^9.4.1",
+    "framer-motion": "^3.6.1",
+    "gatsby": "^2.30.0",
+    "gatsby-plugin-firebase": "^0.2.0-beta.4",
+    "gatsby-plugin-mdx": "^1.5.0",
+    "gatsby-plugin-page-creator": "^2.4.0",
+    "gatsby-plugin-react-helmet": "^3.4.0",
+    "gatsby-plugin-remove-trailing-slashes": "^2.5.0",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-sharp": "^2.14.3",
+    "gatsby-plugin-sitemap": "^2.8.0",
+    "gatsby-plugin-styled-components": "^3.6.0",
+    "gatsby-remark-autolink-headers": "^2.6.0",
+    "gatsby-remark-images": "^3.6.0",
+    "gatsby-remark-prismjs": "^3.8.0",
+    "gatsby-remark-twemoji-shortcut": "^0.10.1",
+    "gatsby-source-filesystem": "^2.5.0",
+    "gh-pages": "^3.1.0",
+    "prismjs": "^1.25.0",
+    "prop-types": "^15.7.2",
+    "query-string": "^6.13.7",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.19.4",
+    "react-is": "^17.0.1",
+    "react-query": "^3.5.5"
+  },
+  "devDependencies": {
+    "prettier": "2.1.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/offthedial/site"
+  },
+  "bugs": {
+    "url": "https://github.com/offthedial/site/issues"
+  }
+}

@@ -1,23 +1,36 @@
-import React from "react"
-import QueryClientProvider from "src/app"
-import theme from "src/@chakra-ui/gatsby-plugin/theme"
-import { ColorModeScript } from "@chakra-ui/react"
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fas } from "@fortawesome/free-solid-svg-icons"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-import { far } from "@fortawesome/free-regular-svg-icons"
+// import React from "react"
+// import Terser from "terser"
+// import App from "src/components/App"
 
-library.add(fas, fab, far)
+// const darkModeScript = () => {
+//   const mql = window.matchMedia("(prefers-color-scheme: dark)")
+//   const prefersDarkFromMQ = mql.matches
+//   const persistedPreference = localStorage.getItem("set-color-mode")
 
-export const wrapRootElement = ({ element }) => (
-  <QueryClientProvider>{element}</QueryClientProvider>
-)
+//   let colorMode = "light"
+//   const hasUsedToggle = typeof persistedPreference === "string"
 
-export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents([
-    <ColorModeScript
-      initialColorMode={theme.config.initialColorMode}
-      key="chakra-ui-no-flash"
-    />,
-  ])
-}
+//   if (hasUsedToggle) {
+//     colorMode = persistedPreference
+//   } else {
+//     colorMode = prefersDarkFromMQ ? "dark" : "light"
+//   }
+
+//   let root = document.documentElement
+//   if (colorMode === "dark") root.classList.add("dark")
+//   if (colorMode === "light") root.classList.remove("dark")
+// }
+
+// export const onRenderBody = ({ setPreBodyComponents }) => {
+//   setPreBodyComponents(
+//     <script
+//       dangerouslySetInnerHTML={{
+//         __html: Terser.minify(`(${String(darkModeScript)})()`).code,
+//       }}
+//     />
+//   )
+// }
+
+// export const wrapPageElement = ({ element }) => {
+//   return <App>{element}</App>
+// }

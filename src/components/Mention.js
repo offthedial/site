@@ -1,8 +1,9 @@
 import React from "react"
-import * as Chakra from "@chakra-ui/react"
 
 const Mention = ({ children }) => (
-  <Chakra.Text textStyle="mention">{children}</Chakra.Text>
+  <span className="text-sm rounded-[3px] font-bold p-0.5 -my-0.5 bg-[rgba(114, 137, 218, 0.3)]">
+    {children}
+  </span>
 )
 
 export default Mention

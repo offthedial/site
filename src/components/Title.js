@@ -1,15 +1,12 @@
 import React from "react"
-import * as Chakra from "@chakra-ui/react"
 
 const Title = ({ title, children }) => (
-  <Chakra.Box py={14} textAlign="center" fontSize="xl">
-    <Chakra.Text as="h1" fontSize="3xl" fontWeight="bold" lineHeight="none">
-      {title}
-    </Chakra.Text>
-    <Chakra.Container maxW="container.lg" textStyle="mute">
+  <div className="py-14 text-center text-xl">
+    <h1 className="text-3xl font-bold leading-none">{title}</h1>
+    <div className="max-w-3xl text-slate-500 dark:text-slate-400">
       {children}
-    </Chakra.Container>
-  </Chakra.Box>
+    </div>
+  </div>
 )
 
 export default Title
