@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  body {
     @apply text-slate-800 bg-slate-100 dark:text-slate-100 dark:bg-slate-800;
   }
 

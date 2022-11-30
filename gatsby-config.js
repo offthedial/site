@@ -3,5 +3,5 @@
  */
 module.exports = {
   trailingSlash: "never",
-  plugins: ["gatsby-plugin-root-import", "gatsby-plugin-postcss"],
+  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-root-import"],
 }

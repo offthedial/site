@@ -1,3 +1,4 @@
+import React from "react"
 import { ThemeProvider } from "src/components/theme"
 import "src/globals.css"
 

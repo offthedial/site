@@ -21,10 +21,7 @@ export const ThemeProvider = ({ children }) => {
       rawSetColorMode(colorMode)
     }
 
-    return {
-      colorMode,
-      setColorMode,
-    }
+    return [colorMode, setColorMode]
   }, [colorMode, rawSetColorMode])
 
   return (
@@ -34,9 +31,7 @@ export const ThemeProvider = ({ children }) => {
   )
 }
 
-const useTheme = () => {
+export const useTheme = () => {
   const context = React.useContext(ThemeContext)
   return context
 }
-
-export default useTheme

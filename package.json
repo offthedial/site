@@ -2,9 +2,7 @@
   "name": "rewrite",
   "version": "1.0.0",
   "scripts": {
-    "develop": "gatsby develop",
     "dev": "gatsby develop",
-    "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"

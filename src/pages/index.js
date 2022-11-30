@@ -1,5 +1,5 @@
 import React from "react"
-import useTheme from "src/components/theme"
+import { useTheme } from "components/theme"
 
 const Index = () => {
   const [theme, setTheme] = useTheme()
@@ -12,6 +12,7 @@ const Index = () => {
       >
         change mode
       </button>
+      <div>preference: {localStorage.getItem("set-color-mode")}</div>
     </div>
   )
 }
