@@ -1,6 +1,5 @@
 import { navigate } from "gatsby"
-import { auth } from "src/server/firebase"
-import { useAuthUser } from "@react-query-firebase/auth"
+import useAuthUser from "app/useAuthUser"
 
 const PrivateRoute = ({ location, children }) => {
   const userQuery = useAuthUser(["user"], auth)

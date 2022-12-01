@@ -13,10 +13,12 @@
     "@react-query-firebase/auth": "^1.0.0-dev.2",
     "@react-query-firebase/firestore": "^1.0.0-dev.7",
     "@react-query-firebase/functions": "^1.0.0-dev.1",
+    "date-fns": "^2.29.3",
     "firebase": "^9.14.0",
     "gatsby": "^5.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
     "react-query": "^3.39.2",
     "terser": "^5.16.0"
   },

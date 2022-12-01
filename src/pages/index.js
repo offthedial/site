@@ -1,18 +1,24 @@
 import React from "react"
-import { useTheme } from "components/theme"
+import useTournament from "app/useTournament"
+import toast from "react-hot-toast/headless"
+import Toast from "src/components/Toast"
 
 const Index = () => {
-  const [theme, setTheme] = useTheme()
+  const query = useTournament()
+  console.log(query.data)
   return (
     <div>
       <button
         onClick={() => {
-          theme === "light" ? setTheme("dark") : setTheme("light")
+          toast({
+            title: "Success",
+            description: "tonehsanotheus aasotnhu asotenhu ",
+          })
         }}
       >
-        change mode
+        toast
       </button>
-      <div>preference: {localStorage.getItem("set-color-mode")}</div>
+      <Toast title="Logout Successful" description="You have been logged out" />
     </div>
   )
 }
