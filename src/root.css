@@ -4,9 +4,9 @@
 
 @layer base {
   html * {
-    @apply transition-colors;
+    @apply transition-colors ease-out;
   }
   body {
-    @apply text-slate-800 bg-slate-100 dark:text-slate-100 dark:bg-slate-800;
+    @apply bg-white text-slate-800 dark:text-slate-50 dark:bg-slate-900;
   }
 }

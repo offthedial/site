@@ -1,6 +1,7 @@
 import { navigate } from "gatsby"
 import { parse } from "query-string"
 import { auth } from "src/app"
+import toast from "src/utils/toast"
 
 const api = process.env.GATSBY_API_URL
 
@@ -53,14 +54,11 @@ const tokenEndpoint = (auth, { code, state }, redirect) => {
 }
 
 const navigateError = (error, redirect) => {
-  const toast = undefined
   navigate("/")
   toast({
+    style: "error",
     title: "Login Error",
     description: error,
-    status: "error",
-    duration: null,
-    isClosable: true,
   })
 }
 

@@ -15,27 +15,20 @@ const useTournament = () => {
     orderBy("date", "desc"),
     limit(1)
   )
-  const result = useFirestoreQuery(["tournament"], ref)
+  const queryResult = useFirestoreQuery(["tournament"], ref)
+  if (!queryResult.data) return queryResult
 
-  if (!result.data) {
-    return result
-  }
-
-  const tourneyData = result.data.docs[0].data()
-  const timestamp = new Timestamp(
-    tourneyData.date.seconds,
-    tourneyData.date.nanoseconds
-  )
+  const data = queryResult.data.docs[0].data()
+  const timestamp = new Timestamp(data.date.seconds, data.date.nanoseconds)
 
   return {
-    ...result,
+    ...queryResult,
     data: {
-      ...tourneyData,
+      ...data,
       creationDate: timestamp.toDate(),
-      startDate: fromUnixTime(tourneyData.smashgg.startAt),
-      hasEnded: () => isPast(fromUnixTime(tourneyData.smashgg.endAt)),
-      hasClosed: () =>
-        isPast(fromUnixTime(tourneyData.smashgg.registrationClosesAt)),
+      startDate: fromUnixTime(data.smashgg.startAt),
+      hasEnded: () => isPast(fromUnixTime(data.smashgg.endAt)),
+      hasClosed: () => isPast(fromUnixTime(data.smashgg.registrationClosesAt)),
     },
   }
 }

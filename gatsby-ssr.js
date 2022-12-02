@@ -21,6 +21,7 @@ const darkModeScript = () => {
 export const onRenderBody = ({ setPreBodyComponents }) => {
   setPreBodyComponents(
     <script
+      key="no-flash"
       dangerouslySetInnerHTML={{
         __html: `(${String(darkModeScript)})()`,
       }}
@@ -28,6 +29,6 @@ export const onRenderBody = ({ setPreBodyComponents }) => {
   )
 }
 
-export const wrapPageElement = ({ element }) => {
+export const wrapRootElement = ({ element }) => {
   return <App>{element}</App>
 }

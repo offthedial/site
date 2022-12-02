@@ -3,5 +3,34 @@
  */
 module.exports = {
   trailingSlash: "never",
-  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-root-import"],
+  plugins: [
+    `gatsby-plugin-root-import`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        ignore: [`**/*.(md|mdx)`],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-images`,
+          `gatsby-remark-twemoji-shortcut`,
+        ],
+      },
+    },
+  ],
 }

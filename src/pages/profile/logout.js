@@ -1,39 +1,32 @@
+import React from "react"
 import { navigate } from "gatsby"
+import { useAuthSignOut } from "@react-query-firebase/auth"
 import { auth } from "src/app"
+import toast from "src/utils/toast"
 
 const ProfileLogout = () => {
-  if (typeof window === "undefined") {
-    return null
-  }
-  auth.onAuthStateChanged(user => {
-    if (!user) {
+  const mutation = useAuthSignOut(auth, {
+    onSuccess: () => {
       navigate("/")
-    } else {
-      auth
-        .signOut()
-        .then(() => {
-          const toast = undefined
-          navigate("/")
-          toast({
-            title: "Logout Successful",
-            description: "You have been logged out.",
-            status: "success",
-            duration: 5000,
-            isClosable: true,
-          })
-        })
-        .catch(error => {
-          const toast = undefined
-          navigate("/")
-          toast({
-            title: error.name,
-            description: error.message,
-            status: "error",
-            isClosable: true,
-          })
-        })
-    }
+      toast({
+        style: "success",
+        title: "Logout Successful",
+        description: "You are now logged out",
+      })
+    },
+    onError: error => {
+      toast({
+        style: "error",
+        title: error.name,
+        description: error.message,
+      })
+    },
   })
+
+  React.useEffect(() => {
+    mutation.mutate()
+  }, [mutation])
+
   return null
 }
 

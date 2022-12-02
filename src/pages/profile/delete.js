@@ -1,39 +1,32 @@
+import React from "react"
 import { navigate } from "gatsby"
+import { useAuthDeleteUser } from "@react-query-firebase/auth"
 import { auth } from "src/app"
+import toast from "src/utils/toast"
 
 const ProfileDelete = () => {
-  if (typeof window === "undefined") {
-    return null
-  }
-  auth.onAuthStateChanged(user => {
-    if (!user) {
+  const mutation = useAuthDeleteUser(auth, {
+    onSuccess: () => {
       navigate("/")
-    } else {
-      user
-        .delete()
-        .then(() => {
-          const toast = undefined
-          navigate("/")
-          toast({
-            title: "Delete Successful",
-            description: "Your account has been deleted.",
-            status: "success",
-            duration: 5000,
-            isClosable: true,
-          })
-        })
-        .catch(error => {
-          const toast = undefined
-          navigate("/")
-          toast({
-            title: error.name,
-            description: error.message,
-            status: "error",
-            isClosable: true,
-          })
-        })
-    }
+      toast({
+        style: "success",
+        title: "Deletion Successful",
+        description: "Your account has now been deleted",
+      })
+    },
+    onError: error => {
+      toast({
+        style: "error",
+        title: error.name,
+        description: error.message,
+      })
+    },
   })
+
+  React.useEffect(() => {
+    mutation.mutate()
+  }, [mutation])
+
   return null
 }
 
