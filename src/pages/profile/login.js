@@ -1,6 +1,6 @@
 import { navigate } from "gatsby"
 import { parse } from "query-string"
-import { auth } from "src/app/firebase"
+import { auth } from "src/app"
 
 const api = process.env.GATSBY_API_URL
 

@@ -1,5 +1,5 @@
-import { navigate } from "gatsby"
 import useAuthUser from "app/useAuthUser"
+import { navigate } from "gatsby"
 
 const PrivateRoute = ({ location, children }) => {
   const userQuery = useAuthUser(["user"], auth)

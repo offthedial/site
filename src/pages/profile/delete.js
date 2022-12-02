@@ -1,5 +1,5 @@
 import { navigate } from "gatsby"
-import { auth } from "src/app/firebase"
+import { auth } from "src/app"
 
 const ProfileDelete = () => {
   if (typeof window === "undefined") {

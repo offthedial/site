@@ -1,3 +1,4 @@
+import { QueryClient } from "react-query"
 import { initializeApp } from "firebase/app"
 import { getAuth } from "firebase/auth"
 import { getFirestore } from "firebase/firestore"
@@ -12,9 +13,10 @@ const firebaseConfig = {
   messagingSenderId: process.env.GATSBY_FIREBASE_MESSAGINGSENDERID,
   appId: process.env.GATSBY_FIREBASE_APPID,
 }
-const app = initializeApp(firebaseConfig)
 
+export const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app)
 export const db = getFirestore(app)
 export const functions = getFunctions(app)
-export default app
+
+export const queryClient = new QueryClient()

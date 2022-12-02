@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html * {
+    @apply transition-colors;
+  }
   body {
     @apply text-slate-800 bg-slate-100 dark:text-slate-100 dark:bg-slate-800;
-  }
-
-  body * {
-    @apply transition-colors;
   }
 }

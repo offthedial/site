@@ -1,16 +1,18 @@
 import React from "react"
 import useTournament from "app/useTournament"
-import toast from "react-hot-toast/headless"
-import Toast from "src/components/Toast"
+import toast from "utils/toast"
+import { useTheme } from "utils/theme"
 
 const Index = () => {
   const query = useTournament()
+  const [theme, setTheme] = useTheme()
   console.log(query.data)
   return (
-    <div>
+    <div className="p-4 flex flex-col gap-4">
       <button
         onClick={() => {
           toast({
+            style: "success",
             title: "Success",
             description: "tonehsanotheus aasotnhu asotenhu ",
           })
@@ -18,7 +20,13 @@ const Index = () => {
       >
         toast
       </button>
-      <Toast title="Logout Successful" description="You have been logged out" />
+      <button
+        onClick={() => {
+          setTheme(theme === "dark" ? "light" : "dark")
+        }}
+      >
+        set theme to {theme}
+      </button>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import { navigate } from "gatsby"
-import { auth } from "src/app/firebase"
+import { auth } from "src/app"
 
 const PrivateRoute = ({ location, children }) => {
   const loginRoute = "/profile/login"

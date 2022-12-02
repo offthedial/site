@@ -1,5 +1,3 @@
-import React from "react"
-
 const Title = ({ title, children }) => (
   <div className="py-14 text-center text-xl">
     <h1 className="text-3xl font-bold leading-none">{title}</h1>

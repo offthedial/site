@@ -1,13 +1,13 @@
 import { useFirestoreQuery } from "@react-query-firebase/firestore"
+import { fromUnixTime, isPast } from "date-fns"
 import {
-  query,
   collection,
   limit,
   orderBy,
+  query,
   Timestamp,
 } from "firebase/firestore"
-import { db } from "./firebase"
-import { fromUnixTime, isPast } from "date-fns"
+import { db } from "app"
 
 const useTournament = () => {
   const ref = query(

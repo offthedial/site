@@ -1,5 +1,5 @@
 import { navigate } from "gatsby"
-import { auth } from "src/app/firebase"
+import { auth } from "src/app"
 import { createStandaloneToast } from "@chakra-ui/react"
 
 const ProfileDelete = () => {

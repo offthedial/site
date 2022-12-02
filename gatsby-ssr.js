@@ -1,5 +1,5 @@
 import React from "react"
-import App from "src/components/App"
+import App from "src/root"
 
 const darkModeScript = () => {
   const mql = window.matchMedia("(prefers-color-scheme: dark)")

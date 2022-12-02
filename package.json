@@ -10,6 +10,7 @@
   "dependencies": {
     "@fontsource/dm-mono": "^4.5.10",
     "@fontsource/dm-sans": "^4.5.9",
+    "@radix-ui/react-toast": "^1.1.2",
     "@react-query-firebase/auth": "^1.0.0-dev.2",
     "@react-query-firebase/firestore": "^1.0.0-dev.7",
     "@react-query-firebase/functions": "^1.0.0-dev.1",
