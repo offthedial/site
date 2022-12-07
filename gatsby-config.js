@@ -6,6 +6,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-root-import`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-page-creator`,
