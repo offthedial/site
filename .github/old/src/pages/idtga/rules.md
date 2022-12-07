@@ -2,9 +2,8 @@
 title: IDTGA Rules
 ---
 
-<Title title="It's Dangerous to go Alone Rules" />
- 
 ## Brackets
+
 Due to the large number of signups, players are seperated into multiple skill brackets to keep players close in skill level with each other.
 
 All brackets are run independently of one another and have their own preliminaries and top cut.
@@ -12,18 +11,21 @@ All brackets are run independently of one another and have their own preliminari
 The skill brackets are, in order of highest skill to lowest skill: **Power** (highest), **Wisdom** (middle), and **Courage** (lowest). Note that the Wisdom bracket may not always be active depending on the number of signups.
 
 ### Preliminaries:
+
 - Format: `Swiss`
 - Matches: `Play-all-3`
 - There are `4` total rounds
 - In the event a tiebreaker is nessecary to decide top cut, the total sets won will be used. If that is the same, a head-to-head on Splat Zones (random map) will be used.
 
 ### Top Cut:
+
 - Format: `Single Elimination`
 - Matches: `Best-of-5`
 - The top `4` teams advance from the preliminaries.
 - There is no 3rd place match. 3rd place is be determined by preliminary results.
 
 ## Timing
+
 - Registration opens!
 - Check-in opens 24 hours before registration closes, please remember to check-in within those 24 hours or you will be removed from the tournament.
 - Teams and maplist are released 24 hours after registration and check-in closes.
@@ -31,10 +33,12 @@ The skill brackets are, in order of highest skill to lowest skill: **Power** (hi
 - The tournament begins the 24 hours later!
 
 The tournament is scheduled to last `4:00` hours total.
+
 - Preliminaries take approximately `2:25` hours in total.
 - Top cut take approximately `1:35` hours in total.
 
 ### Round Durations
+
 - Each swiss round lasts `35` minutes.
 - Each top cut round lasts `40` minutes.
 - The very first swiss round lasts `5` more minutes, for `40` minutes total.
@@ -47,36 +51,42 @@ The tournament is scheduled to last `4:00` hours total.
 If a match has not been completed by the end of the round, players must finish whatever game they're currently on. The rest of the set **will not be played**, and no points will be awarded to either team.
 
 ## Lobby Settings
+
 - A password must be set.
 - `Primary Gear Abilities Only` must be off
 - `Recon Mode` must be off
 - The correct stage and mode as displayed in <Mention>#maplist</Mention> must be used.
 
 ## DC Redo Decision Rules
-To end the game early, any player can push the `ZL`, `ZR`, `L`, `R` as well as pushing down the two sticks all at the same time for 3 seconds. Misuse of this feature will result in the entire set loss. Abuse of this feature will result in disqualification and/or a permanent ban. Remember to use the switch capture feature to record misuse if it has occured.
+
+To end the game early, any player can push the `ZL`, `ZR`, `L`, `R` as well as pushing down the two sticks all at the same time for 3 seconds. **This is not a rage-quit feature**, misuse of this feature will result in the entire set loss. Abuse of this feature will result in disqualification and/or a permanent ban. Remember to use the switch capture feature to record misuse if it has occured.
 
 If either 2 DCs occur in the same lobby, the host DCs, or there are a significant amount of complaints about lag; the team currently not hosting must host the new lobby.
 
-To reduce the chances of a dc happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
+To reduce the chances of a DC happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
 
 ### Redo the game if:
-- The objective does not have `50` or less objective remaining (excluding penalty) for either team.
+
+- The objective has not passed `50` points remaining for either team.
 - The game has not passed `2:30` before the DC has occured.
 - Both teams use the same weapons/gear shown on the results screen.
 
 ### Do NOT redo the game if:
+
 - **Any player** on the same team DC's again the same round.
-- There was a misuse of ending the game early.
-- The match has passed `2:30` before the DC'ing team has forfeited.
-- Either team has `50` or less objective remaining (excluding penalty).
-- The host DC's, in this case the game is rewarded to the team not hosting.
+- The host DC's. In this case, the game is rewarded to the team not hosting.
+- There was a misuse of ending the game early, see above.
 
 ## Teams
+
 ### Captains
-Usually, the player with the highest signal strength is automatically assigned as captain, if you were assigned as captain but would like to opt out, please talk to your team to decide who will be captain, and let a staff member know in the <Mention>#team-updates</Mention> 12 hours before the tournament starts.
+
+Usually, the player with the highest signal strength is automatically assigned as captain, if you were assigned as captain but would like to opt out, please talk to your team to decide who will be captain, and let a staff member know in the <Mention>#team-updates</Mention> at latest 12 hours before the tournament starts.
 
 ### Team Names
+
 Team names are randomly generated. If you want to change your team name, here are the following conditions:
+
 - Must be posted in the <Mention>#team-updates</Mention> 12 hours before the tournament starts.
 - Must have exactly `2` words.
 - The first letter of both words must be the same as the first letter of the previously team name.
@@ -85,7 +95,9 @@ Team names are randomly generated. If you want to change your team name, here ar
 - Must be approved by a staff member (indicated by a checkmark reaction to the message)
 
 ## Reporting players
+
 Sometimes, your team needs a replacement for one of your team members. Some examples may include:
+
 - A team member notifies you that something has come up and they need to drop out.
 - A team member just isn't responding at all to any messages.
 - A team member is acting toxic to the rest of your team.
@@ -100,7 +112,9 @@ Off the Dial has an extensive system for reporting such players and receiving a 
 - **This is an irreversible action**, so be thoughtful when you report!
 
 ### How to report
+
 To report a player, send a message in the <Mention>#reporting</Mention> channel, formatted like this:
+
 > <Mention>@ReportedPlayer</Mention> - Reason for reporting
 
 If you don't feel comfortable reporting them publicly, you can send any staff member a DM instead :blue_heart:.
@@ -110,6 +124,7 @@ If you don't feel comfortable reporting them publicly, you can send any staff me
   > "Despite their status being set to online, they haven't responded to any of our DMs since teams have been created, multiple of our team members have attempted to get in contact with them, but to no avail".
 
 Once you have made your report, our staff members will update you with the status of your report by reacting to your report message:
+
 - :spiral_note_pad: - We've noted your report, and are working on matching a sub.
 - :white_check_mark: - The report has been resolved, we have assigned a sub, This step shouldn't take long.
 - :no_entry_sign: - We don't approve of the report. This usually doesn't happen, assuming you did everything correctly.
@@ -117,12 +132,15 @@ Once you have made your report, our staff members will update you with the statu
 If there is no reaction, we haven't seen your report yet. Please note that it may take up to 24 hours to recieve a sub.
 
 ### Receiving your sub
+
 Once you've been assigned your sub, you should see a reply to your original report, usually formatted like this:
+
 > <Mention>@Sub</Mention> > <Mention>@ReportedPlayer</Mention>
 
 You now know your sub. Friend them on discord, add them to your group chat, and hopefully get some practice in!
 
 ### When we have no available subs
+
 Sometimes, there are no available subs to substitute for missing players. In this case, the team is responsible for finding a new sub. This can be done by using the <Mention>#lf-pickup</Mention> channel in Off the Dial, or on another server.
 
 Subs must be approved by a TO and have signed up as a sub at [otd.ink/signup](https://otd.ink/signup).
@@ -130,9 +148,11 @@ Subs must be approved by a TO and have signed up as a sub at [otd.ink/signup](ht
 If all options are exhausted, and your team is still unable to find a sub, your team may be disqualified and become emergency subs.
 
 ## Cheating
+
 Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on start.gg, anything considered cheating by Nintendo, controller mods, and failure to comply with any of the rules on this document.
 
 If you cheat:
+
 - Instant disqualification from the tournament.
 - A permanent ban from Off the Dial and all tournaments.
 
@@ -141,9 +161,11 @@ This is a strict no-chances policy, and we do not make exceptions to this.
 Staff also reserve the right to disqualify or ban players at their discretion.
 
 ## Others
+
+- In order to compete in the tournament, you must have at least played each of the 4 ranked modes once, and
 - Rules are subject to change between seasons, Make sure to reread the rules each season, you can check the patch notes to see what we changed.
 - Signups are first-come-first serve. If there are an uneven number of players, the latest signups will be emergency subs. Make sure to sign up early!
-- If external services, such as Nintendo Online or start.gg are unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
+- If third-party services, such as Nintendo Online or start.gg become unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
 - By registering you agree to abide by our [terms and conditions](/legal), thank you!
 
 ---

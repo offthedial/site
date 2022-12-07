@@ -12,8 +12,7 @@ module.exports = {
     extend: {
       colors: {
         slate: {
-          900: "#182132",
-          950: "#151d2e",
+          850: "#141c2a",
         },
         otd: {
           slate: {
@@ -85,5 +84,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("tailwindcss-animate"),
+  ],
 }

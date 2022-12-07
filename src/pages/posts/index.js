@@ -1,44 +1,34 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Layout from "src/components/Layout"
 import Title from "src/components/Title"
 
-const Posts = ({ data }) => {
-  console.log(data)
-  return (
-    <div className="flex flex-col items-center">
-      {/* <Layout pageTitle="Posts"> */}
-      <Title title="Posts">
-        Check out the latest blog posts, news, and updates from Off the Dial!
-        Posts may consist of patch notes, new features or anything else we want
-        to say.
-      </Title>
-      <div className="max-w-xl">
-        <div className="flex flex-col gap-8 pb-12">
-          {data.allMdx.nodes.map(node => (
-            <Link to={node.parent.name} key={node.parent.name}>
-              <div className="rounded-lg p-8 transition-all ease-out hover:shadow-lg dark:hover:bg-slate-800 hover:bg-slate-100">
-                <div fontSize="lg">
-                  <div className="text-2xl font-medium">
-                    {node.frontmatter.title}
-                  </div>
-                  <div className="mb-6 text-lg text-slate-600 dark:text-slate-400">
-                    {node.frontmatter.author} · {node.frontmatter.date}
-                  </div>
-                </div>
-                <div className="prose dark:prose-invert prose-slate">
-                  <blockquote className="text-slate-700 dark:text-slate-300 font-medium">
-                    {node.excerpt}
-                  </blockquote>
-                </div>
-              </div>
-            </Link>
-          ))}
+const Posts = ({ data }) => (
+  <Layout className="mx-4">
+    <Title title="Posts">
+      Check out the latest blog posts, news, and updates from Off the Dial!
+      Posts may consist of patch notes, new features or anything else we want to
+      say.
+    </Title>
+    {data.allMdx.nodes.map(node => (
+      <Link to={node.parent.name} key={node.parent.name}>
+        <div className="mx-auto max-w-xl rounded-lg p-8 text-lg transition-all ease-out hover:bg-slate-100 hover:shadow-lg dark:hover:bg-slate-800">
+          <h3 className="text-2xl font-medium">{node.frontmatter.title}</h3>
+          <div className="mb-6 flex flex-wrap items-baseline text-lg text-slate-600 dark:text-slate-400">
+            <p>{node.frontmatter.author}</p>
+            <span className="mx-2.5">·</span>
+            <p>{node.frontmatter.date}</p>
+          </div>
+          <article className="prose prose-slate dark:prose-invert">
+            <blockquote className="font-medium text-slate-700 dark:text-slate-300">
+              {node.excerpt}
+            </blockquote>
+          </article>
         </div>
-      </div>
-      {/* </Layout> */}
-    </div>
-  )
-}
+      </Link>
+    ))}
+  </Layout>
+)
 
 export const query = graphql`
   {

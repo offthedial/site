@@ -11,7 +11,7 @@ module.exports = {
       resolve: `gatsby-plugin-page-creator`,
       options: {
         path: `${__dirname}/src/pages`,
-        ignore: [`**/*.(md|mdx)`],
+        ignore: [`*.md`],
       },
     },
     {
@@ -26,7 +26,10 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
-          `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: { icon: false },
+          },
           `gatsby-remark-images`,
           `gatsby-remark-twemoji-shortcut`,
         ],

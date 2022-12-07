@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { addMinutes, format } from "date-fns"
+import Layout from "src/components/Layout"
 import Mention from "src/components/Mention"
 import Title from "src/components/Title"
 
@@ -9,18 +10,18 @@ const shortcodes = { Link, Mention }
 
 const Post = ({ data: { mdx }, children }) => {
   return (
-    <div>
+    <Layout className="mx-8 mb-8">
       <Title title={mdx.frontmatter.title}>
-        <div>
-          {mdx.frontmatter.author}
-          {` · `}
-          {formatDate(mdx.frontmatter.date)}
+        <div className="flex items-baseline gap-4">
+          <p>{mdx.frontmatter.author}</p>
+          <p>·</p>
+          <p>{formatDate(mdx.frontmatter.date)}</p>
         </div>
       </Title>
-      <div className="prose dark:prose-invert prose-slate">
+      <article className="prose prose-lg prose-slate mx-auto dark:prose-invert">
         <MDXProvider components={shortcodes}>{children}</MDXProvider>
-      </div>
-    </div>
+      </article>
+    </Layout>
   )
 }
 
@@ -36,6 +37,8 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
+        date
+        author
       }
     }
   }

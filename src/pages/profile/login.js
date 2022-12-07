@@ -1,65 +1,125 @@
 import { navigate } from "gatsby"
+import React, { useEffect, useState } from "react"
 import { parse } from "query-string"
+import { signInWithCustomToken } from "firebase/auth"
 import { auth } from "src/app"
-import toast from "src/utils/toast"
 
 const api = process.env.GATSBY_API_URL
 
 const ProfileLogin = ({ location }) => {
-  login({
-    auth,
-    params: parse(location.search),
-    from: location.state?.from,
-  })
-  return null
+  const [error, setError] = useState(parse(location.search)?.error_description)
+
+  useEffect(() => {
+    login({
+      params: parse(location.search),
+      from: location.state?.from,
+      setError,
+    })
+  }, [])
+
+  const textClass = error
+    ? "text-slate-600 dark:text-slate-400"
+    : "text-slate-500"
+  const bgClass = error
+    ? "dark:bg-red-400/25 dark:text-red-400 bg-red-600/25 text-red-600"
+    : "bg-slate-200 dark:bg-slate-800"
+
+  return (
+    <div
+      className={`flex h-screen flex-col items-center justify-center p-8 text-center ${textClass}`}
+    >
+      <div
+        className={`mb-4 flex h-12 w-12 items-center justify-center rounded-lg ${bgClass}`}
+      >
+        <Icon error={error} />
+      </div>
+      {error && (
+        <div className="text-2xl font-bold text-red-600 dark:text-red-400">
+          An error has occurred:
+        </div>
+      )}
+      <div className="text-2xl">
+        {error
+          ? error
+          : Object.keys(parse(location.search)).length === 0
+          ? "Redirecting..."
+          : "Logging in..."}
+      </div>
+    </div>
+  )
 }
 
-const login = ({ auth, params, from }) => {
+const Icon = ({ error }) => {
+  return error ? (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className="h-6 w-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+      />
+    </svg>
+  ) : (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className="h-6 w-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+      />
+    </svg>
+  )
+}
+
+const login = ({ params, from, setError }) => {
   if (Object.keys(params).length === 0) {
-    if (typeof window !== "undefined") {
-      if (auth.currentUser) {
-        navigate("/profile")
-      } else {
-        from && localStorage.setItem("otd__from", from)
-        window.location.replace(`${api}/auth/redirect`)
-      }
-    }
-  } else {
-    const redirect = localStorage.getItem("otd__from")
-    localStorage.removeItem("otd__from")
-    if (params.error) {
-      navigateError(params.error_description, redirect)
-    } else {
-      tokenEndpoint(auth, params, redirect)
-    }
+    redirectEndpoint(from)
+  } else if (!params.error) {
+    tokenEndpoint(params, setError)
   }
 }
 
-const tokenEndpoint = (auth, { code, state }, redirect) => {
+const redirectEndpoint = from => {
+  // First pass, redirect user to api
+  if (typeof window === "undefined") return
+  if (auth.currentUser) {
+    navigate("/profile")
+  } else {
+    from && localStorage.setItem("login-redirect", from)
+    window.location.replace(`${api}/auth/redirect`)
+  }
+}
+
+const tokenEndpoint = ({ code, state }, setError) => {
   const endpoint = `${api}/auth/token?code=${code}&state=${state}`
+  const redirect = localStorage.getItem("login-redirect")
+  localStorage.removeItem("login-redirect")
+
   // Fetch token endpoint data, and send it to callback
   fetch(endpoint, { credentials: "include" })
     .then(res => res.json())
-    .then(data => callback(data))
-  // Use token from data to log in, and redirect
-  const callback = ({ token, error }) => {
-    if (token && !error) {
-      auth.signInWithCustomToken(token).then(() => {
-        navigate(redirect || "/profile")
-      })
-    } else {
-      navigateError(error, redirect)
-    }
-  }
-}
-
-const navigateError = (error, redirect) => {
-  navigate("/")
-  toast({
-    style: "error",
-    title: "Login Error",
-    description: error,
-  })
+    .then(({ token, error }) => {
+      // Use token from data to log in, and redirect
+      if (token && !error) {
+        signInWithCustomToken(auth, token).then(() => {
+          navigate(redirect || "/profile")
+        })
+      } else {
+        setError(error)
+      }
+    })
 }
 
 export default ProfileLogin

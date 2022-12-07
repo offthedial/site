@@ -1,7 +1,7 @@
 import React from "react"
 
 const Mention = ({ children }) => (
-  <span className="text-sm rounded-[3px] font-bold p-0.5 -my-0.5 bg-[rgba(114, 137, 218, 0.3)]">
+  <span className="bg-[rgba(114, 137, 218, 0.3)] -my-0.5 rounded-[3px] p-0.5 text-sm font-bold">
     {children}
   </span>
 )

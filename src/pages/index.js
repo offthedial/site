@@ -1,11 +1,12 @@
 import React from "react"
 import toast from "utils/toast"
 import { useTheme } from "utils/theme"
+import Layout from "src/components/Layout"
 
 const Index = () => {
   const [theme, setTheme] = useTheme()
   return (
-    <div className="p-4 flex flex-col gap-4">
+    <Layout className="flex flex-col items-center gap-4 p-4">
       <button
         onClick={() => {
           toast({
@@ -24,7 +25,7 @@ const Index = () => {
       >
         theme: {theme}
       </button>
-    </div>
+    </Layout>
   )
 }
 

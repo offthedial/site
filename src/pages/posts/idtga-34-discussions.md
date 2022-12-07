@@ -23,8 +23,8 @@ The three most significant things we noticed were that the rank conversion needs
 *Would it be possible to make subs more available?*
 > No. It's up to people individually to register as a sub, and we can't control that.
 
-*No questions only <3*
-> <3
+*No questions only \<3*
+> \<3
 
 *I'll win next time >:)*
 > Oh, will you now?

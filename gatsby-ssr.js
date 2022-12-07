@@ -18,7 +18,15 @@ const darkModeScript = () => {
   if (colorMode === "light") root.classList.remove("dark")
 }
 
-export const onRenderBody = ({ setPreBodyComponents }) => {
+export const onRenderBody = ({
+  setPreBodyComponents,
+  setHeadComponents,
+  pathname,
+}) => {
+  setHeadComponents([
+    <link key={0} rel="canonical" href={`https://otd.ink${pathname}`} />,
+    <meta key={1} property="og:url" content={`https://otd.ink${pathname}`} />,
+  ])
   setPreBodyComponents(
     <script
       key="no-flash"

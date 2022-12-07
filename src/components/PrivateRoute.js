@@ -1,18 +1,23 @@
 import { navigate } from "gatsby"
-import { useAuthUser } from "@react-query-firebase/auth"
+import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "src/app"
+import toast from "src/utils/toast"
 
-const PrivateRoute = ({ location, children }) => {
-  const userQuery = useAuthUser(["user", "auth"], auth)
+const PrivateRoute = ({ children }) => {
+  const [user, loading, error] = useAuthState(auth)
 
-  if (typeof window === "undefined") {
+  if (loading) return null
+  if (error) {
+    navigate("/")
+    toast({
+      style: "error",
+      title: "An error has occurred",
+      description: error.message,
+    })
     return null
   }
-
-  if (userQuery.isLoading) {
-    return null
-  } else if (!userQuery.data) {
-    navigate("/profile/login", { state: { from: location.pathname } })
+  if (!user) {
+    navigate("/profile/login", { state: { from: window.location.pathname } })
     return null
   }
   return children

@@ -1,10 +1,10 @@
 import React from "react"
-import { QueryClientProvider } from "react-query"
-import { ReactQueryDevtools } from "react-query/devtools"
-import { ThemeProvider } from "utils/theme"
-import { ToastProvider } from "utils/toast"
-import { queryClient } from "app"
-import "root.css"
+import { QueryClientProvider } from "@tanstack/react-query"
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
+import { queryClient } from "src/app"
+import { ThemeProvider } from "src/utils/theme"
+import { ToastProvider } from "src/utils/toast"
+import "src/root.css"
 
 import "@fontsource/dm-sans/400-italic.css"
 import "@fontsource/dm-sans/400.css"
@@ -22,12 +22,12 @@ import "@fontsource/dm-mono/500.css"
 
 const App = ({ children }) => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
+    <ThemeProvider>
+      <QueryClientProvider client={queryClient}>
         <ToastProvider>{children}</ToastProvider>
-      </ThemeProvider>
-      <ReactQueryDevtools />
-    </QueryClientProvider>
+        <ReactQueryDevtools />
+      </QueryClientProvider>
+    </ThemeProvider>
   )
 }
 

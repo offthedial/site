@@ -5,9 +5,7 @@ const postTemplate = path.resolve(`./src/utils/mdxPost.js`)
 const createMarkdownPages = async (createPage, graphql) => {
   const result = await graphql(`
     {
-      allMdx(
-        filter: { internal: { contentFilePath: { regex: "/(pages)/" } } }
-      ) {
+      allMdx(filter: { internal: { contentFilePath: { regex: "/pages/" } } }) {
         nodes {
           id
           internal {
@@ -15,7 +13,7 @@ const createMarkdownPages = async (createPage, graphql) => {
           }
           parent {
             ... on File {
-              name
+              relativePath
             }
           }
         }
@@ -23,19 +21,14 @@ const createMarkdownPages = async (createPage, graphql) => {
     }
   `)
   result.data.allMdx.nodes.forEach(node => {
-    if (!!node.internal.contentFilePath.match(/\/(pages)\/(posts)\//)) {
-      createPage({
-        path: node.parent.name,
-        component: `${postTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
-        context: { id: node.id },
-      })
-    } else {
-      createPage({
-        path: node.parent.name,
-        component: `${pageTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
-        context: { id: node.id },
-      })
-    }
+    const template = !!node.internal.contentFilePath.match(/\/pages\/posts\//)
+      ? postTemplate
+      : pageTemplate
+    createPage({
+      path: node.parent.relativePath.split(".")[0],
+      component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
+      context: { id: node.id },
+    })
   })
 }
 
