@@ -4,16 +4,18 @@ import { auth } from "src/app"
 
 const useDiscord = () => {
   const [authState] = useAuthState(auth)
-  return useQuery({
-    queryKey: ["discord"],
-    queryFn: async () => {
+  return useQuery(
+    ["discord"],
+    async () => {
       const jwt = await authState.getIdTokenResult()
       const userData = await fetchUser(jwt.claims.access_token)
       const hasJoined = await fetchJoined(jwt.claims.access_token)
       return { ...userData, hasJoined }
     },
-    enabled: !!authState,
-  })
+    {
+      enabled: !!authState,
+    }
+  )
 }
 
 const fetchUser = async token => {

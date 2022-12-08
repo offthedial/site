@@ -1,35 +1,44 @@
 import { useQuery } from "@tanstack/react-query"
-import { collection, doc, getDoc } from "firebase/firestore"
+import { doc, getDoc } from "firebase/firestore"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth, db } from "src/app"
 import useTourney from "src/app/useTourney"
 
 const useUserSignup = () => {
-  const [authState] = useAuthState(auth)
+  const [user] = useAuthState(auth)
   const tourneyQuery = useTourney()
-  return useQuery({
-    queryKey: ["user", "signup"],
-    queryFn: async () => {
+  return useQuery(
+    ["user", "signup"],
+    async () => {
       const signupsRef = doc(
-        collection(db, "tournaments", tourneyQuery.data.id, "signups"),
-        authState.uid
+        db,
+        "tournaments",
+        tourneyQuery.data.id,
+        "signups",
+        user.uid
       )
       const signupsDoc = await getDoc(signupsRef)
-      if (signupsDoc.exists) {
+      if (signupsDoc.exists()) {
         return { ...signupsDoc.data(), ref: signupsDoc.ref, type: "signup" }
       }
 
       const subsRef = doc(
-        collection(db, "tournaments", tourneyQuery.data.id, "subs"),
-        authState.uid
+        db,
+        "tournaments",
+        tourneyQuery.data.id,
+        "subs",
+        user.uid
       )
       const subsDoc = await getDoc(subsRef)
-      if (subsDoc.exists) {
-        return { ...subsDoc.data(), ref: subsDoc.ref, type: "subs" }
+      if (subsDoc.exists()) {
+        return { ...subsDoc.data(), ref: subsDoc.ref, type: "sub" }
       }
+      return null
     },
-    enabled: !!authState && tourneyQuery.data?.hasEnded() === false,
-  })
+    {
+      enabled: !!user && tourneyQuery.data?.hasEnded() === false,
+    }
+  )
 }
 
 export default useUserSignup

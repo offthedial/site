@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query"
-import { collection, setDoc, updateDoc } from "firebase/firestore"
+import { doc, setDoc, updateDoc } from "firebase/firestore"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth, queryClient } from "src/app"
 import useTourney from "src/app/useTourney"
@@ -9,8 +9,8 @@ const useRegisterUser = () => {
   const [authState] = useAuthState(auth)
   const tourneyQuery = useTourney()
   const signupQuery = useUserSignup()
-  return useMutation({
-    mutationFn: async ({ profile, date }) => {
+  return useMutation(
+    async ({ profile, date }) => {
       if (!authState) throw new Error("Not authenticated")
       if (tourneyQuery.data.hasEnded()) throw new Error("Tournament has ended")
 
@@ -18,7 +18,7 @@ const useRegisterUser = () => {
       await setDoc(
         signupQuery.data
           ? signupQuery.data.ref
-          : collection(
+          : doc(
               "tournaments",
               tourneyQuery.data.id,
               tourneyQuery.data.hasClosed() ? "subs" : "signups",
@@ -31,10 +31,12 @@ const useRegisterUser = () => {
         }
       )
     },
-    onSuccess: () => {
-      queryClient.invalidateQueries(["user"])
-    },
-  })
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries(["user"])
+      },
+    }
+  )
 }
 
 export default useRegisterUser

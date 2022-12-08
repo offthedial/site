@@ -7,20 +7,23 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 import logo from "src/static/logo.svg"
 import banner from "src/static/banner.png"
 import favicon from "src/static/favicon.svg"
-import useUser from "src/app/useUser"
+import { useAuthState } from "react-firebase-hooks/auth"
+import { auth } from "src/app"
 
 const Layout = ({ children, helmet, className = "" }) => (
-  <div className="flex min-h-screen flex-col">
-    <Nav />
-    <main className={`flex-1 ${className}`}>{children}</main>
-    <Footer />
+  <>
     <CustomHelmet {...helmet} />
-  </div>
+    <div className="flex min-h-screen flex-col">
+      <Nav />
+      <main className={"flex-1 " + className}>{children}</main>
+      <Footer />
+    </div>
+  </>
 )
 
 const Nav = () => (
-  <nav className="flex h-16 items-stretch justify-between gap-6 bg-otd-slate p-3 text-slate-100">
-    <Link to="/">
+  <nav className="flex h-16 items-stretch justify-end gap-6 bg-otd-slate p-3 text-center font-medium text-slate-100">
+    <Link to="/" className="mr-auto">
       <StaticImage
         src="../static/title-sm.png"
         alt="Off the Dial"
@@ -38,57 +41,58 @@ const Nav = () => (
         className="hidden sm:block"
       />
     </Link>
-    <div className="hidden items-center gap-6 md:flex">
-      <IdtgaLink />
-      <DiscordJoin className="hidden h-full items-center rounded-lg border-2 border-slate-100/25 px-3 hover:bg-[#5865F2] md:flex" />
-      <Avatar />
+    <Link className="hidden self-center md:block" to="/idtga">
+      It's Dangerous to go Alone
+    </Link>
+    <div className="hidden md:block">
+      <DiscordJoin className="h-full" />
     </div>
-    <div className="flex w-full items-center justify-end gap-6 md:hidden">
-      <Avatar />
-      <DropdownMenu.Root>
-        <DropdownMenu.Trigger asChild>
-          <button className="flex aspect-square h-full items-center justify-center rounded-lg border-2 border-slate-100/25 text-slate-100/75 hover:bg-slate-100/10 md:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="h-6 w-6"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </button>
-        </DropdownMenu.Trigger>
-        <DropdownMenu.Portal>
-          <DropdownMenu.Content
-            align="end"
-            sideOffset={24}
-            className="flex flex-col items-center gap-6 rounded-lg bg-otd-slate p-3 shadow-lg sm:flex-row md:hidden"
-          >
+    <Avatar className="h-10 w-10" />
+    <DropdownMenu.Root>
+      <Burger />
+      <DropdownMenu.Portal>
+        <DropdownMenu.Content align="end" className="min-w-0 md:hidden">
+          <div className="mt-6 flex max-w-[calc(100vw_-_24px)] flex-wrap items-center justify-center gap-6 rounded-lg bg-otd-slate p-3 text-center font-medium text-slate-100 shadow-lg">
             <DropdownMenu.Item>
-              <IdtgaLink />
+              <Link to="/idtga">It's Dangerous to go Alone</Link>
             </DropdownMenu.Item>
             <DropdownMenu.Item>
-              <DiscordJoin className="flex items-center rounded-lg border-2 border-slate-100/25 px-3 py-2 hover:bg-[#5865F2]" />
+              <DiscordJoin />
             </DropdownMenu.Item>
-          </DropdownMenu.Content>
-        </DropdownMenu.Portal>
-      </DropdownMenu.Root>
-    </div>
+          </div>
+        </DropdownMenu.Content>
+      </DropdownMenu.Portal>
+    </DropdownMenu.Root>
   </nav>
 )
 
-const IdtgaLink = () => (
-  <Link to="/idtga" className="text-center font-medium">
-    It's Dangerous to go Alone
-  </Link>
+const Burger = () => (
+  <DropdownMenu.Trigger asChild>
+    <button className="flex aspect-square h-full items-center justify-center rounded-lg border-2 border-slate-100/25 text-slate-100/75 hover:bg-slate-100/10 md:hidden">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="h-6 w-6"
+      >
+        <path
+          fillRule="evenodd"
+          d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </button>
+  </DropdownMenu.Trigger>
 )
 
 const DiscordJoin = ({ className }) => (
-  <Link to="/discord" className={className}>
+  <Link
+    to="/discord"
+    className={
+      "flex items-center rounded-lg border-2 border-slate-100/25 px-3 py-2 hover:bg-[#5865F2] " +
+      className
+    }
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 127.14 96.36"
@@ -109,12 +113,12 @@ const DiscordJoin = ({ className }) => (
   </Link>
 )
 
-const Avatar = () => {
-  const user = useUser()
+export const Avatar = ({ className }) => {
+  const [user] = useAuthState(auth)
   return (
     <Link
       to="/profile"
-      className="relative h-10 w-10 flex-shrink-0 rounded-full bg-slate-100 text-otd-slate"
+      className={`relative flex-shrink-0 rounded-full bg-slate-100 text-otd-slate ${className}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -128,10 +132,10 @@ const Avatar = () => {
           clipRule="evenodd"
         />
       </svg>
-      {user.data && (
+      {user && (
         <img
-          src={user.data.photoURL}
-          className="absolute inset-0 z-10 rounded-full shadow-inner"
+          src={user?.photoURL}
+          className="absolute inset-0 rounded-full shadow-inner"
           alt="Avatar"
         />
       )}
@@ -140,7 +144,7 @@ const Avatar = () => {
 }
 
 const Footer = () => (
-  <footer className="flex flex-col items-center gap-8 bg-gray-200 py-8 px-4 text-slate-500 dark:bg-gray-900">
+  <footer className="flex flex-col items-center gap-8 bg-slate-200 py-8 px-4 text-slate-500 dark:bg-slate-900">
     <div className="flex w-full max-w-xl items-center justify-evenly text-lg">
       <Link className="hover:underline" to="/faq">
         FAQ
@@ -281,7 +285,6 @@ const CustomHelmet = ({ title, description, image, creator }) => {
   return (
     <Helmet>
       <title>{metaTitle}</title>
-      <description>{defaults.description}</description>
       <link rel="icon" type="image/svg" sizes="64x64" href={favicon} />
       <meta name="theme-color" content="#5d9194" />
       <meta property="og:type" content="website" />

@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         slate: {
           850: "#141c2a",
+          900: "#111827",
         },
         otd: {
           slate: {
@@ -68,7 +69,7 @@ module.exports = {
             900: "#4c1114",
           },
           purple: {
-            DEFAULt: "#C71A8A",
+            DEFAULT: "#C71A8A",
             50: "#fcfbfb",
             100: "#f8eef6",
             200: "#f2ccef",
