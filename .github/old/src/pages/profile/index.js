@@ -419,8 +419,11 @@ const Timeline = ({ tourneyQuery }) => {
         to sign up too!
       </TimelineStep>
       <TimelineStep title="Check-in opens" {...getPhase(1)}>
-        Remember to check in on discord with the <code>$checkin</code> command
-        in{" "}
+        Remember to check in on discord with the{" "}
+        <code className="-my-0.5 rounded-[3px] bg-slate-50 p-0.5 text-[87.5%] font-medium dark:bg-slate-850">
+          $checkin
+        </code>{" "}
+        command in{" "}
         <Chakra.Text textStyle="mention" as="span">
           #check-in
         </Chakra.Text>

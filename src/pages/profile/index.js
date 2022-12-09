@@ -326,7 +326,12 @@ const allPhases = tourney => {
         <>
           Get hype, just a little longer now! Teams will be released shortly.
           While you're waiting, make sure to review the rules at{" "}
-          <Link to="/idtga/rules">otd.ink/idtga/rules</Link>
+          <Link
+            className="text-otd-slate-600 hover:underline dark:text-otd-slate-300"
+            to="/idtga/rules"
+          >
+            otd.ink/idtga/rules
+          </Link>
         </>
       ),
       status: "past",
@@ -352,7 +357,13 @@ const allPhases = tourney => {
         <>
           Good luck in the tournament! Head to xxx to organize your matches and
           report your scores. Tune into the official broadcast at
-          twitch.tv/offthedial.
+          <a
+            className="text-otd-slate-600 hover:underline dark:text-otd-slate-300"
+            href="https://twitch.tv/offthedial"
+          >
+            twitch.tv/offthedial
+          </a>
+          .
         </>
       ),
       status: "past",

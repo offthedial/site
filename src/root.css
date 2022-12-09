@@ -9,6 +9,9 @@
   .bg-default {
     @apply bg-slate-50 dark:bg-slate-850;
   }
+  code {
+    @apply -my-0.5 rounded-[3px] bg-slate-200 p-0.5 text-[87.5%] font-medium dark:bg-slate-900;
+  }
   html * {
     @apply transition-colors ease-out;
   }
