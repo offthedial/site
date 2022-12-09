@@ -8,22 +8,20 @@ import Title from "src/components/Title"
 
 const shortcodes = { Link, Mention }
 
-const Post = ({ data: { mdx }, children }) => {
-  return (
-    <Layout className="mx-8 mb-8">
-      <Title title={mdx.frontmatter.title}>
-        <div className="flex items-baseline gap-4">
-          <p>{mdx.frontmatter.author}</p>
-          <p>·</p>
-          <p>{formatDate(mdx.frontmatter.date)}</p>
-        </div>
-      </Title>
-      <article className="prose prose-lg prose-slate mx-auto dark:prose-invert">
-        <MDXProvider components={shortcodes}>{children}</MDXProvider>
-      </article>
-    </Layout>
-  )
-}
+const Post = ({ data: { mdx }, children }) => (
+  <Layout className="mx-8 mb-8">
+    <Title title={mdx.frontmatter.title}>
+      <div className="flex items-baseline gap-4">
+        <p>{mdx.frontmatter.author}</p>
+        <p>·</p>
+        <p>{formatDate(mdx.frontmatter.date)}</p>
+      </div>
+    </Title>
+    <article className="prose prose-lg prose-slate mx-auto dark:prose-invert">
+      <MDXProvider components={shortcodes}>{children}</MDXProvider>
+    </article>
+  </Layout>
+)
 
 const formatDate = rawDate => {
   let date = new Date(rawDate)

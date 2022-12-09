@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-plugin-page-creator`,
       options: {
         path: `${__dirname}/src/pages`,
-        ignore: [`*.md`],
+        ignore: [`**/*.md`],
       },
     },
     {

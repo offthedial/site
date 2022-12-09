@@ -1,13 +1,13 @@
 ---
 title: FAQ
-desc: We get asked a lot of questions, make sure you've skimmed through the FAQ to make sure your question doesn't already have an answer before asking in helpdesk.
+desc: We get asked a lot of questions, remember to read the FAQ before asking in helpdesk to make sure your question hasn't already been answered!
 ---
 
 ## General
 
 #### What is my 'Signal Strength'?
 
-Consider it a numerical representation of your experience within Off the Dial. You earn 100 points for each tournament you participate in, and can earn up to 100 more depending on your placement. There are also <Mention>@Signal Strength: 1000+</Mention> and <Mention>@Signal Strength: 5000+</Mention> if you want a meaningless amount of pointless clout, good luck!
+Consider it an EXP bar for Off the Dial. You earn 100 points for each tournament you participate in, and can earn up to 100 more depending on your placement. There's also roles for <Mention>@Signal Strength: 1000+</Mention> and <Mention>@Signal Strength: 5000+</Mention> if you want a meaningless amount of pointless clout, good luck!
 
 #### Will tournaments be streamed?
 
