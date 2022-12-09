@@ -67,7 +67,7 @@ const toast = ({ style, title, description }) =>
     t => (
       <RadixToast.Root
         key={t.id}
-        className={`pointer-events-auto m-4 max-w-lg rounded-md bg-slate-50 fade-in-0 fade-out-0 slide-in-from-bottom-2 slide-out-to-bottom-2 dark:bg-slate-850 ${
+        className={`bg-default pointer-events-auto m-4 max-w-lg rounded-md fade-in-0 fade-out-0 slide-in-from-bottom-2 slide-out-to-bottom-2 ${
           t.visible ? "animate-in" : "animate-out"
         }`}
       >

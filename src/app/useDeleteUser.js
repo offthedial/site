@@ -20,7 +20,7 @@ const useDeleteUser = () => {
     onError: error => {
       toast({
         style: "error",
-        title: error.name,
+        title: "An error has occurred",
         description: error.message,
       })
     },
