@@ -3,10 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  .text-default {
+    @apply text-slate-800 dark:text-slate-100;
+  }
+  .bg-default {
+    @apply bg-slate-50 dark:bg-slate-850;
+  }
   html * {
     @apply transition-colors ease-out;
   }
   body {
-    @apply bg-slate-50 text-slate-800 dark:bg-slate-850 dark:text-slate-100;
+    @apply text-default bg-default;
   }
 }

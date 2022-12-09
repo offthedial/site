@@ -7,6 +7,14 @@ import useUserSignup from "src/app/useUserSignup"
 import Layout, { Avatar } from "src/components/Layout"
 import PrivateRoute from "src/components/PrivateRoute"
 import useLogoutUser from "src/app/useLogoutUser"
+import {
+  addHours,
+  format,
+  formatDuration,
+  fromUnixTime,
+  intervalToDuration,
+} from "date-fns"
+import Mention from "src/components/Mention"
 
 const Profile = () => {
   const user = useUser()
@@ -52,16 +60,6 @@ const Profile = () => {
   )
 }
 
-const Seperator = () => (
-  <div className="w-full flex-1 border-t-2 border-slate-300 dark:border-slate-800" />
-)
-
-const InnerSection = ({ className, children }) => (
-  <div className={"rounded-xl bg-slate-200 p-6 dark:bg-slate-900 " + className}>
-    {children}
-  </div>
-)
-
 const TournamentDashboard = () => {
   const signup = useUserSignup()
   const tourney = useTourney()
@@ -106,38 +104,16 @@ const TournamentDashboard = () => {
     }
   }
 
-  return [
-    {
-      style: "blue",
-      message: "There's no tournament going on at the moment, stay tuned!",
-    },
-    {
-      style: "lime",
-      message: "You're registered for the tournament as a sub!",
-      button: "Update Profile",
-    },
-    {
-      style: "green",
-      message: "You're registered for the tournament!",
-      button: "Update Profile",
-    },
-    {
-      style: "orange",
-      message: "Signups have closed, but you can still sign up as a sub!",
-      button: "Signup as a Sub",
-    },
-    {
-      style: "red",
-      message: "You're not registered for the tournament yet.",
-      button: "Signup",
-    },
-  ].map(p => <StatusCallout {...p} />)
-
   return (
     <>
       <StatusCallout {...props} />
-      <div className="text-lg font-medium uppercase tracking-wider text-slate-600 dark:text-slate-400">
-        Timeline
+      <div>
+        <div className="text-lg font-medium uppercase tracking-wider text-slate-600 dark:text-slate-400">
+          Timeline
+        </div>
+        {allPhases(tourney).map(phase => (
+          <TimelineEvent key={phase.title} {...phase} />
+        ))}
       </div>
     </>
   )
@@ -183,18 +159,245 @@ const StatusCallout = ({ style, message, button }) => {
         <p className="mr-auto">Registration Status:</p>
         <div
           className={
-            "font-bold uppercase tracking-wider text-slate-800 underline decoration-2 dark:text-slate-100 " +
+            "text-default font-bold uppercase tracking-wider underline decoration-2 " +
             underlineStyle[style]
           }
         >
           <Link to="/signup">{button}</Link>
         </div>
       </div>
-      <div className="text-lg text-slate-800 dark:text-slate-100">
-        {message}
-      </div>
+      <div className="text-default text-lg">{message}</div>
     </div>
   )
+}
+
+const TimelineEvent = ({ title, desc, status, date, countdown, last }) => {
+  const statusIcons = {
+    past: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="h-6 w-6"
+      >
+        <path
+          fillRule="evenodd"
+          d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+    present: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="h-6 w-6"
+      >
+        <path
+          fillRule="evenodd"
+          d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+    future: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="h-6 w-6"
+      >
+        <path
+          fillRule="evenodd"
+          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+  }
+  const iconStyles = {
+    past: "bg-slate-200 text-slate-400 dark:bg-slate-800 dark:text-slate-500",
+    present: "bg-otd-slate/40 text-otd-slate-600 dark:text-otd-slate-300",
+    future: "bg-slate-300 text-slate-600 dark:bg-slate-700 dark:text-slate-400",
+  }
+  const titleStyles = {
+    past: "text-slate-400 dark:text-slate-500",
+    present: "text-otd-slate-800 dark:text-otd-slate-200",
+    future: "text-slate-600 dark:text-slate-400",
+  }
+  const dateStyles = {
+    past: "text-slate-400 dark:text-slate-500",
+    present: "text-slate-600 dark:text-slate-400",
+    future: "text-slate-600 dark:text-slate-400",
+  }
+
+  return (
+    <section className="flex flex-col">
+      <div className="my-2 flex items-center gap-4">
+        <div
+          className={
+            "flex h-11 w-11 shrink-0 items-center justify-center rounded-lg " +
+            iconStyles[status]
+          }
+        >
+          {statusIcons[status]}
+        </div>
+        <div className={titleStyles[status]}>
+          <div className="flex items-center pb-0.5">
+            <p className="text-2xl font-medium leading-none">{title}</p>
+            {countdown && <TimelineCountdown countdown={countdown} />}
+          </div>
+          <p className={dateStyles[status]}>
+            {date ? format(date, "MMMM d, h:mm aa") : "..."}
+          </p>
+        </div>
+      </div>
+      <div className="flex items-center gap-4">
+        <div
+          className={
+            "flex w-11 shrink-0 justify-center self-stretch " +
+            (!last ? "min-h-[2rem]" : "min-h-0")
+          }
+        >
+          <div
+            className={
+              "h-full w-1 shrink-0 " +
+              iconStyles[status] +
+              (status === "present" &&
+                " !bg-otd-slate-600 dark:!bg-otd-slate-300")
+            }
+          ></div>
+        </div>
+        {status === "present" && <div className="py-4 text-xl">{desc}</div>}
+      </div>
+    </section>
+  )
+}
+
+const TimelineCountdown = ({ countdown }) => {
+  const duration = formatDuration(
+    intervalToDuration({
+      start: countdown,
+      end: new Date(),
+    })
+  )
+    .split(" ")
+    .slice(0, 2)
+    .join(" ")
+
+  return (
+    <span className="text-default mx-2 rounded-md bg-slate-300 px-2 text-lg font-normal dark:bg-slate-700">
+      in {duration}
+    </span>
+  )
+}
+
+const allPhases = tourney => {
+  const phases = [
+    {
+      title: "Registration Opens",
+      desc: (
+        <>
+          It's a new season! Sign up if you haven't already, and tell your
+          friends to sign up too!
+        </>
+      ),
+      status: "past",
+      date: null,
+      countdown: null,
+    },
+    {
+      title: "Check-in Opens",
+      desc: (
+        <>
+          Remember to check in on discord with the <code>$checkin</code> command
+          in <Mention>#check-in</Mention>. You will be disqualified if you fail
+          to do so.
+        </>
+      ),
+      status: "past",
+      date: null,
+      countdown: null,
+    },
+    {
+      title: "Registration Closes",
+      desc: (
+        <>
+          Get hype, just a little longer now! Teams will be released shortly.
+          While you're waiting, make sure to review the rules at{" "}
+          <Link to="/idtga/rules">otd.ink/idtga/rules</Link>
+        </>
+      ),
+      status: "past",
+      date: null,
+      countdown: null,
+    },
+    {
+      title: "Teams are released",
+      desc: (
+        <>
+          Start practicing! Contact your fellow teammates and create a Group DM.
+          If you have an issue with one of your team members, you can create
+          player reports 24 hours after teams are released.
+        </>
+      ),
+      status: "past",
+      date: null,
+      countdown: null,
+    },
+    {
+      title: "Tournament begins",
+      desc: (
+        <>
+          Good luck in the tournament! Head to xxx to organize your matches and
+          report your scores. Tune into the official broadcast at
+          twitch.tv/offthedial.
+        </>
+      ),
+      status: "past",
+      date: null,
+      countdown: null,
+      last: true,
+    },
+  ]
+
+  // Set date and status
+  if (!tourney.data) {
+    return phases
+  }
+  const now = new Date()
+  const registrationCloses = fromUnixTime(
+    tourney.data.smashgg.registrationClosesAt
+  )
+  const steps = [
+    tourney.data?.creationDate,
+    addHours(registrationCloses, -24),
+    registrationCloses,
+    addHours(registrationCloses, 24),
+    tourney.data?.startDate,
+    fromUnixTime(tourney.data?.smashgg.endAt),
+  ]
+  let currentStep = 0
+  steps.forEach((step, index) => {
+    if (now > step) {
+      currentStep = index
+    }
+  })
+  phases.forEach((_, i) => {
+    phases[i].date = steps[i]
+    if (i < currentStep) {
+      phases[i].status = "past"
+    } else if (i > currentStep) {
+      phases[i].status = "future"
+      if (i === currentStep + 1) {
+        phases[i].countdown = steps[i]
+      }
+    } else {
+      phases[i].status = "present"
+    }
+  })
+  return phases
 }
 
 const Logout = () => {
@@ -226,11 +429,25 @@ const TopAlerts = ({}) => {
   return null
 }
 
+const Seperator = () => (
+  <div className="w-full flex-1 border-t-2 border-slate-300 dark:border-slate-800" />
+)
+
+const InnerSection = ({ className, children }) => (
+  <div
+    className={
+      "rounded-xl sm:bg-slate-50 sm:p-8 sm:dark:bg-slate-850 " + className
+    }
+  >
+    {children}
+  </div>
+)
+
 const Page = () => (
   <Layout className="m-8">
     <PrivateRoute>
       <TopAlerts />
-      <div className="mx-auto max-w-3xl rounded-xl border-slate-300 dark:border-slate-800 sm:border-2 sm:p-8">
+      <div className="mx-auto max-w-3xl rounded-xl sm:bg-slate-200 sm:p-8 dark:sm:bg-slate-900">
         <Profile />
       </div>
     </PrivateRoute>
