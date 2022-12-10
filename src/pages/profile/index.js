@@ -342,8 +342,8 @@ const allPhases = tourney => {
         <>
           Start practicing! Contact your fellow teammates and create a Group DM.
           If you have an issue with one of your team members, you can create a
-          player report in <Mention>#report-players</Mention> 24 hours after
-          teams are released.
+          player report 24 hours after teams are released in{" "}
+          <Mention>#report-players</Mention>.
         </>
       ),
       status: "past",
