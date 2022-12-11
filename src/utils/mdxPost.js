@@ -9,7 +9,7 @@ import Title from "src/components/Title"
 const shortcodes = { Link, Mention }
 
 const Post = ({ data: { mdx }, children }) => (
-  <Layout className="mx-8 mb-8">
+  <Layout className="mx-8 mb-14">
     <Title title={mdx.frontmatter.title}>
       <div className="flex items-baseline gap-4">
         <p>{mdx.frontmatter.author}</p>

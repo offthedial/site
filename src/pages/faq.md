@@ -7,7 +7,7 @@ desc: We get asked a lot of questions, remember to read the FAQ before asking in
 
 #### What is my 'Signal Strength'?
 
-Consider it an EXP bar for Off the Dial. You earn 100 points for each tournament you participate in, and can earn up to 100 more depending on your placement. There's also roles for <Mention>@Signal Strength: 1000+</Mention> and <Mention>@Signal Strength: 5000+</Mention> if you want a meaningless amount of pointless clout, good luck!
+Consider it like an XP bar for your involvement with Off the Dial. You earn 100 points for each tournament you participate in, and can earn up to 100 more depending on your placement. There's also roles for <Mention>@Signal Strength: 1000+</Mention> and <Mention>@Signal Strength: 5000+</Mention> if you want a meaningless amount of pointless clout, good luck!
 
 #### Will tournaments be streamed?
 
@@ -64,24 +64,6 @@ Even if you do have a team, you and your teammates can still play! Just don't ex
 In order to ensure that the skill gap between players on a given team aren't too far apart, we divide players into multiple brackets based on skill level, so that your teammates are generally close enough to your skill range. For example, if there were two brackets, the top ranking 50% of players will be placed in the higher bracket, and the lower 50% in the lower bracket. This is quite similar to 'alpha' and 'beta' brackets you see in other large tournaments, the difference being that we divide individual players instead of teams.
 
 The skill brackets are, in order of highest skill to lowest skill: **Power** (highest), **Wisdom** (middle), and **Courage** (lowest). Note that depending on the number of signups, not all brackets will be used. A new bracket is added for every 12 teams, so between.
-
-#### When does the tournament start? / What's the schedule?
-
-All tournaments begin on the same minute/hour, but may be at a different hour depending on your timezone.
-
-Refer to your corresponding time-zone, daylight savings times have been listed as well:
-
-- `EST` - 3pm Saturday
-- `EDT` - 4pm Saturday
-- `GMT` - 8pm Saturday
-- `BST` - 9pm Saturday
-- `JST` - 5am Sunday
-- `AEST` - 6am Sunday
-- `AEDT` - 7am Sunday
-
-The first check-in happens 24 hours before registration closes, this check-in is different from the one right before your matches. It's to confirm that you still are planning on playing in the tournament before we start sorting players into teams. That way, we can minimize dropouts.
-
-Teams and the maplist are released 48 hours before the tournament starts, you have 2 days to practice with your team! For the complete schedule, go to [otd.ink/idtga](https://otd.ink/idtga).
 
 #### I just lost my set, am I out of the tournament?
 

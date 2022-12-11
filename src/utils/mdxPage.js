@@ -8,7 +8,7 @@ import Title from "src/components/Title"
 const shortcodes = { Link, Mention }
 
 const Page = ({ data: { mdx }, children }) => (
-  <Layout className="mx-8 mb-8">
+  <Layout className="mx-8 mb-14">
     <Title title={mdx.frontmatter.title}>{mdx.frontmatter.desc}</Title>
     <article className="prose prose-lg prose-slate mx-auto dark:prose-invert">
       <MDXProvider components={shortcodes}>{children}</MDXProvider>

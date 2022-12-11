@@ -2,6 +2,10 @@
 title: IDTGA Rules
 ---
 
+## Overview
+
+It's Dangerous to go Alone is our flagship, _solo registration_ tournament!
+
 ## Brackets
 
 Due to the large number of signups, players are seperated into multiple skill brackets to keep players close in skill level with each other.
@@ -26,16 +30,39 @@ The skill brackets are, in order of highest skill to lowest skill: **Power** (hi
 
 ## Timing
 
-- Registration opens!
-- Check-in opens 24 hours before registration closes, please remember to check-in within those 24 hours or you will be removed from the tournament.
-- Teams and maplist are released 24 hours after registration and check-in closes.
-- The <Mention>#reporting-players</Mention> channel is released 24 hours after teams are released.
-- The tournament begins the 24 hours later!
+### Schedule
 
-The tournament is scheduled to last `4:00` hours total.
+1. **Registration opens!**
+1. **`72` hours before the tournament:**
 
-- Preliminaries take approximately `2:25` hours in total.
-- Top cut take approximately `1:35` hours in total.
+   Check-in opens 24 hours before registration closes! Please remember to check-in within those 24 hours or you will be removed from the tournament.
+
+1. **`48` hours before the tournament:**
+
+   Both registration and check-in closes, if you haven't checked in by this point you will be removed. You're still able to sign up as an emergency sub!
+
+1. **`24` hours before the tournament:**
+
+   The <Mention>[#reporting-players](#reporting-players)</Mention> channel is opened. For more info please refer to the [Reporting Players](#reporting-players) section.
+
+1. **The tournament begins!**
+
+   All tournaments begin on the same minute/hour, but may be at a different hour depending on your timezone. Refer to your corresponding time-zone, daylight savings times have been listed as well:
+
+   ```
+   EST - 3pm Saturday
+   EDT - 4pm Saturday
+   GMT - 8pm Saturday
+   BST - 9pm Saturday
+   JST - 5am Sunday
+   AEST - 6am Sunday
+   AEDT - 7am Sunday
+   ```
+
+   The tournament is scheduled to last `4:00` hours total.
+
+   - Preliminaries take approximately `2:25` hours in total.
+   - Top cut take approximately `1:35` hours in total.
 
 ### Round Durations
 
@@ -53,9 +80,9 @@ If a match has not been completed by the end of the round, players must finish w
 ## Lobby Settings
 
 - A password must be set.
-- `Primary Gear Abilities Only` must be off
-- `Recon Mode` must be off
-- The correct stage and mode as displayed in <Mention>#maplist</Mention> must be used.
+- `Primary Gear Abilities Only` must be off.
+- `Recon Mode` must be off.
+- The corresponding stage and mode in <Mention>#maplist</Mention> must be used.
 
 ## DC Redo Decision Rules
 
@@ -88,7 +115,7 @@ Usually, the player with the highest signal strength is automatically assigned a
 Team names are randomly generated. If you want to change your team name, here are the following conditions:
 
 - Must be posted in the <Mention>#team-updates</Mention> 12 hours before the tournament starts.
-- Must have exactly `2` words.
+- Must have exactly 2 words.
 - The first letter of both words must be the same as the first letter of the previously team name.
 - Must be appropriate, use common sense for this one.
 - Must be under 25 characters.
@@ -103,7 +130,7 @@ Sometimes, your team needs a replacement for one of your team members. Some exam
 - A team member is acting toxic to the rest of your team.
 - A team member is making one or more of your other team members uncomfortable.
 
-Off the Dial has an extensive system for reporting such players and receiving a sub, so you can be sure to have a good team experience.
+To solve this, Off the Dial has a system for reporting such players and receiving a sub, so that your team can have a good tournament experience.
 
 - Your team can report players 24 hours after teams are released.
 - Everyone on your team (besides the player getting reported) must approve of the report.
@@ -145,7 +172,7 @@ Sometimes, there are no available subs to substitute for missing players. In thi
 
 Subs must be approved by a TO and have signed up as a sub at [otd.ink/signup](https://otd.ink/signup).
 
-If all options are exhausted, and your team is still unable to find a sub, your team may be disqualified and become emergency subs.
+If all options are exhausted, and your team is still unable to find a sub, your team may be liquidated into emergency subs.
 
 ## Cheating
 
@@ -162,9 +189,8 @@ Staff also reserve the right to disqualify or ban players at their discretion.
 
 ## Others
 
-- In order to compete in the tournament, you must have at least played each of the 4 ranked modes once, and
 - Rules are subject to change between seasons, Make sure to reread the rules each season, you can check the patch notes to see what we changed.
-- Signups are first-come-first serve. If there are an uneven number of players, the latest signups will be emergency subs. Make sure to sign up early!
+- Signups are first-come-first serve. If there are an uneven number of players, the latest ones will become emergency subs. Make sure to sign up early!
 - If third-party services, such as Nintendo Online or start.gg become unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
 - By registering you agree to abide by our [terms and conditions](/legal), thank you!
 
