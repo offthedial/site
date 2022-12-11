@@ -43,7 +43,7 @@ module.exports = {
             900: "#062B2D",
           },
           green: {
-            DEFAULT: "39FA96",
+            DEFAULT: "#39FA96",
             50: "#ddfff2",
             100: "#b0fedb",
             200: "#81fcc1",
