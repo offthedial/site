@@ -1,6 +1,7 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
 module.exports = {
   trailingSlash: "never",
   plugins: [
@@ -32,8 +33,8 @@ module.exports = {
             options: { icon: false },
           },
           `gatsby-remark-images`,
-          `gatsby-remark-twemoji-shortcut`,
         ],
+        mdxOptions: { remarkPlugins: [require("remark-emoji")] },
       },
     },
   ],

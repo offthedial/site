@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-default {
+  @apply text-slate-800 dark:text-slate-100;
+}
+.bg-default {
+  @apply bg-slate-50 dark:bg-slate-850;
+}
+
 @layer base {
-  .text-default {
-    @apply text-slate-800 dark:text-slate-100;
-  }
-  .bg-default {
-    @apply bg-slate-50 dark:bg-slate-850;
-  }
   code {
     @apply -my-0.5 rounded-[3px] bg-slate-200 p-0.5 text-[87.5%] font-medium dark:bg-slate-900;
   }
@@ -17,11 +18,5 @@
   }
   body {
     @apply text-default bg-default;
-  }
-  img.emoji {
-    height: 1em;
-    width: 1em;
-    margin: 0 0.05em 0 0.1em;
-    vertical-align: -0.1em;
   }
 }
