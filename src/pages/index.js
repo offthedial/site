@@ -6,6 +6,7 @@ import hero from "src/static/hero.png"
 import useTourney from "src/app/useTourney"
 import logo from "src/static/logo.svg"
 import slateBg from "src/static/slate-bg.svg"
+import { AnimationOnScroll } from "react-animation-on-scroll"
 
 const Index = () => {
   return (
@@ -32,38 +33,55 @@ const Index = () => {
         <Waves className="translate-y-[1px]" />
       </div>
       <div className="bg-slate-50 p-12 dark:bg-slate-800 lg:p-24">
-        <div className="mx-auto mb-16 flex w-full max-w-5xl flex-col items-center justify-between gap-12 md:mb-0 md:flex-row lg:gap-24">
-          <div className="flex flex-1 flex-col items-stretch md:max-w-md">
-            <h2 className="text-3xl font-medium sm:text-4xl">Recent Posts</h2>
-            <p className="pt-2 pb-4 text-2xl text-slate-700 dark:text-slate-300">
-              Stay up to date with the latest blog posts, news, and updates on
-              everything Off the Dial!
-            </p>
-            <Link to="/posts">
-              <button className="rounded-lg bg-slate-200 py-2.5 px-5 text-xl font-semibold hover:bg-slate-300 dark:bg-slate-700 hover:dark:bg-slate-600">
-                See All Posts
-              </button>
-            </Link>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate-in fade-in slide-in-from-bottom-8"
+          duration={0.5}
+        >
+          <div className="mx-auto mb-16 flex w-full max-w-5xl flex-col items-center justify-between gap-12 md:mb-0 md:flex-row lg:gap-24">
+            <div className="flex flex-1 flex-col items-stretch md:max-w-md">
+              <h2 className="text-3xl font-medium sm:text-4xl">Recent Posts</h2>
+              <p className="pt-2 pb-4 text-2xl text-slate-700 dark:text-slate-300">
+                Stay up to date with the latest blog posts, news, and updates on
+                everything Off the Dial!
+              </p>
+              <Link to="/posts">
+                <button className="rounded-lg bg-slate-200 py-2.5 px-5 text-xl font-semibold hover:bg-slate-300 dark:bg-slate-700 hover:dark:bg-slate-600">
+                  See All Posts
+                </button>
+              </Link>
+            </div>
+            <div className="flex-1 md:max-w-md">
+              <RecentPost />
+            </div>
           </div>
-          <div className="flex-1 md:max-w-md">
-            <RecentPost />
-          </div>
-        </div>
+        </AnimationOnScroll>
       </div>
       <div
         className="flex flex-col items-center bg-cover bg-center p-12 text-slate-100 lg:p-16"
         style={{ backgroundImage: `url(${slateBg})` }}
       >
         <div className="flex max-w-6xl flex-col items-start md:flex-row md:items-center">
-          <div className="h-32 -translate-y-32 pr-12 md:-translate-y-20 lg:pr-16">
-            <StaticImage
-              src="../static/community.png"
-              alt=""
-              placeholder="none"
-              className="w-52 flex-shrink-0 md:w-80"
-            />
-          </div>
-          <div>
+          <AnimationOnScroll
+            animateOnce={true}
+            animateIn="animate-in fade-in slide-in-from-bottom-16 spin-in-[-2deg]"
+            duration={0.5}
+            delay={1}
+          >
+            <div className="h-32 -translate-y-32 pr-12 md:-translate-y-20 lg:pr-16">
+              <StaticImage
+                src="../static/community.png"
+                alt=""
+                placeholder="none"
+                className="w-52 flex-shrink-0 md:w-80"
+              />
+            </div>
+          </AnimationOnScroll>
+          <AnimationOnScroll
+            animateOnce={true}
+            animateIn="animate-in fade-in slide-in-from-bottom-8"
+            duration={0.5}
+          >
             <h2 className="text-3xl font-medium sm:text-4xl">
               Join our Community
             </h2>
@@ -78,26 +96,34 @@ const Index = () => {
                 <p>Join the Server</p>
               </div>
             </button>
-          </div>
+          </AnimationOnScroll>
         </div>
       </div>
       <div className="p-12 lg:p-24">
-        <div className="mx-auto flex max-w-5xl flex-col sm:flex-row sm:items-center sm:gap-12 lg:gap-24">
-          <div>
-            <h2 className="text-3xl font-medium sm:text-4xl">Ready to play?</h2>
-            <p className="pt-2 pb-4 text-2xl text-slate-700 dark:text-slate-300">
-              Sign up with your Discord account, set up your profile, and get
-              ready for your the next tournament!
-            </p>
+        <AnimationOnScroll
+          animateOnce={true}
+          animateIn="animate-in fade-in slide-in-from-bottom-8"
+          duration={0.5}
+        >
+          <div className="mx-auto flex max-w-5xl flex-col sm:flex-row sm:items-center sm:gap-12 lg:gap-24">
+            <div>
+              <h2 className="text-3xl font-medium sm:text-4xl">
+                Ready to play?
+              </h2>
+              <p className="pt-2 pb-4 text-2xl text-slate-700 dark:text-slate-300">
+                Sign up with your Discord account, set up your profile, and get
+                ready for your the next tournament!
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <Link to="/profile">
+                <button className="rounded-lg bg-slate-800 py-2.5 px-16 text-xl font-semibold text-slate-100 hover:bg-slate-700 dark:bg-slate-200 dark:text-slate-800 hover:dark:bg-slate-300">
+                  Sign Up
+                </button>
+              </Link>
+            </div>
           </div>
-          <div className="flex-shrink-0">
-            <Link to="/profile">
-              <button className="rounded-lg bg-slate-800 py-2.5 px-16 text-xl font-semibold text-slate-100 hover:bg-slate-700 dark:bg-slate-200 dark:text-slate-800 hover:dark:bg-slate-300">
-                Sign Up
-              </button>
-            </Link>
-          </div>
-        </div>
+        </AnimationOnScroll>
       </div>
     </Layout>
   )
