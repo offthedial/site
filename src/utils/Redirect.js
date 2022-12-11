@@ -1,6 +1,6 @@
-const Redirect = ({ to }) => {
+const Redirect = ({ pageContext }) => {
   if (typeof window !== "undefined") {
-    window.location.replace(to)
+    window.location.replace(pageContext.to)
   }
   return null
 }

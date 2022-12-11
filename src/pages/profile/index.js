@@ -508,7 +508,7 @@ const InnerSection = ({ className, children }) => (
 )
 
 const Page = () => (
-  <Layout className="m-8">
+  <Layout className="m-8" helmet={{ title: "Profile" }}>
     <PrivateRoute>
       <div className="mx-auto max-w-3xl">
         <TopAlert />

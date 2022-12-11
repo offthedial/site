@@ -33,6 +33,31 @@ const createMarkdownPages = async (createPage, graphql) => {
   })
 }
 
+const createRedirectPages = async createPage => {
+  const links = [
+    ["youtube", "https://www.youtube.com/channel/UCjFqnfg0CKsnQ8ag1MfNtuQ"],
+    ["patreon", "https://patreon.com/offthedial"],
+    ["twitch", "https://twitch.tv/offthedial"],
+    ["twitter", "https://twitter.com/off_the_dial"],
+    ["github", "https://github.com/offthedial"],
+    ["discord", "https://discord.gg/RDj8axT"],
+    [
+      "feedback",
+      "https://docs.google.com/forms/d/e/1FAIpQLSezygI_EfAbPAw-oopfhffRILuJ7WHoSRxUOfFA8nLDBEyhRA/viewform?usp=sf_link",
+    ],
+  ]
+  links.forEach(link => {
+    createPage({
+      path: "/" + link[0],
+      component: path.resolve(`./src/utils/Redirect.js`),
+      context: {
+        to: link[1],
+      },
+    })
+  })
+}
+
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
   await createMarkdownPages(createPage, graphql)
+  await createRedirectPages(createPage, graphql)
 }

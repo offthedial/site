@@ -4,7 +4,14 @@ import Layout from "src/components/Layout"
 import Title from "src/components/Title"
 
 const Posts = ({ data }) => (
-  <Layout className="px-8 pb-8">
+  <Layout
+    className="px-8 pb-8"
+    helmet={{
+      title: "Posts",
+      description:
+        "Check out the latest blog posts, news, and updates from Off the Dial! Posts may consist of patch notes, new features or anything else we want to say.",
+    }}
+  >
     <Title title="Posts">
       Check out the latest blog posts, news, and updates from Off the Dial!
       Posts may consist of patch notes, new features or anything else we want to
