@@ -24,8 +24,9 @@ const createMarkdownPages = async (createPage, graphql) => {
     const template = !!node.internal.contentFilePath.match(/\/pages\/posts\//)
       ? postTemplate
       : pageTemplate
+    const path = node.parent.relativePath
     createPage({
-      path: node.parent.relativePath.split(".")[0],
+      path: path.slice(0, path.length - 3),
       component: `${template}?__contentFilePath=${node.internal.contentFilePath}`,
       context: { id: node.id },
     })

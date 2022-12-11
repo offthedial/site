@@ -1,9 +1,11 @@
 import React from "react"
-import Layout from "src/components/Layout"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import Layout, { DiscordSvg } from "src/components/Layout"
 import hero from "src/static/hero.png"
 import useTourney from "src/app/useTourney"
-import { Link, useStaticQuery, graphql } from "gatsby"
 import logo from "src/static/logo.svg"
+import slateBg from "src/static/slate-bg.svg"
 
 const Index = () => {
   return (
@@ -13,12 +15,14 @@ const Index = () => {
           <div className="mx-auto w-full max-w-7xl">
             <Hero />
           </div>
-          <div className="mx-auto flex w-full max-w-4xl flex-col items-center py-24">
+          <div className="mx-auto flex w-full max-w-4xl flex-col items-center py-24 text-center">
             <div className="rounded-full pb-6">
               <img className="h-28 rounded-full" src={logo} />
             </div>
-            <h2 className="pb-1 text-4xl font-medium">What is Off the Dial?</h2>
-            <p className=" text-center text-2xl text-slate-700 dark:text-slate-300">
+            <h2 className="pb-1 text-3xl font-medium sm:text-4xl">
+              What is Off the Dial?
+            </h2>
+            <p className="text-xl text-slate-700 dark:text-slate-300 sm:text-2xl">
               Off the Dial is a unique tournament organisation for Splatoon 3,
               dedicated to providing fresh tournament opportunities for free
               agents!
@@ -28,23 +32,70 @@ const Index = () => {
         <Waves className="translate-y-[1px]" />
       </div>
       <div className="bg-slate-50 p-12 dark:bg-slate-800 lg:p-24">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-12 lg:gap-24">
-          <div className="flex max-w-md flex-1 flex-col items-stretch gap-5">
-            <h2 className="text-4xl font-medium leading-[0.5]">Recent Posts</h2>
-            <p className="text-2xl text-slate-700 dark:text-slate-300">
+        <div className="mx-auto mb-16 flex w-full max-w-5xl flex-col items-center justify-between gap-12 md:mb-0 md:flex-row lg:gap-24">
+          <div className="flex flex-1 flex-col items-stretch md:max-w-md">
+            <h2 className="text-3xl font-medium sm:text-4xl">Recent Posts</h2>
+            <p className="pt-2 pb-4 text-2xl text-slate-700 dark:text-slate-300">
               Stay up to date with the latest blog posts, news, and updates on
               everything Off the Dial!
             </p>
-            <div>
-              <Link to="/posts">
-                <button className="rounded-lg bg-slate-200 py-2.5 px-5 text-xl font-medium hover:bg-slate-300 dark:bg-slate-700 hover:dark:bg-slate-600">
-                  See All Posts
-                </button>
-              </Link>
-            </div>
+            <Link to="/posts">
+              <button className="rounded-lg bg-slate-200 py-2.5 px-5 text-xl font-semibold hover:bg-slate-300 dark:bg-slate-700 hover:dark:bg-slate-600">
+                See All Posts
+              </button>
+            </Link>
           </div>
-          <div className="max-w-md flex-1">
+          <div className="flex-1 md:max-w-md">
             <RecentPost />
+          </div>
+        </div>
+      </div>
+      <div
+        className="flex flex-col items-center bg-cover bg-center p-12 text-slate-100 lg:p-16"
+        style={{ backgroundImage: `url(${slateBg})` }}
+      >
+        <div className="flex max-w-6xl flex-col items-start md:flex-row md:items-center">
+          <div className="h-32 -translate-y-32 pr-12 md:-translate-y-20 lg:pr-16">
+            <StaticImage
+              src="../static/community.png"
+              alt=""
+              placeholder="none"
+              className="w-52 flex-shrink-0 md:w-80"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl font-medium sm:text-4xl">
+              Join our Community
+            </h2>
+            <p className="pt-3 pb-6 text-2xl text-otd-slate-50 md:pb-12">
+              Come hang out! Talk to your fellow players and participants, and
+              share your kirby memes with us. We post announcements and other
+              news regularly.
+            </p>
+            <button className="rounded-lg bg-slate-200 py-2.5 px-5 text-xl font-semibold text-slate-800 hover:bg-slate-300">
+              <div className="flex items-center gap-4">
+                <DiscordSvg className="h-4" />
+                <p>Join the Server</p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="p-12 lg:p-24">
+        <div className="mx-auto flex max-w-5xl flex-col sm:flex-row sm:items-center sm:gap-12 lg:gap-24">
+          <div>
+            <h2 className="text-3xl font-medium sm:text-4xl">Ready to play?</h2>
+            <p className="pt-2 pb-4 text-2xl text-slate-700 dark:text-slate-300">
+              Sign up with your Discord account, set up your profile, and get
+              ready for your the next tournament!
+            </p>
+          </div>
+          <div className="flex-shrink-0">
+            <Link to="/profile">
+              <button className="rounded-lg bg-slate-800 py-2.5 px-16 text-xl font-semibold text-slate-100 hover:bg-slate-700 dark:bg-slate-200 dark:text-slate-800 hover:dark:bg-slate-300">
+                Sign Up
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -55,7 +106,12 @@ const Index = () => {
 const Hero = () => {
   let props = {
     title: "Welcome to Off the Dial!",
-    desc: "The current season has ended, but keep your eyes peeled for the next one!",
+    desc: (
+      <>
+        The current season has ended, but keep your eyes peeled for the next
+        one!
+      </>
+    ),
   }
   const tourney = useTourney()
   if (tourney.data?.hasEnded() === false) {
@@ -75,22 +131,25 @@ const Hero = () => {
       className="flex flex-col items-center rounded-xl bg-cover bg-center p-12 text-center text-slate-100"
       style={{ backgroundImage: `url(${hero})` }}
     >
-      <h2 className="pb-2 text-4xl font-medium">{props.title}</h2>
+      <h2 className="pb-2 text-3xl font-medium sm:text-4xl">{props.title}</h2>
       <p className="max-w-4xl text-xl">{props.desc}</p>
-      {tourney.data?.hasEnded() === false && (
-        <div className="flex gap-4 pt-12 text-xl font-semibold">
-          <Link to="/signup">
-            <button className="rounded-lg bg-slate-100 py-2.5 px-5 text-slate-800 hover:bg-slate-200">
-              Signup Now!
-            </button>
-          </Link>
-          <Link to={`/${tourney.data.type}`}>
-            <button className="rounded-lg py-2.5 px-5 text-slate-100 hover:bg-slate-100/[.15]">
-              Learn More
-            </button>
-          </Link>
-        </div>
-      )}
+      {/* {tourney.data?.hasEnded() === false && ( */}
+      <div className="flex flex-wrap justify-center gap-4 pt-12 text-xl font-semibold">
+        <Link to="/signup">
+          <button
+            className="flex-shrink-0 rounded-lg bg-slate-100 py-2.5 px-5 text-slate-800 hover:enabled:bg-slate-200 disabled:opacity-60"
+            disabled={tourney.data?.hasEnded()}
+          >
+            Signup Now!
+          </button>
+        </Link>
+        <Link to={`/${tourney.data?.type}`}>
+          <button className="flex-shrink-0 rounded-lg py-2.5 px-5 text-slate-100 hover:bg-slate-100/[.15]">
+            Learn More
+          </button>
+        </Link>
+      </div>
+      {/* )} */}
     </div>
   )
 }

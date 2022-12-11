@@ -20,7 +20,7 @@ export const Toaster = () => {
 }
 
 export const ToastProvider = ({ children }) => (
-  <RadixToast.Provider duration={Infinity}>
+  <RadixToast.Provider duration={Infinity} swipeDirection="down">
     {children}
     <Toaster />
   </RadixToast.Provider>

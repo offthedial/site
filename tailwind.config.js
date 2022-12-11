@@ -83,6 +83,16 @@ module.exports = {
           },
         },
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            "blockquote p:first-of-type::before": null,
+            "blockquote p:last-of-type::after": null,
+            "code::before": null,
+            "code::after": null,
+          },
+        },
+      },
     },
   },
   plugins: [

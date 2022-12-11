@@ -22,7 +22,7 @@ const Profile = () => {
 
   return (
     <div className="flex flex-col items-stretch gap-8">
-      <div className="flex items-center gap-6">
+      <div className="flex flex-wrap items-center gap-6">
         <Avatar className="h-14 w-14" />
         <h2 className="mr-auto text-2xl font-medium sm:text-3xl">
           {user.data?.displayName}
@@ -247,7 +247,7 @@ const TimelineEvent = ({ title, desc, status, date, countdown, last }) => {
             {countdown && <TimelineCountdown countdown={countdown} />}
           </div>
           <p className={dateStyles[status]}>
-            {date ? format(date, "MMMM d, h:mm aa") : "..."}
+            {date ? format(date, "MMMM d, h:mm aa") : <>&nbsp;</>}
           </p>
         </div>
       </div>
@@ -325,7 +325,7 @@ const allPhases = tourney => {
           Get hype, just a little longer now! Teams will be released shortly.
           While you're waiting, make sure to review the rules at{" "}
           <Link
-            className="text-otd-slate-600 hover:underline dark:text-otd-slate-300"
+            className="text-otd-slate-600 underline hover:no-underline dark:text-otd-slate-300"
             to="/idtga/rules"
           >
             otd.ink/idtga/rules
@@ -414,7 +414,7 @@ const ActionButtons = () => {
   const logoutUser = useLogoutUser()
   const deleteUser = useDeleteUser()
   return (
-    <>
+    <div className="flex items-center gap-3">
       <button
         onClick={deleteUser.mutate}
         className="flex items-center justify-center rounded-lg border-2 border-transparent p-3 text-slate-400 hover:border-slate-300 hover:bg-slate-300 hover:text-red-700 dark:text-slate-700 dark:hover:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-red-400"
@@ -453,7 +453,7 @@ const ActionButtons = () => {
           />
         </svg>
       </button>
-    </>
+    </div>
   )
 }
 
