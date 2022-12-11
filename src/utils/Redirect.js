@@ -1,8 +1,5 @@
-const Redirect = ({ pageContext }) => {
-  if (typeof window !== "undefined") {
-    window.location.replace(pageContext.to)
-  }
-  return null
-}
+const Redirect = ({ pageContext }) => (
+  <meta http-equiv="Refresh" content={`0; url='${pageContext.to}'`} />
+)
 
 export default Redirect
