@@ -11,13 +11,13 @@ import { AnimationOnScroll } from "react-animation-on-scroll"
 const Index = () => (
   <Layout>
     <div className="bg-slate-200 dark:bg-slate-900">
-      <div className="flex flex-col items-stretch px-12 pt-12">
-        <div className="mx-auto w-full max-w-7xl">
+      <div className="flex flex-col items-stretch">
+        <div className="px-12 pt-12">
           <Hero />
         </div>
-        <div className="mx-auto flex w-full max-w-4xl flex-col items-center py-24 text-center">
+        <div className="mx-auto box-content flex max-w-5xl flex-col items-center px-12 py-24 text-center">
           <div className="rounded-full pb-6">
-            <img className="h-28 rounded-full" src={logo} />
+            <img className="h-28 rounded-full" src={logo} alt="Off the Dial" />
           </div>
           <h2 className="pb-1 text-3xl font-medium sm:text-4xl">
             What is Off the Dial?
@@ -127,7 +127,11 @@ const Index = () => (
 
 const Hero = () => {
   let props = {
-    title: "Welcome to Off the Dial!",
+    title: (
+      <>
+        Welcome to <span className="whitespace-nowrap">Off the Dial!</span>
+      </>
+    ),
     desc: (
       <>
         The current season has ended, but keep your eyes peeled for the next
@@ -150,28 +154,29 @@ const Hero = () => {
   }
   return (
     <div
-      className="flex flex-col items-center rounded-xl bg-cover bg-center p-12 text-center text-slate-100"
+      className="mx-auto flex aspect-[3] w-full max-w-6xl items-center rounded-xl bg-cover bg-left-top p-6 text-center text-slate-100 sm:p-12 sm:text-left lg:gap-12 lg:bg-center"
       style={{ backgroundImage: `url(${hero})` }}
     >
-      <h2 className="pb-2 text-3xl font-medium sm:text-4xl">{props.title}</h2>
-      <p className="max-w-4xl text-xl">{props.desc}</p>
-      {/* {tourney.data?.hasEnded() === false && ( */}
-      <div className="flex flex-wrap justify-center gap-4 pt-12 text-xl font-semibold">
-        <Link to="/signup">
-          <button
-            className="flex-shrink-0 rounded-lg bg-slate-100 py-2.5 px-5 text-slate-800 hover:enabled:bg-slate-200 disabled:opacity-60"
-            disabled={tourney.data?.hasEnded()}
-          >
-            Signup Now!
-          </button>
-        </Link>
-        <Link to={`/${tourney.data?.type}`}>
-          <button className="flex-shrink-0 rounded-lg py-2.5 px-5 text-slate-100 hover:bg-slate-100/[.15]">
-            Learn More
-          </button>
-        </Link>
+      <div className="flex max-w-lg flex-1 flex-col items-stretch lg:max-w-none">
+        <h2 className="text-3xl font-medium sm:text-4xl">{props.title}</h2>
+        <p className="pt-2 pb-12 text-xl sm:text-2xl">{props.desc}</p>
+        <div className="flex flex-wrap justify-center gap-4 self-center text-xl font-semibold sm:self-start">
+          <Link to="/signup">
+            <button
+              className="flex-shrink-0 rounded-lg bg-slate-100 py-2.5 px-5 text-slate-800 hover:enabled:bg-slate-200 disabled:opacity-60"
+              disabled={tourney.data?.hasEnded()}
+            >
+              Signup Now!
+            </button>
+          </Link>
+          <Link to={`/${tourney.data?.type}`}>
+            <button className="flex-shrink-0 rounded-lg py-2.5 px-5 text-slate-100 hover:bg-slate-100/[.15]">
+              Learn More
+            </button>
+          </Link>
+        </div>
       </div>
-      {/* )} */}
+      <div className="lg:flex-1" />
     </div>
   )
 }
