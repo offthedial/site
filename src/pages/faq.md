@@ -7,7 +7,9 @@ desc: We get asked a lot of questions, remember to read the FAQ before asking in
 
 #### What is my 'Signal Strength'?
 
-Consider it like an XP bar for your involvement with Off the Dial. You earn 100 points for each tournament you participate in, and can earn up to 100 more depending on your placement. There's also roles for <Mention>@Signal Strength: 1000+</Mention> and <Mention>@Signal Strength: 5000+</Mention> if you want a meaningless amount of pointless clout, good luck!
+Consider it like an XP bar for your involvement with Off the Dial. You earn 100 points for each tournament you participate in, and can earn up to 100 more depending on your placement.
+
+There's also roles for <Mention>@Signal Strength: 1000+</Mention> and <Mention>@Signal Strength: 5000+</Mention> if you want a meaningless amount of pointless clout, good luck!
 
 #### Will tournaments be streamed?
 
@@ -51,7 +53,7 @@ The Off the Dial Story Mode was a story driven, ARG tournament with the results 
 
 It's Dangerous to go Alone (or IDTGA for short), is our flagship, solo registration tournament! Focused on creating balanced teams, and being accessible to everyone.
 
-Players sign up **individually**, you aren't allowed to sign up as an entire team. Teams are then balanced and assigned based on the information provided in the registration form.
+Players sign up **individually**, you aren't allowed to sign up as an entire team. Players are all assigned a team based on the information provided in the registration form. Then, teams are given 48 hours to practice before the tournament!
 
 #### Who is allowed to play? (Is there a skill limit/cap?) (What if I'm already on a team?)
 
@@ -61,9 +63,11 @@ Even if you do have a team, you and your teammates can still play! Just don't ex
 
 #### Why are there multiple brackets?
 
-In order to ensure that the skill gap between players on a given team aren't too far apart, we divide players into multiple brackets based on skill level, so that your teammates are generally close enough to your skill range. For example, if there were two brackets, the top ranking 50% of players will be placed in the higher bracket, and the lower 50% in the lower bracket. This is quite similar to 'alpha' and 'beta' brackets you see in other large tournaments, the difference being that we divide individual players instead of teams.
+In order to ensure that the skill gap between players on a given team aren't too far apart, we divide players into multiple brackets based on skill level, so that your teammates are generally close enough to your skill range.
 
-The skill brackets are, in order of highest skill to lowest skill: **Power** (highest), **Wisdom** (middle), and **Courage** (lowest). Note that depending on the number of signups, not all brackets will be used. A new bracket is added for every 12 teams, so between.
+For example, if there were two brackets, the top ranking 50% of players will be placed in the higher bracket, and the lower 50% in the lower bracket. This is quite similar to 'alpha' and 'beta' brackets you see in other large tournaments, but we divide individual players instead of teams.
+
+The skill brackets are, in order of highest skill to lowest skill: **Power** (highest), **Wisdom** (middle), and **Courage** (lowest). Note that depending on the number of signups, not all brackets will be used. A new bracket is added for every 12 teams.
 
 #### I just lost my set, am I out of the tournament?
 
@@ -71,6 +75,6 @@ No, this tournament's format is Swiss, not Single or Double Elimination. So make
 
 #### I’ve just finished a season of IDTGA, what do I do now?
 
-If you didn't make top cut, you can still watch the rest of the tournament on [Twitch](https://twitch.tv/offthedial)!
+Congrats! We hope you had fun! If you didn't make top cut, you can still watch the rest of the tournament on [Twitch](https://twitch.tv/offthedial)!
 
-If you have any feedback on how we can improve the tournament in the future, please see [otd.ink/feedback](https://otd.ink/feedback).
+If you have any feedback on how we can improve the tournament in the future, please let us know at [otd.ink/feedback](https://otd.ink/feedback).

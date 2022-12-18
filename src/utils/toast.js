@@ -1,6 +1,7 @@
 import React from "react"
 import * as RadixToast from "@radix-ui/react-toast"
 import createToast, { useToaster } from "react-hot-toast/headless"
+import clsx from "clsx"
 
 export const Toaster = () => {
   const {
@@ -67,12 +68,16 @@ const toast = ({ style, title, description }) =>
     t => (
       <RadixToast.Root
         key={t.id}
-        className={`bg-default pointer-events-auto m-4 max-w-lg rounded-md fade-in-0 fade-out-0 slide-in-from-bottom-2 slide-out-to-bottom-2 ${
+        className={clsx(
+          "bg-default pointer-events-auto m-4 max-w-lg rounded-md fade-in-0 fade-out-0 slide-in-from-bottom-2 slide-out-to-bottom-2",
           t.visible ? "animate-in" : "animate-out"
-        }`}
+        )}
       >
         <div
-          className={`flex items-start gap-4 rounded-md p-4 shadow-lg ${color[style]}`}
+          className={clsx(
+            "flex items-start gap-4 rounded-md p-4 shadow-lg",
+            color[style]
+          )}
         >
           <>{icons[style]}</>
           <div className="flex min-w-0 flex-1 flex-col gap-2 break-words">

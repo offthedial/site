@@ -5,17 +5,18 @@ import { StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "utils/theme"
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 import logo from "src/static/logo.svg"
-import banner from "src/static/banner.png"
+import banner from "src/static/banner.webp"
 import favicon from "src/static/favicon.svg"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "src/app"
+import clsx from "clsx"
 
 const Layout = ({ children, helmet, className = "" }) => (
   <>
     <CustomHelmet {...helmet} />
     <div className="flex min-h-screen flex-col">
       <Nav />
-      <main className={"flex-1 " + className}>{children}</main>
+      <main className={clsx("flex-1", className)}>{children}</main>
       <Footer />
     </div>
   </>
@@ -25,7 +26,7 @@ const Nav = () => (
   <nav className="flex h-16 items-stretch justify-end gap-6 bg-otd-slate p-3 text-center font-medium text-slate-100">
     <Link to="/" className="mr-auto">
       <StaticImage
-        src="../static/title-sm.png"
+        src="../static/title-sm.webp"
         alt="Off the Dial"
         placeholder="none"
         height={64 - 12 * 2}
@@ -33,7 +34,7 @@ const Nav = () => (
         className="sm:hidden"
       />
       <StaticImage
-        src="../static/title.png"
+        src="../static/title.webp"
         alt="Off the Dial"
         placeholder="none"
         height={64 - 12 * 2}
@@ -122,7 +123,10 @@ export const Avatar = ({ className }) => {
   return (
     <Link
       to="/profile"
-      className={`relative flex-shrink-0 rounded-full bg-slate-100 text-otd-slate ${className}`}
+      className={clsx(
+        "relative flex-shrink-0 rounded-full bg-slate-100 text-otd-slate",
+        className
+      )}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

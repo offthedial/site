@@ -26,9 +26,12 @@ const useTourney = () =>
     )
     result.data.creationDate = result.data.timestamp.toDate()
     result.data.startDate = fromUnixTime(result.data.smashgg.startAt)
-    result.data.hasEnded = () => isPast(fromUnixTime(result.data.smashgg.endAt))
-    result.data.hasClosed = () =>
-      isPast(fromUnixTime(result.data.smashgg.registrationClosesAt))
+    result.data.closeDate = fromUnixTime(
+      result.data.smashgg.registrationClosesAt
+    )
+    result.data.endDate = fromUnixTime(result.data.smashgg.endAt)
+    result.data.hasEnded = () => isPast(result.data.endDate)
+    result.data.hasClosed = () => isPast(result.data.closeDate)
     return result?.data
   })
 

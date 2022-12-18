@@ -16,6 +16,7 @@ import {
 } from "date-fns"
 import Mention from "src/components/Mention"
 import useDeleteUser from "src/app/useDeleteUser"
+import clsx from "clsx"
 
 const Profile = () => {
   const user = useUser()
@@ -107,7 +108,7 @@ const TournamentDashboard = () => {
       <StatusCallout {...props} />
       <div>
         <div className="text-lg font-medium uppercase tracking-wider text-slate-600 dark:text-slate-400">
-          Timeline
+          Schedule
         </div>
         {allPhases(tourney).map(phase => (
           <TimelineEvent key={phase.title} {...phase} />
@@ -138,7 +139,9 @@ const StatusCallout = ({ style, message, button }) => {
   }
 
   return (
-    <div className={"flex flex-col gap-4 rounded-lg p-4 " + colorStyle[style]}>
+    <div
+      className={clsx("flex flex-col gap-4 rounded-lg p-4", colorStyle[style])}
+    >
       <div className="flex flex-wrap items-center gap-3 font-medium">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -156,10 +159,10 @@ const StatusCallout = ({ style, message, button }) => {
         </svg>
         <p className="mr-auto">Registration Status:</p>
         <div
-          className={
-            "text-default font-bold uppercase tracking-wider underline decoration-2 " +
+          className={clsx(
+            "text-default font-bold uppercase tracking-wider underline decoration-2",
             underlineStyle[style]
-          }
+          )}
         >
           <Link to="/signup">{button}</Link>
         </div>
@@ -234,10 +237,10 @@ const TimelineEvent = ({ title, desc, status, date, countdown, last }) => {
     <section className="flex flex-col">
       <div className="my-2 flex items-center gap-4">
         <div
-          className={
-            "flex h-11 w-11 shrink-0 items-center justify-center rounded-lg " +
+          className={clsx(
+            "flex h-11 w-11 shrink-0 items-center justify-center rounded-lg",
             iconStyles[status]
-          }
+          )}
         >
           {statusIcons[status]}
         </div>
@@ -253,18 +256,17 @@ const TimelineEvent = ({ title, desc, status, date, countdown, last }) => {
       </div>
       <div className="flex items-center gap-4">
         <div
-          className={
-            "flex w-11 shrink-0 justify-center self-stretch " +
-            (!last ? "min-h-[2rem]" : "min-h-0")
-          }
+          className={clsx(
+            "flex w-11 shrink-0 justify-center self-stretch",
+            !last ? "min-h-[2rem]" : "min-h-0"
+          )}
         >
           <div
-            className={
-              "h-full w-1 shrink-0 " +
-              iconStyles[status] +
-              (status === "present" &&
-                " !bg-otd-slate-600 dark:!bg-otd-slate-300")
-            }
+            className={clsx(
+              "h-full w-1 shrink-0",
+              iconStyles[status],
+              status === "present" && "!bg-otd-slate-600 dark:!bg-otd-slate-300"
+            )}
           ></div>
         </div>
         {status === "present" && <div className="py-4 text-xl">{desc}</div>}
@@ -354,8 +356,15 @@ const allPhases = tourney => {
       title: "Tournament begins",
       desc: (
         <>
-          Good luck in the tournament! Head to xxx to organize your matches and
-          report your scores. Tune into the official broadcast at
+          Good luck in the tournament! Head to{" "}
+          <a
+            className="text-otd-slate-600 hover:underline dark:text-otd-slate-300"
+            href="https://start.gg/idtga"
+          >
+            start.gg/idtga
+          </a>{" "}
+          to organize your matches and report your scores. Tune into the
+          official broadcast at{" "}
           <a
             className="text-otd-slate-600 hover:underline dark:text-otd-slate-300"
             href="https://twitch.tv/offthedial"
@@ -377,14 +386,11 @@ const allPhases = tourney => {
     return phases
   }
   const now = new Date()
-  const registrationCloses = fromUnixTime(
-    tourney.data.smashgg.registrationClosesAt
-  )
   const steps = [
     tourney.data?.creationDate,
-    addHours(registrationCloses, -24),
-    registrationCloses,
-    addHours(registrationCloses, 24),
+    addHours(tourney.data?.closeDate, -24),
+    tourney.data?.closeDate,
+    addHours(tourney.data?.closeDate, 24),
     tourney.data?.startDate,
     fromUnixTime(tourney.data?.smashgg.endAt),
   ]
@@ -499,9 +505,10 @@ const Seperator = () => (
 
 const InnerSection = ({ className, children }) => (
   <div
-    className={
-      "rounded-xl sm:bg-slate-50 sm:p-8 sm:dark:bg-slate-850 " + className
-    }
+    className={clsx(
+      "rounded-xl sm:bg-slate-50 sm:p-8 sm:dark:bg-slate-850",
+      className
+    )}
   >
     {children}
   </div>

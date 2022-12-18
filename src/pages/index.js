@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout, { DiscordSvg } from "src/components/Layout"
-import hero from "src/static/hero.png"
+import hero from "src/static/hero.webp"
 import useTourney from "src/app/useTourney"
 import logo from "src/static/logo.svg"
 import slateBg from "src/static/slate-bg.svg"
@@ -12,10 +12,10 @@ const Index = () => (
   <Layout>
     <div className="bg-slate-200 dark:bg-slate-900">
       <div className="flex flex-col items-stretch">
-        <div className="px-12 pt-12">
+        <div className="px-6 pt-12 sm:px-12">
           <Hero />
         </div>
-        <div className="mx-auto box-content flex max-w-5xl flex-col items-center px-12 py-24 text-center">
+        <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-24 text-center sm:px-12">
           <div className="rounded-full pb-6">
             <img className="h-28 rounded-full" src={logo} alt="Off the Dial" />
           </div>
@@ -29,19 +29,21 @@ const Index = () => (
           </p>
         </div>
       </div>
-      <Waves className="translate-y-[1px]" />
+      <div className="w-full overflow-hidden">
+        <Waves className="ml-[50%] w-full min-w-[1152px] translate-y-[1px] translate-x-[-50%]" />
+      </div>
     </div>
-    <div className="bg-slate-50 p-12 dark:bg-slate-800 lg:p-24">
+    <div className="bg-slate-50 px-6 py-12 dark:bg-slate-800 sm:px-12">
       <AnimationOnScroll
         animateOnce={true}
         animateIn="animate-in fade-in slide-in-from-bottom-8"
         duration={0.5}
       >
-        <div className="mx-auto mb-16 flex w-full max-w-5xl flex-col items-center justify-between gap-12 md:mb-0 md:flex-row lg:gap-24">
+        <div className="mx-auto mb-16 flex w-full max-w-5xl flex-col items-center justify-between gap-12 md:mb-0 md:flex-row">
           <div className="flex flex-1 flex-col items-stretch md:max-w-md">
             <h2 className="text-3xl font-medium sm:text-4xl">Recent Posts</h2>
-            <p className="pt-2 pb-4 text-2xl text-slate-700 dark:text-slate-300">
-              Stay up to date with the latest blog posts, news, and updates on
+            <p className="pt-2 pb-4 text-xl text-slate-700 dark:text-slate-300 sm:text-2xl">
+              Stay up to date with the latest blog posts, news, and updates for
               everything Off the Dial!
             </p>
             <Link to="/posts">
@@ -57,7 +59,7 @@ const Index = () => (
       </AnimationOnScroll>
     </div>
     <div
-      className="flex flex-col items-center bg-cover bg-center p-12 text-slate-100 lg:p-16"
+      className="flex flex-col items-center bg-cover bg-center px-6 py-12 text-slate-100 sm:px-12 lg:p-16"
       style={{ backgroundImage: `url(${slateBg})` }}
     >
       <div className="flex max-w-6xl flex-col items-start md:flex-row md:items-center">
@@ -69,7 +71,7 @@ const Index = () => (
         >
           <div className="h-32 -translate-y-32 pr-12 md:-translate-y-20 lg:pr-16">
             <StaticImage
-              src="../static/community.png"
+              src="../static/community.webp"
               alt=""
               placeholder="none"
               className="w-52 flex-shrink-0 md:w-80"
@@ -81,15 +83,13 @@ const Index = () => (
           animateIn="animate-in fade-in slide-in-from-bottom-8"
           duration={0.5}
         >
-          <h2 className="text-3xl font-medium sm:text-4xl">
-            Join our Community
-          </h2>
-          <p className="pt-3 pb-6 text-2xl text-otd-slate-50 md:pb-12">
+          <h2 className="text-3xl font-medium sm:text-4xl">Our Community</h2>
+          <p className="pt-3 pb-6 text-xl text-otd-slate-50 sm:text-2xl md:pb-12">
             Come hang out! Talk to your fellow players and participants, and
             share your kirby memes with us. We post announcements and other news
             regularly.
           </p>
-          <button className="rounded-lg bg-slate-200 py-2.5 px-5 text-xl font-semibold text-slate-800 hover:bg-slate-300">
+          <button className="rounded-lg bg-[#446C72] py-2.5 px-5 text-xl font-semibold ring-2 ring-[#2d494f]/75 hover:bg-[#5865F2]">
             <div className="flex items-center gap-4">
               <DiscordSvg className="h-4" />
               <p>Join the Server</p>
@@ -98,7 +98,7 @@ const Index = () => (
         </AnimationOnScroll>
       </div>
     </div>
-    <div className="p-12 lg:p-24">
+    <div className="px-6 py-12 sm:px-12 lg:p-24">
       <AnimationOnScroll
         animateOnce={true}
         animateIn="animate-in fade-in slide-in-from-bottom-8"
@@ -107,7 +107,7 @@ const Index = () => (
         <div className="mx-auto flex max-w-5xl flex-col sm:flex-row sm:items-center sm:gap-12 lg:gap-24">
           <div>
             <h2 className="text-3xl font-medium sm:text-4xl">Ready to play?</h2>
-            <p className="pt-2 pb-4 text-2xl text-slate-700 dark:text-slate-300">
+            <p className="pt-2 pb-4 text-xl text-slate-700 dark:text-slate-300 sm:text-2xl">
               Sign up with your Discord account, set up your profile, and get
               ready for your the next tournament!
             </p>
@@ -166,7 +166,7 @@ const Hero = () => {
               className="flex-shrink-0 rounded-lg bg-slate-100 py-2.5 px-5 text-slate-800 hover:enabled:bg-slate-200 disabled:opacity-60"
               disabled={tourney.data?.hasEnded()}
             >
-              Signup Now!
+              Signup Now
             </button>
           </Link>
           <Link to={`/${tourney.data?.type}`}>

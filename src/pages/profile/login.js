@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react"
 import { parse } from "query-string"
 import { signInWithCustomToken } from "firebase/auth"
 import { auth } from "src/app"
+import clsx from "clsx"
 
 const api = process.env.GATSBY_API_URL
 
@@ -26,10 +27,16 @@ const ProfileLogin = ({ location }) => {
 
   return (
     <div
-      className={`flex h-screen flex-col items-center justify-center p-8 text-center ${textClass}`}
+      className={clsx(
+        "flex h-screen flex-col items-center justify-center p-8 text-center",
+        textClass
+      )}
     >
       <div
-        className={`mb-4 flex h-12 w-12 items-center justify-center rounded-lg ${bgClass}`}
+        className={clsx(
+          "mb-4 flex h-12 w-12 items-center justify-center rounded-lg",
+          bgClass
+        )}
       >
         <Icon error={error} />
       </div>
