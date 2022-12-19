@@ -1,3 +1,4 @@
+import * as Collapsible from "@radix-ui/react-collapsible"
 import clsx from "clsx"
 import {
   format,
@@ -5,7 +6,7 @@ import {
   formatDuration,
   intervalToDuration,
 } from "date-fns"
-import React from "react"
+import React, { useState } from "react"
 import useTourney from "src/app/useTourney"
 import Layout from "src/components/Layout"
 import logo from "src/static/idtga.svg"
@@ -41,42 +42,60 @@ const TourneyCard = () => {
       .split(" ")
       .slice(0, 2)
       .join(" ")
+
   return tourney.data ? (
-    <div className="bg-default flex w-full max-w-lg flex-col items-stretch gap-6 rounded-lg p-12 shadow-xl">
-      <h2 className="text-center text-xl font-medium">
-        {tourney.data.smashgg.name}
-      </h2>
-      <div className="border-t-2 border-slate-300 dark:border-slate-600" />
-      <div className="flex flex-col items-stretch gap-2">
-        <CardInfo
-          icon={
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
-            />
-          }
-          left="Tournament starts:"
-        >
-          {format(tourney.data?.startDate, "MMM d, h:mm aa")}
-        </CardInfo>
-        <CardInfo
-          className={tourney.data?.hasClosed() && "line-through"}
-          icon={
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          }
-          left="Registration closes:"
-        >
-          {tourney.data?.hasClosed()
-            ? `${duration(tourney.data?.closeDate)} ago`
-            : `in ${duration(tourney.data?.closeDate)}`}
-        </CardInfo>
+    <div className="bg-default flex w-full max-w-lg flex-col items-stretch rounded-xl shadow-xl">
+      <div className="rounded-t-xl bg-slate-200 px-12 py-8 dark:bg-slate-800">
+        <h2 className="text-center text-xl font-semibold">
+          It's Dangerous to go Alone Season 36
+        </h2>
       </div>
-      <div className="border-t-2 border-slate-300 dark:border-slate-600" />
+      <div className="flex flex-col items-stretch gap-8 px-12 py-8">
+        <div className="flex flex-col items-stretch gap-2">
+          <CardInfo
+            icon={
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+              />
+            }
+            left="Tournament starts:"
+          >
+            {format(tourney.data?.startDate, "MMM d, h:mm aa")}
+          </CardInfo>
+          <CardInfo
+            className={tourney.data?.hasClosed() && "line-through"}
+            icon={
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            }
+            left="Registration closes:"
+          >
+            {tourney.data?.hasClosed()
+              ? `${duration(tourney.data?.closeDate)} ago`
+              : `in ${duration(tourney.data?.closeDate)}`}
+          </CardInfo>
+        </div>
+        <PatchNotes />
+        <div>
+          <div className="flex items-center justify-between gap-4 rounded-b-xl">
+            <button className="rounded-lg bg-otd-cyan-200 py-2.5 px-7 text-lg font-medium hover:bg-otd-cyan-300 dark:bg-otd-cyan-700 hover:dark:bg-otd-cyan-600">
+              Signup!
+            </button>
+            <button className="rounded-lg bg-slate-200 py-2.5 px-7 text-lg font-medium hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700">
+              Rules
+            </button>
+          </div>
+          <div className="pt-2 text-sm text-slate-400 dark:text-slate-500">
+            Times are listed in your timezone, see the rules for the schedule
+            and format.
+          </div>
+        </div>
+      </div>
     </div>
   ) : null
 }
@@ -102,5 +121,51 @@ const CardInfo = ({ icon, left, className, children }) => (
     <p className="font-medium">{children}</p>
   </div>
 )
+
+const PatchNotes = () => {
+  const [open, setOpen] = useState(false)
+  const [hover, setHover] = useState(false)
+
+  return (
+    <Collapsible.Root
+      open={open}
+      onOpenChange={setOpen}
+      className={clsx(
+        "rounded-lg border-2 border-slate-300 dark:border-slate-600",
+        hover && "bg-slate-100 dark:bg-slate-800"
+      )}
+    >
+      <Collapsible.Trigger
+        className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-lg font-medium"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        <h3>Patch Notes</h3>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2.5}
+          stroke="currentColor"
+          className={clsx("h-6 w-6 transition-transform", open && "rotate-180")}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </Collapsible.Trigger>
+      <Collapsible.Content asChild>
+        <>
+          <div className="mx-4 border-t-2 border-slate-200 dark:border-slate-700" />
+          <article className="prose prose-lg prose-slate p-4 dark:prose-invert">
+            <p>We've updated some stuff for you to check out!</p>
+          </article>
+        </>
+      </Collapsible.Content>
+    </Collapsible.Root>
+  )
+}
 
 export default Idtga
