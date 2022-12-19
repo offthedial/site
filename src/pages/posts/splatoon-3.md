@@ -22,7 +22,7 @@ Wait, what's in this package?
 
 It's some new Sendou badges! Each bracket will now receive its own badges when they win. Isn't that cool?
 
-# Feedback from previous tournaments
+## Feedback from previous tournaments
 
 I've been a little busy, so I haven't had the time to post about the feedback from the previous tournaments, so let's dump it all here, shall we?
 
