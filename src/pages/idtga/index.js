@@ -11,8 +11,9 @@ import InfoMdx from "./info.mdx"
 const Idtga = () => (
   <Layout helmet={{ title: "IDTGA" }}>
     <div className="bg-otd-slate">
-      <div className="flex flex-col items-center justify-evenly gap-10 p-10 lg:flex-row">
-        <div className="flex w-fit flex-col items-center lg:items-stretch">
+      <div className="mx-3 border-t-2 border-otd-slate-300" />
+      <div className="flex flex-col items-center justify-evenly sm:gap-10 sm:p-10 lg:flex-row">
+        <div className="flex w-fit flex-col items-center p-8 sm:p-0 lg:items-stretch">
           <img src={logo} className="mb-6 h-28 lg:self-start" />
           <p className="text-center text-lg font-medium uppercase tracking-wider text-otd-slate-100 lg:text-left">
             This Season Of
@@ -41,8 +42,8 @@ const TourneyCard = () => {
       .join(" ")
 
   return (
-    <div className="bg-default flex w-full max-w-lg flex-col items-stretch rounded-xl shadow-xl">
-      <div className="rounded-t-xl bg-slate-200 px-12 py-8 dark:bg-slate-800">
+    <div className="bg-default flex w-full flex-col items-stretch sm:max-w-lg sm:rounded-xl sm:shadow-xl">
+      <div className="bg-slate-200 px-8 py-8 dark:bg-slate-800 sm:rounded-t-xl sm:px-12">
         <h2 className="text-center text-xl font-semibold">
           {tourney.data ? (
             tourney.data.smashgg.name
@@ -51,7 +52,7 @@ const TourneyCard = () => {
           )}
         </h2>
       </div>
-      <div className="flex flex-col items-stretch gap-8 px-12 py-8">
+      <div className="mx-auto flex max-w-lg flex-col items-stretch gap-8 px-8 py-8 sm:px-12">
         <div className="flex flex-col items-stretch gap-2">
           <CardInfo
             icon={
@@ -93,13 +94,15 @@ const TourneyCard = () => {
         </div>
         <Details />
         <div>
-          <div className="flex items-center justify-between gap-4 rounded-b-xl">
+          <div className="flex flex-wrap items-center justify-between gap-4 sm:rounded-b-xl">
             <Link to="/signup" className="rounded-lg">
               <button
                 disabled={!(tourney.data?.hasEnded() === false)}
                 className="rounded-lg bg-otd-cyan-200 py-2.5 px-7 text-lg font-medium hover:enabled:bg-otd-cyan-300 disabled:opacity-50 disabled:grayscale-[50%] dark:bg-otd-cyan-700 hover:enabled:dark:bg-otd-cyan-600"
               >
-                Signup!
+                {tourney.data?.hasClosed() && !tourney.data?.hasEnded()
+                  ? "Signup as a sub!"
+                  : "Signup!"}
               </button>
             </Link>
             <Link to="rules">
