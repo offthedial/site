@@ -47,7 +47,7 @@ const TourneyCard = () => {
           {tourney.data ? (
             tourney.data.smashgg.name
           ) : (
-            <div className="mx-auto h-7 w-96 animate-pulse rounded-full bg-slate-700" />
+            <div className="mx-auto h-7 w-96 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
           )}
         </h2>
       </div>
@@ -66,7 +66,7 @@ const TourneyCard = () => {
             {tourney.data ? (
               format(tourney.data.startDate, "MMM d, h:mm aa")
             ) : (
-              <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-700" />
+              <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
             )}
           </CardInfo>
           <CardInfo
@@ -87,7 +87,7 @@ const TourneyCard = () => {
                 `in ${duration(tourney.data?.closeDate)}`
               )
             ) : (
-              <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-700" />
+              <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
             )}
           </CardInfo>
         </div>
