@@ -214,9 +214,7 @@ const RecentPost = () => {
   const data = useStaticQuery(graphql`
     query {
       allMdx(
-        filter: {
-          internal: { contentFilePath: { regex: "/(pages)/(posts)/" } }
-        }
+        filter: { internal: { contentFilePath: { glob: "**/pages/posts/*" } } }
         sort: { frontmatter: { date: DESC } }
         limit: 1
       ) {

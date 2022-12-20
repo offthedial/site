@@ -1,15 +1,12 @@
-import * as Collapsible from "@radix-ui/react-collapsible"
-import clsx from "clsx"
-import {
-  format,
-  fromUnixTime,
-  formatDuration,
-  intervalToDuration,
-} from "date-fns"
 import React, { useState } from "react"
+import clsx from "clsx"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import { format, formatDuration, intervalToDuration } from "date-fns"
+import * as Collapsible from "@radix-ui/react-collapsible"
 import useTourney from "src/app/useTourney"
 import Layout from "src/components/Layout"
 import logo from "src/static/idtga.svg"
+import InfoMdx from "./info.mdx"
 
 const Idtga = () => (
   <Layout helmet={{ title: "IDTGA" }}>
@@ -43,11 +40,15 @@ const TourneyCard = () => {
       .slice(0, 2)
       .join(" ")
 
-  return tourney.data ? (
+  return (
     <div className="bg-default flex w-full max-w-lg flex-col items-stretch rounded-xl shadow-xl">
       <div className="rounded-t-xl bg-slate-200 px-12 py-8 dark:bg-slate-800">
         <h2 className="text-center text-xl font-semibold">
-          It's Dangerous to go Alone Season 36
+          {tourney.data ? (
+            tourney.data.smashgg.name
+          ) : (
+            <div className="mx-auto h-7 w-96 animate-pulse rounded-full bg-slate-700" />
+          )}
         </h2>
       </div>
       <div className="flex flex-col items-stretch gap-8 px-12 py-8">
@@ -62,7 +63,11 @@ const TourneyCard = () => {
             }
             left="Tournament starts:"
           >
-            {format(tourney.data?.startDate, "MMM d, h:mm aa")}
+            {tourney.data ? (
+              format(tourney.data.startDate, "MMM d, h:mm aa")
+            ) : (
+              <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-700" />
+            )}
           </CardInfo>
           <CardInfo
             className={tourney.data?.hasClosed() && "line-through"}
@@ -75,29 +80,42 @@ const TourneyCard = () => {
             }
             left="Registration closes:"
           >
-            {tourney.data?.hasClosed()
-              ? `${duration(tourney.data?.closeDate)} ago`
-              : `in ${duration(tourney.data?.closeDate)}`}
+            {tourney.data ? (
+              tourney.data?.hasClosed() ? (
+                `${duration(tourney.data?.closeDate)} ago`
+              ) : (
+                `in ${duration(tourney.data?.closeDate)}`
+              )
+            ) : (
+              <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-700" />
+            )}
           </CardInfo>
         </div>
-        <PatchNotes />
+        <Details />
         <div>
           <div className="flex items-center justify-between gap-4 rounded-b-xl">
-            <button className="rounded-lg bg-otd-cyan-200 py-2.5 px-7 text-lg font-medium hover:bg-otd-cyan-300 dark:bg-otd-cyan-700 hover:dark:bg-otd-cyan-600">
-              Signup!
-            </button>
-            <button className="rounded-lg bg-slate-200 py-2.5 px-7 text-lg font-medium hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700">
-              Rules
-            </button>
+            <Link to="/signup" className="rounded-lg">
+              <button
+                disabled={!(tourney.data?.hasEnded() === false)}
+                className="rounded-lg bg-otd-cyan-200 py-2.5 px-7 text-lg font-medium hover:enabled:bg-otd-cyan-300 disabled:opacity-50 disabled:grayscale-[50%] dark:bg-otd-cyan-700 hover:enabled:dark:bg-otd-cyan-600"
+              >
+                Signup!
+              </button>
+            </Link>
+            <Link to="rules">
+              <button className="rounded-lg bg-slate-200 py-2.5 px-7 text-lg font-medium hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700">
+                Rules
+              </button>
+            </Link>
           </div>
-          <div className="pt-2 text-sm text-slate-400 dark:text-slate-500">
+          <div className="mt-3 text-sm text-slate-400 dark:text-slate-500">
             Times are listed in your timezone, see the rules for the schedule
             and format.
           </div>
         </div>
       </div>
     </div>
-  ) : null
+  )
 }
 
 const CardInfo = ({ icon, left, className, children }) => (
@@ -122,9 +140,22 @@ const CardInfo = ({ icon, left, className, children }) => (
   </div>
 )
 
-const PatchNotes = () => {
+const Details = () => {
   const [open, setOpen] = useState(false)
   const [hover, setHover] = useState(false)
+
+  const data = useStaticQuery(graphql`
+    query {
+      mdx(internal: { contentFilePath: { glob: "**/pages/idtga/info.mdx" } }) {
+        frontmatter {
+          hidden
+        }
+      }
+    }
+  `)
+  if (data.mdx.frontmatter.hidden) {
+    return null
+  }
 
   return (
     <Collapsible.Root
@@ -140,7 +171,7 @@ const PatchNotes = () => {
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
-        <h3>Patch Notes</h3>
+        <h3>Season Info</h3>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -159,8 +190,8 @@ const PatchNotes = () => {
       <Collapsible.Content asChild>
         <>
           <div className="mx-4 border-t-2 border-slate-200 dark:border-slate-700" />
-          <article className="prose prose-lg prose-slate p-4 dark:prose-invert">
-            <p>We've updated some stuff for you to check out!</p>
+          <article className="prose prose-slate p-4 dark:prose-invert">
+            <InfoMdx />
           </article>
         </>
       </Collapsible.Content>

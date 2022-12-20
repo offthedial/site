@@ -5,7 +5,9 @@ const postTemplate = path.resolve(`./src/utils/mdxPost.js`)
 const createMarkdownPages = async (createPage, graphql) => {
   const result = await graphql(`
     {
-      allMdx(filter: { internal: { contentFilePath: { regex: "/pages/" } } }) {
+      allMdx(
+        filter: { internal: { contentFilePath: { glob: "**/pages/**/*.md" } } }
+      ) {
         nodes {
           id
           internal {

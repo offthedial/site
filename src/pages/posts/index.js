@@ -42,7 +42,7 @@ const Posts = ({ data }) => (
 export const query = graphql`
   {
     allMdx(
-      filter: { internal: { contentFilePath: { regex: "/(pages)/(posts)/" } } }
+      filter: { internal: { contentFilePath: { glob: "**/pages/posts/*" } } }
       sort: { frontmatter: { date: DESC } }
     ) {
       totalCount
