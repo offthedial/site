@@ -6,7 +6,12 @@ import * as Collapsible from "@radix-ui/react-collapsible"
 import useTourney from "src/app/useTourney"
 import Layout from "src/components/Layout"
 import logo from "src/static/idtga.svg"
+import skater from "src/static/skater.webp"
+import promoInvite from "src/static/promo_invite.webp"
+import promoBlaster from "src/static/promo_blaster.webp"
+import promoFriends from "src/static/promo_friends.webp"
 import InfoMdx from "./info.mdx"
+import { AnimationOnScroll } from "react-animation-on-scroll"
 
 const Idtga = () => (
   <Layout helmet={{ title: "IDTGA" }}>
@@ -25,6 +30,46 @@ const Idtga = () => (
         <TourneyCard />
       </div>
     </div>
+    <div className="relative flex flex-col md:flex-row">
+      <div className="ml-auto max-w-[calc(72rem+((100vw-72rem)/2))] pt-16 pl-5">
+        <img src={skater} />
+      </div>
+      <div className="mx-auto flex max-w-6xl md:absolute md:inset-0">
+        <div className="md:flex-1"></div>
+        <div className="flex-[2_2_0%]">
+          <div className="flex max-w-3xl flex-col gap-1.5 p-12 md:p-16">
+            <h2 className="text-xl font-medium uppercase tracking-wider text-otd-slate-500 dark:text-otd-slate-300">
+              About the tournament
+            </h2>
+            <p className="text-2xl font-semibold sm:text-3xl">
+              Our flagship <i>solo registration</i> tournament.
+            </p>
+            <p className="text-2xl text-slate-600 dark:text-slate-300 sm:text-3xl">
+              Focused on creating balanced teams, and being accessible to
+              everyone.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="my-12 flex flex-col items-center">
+      <Blurb
+        heading="No team, no problem"
+        desc="Whether you are brand new to the scene, or a skilled free agent. We make it always accessible to gain competitive experience."
+        src={promoInvite}
+      />
+      <Blurb
+        heading="Put yourself out there"
+        desc="Test your chemistry with different folks, and show the scene what you're made of. You might just find your new teammates."
+        src={promoBlaster}
+        className="sm:!flex-row-reverse"
+      />
+      <Blurb
+        heading="Have some fun"
+        desc="Got an open weekend? Meet new people, make new friends, and just have a really great time."
+        src={promoFriends}
+      />
+    </div>
   </Layout>
 )
 
@@ -42,8 +87,8 @@ const TourneyCard = () => {
       .join(" ")
 
   return (
-    <div className="bg-default flex w-full flex-col items-stretch sm:max-w-lg sm:rounded-xl sm:shadow-xl">
-      <div className="bg-slate-200 px-8 py-8 dark:bg-slate-800 sm:rounded-t-xl sm:px-12">
+    <div className="bg-default flex w-full flex-col items-stretch rounded-t-xl sm:max-w-lg sm:rounded-xl sm:shadow-xl">
+      <div className="rounded-t-xl bg-slate-200 px-8 py-8 dark:bg-slate-800">
         <h2 className="text-center text-xl font-semibold">
           {tourney.data ? (
             tourney.data.smashgg.name
@@ -52,7 +97,8 @@ const TourneyCard = () => {
           )}
         </h2>
       </div>
-      <div className="mx-auto flex max-w-lg flex-col items-stretch gap-8 px-8 py-8 sm:px-12">
+      <div className="mx-auto flex w-full max-w-lg flex-col items-stretch gap-8 px-8 py-8">
+        {tourney.data && <TourneyStatus data={tourney.data} />}
         <div className="flex flex-col items-stretch gap-2">
           <CardInfo
             icon={
@@ -93,30 +139,81 @@ const TourneyCard = () => {
           </CardInfo>
         </div>
         <Details />
-        <div>
-          <div className="flex flex-wrap items-center justify-between gap-4 sm:rounded-b-xl">
-            <Link to="/signup" className="rounded-lg">
-              <button
-                disabled={!(tourney.data?.hasEnded() === false)}
-                className="rounded-lg bg-otd-cyan-200 py-2.5 px-7 text-lg font-medium hover:enabled:bg-otd-cyan-300 disabled:opacity-50 disabled:grayscale-[50%] dark:bg-otd-cyan-700 hover:enabled:dark:bg-otd-cyan-600"
-              >
-                {tourney.data?.hasClosed() && !tourney.data?.hasEnded()
-                  ? "Signup as a sub!"
-                  : "Signup!"}
-              </button>
-            </Link>
-            <Link to="rules">
-              <button className="rounded-lg bg-slate-200 py-2.5 px-7 text-lg font-medium hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700">
-                Rules
-              </button>
-            </Link>
-          </div>
-          <div className="mt-3 text-sm text-slate-400 dark:text-slate-500">
-            Times are listed in your timezone, see the rules for the schedule
-            and format.
-          </div>
+        <div className="flex flex-wrap items-center justify-between gap-3 sm:rounded-b-xl">
+          <Link to="/signup" className="rounded-lg">
+            <button
+              disabled={!(tourney.data?.hasEnded() === false)}
+              className="rounded-lg bg-otd-cyan-200 py-2 px-6 text-lg font-medium hover:enabled:bg-otd-cyan-300 disabled:opacity-50 disabled:grayscale-[50%] dark:bg-otd-cyan-700 hover:enabled:dark:bg-otd-cyan-600"
+            >
+              {tourney.data?.hasClosed() && !tourney.data?.hasEnded()
+                ? "Signup as a sub!"
+                : "Signup!"}
+            </button>
+          </Link>
+          <Link to="rules">
+            <button className="rounded-lg bg-slate-200 py-2 px-6 text-lg font-medium hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700">
+              Rules
+            </button>
+          </Link>
+          <p className="text-sm text-slate-500">
+            Times are listed in your timezone, see rules for format and
+            schedule.
+          </p>
         </div>
       </div>
+      <div className="h-2 w-full rounded-b-xl border-b-2 border-slate-300 dark:border-slate-600 sm:hidden" />
+    </div>
+  )
+}
+
+const TourneyStatus = ({ data }) => {
+  let props = {
+    color:
+      "bg-green-600/20 text-green-700 dark:bg-green-400/20 dark:text-green-400",
+    underline:
+      "decoration-green-700/50 dark:decoration-green-400/50 hover:decoration-green-700 hover:dark:decoration-green-400",
+    message: "Registration is currently open!",
+  }
+  if (data.hasClosed()) {
+    props = {
+      color:
+        "bg-lime-600/20 text-lime-700 dark:bg-lime-400/20 dark:text-lime-400",
+      underline:
+        "decoration-lime-700/50 dark:decoration-lime-400/50 hover:decoration-lime-700 hover:dark:decoration-lime-400",
+      message: "Signups have closed, but you can still register as a sub!",
+    }
+  }
+  if (!data.hasEnded()) {
+    props = {
+      color: "bg-red-600/20 text-red-700 dark:bg-red-400/20 dark:text-red-400",
+      underline:
+        "decoration-red-700/5k0 dark:decoration-red-400/50 hover:decoration-red-700 hover:dark:decoration-red-400",
+      message: "This season has concluded, thanks for playing!",
+    }
+  }
+
+  return (
+    <div
+      className={clsx(
+        "flex items-center gap-4 rounded-lg p-4 font-medium",
+        props.color
+      )}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="h-6 w-6 flex-shrink-0"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.79M12 12h.008v.007H12V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+        />
+      </svg>
+      {props.message}
     </div>
   )
 }
@@ -201,5 +298,30 @@ const Details = () => {
     </Collapsible.Root>
   )
 }
+
+const Blurb = ({ heading, desc, src, className }) => (
+  <AnimationOnScroll
+    animateOnce={true}
+    animateIn="animate-in fade-in slide-in-from-bottom-12"
+    duration={0.5}
+  >
+    <div
+      className={clsx(
+        "flex max-w-6xl flex-col-reverse justify-between p-12 sm:flex-row sm:items-center sm:gap-0 sm:p-0",
+        className
+      )}
+    >
+      <div className="flex-1 sm:p-12">
+        <h3 className="mb-2 text-2xl font-medium md:text-3xl">{heading}</h3>
+        <p className="text-xl text-slate-600 dark:text-slate-300 md:text-2xl">
+          {desc}
+        </p>
+      </div>
+      <div className="flex-1">
+        <img src={src} className="w-64 sm:w-auto" />
+      </div>
+    </div>
+  </AnimationOnScroll>
+)
 
 export default Idtga
