@@ -183,7 +183,7 @@ const TourneyStatus = ({ data }) => {
       message: "Signups have closed, but you can still register as a sub!",
     }
   }
-  if (!data.hasEnded()) {
+  if (data.hasEnded()) {
     props = {
       color: "bg-red-600/20 text-red-700 dark:bg-red-400/20 dark:text-red-400",
       underline:
