@@ -100,7 +100,7 @@ const Form = () => {
         <Input
           name="ign"
           title="IGN"
-          desc={`What is your switch in-game name?`}
+          desc={`What is your Splatoon in-game name?`}
           validationRules={{
             required: "This field is required",
             minLength: {
@@ -133,7 +133,7 @@ const Form = () => {
         <Input
           name="rank"
           title="Peak Rank"
-          desc={`What is your current rank in Splatoon 3`}
+          desc={`What is your current rank in Splatoon 3. If you have an X rank, please put in your highest X rank.`}
           validationRules={{
             required: "This field is required",
             validate: value => {
@@ -177,7 +177,7 @@ const Form = () => {
         <Input
           name="cxp"
           title="Competitive Experience"
-          desc={`Please put in any competive experience you have here. Also, please put in your highest Splatoon 2 rank from the last four months.`}
+          desc={`Please put in any competive experience you have here. Include any relevant data including tournaments (with placement), how long you've been in competitive, and significant scrims.`}
           validationRules={{ required: "This field is required" }}
         >
           {props => <Chakra.Textarea size="lg" {...props} />}

@@ -15,13 +15,9 @@ The maximum number of partipants is 192 (48 teams). If this threshold is reached
 ## Eligibility
 ### Players are eligible if they meet all of the conditions below
 - Players have a valid [start.gg account](https://start.gg)
-- Players have a valid Discord account
-- Players must be in the [Off the Dial Discord Server](https://otd.ink/discord)
-- Players have a Nintendo Switch, as well as a copy of Splatoon 3
-- Players have a valid Nintendo account
-- Players have online access through the 'Nintendo Online' system (by either free trial or by purchasing the service)
-- Players have a reliable internet access point for Nintendo Switch
-- Players have at least achieved `C-` in **ALL ranked modes** of Splatoon 3 and have a basic understanding of how the modes work.
+- Players have a valid Discord account and be in the [Off the Dial Discord Server](https://otd.ink/discord)
+- Players have means to play Splatoon 3 in an online capacity
+- Players have at least achieved `C` in Splatoon 3 and have a basic understanding of how all the ranked modes work.
 
 ### Players are not eligible if they have any one of the conditions below
 - The player is banned from Off the Dial's Discord server or services
@@ -30,18 +26,16 @@ The maximum number of partipants is 192 (48 teams). If this threshold is reached
 - Player is a dropout of the previous season of the tournament.
 
 ## Format
-Depending on the number of signups, multiple brackets are tiered based on the cumulative ELO (numerical score of all ranks) and competitive experience. There will be an even number of players in all brackets. The top-ranked players will be grouped in the higher brackets while the lower-ranked players will be placed in lower brackets.
+Depending on the number of signups, multiple brackets are tiered based on the cumulative ELO (numerical score of all ranks) and competitive experience. The initial bracket split will be dividing players who have submitted an X rank, or have alternativly provided a high level of identifiable competive experience. The bracket may be split up to one more time, depending on which out the two previous brackets have the larger pool of players.
 
-- If there are `11` or less teams, there will be one bracket.
-- If there are between `12` and `23` teams, there will be two brackets.
-- If there are `24` or more teams, there will be three brackets.
+- The minimum amount of teams per bracket is `6` teams.
 
 All brackets will run independently of one another and will have their own preliminaries and top cut.
 
 Brackets will be named accordingly if there are two or three brackets
 - The top bracket will always be called the 'Power Bracket'
-- The bottom bracket will always be called the 'Courage Bracket'
 - The middle bracket, which will be only used if there are three brackets, will be called the 'Wisdom Bracket'.
+- The bottom bracket will always be called the 'Courage Bracket'
 
 ## Brackets and Progression
 ### Preliminaries:

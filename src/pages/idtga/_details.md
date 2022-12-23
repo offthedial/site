@@ -1,9 +1,9 @@
 ---
 changelog:
-  - Adjustments have been made to ELO calculations
-  - A player cap has been added. The cap is currently set to 192 players (48 teams)
-  - Cleared up some of the rules, and enhanced searchability with the bot intergration
+  - Brackets will now split at X rank
+  - Splatoon 2 ranks will no longer have a large impact on ELO calculations
+  - Added some clarifications to competive experience in the signup form.
 
 ---
 
-Ho ho ho, welome to another season of IDTGA - the last one for 2022! Let's send this out with a bang!
+Welcome to 2023, a new year filled with plenty of Dialers wanting to take home the badges of It's Dangerous to go Alone!
