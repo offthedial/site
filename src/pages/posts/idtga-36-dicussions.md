@@ -1,5 +1,5 @@
 ---
-title: X Rank is a mess... and last season of IDTGA??
+title: X Rank is a mess... and the last season of IDTGA??
 date: 2022-12-23
 author: DJam98
 ---
