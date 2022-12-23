@@ -133,7 +133,7 @@ const Form = () => {
         <Input
           name="rank"
           title="Peak Rank"
-          desc={`What is your current rank in Splatoon 3`}
+          desc={`What is your current rank in Splatoon 3. If you have an X rank, please put in your highest X rank.`}
           validationRules={{
             required: "This field is required",
             validate: value => {
