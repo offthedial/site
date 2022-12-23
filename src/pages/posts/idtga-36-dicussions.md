@@ -8,7 +8,7 @@ Now that we've had a season of X rank, I can very safely say that it works **VER
 
 # A New Bracket Split
 
-In Splatoon 2, it was very easy to split between X rank and regular S+, as you had to each S+10, then you were stuck with your X rank. This was very benificial to us as it allowed for an easy system to convert and adapt with this system. But in Splatoon 3, the fact that you can improve both at the same time (not to mention you can't drop your anarchy rank from losing matches) doesn't allow for an easy conversion to allow for even balancing. So because of this, X ranks will be calculated into ELO within their own bracket.
+In Splatoon 2, it was very easy to split between X rank and regular S+, as you had to reach S+10, then you were stuck with your X rank. This was very benificial to us as it allowed for an easy system to convert and adapt with this system. But in Splatoon 3, the fact that you can improve both at the same time (not to mention you can't drop your anarchy rank from losing matches) doesn't allow for an easy conversion to allow for even balancing. So because of this, X ranks will be calculated into ELO within their own bracket.
 
 I will also note, that X rank is a much more accurate depiction of your rank, so if you have an X rank, please put that in, not your anarchy rank.
 
