@@ -4,7 +4,7 @@ date: 2022-12-23
 author: DJam98
 ---
 
-Now that we've had a season of X rank, I can very safely say that it works **VERY** differently than it did in Splatoon 2, at least in terms of how ELO calculations work in It's Dangerous to go Alone. I'll also be discussing on some of the feedback that you all left us in the feedback form from IDTGA 36.
+Now that we've had a season of X rank, I can very safely say that it works **VERY** differently than it did in Splatoon 2, at least in terms of how ELO calculations work in It's Dangerous to go Alone. Also, I'll be discussing on some of the feedback that you all left us in the feedback form from IDTGA 36.
 
 # A New Bracket Split
 
