@@ -20,13 +20,14 @@ import clsx from "clsx"
 
 const Profile = () => {
   const user = useUser()
+  const discord = useDiscord()
 
   return (
     <div className="flex flex-col items-stretch gap-8">
       <div className="flex flex-wrap items-center gap-6">
         <Avatar className="h-14 w-14" />
         <h2 className="mr-auto text-2xl font-medium sm:text-3xl">
-          {user.data?.displayName}
+          {discord.data?.username}
         </h2>
         <ActionButtons />
       </div>

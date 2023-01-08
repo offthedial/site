@@ -120,6 +120,7 @@ const tokenEndpoint = ({ code, state }, setError) => {
     .then(({ token, error }) => {
       // Use token from data to log in, and redirect
       if (token && !error) {
+        localStorage.removeItem("discordToken")
         signInWithCustomToken(auth, token).then(() => {
           navigate(redirect || "/profile")
         })

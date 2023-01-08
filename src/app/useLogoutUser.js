@@ -13,6 +13,7 @@ const useLogoutUser = () =>
         title: "Logout Successful",
         description: "You have been logged out",
       })
+      localStorage.removeItem("discordToken")
       queryClient.invalidateQueries(["user"])
     },
     onError: error => {
