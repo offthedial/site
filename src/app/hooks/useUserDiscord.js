@@ -12,7 +12,7 @@ export default () =>
 
       const userRes = await fetch(`https://discord.com/api/users/@me`, {
         method: "GET",
-        headers: { Authorization: `Bearer ${jwt.claims.access_token}` },
+        headers: { Authorization: `Bearer ${jwt.claims.token.access_token}` },
       })
       const userData = await userRes.json()
 
