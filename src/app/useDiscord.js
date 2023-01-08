@@ -47,7 +47,7 @@ const fetchDiscord = async (authState, endpoint, callback) => {
     headers: { Authorization: `Bearer ${discordToken.access_token}` },
   })
   const data = await resp.json()
-  if (true) await refreshDiscordToken(authState)
+  if (resp.status === 401) await refreshDiscordToken(authState)
   if (!resp.ok) throw new Error(data.message)
   return callback(data)
 }
