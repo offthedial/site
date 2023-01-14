@@ -30,6 +30,7 @@
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.41.0",
     "react-hot-toast": "^2.4.0",
     "remark-emoji": "^2.2.0"
   },

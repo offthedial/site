@@ -69,6 +69,10 @@ For example, if there were two brackets, the top ranking 50% of players will be 
 
 The skill brackets are, in order of highest skill to lowest skill: **Power** (highest), **Wisdom** (middle), and **Courage** (lowest). Note that depending on the number of signups, not all brackets will be used. A new bracket is added for every 12 teams.
 
+#### How do skill brackets correspond to LUTI divisions?
+
+They don't apply, the purpose of skill brackets is to ensure that the skill gap between players on a given team aren't too far apart. They are not to determine their absolute skill level in the competitive scene.
+
 #### I just lost my set, am I out of the tournament?
 
 No, this tournament's format is Swiss, not Single or Double Elimination. So make sure you have played **all of the rounds** in the preliminaries!

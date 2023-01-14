@@ -10,6 +10,7 @@ import favicon from "src/static/favicon.svg"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "src/app"
 import clsx from "clsx"
+import useDiscord from "src/app/useDiscord"
 
 const Layout = ({ children, helmet, className = "" }) => (
   <>
@@ -119,7 +120,7 @@ const DiscordJoin = ({ className }) => (
 )
 
 export const Avatar = ({ className }) => {
-  const [user] = useAuthState(auth)
+  const discord = useDiscord()
   return (
     <Link
       to="/profile"
@@ -140,9 +141,9 @@ export const Avatar = ({ className }) => {
           clipRule="evenodd"
         />
       </svg>
-      {user && (
+      {discord.data && (
         <img
-          src={user?.photoURL}
+          src={discord.data.avatarUrl}
           className="absolute inset-0 rounded-full shadow-inner"
           alt="Avatar"
         />

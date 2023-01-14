@@ -35,9 +35,9 @@ const Idtga = () => (
         <img src={skater} />
       </div>
       <div className="mx-auto flex max-w-6xl md:absolute md:inset-0">
-        <div className="md:flex-1"></div>
+        <div className="md:flex-1" />
         <div className="flex-[2_2_0%]">
-          <div className="flex max-w-3xl flex-col gap-1.5 p-12 md:p-16">
+          <div className="flex flex-col gap-1.5 p-12 md:p-16">
             <h2 className="text-xl font-medium uppercase tracking-wider text-otd-slate-500 dark:text-otd-slate-300">
               About the tournament
             </h2>
@@ -110,14 +110,15 @@ const TourneyCard = () => {
             }
             left="Tournament starts:"
           >
-            {tourney.data ? (
-              format(tourney.data.startDate, "MMM d, h:mm aa")
-            ) : (
-              <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
-            )}
+            <p className={tourney.data?.hasEnded() && "line-through"}>
+              {tourney.data ? (
+                format(tourney.data.startDate, "MMM d, h:mm aa")
+              ) : (
+                <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
+              )}
+            </p>
           </CardInfo>
           <CardInfo
-            className={tourney.data?.hasClosed() && "line-through"}
             icon={
               <path
                 strokeLinecap="round"
@@ -127,15 +128,17 @@ const TourneyCard = () => {
             }
             left="Registration closes:"
           >
-            {tourney.data ? (
-              tourney.data?.hasClosed() ? (
-                `${duration(tourney.data?.closeDate)} ago`
+            <p className={tourney.data?.hasClosed() && "line-through"}>
+              {tourney.data ? (
+                tourney.data?.hasClosed() ? (
+                  `${duration(tourney.data?.closeDate)} ago`
+                ) : (
+                  `in ${duration(tourney.data?.closeDate)}`
+                )
               ) : (
-                `in ${duration(tourney.data?.closeDate)}`
-              )
-            ) : (
-              <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
-            )}
+                <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
+              )}
+            </p>
           </CardInfo>
         </div>
         <Details />
