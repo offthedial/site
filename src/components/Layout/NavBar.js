@@ -22,6 +22,30 @@ const NavBar = props => {
         <MenuToggle {...{ isOpen, toggle }} />
         <MenuLinks {...{ isOpen, avatar: data?.avatarUrl }} />
       </NavBarContainer>
+      <Chakra.HStack
+        backgroundPosition="center"
+        backgroundSize="cover"
+        alignItems="stretch"
+        justifyContent={"center"}
+        minH={20}
+        style={{
+          backgroundImage:
+            "url('https://splatoon.nintendo.com/_images/banners/banner-yellow.png')",
+        }}
+      >
+        <Chakra.Stack flexShrink={0} justifyContent={"center"}>
+          <Chakra.Image
+            height={20}
+            flexShrink={0}
+            src="https://cdn.wikimg.net/en/splatoonwiki/images/e/e3/Stc_Sti_Character_09.png"
+          />
+        </Chakra.Stack>
+        <Chakra.Stack justifyContent={"center"}>
+          <Chakra.Text fontSize="3xl" textColor={"black"} fontWeight={900}>
+            Watch your head! Construction is underway
+          </Chakra.Text>
+        </Chakra.Stack>
+      </Chakra.HStack>
     </Chakra.LightMode>
   )
 }
