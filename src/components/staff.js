@@ -4,7 +4,7 @@ import { useToasterStore } from "react-hot-toast/headless"
 export const Card = ({ name, iconUrl, role, hobby, links = [], children }) => (
   <div className="overflow-hidden rounded-xl border-2 border-slate-200 bg-slate-200 text-lg shadow-xl transition-all ease-out dark:border-slate-700 dark:bg-slate-700 dark:shadow-2xl">
     <div className="flex h-20 w-full justify-center">
-      <div className="mt-auto flex h-20 w-20 translate-y-[50%] items-center justify-center overflow-hidden rounded-full bg-slate-500">
+      <div className="mt-auto flex h-20 w-20 translate-y-[50%] items-center justify-center overflow-hidden rounded-full bg-slate-400 dark:bg-slate-500">
         <img src={iconUrl} className="h-full w-full shrink-0 object-cover" />
       </div>
     </div>
@@ -38,7 +38,7 @@ export const Secret = ({ children }) => {
   if (toasts.length > 0) {
     window.scrollByPages(1)
     return (
-      <div className="rotate-1 scale-105 animate-in fade-in-0 zoom-in-75 duration-500 ease-out">
+      <div className="rotate-1 scale-105 animate-in fade-in-0 zoom-in-75 duration-300 ease-out">
         {children}
       </div>
     )

@@ -35,7 +35,7 @@ hobby="VALORANT Enthusiast"
 links={[
 ["Twitter", "https://twitter.com/_rosenyx"],
 ]}
-iconUrl="https://cdn.discordapp.com/attachments/1037596397924536332/1038369665635856411/image.png"
+iconUrl="https://cdn.discordapp.com/avatars/207238142418223104/def698e3be5a54505a92525c4618b13a.webp?size=480"
 
 >
 
@@ -56,7 +56,7 @@ hobby="Game Addict"
 links={[
 ["Twitter", "https://twitter.com/LiberoWolf_"],
 ]}
-iconUrl="https://cdn.discordapp.com/attachments/1037596397924536332/1038369665635856411/image.png"
+iconUrl="https://cdn.discordapp.com/avatars/273188925189914628/0bdf455d256a6c9a05570cb367f7a457.webp?size=480"
 
 >
 
@@ -77,7 +77,7 @@ hobby="boba addict"
 links={[
 ["github", "https://github.com/LeptoFlare"],
 ]}
-iconUrl="https://cdn.discordapp.com/attachments/1037596397924536332/1038369665635856411/image.png"
+iconUrl="https://media.discordapp.net/attachments/1037596397924536332/1065561092715200542/slurk.png"
 
 >
 
