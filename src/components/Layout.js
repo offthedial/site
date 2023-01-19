@@ -1,16 +1,15 @@
 import React from "react"
+import clsx from "clsx"
+import createToast from "react-hot-toast/headless"
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import { StaticImage } from "gatsby-plugin-image"
-import { useTheme } from "utils/theme"
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
+import { useTheme } from "src/components/theme"
+import useDiscord from "src/app/useDiscord"
 import logo from "src/static/logo.svg"
 import banner from "src/static/banner.webp"
 import favicon from "src/static/favicon.svg"
-import { useAuthState } from "react-firebase-hooks/auth"
-import { auth } from "src/app"
-import clsx from "clsx"
-import useDiscord from "src/app/useDiscord"
 
 const Layout = ({ children, helmet, className = "" }) => (
   <>
@@ -228,7 +227,7 @@ const Footer = () => (
       </Link>
     </div>
     <p className="text-center text-slate-400 dark:text-slate-600">
-      Built by ...,{" "}
+      Built by <Author>cyrulean</Author>,{" "}
       <a
         className="text-slate-500 hover:underline"
         href="https://github.com/offthedial/site"
@@ -239,6 +238,24 @@ const Footer = () => (
     </p>
   </footer>
 )
+
+const Author = ({ children }) => {
+  if (window?.location.pathname === "/staff") {
+    return (
+      <button
+        onClick={() => {
+          createToast.custom(t => null, {
+            duration: Infinity,
+          })
+        }}
+        className="font-semibold"
+      >
+        {children}
+      </button>
+    )
+  }
+  return children
+}
 
 const ThemePicker = () => {
   const [theme, setTheme] = useTheme()

@@ -1,6 +1,6 @@
 const path = require("path")
-const pageTemplate = path.resolve(`./src/utils/mdxPage.js`)
-const postTemplate = path.resolve(`./src/utils/mdxPost.js`)
+const pageTemplate = path.resolve(`./src/components/mdxPage.js`)
+const postTemplate = path.resolve(`./src/components/mdxPost.js`)
 
 const createMarkdownPages = async (createPage, graphql) => {
   const result = await graphql(`
@@ -51,7 +51,7 @@ const createRedirectPages = async createPage => {
   links.forEach(link => {
     createPage({
       path: "/" + link[0],
-      component: path.resolve(`./src/utils/Redirect.js`),
+      component: path.resolve(`./src/components/Redirect.js`),
       context: {
         to: link[1],
       },

@@ -3,7 +3,7 @@ import { navigate } from "gatsby"
 import { deleteUser } from "firebase/auth"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth, queryClient } from "src/app"
-import toast from "src/utils/toast"
+import toast from "src/components/toast"
 
 const useDeleteUser = () => {
   const [user] = useAuthState(auth)
