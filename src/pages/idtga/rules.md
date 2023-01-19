@@ -158,13 +158,15 @@ If all options are exhausted, your team will be disqualified and become emergenc
 
 ### Changing Captains
 
-Usually, the player with the highest signal strength is automatically assigned as captain. If you were assigned as captain but would like to opt out, please talk to your team to decide who will be captain, and let a staff member know in the <Mention>#team-updates</Mention> at latest 12 hours before the tournament starts.
+Usually, the player with the highest signal strength is automatically assigned as captain.
+
+If you were assigned as captain but would like to opt out, please talk to your team to decide who will be captain, and let a staff member know in the <Mention>#team-updates</Mention> at the latest 12 hours before the tournament starts.
 
 ### Changing Names
 
 Team names are randomly generated. If you want to change your team name, here are the following conditions:
 
-- Must be posted in the <Mention>#team-updates</Mention> at latest 12 hours before the tournament starts.
+- Must be posted in the <Mention>#team-updates</Mention> at the latest 12 hours before the tournament starts.
 - Must be a 2-word alliteration that starts with the same letter as the original team name.
 - Must be appropriate, use common sense for this one.
 - Must be under 25 characters.
