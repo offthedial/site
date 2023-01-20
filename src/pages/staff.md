@@ -8,14 +8,13 @@ import { Card, Stack, Secret } from "src/components/staff"
 <Stack>
 
 <Card
-name="DJam98"
-role="Head Organiser, Founder"
-hobby="A Confused Person"
-links={[
-["Twitch", "https://twitch.tv/djam98"],
-]}
-iconUrl="https://cdn.discordapp.com/avatars/366117504151453696/a29a27144b2f95a4d60ef76912dc534a.webp?size=480"
-
+  name="DJam98"
+  role="Head Organiser, Founder"
+  hobby="A Confused Person"
+  links={[
+    ["Twitch", "https://twitch.tv/djam98"],
+  ]}
+  iconUrl="https://cdn.discordapp.com/avatars/366117504151453696/a29a27144b2f95a4d60ef76912dc534a.webp?size=480"
 >
 
 Hey there! I'm DJam98 and I am the creator of this little Discord
@@ -29,14 +28,13 @@ I have a Twitch and Twitter, if you want to check that out, I would greatly appr
 </Card>
 
 <Card
-name="Rose"
-role="Head Organiser, Streamer"
-hobby="VALORANT Enthusiast"
-links={[
-["Twitter", "https://twitter.com/_rosenyx"],
-]}
-iconUrl="https://cdn.discordapp.com/avatars/207238142418223104/def698e3be5a54505a92525c4618b13a.webp?size=480"
-
+  name="Rose"
+  role="Head Organiser, Streamer"
+  hobby="VALORANT Enthusiast"
+  links={[
+    ["Twitter", "https://twitter.com/_rosenyx"],
+  ]}
+  iconUrl="https://cdn.discordapp.com/avatars/207238142418223104/def698e3be5a54505a92525c4618b13a.webp?size=480"
 >
 
 Hi! I'm one of the current head TOs for Off the Dial.
@@ -50,14 +48,13 @@ If you're interested, please check out my Twitter and Twitch! Follows are greatl
 </Card>
 
 <Card
-name="Wolf"
-role="Staff, Streamer"
-hobby="Game Addict"
-links={[
-["Twitter", "https://twitter.com/LiberoWolf_"],
-]}
-iconUrl="https://cdn.discordapp.com/avatars/273188925189914628/0bdf455d256a6c9a05570cb367f7a457.webp?size=480"
-
+  name="Wolf"
+  role="Staff, Streamer"
+  hobby="Game Addict"
+  links={[
+    ["Twitter", "https://twitter.com/LiberoWolf_"],
+  ]}
+  iconUrl="https://cdn.discordapp.com/avatars/273188925189914628/0bdf455d256a6c9a05570cb367f7a457.webp?size=480"
 >
 
 Hi I'm Wolf! I'm one of the Staff in Off the Dial.
@@ -71,14 +68,13 @@ I also have a Twitter for posting clips and Twitch where I stream league and oth
 </Card>
 
 <Secret><Card
-name="cyrulean"
-role="technical head"
-hobby="boba addict"
-links={[
-["github", "https://github.com/LeptoFlare"],
-]}
-iconUrl="https://media.discordapp.net/attachments/1037596397924536332/1065561092715200542/slurk.png"
-
+  name="cyrulean"
+  role="technical head"
+  hobby="boba addict"
+  links={[
+    ["github", "https://github.com/LeptoFlare"],
+  ]}
+  iconUrl="https://media.discordapp.net/attachments/1037596397924536332/1065561092715200542/slurk.png"
 >
 
 > <p className="text-xl">**woah! you found me!**</p>

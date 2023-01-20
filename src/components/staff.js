@@ -8,7 +8,7 @@ export const Card = ({ name, iconUrl, role, hobby, links = [], children }) => (
         <img src={iconUrl} className="h-full w-full shrink-0 object-cover" />
       </div>
     </div>
-    <div className="bg-default flex w-full flex-col items-center rounded-t-lg p-8 pt-10">
+    <div className="bg-default flex w-full flex-col items-center rounded-t-xl p-8 pt-10">
       <div className="not-prose py-8 text-center">
         <div className="text-3xl font-semibold">{name}</div>
         <div className="flex flex-wrap gap-2 text-lg text-slate-500 dark:text-slate-400">
