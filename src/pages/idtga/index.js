@@ -110,13 +110,13 @@ const TourneyCard = () => {
             }
             left="Tournament starts:"
           >
-            <p className={tourney.data?.hasEnded() && "line-through"}>
+            <div className={tourney.data?.hasEnded() && "line-through"}>
               {tourney.data ? (
                 format(tourney.data.startDate, "MMM d, h:mm aa")
               ) : (
                 <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
               )}
-            </p>
+            </div>
           </CardInfo>
           <CardInfo
             icon={
@@ -128,7 +128,7 @@ const TourneyCard = () => {
             }
             left="Registration closes:"
           >
-            <p className={tourney.data?.hasClosed() && "line-through"}>
+            <div className={tourney.data?.hasClosed() && "line-through"}>
               {tourney.data ? (
                 tourney.data?.hasClosed() ? (
                   `${duration(tourney.data?.closeDate)} ago`
@@ -138,7 +138,7 @@ const TourneyCard = () => {
               ) : (
                 <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
               )}
-            </p>
+            </div>
           </CardInfo>
         </div>
         <Details />
@@ -238,8 +238,8 @@ const CardInfo = ({ icon, left, className, children }) => (
     >
       {icon}
     </svg>
-    <p className="mr-auto">{left}</p>
-    <p className="font-medium">{children}</p>
+    <div className="mr-auto">{left}</div>
+    <div className="font-medium">{children}</div>
   </div>
 )
 
