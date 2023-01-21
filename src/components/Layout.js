@@ -153,7 +153,7 @@ export const Avatar = ({ className }) => {
 
 const Footer = () => (
   <footer className="flex flex-col items-center gap-8 bg-slate-200 py-8 px-4 text-slate-500 dark:bg-slate-900">
-    <div className="flex w-full max-w-xl items-center justify-evenly text-lg">
+    <div className="flex w-full max-w-xl items-center justify-evenly sm:text-lg">
       <Link className="hover:underline" to="/faq">
         FAQ
       </Link>
@@ -245,6 +245,7 @@ const Author = ({ children }) => {
       <button
         onClick={() => {
           createToast.custom(t => null, {
+            secret: true,
             duration: Infinity,
           })
         }}
