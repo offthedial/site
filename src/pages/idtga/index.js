@@ -17,7 +17,7 @@ const Idtga = () => (
   <Layout helmet={{ title: "IDTGA" }}>
     <div className="bg-otd-slate">
       <div className="mx-3 border-t-2 border-otd-slate-300" />
-      <div className="flex flex-col items-center justify-evenly sm:gap-10 sm:p-10 lg:flex-row">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between sm:gap-10 sm:p-10 lg:flex-row">
         <div className="flex w-fit flex-col items-center p-8 sm:p-0 lg:items-stretch">
           <img src={logo} className="mb-6 h-28 lg:self-start" />
           <p className="text-center text-lg font-medium uppercase tracking-wider text-otd-slate-100 lg:text-left">
