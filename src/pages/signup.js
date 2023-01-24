@@ -99,7 +99,7 @@ const Signup = () => {
                     }
                   </p>
                   <Controller
-                    name={`rank.x.${v}`}
+                    name={`rank.${v}`}
                     control={control}
                     rules={{
                       minLength: {
@@ -123,13 +123,13 @@ const Signup = () => {
                         }}
                         className={clsx(
                           "w-full",
-                          errors?.rank?.x?.[v] &&
+                          errors?.rank?.[v] &&
                             "!border-red-600 dark:!border-red-400"
                         )}
                       />
                     )}
                   />
-                  <Error error={errors?.rank?.x?.[v]} />
+                  <Error error={errors?.rank?.[v]} />
                 </label>
               ))}
             </div>
@@ -141,14 +141,14 @@ const Signup = () => {
                   <input
                     className={clsx(
                       "w-full flex-1 uppercase",
-                      errors?.rank?.letter?.rank &&
+                      errors?.rank?.letter &&
                         "!border-red-600 dark:!border-red-400"
                     )}
                     type="text"
                     size="1"
                     placeholder="A+"
                     autoComplete="off"
-                    {...register("rank.letter.rank", {
+                    {...register("rank.letter", {
                       required: "This field is required",
                       setValueAs: v => v.toUpperCase(),
                       validate: value => {
@@ -159,11 +159,11 @@ const Signup = () => {
                       },
                     })}
                   />
-                  <Error error={errors?.rank?.letter?.rank} />
+                  <Error error={errors?.rank?.letter} />
                 </>,
                 <>
                   <Controller
-                    name="rank.letter.1"
+                    name="rank.points"
                     control={control}
                     rules={{
                       required: "This field is required",
@@ -183,13 +183,13 @@ const Signup = () => {
                         }}
                         className={clsx(
                           "w-full flex-1 uppercase",
-                          errors?.rank?.letter?.points &&
+                          errors?.rank?.points &&
                             "!border-red-600 dark:!border-red-400"
                         )}
                       />
                     )}
                   />
-                  <Error error={errors?.rank?.letter?.points} />
+                  <Error error={errors?.rank?.points} />
                 </>,
               ].map((v, i) => (
                 <div className="w-full" key={i}>
@@ -320,7 +320,7 @@ const RankItem = ({ control, error, yes, no }) => {
                       )}
                     >
                       {["yes", "no"].map(v => (
-                        <RadioGroup.Option value={v}>
+                        <RadioGroup.Option value={v} key={v}>
                           {({ checked }) => (
                             <div
                               className={clsx(

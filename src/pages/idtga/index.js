@@ -87,7 +87,7 @@ const TourneyCard = () => {
       .join(" ")
 
   return (
-    <div className="bg-default flex w-full flex-col items-stretch rounded-t-xl sm:max-w-lg sm:rounded-xl sm:shadow-xl">
+    <div className="bg-default flex w-full flex-col items-stretch rounded-t-xl shadow-xl sm:max-w-lg sm:rounded-xl">
       <div className="rounded-t-xl bg-slate-200 px-8 py-8 dark:bg-slate-800">
         <h2 className="text-center text-xl font-semibold">
           {tourney.data ? (
@@ -164,7 +164,6 @@ const TourneyCard = () => {
           </p>
         </div>
       </div>
-      <div className="h-2 w-full rounded-b-xl border-b-2 border-slate-300 dark:border-slate-600 sm:hidden" />
     </div>
   )
 }
