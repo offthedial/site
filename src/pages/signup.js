@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import React, { useEffect } from "react"
 import { Controller, useForm } from "react-hook-form"
-import { Combobox } from "@headlessui/react"
+import { Combobox, RadioGroup } from "@headlessui/react"
 import Cleave from "cleave.js/react"
 import Layout from "src/components/Layout"
 import weapons from "src/components/weapons"
@@ -11,12 +11,13 @@ const Signup = () => {
   const { handleSubmit, setValue, getValues, control, register, formState } =
     useForm({
       mode: "onTouched",
+      shouldUnregister: true,
     })
   let errors = formState.errors
-  console.log(formState)
+  console.log(formState, getValues())
   return (
     <Layout className="flex items-start justify-center bg-slate-200 dark:bg-slate-900">
-      <form className="bg-default m-12 flex w-full max-w-4xl flex-col gap-12 rounded-xl p-12 shadow">
+      <form className="bg-default flex w-full max-w-4xl flex-col gap-12 p-8 shadow sm:m-12 sm:rounded-xl sm:p-12">
         <FormItem
           title="SplashTag"
           desc="Enter your full Splash Tag, including the hashtag and the 4 numbers at the end."
@@ -24,6 +25,7 @@ const Signup = () => {
           <input
             type="text"
             autoComplete="off"
+            placeholder="Link#2347"
             className={clsx(
               "w-full",
               errors.splashtag && "!border-red-600 dark:!border-red-400"
@@ -79,10 +81,129 @@ const Signup = () => {
           <Error error={errors.sw} />
         </FormItem>
         <Border />
-        <FormItem title="Rank" desc="very fancy rank thing.">
-          <input type="text" autoComplete="off" className="w-full" />
-          {/* first check s+0, require at least 1 x power, suggest previous season */}
-        </FormItem>
+        <RankItem
+          control={control}
+          error={errors.isUnlocked}
+          yes={
+            <div className="grid grid-cols-2 gap-2">
+              {["sz", "tc", "rm", "cb"].map((v, i) => (
+                <label key={v}>
+                  <p className="text-sm font-medium uppercase tracking-wider text-slate-400">
+                    {
+                      [
+                        "Splat Zones",
+                        "Tower Control",
+                        "Rainmaker",
+                        "Clam Blitz",
+                      ][i]
+                    }
+                  </p>
+                  <Controller
+                    name={`rank.x.${v}`}
+                    control={control}
+                    rules={{
+                      minLength: {
+                        value: 6,
+                        message: "Invalid X Power",
+                      },
+                    }}
+                    render={({ field: { onChange, onBlur, value, ref } }) => (
+                      <Cleave
+                        onChange={onChange}
+                        onBlur={onBlur}
+                        htmlRef={ref}
+                        value={value}
+                        type="text"
+                        placeholder="2000.0"
+                        autoComplete="off"
+                        options={{
+                          numericOnly: true,
+                          blocks: [4, 1],
+                          delimiter: ".",
+                        }}
+                        className={clsx(
+                          "w-full",
+                          errors?.rank?.x?.[v] &&
+                            "!border-red-600 dark:!border-red-400"
+                        )}
+                      />
+                    )}
+                  />
+                  <Error error={errors?.rank?.x?.[v]} />
+                </label>
+              ))}
+            </div>
+          }
+          no={
+            <div className="flex w-full gap-2">
+              {[
+                <>
+                  <input
+                    className={clsx(
+                      "w-full flex-1 uppercase",
+                      errors?.rank?.letter?.rank &&
+                        "!border-red-600 dark:!border-red-400"
+                    )}
+                    type="text"
+                    size="1"
+                    placeholder="A+"
+                    autoComplete="off"
+                    {...register("rank.letter.rank", {
+                      required: "This field is required",
+                      setValueAs: v => v.toUpperCase(),
+                      validate: value => {
+                        if (value.startsWith("S+"))
+                          return "You have X Battles unlocked"
+                        if (/^[ABC][\+-]?$|^S$/.test(value)) return true
+                        return "Invalid rank"
+                      },
+                    })}
+                  />
+                  <Error error={errors?.rank?.letter?.rank} />
+                </>,
+                <>
+                  <Controller
+                    name="rank.letter.1"
+                    control={control}
+                    rules={{
+                      required: "This field is required",
+                    }}
+                    render={({ field: { onChange, onBlur, value, ref } }) => (
+                      <Cleave
+                        onChange={onChange}
+                        onBlur={onBlur}
+                        htmlRef={ref}
+                        value={value}
+                        type="text"
+                        autoComplete="off"
+                        placeholder="478"
+                        size="1"
+                        options={{
+                          numeral: true,
+                        }}
+                        className={clsx(
+                          "w-full flex-1 uppercase",
+                          errors?.rank?.letter?.points &&
+                            "!border-red-600 dark:!border-red-400"
+                        )}
+                      />
+                    )}
+                  />
+                  <Error error={errors?.rank?.letter?.points} />
+                </>,
+              ].map((v, i) => (
+                <div className="w-full" key={i}>
+                  <label>
+                    <p className="text-sm font-medium uppercase tracking-wider text-slate-400">
+                      {["Rank", "Points"][i]}
+                    </p>
+                    {v}
+                  </label>
+                </div>
+              ))}
+            </div>
+          }
+        />
         <Border />
         <FormItem
           title="Weapon Pool"
@@ -92,7 +213,7 @@ const Signup = () => {
             error={errors.weapons}
             setValue={setValue}
             getValues={getValues}
-            {...register("weapons", {
+            register={register("weapons", {
               required: "This field is required",
               validate: v =>
                 v.length <= 5 || "You can't select more than 5 weapons",
@@ -111,12 +232,13 @@ const Signup = () => {
             autoComplete="off"
             rows={5}
             className="w-full"
+            placeholder={`Captain of Team Triforce since 1987\nPlayed in the last 4 IDTGAs\nDefeated Ganon in a scrim`}
           />
         </FormItem>
         <Border />
         <FormItem
           title="start.gg User Slug"
-          desc="The 8 characters that are listed on your start.gg profile page."
+          desc="Enter the 8 characters that are listed on your start.gg profile."
         >
           <div className="flex flex-row-reverse items-stretch">
             <input
@@ -164,6 +286,89 @@ const FormItem = ({ title, desc, children }) => (
   </label>
 )
 
+const RankItem = ({ control, error, yes, no }) => {
+  return (
+    <div className="flex flex-col gap-8">
+      <Controller
+        name="isUnlocked"
+        control={control}
+        defaultValue=""
+        rules={{
+          required: "This field is required",
+          setValueAs: v => {
+            if (v === "yes") return true
+            if (v === "no") return false
+          },
+        }}
+        render={({ field }) => (
+          <>
+            <RadioGroup {...field}>
+              <div className="flex flex-row flex-wrap items-end justify-between gap-4 md:items-start md:gap-0">
+                <div className="min-w-min md:flex-[3_3_0%]">
+                  <h2 className="mr-auto text-2xl font-medium">Rank</h2>
+                  <RadioGroup.Label className="text-xl text-slate-700 dark:text-slate-300">
+                    Do you have X Battles unlocked?
+                  </RadioGroup.Label>
+                </div>
+                <div className="hidden md:block md:flex-1"></div>
+                <div className="justify-stretch flex md:flex-[3_3_0%]">
+                  <div className="flex flex-col items-end md:items-start">
+                    <div
+                      className={clsx(
+                        "relative flex shrink-0 items-center gap-0.5 overflow-hidden rounded-lg border-2 border-slate-400 bg-slate-400 dark:border-slate-700 dark:bg-slate-700",
+                        error && "!border-red-600 dark:!border-red-400"
+                      )}
+                    >
+                      {["yes", "no"].map(v => (
+                        <RadioGroup.Option value={v}>
+                          {({ checked }) => (
+                            <div
+                              className={clsx(
+                                "text-semibold cursor-pointer rounded-md py-1.5 px-3 text-lg capitalize",
+                                checked
+                                  ? "bg-slate-100 shadow-sm dark:bg-slate-900"
+                                  : "hover:bg-slate-300 dark:hover:bg-slate-800"
+                              )}
+                            >
+                              {v}
+                            </div>
+                          )}
+                        </RadioGroup.Option>
+                      ))}
+                    </div>
+                    <Error error={error} />
+                  </div>
+                </div>
+              </div>
+            </RadioGroup>
+            <div className="flex flex-col gap-2 md:flex-row md:justify-between md:gap-0">
+              <div className="flex-[3_3_0%] text-xl text-slate-700 dark:text-slate-300">
+                {field.value === "yes" && (
+                  <>
+                    <p>Enter your most recent X powers for each mode.</p>
+                    <p>
+                      If you haven't done calculations for this season, enter
+                      last season's powers instead.
+                    </p>
+                  </>
+                )}
+                {field.value === "no" && (
+                  <p>Enter your current rank, and your ranking points.</p>
+                )}
+              </div>
+              <div className="flex-1"></div>
+              <div className="flex-[3_3_0%]">
+                {field.value === "yes" && yes}
+                {field.value === "no" && no}
+              </div>
+            </div>
+          </>
+        )}
+      />
+    </div>
+  )
+}
+
 const WeaponSelect = ({ getValues, setValue, error }) => {
   let [query, setQuery] = React.useState("")
   let [activeWeapons, setActiveWeapons] = React.useState([])
@@ -186,9 +391,6 @@ const WeaponSelect = ({ getValues, setValue, error }) => {
             "inline-block w-full cursor-text rounded-lg border-2 border-slate-400 bg-transparent px-3 py-2 text-lg focus-within:!border-otd-slate-600 focus-within:ring-transparent dark:border-slate-700 focus-within:dark:!border-otd-slate-400",
             error && "!border-red-600 dark:!border-red-400"
           )}
-          onClick={() => {
-            document.getElementById("weapon-input").focus()
-          }}
         >
           <span className="flex flex-wrap gap-2">
             {activeWeapons.map(weapon => (
@@ -196,7 +398,7 @@ const WeaponSelect = ({ getValues, setValue, error }) => {
                 key={weapon.id}
                 className="flex h-7 items-center gap-2 rounded bg-slate-200 px-2 py-0.5 text-sm dark:bg-slate-700"
               >
-                <img src={weapon.img} className="h-5 w-5" />
+                <img src={weapon.img} alt="" className="h-5 w-5" />
                 <span>{weapon.name}</span>
                 <svg
                   className="h-4 w-4 cursor-pointer"
@@ -223,9 +425,8 @@ const WeaponSelect = ({ getValues, setValue, error }) => {
             ))}
             <Combobox.Input
               type="text"
-              id="weapon-input"
               onChange={event => setQuery(event.target.value)}
-              onFocus={() => query != "" && setQuery("")}
+              onFocus={() => query !== "" && setQuery("")}
               onBlur={() =>
                 setActiveWeapons(
                   Array.isArray(getValues()?.weapons) ? [...activeWeapons] : []
@@ -254,7 +455,7 @@ const WeaponSelect = ({ getValues, setValue, error }) => {
                 {({ active, selected }) => (
                   <div className="flex justify-between">
                     <div className="flex items-center gap-3 truncate">
-                      <img src={weapon.img} className="h-6 w-6" />
+                      <img src={weapon.img} alt="" className="h-6 w-6" />
                       <span
                         className={selected ? "font-semibold" : "font-normal"}
                       >

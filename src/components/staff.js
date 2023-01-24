@@ -5,7 +5,11 @@ export const Card = ({ name, iconUrl, role, hobby, links = [], children }) => (
   <div className="overflow-hidden rounded-xl border-2 border-slate-200 bg-slate-200 text-lg shadow-xl dark:border-slate-700 dark:bg-slate-700 dark:shadow-2xl">
     <div className="flex h-20 w-full justify-center">
       <div className="mt-auto flex h-20 w-20 translate-y-[50%] items-center justify-center overflow-hidden rounded-full bg-slate-400 dark:bg-slate-500">
-        <img src={iconUrl} className="h-full w-full shrink-0 object-cover" />
+        <img
+          src={iconUrl}
+          alt=""
+          className="h-full w-full shrink-0 object-cover"
+        />
       </div>
     </div>
     <div className="bg-default flex w-full flex-col items-center rounded-t-xl p-8 pt-10">
