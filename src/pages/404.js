@@ -8,7 +8,7 @@ const Page404 = () => {
     <Layout className="flex items-center">
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center gap-12 p-8 md:flex-row md:gap-16 md:p-12">
         <div className="flex items-center justify-center">
-          <img src={confusion} className="max-h-56 sm:max-h-64" />
+          <img src={confusion} alt="" className="max-h-56 sm:max-h-64" />
         </div>
         <div>
           <code className="text-5xl tracking-wide sm:text-6xl">404</code>

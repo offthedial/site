@@ -19,7 +19,7 @@ const Idtga = () => (
       <div className="mx-3 border-t-2 border-otd-slate-300" />
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between sm:gap-10 sm:p-10 lg:flex-row">
         <div className="flex w-fit flex-col items-center p-8 sm:p-0 lg:items-stretch">
-          <img src={logo} className="mb-6 h-28 lg:self-start" />
+          <img src={logo} alt="" className="mb-6 h-28 lg:self-start" />
           <p className="text-center text-lg font-medium uppercase tracking-wider text-otd-slate-100 lg:text-left">
             This Season Of
           </p>
@@ -32,7 +32,7 @@ const Idtga = () => (
     </div>
     <div className="relative flex flex-col md:flex-row">
       <div className="ml-auto max-w-[calc(72rem+((100vw-72rem)/2))] pt-16 pl-5">
-        <img src={skater} />
+        <img src={skater} alt="" />
       </div>
       <div className="mx-auto flex max-w-6xl md:absolute md:inset-0">
         <div className="md:flex-1" />
@@ -321,7 +321,7 @@ const Blurb = ({ heading, desc, src, className }) => (
         </p>
       </div>
       <div className="flex-1">
-        <img src={src} className="w-64 sm:w-auto" />
+        <img src={src} alt="" className="w-64 sm:w-auto" />
       </div>
     </div>
   </AnimationOnScroll>
