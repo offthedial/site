@@ -482,33 +482,35 @@ const ActionButtons = () => {
   )
 }
 
-const TopAlert = () => {
+const JoinDiscordAlert = () => {
   const discord = useDiscord()
   if (discord.data?.hasJoined === false) {
     return (
-      <div className="mb-8 flex items-stretch rounded-xl bg-red-400/20 dark:bg-red-500/20">
-        <div className="flex items-center justify-center rounded-l-xl bg-red-400/40 p-4 text-red-500 dark:bg-red-500/40 dark:text-red-300">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
-            />
-          </svg>
-        </div>
-        <div className="flex flex-col items-stretch justify-center gap-4 p-4">
-          <p>
+      <div className="mb-8 flex items-start gap-4 rounded-xl bg-orange-400/20 p-4 text-lg text-orange-500 dark:bg-orange-500/20 dark:text-orange-400">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="currentColor"
+          className="mt-1 h-6 w-6 shrink-0"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+          />
+        </svg>
+
+        <div className="grow">
+          <p className="mb-4 text-orange-700 dark:text-orange-200">
             You must be in the Off the Dial discord server to participate in
             tournaments.
           </p>
-          <Link to="/discord" className="font-black hover:underline">
+          <Link
+            className="font-bold text-orange-800 hover:underline dark:text-orange-100"
+            to="/discord"
+          >
             Join the Server
           </Link>
         </div>
@@ -537,7 +539,7 @@ const Page = () => (
   <Layout className="m-8" helmet={{ title: "Profile" }}>
     <PrivateRoute>
       <div className="mx-auto max-w-3xl">
-        <TopAlert />
+        <JoinDiscordAlert />
         <div className="rounded-xl sm:bg-slate-200 sm:p-8 dark:sm:bg-slate-900">
           <Profile />
         </div>
