@@ -38,7 +38,8 @@ const createMarkdownPages = async (createPage, graphql) => {
 const createRedirectPages = async createPage => {
   const links = [
     ["youtube", "https://www.youtube.com/channel/UCjFqnfg0CKsnQ8ag1MfNtuQ"],
-    ["patreon", "https://patreon.com/offthedial"],
+    ["patreon", "https://shop.otd.ink"],
+    ["shop", "https://shop.otd.ink"],
     ["twitch", "https://twitch.tv/offthedial"],
     ["twitter", "https://twitter.com/off_the_dial"],
     ["github", "https://github.com/offthedial"],
