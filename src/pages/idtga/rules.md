@@ -15,15 +15,15 @@ The skill brackets are, in order of highest skill to lowest skill: **Power** (hi
 
 - Format: `Swiss`
 - Matches: `Play all 3`
-- There are 4 total rounds
-- In the event a tiebreaker is nessecary to decide top cut, the total sets won will be used. If that is the same, a head-to-head on Splat Zones (random map) will be used.
+- There are 4 rounds in each bracket.
+- There is no elimination, remember to play all of your rounds!
 
 ### Top Cut:
 
 - Format: `Single Elimination`
 - Matches: `Best of 5`
 - The top 4 teams advance from the preliminaries.
-- There is no 3rd place match. 3rd place is be determined by preliminary results.
+- There is no 3rd place match. 3rd place is determined by preliminary results.
 
 ## Schedule
 
@@ -146,13 +146,6 @@ Sometimes, there are no available subs to substitute for missing players. In thi
 Subs must be approved by a TO and have signed up as a sub at [otd.ink/signup](https://otd.ink/signup).
 
 If all options are exhausted, your team will be disqualified and become emergency subs.
-
-## Lobby Settings
-
-- A password must be set.
-- `Primary Gear Abilities Only` must be off.
-- `Recon Mode` must be off.
-- The corresponding stage and mode in <Mention>#maplist</Mention> must be used.
 
 ## Team Updates
 

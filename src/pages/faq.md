@@ -75,10 +75,6 @@ The skill brackets are, in order of highest skill to lowest skill: **Master**, *
 
 They don't apply, the purpose of skill brackets is simply to ensure that skill gaps between players aren't too far apart. They are not designed to determine a player's absolute skill level in the competitive scene.
 
-#### I just lost my set, am I out of the tournament?
-
-No, this tournament's format is Swiss, not Single or Double Elimination. So make sure you have played **all of the rounds** in the preliminaries!
-
 #### I’ve just finished a season of IDTGA, what do I do now?
 
 Congrats! We hope you had fun! If you didn't make top cut, you can still watch the rest of the tournament on [Twitch](https://twitch.tv/offthedial)!
