@@ -32,6 +32,7 @@ const useTourney = () =>
     result.data.endDate = fromUnixTime(result.data.smashgg.endAt)
     result.data.hasEnded = () => isPast(result.data.endDate)
     result.data.hasClosed = () => isPast(result.data.closeDate)
+    result.data.inviteOnly = () => result.data.type.startsWith("invite")
     return result?.data
   })
 

@@ -524,36 +524,37 @@ const Border = () => (
 const SignupPage = () => {
   const [user] = useAuthState(auth)
   const tourney = useTourney()
+  const blocked =
+    tourney.data?.inviteOnly() && !tourney.data?.whitelist?.includes(user?.uid)
 
   return (
     <Layout className="flex items-start justify-center bg-slate-200 dark:bg-slate-900">
       <PrivateRoute>
-        {!tourney.data?.isWhitelist() &&
-        !tourney.data?.whitelist?.includes(user?.uid) ? (
-          <div className="flex max-w-2xl flex-col items-center justify-center self-center p-8 text-center">
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-slate-300 dark:bg-slate-800">
+        {blocked ? (
+          <div className="flex max-w-3xl flex-col items-center justify-center gap-4 self-center p-8 text-center text-2xl text-slate-700 dark:text-slate-300">
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-700 text-slate-50 dark:bg-slate-300 dark:text-slate-900">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={1.5}
+                strokeWidth={2}
                 stroke="currentColor"
                 className="h-6 w-6"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
                 />
               </svg>
             </div>
-            <article className="prose prose-2xl prose-slate dark:prose-invert">
-              <p>This is a whitelisted tournament</p>
-              <p>
-                If you think this is a mistake, try contacting one of the
-                Tournament Organisers
-              </p>
-            </article>
+            <p className="font-bold">
+              You are not whitelisted for this tournament!
+            </p>
+            <p className="text-slate-600 dark:text-slate-400">
+              If you think this is a mistake, please contact one of the
+              Tournament Organisers
+            </p>
           </div>
         ) : (
           <Signup />
