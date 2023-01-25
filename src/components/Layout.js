@@ -123,10 +123,7 @@ export const Avatar = ({ className }) => {
   return (
     <Link
       to="/profile"
-      className={clsx(
-        "relative flex-shrink-0 rounded-full bg-slate-100 text-otd-slate",
-        className
-      )}
+      className={clsx("relative flex-shrink-0 rounded-full", className)}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -140,6 +137,7 @@ export const Avatar = ({ className }) => {
           clipRule="evenodd"
         />
       </svg>
+
       {discord.data && (
         <img
           src={discord.data.avatarUrl}
