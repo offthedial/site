@@ -418,13 +418,31 @@ const allPhases = tourney => {
 }
 
 const ActionButtons = () => {
+  const [confirm, setConfirm] = React.useState(false)
   const logoutUser = useLogoutUser()
   const deleteUser = useDeleteUser()
   return (
     <div className="flex items-center gap-3">
+      {confirm && (
+        <div className="flex gap-2">
+          <p className="text-slate-600 dark:text-slate-400">Are you sure?</p>
+          <button
+            onClick={() => setConfirm(false)}
+            className="font-bold hover:underline"
+          >
+            Cancel
+          </button>
+        </div>
+      )}
       <button
-        onClick={deleteUser.mutate}
-        className="flex items-center justify-center rounded-lg border-2 border-transparent p-3 text-slate-400 hover:border-slate-300 hover:bg-slate-300 hover:text-red-700 dark:text-slate-700 dark:hover:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-red-400"
+        onClick={() => {
+          confirm ? deleteUser.mutate() : setConfirm(true)
+        }}
+        className={clsx(
+          "flex items-center justify-center rounded-lg border-2 border-transparent p-3 text-slate-400 hover:border-slate-300 hover:bg-slate-300 hover:text-red-700 dark:text-slate-700 dark:hover:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-red-400",
+          confirm &&
+            "border-slate-300 bg-slate-300 !text-red-700 hover:!bg-slate-400 dark:border-slate-800 dark:bg-slate-800 dark:!text-red-400 dark:hover:!bg-slate-700"
+        )}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
