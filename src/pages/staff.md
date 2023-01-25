@@ -67,6 +67,8 @@ I also have a Twitter for posting clips and Twitch where I stream league and oth
 
 </Card>
 
+{/* CAUTION -- THIS IS MY SECRET CARD! IF YOU ARE ADDING NEW STAFF CARDS, PLEASE PUT THEM ABOVE THIS LINE */}
+
 <Secret><Card
   name="cyrulean"
   role="technical head"
