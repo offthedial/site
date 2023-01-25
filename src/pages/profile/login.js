@@ -128,6 +128,7 @@ const tokenEndpoint = ({ code, state }, setError) => {
         setError(error)
       }
     })
+    .catch(error => setError(error.message))
 }
 
 export default ProfileLogin
