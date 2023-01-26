@@ -5,25 +5,66 @@ import { Controller, useForm } from "react-hook-form"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { matchSorter } from "match-sorter"
 import { Combobox, RadioGroup } from "@headlessui/react"
+import { useMutation } from "@tanstack/react-query"
 import Cleave from "cleave.js/react"
 import Layout from "src/components/Layout"
 import weapons from "src/components/weapons"
 import PrivateRoute from "src/components/PrivateRoute"
-import { auth } from "src/app"
+import { auth, db, queryClient } from "src/app"
 import useTourney from "src/app/useTourney"
 import useDiscord from "src/app/useDiscord"
 import useUserSignup from "src/app/useUserSignup"
+import useUser from "src/app/useUser"
+import { format } from "date-fns"
+import { doc, setDoc, updateDoc } from "firebase/firestore"
 
 const Signup = () => {
+  // Initialize form
   const form = useForm({ mode: "onTouched", shouldUnregister: true })
   const formErrors = form.formState.errors
-  console.log(form)
 
-  const onSubmit = form.handleSubmit((data, e) => {})
+  // Autofill form with profile data
+  const user = useUser({ staleTime: Infinity })
+  React.useEffect(() => {
+    form.reset(user.data?.profile)
+  }, [user.data])
+
+  // Handle form submit
+  const onSubmit = useMutation(
+    async profile => {
+      const tourney = queryClient.getQueryData(["tourney"])
+      const user = queryClient.getQueryData(["user"])
+      const userSignup = queryClient.getQueryData(["user", "signup"])
+      // Update profile to database
+      await updateDoc(user.ref, { profile })
+
+      // Upsert signup to database
+      if (tourney.hasEnded()) throw Error("The tournament has ended")
+      await setDoc(
+        userSignup
+          ? userSignup.ref
+          : doc(
+              db,
+              "tournaments",
+              tourney.id,
+              tourney.hasClosed() ? "subs" : "signups",
+              user.uid
+            ),
+        {
+          signupDate:
+            userSignup.signupDate ||
+            format(new Date(), "yyyy-MM-dd HH:mm:ss zzzz"),
+          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+          modifiedDate: format(new Date(), "yyyy-MM-dd HH:mm:ss zzzz"),
+        }
+      )
+    },
+    { onSuccess: () => queryClient.invalidateQueries(["user"]) }
+  )
 
   return (
     <form
-      onSubmit={onSubmit}
+      onSubmit={form.handleSubmit(data => onSubmit.mutate(data))}
       className="bg-default flex w-full max-w-4xl flex-col gap-12 p-8 shadow sm:m-12 sm:rounded-xl sm:p-12"
     >
       <FormItem
@@ -232,8 +273,7 @@ const Signup = () => {
           control={form.control}
           rules={{
             required: "This field is required",
-            validate: v =>
-              v.length <= 5 || "You can't select more than 5 weapons",
+            validate: v => v.length <= 5 || "Too many weapons selected",
           }}
           defaultValue={[]}
           render={({ field }) => (
@@ -318,6 +358,7 @@ const Signup = () => {
               type="submit"
               disabled={
                 !button ||
+                form.formState.isSubmitting ||
                 (button === "Update Profile" && !form.formState.isDirty)
               }
               className="w-full rounded-lg bg-otd-slate/50 py-3.5 text-xl font-semibold uppercase tracking-wider enabled:cursor-pointer hover:enabled:bg-otd-slate/75 disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-600 disabled:dark:bg-slate-800 disabled:dark:text-slate-400"
@@ -342,7 +383,9 @@ const WithAlert = ({ children }) => {
   const discord = useDiscord()
   let props
 
-  if (tourney.data && tourney.data.hasEnded()) {
+  if (!tourney.data) {
+    props = {}
+  } else if (tourney.data.hasEnded()) {
     props = {
       style: "text-blue-600 dark:text-blue-400",
       message:
@@ -375,14 +418,13 @@ const WithAlert = ({ children }) => {
             button: "Update Profile",
           }
   } else {
-    props =
-      tourney.data && tourney.data.hasClosed()
-        ? {
-            style: "text-orange-600 dark:text-orange-400",
-            message: "Signups have closed, but you can still sign up as a sub!",
-            button: "Signup as a Sub",
-          }
-        : { button: "Signup" }
+    props = tourney.data.hasClosed()
+      ? {
+          style: "text-amber-600 dark:text-amber-400",
+          message: "Signups have closed, but you can still sign up as a sub!",
+          button: "Signup as a Sub",
+        }
+      : { button: "Signup" }
   }
   return children(props)
 }
@@ -459,8 +501,12 @@ const RankItem = ({ control, error, yes, no }) => {
               </div>
               <div className="flex-1"></div>
               <div className="flex-[3_3_0%]">
-                {field.value === "yes" && yes}
-                {field.value === "no" && no}
+                <div className={clsx({ hidden: field.value !== "yes" })}>
+                  {yes}
+                </div>
+                <div className={clsx({ hidden: field.value !== "no" })}>
+                  {no}
+                </div>
               </div>
             </div>
           </>
@@ -472,7 +518,6 @@ const RankItem = ({ control, error, yes, no }) => {
 
 const WeaponSelect = ({ error, field, onX }) => {
   let [query, setQuery] = React.useState("")
-  console.log(field)
 
   return (
     <Combobox multiple by="id" {...field}>
@@ -609,7 +654,12 @@ const SignupPage = () => {
     tourney.data?.inviteOnly() && !tourney.data?.whitelist?.includes(user?.uid)
 
   return (
-    <Layout className="flex items-start justify-center bg-slate-200 dark:bg-slate-900">
+    <Layout
+      className={clsx(
+        "flex items-start justify-center",
+        !blocked && "bg-slate-200 dark:bg-slate-900"
+      )}
+    >
       <PrivateRoute>
         {blocked ? (
           <div className="flex max-w-3xl flex-col items-center justify-center gap-4 self-center p-8 text-center text-2xl text-slate-700 dark:text-slate-300">
@@ -629,7 +679,7 @@ const SignupPage = () => {
                 />
               </svg>
             </div>
-            <p className="font-bold">
+            <p className="font-semibold">
               You are not whitelisted for this tournament!
             </p>
             <p className="text-slate-600 dark:text-slate-400">

@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth"
 import { useQuery } from "@tanstack/react-query"
 import { auth, db } from "src/app"
 
-const useUser = () => {
+const useUser = options => {
   const [user, loading, error] = useAuthState(auth)
   const query = useQuery(
     ["user"],
@@ -18,6 +18,7 @@ const useUser = () => {
     },
     {
       enabled: loading === false,
+      ...options,
     }
   )
   if (user && !query.data) {
