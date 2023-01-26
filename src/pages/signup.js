@@ -225,7 +225,7 @@ const Signup = () => {
                     validate: value => {
                       if (value.startsWith("S+"))
                         return "You have X Battles unlocked"
-                      if (/^[ABC][\+-]?$|^S$/.test(value)) return true
+                      if (/^[ABC][+-]?$|^S$/.test(value)) return true
                       return "Invalid rank"
                     },
                   })}
