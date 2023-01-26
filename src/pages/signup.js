@@ -255,13 +255,13 @@ const Signup = () => {
       <Border />
       <FormItem
         title="Competitive Experience"
-        desc="Put in your relevant competitive experience, such as tournament placements, how long you've been playing competitively, your LUTI division, etc."
+        desc="List any relevant competitive experience. For example: LUTI division, tournament placements, team experience."
       >
         <textarea
           {...form.register("cxp")}
           type="text"
           autoComplete="off"
-          rows={5}
+          rows={4}
           className="w-full"
           placeholder={`Captain of Team Triforce since 1987\nPlayed in the last 4 IDTGAs\nDefeated Ganon in a scrim`}
         />
@@ -269,7 +269,18 @@ const Signup = () => {
       <Border />
       <FormItem
         title="start.gg User Slug"
-        desc="Enter the 8 characters that are listed on your start.gg profile."
+        desc={
+          <>
+            Enter the 8 characters that are listed on your{" "}
+            <a
+              className="text-default font-medium underline decoration-otd-slate hover:decoration-transparent"
+              href="https://start.gg/profile"
+            >
+              start.gg profile
+            </a>
+            .
+          </>
+        }
       >
         <div className="flex flex-row-reverse items-stretch">
           <input
