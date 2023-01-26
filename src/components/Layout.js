@@ -238,7 +238,7 @@ const Footer = () => (
 )
 
 const Author = ({ children }) => {
-  if (window?.location.pathname === "/staff") {
+  if (typeof window !== "undefined" && window.location.pathname === "/staff") {
     return (
       <button
         onClick={() => {
