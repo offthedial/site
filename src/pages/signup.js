@@ -37,9 +37,17 @@ const Signup = () => {
       const userSignup = queryClient.getQueryData(["user", "signup"])
       // Update profile to database
       await updateDoc(user.ref, { profile })
+      queryClient.setQueryData(["user"], old => ({ ...old, profile }))
 
       // Upsert signup to database
       if (tourney.hasEnded()) throw Error("The tournament has ended")
+      const signup = {
+        signupDate:
+          userSignup?.signupDate ||
+          format(new Date(), "yyyy-MM-dd HH:mm:ss zzzz"),
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        modifiedDate: format(new Date(), "yyyy-MM-dd HH:mm:ss zzzz"),
+      }
       await setDoc(
         userSignup
           ? userSignup.ref
@@ -50,16 +58,21 @@ const Signup = () => {
               tourney.hasClosed() ? "subs" : "signups",
               user.uid
             ),
-        {
-          signupDate:
-            userSignup.signupDate ||
-            format(new Date(), "yyyy-MM-dd HH:mm:ss zzzz"),
-          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-          modifiedDate: format(new Date(), "yyyy-MM-dd HH:mm:ss zzzz"),
-        }
+        signup
       )
+      queryClient.setQueryData(["user", "signup"], old => ({
+        ...old,
+        signup,
+      }))
+      return { user, userSignup }
     },
-    { onSuccess: () => queryClient.invalidateQueries(["user"]) }
+    {
+      onError: (e, v, context) => {
+        queryClient.setQueryData(["user"], context.user)
+        queryClient.setQueryData(["user", "signup"], context.userSignup)
+      },
+      onSettled: () => queryClient.invalidateQueries(["user"]),
+    }
   )
 
   return (
@@ -303,7 +316,7 @@ const Signup = () => {
           autoComplete="off"
           rows={4}
           className="w-full"
-          placeholder={`Captain of Team Triforce since 1987\nPlayed in the last 4 IDTGAs\nDefeated Ganon in a scrim`}
+          placeholder={`Captain of Team Triforce since 1987`}
         />
       </FormItem>
       <Border />
