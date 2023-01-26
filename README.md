@@ -37,7 +37,7 @@ The website can be found at [`otd.ink`](https://otd.ink).
 
 ### maintenance
 
-<details><summary>Updating weapon pools:</summary>
+<details><summary>Updating weapon data:</summary>
 
 > - Navigate to https://github.com/offthedial/site/blob/HEAD/src/components/weapons.js. This is where the weapon data is stored.
 > - All images / data is linked to from sendou.ink. Inside the file, you will see a link to the corresponding `weapon.json` file.
