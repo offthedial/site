@@ -48,7 +48,7 @@ const Nav = () => (
     <div className="hidden md:block">
       <DiscordJoin className="h-full" />
     </div>
-    <Avatar className="h-10 w-10" />
+    <Avatar className="h-10 w-10 text-otd-slate-50" />
     <DropdownMenu.Root>
       <Burger />
       <DropdownMenu.Portal>
@@ -127,7 +127,7 @@ export const Avatar = ({ className }) => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
+        viewBox="2 2 20 20"
         fill="currentColor"
         className="absolute inset-0"
       >
@@ -137,7 +137,6 @@ export const Avatar = ({ className }) => {
           clipRule="evenodd"
         />
       </svg>
-
       {discord.data && (
         <img
           src={discord.data.avatarUrl}

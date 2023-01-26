@@ -25,7 +25,7 @@ const Profile = () => {
   return (
     <div className="flex flex-col items-stretch gap-8">
       <div className="flex flex-wrap items-center gap-6">
-        <Avatar className="h-14 w-14" />
+        <Avatar className="h-14 w-14 text-slate-400 dark:text-slate-700" />
         <h2 className="mr-auto text-2xl font-medium sm:text-3xl">
           {discord.data?.username}
         </h2>
