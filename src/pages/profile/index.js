@@ -63,45 +63,39 @@ const Profile = () => {
 const TournamentDashboard = () => {
   const signup = useUserSignup()
   const tourney = useTourney()
-  let props = {
-    style: null,
-    message: null,
-    button: null,
-  }
+  let props
 
   if (!tourney.data || tourney.data.hasEnded()) {
     props = {
       style: "blue",
-      message: "There's no tournament going on at the moment, stay tuned!",
+      message:
+        "There's no tournament going on at the moment, stay tuned for the next!",
     }
   } else if (signup.data) {
-    if (signup.data.type === "sub") {
-      props = {
-        style: "lime",
-        message: "You're registered for the tournament as a sub!",
-        button: "Update Profile",
-      }
-    } else {
-      props = {
-        style: "green",
-        message: "You're registered for the tournament!",
-        button: "Update Profile",
-      }
-    }
+    props =
+      signup.data.type === "sub"
+        ? {
+            style: "lime",
+            message: "You're registered for the tournament as a sub!",
+            button: "Update Profile",
+          }
+        : {
+            style: "green",
+            message: "You're registered for the tournament!",
+            button: "Update Profile",
+          }
   } else {
-    if (tourney.data.hasClosed()) {
-      props = {
-        style: "orange",
-        message: "Signups have closed, but you can still sign up as a sub!",
-        button: "Signup as a Sub",
-      }
-    } else {
-      props = {
-        style: "red",
-        message: "You're not registered for the tournament yet.",
-        button: "Signup",
-      }
-    }
+    props = tourney.data.hasClosed()
+      ? {
+          style: "orange",
+          message: "Signups have closed, but you can still sign up as a sub!",
+          button: "Signup as a Sub",
+        }
+      : {
+          style: "red",
+          message: "You're not registered for the tournament yet.",
+          button: "Signup",
+        }
   }
 
   return (

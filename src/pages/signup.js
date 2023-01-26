@@ -1,16 +1,18 @@
 import clsx from "clsx"
-import React, { useEffect } from "react"
+import React from "react"
+import { Link } from "gatsby"
 import { Controller, useForm } from "react-hook-form"
+import { useAuthState } from "react-firebase-hooks/auth"
+import { matchSorter } from "match-sorter"
 import { Combobox, RadioGroup } from "@headlessui/react"
 import Cleave from "cleave.js/react"
 import Layout from "src/components/Layout"
 import weapons from "src/components/weapons"
-import { matchSorter } from "match-sorter"
 import PrivateRoute from "src/components/PrivateRoute"
-import useUser from "src/app/useUser"
-import useTourney from "src/app/useTourney"
-import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "src/app"
+import useTourney from "src/app/useTourney"
+import useDiscord from "src/app/useDiscord"
+import useUserSignup from "src/app/useUserSignup"
 
 const Signup = () => {
   const form = useForm({ mode: "onTouched", shouldUnregister: true })
@@ -224,15 +226,29 @@ const Signup = () => {
         title="Weapon Pool"
         desc="List up to 5 weapons that you would be comfortable playing during the tournament."
       >
-        <WeaponSelect
-          error={formErrors.weapons}
-          setValue={form.setValue}
-          getValues={form.getValues}
-          register={form.register("weapons", {
+        <Controller
+          name="weapons"
+          type="select"
+          control={form.control}
+          rules={{
             required: "This field is required",
             validate: v =>
               v.length <= 5 || "You can't select more than 5 weapons",
-          })}
+          }}
+          defaultValue={[]}
+          render={({ field }) => (
+            <WeaponSelect
+              error={formErrors.weapons}
+              field={field}
+              onX={weapon => {
+                form.setValue(
+                  "weapons",
+                  form.getValues("weapons").filter(p => p.id !== weapon.id),
+                  { shouldValidate: true }
+                )
+              }}
+            />
+          )}
         />
         <Error error={formErrors.weapons} />
       </FormItem>
@@ -284,9 +300,80 @@ const Signup = () => {
         <Error error={formErrors.slug} />
       </FormItem>
       <Border />
-      signup
+      <WithAlert>
+        {({ style, message, button }) => (
+          <div className="flex w-full flex-col justify-center">
+            <button
+              type="submit"
+              disabled={
+                !button ||
+                (button === "Update Profile" && !form.formState.isDirty)
+              }
+              className="w-full rounded-lg bg-otd-slate/50 py-3.5 text-xl font-semibold uppercase tracking-wider enabled:cursor-pointer hover:enabled:bg-otd-slate/75 disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-600 disabled:dark:bg-slate-800 disabled:dark:text-slate-400"
+            >
+              {button || "Signup"}
+            </button>
+            <p
+              className={clsx("mt-4 text-center text-lg font-semibold", style)}
+            >
+              {message}
+            </p>
+          </div>
+        )}
+      </WithAlert>
     </form>
   )
+}
+
+const WithAlert = ({ children }) => {
+  const signup = useUserSignup()
+  const tourney = useTourney()
+  const discord = useDiscord()
+  let props
+
+  if (tourney.data && tourney.data.hasEnded()) {
+    props = {
+      style: "text-blue-600 dark:text-blue-400",
+      message:
+        "There's no tournament going on at the moment, stay tuned for the next one!",
+    }
+  } else if (discord.data?.hasJoined === false) {
+    props = {
+      style: "text-red-600 dark:text-red-400",
+      message: (
+        <>
+          You must be in the{" "}
+          <Link to="/discord" className="underline hover:no-underline">
+            Off the Dial discord server
+          </Link>{" "}
+          to participate!
+        </>
+      ),
+    }
+  } else if (signup.data) {
+    props =
+      signup.data.type === "sub"
+        ? {
+            style: "text-lime-600 dark:text-lime-400",
+            message: "You're registered for the tournament as a sub!",
+            button: "Update Profile",
+          }
+        : {
+            style: "text-green-600 dark:text-green-400",
+            message: "You're registered for the tournament!",
+            button: "Update Profile",
+          }
+  } else {
+    props =
+      tourney.data && tourney.data.hasClosed()
+        ? {
+            style: "text-orange-600 dark:text-orange-400",
+            message: "Signups have closed, but you can still sign up as a sub!",
+            button: "Signup as a Sub",
+          }
+        : { button: "Signup" }
+  }
+  return children(props)
 }
 
 const RankItem = ({ control, error, yes, no }) => {
@@ -372,22 +459,12 @@ const RankItem = ({ control, error, yes, no }) => {
   )
 }
 
-const WeaponSelect = ({ getValues, setValue, error }) => {
+const WeaponSelect = ({ error, field, onX }) => {
   let [query, setQuery] = React.useState("")
-  let [activeWeapons, setActiveWeapons] = React.useState([])
-
-  useEffect(() => {
-    setValue("weapons", activeWeapons, {
-      shouldValidate: Array.isArray(getValues()?.weapons),
-    })
-  }, [activeWeapons])
+  console.log(field)
 
   return (
-    <Combobox
-      value={activeWeapons}
-      onChange={weapons => setActiveWeapons(weapons)}
-      multiple
-    >
+    <Combobox multiple by="id" {...field}>
       <div className="relative">
         <div
           className={clsx(
@@ -396,7 +473,7 @@ const WeaponSelect = ({ getValues, setValue, error }) => {
           )}
         >
           <span className="flex flex-wrap gap-2">
-            {activeWeapons.map(weapon => (
+            {field.value.map(weapon => (
               <span
                 key={weapon.id}
                 className="flex h-7 items-center gap-2 rounded bg-slate-200 px-2 py-0.5 text-sm dark:bg-slate-700"
@@ -412,9 +489,7 @@ const WeaponSelect = ({ getValues, setValue, error }) => {
                   onClick={e => {
                     e.stopPropagation()
                     e.preventDefault()
-                    setActiveWeapons(existing =>
-                      existing.filter(p => p !== weapon)
-                    )
+                    onX(weapon)
                   }}
                 >
                   <path
@@ -430,11 +505,6 @@ const WeaponSelect = ({ getValues, setValue, error }) => {
               type="text"
               onChange={event => setQuery(event.target.value)}
               onFocus={() => query !== "" && setQuery("")}
-              onBlur={() =>
-                setActiveWeapons(
-                  Array.isArray(getValues()?.weapons) ? [...activeWeapons] : []
-                )
-              }
               className="min-w-0 grow border-none p-0 focus:ring-0"
               size="6"
               placeholder="Search..."
