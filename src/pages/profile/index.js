@@ -486,7 +486,7 @@ const JoinDiscordAlert = () => {
   const discord = useDiscord()
   if (discord.data?.hasJoined === false) {
     return (
-      <div className="mb-8 flex items-start gap-4 rounded-xl bg-orange-400/20 p-4 text-lg text-orange-500 dark:bg-orange-500/20 dark:text-orange-400">
+      <div className="-m-8 mb-8 flex items-start gap-4 bg-orange-400/20 p-4 text-lg text-orange-500 dark:bg-orange-500/20 dark:text-orange-400 sm:m-0 sm:mb-8 sm:rounded-xl">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

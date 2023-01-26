@@ -163,7 +163,7 @@ const Hero = () => {
       className="mx-auto flex aspect-[3] w-full max-w-6xl items-center rounded-xl bg-cover bg-left-top p-6 text-center text-slate-100 sm:p-12 sm:text-left lg:gap-12 lg:bg-center"
       style={{ backgroundImage: `url(${hero})` }}
     >
-      <div className="flex max-w-lg flex-1 flex-col items-stretch lg:max-w-none">
+      <div className="flex max-w-lg flex-1 flex-col items-stretch">
         <h2 className="text-3xl font-medium sm:text-4xl">{props.title}</h2>
         <p className="pt-2 pb-12 text-xl sm:text-2xl">{props.desc}</p>
         <div className="flex flex-wrap justify-center gap-4 self-center text-xl font-semibold sm:self-start">

@@ -15,7 +15,7 @@ export const Card = ({ name, iconUrl, role, hobby, links = [], children }) => (
     <div className="bg-default flex w-full flex-col items-center rounded-t-xl p-8 pt-10">
       <div className="not-prose py-8 text-center">
         <div className="text-3xl font-semibold">{name}</div>
-        <div className="flex flex-wrap gap-2 text-lg text-slate-500 dark:text-slate-400">
+        <div className="flex flex-wrap items-center justify-center gap-x-2 text-lg text-slate-500 dark:text-slate-400">
           <span>{role}</span>
           <span className="text-xl">·</span>
           <span>{hobby}</span>
