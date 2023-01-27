@@ -15,15 +15,34 @@ const Layout = ({ children, helmet, className = "" }) => (
   <>
     <CustomHelmet {...helmet} />
     <div className="flex min-h-screen flex-col">
-      <Nav />
+      <Nav
+        links={[
+          <Link
+            className="flex items-baseline gap-1.5 underline decoration-transparent decoration-2 hover:decoration-otd-purple-700/50"
+            to="/shop"
+          >
+            Shop
+            <div className="rounded-full bg-otd-purple-700/75 px-2 text-sm font-semibold uppercase text-otd-purple-100">
+              New
+            </div>
+          </Link>,
+          <Link
+            className="underline decoration-transparent decoration-2 hover:decoration-inherit"
+            to="/idtga"
+          >
+            It's Dangerous to go Alone
+          </Link>,
+          <DiscordJoin className="h-full" />,
+        ]}
+      />
       <main className={clsx("flex-1", className)}>{children}</main>
       <Footer />
     </div>
   </>
 )
 
-const Nav = () => (
-  <nav className="flex h-16 items-stretch justify-end gap-6 bg-otd-slate p-3 text-center font-medium text-slate-100">
+const Nav = ({ links }) => (
+  <nav className="flex h-16 items-stretch justify-end gap-9 bg-otd-slate p-3 text-center font-medium text-slate-100">
     <Link to="/" className="mr-auto">
       <StaticImage
         src="../static/title-sm.webp"
@@ -42,24 +61,20 @@ const Nav = () => (
         className="hidden sm:block"
       />
     </Link>
-    <Link className="hidden self-center md:block" to="/idtga">
-      It's Dangerous to go Alone
-    </Link>
-    <div className="hidden md:block">
-      <DiscordJoin className="h-full" />
-    </div>
+    {links.map((link, i) => (
+      <span key={i} className="hidden self-center lg:block">
+        {link}
+      </span>
+    ))}
     <Avatar className="h-10 w-10 text-otd-slate-50" />
     <DropdownMenu.Root>
       <Burger />
       <DropdownMenu.Portal>
-        <DropdownMenu.Content align="end" className="min-w-0 md:hidden">
+        <DropdownMenu.Content align="end" className="min-w-0 lg:hidden">
           <div className="mt-6 flex max-w-[calc(100vw_-_24px)] flex-wrap items-center justify-center gap-6 rounded-lg bg-otd-slate p-3 text-center font-medium text-slate-100 shadow-lg">
-            <DropdownMenu.Item>
-              <Link to="/idtga">It's Dangerous to go Alone</Link>
-            </DropdownMenu.Item>
-            <DropdownMenu.Item>
-              <DiscordJoin />
-            </DropdownMenu.Item>
+            {links.map((link, i) => (
+              <DropdownMenu.Item key={i}>{link}</DropdownMenu.Item>
+            ))}
           </div>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
@@ -69,7 +84,7 @@ const Nav = () => (
 
 const Burger = () => (
   <DropdownMenu.Trigger asChild>
-    <button className="flex aspect-square h-full items-center justify-center rounded-lg border-2 border-slate-100/25 text-slate-100/75 hover:bg-slate-100/10 md:hidden">
+    <button className="flex aspect-square h-full items-center justify-center rounded-lg border-2 border-slate-100/25 text-slate-100/75 hover:bg-slate-100/10 lg:hidden">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
