@@ -383,9 +383,9 @@ const allPhases = tourney => {
   const now = new Date()
   const steps = [
     tourney.data?.creationDate,
-    addHours(tourney.data?.closeDate, -24),
+    addHours(tourney.data?.startDate, -96),
     tourney.data?.closeDate,
-    addHours(tourney.data?.closeDate, 24),
+    addHours(tourney.data?.startDate, -48),
     tourney.data?.startDate,
     fromUnixTime(tourney.data?.smashgg.endAt),
   ]

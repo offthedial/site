@@ -5,7 +5,7 @@ desc: The rules for It's Dangerous to go Alone, our flagship, solo registration 
 
 ## Format
 
-Due to the large number of signups, players are seperated into multiple skill brackets to keep players close in skill level with each other.
+Due to the large number of signups, players are seperated into multiple skill brackets to keep players close in skill level with each other. There is a registration cap of 48 teams (192 players).
 
 All brackets are run independently of one another and have their own preliminaries and top cut.
 
@@ -82,6 +82,8 @@ If either 2 DCs occur in the same lobby, the host DCs, or there are a significan
 
 To reduce the chances of a DC happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
 
+If there's a dispute, or something unforseen occurs during the set, feel free to bring it up to helpdesk.
+
 ### Redo the game if:
 
 - The objective has not passed `50` points remaining for either team.
@@ -145,7 +147,7 @@ Sometimes, there are no available subs to substitute for missing players. In thi
 
 Subs must be approved by a TO and have signed up as a sub at [otd.ink/signup](https://otd.ink/signup).
 
-If all options are exhausted, your team will be disqualified and become emergency subs.
+If all options are exhausted, your team will be disbanded and become emergency subs.
 
 ## Team Updates
 
@@ -180,6 +182,7 @@ This is a strict no-chances policy, and we do not make exceptions to this. Staff
 
 - Rules are subject to change between seasons, Make sure to reread the rules each season, you can check the patch notes to see what we changed.
 - Signups are first-come-first serve. If there are an uneven number of players, the latest ones will become emergency subs. Make sure to sign up early!
+- If you drop out after check-in closes, you will be banned from playing in the next season.
 - If third-party services, such as Nintendo Online or start.gg become unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
 - By registering you agree to abide by our [terms and conditions](https://otd.ink/legal), thank you!
 
