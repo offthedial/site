@@ -44,16 +44,17 @@ This is the general schedule for each season, if you want to see the dates for t
 
 1. **The tournament begins!**
 
-   All tournaments begin on the same minute/hour, but may be at a different hour depending on your timezone. Refer to your corresponding time-zone, daylight savings times have been listed as well:
+   All tournaments begin on the same minute/hour, but may be at a different hour depending on your timezone. Only **standard timezones** are listed below, if daylight savings / summer time is in effect, please add an hour:
 
    ```
-   EST - 3pm Saturday
-   EDT - 4pm Saturday
-   GMT - 8pm Saturday
-   BST - 9pm Saturday
-   JST - 5am Sunday
+   PST  - 12pm Saturday
+   MST  - 1pm Saturday
+   CST  - 2pm Saturday
+   EST  - 3pm Saturday
+   GMT  - 8pm Saturday
+   CET  - 9pm Saturday
+   JST  - 5am Sunday
    AEST - 6am Sunday
-   AEDT - 7am Sunday
    ```
 
    The tournament is scheduled to last `4:00` hours total.
@@ -66,13 +67,13 @@ This is the general schedule for each season, if you want to see the dates for t
 - Each swiss round lasts `35` minutes.
 - Each top cut round lasts `40` minutes.
 - The very first swiss round lasts `5` more minutes, for `40` minutes total.
-- Players must start their matches within `5` minutes of the round.
+- Players must start their matches within `5` minutes of the round (or `10` minutes for the first round).
   - If the match has not started yet, the first game will be automatically awarded to the waiting team.
   - For each additional `5` minutes that the match still hasn't started, another game will be awarded.
   - Please call a moderator in start.gg when this occurs so we can set the score.
 - There is a `5-minute` break before finals commence.
 
-If a match has not been completed by the end of the round, players must finish whatever game they're currently on. The rest of the set **will not be played**, and no points will be awarded to either team.
+If a match has not been completed by the end of the round, the match will be marked as a draw.
 
 ## Disconnects (DC)
 
@@ -184,6 +185,7 @@ This is a strict no-chances policy, and we do not make exceptions to this. Staff
 - Signups are first-come-first serve. If there are an uneven number of players, the latest ones will become emergency subs. Make sure to sign up early!
 - If you drop out after check-in closes, you will be banned from playing in the next season.
 - If third-party services, such as Nintendo Online or start.gg become unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
+- Head TOs reserve the right to make any changes to the tournament at any time on a case by case basis.
 - By registering you agree to abide by our [terms and conditions](https://otd.ink/legal), thank you!
 
 ---

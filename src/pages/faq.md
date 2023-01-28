@@ -61,6 +61,10 @@ The goal of IDTGA is allow anyone to be able to experience a tournament regardle
 
 Even if you do have a team, you and your teammates can still play! Just don't expect to end up on the same team.
 
+#### Am I allowed to use Splatfest tees?
+
+Yes, all weapons and gear are allowed.
+
 #### Why are there multiple brackets?
 
 In order to ensure that the skill gap between players on a given team aren't too far apart, we divide players into multiple brackets based on skill level so that your teammates are fairly close to your skill range.
@@ -69,11 +73,37 @@ For example, if there were two brackets, the top ranking 50% of players will be 
 
 This is similar to the 'alpha' and 'beta' brackets you may see in other large tournaments, but our brackets are split based on the relative skill of players in the tournament instead of LUTI divisions.
 
-The skill brackets are, in order of highest skill to lowest skill: **Master**, **Power**, **Wisdom**, and **Courage**. Note that depending on the number of signups, not all brackets will be used. A new bracket is added approximately every 12 teams.
+The skill brackets are, in order of highest skill to lowest skill: **Power**, **Wisdom**, and **Courage**. Note that depending on the number of signups, not all brackets will be used. A new bracket is added approximately every 12 teams.
 
 #### How do skill brackets correspond to LUTI divisions?
 
 They don't apply, the purpose of skill brackets is simply to ensure that skill gaps between players aren't too far apart. They are not designed to determine a player's absolute skill level in the competitive scene.
+
+#### What do I do if there's lag?
+
+If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
+
+> Note that with Splatoon 3, it has been noted that some lag is normal, and may not be based on the host so please keep this in mind.
+
+#### How are swiss points allocated?
+
+Points will be allocated for games won, matches won, byes as well as ties. The point allocations are as such:
+
+- 3 point per game win
+- 6 points per match won (in addition to the points allocated for individual game wins)
+- 6 point per match tie (allocated to both teams, will be used if time has run out)
+- 8 points per bye (no points will be allocated as game wins as no games have been played)
+
+#### What happens when a tiebreaker is needed?
+
+The following rules will be enacted sequentially until a winner has been determined:
+
+- Total sets won
+- Head to head
+- Game win %
+- Team with fewer dropouts
+- If between two teams, a best-of-one head-to-head match on a predetermined map mode
+- If between three or more teams, the total amount of points earned in all of the preliminary games
 
 #### I’ve just finished a season of IDTGA, what do I do now?
 

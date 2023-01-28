@@ -10,11 +10,12 @@ import { Card, Stack, Secret } from "src/components/staff"
 <Card
   name="DJam98"
   role="Head Organiser, Founder"
-  hobby="A Confused Person"
+  hobby="A Busy Person"
   links={[
     ["Twitch", "https://twitch.tv/djam98"],
+    ["Twitter", "https://twitter.com/djam987"],
   ]}
-  iconUrl="https://cdn.discordapp.com/avatars/366117504151453696/a29a27144b2f95a4d60ef76912dc534a.webp?size=480"
+  iconUrl="https://media.discordapp.net/attachments/1056022134096400444/1068699510294970388/DJam.png"
 >
 
 Hey there! I'm DJam98 and I am the creator of this little Discord
@@ -49,21 +50,19 @@ If you're interested, please check out my Twitter and Twitch! Follows are greatl
 
 <Card
   name="Wolf"
-  role="Staff, Streamer"
-  hobby="Game Addict"
+  role="Tournament Organiser"
+  hobby="Forever tired"
   links={[
     ["Twitter", "https://twitter.com/LiberoWolf_"],
   ]}
-  iconUrl="https://cdn.discordapp.com/avatars/273188925189914628/0bdf455d256a6c9a05570cb367f7a457.webp?size=480"
+  iconUrl="https://media.discordapp.net/attachments/1056022134096400444/1068699625722224700/comissionliberowolf.png"
 >
 
-Hi I'm Wolf! I'm one of the Staff in Off the Dial.
+Hi I'm Wolf/LiberoWolf! I'm a sleepyhead who really has no sleep schedule. Certified (self-identified) lurker in streams and channels.
 
-I'm a Splatoon enjoyer who plays way too much of it but I also enjoy playing other games both on the Switch and PC.
+I enjoy games & music so expect me to be playing games or listening to music at some point in the day. I mainly play Final Fantasy 14, Splatoon and Pokémon.
 
-Also a Kensa Splattershot Pro and Dapple Dualies Nouveau player but I love messing about with other weapons
-
-I also have a Twitter for posting clips and Twitch where I stream league and other stuff
+I have a Twitter where I like and retweet stuff and on the rare time post stuff.
 
 </Card>
 
