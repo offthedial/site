@@ -17,12 +17,11 @@ const Layout = ({ children, helmet, className = "" }) => (
     <div className="flex min-h-screen flex-col">
       <Nav
         links={[
-          <Link
-            className="flex items-baseline gap-1.5 underline decoration-transparent decoration-2 hover:decoration-otd-purple-700/50"
-            to="/shop"
-          >
-            Shop
-            <div className="rounded-full bg-otd-purple-700/75 px-2 text-sm font-semibold uppercase text-otd-purple-100">
+          <Link className="group flex items-baseline gap-1.5" to="/shop">
+            <span className="inline-block bg-gradient-to-r from-otd-pink-100 to-[#E0D4DB] bg-clip-text text-transparent transition-all group-hover:brightness-125">
+              Shop
+            </span>
+            <div className="rounded-full bg-gradient-to-r from-[#E0D4DB] to-otd-cyan-100 px-2 text-sm font-semibold uppercase text-slate-900 shadow-md shadow-[#D0E4E9]/50 transition-all group-hover:shadow-[#D0E4E9]/90 group-hover:brightness-105">
               New
             </div>
           </Link>,
