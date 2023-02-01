@@ -97,10 +97,9 @@ I have a Twitter where I like and retweet stuff and on the rare time post stuff.
 
 > <p className="text-xl">**woah! you found me !**</p>
 
-i'm the dev behind the entire site! i've rewritten it about 5 times ,,
+i'm the dev behind the entire site! i've rewritten it about 5 times ,, and i also built both the discord bot to help with managing tournaments, and the overlays that you see on stream !
 
-i also built the discord bot to help with managing tournaments, and built the overlays that you see on stream !
-
+i like boba, fizzy boba especially. in splatoon, i'm a stinky glooga dualies one-trick, and i always make sure to die with my special up :D
 
 </Card></Secret>
 
