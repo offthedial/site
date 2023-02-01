@@ -101,12 +101,8 @@ const login = ({ params, from, setError }) => {
 const redirectEndpoint = from => {
   // First pass, redirect user to api
   if (typeof window === "undefined") return
-  if (auth.currentUser) {
-    navigate("/profile")
-  } else {
-    from && localStorage.setItem("login-redirect", from)
-    window.location.replace(`${api}/auth/redirect`)
-  }
+  from && localStorage.setItem("login-redirect", from)
+  window.location.replace(`${api}/auth/redirect`)
 }
 
 const tokenEndpoint = ({ code, state }, setError) => {
