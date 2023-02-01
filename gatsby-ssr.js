@@ -1,23 +1,42 @@
 import React from "react"
-import QueryClientProvider from "src/app"
-import theme from "src/@chakra-ui/gatsby-plugin/theme"
-import { ColorModeScript } from "@chakra-ui/react"
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { fas } from "@fortawesome/free-solid-svg-icons"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-import { far } from "@fortawesome/free-regular-svg-icons"
+import App from "src/root"
 
-library.add(fas, fab, far)
+const darkModeScript = () => {
+  const mql = window.matchMedia("(prefers-color-scheme: dark)")
+  const prefersDarkScheme = mql.matches
+  const storedColorMode = localStorage.getItem("set-color-mode")
 
-export const wrapRootElement = ({ element }) => (
-  <QueryClientProvider>{element}</QueryClientProvider>
-)
+  let colorMode
+  if (typeof storedColorMode === "string") {
+    colorMode = storedColorMode
+  } else {
+    colorMode = prefersDarkScheme ? "dark" : "light"
+  }
 
-export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents([
-    <ColorModeScript
-      initialColorMode={theme.config.initialColorMode}
-      key="chakra-ui-no-flash"
-    />,
+  let root = document.documentElement
+  if (colorMode === "dark") root.classList.add("dark")
+  if (colorMode === "light") root.classList.remove("dark")
+}
+
+export const onRenderBody = ({
+  setPreBodyComponents,
+  setHeadComponents,
+  pathname,
+}) => {
+  setHeadComponents([
+    <link key={0} rel="canonical" href={`https://otd.ink${pathname}`} />,
+    <meta key={1} property="og:url" content={`https://otd.ink${pathname}`} />,
   ])
+  setPreBodyComponents(
+    <script
+      key="no-flash"
+      dangerouslySetInnerHTML={{
+        __html: `(${String(darkModeScript)})()`,
+      }}
+    />
+  )
+}
+
+export const wrapRootElement = ({ element }) => {
+  return <App>{element}</App>
 }

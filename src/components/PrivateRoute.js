@@ -1,26 +1,20 @@
-import React, { useState } from "react"
-
 import { navigate } from "gatsby"
-import { auth } from "src/app/firebase"
+import { useEffect } from "react"
+import { useAuthState } from "react-firebase-hooks/auth"
+import { auth } from "src/app"
 
-const PrivateRoute = ({ location, children }) => {
-  const loginRoute = "/profile/login"
-  const [user, setUser] = useState("pending")
-  if (typeof window === "undefined") {
-    return null
-  }
-  const unsub = auth.onAuthStateChanged(setUser)
+const PrivateRoute = ({ children }) => {
+  const [user, loading] = useAuthState(auth)
 
-  if (user === "pending") {
-    return null
-  } else {
-    unsub()
-    if (!user) {
-      navigate(loginRoute, { state: { from: location.pathname } })
-      return null
+  useEffect(() => {
+    if (!user && !loading) {
+      navigate("/profile/login", { state: { from: window.location.pathname } })
     }
-  }
-  return <>{children}</>
+  }, [loading])
+
+  if (!user) return null
+
+  return children
 }
 
 export default PrivateRoute

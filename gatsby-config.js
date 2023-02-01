@@ -1,46 +1,25 @@
-const path = require("path")
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 
 module.exports = {
-  siteMetadata: {
-    title: `Off the Dial`,
-    description: `Off the Dial is a unique tournament organisation for Splatoon 2. Dedicated to providing fresh tournament opportunities for free agents.`,
-    siteUrl: `https://otd.ink`,
-    twitter: `@Off_The_Dial`,
-  },
+  trailingSlash: "never",
   plugins: [
-    /* Filesystem stuff */
+    `gatsby-plugin-root-import`,
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        ignore: [`**/*.md`, `**/*.mdx`],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: path.join(__dirname, `src`, `pages`),
-        ignore: [`**/posts/*`], // Except posts
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: path.join(__dirname, `src`, `pages`, `posts`),
-      },
-    },
-
-    /* Utilities */
-    `gatsby-plugin-root-import`,
-    `gatsby-plugin-remove-trailing-slashes`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
-
-    /* Styles & CSS */
-    `@chakra-ui/gatsby-plugin`,
-
-    /* Image Processing */
-    `gatsby-plugin-sharp`,
-
-    /* MDX */
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
         path: `${__dirname}/src/pages`,
       },
     },
@@ -48,21 +27,14 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          default: path.resolve("src/templates/md.js"),
-          posts: path.resolve("src/templates/post.js"),
-        },
         gatsbyRemarkPlugins: [
-          `gatsby-remark-images`,
           {
             resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              icon: false,
-            },
+            options: { icon: false },
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-twemoji-shortcut`,
+          `gatsby-remark-images`,
         ],
+        mdxOptions: { remarkPlugins: [require("remark-emoji")] },
       },
     },
   ],

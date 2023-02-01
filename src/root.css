@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-default {
+  @apply text-slate-800 dark:text-slate-100;
+}
+.bg-default {
+  @apply bg-slate-50 dark:bg-slate-850;
+}
+
+@layer base {
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    @apply rounded-lg border-2 border-slate-400 bg-transparent text-lg placeholder-slate-500 focus:!border-otd-slate-600 focus:ring-transparent disabled:bg-slate-600 dark:border-slate-700 focus:dark:!border-otd-slate-400;
+  }
+  [type="checkbox"],
+  [type="radio"] {
+    @apply rounded-lg border-2 border-slate-400 bg-transparent text-lg text-otd-slate-500 focus:ring-transparent disabled:bg-slate-600 dark:border-slate-700;
+  }
+
+  html * {
+    @apply transition-colors ease-out;
+  }
+  body {
+    @apply text-default bg-default;
+  }
+}

@@ -5,7 +5,7 @@ author: LeptoFlare
 tournament: idtga
 ---
 
-Damages have been repaired, rose has been subdued. Now back to your regularly scheduled program.
+Damages have been repaired, rose has been tempered. Now back to your regularly scheduled program.
 
 It's time for the next It's Dangerous to go Alone! Signups opened a bit late on this one, you have only 2 weeks to sign up!
 

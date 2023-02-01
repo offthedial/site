@@ -1,632 +1,545 @@
 import React from "react"
-
-import {
-  useUserJoined,
-  useUserDiscord,
-  useUserData,
-  useUserSignup,
-  useTourney,
-} from "src/app/hooks"
-import * as Chakra from "@chakra-ui/react"
+import { Link } from "gatsby"
+import useTourney from "src/app/useTourney"
+import useUser from "src/app/useUser"
+import useDiscord from "src/app/useDiscord"
+import useUserSignup from "src/app/useUserSignup"
+import Layout, { Avatar } from "src/components/Layout"
+import PrivateRoute from "src/components/PrivateRoute"
+import useLogoutUser from "src/app/useLogoutUser"
 import {
   addHours,
   format,
-  fromUnixTime,
   formatDuration,
+  fromUnixTime,
   intervalToDuration,
 } from "date-fns"
-import Layout from "src/components/Layout"
-import PrivateRoute from "src/components/PrivateRoute"
-import Link from "src/components/Link"
-import { useColorModeValue } from "@chakra-ui/react"
-import { navigate } from "gatsby"
+import Mention from "src/components/Mention"
+import useDeleteUser from "src/app/useDeleteUser"
+import clsx from "clsx"
 
-const Profile = ({ location }) => (
-  <PrivateRoute location={location}>
-    <Layout>
-      <Chakra.Box
-        px={[0, 16, 16, 32]}
-        pt={[0, 16]}
-        mx="auto"
-        maxWidth="container.xl"
-      >
-        <TopAlert />
-        <UserProfile />
-      </Chakra.Box>
-      <Chakra.Box mb={[-8, 8]} layerStyle="tint">
-        <Chakra.Box h={["2px", 0]} layerStyle="mute" mx={8} />
-      </Chakra.Box>
-    </Layout>
-  </PrivateRoute>
-)
-
-const TopAlert = () => {
-  const userJoinedQuery = useUserJoined()
-
-  if (!userJoinedQuery.isLoading && !userJoinedQuery.data) {
-    return (
-      <Chakra.Alert
-        status="warning"
-        mb={[0, 8]}
-        rounded={[null, "lg"]}
-        alignItems={"flex-start"}
-      >
-        <Chakra.AlertIcon marginTop={0.5} />
-        <Chakra.Box
-          display="flex"
-          alignItems="flex-start"
-          justifyContent="space-between"
-          flexDirection="column"
-          width="100%"
-          fontSize="lg"
-        >
-          <Chakra.Text>
-            You are not currently in the Off the Dial discord server. This is
-            required to sign up for tournaments.
-          </Chakra.Text>
-          <Link
-            mt={3}
-            to="/discord"
-            fontWeight="bold"
-            _hover={{ textDecoration: "underline" }}
-          >
-            Join the Server
-          </Link>
-        </Chakra.Box>
-      </Chakra.Alert>
-    )
-  }
-  return null
-}
-
-const UserProfile = () => {
-  const userDiscordQuery = useUserDiscord()
+const Profile = () => {
+  const user = useUser()
+  const discord = useDiscord()
 
   return (
-    <Chakra.Box rounded={[null, "lg"]} p={8} layerStyle="tint">
-      <Chakra.Flex alignItems="center" justifyContent="space-between">
-        <Chakra.Flex alignItems="center" gridGap={6}>
-          <Chakra.Avatar src={userDiscordQuery.data?.avatarUrl} size="lg" />
-          <Chakra.Text fontSize="3xl" fontWeight="bold">
-            {userDiscordQuery.data?.username || "..."}
-          </Chakra.Text>
-        </Chakra.Flex>
-        <Chakra.IconButton
-          aria-label="Logout"
-          _hover={{
-            textStyle: "error",
-          }}
-          onClick={() => {
-            navigate("/profile/logout")
-          }}
-          icon={
-            <Chakra.Icon
-              height={6}
-              width={6}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-              />
-            </Chakra.Icon>
-          }
-          size="lg"
-        />
-      </Chakra.Flex>
-      <Chakra.Box h="2px" my={8} layerStyle="mute" />
-      <SignalStrength />
-      <Chakra.Text
-        fontSize="lg"
-        fontWeight="medium"
-        textStyle="semimute"
-        mt={8}
-        mb={2}
-      >
-        Tournament Dashboard
-      </Chakra.Text>
-      <TournamentDashboard />
-      <Chakra.Flex justifyContent="space-between" pt={2}>
-        <Chakra.Box />
-        <DeleteAccount />
-      </Chakra.Flex>
-    </Chakra.Box>
-  )
-}
-
-const DeleteAccount = () => {
-  const [confirm, setConfirm] = React.useState(false)
-  return (
-    <Chakra.Flex
-      gridGap={3}
-      textStyle="silent"
-      lineHeight="1"
-      alignItems="baseline"
-    >
-      {confirm ? (
-        <>
-          <Chakra.Text as="span">Are you sure?</Chakra.Text>
-          <Chakra.Button
-            minWidth={0}
-            fontWeight="medium"
-            textStyle="silent"
-            _hover={{
-              textStyle: "error",
-            }}
-            textDecoration="underline"
-            variant="link"
-            onClick={() => {
-              navigate("/profile/delete")
-            }}
-          >
-            Yes
-          </Chakra.Button>
-          <Chakra.Button
-            minWidth={0}
-            fontWeight="medium"
-            textStyle="silent"
-            _hover={{
-              textStyle: "semimute",
-            }}
-            textDecoration="underline"
-            variant="link"
-            onClick={() => {
-              setConfirm(false)
-            }}
-          >
-            No
-          </Chakra.Button>
-        </>
-      ) : (
-        <Chakra.Button
-          minWidth={0}
-          fontWeight="normal"
-          textStyle="silent"
-          _hover={{
-            textStyle: "error",
-            textDecoration: "underline",
-          }}
-          variant="link"
-          onClick={() => {
-            setConfirm(true)
-          }}
+    <div className="flex flex-col items-stretch gap-8">
+      <div className="flex flex-wrap items-center gap-6">
+        <Avatar className="h-14 w-14 text-slate-400 dark:text-slate-700" />
+        <h2 className="mr-auto text-2xl font-medium sm:text-3xl">
+          {discord.data?.username}
+        </h2>
+        <ActionButtons />
+      </div>
+      <Seperator />
+      <InnerSection className="flex items-center gap-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"
+          fill="currentColor"
+          className="h-5 flex-shrink-0 text-otd-pink sm:h-6"
         >
-          Delete Account
-        </Chakra.Button>
-      )}
-    </Chakra.Flex>
-  )
-}
-
-const SignalStrength = () => {
-  const userDataQuery = useUserData()
-
-  return (
-    <Chakra.Flex
-      alignItems="center"
-      justifyContent="space-between"
-      layerStyle="mute"
-      px={8}
-      py={5}
-      gridGap={8}
-      rounded="lg"
-    >
-      <Chakra.Flex alignItems="center" gridGap={8}>
-        <Chakra.Icon
-          color="otd.pink.0"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          height={8}
-          width={8}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"
-          />
-        </Chakra.Icon>
-        <Chakra.Text fontSize={["xl", null, null, "2xl"]}>
-          Signal Strength
-        </Chakra.Text>
-      </Chakra.Flex>
-      <Chakra.Text fontSize={["xl", null, null, "2xl"]} fontFamily="mono">
-        {userDataQuery.data?.meta?.signal || "0"}
-      </Chakra.Text>
-    </Chakra.Flex>
+          <path d="M544 0c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V32c0-17.7 14.3-32 32-32zM416 96c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V128c0-17.7 14.3-32 32-32zM320 224V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V224c0-17.7 14.3-32 32-32s32 14.3 32 32zM160 288c17.7 0 32 14.3 32 32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320c0-17.7 14.3-32 32-32zM64 416v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V416c0-17.7 14.3-32 32-32s32 14.3 32 32z" />
+        </svg>
+        <p className="text-xl sm:text-2xl">Signal Strength</p>
+        <p className="ml-auto font-mono text-xl sm:text-2xl">
+          {user.data?.meta?.signal}
+        </p>
+      </InnerSection>
+      <div className="flex items-center gap-4">
+        <Seperator />
+        <p className="flex-shrink-0 text-slate-600 dark:text-slate-400">
+          Tournament Dashboard
+        </p>
+        <Seperator />
+      </div>
+      <InnerSection className="flex flex-col gap-12">
+        <TournamentDashboard />
+      </InnerSection>
+    </div>
   )
 }
 
 const TournamentDashboard = () => {
-  const tourneyQuery = useTourney()
+  const signup = useUserSignup()
+  const tourney = useTourney()
+  let props
+
+  if (!tourney.data || tourney.data.hasEnded()) {
+    props = {
+      style: "blue",
+      message:
+        "There's no tournament going on at the moment, stay tuned for the next!",
+    }
+  } else if (signup.data) {
+    props =
+      signup.data.type === "sub"
+        ? {
+            style: "lime",
+            message: "You're registered for the tournament as a sub!",
+            button: "Update Profile",
+          }
+        : {
+            style: "green",
+            message: "You're registered for the tournament!",
+            button: "Update Profile",
+          }
+  } else {
+    props = tourney.data.hasClosed()
+      ? {
+          style: "orange",
+          message: "Signups have closed, but you can still sign up as a sub!",
+          button: "Signup as a Sub",
+        }
+      : {
+          style: "red",
+          message: "You're not registered for the tournament yet.",
+          button: "Signup",
+        }
+  }
+
   return (
-    <Chakra.Flex
-      gridGap={8}
-      flexDirection="column"
-      layerStyle="normal"
-      rounded="lg"
-      p={8}
-    >
-      <Chakra.Box>
-        <Chakra.Text
-          fontSize="xl"
-          fontWeight="bold"
-          textTransform="uppercase"
-          letterSpacing="wide"
-          textStyle="mute"
-          mb={2}
-        >
-          Registration Status
-        </Chakra.Text>
-        <TournamentStatus tourneyQuery={tourneyQuery} />
-      </Chakra.Box>
-      <Chakra.Box>
-        <Chakra.Text
-          fontSize="xl"
-          fontWeight="bold"
-          textTransform="uppercase"
-          letterSpacing="wide"
-          textStyle="mute"
-          mb={2}
-        >
-          Timeline
-        </Chakra.Text>
-        <Timeline tourneyQuery={tourneyQuery} />
-      </Chakra.Box>
-    </Chakra.Flex>
+    <>
+      <StatusCallout {...props} />
+      <div>
+        <div className="text-lg font-medium uppercase tracking-wider text-slate-600 dark:text-slate-400">
+          Schedule
+        </div>
+        {allPhases(tourney).map(phase => (
+          <TimelineEvent key={phase.title} {...phase} />
+        ))}
+      </div>
+    </>
   )
 }
 
-const TournamentStatus = ({ tourneyQuery }) => {
-  const userSignupQuery = useUserSignup()
-  let status = {
-    color: "green",
-    message: "You are registered for the tournament!",
-    button: "Update Profile",
+const StatusCallout = ({ style, message, button }) => {
+  const colorStyle = {
+    blue: "bg-blue-600/20 text-blue-700 dark:bg-blue-400/20 dark:text-blue-400",
+    lime: "bg-lime-600/20 text-lime-700 dark:bg-lime-400/20 dark:text-lime-400",
+    green:
+      "bg-green-600/20 text-green-700 dark:bg-green-400/20 dark:text-green-400",
+    orange:
+      "bg-orange-600/20 text-orange-700 dark:bg-orange-400/20 dark:text-orange-400",
+    red: "bg-red-600/20 text-red-700 dark:bg-red-400/20 dark:text-red-400",
   }
-  if (!tourneyQuery.data || tourneyQuery.data.hasEnded()) {
-    status = {
-      color: "blue",
-      message: "There is no tournament going on right now.",
-      button: null,
-    }
-  } else {
-    if (userSignupQuery.data?.type === "sub") {
-      status.message = "You are registered for the tournament as a sub!"
-    }
-    if (userSignupQuery.data?.type === undefined) {
-      if (tourneyQuery.data.hasClosed()) {
-        status = {
-          color: "red",
-          message:
-            "Registration is closed, but you can still sign up as a sub!",
-          button: "Register as a Sub",
-        }
-      } else {
-        status = {
-          color: "red",
-          message: "You are not registered for the tournament yet!",
-          button: "Register",
-        }
-      }
-    }
+  const underlineStyle = {
+    blue: "decoration-blue-700/50 dark:decoration-blue-400/50 hover:decoration-blue-700 hover:dark:decoration-blue-400",
+    lime: "decoration-lime-700/50 dark:decoration-lime-400/50 hover:decoration-lime-700 hover:dark:decoration-lime-400",
+    green:
+      "decoration-green-700/50 dark:decoration-green-400/50 hover:decoration-green-700 hover:dark:decoration-green-400",
+    orange:
+      "decoration-orange-700/50 dark:decoration-orange-400/50 hover:decoration-orange-700 hover:dark:decoration-orange-400",
+    red: "decoration-red-700/50 dark:decoration-red-400/50 hover:decoration-red-700 hover:dark:decoration-red-400",
   }
-
-  const textColorValue = Chakra.useColorModeValue("700", "200")
-  const borderColorValue = Chakra.useColorModeValue("600", "300")
-  const bgColorValue = Chakra.useColorModeValue("50", "900")
-  const iconColorValue = Chakra.useColorModeValue("500", "400")
 
   return (
-    <Chakra.Flex
-      rounded="lg"
-      p={8}
-      alignItems={["flex-start", null, null, "center"]}
-      borderWidth="1px"
-      color={`${status.color}.${textColorValue}`}
-      borderColor={`${status.color}.${borderColorValue}`}
-      bgColor={`${status.color}.${bgColorValue}`}
-      gridGap={[4, null, null, 8]}
-      flexDirection={["column", null, null, "row"]}
+    <div
+      className={clsx("flex flex-col gap-4 rounded-lg p-4", colorStyle[style])}
     >
-      <Chakra.Icon
-        color={`${status.color}.${iconColorValue}`}
-        height={7}
-        width={7}
-        fill="none"
+      <div className="flex flex-wrap items-center gap-3 font-medium">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="h-6 w-6 flex-shrink-0"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.79M12 12h.008v.007H12V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+        <p className="mr-auto">Registration Status:</p>
+        <div
+          className={clsx(
+            "text-default font-bold uppercase tracking-wider underline decoration-2",
+            underlineStyle[style]
+          )}
+        >
+          <Link to="/signup">{button}</Link>
+        </div>
+      </div>
+      <div className="text-default text-lg">{message}</div>
+    </div>
+  )
+}
+
+const TimelineEvent = ({ title, desc, status, date, countdown, last }) => {
+  const statusIcons = {
+    past: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        stroke="currentColor"
+        fill="currentColor"
+        className="h-6 w-6"
       >
         <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z"
+          fillRule="evenodd"
+          d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
+          clipRule="evenodd"
         />
-      </Chakra.Icon>
-      <Chakra.Flex
-        alignItems="center"
-        width="100%"
-        justifyContent="space-between"
-        alignItems={["flex-start", null, null, "center"]}
-        flexDirection={["column", null, null, "row"]}
-        gridGap={[4, null, null, 0]}
+      </svg>
+    ),
+    present: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="h-6 w-6"
       >
-        <Chakra.Text fontSize="xl">{status.message}</Chakra.Text>
-        <Link to="/signup">
-          <Chakra.Button
-            colorScheme={`${status.color}`}
-            size="lg"
-            fontSize="xl"
-            variant="link"
-            color={`${status.color}.${textColorValue}`}
-            isDisabled={!status.button}
-          >
-            {status.button || "Register"}
-          </Chakra.Button>
-        </Link>
-      </Chakra.Flex>
-    </Chakra.Flex>
-  )
-}
-
-const Timeline = ({ tourneyQuery }) => {
-  const now = new Date()
-  const registrationCloses = tourneyQuery?.isLoading
-    ? null
-    : fromUnixTime(tourneyQuery.data?.smashgg?.registrationClosesAt)
-  const steps = tourneyQuery?.isLoading
-    ? null
-    : [
-        tourneyQuery.data?.dateCreated,
-        addHours(registrationCloses, -24),
-        registrationCloses,
-        addHours(registrationCloses, 24),
-        tourneyQuery.data?.date,
-        fromUnixTime(tourneyQuery.data?.smashgg.endAt),
-      ]
-  const getPhase = i => {
-    if (steps === null) return { phase: "future", time: null }
-    let phase = 0
-    steps.forEach((step, index) => {
-      if (now > step) {
-        phase = index
-      }
-    })
-    if (i < phase) {
-      return { phase: "past", time: steps[i], countdown: steps[i] }
-    }
-    if (i > phase) {
-      return {
-        phase: "future",
-        time: steps[i],
-        countdown: steps[i],
-        nextPhase: i - 1 === phase,
-      }
-    }
-    return { phase: "now", time: steps[i], countdown: steps[i] }
+        <path
+          fillRule="evenodd"
+          d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+    future: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="h-6 w-6"
+      >
+        <path
+          fillRule="evenodd"
+          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
+          clipRule="evenodd"
+        />
+      </svg>
+    ),
+  }
+  const iconStyles = {
+    past: "bg-slate-200 text-slate-400 dark:bg-slate-800 dark:text-slate-500",
+    present: "bg-otd-slate/40 text-otd-slate-600 dark:text-otd-slate-300",
+    future: "bg-slate-300 text-slate-600 dark:bg-slate-700 dark:text-slate-400",
+  }
+  const titleStyles = {
+    past: "text-slate-400 dark:text-slate-500",
+    present: "text-otd-slate-800 dark:text-otd-slate-200",
+    future: "text-slate-600 dark:text-slate-400",
+  }
+  const dateStyles = {
+    past: "text-slate-400 dark:text-slate-500",
+    present: "text-slate-600 dark:text-slate-400",
+    future: "text-slate-600 dark:text-slate-400",
   }
 
   return (
-    <Chakra.Flex gridGap={2} flexDirection="column">
-      <TimelineStep title="Registration opens" {...getPhase(0)}>
-        It's a new season! Sign up if you haven't already, and tell your friends
-        to sign up too!
-      </TimelineStep>
-      <TimelineStep title="Check-in opens" {...getPhase(1)}>
-        Remember to check in on discord with the <code>$checkin</code> command
-        in{" "}
-        <Chakra.Text textStyle="mention" as="span">
-          #check-in
-        </Chakra.Text>
-        . You will be disqualified if you fail to do so.
-      </TimelineStep>
-      <TimelineStep title="Registration closes" {...getPhase(2)}>
-        Get hype, just a little longer now! Teams will be released shortly.
-        While you're waiting, make sure to review the rules at{" "}
-        <Link
-          textStyle="slate"
-          textDecoration="underline"
-          _hover={{ textDecoration: "none" }}
-          to="/idtga/rules"
+    <section className="flex flex-col">
+      <div className="my-2 flex items-center gap-4">
+        <div
+          className={clsx(
+            "flex h-11 w-11 shrink-0 items-center justify-center rounded-lg",
+            iconStyles[status]
+          )}
         >
-          otd.ink/idtga/rules
-        </Link>
-      </TimelineStep>
-      <TimelineStep title="Teams are released" {...getPhase(3)}>
-        Start practicing! Contact your fellow teammates and create a Group DM.
-        If you have an issue with one of your team members, you can create
-        player reports 24 hours after teams are released.
-      </TimelineStep>
-      <TimelineStep title="Tournament begins" {...getPhase(4)} final={true}>
-        Good luck in the tournament! Tune into the official broadcast at{" "}
-        <Link
-          textStyle="slate"
-          textDecoration="underline"
-          _hover={{ textDecoration: "none" }}
-          to="https://twitch.tv/offthedial"
+          {statusIcons[status]}
+        </div>
+        <div className={titleStyles[status]}>
+          <div className="flex items-center pb-0.5">
+            <p className="text-2xl font-medium leading-none">{title}</p>
+            {countdown && <TimelineCountdown countdown={countdown} />}
+          </div>
+          <p className={dateStyles[status]}>
+            {date ? format(date, "MMMM d, h:mm aa") : <>&nbsp;</>}
+          </p>
+        </div>
+      </div>
+      <div className="flex items-center gap-4">
+        <div
+          className={clsx(
+            "flex w-11 shrink-0 justify-center self-stretch",
+            !last ? "min-h-[2rem]" : "min-h-0"
+          )}
         >
-          twitch.tv/offthedial
-        </Link>
-        .
-        <br />
-        Don't forget to go to{" "}
-        <Link
-          textStyle="slate"
-          textDecoration="underline"
-          _hover={{ textDecoration: "none" }}
-          to="https://start.gg/idtga"
-        >
-          start.gg/idtga
-        </Link>{" "}
-        to report your scores and organize your brackets.
-      </TimelineStep>
-    </Chakra.Flex>
+          <div
+            className={clsx(
+              "h-full w-1 shrink-0",
+              iconStyles[status],
+              status === "present" && "!bg-otd-slate-600 dark:!bg-otd-slate-300"
+            )}
+          ></div>
+        </div>
+        {status === "present" && <div className="py-4 text-xl">{desc}</div>}
+      </div>
+    </section>
   )
 }
 
-const TimelineStep = ({
-  title,
-  phase,
-  time,
-  final,
-  nextPhase,
-  countdown,
-  children,
-}) => {
-  const timelineBg = useColorModeValue("100", "700")
-  const timelineColor = useColorModeValue("700", "200")
-  const timelineLine = useColorModeValue("500", "400")
-  return (
-    <Chakra.Flex alignItems="stretch">
-      <Chakra.Flex
-        gridGap={2}
-        flexDirection="column"
-        alignItems="center"
-        mr={4}
-      >
-        <Chakra.Box
-          minW={10}
-          minH={10}
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          textStyle={phase === "past" ? "silent" : "mute"}
-          bg={
-            phase === "now" ? `otd.slate.${timelineBg}` : `gray.${timelineBg}`
-          }
-          rounded="lg"
-        >
-          <Chakra.Icon
-            height={6}
-            width={6}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            color={phase === "now" ? `otd.slate.${timelineColor}` : undefined}
-          >
-            {phase === "past" && (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            )}
-            {phase === "now" && (
-              <>
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </>
-            )}
-            {phase === "future" && (
-              <>
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </>
-            )}
-          </Chakra.Icon>
-        </Chakra.Box>
-        {(!final || phase === "now") && (
-          <Chakra.Box
-            bg={
-              phase === "now"
-                ? `otd.slate.${timelineLine}`
-                : `gray.${timelineBg}`
-            }
-            width={1}
-            height="100%"
-          />
-        )}
-      </Chakra.Flex>
-      <Chakra.Flex flexDirection="column">
-        <Chakra.Box>
-          <Chakra.Text
-            fontSize={["xl", null, null, "2xl"]}
-            fontWeight="medium"
-            lineHeight="1"
-            textStyle={phase === "past" ? "silent" : "mute"}
-          >
-            <Chakra.Text
-              color={phase === "now" ? `otd.slate.${timelineColor}` : undefined}
-            >
-              <Chakra.Flex
-                alignItems={["flex-start", "center"]}
-                flexDirection={["column", "row"]}
-              >
-                {title}
-                {nextPhase && countdown && (
-                  <StepCountdown
-                    time={countdown}
-                    bgColor={`gray.${timelineBg}`}
-                    color={`gray.${timelineColor}`}
-                  />
-                )}
-              </Chakra.Flex>
-            </Chakra.Text>
-          </Chakra.Text>
-          <Chakra.Text
-            fontSize="md"
-            fontWeight="normal"
-            textStyle={phase === "past" ? "silent" : "mute"}
-          >
-            {time ? format(time, "MMMM d, h:mm aa") : "..."}
-          </Chakra.Text>
-        </Chakra.Box>
-        {(!final || phase === "now") && (
-          <Chakra.Text fontSize="xl" my={4}>
-            {phase === "now" && <>{children}</>}
-          </Chakra.Text>
-        )}
-      </Chakra.Flex>
-    </Chakra.Flex>
-  )
-}
-
-const StepCountdown = ({ time, ...rest }) => {
+const TimelineCountdown = ({ countdown }) => {
   const duration = formatDuration(
     intervalToDuration({
-      start: time,
+      start: countdown,
       end: new Date(),
     })
   )
     .split(" ")
     .slice(0, 2)
     .join(" ")
+
   return (
-    <Chakra.Box
-      fontSize="lg"
-      fontWeight="normal"
-      as="span"
-      rounded="md"
-      {...rest}
-      py={1}
-      px={2}
-      mx={[0, 2]}
-      mt={[1, 0]}
-    >
+    <span className="text-default mx-2 rounded-md bg-slate-300 px-2 text-lg font-normal dark:bg-slate-700">
       in {duration}
-    </Chakra.Box>
+    </span>
   )
 }
 
-export default Profile
+const allPhases = tourney => {
+  const phases = [
+    {
+      title: "Registration Opens",
+      desc: (
+        <>
+          It's a new season! Sign up if you haven't already, and tell your
+          friends to sign up too!
+        </>
+      ),
+      status: "past",
+      date: null,
+      countdown: null,
+    },
+    {
+      title: "Check-in Opens",
+      desc: (
+        <>
+          Remember to check in on discord with the <code>$checkin</code> command
+          in <Mention>#check-in</Mention>. You will be disqualified if you fail
+          to do so.
+        </>
+      ),
+      status: "past",
+      date: null,
+      countdown: null,
+    },
+    {
+      title: "Registration Closes",
+      desc: (
+        <>
+          Get hype, just a little longer now! Teams will be released shortly.
+          While you're waiting, make sure to review the rules at{" "}
+          <Link
+            className="text-otd-slate-600 underline hover:no-underline dark:text-otd-slate-300"
+            to="/idtga/rules"
+          >
+            otd.ink/idtga/rules
+          </Link>
+        </>
+      ),
+      status: "past",
+      date: null,
+      countdown: null,
+    },
+    {
+      title: "Teams are released",
+      desc: (
+        <>
+          Start practicing! Contact your fellow teammates and create a Group DM.
+          If you have an issue with one of your team members, you can create a
+          player report 24 hours after teams are released in{" "}
+          <Mention>#report-players</Mention>.
+        </>
+      ),
+      status: "past",
+      date: null,
+      countdown: null,
+    },
+    {
+      title: "Tournament begins",
+      desc: (
+        <>
+          Good luck in the tournament! Head to{" "}
+          <a
+            className="text-otd-slate-600 hover:underline dark:text-otd-slate-300"
+            href="https://start.gg/idtga"
+          >
+            start.gg/idtga
+          </a>{" "}
+          to organize your matches and report your scores. Tune into the
+          official broadcast at{" "}
+          <a
+            className="text-otd-slate-600 hover:underline dark:text-otd-slate-300"
+            href="https://twitch.tv/offthedial"
+          >
+            twitch.tv/offthedial
+          </a>
+          .
+        </>
+      ),
+      status: "past",
+      date: null,
+      countdown: null,
+      last: true,
+    },
+  ]
+
+  // Set date and status
+  if (!tourney.data) {
+    return phases
+  }
+  const now = new Date()
+  const steps = [
+    tourney.data?.creationDate,
+    addHours(tourney.data?.startDate, -96),
+    tourney.data?.closeDate,
+    addHours(tourney.data?.startDate, -48),
+    tourney.data?.startDate,
+    fromUnixTime(tourney.data?.smashgg.endAt),
+  ]
+  let currentStep = 0
+  steps.forEach((step, index) => {
+    if (now > step) {
+      currentStep = index
+    }
+  })
+  phases.forEach((_, i) => {
+    phases[i].date = steps[i]
+    if (i < currentStep) {
+      phases[i].status = "past"
+    } else if (i > currentStep) {
+      phases[i].status = "future"
+      if (i === currentStep + 1) {
+        phases[i].countdown = steps[i]
+      }
+    } else {
+      phases[i].status = "present"
+    }
+  })
+  return phases
+}
+
+const ActionButtons = () => {
+  const [confirm, setConfirm] = React.useState(false)
+  const logoutUser = useLogoutUser()
+  const deleteUser = useDeleteUser()
+  return (
+    <div className="flex items-center gap-3">
+      {confirm && (
+        <div className="flex gap-2">
+          <p className="text-slate-600 dark:text-slate-400">Are you sure?</p>
+          <button
+            onClick={() => setConfirm(false)}
+            className="font-bold hover:underline"
+          >
+            Cancel
+          </button>
+        </div>
+      )}
+      <button
+        onClick={() => {
+          confirm ? deleteUser.mutate() : setConfirm(true)
+        }}
+        className={clsx(
+          "flex items-center justify-center rounded-lg border-2 border-transparent p-3 text-slate-400 hover:border-slate-300 hover:bg-slate-300 hover:text-red-700 dark:text-slate-700 dark:hover:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-red-400",
+          confirm &&
+            "border-slate-300 bg-slate-300 !text-red-700 hover:!bg-slate-400 dark:border-slate-800 dark:bg-slate-800 dark:!text-red-400 dark:hover:!bg-slate-700"
+        )}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="h-6 w-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+          />
+        </svg>
+      </button>
+      <button
+        onClick={logoutUser.mutate}
+        className="flex items-center justify-center rounded-lg border-2 border-slate-300 p-3 hover:bg-slate-300 hover:text-red-700 dark:border-slate-800 dark:hover:bg-slate-800 dark:hover:text-red-400"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="h-6 w-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
+          />
+        </svg>
+      </button>
+    </div>
+  )
+}
+
+const JoinDiscordAlert = () => {
+  const discord = useDiscord()
+  if (discord.data?.hasJoined === false) {
+    return (
+      <div className="-m-8 mb-8 flex items-start gap-4 bg-orange-400/20 p-4 text-lg text-orange-500 dark:bg-orange-500/20 dark:text-orange-400 sm:m-0 sm:mb-8 sm:rounded-xl">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+          stroke="currentColor"
+          className="mt-1 h-6 w-6 shrink-0"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"
+          />
+        </svg>
+
+        <div className="grow">
+          <p className="mb-4 text-orange-700 dark:text-orange-200">
+            You must be in the Off the Dial discord server to participate in
+            tournaments.
+          </p>
+          <Link
+            className="font-bold text-orange-800 hover:underline dark:text-orange-100"
+            to="/discord"
+          >
+            Join the Server
+          </Link>
+        </div>
+      </div>
+    )
+  }
+  return null
+}
+
+const Seperator = () => (
+  <div className="w-full flex-1 border-t-2 border-slate-300 dark:border-slate-800" />
+)
+
+const InnerSection = ({ className, children }) => (
+  <div
+    className={clsx(
+      "rounded-xl sm:bg-slate-50 sm:p-8 sm:dark:bg-slate-850",
+      className
+    )}
+  >
+    {children}
+  </div>
+)
+
+const Page = () => (
+  <Layout className="m-8" helmet={{ title: "Profile" }}>
+    <PrivateRoute>
+      <div className="mx-auto max-w-3xl">
+        <JoinDiscordAlert />
+        <div className="rounded-xl sm:bg-slate-200 sm:p-8 dark:sm:bg-slate-900">
+          <Profile />
+        </div>
+      </div>
+    </PrivateRoute>
+  </Layout>
+)
+
+export default Page

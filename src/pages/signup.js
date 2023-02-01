@@ -1,401 +1,711 @@
+import clsx from "clsx"
 import React from "react"
-
-import * as Chakra from "@chakra-ui/react"
-import { format } from "date-fns"
-import Layout from "src/components/Layout"
-import PrivateRoute from "src/components/PrivateRoute"
-import {
-  useForm,
-  useFormContext,
-  useFormState,
-  useController,
-  FormProvider,
-} from "react-hook-form"
+import { Link } from "gatsby"
+import { Controller, useForm } from "react-hook-form"
+import { useAuthState } from "react-firebase-hooks/auth"
+import { matchSorter } from "match-sorter"
+import { Combobox, RadioGroup } from "@headlessui/react"
+import { useMutation } from "@tanstack/react-query"
 import Cleave from "cleave.js/react"
-import {
-  useUserData,
-  useMutUserData,
-  useUserJoined,
-  useUserSignup,
-  useMutUserSignup,
-  useTourney,
-} from "src/app/hooks"
-import Link from "src/components/Link"
+import Layout from "src/components/Layout"
+import weapons from "src/components/weapons"
+import PrivateRoute from "src/components/PrivateRoute"
+import { auth, db, queryClient } from "src/app"
+import useTourney from "src/app/useTourney"
+import useDiscord from "src/app/useDiscord"
+import useUserSignup from "src/app/useUserSignup"
+import useUser from "src/app/useUser"
+import { format } from "date-fns"
+import { doc, setDoc, updateDoc } from "firebase/firestore"
 
-const Signup = ({ location }) => (
-  <PrivateRoute location={location}>
-    <Layout layerStyle="tint">
-      <Chakra.Box
-        px={[0, 16, 16, 32]}
-        pt={[0, 16]}
-        mx="auto"
-        maxWidth="container.xl"
-      >
-        <TopAlerts />
-        <Chakra.Box rounded={[null, "lg"]} layerStyle={[null, "lifted"]}>
-          <Form />
-        </Chakra.Box>
-      </Chakra.Box>
-    </Layout>
-  </PrivateRoute>
-)
+const Signup = () => {
+  // Initialize form
+  const form = useForm({ mode: "onTouched", shouldUnregister: true })
+  const formErrors = form.formState.errors
 
-const TopAlerts = () => {
-  const tourneyQuery = useTourney()
-  const userSignupQuery = useUserSignup()
-  const userJoinedQuery = useUserJoined()
-  const alerts = getAlerts(tourneyQuery, userSignupQuery, userJoinedQuery)
-
-  return (
-    <>
-      {alerts.map((alert, i) => (
-        <Chakra.Alert
-          status={alert.status}
-          mb={[0, 8]}
-          rounded={[null, "lg"]}
-          key={i}
-        >
-          <Chakra.AlertIcon />
-          <Chakra.Text fontSize="lg">{alert.message}</Chakra.Text>
-        </Chakra.Alert>
-      ))}
-    </>
-  )
-}
-
-const Form = () => {
-  const formMethods = useForm({
-    mode: "onTouched",
-  })
-
-  // Prepopulate data
-  const userDataQuery = useUserData()
+  // Autofill form with profile data
+  const user = useUser({ staleTime: Infinity })
   React.useEffect(() => {
-    formMethods.reset(userDataQuery.data?.profile)
-  }, [userDataQuery.data])
+    form.reset(user.data?.profile)
+  }, [user.data])
 
-  // Submitting form
-  const userDataMut = useMutUserData()
-  const userSignupMut = useMutUserSignup()
-  const onSubmit = data => {
-    userDataMut.mutate(data)
-    userSignupMut.mutate(format(new Date(), "yyyy-MM-dd HH:mm:ss zzzz"))
-  }
+  // Handle form submit
+  const onSubmit = useMutation(
+    async profile => {
+      const tourney = queryClient.getQueryData(["tourney"])
+      const user = queryClient.getQueryData(["user"])
+      const userSignup = queryClient.getQueryData(["user", "signup"])
+      // Update profile to database
+      await updateDoc(user.ref, { profile })
+      queryClient.setQueryData(["user"], old => ({ ...old, profile }))
 
-  return (
-    <FormProvider {...formMethods}>
-      <Chakra.Box
-        onSubmit={formMethods.handleSubmit(onSubmit)}
-        flexBasis="0"
-        flexGrow="4"
-        display="flex"
-        flexDir="column"
-        gridGap={8}
-        p={8}
-        rounded={[null, "lg"]}
-        layerStyle="normal"
-        as="form"
-        autocomplete="off"
-      >
-        <Input
-          name="ign"
-          title="IGN"
-          desc={`What is your Splatoon in-game name?`}
-          validationRules={{
-            required: "This field is required",
-            minLength: {
-              value: 1,
-              message: "This field is required",
-            },
-          }}
-          cleaveOptions={{ blocks: [10] }}
-        />
-        <hr />
-        <Input
-          name="sw"
-          title="Friend-code"
-          desc={`What is your switch friend-code?`}
-          validationRules={{
-            required: "This field is required",
-            minLength: {
-              value: 17,
-              message: "This field is required",
-            },
-          }}
-          cleaveOptions={{
-            blocks: [2, 4, 4, 4],
-            prefix: "SW",
-            delimiter: "-",
-            numericOnly: true,
-          }}
-        />
-        <hr />
-        <Input
-          name="rank"
-          title="Peak Rank"
-          desc={`What is your current rank in Splatoon 3. If you have an X rank, please put in your highest X rank.`}
-          validationRules={{
-            required: "This field is required",
-            validate: value => {
-              if (value.startsWith("X")) {
-                if (/^X[1-9]\d{3}(\.\d)?$/.test(value)) return true
-              }
-              if (value.startsWith("S+")) {
-                if (/^S\+(?:[0-9]|[1-4][0-9]|50)$/.test(value)) return true
-              }
-              if (value === "S") {
-                return true
-              }
-              if (["A", "B", "C"].includes(value[0])) {
-                if (value.length === 2 && ["+", "-"].includes(value.at(-1)))
-                  return true
-                if (value.length === 1) return true
-              }
-              return (
-                <>
-                  Invalid Rank. Please use the format{" "}
-                  <Chakra.Text as="code">C</Chakra.Text>,{" "}
-                  <Chakra.Text as="code">A-</Chakra.Text>,{" "}
-                  <Chakra.Text as="code">S+0</Chakra.Text>,{" "}
-                  <Chakra.Text as="code">X2350.1</Chakra.Text>
-                </>
-              )
-            },
-          }}
-          cleaveOptions={{ delimiter: ".", blocks: [5, 1], uppercase: true }}
-        />
-        <hr />
-        <Input
-          name="weapons"
-          title="Weapon Pool"
-          desc={`List up to 5 weapons that you would be comfortable playing during the tournament`}
-          validationRules={{ required: "This field is required" }}
-        >
-          {props => <Chakra.Input size="lg" {...props} />}
-        </Input>
-        <hr />
-        <Input
-          name="cxp"
-          title="Competitive Experience"
-          desc={`Please put in any competive experience you have here. Include any relevant data including tournaments (with placement), how long you've been in competitive, and significant scrims.`}
-          validationRules={{ required: "This field is required" }}
-        >
-          {props => <Chakra.Textarea size="lg" {...props} />}
-        </Input>
-        <hr />
-        <Input
-          name="smashgg"
-          title="Start.gg User Slug"
-          desc={
-            <>
-              The 8 characters that are listed on your{" "}
-              <Chakra.Link textStyle="slate" href="https://start.gg/profile">
-                start.gg profile page
-              </Chakra.Link>
-              .
-            </>
-          }
-          validationRules={{
-            required: "This field is required",
-            minLength: { value: 22, message: "This field is required" },
-            pattern: {
-              value: /^start\.gg\/user\/[0-9A-Fa-f]{8}$/,
-              message: "Invalid user slug",
-            },
-          }}
-          cleaveOptions={{
-            lowercase: true,
-            prefix: "start.gg/user/",
-            blocks: [22],
-          }}
-        />
-        <hr />
-        <Chakra.Box>
-          <SubmitArea />
-        </Chakra.Box>
-      </Chakra.Box>
-    </FormProvider>
-  )
-}
-
-const SubmitArea = () => {
-  const tourneyQuery = useTourney()
-  const userSignupQuery = useUserSignup()
-  const userJoinedQuery = useUserJoined()
-  // Get alert
-  const alerts = getAlerts(tourneyQuery, userSignupQuery, userJoinedQuery)
-  let alert = alerts ? alerts[alerts.length - 1] : null
-  // Set alert style
-  const colorWeight = Chakra.useColorModeValue("600", "200")
-  const alertColor = {
-    success: "green",
-    error: "red",
-    info: "blue",
-  }[alert?.status]
-  // Get form state
-  const { isDirty } = useFormState()
-
-  return (
-    <Chakra.Box
-      display="flex"
-      alignItems="center"
-      justifyContent="space-between"
-    >
-      <Chakra.Box>
-        {alert && (
-          <Chakra.Alert status={alert.status} bg="none" pl={0} pr={3}>
-            <Chakra.AlertIcon />
-            <Chakra.Text
-              color={`${alertColor}.${colorWeight}`}
-              fontSize="lg"
-              fontWeight="semibold"
-            >
-              {alert.message}
-            </Chakra.Text>
-          </Chakra.Alert>
-        )}
-      </Chakra.Box>
-      <Chakra.Box>
-        <Chakra.Button
-          colorScheme="otd.slate"
-          size="lg"
-          type="submit"
-          isDisabled={
-            alert?.status === "error" ||
-            (!isDirty && userSignupQuery.data?.type)
-          }
-        >
-          {userSignupQuery.data?.type ? "Update Profile" : "Signup"}
-        </Chakra.Button>
-      </Chakra.Box>
-    </Chakra.Box>
-  )
-}
-
-const getAlerts = (tourneyQuery, userSignupQuery, userJoinedQuery) => {
-  const alerts = []
-  if (tourneyQuery.data?.hasEnded()) {
-    alerts.push({
-      status: "error",
-      message: (
-        <>
-          <b>Registration is closed</b>. Be on the look out for tournaments in
-          the future!
-        </>
-      ),
-    })
-  } else if (!tourneyQuery.isLoading) {
-    if (userSignupQuery.data?.type) {
-      alerts.push({
-        status: "success",
-        message: (
-          <>
-            <b>You are currently signed up!</b> To update your profile
-            information, re-submit this form.
-          </>
-        ),
-      })
-    } else if (!userSignupQuery.isLoading && tourneyQuery.data?.hasClosed()) {
-      alerts.push({
-        status: "info",
-        message: (
-          <>
-            <b>Signups are closed</b>. Don't worry, you can still sign up as a
-            sub!
-          </>
-        ),
-      })
+      // Upsert signup to database
+      if (tourney.hasEnded()) throw Error("The tournament has ended")
+      const signup = {
+        signupDate:
+          userSignup?.signupDate ||
+          format(new Date(), "yyyy-MM-dd HH:mm:ss zzzz"),
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        modifiedDate: format(new Date(), "yyyy-MM-dd HH:mm:ss zzzz"),
+      }
+      await setDoc(
+        userSignup
+          ? userSignup.ref
+          : doc(
+              db,
+              "tournaments",
+              tourney.id,
+              tourney.hasClosed() ? "subs" : "signups",
+              user.uid
+            ),
+        signup
+      )
+      queryClient.setQueryData(["user", "signup"], old => ({
+        ...old,
+        signup,
+      }))
+      return { user, userSignup }
+    },
+    {
+      onError: (e, v, context) => {
+        queryClient.setQueryData(["user"], context.user)
+        queryClient.setQueryData(["user", "signup"], context.userSignup)
+      },
+      onSettled: () => queryClient.invalidateQueries(["user"]),
     }
-  }
-  if (userJoinedQuery.data === false) {
-    alerts.push({
-      status: "error",
-      message: (
-        <>
-          You must be in the Off the Dial discord server to participate.{" "}
-          <Link to="/discord" fontWeight="black" textDecoration="underline">
-            Join the Server
-          </Link>
-          !
-        </>
-      ),
-    })
-  }
-  return alerts
-}
-
-const Input = ({
-  name,
-  title,
-  desc,
-  validationRules,
-  cleaveOptions,
-  children,
-}) => {
-  const { control } = useFormContext()
-  const {
-    field,
-    fieldState: { invalid, error },
-  } = useController({
-    name,
-    control,
-    rules: validationRules,
-    defaultValue: "",
-  })
+  )
 
   return (
-    <InputContainer name={title} desc={desc}>
-      {children ? (
-        children({ isInvalid: invalid, ...field })
-      ) : (
-        <StyledCleave {...field} isInvalid={invalid} options={cleaveOptions} />
-      )}
-      <Chakra.Box pt={2}>
-        {invalid && (
-          <Chakra.Text textStyle="error" fontSize="sm">
-            {error.message}
-          </Chakra.Text>
+    <form
+      onSubmit={form.handleSubmit(data => onSubmit.mutate(data))}
+      className="bg-default flex w-full max-w-4xl flex-col gap-12 p-8 shadow sm:m-12 sm:rounded-xl sm:p-12"
+    >
+      <FormItem
+        title="SplashTag"
+        desc="Enter your full Splash Tag, including the hashtag and the 4 numbers at the end."
+      >
+        <input
+          type="text"
+          autoComplete="off"
+          placeholder="Link#2347"
+          className={clsx(
+            "w-full",
+            formErrors.splashtag && "!border-red-600 dark:!border-red-400"
+          )}
+          {...form.register("splashtag", {
+            required: "This field is required",
+            pattern: {
+              value: /^.{1,10}#\d{4}$/,
+              message:
+                "Invalid splash tag, remember to include the hashtag and the 4 numbers at the end",
+            },
+          })}
+        />
+        <Error error={formErrors.splashtag} />
+      </FormItem>
+      <Border />
+      <FormItem
+        title="Friend-Code"
+        desc="Enter your full friend-code, this won't be shared publically."
+      >
+        <Controller
+          name="sw"
+          control={form.control}
+          rules={{
+            required: { value: true, message: "This field is required" },
+            minLength: { value: 4, message: "This field is required" },
+            pattern: {
+              value: /^SW-\d{4}-\d{4}-\d{4}$/,
+              message: "Invalid friend-code",
+            },
+          }}
+          render={({ field: { onChange, onBlur, value, ref } }) => (
+            <Cleave
+              onChange={onChange}
+              onBlur={onBlur}
+              htmlRef={ref}
+              value={value}
+              type="text"
+              autoComplete="off"
+              options={{
+                prefix: "SW",
+                delimiter: "-",
+                blocks: [2, 4, 4, 4],
+                numericOnly: true,
+              }}
+              className={clsx(
+                "w-full",
+                formErrors.sw && "!border-red-600 dark:!border-red-400"
+              )}
+            />
+          )}
+        />
+        <Error error={formErrors.sw} />
+      </FormItem>
+      <Border />
+      <RankItem
+        control={form.control}
+        error={formErrors.isUnlocked}
+        yes={
+          <div className="grid grid-cols-2 gap-2">
+            {["sz", "tc", "rm", "cb"].map((v, i) => (
+              <label key={v}>
+                <p className="text-sm font-medium uppercase tracking-wider text-slate-400">
+                  {
+                    ["Splat Zones", "Tower Control", "Rainmaker", "Clam Blitz"][
+                      i
+                    ]
+                  }
+                </p>
+                <Controller
+                  name={`rank.${v}`}
+                  control={form.control}
+                  rules={{
+                    minLength: {
+                      value: 6,
+                      message: "Invalid X Power",
+                    },
+                    validate: () => {
+                      const values = form.getValues()
+                      if (
+                        values?.rank?.sz ||
+                        values?.rank?.tc ||
+                        values?.rank?.rm ||
+                        values?.rank?.cb
+                      ) {
+                        return true
+                      }
+                      return "At least one calculation is required"
+                    },
+                  }}
+                  render={({ field: { onChange, onBlur, value, ref } }) => (
+                    <Cleave
+                      onChange={onChange}
+                      onBlur={onBlur}
+                      htmlRef={ref}
+                      value={value}
+                      type="text"
+                      placeholder="2000.0"
+                      autoComplete="off"
+                      options={{
+                        numericOnly: true,
+                        blocks: [4, 1],
+                        delimiter: ".",
+                      }}
+                      className={clsx(
+                        "w-full",
+                        formErrors?.rank?.[v] &&
+                          "!border-red-600 dark:!border-red-400"
+                      )}
+                    />
+                  )}
+                />
+                <Error error={formErrors?.rank?.[v]} />
+              </label>
+            ))}
+          </div>
+        }
+        no={
+          <div className="flex w-full gap-2">
+            {[
+              <>
+                <input
+                  className={clsx(
+                    "w-full flex-1 uppercase",
+                    formErrors?.rank?.letter &&
+                      "!border-red-600 dark:!border-red-400"
+                  )}
+                  type="text"
+                  size="1"
+                  placeholder="A+"
+                  autoComplete="off"
+                  {...form.register("rank.letter", {
+                    required: "This field is required",
+                    setValueAs: v => v.toUpperCase(),
+                    validate: value => {
+                      if (value.startsWith("S+"))
+                        return "You have X Battles unlocked"
+                      if (/^[ABC][+-]?$|^S$/.test(value)) return true
+                      return "Invalid rank"
+                    },
+                  })}
+                />
+                <Error error={formErrors?.rank?.letter} />
+              </>,
+              <>
+                <Controller
+                  name="rank.points"
+                  control={form.control}
+                  rules={{
+                    required: "This field is required",
+                  }}
+                  render={({ field: { onChange, onBlur, value, ref } }) => (
+                    <Cleave
+                      onChange={onChange}
+                      onBlur={onBlur}
+                      htmlRef={ref}
+                      value={value}
+                      type="text"
+                      autoComplete="off"
+                      placeholder="478"
+                      size="1"
+                      options={{
+                        numeral: true,
+                      }}
+                      className={clsx(
+                        "w-full flex-1 uppercase",
+                        formErrors?.rank?.points &&
+                          "!border-red-600 dark:!border-red-400"
+                      )}
+                    />
+                  )}
+                />
+                <Error error={formErrors?.rank?.points} />
+              </>,
+            ].map((v, i) => (
+              <div className="w-full" key={i}>
+                <label>
+                  <p className="text-sm font-medium uppercase tracking-wider text-slate-400">
+                    {["Rank", "Points"][i]}
+                  </p>
+                  {v}
+                </label>
+              </div>
+            ))}
+          </div>
+        }
+      />
+      <Border />
+      <FormItem
+        title="Weapon Pool"
+        desc="List up to 5 weapons that you would be comfortable playing during the tournament."
+      >
+        <Controller
+          name="weapons"
+          type="select"
+          control={form.control}
+          rules={{
+            required: "This field is required",
+            validate: v => v.length <= 5 || "Too many weapons selected",
+          }}
+          defaultValue={[]}
+          render={({ field }) => (
+            <WeaponSelect
+              error={formErrors.weapons}
+              field={field}
+              onX={weapon => {
+                form.setValue(
+                  "weapons",
+                  form.getValues("weapons").filter(p => p.id !== weapon.id),
+                  { shouldValidate: true }
+                )
+              }}
+            />
+          )}
+        />
+        <Error error={formErrors.weapons} />
+      </FormItem>
+      <Border />
+      <FormItem
+        title="Competitive Experience"
+        desc="List any relevant competitive experience. For example: LUTI division, tournament placements, team experience."
+      >
+        <textarea
+          {...form.register("cxp")}
+          type="text"
+          autoComplete="off"
+          rows={4}
+          className="w-full"
+          placeholder={`Captain of Team Triforce since 1987`}
+        />
+      </FormItem>
+      <Border />
+      <FormItem
+        title="start.gg User Slug"
+        desc={
+          <>
+            Enter the 8 characters that are listed on your{" "}
+            <a
+              className="text-default font-medium underline decoration-otd-slate hover:decoration-transparent"
+              href="https://start.gg/profile"
+            >
+              start.gg profile
+            </a>
+            .
+          </>
+        }
+      >
+        <div className="flex flex-row-reverse items-stretch">
+          <input
+            {...form.register("slug", {
+              required: { value: true, message: "This field is required" },
+              pattern: {
+                value: /^[0-9A-Fa-f]{8}$/,
+                message: "Invalid user slug",
+              },
+            })}
+            type="text"
+            autoComplete="off"
+            className={clsx(
+              "peer w-full rounded-l-none border-l-0",
+              formErrors.slug && "!border-red-600 dark:!border-red-400"
+            )}
+          />
+          <input
+            type="text"
+            className={clsx(
+              "min-w-0 rounded-lg rounded-r-none border-2 border-r-0 border-slate-400 !bg-slate-200 bg-transparent px-1.5 text-center text-base peer-focus:!border-otd-slate-600 peer-focus:ring-transparent dark:border-slate-700 dark:!bg-slate-800 dark:peer-focus:!border-otd-slate-400",
+              formErrors.slug && "!border-red-600 dark:!border-red-400"
+            )}
+            placeholder="start.gg/user/"
+            disabled
+          />
+        </div>
+        <Error error={formErrors.slug} />
+      </FormItem>
+      <Border />
+      <WithAlert>
+        {({ style, message, button }) => (
+          <div className="flex w-full flex-col justify-center">
+            <button
+              type="submit"
+              disabled={
+                !button ||
+                form.formState.isSubmitting ||
+                (button === "Update Profile" && !form.formState.isDirty)
+              }
+              className="w-full rounded-lg bg-otd-slate/50 py-3.5 text-xl font-semibold uppercase tracking-wider enabled:cursor-pointer hover:enabled:bg-otd-slate/75 disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-600 disabled:dark:bg-slate-800 disabled:dark:text-slate-400"
+            >
+              {button || "Signup"}
+            </button>
+            <p
+              className={clsx("mt-4 text-center text-lg font-semibold", style)}
+            >
+              {message}
+            </p>
+          </div>
         )}
-      </Chakra.Box>
-    </InputContainer>
+      </WithAlert>
+    </form>
   )
 }
 
-const InputContainer = ({ name, desc, children }) => (
-  <Chakra.Box
-    display="flex"
-    flexDir={["column", null, "row"]}
-    justifyContent="space-between"
-  >
-    <Chakra.Box
-      flexBasis="0"
-      flexGrow="4"
-      gridGap="4"
-      display="flex"
-      flexDir="column"
-      paddingBottom={[4, null, 0]}
-    >
-      <Chakra.Text fontSize={["3xl", "4xl"]} lineHeight="none">
-        {name}
-      </Chakra.Text>
-      <Chakra.Text fontSize={["lg", "xl"]} textStyle="semimute">
-        {desc}
-      </Chakra.Text>
-    </Chakra.Box>
-    <Chakra.Box flexBasis="0" flexGrow="2" />
-    <Chakra.Box flexBasis="0" flexGrow="3">
-      {children}
-    </Chakra.Box>
-  </Chakra.Box>
+const WithAlert = ({ children }) => {
+  const signup = useUserSignup()
+  const tourney = useTourney()
+  const discord = useDiscord()
+  let props
+
+  if (!tourney.data) {
+    props = {}
+  } else if (tourney.data.hasEnded()) {
+    props = {
+      style: "text-blue-600 dark:text-blue-400",
+      message:
+        "There's no tournament going on at the moment, stay tuned for the next one!",
+    }
+  } else if (discord.data?.hasJoined === false) {
+    props = {
+      style: "text-red-600 dark:text-red-400",
+      message: (
+        <>
+          You must be in the{" "}
+          <Link to="/discord" className="underline hover:no-underline">
+            Off the Dial discord server
+          </Link>{" "}
+          to participate!
+        </>
+      ),
+    }
+  } else if (signup.data) {
+    props =
+      signup.data.type === "sub"
+        ? {
+            style: "text-lime-600 dark:text-lime-400",
+            message: "You're registered for the tournament as a sub!",
+            button: "Update Profile",
+          }
+        : {
+            style: "text-green-600 dark:text-green-400",
+            message: "You're registered for the tournament!",
+            button: "Update Profile",
+          }
+  } else {
+    props = tourney.data.hasClosed()
+      ? {
+          style: "text-amber-600 dark:text-amber-400",
+          message: "Signups have closed, but you can still sign up as a sub!",
+          button: "Signup as a Sub",
+        }
+      : { button: "Signup" }
+  }
+  return children(props)
+}
+
+const RankItem = ({ control, error, yes, no }) => {
+  return (
+    <div className="flex flex-col gap-8">
+      <Controller
+        name="isUnlocked"
+        control={control}
+        defaultValue=""
+        rules={{
+          required: "This field is required",
+          setValueAs: v => {
+            if (v === "yes") return true
+            if (v === "no") return false
+          },
+        }}
+        render={({ field }) => (
+          <>
+            <RadioGroup {...field}>
+              <div className="flex flex-row flex-wrap items-end justify-between gap-4 md:items-start md:gap-0">
+                <div className="min-w-min md:flex-[3_3_0%]">
+                  <h2 className="mr-auto text-2xl font-medium">Rank</h2>
+                  <RadioGroup.Label className="text-xl text-slate-700 dark:text-slate-300">
+                    Do you have X Battles unlocked?
+                  </RadioGroup.Label>
+                </div>
+                <div className="hidden md:block md:flex-1"></div>
+                <div className="justify-stretch flex md:flex-[3_3_0%]">
+                  <div className="flex flex-col items-end md:items-start">
+                    <div
+                      className={clsx(
+                        "relative flex shrink-0 items-center gap-0.5 overflow-hidden rounded-lg border-2 border-slate-400 bg-slate-400 dark:border-slate-700 dark:bg-slate-700",
+                        error && "!border-red-600 dark:!border-red-400"
+                      )}
+                    >
+                      {["yes", "no"].map(v => (
+                        <RadioGroup.Option value={v} key={v}>
+                          {({ checked }) => (
+                            <div
+                              className={clsx(
+                                "text-semibold cursor-pointer rounded-md py-1.5 px-3 text-lg capitalize",
+                                checked
+                                  ? "bg-slate-100 shadow-sm dark:bg-slate-900"
+                                  : "hover:bg-slate-300 dark:hover:bg-slate-800"
+                              )}
+                            >
+                              {v}
+                            </div>
+                          )}
+                        </RadioGroup.Option>
+                      ))}
+                    </div>
+                    <Error error={error} />
+                  </div>
+                </div>
+              </div>
+            </RadioGroup>
+            <div className="flex flex-col gap-2 md:flex-row md:justify-between md:gap-0">
+              <div className="flex-[3_3_0%] text-xl text-slate-700 dark:text-slate-300">
+                {field.value === "yes" && (
+                  <>
+                    <p>Enter your most recent X powers for each mode.</p>
+                    <p>
+                      If you haven't done calculations for this season, enter
+                      last season's powers instead.
+                    </p>
+                  </>
+                )}
+                {field.value === "no" && (
+                  <p>Enter your current rank, and your ranking points.</p>
+                )}
+              </div>
+              <div className="flex-1"></div>
+              <div className="flex-[3_3_0%]">
+                <div className={clsx({ hidden: field.value !== "yes" })}>
+                  {yes}
+                </div>
+                <div className={clsx({ hidden: field.value !== "no" })}>
+                  {no}
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+      />
+    </div>
+  )
+}
+
+const WeaponSelect = ({ error, field, onX }) => {
+  let [query, setQuery] = React.useState("")
+
+  return (
+    <Combobox multiple by="id" {...field}>
+      <div className="relative">
+        <div
+          className={clsx(
+            "inline-block w-full cursor-text rounded-lg border-2 border-slate-400 bg-transparent px-3 py-2 text-lg focus-within:!border-otd-slate-600 focus-within:ring-transparent dark:border-slate-700 focus-within:dark:!border-otd-slate-400",
+            error && "!border-red-600 dark:!border-red-400"
+          )}
+        >
+          <span className="flex flex-wrap gap-2">
+            {field.value.map(weapon => (
+              <span
+                key={weapon.id}
+                className="flex h-7 items-center gap-2 rounded bg-slate-200 px-2 py-0.5 text-sm dark:bg-slate-700"
+              >
+                <img src={weapon.img} alt="" className="h-5 w-5" />
+                <span>{weapon.name}</span>
+                <svg
+                  className="h-4 w-4 cursor-pointer"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  onClick={e => {
+                    e.stopPropagation()
+                    e.preventDefault()
+                    onX(weapon)
+                  }}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </span>
+            ))}
+            <Combobox.Input
+              type="text"
+              onChange={event => setQuery(event.target.value)}
+              onFocus={() => query !== "" && setQuery("")}
+              className="min-w-0 grow border-none p-0 focus:ring-0"
+              size="6"
+              placeholder="Search..."
+            />
+          </span>
+        </div>
+
+        <div className="absolute my-2 w-full rounded-md bg-slate-300 dark:bg-slate-800">
+          <Combobox.Options className="max-h-60 overflow-auto rounded-md text-base leading-6 shadow-lg focus:outline-none sm:text-sm sm:leading-5">
+            {matchSorter(weapons, query, { keys: ["name"] }).map(weapon => (
+              <Combobox.Option
+                key={weapon.id}
+                value={weapon}
+                className={({ active }) =>
+                  clsx(
+                    "relative cursor-default select-none bg-clip-padding py-2 px-3 focus:outline-none",
+                    active && "bg-otd-slate-500"
+                  )
+                }
+              >
+                {({ active, selected }) => (
+                  <div className="flex justify-between">
+                    <div className="flex items-center gap-3 truncate">
+                      <img src={weapon.img} alt="" className="h-6 w-6" />
+                      <span
+                        className={selected ? "font-semibold" : "font-normal"}
+                      >
+                        {weapon.name}
+                      </span>
+                    </div>
+                    {selected && (
+                      <span
+                        className={clsx(
+                          "flex items-center",
+                          active
+                            ? "text-white"
+                            : "text-otd-slate-500 dark:text-otd-slate-400"
+                        )}
+                      >
+                        <svg
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                    )}
+                  </div>
+                )}
+              </Combobox.Option>
+            ))}
+          </Combobox.Options>
+        </div>
+      </div>
+    </Combobox>
+  )
+}
+
+const FormItem = ({ title, desc, children }) => (
+  <label className="flex flex-col gap-2 md:flex-row md:justify-between md:gap-0">
+    <div className="flex-[3_3_0%]">
+      <h2 className="text-2xl font-medium">{title}</h2>
+      <div className="text-xl text-slate-700 dark:text-slate-300">{desc}</div>
+    </div>
+    <div className="flex-1"></div>
+    <div className="flex-[3_3_0%]">{children}</div>
+  </label>
 )
 
-const StyledCleave = ({ isInvalid, ...rest }) => {
-  const styles = Chakra.useMultiStyleConfig("Input", { size: "lg" })
+const Error = ({ error }) => {
   return (
-    <ChakraCleave {...rest} __css={styles.field} aria-invalid={isInvalid} />
+    error && (
+      <p className="mt-1 text-red-600 dark:text-red-400">{error.message}</p>
+    )
   )
 }
 
-const ChakraCleave = Chakra.chakra(Cleave, {})
+const Border = () => (
+  <div className="border-t-2 border-slate-300 dark:border-slate-800" />
+)
 
-export default Signup
+const SignupPage = () => {
+  const [user] = useAuthState(auth)
+  const tourney = useTourney()
+  const blocked =
+    tourney.data?.inviteOnly() && !tourney.data?.whitelist?.includes(user?.uid)
+
+  return (
+    <Layout
+      className={clsx(
+        "flex items-start justify-center",
+        !blocked && "bg-slate-200 dark:bg-slate-900"
+      )}
+    >
+      <PrivateRoute>
+        {blocked ? (
+          <div className="flex max-w-3xl flex-col items-center justify-center gap-4 self-center p-8 text-center text-2xl text-slate-700 dark:text-slate-300">
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-700 text-slate-50 dark:bg-slate-300 dark:text-slate-900">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
+                />
+              </svg>
+            </div>
+            <p className="font-semibold">
+              You are not whitelisted for this tournament!
+            </p>
+            <p className="text-slate-600 dark:text-slate-400">
+              If you think this is a mistake, please contact one of the
+              Tournament Organisers
+            </p>
+          </div>
+        ) : (
+          <Signup />
+        )}
+      </PrivateRoute>
+    </Layout>
+  )
+}
+
+export default SignupPage

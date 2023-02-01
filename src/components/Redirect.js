@@ -1,10 +1,7 @@
 import React from "react"
 
-const Redirect = ({ to }) => {
-  if (typeof window !== "undefined") {
-    window.location.replace(to)
-  }
-  return <></>
-}
+const Redirect = ({ pageContext }) => (
+  <meta http-equiv="Refresh" content={`0; url='${pageContext.to}'`} />
+)
 
 export default Redirect

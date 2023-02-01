@@ -1,540 +1,329 @@
-import React, { useEffect, useState } from "react"
-
-import { graphql } from "gatsby"
-import { useTourney, useUserSignup } from "src/app/hooks"
-import {
-  fromUnixTime,
-  format,
-  formatDuration,
-  intervalToDuration,
-  addHours,
-  addMinutes,
-} from "date-fns"
-
-import Link from "src/components/Link"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import * as Chakra from "@chakra-ui/react"
-import { InfoOutlineIcon } from "@chakra-ui/icons"
+import React, { useState } from "react"
+import clsx from "clsx"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import { format, formatDuration, intervalToDuration } from "date-fns"
+import * as Collapsible from "@radix-ui/react-collapsible"
+import useTourney from "src/app/useTourney"
 import Layout from "src/components/Layout"
-import skate from "src/static/skate.svg"
-import idtga from "src/static/idtga.svg"
-import promoBlaster from "src/static/promo_blaster.png"
-import promoFriends from "src/static/promo_friends.png"
-import promoInvite from "src/static/promo_invite.png"
+import logo from "src/static/idtga.svg"
+import skater from "src/static/skater.webp"
+import promoInvite from "src/static/promo_invite.webp"
+import promoBlaster from "src/static/promo_blaster.webp"
+import promoFriends from "src/static/promo_friends.webp"
+import InfoMdx from "./info.mdx"
+import { AnimationOnScroll } from "react-animation-on-scroll"
 
-const Idtga = ({ data }) => {
-  const tourney = useTourney()
-
-  return (
-    <Layout
-      pageTitle="It's Dangerous to go Alone"
-      meta={{
-        image: idtga,
-        description: `It's Dangerous to go Alone is our flagship, solo registration tournament. Focused on creating balanced teams, and being accessible to everyone.`,
-      }}
-    >
-      <Chakra.Box bg="otd.slate.0">
-        <Chakra.Box mx={3} bgColor="otd.slate.300" minH="1px" />
-        <Card
-          tourney={tourney}
-          signupButton={<SignupButton tourney={tourney} />}
-        />
-      </Chakra.Box>
-      <Chakra.Box py={[8, null, null, 16]} pl={[8, null, null, 16]}>
-        <Chakra.Grid templateColumns="repeat(12, minmax(0, 1fr))">
-          <Chakra.GridItem rowStart={1} colStart={1} colEnd={13}>
-            <Chakra.Image src={skate} />
-          </Chakra.GridItem>
-          <Chakra.GridItem
-            pt={[4, 0]}
-            fontSize={["2xl", "3xl"]}
-            rowStart={[2, null, null, 1]}
-            colStart={[1, null, null, 5]}
-            colEnd={[13, null, null, 12]}
-            zIndex={1}
-          >
-            <Chakra.Text fontWeight="black">
-              Our flagship,{" "}
-              <Chakra.Text as="span" fontStyle="italic">
-                solo registration
-              </Chakra.Text>{" "}
-              tournament.
-            </Chakra.Text>
-            <Chakra.Text fontSize={["2xl", "3xl"]} textStyle="semimute">
+const Idtga = () => (
+  <Layout helmet={{ title: "IDTGA" }}>
+    <div className="bg-otd-slate">
+      <div className="mx-3 border-t-2 border-otd-slate-300" />
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between sm:gap-10 sm:p-10 lg:flex-row">
+        <div className="flex w-fit flex-col items-center p-8 sm:p-0 lg:items-stretch">
+          <img src={logo} alt="" className="mb-6 h-28 lg:self-start" />
+          <p className="text-center text-lg font-medium uppercase tracking-wider text-otd-slate-100 lg:text-left">
+            This Season Of
+          </p>
+          <h1 className="text-center text-2xl font-medium text-slate-50 sm:text-3xl lg:text-left">
+            It's Dangerous to go Alone
+          </h1>
+        </div>
+        <TourneyCard />
+      </div>
+    </div>
+    <div className="relative flex flex-col md:flex-row">
+      <div className="ml-auto max-w-[calc(72rem+((100vw-72rem)/2))] pt-16 pl-5">
+        <img src={skater} alt="" />
+      </div>
+      <div className="mx-auto flex max-w-6xl md:absolute md:inset-0">
+        <div className="md:flex-1" />
+        <div className="flex-[2_2_0%]">
+          <div className="flex flex-col gap-1.5 p-12 md:p-16">
+            <h2 className="text-xl font-medium uppercase tracking-wider text-otd-slate-500 dark:text-otd-slate-300">
+              About the tournament
+            </h2>
+            <p className="text-2xl font-semibold sm:text-3xl">
+              Our flagship <i>solo registration</i> tournament.
+            </p>
+            <p className="text-2xl text-slate-600 dark:text-slate-300 sm:text-3xl">
               Focused on creating balanced teams, and being accessible to
               everyone.
-            </Chakra.Text>
-          </Chakra.GridItem>
-        </Chakra.Grid>
-      </Chakra.Box>
-      <Whoosh>
-        <WhooshPromo
-          title="No team, no problem"
-          description="Whether you are brand new to the scene, or a skilled free agent. We make it always accessible to gain competitive experience."
-        >
-          <Chakra.Image src={promoInvite} />
-        </WhooshPromo>
-        <WhooshPromo
-          title="Put yourself out there"
-          description="Test your chemistry with different folks, and show the scene what you're made of. You might just find your new teammates."
-          reversed={true}
-        >
-          <Chakra.Image src={promoBlaster} />
-        </WhooshPromo>
-        <WhooshPromo
-          title="Have some fun"
-          description="Got an open weekend? Meet new people, make new friends, and just have a whole lot of fun!"
-        >
-          <Chakra.Image src={promoFriends} />
-        </WhooshPromo>
-      </Whoosh>
-      <Chakra.Box py={[8, null, null, 20]} px={[8, null, null, 40]}>
-        <DetailsCard tourney={tourney} mdx={data.mdx} />
-      </Chakra.Box>
-    </Layout>
-  )
-}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div className="my-12 flex flex-col items-center">
+      <Blurb
+        heading="No team, no problem"
+        desc="Whether you are brand new to the scene, or a skilled free agent. We make it always accessible to gain competitive experience."
+        src={promoInvite}
+      />
+      <Blurb
+        heading="Put yourself out there"
+        desc="Test your chemistry with different folks, and show the scene what you're made of. You might just find your new teammates."
+        src={promoBlaster}
+        className="sm:!flex-row-reverse"
+      />
+      <Blurb
+        heading="Have some fun"
+        desc="Got an open weekend? Meet new people, make new friends, and just have a really great time."
+        src={promoFriends}
+      />
+    </div>
+  </Layout>
+)
 
-const Card = ({ tourney, signupButton }) => {
-  let state = {
-    date: "...",
-    days: 0,
-    hours: 0,
-    minutes: 0,
-  }
-  if (!tourney.isLoading) {
-    const duration = formatDuration(
+const TourneyCard = () => {
+  const tourney = useTourney()
+  const duration = date =>
+    formatDuration(
       intervalToDuration({
-        start: fromUnixTime(tourney.data?.smashgg.registrationClosesAt),
-        end: new Date(),
-      }),
-      {
-        format: ["days", "hours", "minutes"],
-        zero: true,
-      }
-    ).split(" ")
-    state.date = tourney.data
-      ? format(tourney.data?.date, "MMM d, h:mm aa")
-      : "..."
-    if (!tourney.data?.hasClosed()) {
-      state.days =
-        duration[duration.findIndex(elem => elem.startsWith("day")) - 1]
-      state.hours =
-        duration[duration.findIndex(elem => elem.startsWith("hour")) - 1]
-      state.minutes =
-        duration[duration.findIndex(elem => elem.startsWith("minute")) - 1]
-    }
-  }
+        start: new Date(),
+        end: date,
+      })
+    )
+      .split(" ")
+      .slice(0, 2)
+      .join(" ")
 
   return (
-    <Chakra.Stack
-      direction={["column", "row"]}
-      py={[8, null, null, 16]}
-      px={4}
-      justify="space-evenly"
-      align="center"
-      maxW="container.lg"
-      mx="auto"
-    >
-      <Chakra.Box
-        display="flex"
-        flexDir="column"
-        justifyContent="center"
-        alignItems="center"
-        maxW={["full", "52"]}
-        pb={[8, 0]}
-      >
-        <Chakra.Image maxW={["32", "48"]} src={idtga} />
-        <Chakra.Text
-          fontSize={["2xl", "3xl"]}
-          fontWeight="black"
-          color="white"
-          lineHeight="shorter"
-          textAlign="center"
-        >
-          It's Dangerous to go Alone
-        </Chakra.Text>
-      </Chakra.Box>
-      <Chakra.Box maxW="80">
-        <Chakra.Flex
-          direction="column"
-          align="center"
-          justify="center"
-          textAlign="center"
-        >
-          <CardSection>
-            <CardHeading>Tournament Date:</CardHeading>
-            <CardText>{state.date}</CardText>
-          </CardSection>
-          <CardSection>
-            <CardHeading>Registration Closes:</CardHeading>
-            <Chakra.Stack
-              mx="auto"
-              direction={["column", "row"]}
-              justify={["space-around", "center"]}
-              spacing={4}
+    <div className="bg-default flex w-full flex-col items-stretch rounded-t-xl shadow-xl sm:max-w-lg sm:rounded-xl">
+      <div className="rounded-t-xl bg-slate-200 px-8 py-8 dark:bg-slate-800">
+        <h2 className="text-center text-xl font-semibold">
+          {tourney.data ? (
+            tourney.data.smashgg.name
+          ) : (
+            <div className="mx-auto h-7 w-96 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
+          )}
+        </h2>
+      </div>
+      <div className="mx-auto flex w-full max-w-lg flex-col items-stretch gap-8 px-8 py-8">
+        {tourney.data && <TourneyStatus data={tourney.data} />}
+        <div className="flex flex-col items-stretch gap-2">
+          <CardInfo
+            icon={
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+              />
+            }
+            left="Tournament starts:"
+          >
+            <div className={tourney.data?.hasEnded() && "line-through"}>
+              {tourney.data ? (
+                format(tourney.data.startDate, "MMM d, h:mm aa")
+              ) : (
+                <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
+              )}
+            </div>
+          </CardInfo>
+          <CardInfo
+            icon={
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            }
+            left="Registration closes:"
+          >
+            <div className={tourney.data?.hasClosed() && "line-through"}>
+              {tourney.data ? (
+                tourney.data?.hasClosed() ? (
+                  `${duration(tourney.data?.closeDate)} ago`
+                ) : (
+                  `in ${duration(tourney.data?.closeDate)}`
+                )
+              ) : (
+                <div className="mx-auto h-6 w-32 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
+              )}
+            </div>
+          </CardInfo>
+        </div>
+        <Details />
+        <div className="flex flex-wrap items-center justify-between gap-3 sm:rounded-b-xl">
+          <Link to="/signup" className="rounded-lg">
+            <button
+              disabled={!(tourney.data?.hasEnded() === false)}
+              className="rounded-lg bg-otd-cyan-200 py-2 px-6 text-lg font-medium hover:enabled:bg-otd-cyan-300 disabled:opacity-50 disabled:grayscale-[50%] dark:bg-otd-cyan-700 hover:enabled:dark:bg-otd-cyan-600"
             >
-              <CardCount value={state.days} text="Days" />
-              <CardCount value={state.hours} text="Hours" />
-              <CardCount value={state.minutes} text="Minutes" />
-            </Chakra.Stack>
-          </CardSection>
-          <CardSection>{signupButton}</CardSection>
-          <Chakra.Text color="otd.slate.200">
-            Times are listed in your timezone. For more information, see{" "}
-            <Link to="/idtga#details" color="otd.slate.100">
-              details
-            </Link>
-            .
-          </Chakra.Text>
-        </Chakra.Flex>
-      </Chakra.Box>
-    </Chakra.Stack>
+              {tourney.data?.hasClosed() && !tourney.data?.hasEnded()
+                ? "Signup as a sub!"
+                : "Signup!"}
+            </button>
+          </Link>
+          <Link to="rules">
+            <button className="rounded-lg bg-slate-200 py-2 px-6 text-lg font-medium hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700">
+              Rules
+            </button>
+          </Link>
+          <p className="text-sm text-slate-500">
+            Times are listed in your timezone, see rules for format and
+            schedule.
+          </p>
+        </div>
+      </div>
+    </div>
   )
 }
 
-const WhooshPromo = ({ title, description, reversed = false, children }) => {
-  const props = reversed
-    ? [
-        { colStart: [1, null, 2], colEnd: 3, rowStart: [2, null, 1] },
-        { colStart: 1, colEnd: [3, null, 2] },
-      ]
-    : [
-        { colStart: 1, colEnd: [3, null, 2], rowStart: [2, null, 1] },
-        { colStart: [1, null, 2], colEnd: 3 },
-      ]
-  return (
-    <Chakra.Box px={[4, null, null, 8]} py={16}>
-      <Chakra.Grid
-        gap={[4, null, null, 16]}
-        templateColumns="repeat(2, minmax(0, 1fr))"
-      >
-        <Chakra.GridItem
-          {...props[0]}
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-        >
-          <Chakra.Box>
-            <Chakra.Text fontSize={["2xl", "3xl"]} fontWeight="bold" mb={2}>
-              {title}
-            </Chakra.Text>
-            <Chakra.Text fontSize="2xl" textStyle="semimute">
-              {description}
-            </Chakra.Text>
-          </Chakra.Box>
-        </Chakra.GridItem>
-        <Chakra.GridItem alignSelf="center" {...props[1]}>
-          {children}
-        </Chakra.GridItem>
-      </Chakra.Grid>
-    </Chakra.Box>
-  )
-}
-
-const DetailsCard = ({ tourney, mdx }) => {
-  const state =
-    tourney?.data?.hasEnded() !== false
-      ? {
-          title: "It's Dangerous to go Alone",
-          details:
-            "There's no tournament currently happening, but here's some general information!",
-          changelogTitle: "Changes from last season",
-        }
-      : {
-          title: tourney.data.smashgg.name,
-          details: (
-            <article>
-              <MDXRenderer>{mdx.body}</MDXRenderer>
-            </article>
-          ),
-          changelogTitle: "What's New",
-        }
-  const dates = [
-    [
-      "4 days before",
-      date => addHours(date, -24),
-      <>
-        Check-in begins for 24 hours, if you are registered, don't forget to
-        check in!
-      </>,
-    ],
-    [
-      "3 days before",
-      date => date,
-      <>
-        Check-in and registration closes, invalid attendees will be removed, and
-        we start assembling teams.
-      </>,
-    ],
-    [
-      "2 days before",
-      date => addHours(date, 24),
-      <>
-        Players recieve their teams, and the maplist is published. You can now
-        start practicing with your team
-      </>,
-    ],
-    [
-      "1 hour before",
-      date => addHours(date, 71),
-      <>
-        The tournament is about to begin! We request that you be online on both
-        Splatoon 3 and Discord.
-      </>,
-    ],
-    [
-      "10 minutes before",
-      date => addMinutes(addHours(date, 72), -10),
-      <>
-        The stream goes live on <Link to="/twitch">twitch</Link>!
-      </>,
-    ],
-  ]
-
-  return (
-    <Chakra.Box p={[8, null, null, 12]} layerStyle="lifted">
-      <Chakra.Stack spacing={8}>
-        <Chakra.Box>
-          <Chakra.Text id="details" fontSize="2xl" textStyle="semimute">
-            Details for...
-          </Chakra.Text>
-          <Chakra.Text lineHeight="1.125" fontSize="4xl">
-            {state.title}
-          </Chakra.Text>
-        </Chakra.Box>
-        <Chakra.Text
-          fontSize="xl"
-          textStyle="semimute"
-          as="blockquote"
-          fontStyle="italic"
-        >
-          {state.details}
-        </Chakra.Text>
-        <Chakra.Box
-          display="flex"
-          flexDirection="column"
-          alignItems="stretch"
-          gridGap={[8, null, null, 12]}
-        >
-          <Chakra.Box flexGrow="1" flexBasis="0">
-            <Chakra.Table fontSize="lg" variant="unstyled">
-              <Chakra.Thead>
-                <Chakra.Tr>
-                  <Chakra.Th></Chakra.Th>
-                  <Chakra.Th lineHeight="1.5" fontSize="lg" textStyle="mute">
-                    Schedule
-                  </Chakra.Th>
-                </Chakra.Tr>
-              </Chakra.Thead>
-              <Chakra.Tbody>
-                {dates.map((row, i) => (
-                  <Chakra.Tr key={i}>
-                    <Chakra.Td
-                      lineHeight="1.5"
-                      verticalAlign="top"
-                      pr={0}
-                      fontWeight="bold"
-                      textAlign="right"
-                      width="25%"
-                    >
-                      {tourney?.data?.hasEnded() !== false
-                        ? row[0]
-                        : format(
-                            row[1](
-                              fromUnixTime(
-                                tourney.data.smashgg.registrationClosesAt
-                              )
-                            ),
-                            "MMM d, h:mm aa"
-                          )}
-                    </Chakra.Td>
-                    <Chakra.Td lineHeight="1.5" verticalAlign="top">
-                      {row[2]}
-                    </Chakra.Td>
-                  </Chakra.Tr>
-                ))}
-              </Chakra.Tbody>
-            </Chakra.Table>
-          </Chakra.Box>
-          <Chakra.Box flexGrow="1" flexBasis="0">
-            <Chakra.Table fontSize="lg" variant="unstyled">
-              <Chakra.Thead>
-                <Chakra.Tr>
-                  <Chakra.Th></Chakra.Th>
-                  <Chakra.Th lineHeight="1.5" fontSize="lg" textStyle="mute">
-                    {state.changelogTitle}
-                  </Chakra.Th>
-                </Chakra.Tr>
-              </Chakra.Thead>
-              <Chakra.Tbody>
-                {mdx.frontmatter.changelog.map((row, i) => (
-                  <Chakra.Tr key={i}>
-                    <Chakra.Td
-                      width="25%"
-                      lineHeight="1.5"
-                      verticalAlign="top"
-                      pr={0}
-                    >
-                      <Chakra.Box
-                        display="flex"
-                        justifyContent="flex-end"
-                        alignItems="center"
-                        height="1.5em"
-                      >
-                        <InfoOutlineIcon />
-                      </Chakra.Box>
-                    </Chakra.Td>
-                    <Chakra.Td lineHeight="1.5" verticalAlign="top">
-                      {row}
-                    </Chakra.Td>
-                  </Chakra.Tr>
-                ))}
-              </Chakra.Tbody>
-            </Chakra.Table>
-          </Chakra.Box>
-        </Chakra.Box>
-      </Chakra.Stack>
-    </Chakra.Box>
-  )
-}
-
-const CardSection = ({ children }) => (
-  <Chakra.Box pb={8} w="full">
-    {children}
-  </Chakra.Box>
-)
-
-const CardHeading = ({ children }) => (
-  <Chakra.Text
-    color="otd.slate.200"
-    fontSize={["xl"]}
-    fontFamily="mono"
-    fontWeight="light"
-    letterSpacing={2}
-    lineHeight="sm"
-    textTransform="uppercase"
-    pb={[2, 0]}
-  >
-    {children}
-  </Chakra.Text>
-)
-
-const CardText = ({ children, ...rest }) => (
-  <Chakra.Text
-    color="white"
-    fontSize={["2xl", "3xl"]}
-    lineHeight="none"
-    fontWeight="bold"
-    {...rest}
-  >
-    {children}
-  </Chakra.Text>
-)
-
-const CardCount = ({ text, value }) => (
-  <Chakra.Box flexGrow="1" flexShrink="1" flexBasis="0">
-    <Chakra.Stack>
-      <CardText color="otd.slate.100" fontFamily="mono">
-        {value}
-      </CardText>
-      <CardText fontSize={["2xl"]} fontWeight="normal">
-        {text}
-      </CardText>
-    </Chakra.Stack>
-  </Chakra.Box>
-)
-
-const SignupButton = ({ tourney }) => {
-  const userSignup = useUserSignup()
-
-  const [signupButtonText, setSignupButtonText] = useState("Signup")
-  useEffect(() => {
-    if (userSignup.data?.type === "signup") {
-      setSignupButtonText("Update Signup Form")
-    } else if (userSignup.data?.type === "sub") {
-      setSignupButtonText("Update Sub Form")
-    } else if (tourney.data?.hasClosed() && !tourney.data?.hasEnded()) {
-      setSignupButtonText("Signup as a Sub")
-    } else {
-      setSignupButtonText("Signup")
-    }
-  }, [tourney, userSignup])
-
-  return (
-    <Link to={tourney.data?.hasEnded() ? undefined : "/signup"}>
-      <Chakra.Button
-        variant="outline"
-        borderColor="white"
-        color="white"
-        bg="otd.purple.0"
-        _hover={{ bg: "otd.purple.500" }}
-        _active={{ bg: "otd.purple.500" }}
-        size="lg"
-        disabled={tourney.data?.hasEnded()}
-      >
-        {signupButtonText}
-      </Chakra.Button>
-    </Link>
-  )
-}
-
-const Whoosh = ({ children }) => (
-  <>
-    <WhooshWave />
-    <Chakra.Box layerStyle="tint">
-      <Chakra.Container maxW="container.xl">{children}</Chakra.Container>
-    </Chakra.Box>
-    <WhooshWave reversed={true} />
-  </>
-)
-
-const WhooshWave = ({ reversed = false }) => (
-  <Chakra.Box textStyle="tinted">
-    <svg
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      viewBox="0 0 500 42"
-      xmlSpace="preserve"
-      fill="currentColor"
-    >
-      <g
-        transform={
-          reversed &&
-          "matrix(-1 -2.2967631E-06 2.2967631E-06 -1 500.5 42.501152)"
-        }
-      >
-        <path
-          d="M499.99 27.4921C484.7 30.6021 480.16 31.7321 464.87 34.8521C463.32 35.1721 461.67 35.4721 460.2 34.9021C455.64 33.1421 457.58 26.0321 461.21 22.7521C464.84 19.4721 469.85 16.1721 469.38 11.3121C468.78 5.13207 460.33 3.79207 454.19 4.74207C420.53 9.96207 391.43 31.8921 357.97 38.2921C354.28 39.0021 349.24 38.7121 348.3 35.0721C347.92 33.6121 348.42 32.0221 347.99 30.5721C346.93 26.9521 341.79 27.1121 338.13 28.0521C328.88 30.4221 319.64 32.8021 310.39 35.1721C304.87 36.5921 297.37 37.1121 295.12 31.8821C291.57 23.6221 307.05 14.2421 301.2 7.42207C299.12 5.00207 295.45 4.93207 292.28 5.23207C253.08 8.87206 218.42 37.9921 179.1 36.0321C174.62 35.8121 168.79 33.5221 169.46 29.0821C169.84 26.5621 172.32 24.8621 173.1 22.4421C175.1 16.1821 165.67 12.9221 159.15 13.7121C130.68 17.1521 104.94 33.2621 76.49 36.7921C72.55 37.2821 67.83 37.1921 65.55 33.9421C60.58 26.8521 73.69 19.7121 74.33 11.0821C74.73 5.71207 69.72 1.11207 64.42 0.22207C59.11 -0.667931 53.75 1.25207 48.9 3.58207C29.08 13.0721 21.89 24.8121 0 26.6921L0 45.3121L499.99 45.3121L499.99 27.4921L499.99 27.4921Z"
-          transform="translate(-6.1035156E-05 3.6879349)"
-        />
-        <path
-          d="M0.95504 6.23343C0.255043 7.35343 -0.29496 8.73343 0.175041 9.97343C0.535042 10.9234 1.43504 11.5834 2.40504 11.8634C3.37505 12.1534 4.40504 12.1134 5.41505 12.0234C7.59505 11.8134 9.82504 11.2934 11.605 10.0134C15.195 7.43342 15.455 1.77343 10.735 0.183425C7.25504 -0.976574 2.57504 3.64343 0.95504 6.23343L0.95504 6.23343Z"
-          transform="translate(81.16496 1.0065727)"
-        />
-        <path
-          d="M0.634155 4.06522C0.314148 4.57521 0.0441589 5.13522 0.00415039 5.73521C-0.0358582 6.33521 0.214142 6.97522 0.734161 7.28521C1.08417 7.49521 1.50415 7.52522 1.91415 7.52522C4.80417 7.53521 7.55417 6.27522 9.96414 4.69521C10.6342 4.25521 11.3441 3.69521 11.4541 2.90521C11.8041 0.405212 7.86414 -0.294788 6.15414 0.105213C3.89417 0.635216 1.85416 2.10522 0.634155 4.06522L0.634155 4.06522Z"
-          transform="translate(317.92584 17.934784)"
-        />
-        <path
-          d="M0.00765991 2.9814C0.0676575 3.5114 0.667664 3.7714 1.18765 3.8914C2.71765 4.2314 4.93765 4.3214 6.34766 3.4814C7.44766 2.8214 7.82767 1.2914 6.71765 0.401402C5.22766 -0.778599 -0.232361 0.811401 0.00765991 2.9814L0.00765991 2.9814Z"
-          transform="translate(338.25235 16.118599)"
-        />
-      </g>
-    </svg>
-  </Chakra.Box>
-)
-
-export const query = graphql`
-  query {
-    mdx(slug: { eq: "idtga/_details" }) {
-      frontmatter {
-        changelog
-      }
-      body
+const TourneyStatus = ({ data }) => {
+  let props = {
+    color:
+      "bg-green-600/20 text-green-700 dark:bg-green-400/20 dark:text-green-400",
+    underline:
+      "decoration-green-700/50 dark:decoration-green-400/50 hover:decoration-green-700 hover:dark:decoration-green-400",
+    message: "Registration is currently open!",
+  }
+  if (data.hasClosed()) {
+    props = {
+      color:
+        "bg-lime-600/20 text-lime-700 dark:bg-lime-400/20 dark:text-lime-400",
+      underline:
+        "decoration-lime-700/50 dark:decoration-lime-400/50 hover:decoration-lime-700 hover:dark:decoration-lime-400",
+      message: "Signups have closed, but you can still register as a sub!",
     }
   }
-`
+  if (data.hasEnded()) {
+    props = {
+      color: "bg-red-600/20 text-red-700 dark:bg-red-400/20 dark:text-red-400",
+      underline:
+        "decoration-red-700/5k0 dark:decoration-red-400/50 hover:decoration-red-700 hover:dark:decoration-red-400",
+      message: "This season has concluded, thanks for playing!",
+    }
+  }
+
+  return (
+    <div
+      className={clsx(
+        "flex items-center gap-4 rounded-lg p-4 font-medium",
+        props.color
+      )}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="h-6 w-6 flex-shrink-0"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.79M12 12h.008v.007H12V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+        />
+      </svg>
+      {props.message}
+    </div>
+  )
+}
+
+const CardInfo = ({ icon, left, className, children }) => (
+  <div
+    className={clsx(
+      "flex flex-wrap items-center gap-2 text-xl text-slate-600 dark:text-slate-300",
+      className
+    )}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="h-6 w-6 flex-shrink-0 text-slate-500 dark:text-slate-400"
+    >
+      {icon}
+    </svg>
+    <div className="mr-auto">{left}</div>
+    <div className="font-medium">{children}</div>
+  </div>
+)
+
+const Details = () => {
+  const [open, setOpen] = useState(false)
+  const [hover, setHover] = useState(false)
+
+  const data = useStaticQuery(graphql`
+    query {
+      mdx(internal: { contentFilePath: { glob: "**/pages/idtga/info.mdx" } }) {
+        frontmatter {
+          hidden
+        }
+      }
+    }
+  `)
+  if (data.mdx.frontmatter.hidden) {
+    return null
+  }
+
+  return (
+    <Collapsible.Root
+      open={open}
+      onOpenChange={setOpen}
+      className={clsx(
+        "rounded-lg border-2 border-slate-300 dark:border-slate-600",
+        hover && "bg-slate-100 dark:bg-slate-800"
+      )}
+    >
+      <Collapsible.Trigger
+        className="flex w-full items-center justify-between rounded-lg px-4 py-3 text-lg font-medium"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        <h3>Season Info</h3>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={2.5}
+          stroke="currentColor"
+          className={clsx("h-6 w-6 transition-transform", open && "rotate-180")}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+      </Collapsible.Trigger>
+      <Collapsible.Content asChild>
+        <>
+          <div className="mx-4 border-t-2 border-slate-200 dark:border-slate-700" />
+          <article className="prose prose-slate p-4 dark:prose-invert">
+            <InfoMdx />
+          </article>
+        </>
+      </Collapsible.Content>
+    </Collapsible.Root>
+  )
+}
+
+const Blurb = ({ heading, desc, src, className }) => (
+  <AnimationOnScroll
+    animateOnce={true}
+    animateIn="animate-in fade-in slide-in-from-bottom-12"
+    duration={0.5}
+  >
+    <div
+      className={clsx(
+        "flex max-w-6xl flex-col-reverse justify-between p-12 sm:flex-row sm:items-center sm:gap-0 sm:p-0",
+        className
+      )}
+    >
+      <div className="flex-1 sm:p-12">
+        <h3 className="mb-2 text-2xl font-medium md:text-3xl">{heading}</h3>
+        <p className="text-xl text-slate-600 dark:text-slate-300 md:text-2xl">
+          {desc}
+        </p>
+      </div>
+      <div className="flex-1">
+        <img src={src} alt="" className="w-64 sm:w-auto" />
+      </div>
+    </div>
+  </AnimationOnScroll>
+)
 
 export default Idtga

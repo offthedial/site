@@ -1,208 +1,193 @@
 ---
 title: IDTGA Rules
+desc: The rules for It's Dangerous to go Alone, our flagship, solo registration tournament!
 ---
 
-<Title title="It's Dangerous to go Alone Rules" />
-
-# It's Dangerous to go Alone Rules
-
-## Overview
-It's Dangerous to go Alone is a draft (free agent) tournament where players signup as an indivudual player and get assigned a team based on the information provided in the [registration form](https://otd.ink/signup). The only form of registration allowed is as a free agent - NO TEAMS ALLOWED (if you are on a team, you can still play in the tournament, you just need to signup individually and may not be placed onto the same team).
-
-## Registration Cap
-The maximum number of partipants is 192 (48 teams). If this threshold is reached, all signups after this will be removed, and sub registration will open.
-
-## Eligibility
-### Players are eligible if they meet all of the conditions below
-- Players have a valid [start.gg account](https://start.gg)
-- Players have a valid Discord account and be in the [Off the Dial Discord Server](https://otd.ink/discord)
-- Players have means to play Splatoon 3 in an online capacity
-- Players have at least achieved `C` in Splatoon 3 and have a basic understanding of how all the ranked modes work.
-
-### Players are not eligible if they have any one of the conditions below
-- The player is banned from Off the Dial's Discord server or services
-- The player is banned from Nintendo Online, Discord or start.gg
-- Player is on the banned list of the [Splatoon Code of Conduct](https://docs.google.com/document/d/1-6qlRDNnNSId2U1vve1x9CisJKybtFka69TURVW8qqA/edit?usp=drivesdk).
-- Player is a dropout of the previous season of the tournament.
-
 ## Format
-Depending on the number of signups, multiple brackets are tiered based on the cumulative ELO (numerical score of all ranks) and competitive experience. The initial bracket split will be dividing players who have submitted an X rank, or have alternativly provided a high level of identifiable competive experience. The bracket may be split up to one more time, depending on which out the two previous brackets have the larger pool of players.
 
-- The minimum amount of teams per bracket is `6` teams.
+Due to the large number of signups, players are seperated into multiple skill brackets to keep players close in skill level with each other. There is a registration cap of 48 teams (192 players).
 
-All brackets will run independently of one another and will have their own preliminaries and top cut.
+All brackets are run independently of one another and have their own preliminaries and top cut.
 
-Brackets will be named accordingly if there are two or three brackets
-- The top bracket will always be called the 'Power Bracket'
-- The middle bracket, which will be only used if there are three brackets, will be called the 'Wisdom Bracket'.
-- The bottom bracket will always be called the 'Courage Bracket'
+The skill brackets are, in order of highest skill to lowest skill: **Power** (highest), **Wisdom** (middle), and **Courage** (lowest). Note that the Wisdom bracket may not always be active depending on the number of signups.
 
-## Brackets and Progression
 ### Preliminaries:
-- Bracket: `Swiss`
-- Matches: `Play-all-3`
-- There are `4` total rounds
-- Points will be allocated for games won, matches won, byes as well as ties. The point allocations are as such;
-  - 3 point per game win
-  - 6 points per match won (in addition to the points allocated for individual game wins)
-  - 2 point per match tie (allocated to both teams, will be used if time has run out)
-  - 8 points per bye (no points will be allocated as game wins as no games have been played)
 
-#### Tiebreakers
-In the event a tiebreaker is needed, the following rules will be enacted sequentially until a winner has been determined
-  - Total sets won
-  - Head to head
-  - Game win %
-  - Team with less dropouts
-If there still is a tie between two teams, a single head to head game of Turf War will be played on a random map.
-
+- Format: `Swiss`
+- Matches: `Play all 3`
+- There are 4 rounds in each bracket.
+- There is no elimination, remember to play all of your rounds!
 
 ### Top Cut:
-- Bracket: `Single Elimination`
-- Matches: `Best-of-5`
-- The top `4` teams advance from the preliminaries. 
-- There will be no 3rd place match played. 3rd place will be determined by preliminary results.
 
-## Timing
-The tournament is scheduled to last `4:00` hours total.
-- Preliminaries take approximately `2:25` hours in total.
-- Top cut take approximately `1:35` hours in total.
+- Format: `Single Elimination`
+- Matches: `Best of 5`
+- The top 4 teams advance from the preliminaries.
+- There is no 3rd place match. 3rd place is determined by preliminary results.
+
+## Schedule
+
+This is the general schedule for each season, if you want to see the dates for the current season, please check out the schedule listed on your [profile](https://otd.ink/profile).
+
+1. **Registration opens!**
+1. **`72` hours before the tournament:**
+
+   Check-in opens 24 hours before registration closes! Please remember to check-in within those 24 hours or you will be removed from the tournament.
+
+1. **`48` hours before the tournament:**
+
+   Both registration and check-in closes, if you haven't checked in by this point you will be removed. You're still able to sign up as an emergency sub!
+
+1. **`24` hours before the tournament:**
+
+   The <Mention>#reporting-players</Mention> channel is opened. For more info, please refer to the [Reporting Players](#reporting-players) section.
+
+1. **The tournament begins!**
+
+   All tournaments begin on the same minute/hour, but may be at a different hour depending on your timezone. Only **standard timezones** are listed below, if daylight savings / summer time is in effect, please add an hour:
+
+   ```
+   PST  - 12pm Saturday
+   MST  - 1pm Saturday
+   CST  - 2pm Saturday
+   EST  - 3pm Saturday
+   GMT  - 8pm Saturday
+   CET  - 9pm Saturday
+   JST  - 5am Sunday
+   AEST - 6am Sunday
+   ```
+
+   The tournament is scheduled to last `4:00` hours total.
+
+   - Preliminaries take approximately `2:25` hours in total.
+   - Top cut take approximately `1:35` hours in total.
 
 ### Round Durations
+
 - Each swiss round lasts `35` minutes.
 - Each top cut round lasts `40` minutes.
 - The very first swiss round lasts `5` more minutes, for `40` minutes total.
-- Players must start their matches within `5` minutes of the round.
-  - If the match has not started yet, the first game is automatically awarded to the team that's waiting.
-  - For each additional `5` minutes that the match still hasn't started, an additional game will be awarded.
-  - Please call a moderator in start.gg when this occurs so the game may be awarded to your team.
+- Players must start their matches within `5` minutes of the round (or `10` minutes for the first round).
+  - If the match has not started yet, the first game will be automatically awarded to the waiting team.
+  - For each additional `5` minutes that the match still hasn't started, another game will be awarded.
+  - Please call a moderator in start.gg when this occurs so we can set the score.
 - There is a `5-minute` break before finals commence.
 
-## Lobby Settings
-The host must have the following settings when creating the room
-- A password must be set to the room
-- Primary Gear Abilities Only must be set to off
-- Recon must be set to off
-- The correct stage and mode as displayed in <Mention>#maplist</Mention> must be used.
+If a match has not been completed by the end of the round, the match will be marked as a draw.
 
-## DC's Redo Decision Rules
-### Redo the match if:
-- The objective does not have `50` or less objective remaining (excluding penalty) for either team.
-- The match has not passed `2:30` before the DC has occured.
+## Disconnects (DC)
+
+To end the game early, any player can push the `ZL`, `ZR`, `L`, `R` as well as pushing down the two sticks all at the same time for 3 seconds. **This is not a rage-quit feature**, misuse of this feature will result in the entire set loss. Abuse of this feature will result in disqualification and/or a permanent ban. Remember to use the switch capture feature to record misuse if it has occured.
+
+If either 2 DCs occur in the same lobby, the host DCs, or there are a significant amount of complaints about lag; the team currently not hosting must host the new lobby.
+
+To reduce the chances of a DC happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
+
+If there's a dispute, or something unforseen occurs during the set, feel free to bring it up to helpdesk.
+
+### Redo the game if:
+
+- The objective has not passed `50` points remaining for either team.
+- The game has not passed `2:30` before the DC has occured.
 - Both teams use the same weapons/gear shown on the results screen.
 
-### Do NOT redo the match if:
+### Do NOT redo the game if:
+
 - **Any player** on the same team DC's again the same round.
-- There has been a misuse of ending the game early (see below for more details), unless the match was ended in the first 15 seconds of the game commences (in which case treat it as a DC against the player that ended the match if it was an accident)
-- The match has passed `2:30` before the DC'ing team has forfeited.
-- Either team has `50` or less objective remaining (excluding penalty).
-
-### Host Room Break
-Depending on the point in the match when the host DCs, different rulings are in place. *Note that if a DC has already occured from any other member of the team earlier in the round, the match will be awarded to the opposing team*.
-- If prior to `2:30` time remaining and either team has not reached `50` or less obective remaining, the match can be replayed (counts as the match redo).
-- If the time remaining is between `2:30` and `0:20`, the game will count as a loss again the team with the host DC
-- If there is less than 20 seconds remaining, or the game is in overtime, then the score at the time of the disconnect will be taken as the final score *(note that if it is observed that this occurs more than once during the tournament, the entire team will be disqualifed from the tournament)*.
-
-To end the game, any player can push the `ZL`, `ZR`, `L`, `R` as well as pushing down the two sticks all at the same time for `3` seconds.
-
-If either 2 DCs occur in the same lobby or the host DCs, the team currently not hosting must host the new lobby.
-
-To reduce the chances of a dc happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
-
-### Lag
-
-If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team. *Note that with Splatoon 3, it has been noted that some lag is normal, and may not be based on the host so please keep this in mind*.
-
-## Ending the Game Early
-In the current version of the game, anyone in the match can end the room. So because of this, some extra rules have been applied.
-- If a misuse has occured, the team that has done the act will have that entire round set against them as 3-0.
-- If a second misuse occurs again by the same player, that player forced to dropout (with regular dropout rules applying)
-- If a second misuse ocurs again by someone in the same team, the entire team will be disqualified from the tournament.
-- If a player abuses this system in a second tournament, they will be permantly banned from Off the Dial.
-
-To report a misuse, use the Switch capture feature so we know who canceled the game, and make a report in the <Mention>#tourney-helpdesk</Mention>.  
-
-## Teams
-Teams will be assigned 48 hours before the tournament begins. Once the rosters have been published, players must asign a team captain and let the tournament organisers know in the <Mention>#whos-captain</Mention> channel. If it reaches `12` hours before the tournament and no captain has been decided, the player with the highest signal strength (or ELO if n/a) will be assigned as the captain by the TOs.
-
-### Team Names
-Teams will be assigned randomly generated names when the roster is published. Once the roster has been published, teams have the option to rename their team, however, the following conditions must be met;
-- Must be posted in the <Mention>#whos-captain</Mention> 12 hours before the tournament commences
-- Must have `2` words
-- Must be alliterative, and the alliterative letters must be the same as the ones previously assigned
-- Must be appropriate, inoffensive and have no cursing
-- Must be under 25 characters
-- Must be approved by a staff member (indicated by a checkmark reaction to the message)
+- The host DC's. In this case, the game is rewarded to the team not hosting.
+- There was a misuse of ending the game early, see above.
 
 ## Reporting players
+
 Sometimes, your team needs a replacement for one of your team members. Some examples may include:
+
 - A team member notifies you that something has come up and they need to drop out.
-- A team member just isn't responding at all to any messages.
-- A team member is acting toxic to the rest of your team.
+- A team member just isn't responding to any of your messages.
+- A team member is being toxic to the rest of your team.
 - A team member is making one or more of your other team members uncomfortable.
 
-Thankfully, Off the Dial has an extensive system for reporting such players and receiving a sub, so you can be sure you'll have a good team experience.
+To solve this, Off the Dial has a system for reporting such players and receiving a sub, to make sure that your team can have a good experience in the tournament!
 
 - Your team can report players 24 hours after teams are released.
 - Everyone on your team (besides the player getting reported) must approve of the report.
-- Your sub is not allowed to play for any other player on your team except for the reported player they are replacing.
-- Once your sub is assigned, the reported player is no longer allowed to play.
+- Your sub is _not allowed to play for any other player_ on your team except for the reported player they are replacing.
+- Once your sub is assigned, the reported player is _no longer allowed to play_.
 - **This is an irreversible action**, so be thoughtful when you report!
 
-In all cases of player reporting, at least one of the team members must have at least tried to resolve the issue internally. If a player is non-responding, that means that it must be proven there has been an attempt to contact them several times with enough of a gap from the first message to account for timezone difference. In the cases of toxicity or making players feel uncomfortable, this attempt at resolution doesn't have to be done by the person who received the unwanted behaviour. However, there is an exemption if a team member is being disrespectful of race, gender, financial, religion or sexuality (however, other team members not including the two involved must also verify that this is the case).
-
 ### How to report
-To report a player, send a message in the <Mention>#reporting</Mention> channel, formatted like this:
-> <Mention>@ReportedPlayer</Mention> - Reason for reporting
 
-If you don't feel comfortable reporting them publicly, you can send any staff member a DM instead :blue_heart:.
+To report a player, send a message in the <Mention>#reporting</Mention> channel, formatted like this:
+
+> <Mention>@Lynel</Mention> - Reason for reporting
+
+If you don't feel comfortable reporting them publicly, you can send a staff member a DM :blue_heart:.
 
 - Please ping the person that you are reporting, don't just give their username.
-- For better chances of approval, make sure your reason is specific and detailed. Such as:
-  > "Despite their status being set to online, they haven't responded to any of our DMs since teams have been created, multiple of our team members have attempted to get in contact with them, but to no avail".
+- For better chances of approval, make sure your reason is specific and detailed. for example:
+  > <Mention>@Lynel</Mention> - Despite their status being set to online, they haven't responded to any of our DMs since teams have been created, multiple of our team members have attempted to get in contact with them, but to no avail.
 
 Once you have made your report, our staff members will update you with the status of your report by reacting to your report message:
-- :spiral_note_pad: - We've noted your report, and are working on matching a sub. This step usually takes 6-12 hours.
+
+- :spiral_note_pad: - We've noted your report, and are working on matching a sub.
 - :white_check_mark: - The report has been resolved, we have assigned a sub.
 - :no_entry_sign: - We don't approve of the report. This usually doesn't happen, assuming you did everything correctly.
 
-If there is no reaction, we haven't seen your report yet.
+If there is no reaction, we haven't seen your report yet. Please note that it may take up to 24 hours to recieve a sub.
 
 ### Receiving your sub
+
 Once you've been assigned your sub, you should see a reply to your original report, usually formatted like this:
-> <Mention>@Sub</Mention> > <Mention>@ReportedPlayer</Mention>
+
+> <Mention>@DJam98</Mention> > <Mention>@Lynel</Mention>
 
 You now know your sub. Friend them on discord, add them to your group chat, and hopefully get some practice in!
 
 ### When we have no available subs
-Sometimes, there are no available subs to substitute for missing players. Often, this will be because none of the emergency subs has ranks that are similar to the player who has dropped out. In this case, the team is responsible for finding a new sub. This can be done by using the <Mention>#lf-pickup</Mention> channel in Off the Dial, or on another server. All substations must be approved by a TO and have signed up as a sub at [otd.ink/signup](https://otd.ink/signup).
 
-### Matches with a missing player
-If a dropout occurs during the tournament, you are still required to play. If you do not play your matches, regular round duration rules will still apply. So, in the event that a team is missing a player the __opposing team (the team without a dropout) will have the choice of whether to play in a 3v3 or a 3v4__. If the oppposing team wishes to do a 3v3, please let an organiser know and they will inform you of the best player to sub out to make the match as even as possible. If a 3v3 match is agreed upon, the team without the missing player will be awarded **the first game as their win** as compensation and enticement for a more fair match. The round will then continue as a 3v3 match from the second game within the round. *Note that if a 3v3 match is not agreed upon, and the match ends up being a 3v4, then this compentation does not apply*.
+Sometimes, there are no available subs to substitute for missing players. In this case, the team is responsible for finding a new sub. This can be done by using the <Mention>#lf-pickup</Mention> channel in Off the Dial, or on another server.
 
-## Permitted Weapons and Gear
-- All weapons and variations are allowed
-- All gear purchased in game (with some exclusions)
-- Any gear that is considered 'hacked gear' is not allowed. This is any gear that can't be obtained by normal means within the game. One such example includes having gear exclusive abilities on other pieces of gear (such as ninja squid on headgear). No matter how the gear was obtained, it is not permitted. One warning will be given, if player continues they will be disqualified from the tournament.
+Subs must be approved by a TO and have signed up as a sub at [otd.ink/signup](https://otd.ink/signup).
+
+If all options are exhausted, your team will be disbanded and become emergency subs.
+
+## Team Updates
+
+### Changing Captains
+
+Usually, the player with the highest signal strength is automatically assigned as captain.
+
+If you were assigned as captain but would like to opt out, please talk to your team to decide who will be captain, and let a staff member know in the <Mention>#team-updates</Mention> at the latest 12 hours before the tournament starts.
+
+### Changing Names
+
+Team names are randomly generated. If you want to change your team name, here are the following conditions:
+
+- Must be posted in the <Mention>#team-updates</Mention> at the latest 12 hours before the tournament starts.
+- Must be a 2-word alliteration that starts with the same letter as the original team name.
+- Must be appropriate, use common sense for this one.
+- Must be under 25 characters.
+- Must be approved by a staff member (indicated by a checkmark reaction to the message)
 
 ## Cheating
-Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on start.gg, going out of bounds, anything considered cheating by Nintendo, controller modifications, such as "turbo mode", and failure to comply with any of the rules on this document.
 
-If you cheat:
+Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on start.gg, anything considered cheating by Nintendo, controller mods, and failure to comply with any of the rules on this document.
+
+**If you cheat:**
 
 - Instant disqualification from the tournament.
 - A permanent ban from Off the Dial and all tournaments.
 
-This is a strict no-chances policy, and we do not make exceptions to this.
+This is a strict no-chances policy, and we do not make exceptions to this. Staff also reserve the right to disqualify or ban players at their discretion.
 
 ## Others
-- All rules are subject to change between seasons, please make sure you read the rules each season before entering.
-- Head TOs reserve the right to alter the rules, delay the tournament, or cancel the event in it's entirety at any time due to unforseen circumstances on a case by case basis.
-- If there are an uneven number of players, the latest signups will be removed from the tournament. Make sure to sign up early to reserve a team!
-- If the hosting site for the bracket / matchmaking is failing to operate, the matchmaking will move to a manual process on our Discord server. If this occurs, please be patient as this take more time to setup.
-- If the Nintendo Online or Splatoon 3's matchmaking is unavalible at the time of the event, the tournament will be delayed up to an hour until a fix is found. If the online service is still failing to operate after this time period, the tournament will be canceled.
-- By registering you agree to abide by our [terms and conditions](/legal).
+
+- Rules are subject to change between seasons, Make sure to reread the rules each season, you can check the patch notes to see what we changed.
+- Signups are first-come-first serve. If there are an uneven number of players, the latest ones will become emergency subs. Make sure to sign up early!
+- If you drop out after check-in closes, you will be banned from playing in the next season.
+- If third-party services, such as Nintendo Online or start.gg become unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
+- Head TOs reserve the right to make any changes to the tournament at any time on a case by case basis.
+- By registering you agree to abide by our [terms and conditions](https://otd.ink/legal), thank you!
 
 ---
 
-That’s it! If you have any questions or concerns, feel free to ask in <Mention>#helpdesk</Mention>. Good luck in the tournament!
+_That’s it! If you have any questions or concerns, feel free to ask in <Mention>#helpdesk</Mention>. Good luck in the tournament!_

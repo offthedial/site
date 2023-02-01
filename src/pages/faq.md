@@ -1,100 +1,112 @@
 ---
 title: FAQ
+desc: We get asked a lot of questions, remember to read the FAQ before asking in helpdesk to make sure your question hasn't already been answered!
 ---
 
-<Title title="FAQ">
-  We get asked a lot of questions, so a FAQ necessary. You can find anything from "What is Signal Strength?" to "What is Swiss?".
-</Title>
-
 ## General
+
 #### What is my 'Signal Strength'?
-Consider it a numerical representation of your experience within Off the Dial. You earn 100 points for each tournament you participate in, and can earn up to 100 more depending on your placement. There are also <Mention>@Signal Strength: 1000+</Mention> and <Mention>@Signal Strength: 5000+</Mention> if you want an inconsequential amount of pointless clout, good luck!
 
-#### What time do tournaments begin?
-All tournaments begin on the same minute/hour, but due to timezones that time may differ. Daylight savings times have been listed as well.
+Consider it like an XP bar for your involvement with Off the Dial. You earn 100 points for each tournament you participate in, and can earn up to 100 more depending on your placement.
 
-Refer to your corresponding time-zone.
+There's also roles for <Mention>@Signal Strength: 1000+</Mention> and <Mention>@Signal Strength: 5000+</Mention> if you want a meaningless amount of pointless clout, good luck!
 
-- `EST` 3pm Saturday
-- `EDT` 4pm Saturday
-- `GMT` 8pm Saturday
-- `BST` 9pm Saturday
-- `JST` 5am Sunday
-- `AEST` 6am Sunday
-- `AEDT` 7am Sunday
+#### Why organization spelled with an 's'?
 
-#### What time do tournaments end?
-Tournaments are scheduled to last 3:30-4:00 hours.
-Each pools round lasts 30 minutes and each top cut round lasts 40.
+This is an international server, some of us are part of Australia and EU, which spell certain words slightly differently, namely 'organisation'.
 
-#### Will tournaments be streamed?
-Yes, one match from each round will be streamed. There will be a five-minute break before top cut.
+#### Are tournaments streamed?
+
+Yes, one match from each round in the highest skill bracket will be streamed. There will be a five-minute break before top cut.
 
 #### How are disputes/issues resolved?
+
 When in doubt, use <Mention>#helpdesk</Mention>. Optionally, you can use <Mention>#tourney-helpdesk</Mention> for tournament-related questions.
 
-During the tournament, if there is a match dispute or any conflict, please use the start.gg "Call a Moderator" feature.
+During the tournament, if there is a match dispute or any conflict, please use the "Call a Moderator" feature on start.gg.
 
 You may also DM either Head Organiser about it.
 
-#### How are teams balanced?
-Teams are calculated based on your ranks, playstyle and previous competitive experience. All of these are converted into numerical values and then teams are created into drafts using code, and then balanced using human balancing.
-
-#### What is Swiss?
-Swiss is a bracket format, like Single Elimination or Round Robin. However, there are some things that set Swiss apart from other systems.
-
-#### Am I able to scrim other teams competing in the tournament?
-We're completely fine with you setting up scrims with other competing teams, in fact, we encourage it. Please be respectful!
-
-#### Why organization spelled with an 's'?
-This is an international server, some of us are part of Australia and EU, which spell certain words slightly differently, namely 'organisation'.
-
 #### I need help using start.gg, where can I get it?
+
 If no staff is able to answer your question in <Mention>#helpdesk</Mention>, you can contact [start.gg](https://help.start.gg/) directly on their website or using their discord.
 
-#### What is Weakest Link and when will it be returning?
-Weakest Link is a tournament where three experience players are teamed up with one inexperienced solo player. These teams are assigned by Off the Dial and teams have one week to practice. This tournament currently is not supported with the current code we have and will require a lot more tweaking to be released. However, we do plan to have another Weakest Link, it just won't be for a long time.
+#### How are teams balanced?
+
+Teams are balanced based on everything you enter in the signup form. Including your ranks, weapon pool and previous competitive experience.
+
+#### Am I allowed to scrim other teams competing in the tournament?
+
+We're completely fine with you setting up scrims with other competing teams. Just remember to be respectful!
+
+#### What is Weakest Link, and will it be returning?
+
+Weakest Link is a tournament where three experienced players team up with one inexperienced solo player. These teams are assigned by Off the Dial and have one week to practice. We don't plan on having another Weakest Link in the near future, but we'll see.
 
 #### I've heard some rumours about an Off the Dial Story Mode. What is this?
-The Off the Dial Story Mode was a story driven, ARG tournament with the results impacting the next chapter of the story. This may return in the future, however for this to occur it requires several months of planning and preparation.
+
+The Off the Dial Story Mode was a story driven, ARG tournament with the results impacting the next chapter of the story. It requires several months of planning and preparation, and we don't see ourselves doing this again in the near future.
 
 ## It’s Dangerous to go Alone
-#### What is It’s Dangerous to go Alone?
-It’s Dangerous to go Alone is a tournament that sorts free agents into teams, and then those teams play each other until one is crowned victory! Teams are balanced based on a players ranks, play style and tournament experience.
 
-#### What does IDTGA stand for?
-IDTGA is our way of shortening It’s Dangerous to go Alone.
+#### What is It's Dangerous to go Alone (IDTGA)?
 
-#### Is there a skill limit/cap?
-No, we understand that if you don't have a team and want to experience a tournament you are not likely to be an X rank. Therefore we have no skill limit. Any player from C- to X can play in IDTGA.
+It's Dangerous to go Alone (or IDTGA for short), is our flagship, solo registration tournament! Focused on creating balanced teams, and being accessible to everyone.
 
-#### How do 'tiered brackets' work?
-Tiered brackets are our way of dividing up players so that they are teamed up (and play against) players that are closer to their skill range. This is quite similar to 'alpha' and 'beta' brackets you see in other large tournaments. However, where we differ is that the divide is by individual players, rather than by team. 
+Players sign up **individually**, you aren't allowed to sign up as an entire team. Players are all assigned a team based on the information provided in the registration form. Then, teams are given 48 hours to practice before the tournament!
 
-Players are divided into even groups based off their cumulative ELO (numerical score of all your ranks) and competitive experience. For example, if there were two brackets, the higher X rank players will be the higher bracket and the lower ranked players will be in the lower bracket. However, if over 50% of players are X rank, there will be some X rank players who will be in the lower bracket (and will be determined by their X rank power).
+#### Who is allowed to play? (Is there a skill floor/cap?) (What if I'm already on a team?)
 
-There must be a minimum of 12 teams (48 players) registered for tiered brackets to be used. This is because is so brackets are smaller than 8 teams per bracket.
+The goal of IDTGA is allow anyone to be able to experience a tournament regardless of whether they have a team or not, there is no skill floor or skill cap, anyone is allowed to enter.
 
-#### Can I still play if I'm already on a team?
-Even if you're already on a team you and your teammates can still play, just don't expect to be on the same team.
+Even if you do have a team, you and your teammates can still play! Just don't expect to end up on the same team.
 
-#### When do we receive our teams?
-Teams are released 48 hours before the tournament starts. For the complete schedule, go to [otd.ink/idtga](https://otd.ink/idtga).
+#### Am I allowed to use Splatfest tees?
 
-#### Why is check-in so early?
-This check-in is different from the check-in before the tournament.
+Yes, all weapons and gear are allowed.
 
-This is just so we can confirm you are playing before we sort players into teams. It is a way we minimise dropouts.
+#### Why are there multiple brackets?
 
-There is also a seperate check-in on start.gg that happens right before each match starts, make sure you check in!
+In order to ensure that the skill gap between players on a given team aren't too far apart, we divide players into multiple brackets based on skill level so that your teammates are fairly close to your skill range.
 
-#### Why is there also check-in for each match on start.gg?
+For example, if there were two brackets, the top ranking 50% of players will be placed in the higher bracket, and the lower 50% in the lower bracket.
 
-This is a feature we can't disable, but it's also a way to verify that you are attending your match. If you don't check in within 15 minutes of your match beginning you are automatically disqualified.
+This is similar to the 'alpha' and 'beta' brackets you may see in other large tournaments, but our brackets are split based on the relative skill of players in the tournament instead of LUTI divisions.
+
+The skill brackets are, in order of highest skill to lowest skill: **Power**, **Wisdom**, and **Courage**. Note that depending on the number of signups, not all brackets will be used. A new bracket is added approximately every 12 teams.
+
+#### How do skill brackets correspond to LUTI divisions?
+
+They don't apply, the purpose of skill brackets is simply to ensure that skill gaps between players aren't too far apart. They are not designed to determine a player's absolute skill level in the competitive scene.
+
+#### What do I do if there's lag?
+
+If there's are complaints about lag from at least 3 people on the same team or 1 person from each team, teams are required to switch hosts to someone on the opposing team.
+
+> Note that with Splatoon 3, it has been noted that some lag is normal, and may not be based on the host so please keep this in mind.
+
+#### How are swiss points allocated?
+
+Points will be allocated for games won, matches won, byes as well as ties. The point allocations are as such:
+
+- 3 point per game win
+- 6 points per match won (in addition to the points allocated for individual game wins)
+- 6 point per match tie (allocated to both teams, will be used if time has run out)
+- 8 points per bye (no points will be allocated as game wins as no games have been played)
+
+#### What happens when a tiebreaker is needed?
+
+The following rules will be enacted sequentially until a winner has been determined:
+
+- Total sets won
+- Head to head
+- Game win %
+- Team with fewer dropouts
+- If between two teams, a best-of-one head-to-head match on a predetermined map mode
+- If between three or more teams, the total amount of points earned in all of the preliminary games
 
 #### I’ve just finished a season of IDTGA, what do I do now?
-If you’re playing in Swiss, make sure you've played all round, you aren't out if you lose!
 
-If you didn’t make the finals, you can watch the rest of the stream on [Twitch](https://twitch.tv/offthedial).
+Congrats! We hope you had fun! If you didn't make top cut, you can still watch the rest of the tournament on [Twitch](https://twitch.tv/offthedial)!
 
-If you have any feedback on how we can improve the tournament in the future, please see [otd.ink/feedback](https://otd.ink/feedback).
+If you have any feedback on how we can improve the tournament in the future, please let us know at [otd.ink/feedback](https://otd.ink/feedback).
