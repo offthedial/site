@@ -160,7 +160,7 @@ const Hero = () => {
   }
   return (
     <div
-      className="mx-auto flex aspect-[3] w-full max-w-6xl items-center rounded-xl bg-cover bg-left-top p-6 text-center text-slate-100 sm:p-12 sm:text-left lg:gap-12 lg:bg-center"
+      className="mx-auto flex w-full max-w-6xl items-center rounded-xl bg-cover bg-left-top p-6 text-center text-slate-100 sm:p-12 sm:text-left lg:gap-12 lg:bg-center"
       style={{ backgroundImage: `url(${hero})` }}
     >
       <div className="flex max-w-lg flex-1 flex-col items-stretch">
