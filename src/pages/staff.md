@@ -49,6 +49,23 @@ If you're interested, please check out my Twitter and Twitch! Follows are greatl
 </Card>
 
 <Card
+  name="Ambird"
+  role="Artist"
+  hobby="looking at small round birds"
+  links={[
+    ["Twitter", "https://twitter.com/ambirdoodles"],
+    ["Carrd", "https://ambird.carrd.co"],
+  ]}
+  iconUrl="https://media.discordapp.net/attachments/1056022134096400444/1070147104695128134/IMG_0699.png"
+>
+
+hi, i'm ambird (they/them)! i draw, design, and also fly. but here on off the dial, i only do two of those things. i'm an illustrator and visual designer who posts art under the handle ambirdoodles! if you see any doodles around, they're prooobably from me! if you got sniped by a tri-stringer wearing a small hat, that's probably me! if your oranges are missing from your fruit bowl, that's probably me too!
+
+if you want a doodle for yourself, feel free to contact me and i'll be happy to get one for you. have a nice day 😄
+
+</Card>
+
+<Card
   name="Wolf"
   role="Tournament Organiser"
   hobby="Forever tired"
@@ -78,11 +95,12 @@ I have a Twitter where I like and retweet stuff and on the rare time post stuff.
   iconUrl="https://media.discordapp.net/attachments/1037596397924536332/1065561092715200542/slurk.png"
 >
 
-> <p className="text-xl">**woah! you found me!**</p>
+> <p className="text-xl">**woah! you found me !**</p>
 
 i'm the dev behind the entire site! i've rewritten it about 5 times ,,
 
-i also built the discord bot to help with managing tournaments, and built the overlays that you see on stream
+i also built the discord bot to help with managing tournaments, and built the overlays that you see on stream !
+
 
 </Card></Secret>
 
