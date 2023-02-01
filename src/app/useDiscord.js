@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query"
+import { signOut } from "firebase/auth"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "src/app"
 
@@ -24,20 +25,11 @@ const useDiscord = () => {
     },
     {
       enabled: !!authState,
+      onError: async () => {
+        await signOut(auth)
+      },
     }
   )
-}
-
-const getDiscordToken = async authState => {
-  // Get existing discordToken
-  let discordToken = JSON.parse(localStorage.getItem("discordToken"))
-  // Set discordToken (from token, if it doesn't exist)
-  if (discordToken === null) {
-    const jwt = await authState.getIdTokenResult()
-    const discordToken = jwt.claims.token
-    localStorage.setItem("discordToken", JSON.stringify(discordToken))
-  }
-  return discordToken
 }
 
 const fetchDiscord = async (authState, endpoint, callback) => {
@@ -50,6 +42,25 @@ const fetchDiscord = async (authState, endpoint, callback) => {
   if (resp.status === 401) await refreshDiscordToken(authState)
   if (!resp.ok) throw new Error(data.message)
   return callback(data)
+}
+
+const getDiscordToken = async authState => {
+  // Get existing discordToken
+  let discordToken = JSON.parse(localStorage.getItem("discordToken"))
+  // Set discordToken (from token, if it doesn't exist)
+  if (discordToken === null) {
+    const jwt = await authState.getIdTokenResult()
+    if (jwt.claims.token) {
+      localStorage.setItem("discordToken", JSON.stringify(jwt.claims.token))
+      discordToken = jwt.claims.token
+    }
+  }
+  if (!discordToken?.access_token || !discordToken?.refresh_token) {
+    await signOut(auth)
+    localStorage.removeItem("discordToken")
+    discordToken = null
+  }
+  return discordToken
 }
 
 const refreshDiscordToken = async authState => {
