@@ -35,7 +35,7 @@ I have a Twitch and Twitter, if you want to check that out, I would greatly appr
   links={[
     ["Twitter", "https://twitter.com/_rosenyx"],
   ]}
-  iconUrl="https://cdn.discordapp.com/avatars/207238142418223104/def698e3be5a54505a92525c4618b13a.webp?size=480"
+  iconUrl="https://cdn.discordapp.com/attachments/1056022134096400444/1070450014284959794/79B78FEB-D087-4C2E-8E7B-C20381D4163D.png"
 >
 
 Hi! I'm one of the current head TOs for Off the Dial.
