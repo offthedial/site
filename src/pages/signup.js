@@ -146,7 +146,7 @@ const Signup = () => {
       <RankItem
         control={form.control}
         error={formErrors.isUnlocked}
-        yes={
+        yes={isNo => (
           <div className="grid grid-cols-2 gap-2">
             {["sz", "tc", "rm", "cb"].map((v, i) => (
               <label key={v}>
@@ -171,7 +171,8 @@ const Signup = () => {
                         values?.rank?.sz ||
                         values?.rank?.tc ||
                         values?.rank?.rm ||
-                        values?.rank?.cb
+                        values?.rank?.cb ||
+                        isNo
                       ) {
                         return true
                       }
@@ -204,8 +205,8 @@ const Signup = () => {
               </label>
             ))}
           </div>
-        }
-        no={
+        )}
+        no={isYes => (
           <div className="flex w-full gap-2">
             {[
               <>
@@ -220,9 +221,10 @@ const Signup = () => {
                   placeholder="A+"
                   autoComplete="off"
                   {...form.register("rank.letter", {
-                    required: "This field is required",
+                    required: isYes ? false : "This field is required",
                     setValueAs: v => v.toUpperCase(),
                     validate: value => {
+                      if (isYes) return true
                       if (value.startsWith("S+"))
                         return "You have X Battles unlocked"
                       if (/^[ABC][+-]?$|^S$/.test(value)) return true
@@ -237,7 +239,7 @@ const Signup = () => {
                   name="rank.points"
                   control={form.control}
                   rules={{
-                    required: "This field is required",
+                    required: isYes ? false : "This field is required",
                   }}
                   render={({ field: { onChange, onBlur, value, ref } }) => (
                     <Cleave
@@ -273,7 +275,7 @@ const Signup = () => {
               </div>
             ))}
           </div>
-        }
+        )}
       />
       <Border />
       <FormItem
@@ -515,10 +517,10 @@ const RankItem = ({ control, error, yes, no }) => {
               <div className="flex-1"></div>
               <div className="flex-[3_3_0%]">
                 <div className={clsx({ hidden: field.value !== "yes" })}>
-                  {yes}
+                  {yes(field.value !== "yes")}
                 </div>
                 <div className={clsx({ hidden: field.value !== "no" })}>
-                  {no}
+                  {no(field.value !== "no")}
                 </div>
               </div>
             </div>
