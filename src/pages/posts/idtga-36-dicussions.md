@@ -6,7 +6,7 @@ author: DJam98
 
 Now that we've had a season of X rank, I can very safely say that it works **VERY** differently than it did in Splatoon 2, at least in terms of how ELO calculations work in It's Dangerous to go Alone. Also, I'll be discussing on some of the feedback that you all left us in the feedback form from IDTGA 36.
 
-# A New Bracket Split
+## A New Bracket Split
 
 In Splatoon 2, it was very easy to split between X rank and regular S+, as you had to reach S+10, then you were stuck with your X rank. This was very benificial to us as it allowed for an easy system to convert and adapt with this system. But in Splatoon 3, the fact that you can improve both at the same time (not to mention you can't drop your anarchy rank from losing matches) doesn't allow for an easy conversion to allow for even balancing. So because of this, X ranks will be calculated into ELO within their own bracket.
 
@@ -14,7 +14,7 @@ I will also note, that X rank is a much more accurate depiction of your rank, so
 
 Also because of this new change, brackets will be split at different sizes, so instead of reaching a certain threshold to have mutliple bracket, the requirement for the bracket to split is that each bracket needs to have `6` teams (24 players).
 
-# Last Season of IDTGA????
+## Last Season of IDTGA????
 
 Wait... huuh.... what's this.....
 
@@ -22,7 +22,7 @@ This will be the last **regular** season of IDTGA for a while, so if you want yo
 
 Stay tuned for more information being released in mid January during our 5th Anniversary 'Dial In' presentation.
 
-# Questions / Comments From You
+## Questions / Comments From You
 
 *great tournament can't wait for the next one*
 > Awesome, it won't be long until the next one!
