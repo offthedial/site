@@ -533,6 +533,7 @@ const RankItem = ({ control, error, yes, no }) => {
 
 const WeaponSelect = ({ error, field, onX }) => {
   let [query, setQuery] = React.useState("")
+  console.log(field.value)
 
   return (
     <Combobox multiple by="id" {...field}>
@@ -549,7 +550,11 @@ const WeaponSelect = ({ error, field, onX }) => {
                 key={weapon.id}
                 className="flex h-7 items-center gap-2 rounded bg-slate-200 px-2 py-0.5 text-sm dark:bg-slate-700"
               >
-                <img src={weapon.img} alt="" className="h-5 w-5" />
+                <img
+                  src={`https://raw.githubusercontent.com/Sendouc/sendou.ink/HEAD/public/static-assets/img/main-weapons-outlined/${weapon.id}.png`}
+                  alt=""
+                  className="h-5 w-5"
+                />
                 <span>{weapon.name}</span>
                 <svg
                   className="h-4 w-4 cursor-pointer"
@@ -599,7 +604,11 @@ const WeaponSelect = ({ error, field, onX }) => {
                 {({ active, selected }) => (
                   <div className="flex justify-between">
                     <div className="flex items-center gap-3 truncate">
-                      <img src={weapon.img} alt="" className="h-6 w-6" />
+                      <img
+                        src={`https://raw.githubusercontent.com/Sendouc/sendou.ink/HEAD/public/static-assets/img/main-weapons-outlined/${weapon.id}.png`}
+                        alt=""
+                        className="h-6 w-6"
+                      />
                       <span
                         className={selected ? "font-semibold" : "font-normal"}
                       >

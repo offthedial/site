@@ -75,12 +75,9 @@ const importedWeapons = {
   MAIN_7020: "REEF-LUX 450",
 }
 
-const weapons = Object.entries(importedWeapons).map(([key, value], i) => ({
+const weapons = Object.entries(importedWeapons).map(([key, value]) => ({
   id: key.substring(5),
   name: value,
-  img: `https://raw.githubusercontent.com/Sendouc/sendou.ink/HEAD/public/static-assets/img/main-weapons-outlined/${key.substring(
-    5
-  )}.png`,
 }))
 
 export default weapons
