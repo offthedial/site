@@ -665,8 +665,7 @@ const Border = () => (
 const SignupPage = () => {
   const [user] = useAuthState(auth)
   const tourney = useTourney()
-  const blocked =
-    tourney.data?.inviteOnly() && !tourney.data?.whitelist?.includes(user?.uid)
+  const blocked = tourney.data && !tourney.data.isInvited(user?.uid)
 
   return (
     <Layout

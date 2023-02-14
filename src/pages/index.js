@@ -8,6 +8,8 @@ import useTourney from "src/app/useTourney"
 import logo from "src/static/logo.svg"
 import slateBg from "src/static/slate-bg.svg"
 import { AnimationOnScroll } from "react-animation-on-scroll"
+import { useAuthState } from "react-firebase-hooks/auth"
+import { auth } from "src/app"
 
 const Index = () => (
   <Layout>
@@ -145,15 +147,20 @@ const Hero = () => {
       </>
     ),
   }
+  const [user] = useAuthState(auth)
   const tourney = useTourney()
   if (tourney.data?.hasEnded() === false) {
     props = {
       title: tourney.data.smashgg.name,
-      desc: (
+      desc: tourney.data?.whitelist ? (
         <>
-          Signups are currently open for this season's IDTGA! Our flagship,{" "}
-          <i>solo registration</i> tournament, focused on creating balanced
-          teams, and being accessible to everyone.
+          This is an invite-only tournament, Make sure to sign up if you've been
+          invited!
+        </>
+      ) : (
+        <>
+          Signups are currently open for this season! Make sure to register
+          before it's too late!
         </>
       ),
     }
@@ -170,12 +177,15 @@ const Hero = () => {
           <Link to="/signup">
             <button
               className="flex-shrink-0 rounded-lg bg-slate-100 py-2.5 px-5 text-slate-800 hover:enabled:bg-slate-200 disabled:opacity-60"
-              disabled={tourney.data?.hasEnded()}
+              disabled={
+                tourney.data?.hasEnded() ||
+                (tourney.data && !tourney.data.isInvited(user?.uid))
+              }
             >
               Signup Now
             </button>
           </Link>
-          <Link to={`/${tourney.data?.type}`}>
+          <Link to="/idtga">
             <button className="flex-shrink-0 rounded-lg py-2.5 px-5 text-slate-100 hover:bg-slate-100/[.15]">
               Learn More
             </button>

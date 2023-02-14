@@ -32,7 +32,10 @@ const useTourney = () =>
     result.data.endDate = fromUnixTime(result.data.smashgg.endAt)
     result.data.hasEnded = () => isPast(result.data.endDate)
     result.data.hasClosed = () => isPast(result.data.closeDate)
-    result.data.inviteOnly = () => result.data.type.startsWith("invite")
+    result.data.whitelist =
+      result.data?.whitelist?.length > 0 ? result.data.whitelist : null
+    result.data.isInvited = id =>
+      result.data.whitelist ? result.data.whitelist.includes(id) : true
     return result?.data
   })
 
