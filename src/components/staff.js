@@ -40,7 +40,7 @@ export const Card = ({ name, iconUrl, role, hobby, links = [], children }) => (
 export const Secret = ({ children }) => {
   const { toasts } = useToasterStore()
   if (toasts.filter(t => t?.secret === true).length > 0) {
-    window.scrollByPages(1)
+    setTimeout(() => window.scrollBy({ top: document.body.scrollHeight }), 0)
     return (
       <div className="rotate-1 scale-105 animate-in fade-in-0 zoom-in-75 duration-300">
         {children}
