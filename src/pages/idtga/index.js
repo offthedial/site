@@ -74,7 +74,7 @@ const Idtga = () => (
 )
 
 const TourneyCard = () => {
-  const tourney = useTourney()
+  const tourney = useTourney("idtga")
   const duration = date =>
     formatDuration(
       intervalToDuration({

@@ -5,16 +5,18 @@ import {
   limit,
   orderBy,
   query,
+  where,
   Timestamp,
 } from "firebase/firestore"
 import { db } from "app"
 import { useQuery } from "@tanstack/react-query"
 
-const useTourney = () =>
-  useQuery(["tourney"], async () => {
+const useTourney = type =>
+  useQuery(["tourney", ...(type ? [type] : [])], async () => {
     const q = query(
       collection(db, "tournaments"),
       orderBy("date", "desc"),
+      ...(type ? [where("type", "==", type)] : []),
       limit(1)
     )
     const result = await getDocs(q)
