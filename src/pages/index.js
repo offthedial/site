@@ -185,7 +185,7 @@ const Hero = () => {
               Signup Now
             </button>
           </Link>
-          <Link to={tourney.data.type}>
+          <Link to={tourney.data?.type || "idtga"}>
             <button className="flex-shrink-0 rounded-lg py-2.5 px-5 text-slate-100 hover:bg-slate-100/[.15]">
               Learn More
             </button>
