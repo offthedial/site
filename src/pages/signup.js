@@ -466,6 +466,11 @@ const RankItem = ({ control, error, yes, no }) => {
                   <h2 className="mr-auto text-2xl font-medium">Rank</h2>
                   <RadioGroup.Label className="text-xl text-slate-700 dark:text-slate-300">
                     Do you have X Battles unlocked?
+                    <br />
+                    OR have you completed <span className="font-bold">
+                      ANY
+                    </span>{" "}
+                    x calculations in past seasons?
                   </RadioGroup.Label>
                 </div>
                 <div className="hidden md:block md:flex-1"></div>
@@ -506,7 +511,7 @@ const RankItem = ({ control, error, yes, no }) => {
                     <p>Enter your most recent X powers for each mode.</p>
                     <p>
                       If you haven't done calculations for this season, enter
-                      last season's powers instead.
+                      your most recent season's powers instead.
                     </p>
                   </>
                 )}
