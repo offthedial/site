@@ -538,7 +538,6 @@ const RankItem = ({ control, error, yes, no }) => {
 
 const WeaponSelect = ({ error, field, onX }) => {
   let [query, setQuery] = React.useState("")
-  console.log(field.value)
 
   return (
     <Combobox multiple by="id" {...field}>
