@@ -62,7 +62,7 @@ The website can be found at [`otd.ink`](https://otd.ink).
 </details>
 <details><summary>Adding more redirect links:</summary>
 
-> - Navigate to https://github.com/offthedial/site/blob/master/gatsby-node.js. This is where the redirect pages are generated.
+> - Navigate to https://github.com/offthedial/site/blob/HEAD/gatsby-node.js. This is where the redirect pages are generated.
 > - You will see a function called `createRedirectPages` that includes a list of redirects.
 > - Add an entry to the list with the redirect that you want.
 
