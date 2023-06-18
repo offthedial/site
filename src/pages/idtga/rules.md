@@ -30,13 +30,17 @@ The skill brackets are, in order of highest skill to lowest skill: **Power** (hi
 This is the general schedule for each season, if you want to see the dates for the current season, please check out the schedule listed on your [profile](https://otd.ink/profile).
 
 1. **Registration opens!**
-1. **`72` hours before the tournament:**
+1. **`4` days before the tournament:**
 
    Check-in opens 24 hours before registration closes! Please remember to check-in within those 24 hours or you will be removed from the tournament.
 
-1. **`48` hours before the tournament:**
+1. **`3` days before the tournament:**
 
    Both registration and check-in closes, if you haven't checked in by this point you will be removed. You're still able to sign up as an emergency sub!
+
+1. **`2` days before the tournament:**
+
+   Teams are revealed for players to practice with.
 
 1. **`24` hours before the tournament:**
 
@@ -94,8 +98,9 @@ If there's a dispute, or something unforseen occurs during the set, feel free to
 ### Do NOT redo the game if:
 
 - **Any player** on the same team DC's again the same round.
-- The host DC's. In this case, the game is rewarded to the team not hosting.
 - There was a misuse of ending the game early, see above.
+
+If the host DCs after `50` points remaining and the timer has passed `2:30`, the game is awarded to the team without a DC with no redo.
 
 ## Reporting players
 
@@ -182,8 +187,8 @@ This is a strict no-chances policy, and we do not make exceptions to this. Staff
 ## Others
 
 - Rules are subject to change between seasons, Make sure to reread the rules each season, you can check the patch notes to see what we changed.
-- Signups are first-come-first serve. If there are an uneven number of players, the latest ones will become emergency subs. Make sure to sign up early!
-- If you drop out after check-in closes, you will be banned from playing in the next season.
+- Signups are first-come-first serve. If there are an uneven number of players, the last ones will be removed. Make sure to sign up early!
+- If you drop out after check-in closes, you will be suspended from playing in the next season.
 - If third-party services, such as Nintendo Online or start.gg become unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
 - Head TOs reserve the right to make any changes to the tournament at any time on a case by case basis.
 - By registering you agree to abide by our [terms and conditions](https://otd.ink/legal), thank you!
