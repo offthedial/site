@@ -91,7 +91,7 @@ Points will be allocated for games won, matches won, byes as well as ties. The p
 
 - 3 point per game win
 - 6 points per match won (in addition to the points allocated for individual game wins)
-- 6 point per match tie (allocated to both teams, will be used if time has run out)
+- 5 point per match tie (allocated to both teams, will be used if time has run out)
 - 8 points per bye (no points will be allocated as game wins as no games have been played)
 
 #### What happens when a tiebreaker is needed?
