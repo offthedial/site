@@ -47,7 +47,7 @@ const createRedirectPages = async createPage => {
     ["tiktok", "https://www.tiktok.com/@offthedial"]
     [
       "feedback",
-      "https://forms.gle/r76cP4xA8uGKkfZz8",
+      "https://forms.gle/r76cP4xA8uGKkfZz8"
     ],
     [ "apply", "https://forms.gle/DkkxS6RdxXGobxcx7"],
   ]
