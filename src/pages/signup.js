@@ -165,15 +165,17 @@ const Signup = () => {
                       value: 6,
                       message: "Invalid X Power",
                     },
-                    validate: () => {
-                      const values = form.getValues()
+                    validate: (value, formValues) => {
                       if (
-                        values?.rank?.sz ||
-                        values?.rank?.tc ||
-                        values?.rank?.rm ||
-                        values?.rank?.cb ||
+                        formValues?.rank?.sz ||
+                        formValues?.rank?.tc ||
+                        formValues?.rank?.rm ||
+                        formValues?.rank?.cb ||
                         isNo
                       ) {
+                        if (value === "0000.0") {
+                          return "Invalid X Power. If you have never done calculations for this mode yet, please leave it completely blank"
+                        }
                         return true
                       }
                       return "At least one calculation is required"
@@ -467,9 +469,9 @@ const RankItem = ({ control, error, yes, no }) => {
                   <RadioGroup.Label className="text-xl text-slate-700 dark:text-slate-300">
                     Do you have X Battles unlocked?
                     <br />
-                    OR have you completed <span className="font-bold">
-                      ANY
-                    </span>{" "}
+                    <span className="font-black">Or</span>{" "}
+                    completed{" "}
+                    <span className="font-black">any</span>{" "}
                     x calculations in past seasons?
                   </RadioGroup.Label>
                 </div>
@@ -510,8 +512,12 @@ const RankItem = ({ control, error, yes, no }) => {
                   <>
                     <p>Enter your most recent X powers for each mode.</p>
                     <p>
-                      If you haven't done calculations for this season, enter
-                      your most recent season's powers instead.
+                      If you haven't done x calculations for this season,
+                      enter your X powers for the latest season you played
+                    </p>
+                    <p>
+                      If you haven't done x calculations ever,
+                      please do them before signing up
                     </p>
                   </>
                 )}
