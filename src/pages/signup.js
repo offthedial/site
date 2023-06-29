@@ -165,7 +165,8 @@ const Signup = () => {
                       value: 6,
                       message: "Invalid X Power",
                     },
-                    validate: (value, formValues) => {
+                    validate: (value) => {
+                      const formValues = form.getValues()
                       if (
                         formValues?.rank?.sz ||
                         formValues?.rank?.tc ||
