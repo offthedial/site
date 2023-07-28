@@ -84,7 +84,7 @@ I have a Twitter where I like and retweet stuff and on the rare time post stuff.
 {/* CAUTION -- THIS IS MY SECRET CARD! IF YOU ARE ADDING NEW STAFF CARDS, PLEASE PUT THEM ABOVE THIS LINE */}
 
 <Secret><Card
-  name="cyrulean"
+  name="cerusabi"
   role="technical head"
   hobby="boba addict"
   links={[
