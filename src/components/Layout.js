@@ -177,7 +177,7 @@ const Footer = () => (
       <Link className="hover:underline" to="/bot">
         Bot
       </Link>
-      <Link className="hover:underline" to="/terms">
+      <Link className="hover:underline" to="/legal">
         Terms
       </Link>
       <ThemePicker />
