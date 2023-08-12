@@ -83,12 +83,6 @@ If a match has not been completed by the end of the round, the match will be mar
 
 To end the game early, any player can push the `ZL`, `ZR`, `L`, `R` as well as pushing down the two sticks all at the same time for 3 seconds. **This is not a rage-quit feature**, misuse of this feature will result in the entire set loss. Abuse of this feature will result in disqualification and/or a permanent ban. Remember to use the switch capture feature to record misuse if it has occured.
 
-If either 2 DCs occur in the same lobby, the host DCs, or there are a significant amount of complaints about lag; the team currently not hosting must host the new lobby.
-
-To reduce the chances of a DC happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
-
-If there's a dispute, or something unforseen occurs during the set, feel free to bring it up to helpdesk.
-
 ### Redo the game if:
 
 - The objective has not passed `50` points remaining for either team.
@@ -99,8 +93,13 @@ If there's a dispute, or something unforseen occurs during the set, feel free to
 
 - **Any player** on the same team DC's again the same round.
 - There was a misuse of ending the game early, see above.
+- The host DCs, in this case the game is awarded to the team not hosting.
 
-If the host DCs after `50` points remaining and the timer has passed `2:30`, the game is awarded to the team without a DC with no redo.
+If either 2 DCs occur in the same lobby, the host DCs, or there are a significant amount of complaints about lag; the team currently not hosting must host the new lobby.
+
+To reduce the chances of a DC happening, please check you have a good internet connection with low ping and/or have a LAN adapter for a smoother experience. If not, consider switching hosts.
+
+If there's a dispute, or something unforseen occurs during the set, feel free to bring it up to helpdesk.
 
 ## Reporting players
 
