@@ -90,7 +90,7 @@ I have a Twitter where I like and retweet stuff and on the rare time post stuff.
   links={[
     ["github", "https://github.com/LeptoFlare"],
   ]}
-  iconUrl="https://media.discordapp.net/attachments/1037596397924536332/1065561092715200542/slurk.png"
+  iconUrl="https://cdn.discordapp.com/attachments/1056022134096400444/1139837059780067418/slurk.png"
 >
 
 > <p className="text-xl">**woah! you found me !**</p>
