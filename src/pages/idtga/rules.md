@@ -77,7 +77,8 @@ This is the general schedule for each season, if you want to see the dates for t
   - Please call a moderator in start.gg when this occurs so we can set the score.
 - There is a `5-minute` break before finals commence.
 
-If a match has not been completed by the end of the round, the match will be marked as a draw.
+If a match has not been completed by the end of the round, players are to not play any more matches, and the set will be marked as a draw.
+> If a team abuses this feature, it will result in an instant disqualification from the tournament.
 
 ## Disconnects (DC)
 
