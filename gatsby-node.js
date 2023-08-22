@@ -50,6 +50,7 @@ const createRedirectPages = async createPage => {
       "https://docs.google.com/forms/d/e/1FAIpQLSezygI_EfAbPAw-oopfhffRILuJ7WHoSRxUOfFA8nLDBEyhRA/viewform?usp=sf_link"
     ],
     [ "apply", "https://forms.gle/DkkxS6RdxXGobxcx7"],
+    [ "maps", "https://forms.gle/pk8C9i1X7bT1XjucA"],
   ]
   links.forEach(link => {
     createPage({
