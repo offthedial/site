@@ -239,7 +239,7 @@ const Footer = () => (
       </Link>
     </div>
     <p className="text-center text-slate-400 dark:text-slate-600">
-      Built by <Author>cerusabi</Author>,{" "}
+      Built by <Author>cysabi</Author>,{" "}
       <a
         className="text-slate-500 hover:underline"
         href="https://github.com/offthedial/site"

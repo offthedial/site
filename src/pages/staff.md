@@ -84,11 +84,11 @@ I have a Twitter where I like and retweet stuff and on the rare time post stuff.
 {/* CAUTION -- THIS IS MY SECRET CARD! IF YOU ARE ADDING NEW STAFF CARDS, PLEASE PUT THEM ABOVE THIS LINE */}
 
 <Secret><Card
-  name="cerusabi"
+  name="cysabi"
   role="technical head"
   hobby="boba addict"
   links={[
-    ["github", "https://github.com/LeptoFlare"],
+    ["github", "https://github.com/cysabi"],
   ]}
   iconUrl="https://cdn.discordapp.com/attachments/1056022134096400444/1139837059780067418/slurk.png"
 >
