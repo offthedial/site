@@ -15,7 +15,7 @@ import { Card, Stack, Secret } from "src/components/staff"
     ["Twitch", "https://twitch.tv/djam98"],
     ["Twitter", "https://twitter.com/djam987"],
   ]}
-  iconUrl="https://media.discordapp.net/attachments/1056022134096400444/1068699510294970388/DJam.png"
+  iconUrl="https://media.discordapp.net/attachments/1056022134096400444/1167316204915011634/DJam_Sm.png?ex=654daeee&is=653b39ee&hm=638a85f7e402e04d3a9f47ee67dce68a748947aa47cc4b2538e2482cea60bd27&="
 >
 
 Hey there! I'm DJam98 and I am the creator of this little Discord server on the internet.
