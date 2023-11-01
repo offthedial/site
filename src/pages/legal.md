@@ -10,3 +10,5 @@ desc: By registering into any event organised by 'Off the Dial' you have read an
 1. Off the Dial may use third-party services, you are required to follow all of the terms of service for all third-party services that Off the Dial uses.
 1. By using any of Off the Dial's services or products (including viewing this site) you agree not to abuse them, or use them for malicious purposes. This includes DDoS, Doxxing, spam requests, and anything else that may result in problems for Off the Dial.
 1. In the event a prize is offered, Off the Dial does not guarantee that players will receive a prize just because they become eligible for one. This may occur for various reasons including but not limited to; prize being no longer being available for purchase, the player has been accused (and proven guilty) of breaking any rules or terms and conditions. Prizes are distributed at the discretion of Off the Dial.
+1. Nintendo is not a sponsor of or affiliated with this tournament.
+1. You must also agree with the [Terms for participating in and viewing Community Tournaments using Nintendo Games](https://en-americas-support.nintendo.com/app/answers/detail/a_id/63454)
