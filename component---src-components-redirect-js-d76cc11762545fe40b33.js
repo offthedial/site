@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkrewrite=self.webpackChunkrewrite||[]).push([[5522],{290:function(e,t,r){r.r(t);var n=r(7294);t.default=e=>{let{pageContext:t}=e;return n.createElement("meta",{"http-equiv":"Refresh",content:"0; url='"+t.to+"'"})}}}]);
+//# sourceMappingURL=component---src-components-redirect-js-d76cc11762545fe40b33.js.map
