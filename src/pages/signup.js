@@ -95,7 +95,7 @@ const Signup = () => {
           {...form.register("splashtag", {
             required: "This field is required",
             pattern: {
-              value: /^.{1,10}#\d{4}$/,
+              value: /^.{1,10}#\d{4,}$/,
               message:
                 "Invalid splash tag, remember to include the hashtag and the 4 numbers at the end",
             },
