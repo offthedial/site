@@ -468,13 +468,7 @@ const RankItem = ({ control, error, yes, no }) => {
                 <div className="min-w-min md:flex-[3_3_0%]">
                   <h2 className="mr-auto text-2xl font-medium">Rank</h2>
                   <RadioGroup.Label className="text-xl text-slate-700 dark:text-slate-300">
-                    Do you have X Battles unlocked?
-                    <br />
-                    <span className="font-black">Or</span>{" "}
-                    completed{" "}
-                    <span className="font-black">any</span>{" "}
-                    x calculations in past seasons?
-                  </RadioGroup.Label>
+                    Have you <span className="text-default font-black">EVER</span> unlocked X Battles?</RadioGroup.Label>
                 </div>
                 <div className="hidden md:block md:flex-1"></div>
                 <div className="justify-stretch flex md:flex-[3_3_0%]">
@@ -513,12 +507,12 @@ const RankItem = ({ control, error, yes, no }) => {
                   <>
                     <p>Enter your most recent X powers for each mode.</p>
                     <p>
-                      If you haven't done x calculations for this season,
-                      enter your X powers for the latest season you played
+                      If you haven't done placements for this season,
+                      enter your X powers for the latest season you've played.
                     </p>
                     <p>
-                      If you haven't done x calculations ever,
-                      please do them before signing up
+                      If you haven't done placements ever,
+                      please do them before signing up.
                     </p>
                   </>
                 )}
