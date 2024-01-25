@@ -13,7 +13,7 @@ This document outlines all of the games that can appear in Creator Showdown. If 
 ### **Turbo Turf**
 ### Turbo Turf
 
-!(Table Turf Thumbnail]((https://assets.otd.ink/logo.png))
+!(Table Turf Thumbnail](https://assets.otd.ink/logo.png)
 
 One player from each team will compete in a tableturf match. The twist? The turn timer is set to 10 seconds. Better think fast!
 
