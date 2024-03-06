@@ -200,17 +200,17 @@ Rainmaker, but the audience picks a weapon brand everyone must use.
 
 Everyone must choose a weapon that matches the audience specified brand.
 Here are the weapons available for each brand:
--Splat: Splattershot, Tentatek Splattershot, Splattershot Jr., Custom Splattershot Jr, Splattershot Pro, Forge Splattershot Pro, Splattershot Nova, Annaki Splattershot, Splat Roller, Krak-On Splat Roller, Big Swig Roller, Big Swig Roller Express, Splat Charger, Z+F Splat Charger, Splatterscope, Z+F Splatterscope, Mini Splatling, Zink Mini Splatling, Splat Dualies, Enperry Splat Dualies, Tri-Stringer, Inkline Tri-Stringer.
--Deco: .52 Gal, .96 Gal, .96 Gal Deco, Rapid Blaster, Rapid Blaster Deco, Rapid Blaster Pro, Rapid Blaster Pro Deco, Carbon Roller, Carbon Roller Deco, Slosher, Slosher Deco, Bloblobber, Bloblobber Deco, Heavy Splatling, Heavy Splatling Deco, Glooga Dualies, Glooga Dualies Deco, REEF-LUX 450, REEF-LUX 450 Deco, Splatana Wiper, Splatana Wiper Deco.
--Dolphin: L-3 Nozzlenose, L-3 Nozzlenose D, H-3 Nozzlenose, H-3 Nozzlenose D, Classic Squiffer, New Squiffer, Dread Wringer, Dread Wringer D.
--Neo: Splash-o-matic, Neo Splash-o-matic, Sploosh-o-matic, Neo Sploosh-o-matic, Luna Blaster, Luna Blaster Neo, Clash Blaster, Clash Blaster Neo, Sloshing Machine, Sloshing Machine Neo.
--Nouveau: Inkbrush, Inkbrush Nouveau, Octobrush, Octobrush Nouveau, Painbrush, Painbrush Nouveau, Tri-Slosher, Tri-Slosher Nouveau, Ballpoint Splatling, Ballpoint Splatling Nouveau, Dapple Dualies, Dapple Dualies Nouveau, Splatana Stamper, Neo Splatana Stamper.
--Custom: Jet Squelcher, Custom Jet Squelcher, Blaster, Custom Blaster, Range Blaster, E-liter 4K, E-liter 4K Scope, Custom E-liter 4K, Custom E-liter 4K Scope, Goo Tuber, Custom Goo Tuber, Explosher, Custom Explosher, Hydra Splatling, Dualie Squelchers, Custom Dualie Squelchers, Custom Splattershot Jr, Douser Dualies FF.
--Ammo Knights: Areospray MG, Aerospray RG, Dynamo Roller, Gold Dynamo Roller, Bamboozler 14 Mk 1, Nautilus 47, Nautilus 79, Hero Shot Replica.
--Nintendo: N-ZAP ‘85, N-ZAP ‘89, S-BLAST '92, S-BLAST '91.
--Foil: Squeezer, Flingza Roller.
--Sorella: Splat Brella, Sorella Brella, Tenta Brella, Tenta Sorella Brella, Undercover Brella, Recycled Brella 24 Mk I.
--Tentatek: Dark Tetra Dualies, Light Tetra Dualies, Tentatek Splattershot.
+- Splat: Splattershot, Tentatek Splattershot, Splattershot Jr., Custom Splattershot Jr, Splattershot Pro, Forge Splattershot Pro, Splattershot Nova, Annaki Splattershot, Splat Roller, Krak-On Splat Roller, Big Swig Roller, Big Swig Roller Express, Splat Charger, Z+F Splat Charger, Splatterscope, Z+F Splatterscope, Mini Splatling, Zink Mini Splatling, Splat Dualies, Enperry Splat Dualies, Tri-Stringer, Inkline Tri-Stringer.
+- Deco: .52 Gal, .96 Gal, .96 Gal Deco, Rapid Blaster, Rapid Blaster Deco, Rapid Blaster Pro, Rapid Blaster Pro Deco, Carbon Roller, Carbon Roller Deco, Slosher, Slosher Deco, Bloblobber, Bloblobber Deco, Heavy Splatling, Heavy Splatling Deco, Glooga Dualies, Glooga Dualies Deco, REEF-LUX 450, REEF-LUX 450 Deco, Splatana Wiper, Splatana Wiper Deco.
+- Dolphin: L-3 Nozzlenose, L-3 Nozzlenose D, H-3 Nozzlenose, H-3 Nozzlenose D, Classic Squiffer, New Squiffer, Dread Wringer, Dread Wringer D.
+- Neo: Splash-o-matic, Neo Splash-o-matic, Sploosh-o-matic, Neo Sploosh-o-matic, Luna Blaster, Luna Blaster Neo, Clash Blaster, Clash Blaster Neo, Sloshing Machine, Sloshing Machine Neo.
+- Nouveau: Inkbrush, Inkbrush Nouveau, Octobrush, Octobrush Nouveau, Painbrush, Painbrush Nouveau, Tri-Slosher, Tri-Slosher Nouveau, Ballpoint Splatling, Ballpoint Splatling Nouveau, Dapple Dualies, Dapple Dualies Nouveau, Splatana Stamper, Neo Splatana Stamper.
+- Custom: Jet Squelcher, Custom Jet Squelcher, Blaster, Custom Blaster, Range Blaster, E-liter 4K, E-liter 4K Scope, Custom E-liter 4K, Custom E-liter 4K Scope, Goo Tuber, Custom Goo Tuber, Explosher, Custom Explosher, Hydra Splatling, Dualie Squelchers, Custom Dualie Squelchers, Custom Splattershot Jr, Douser Dualies FF.
+- Ammo Knights: Areospray MG, Aerospray RG, Dynamo Roller, Gold Dynamo Roller, Bamboozler 14 Mk 1, Nautilus 47, Nautilus 79, Hero Shot Replica.
+- Nintendo: N-ZAP ‘85, N-ZAP ‘89, S-BLAST '92, S-BLAST '91.
+- Foil: Squeezer, Flingza Roller.
+- Sorella: Splat Brella, Sorella Brella, Tenta Brella, Tenta Sorella Brella, Undercover Brella, Recycled Brella 24 Mk I.
+- Tentatek: Dark Tetra Dualies, Light Tetra Dualies, Tentatek Splattershot.
 
 #### Map and Mode
 
@@ -416,7 +416,7 @@ Play as normal as long as the game can continue.
 
 
 
-##Chaos Level 3
+## Chaos Level 3
 
 Games in this category do not follow the rules of Splatoon game modes, but are low stress and low stakes.
 
@@ -928,23 +928,23 @@ Benefits listed with prices of half/all will cost either half of your remaining 
 If scores are tied going into the showdown, both teams will have access to “losing team only” options.
 
 The following options will always be available:
-1 win: A shoutout point, if your team wins you get a 1 minute shoutout per point before the stream ends (unlimited)
-1 win: Choose the map (once)
-2 wins: Choose the mode (once) (may choose any ranked mode, or Splatfest)
+- 1 win: A shoutout point, if your team wins you get a 1 minute shoutout per point before the stream ends (unlimited)
+- 1 win: Choose the map (once)
+- 2 wins: Choose the mode (once) (may choose any ranked mode, or Splatfest)
 
 These options have a chance to appear:
-1 win: Force a weapon onto the opponent team (once per team)
-1 win: All players must squid-bag rapidly for the first 60 seconds of the match (by repeatedly pressing ZL) (once)
-1 win: Opponent loses if they KO in the first 4 minutes (losing team only) (if picked, splat zones is banned from mode selection. Benefit does nothing if turf war is selected)
-2 wins: Opponent team must super jump to spawn when half way to victory. This means 50 points remaining in ranked, or at 1:30 for turf war. (losing team only)
-2 wins: Opponent chooses their comp first, you may counter pick after (once)
-2 wins: Opponent must choose 4 unique weapon classes (once each)
-3 wins: Opponent team may not use their main weapon until they have been splatted once. (once per team)
-7 wins: Opponent must KO to win (once)
-7 wins: Opponent may not use Specials (once each)
-Half wins: 5 second head start (unlimited)
-Half wins: Choose a weapon (including brand variants) that neither team may use
-All wins: Opponent team must booyah 50 times total before winning (once)
+- 1 win: Force a weapon onto the opponent team (once per team)
+- 1 win: All players must squid-bag rapidly for the first 60 seconds of the match (by repeatedly pressing ZL) (once)
+- 1 win: Opponent loses if they KO in the first 4 minutes (losing team only) (if picked, splat zones is banned from mode selection. Benefit does nothing if turf war is selected)
+- 2 wins: Opponent team must super jump to spawn when half way to victory. This means 50 points remaining in ranked, or at 1:30 for turf war. (losing team only)
+- 2 wins: Opponent chooses their comp first, you may counter pick after (once)
+- 2 wins: Opponent must choose 4 unique weapon classes (once each)
+- 3 wins: Opponent team may not use their main weapon until they have been splatted once. (once per team)
+- 7 wins: Opponent must KO to win (once)
+- 7 wins: Opponent may not use Specials (once each)
+- Half wins: 5 second head start (unlimited)
+- Half wins: Choose a weapon (including brand variants) that neither team may use
+- All wins: Opponent team must booyah 50 times total before winning (once)
 
 #### Weapon/Ability comp details
 
