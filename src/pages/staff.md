@@ -4,6 +4,11 @@ desc: We're thankful to have such an awesome team of staff, each person contribu
 ---
 
 import { Card, Stack, Secret } from "src/components/staff"
+import djam from "src/static/staff/djam.webp"
+import rose from "src/static/staff/rose.webp"
+import wolf from "src/static/staff/wolf.webp"
+import ambird from "src/static/staff/ambird.webp"
+import cysabi from "src/static/staff/cysabi.webp"
 
 <Stack>
 
@@ -15,7 +20,7 @@ import { Card, Stack, Secret } from "src/components/staff"
     ["Twitch", "https://twitch.tv/djam98"],
     ["Twitter", "https://twitter.com/djam987"],
   ]}
-  iconUrl="https://media.discordapp.net/attachments/1056022134096400444/1167316204915011634/DJam_Sm.png?ex=654daeee&is=653b39ee&hm=638a85f7e402e04d3a9f47ee67dce68a748947aa47cc4b2538e2482cea60bd27&="
+  iconUrl={djam}
 >
 
 Hey there! I'm DJam98 and I am the creator of this little Discord server on the internet.
@@ -33,7 +38,7 @@ I have a Twitch and Twitter, if you want to check that out, I would greatly appr
   links={[
     ["Twitter", "https://twitter.com/_rosenyx"],
   ]}
-  iconUrl="https://cdn.discordapp.com/attachments/1056022134096400444/1070450014284959794/79B78FEB-D087-4C2E-8E7B-C20381D4163D.png"
+  iconUrl={rose}
 >
 
 Hi! I'm one of the current head TOs for Off the Dial.
@@ -54,7 +59,7 @@ If you're interested, please check out my Twitter and Twitch! Follows are greatl
     ["Twitter", "https://twitter.com/ambirdoodles"],
     ["Carrd", "https://ambird.carrd.co"],
   ]}
-  iconUrl="https://media.discordapp.net/attachments/1056022134096400444/1070147104695128134/IMG_0699.png"
+  iconUrl={ambird}
 >
 
 hi, i'm ambird (they/them)! i draw, design, and also fly. but here on off the dial, i only do two of those things. i'm an illustrator and visual designer who posts art under the handle ambirdoodles! if you see any doodles around, they're prooobably from me! if you got sniped by a tri-stringer wearing a small hat, that's probably me! if your oranges are missing from your fruit bowl, that's probably me too!
@@ -70,7 +75,7 @@ if you want a doodle for yourself, feel free to contact me and i'll be happy to 
   links={[
     ["Twitter", "https://twitter.com/LiberoWolf_"],
   ]}
-  iconUrl="https://media.discordapp.net/attachments/1056022134096400444/1068699625722224700/comissionliberowolf.png"
+  iconUrl={wolf}
 >
 
 Hi I'm Wolf/LiberoWolf! I'm a sleepyhead who really has no sleep schedule. Certified (self-identified) lurker in streams and channels.
@@ -90,14 +95,14 @@ I have a Twitter where I like and retweet stuff and on the rare time post stuff.
   links={[
     ["github", "https://github.com/cysabi"],
   ]}
-  iconUrl="https://cdn.discordapp.com/attachments/1056022134096400444/1139837059780067418/slurk.png"
+  iconUrl={cysabi}
 >
 
 > <p className="text-xl">**woah! you found me !**</p>
 
 i'm the dev behind the entire site! i've rewritten it about 5 times ,, and i also built both the discord bot to help with managing tournaments, and the overlays that you see on stream !
 
-i like boba, fizzy boba especially. in splatoon, i'm a stinky glooga dualies one-trick, and i always make sure to die with my special up :D
+i like boba, fizzy boba especially. in splatoon, i'm a glooga dualies one-trick, and i always make sure to die with my special up :D
 
 </Card></Secret>
 
