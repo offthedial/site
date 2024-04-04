@@ -318,7 +318,7 @@ Rainmaker with only brushes and select rollers.
 
 #### Weapon/Ability comp details
 
-Every player must be using either an Inkbrush, Octobrush, Painbrush, Carbon Roller or Splat Roller (Brand variants are allowed) Teams may not bring more than 2 Splat Rollers maximum.
+Every player must be using either an Inkbrush, Octobrush, Painbrush, Carbon Roller or Splat Roller (Brand variants are allowed). Teams may not bring more than 2 Splat Rollers maximum.
 
 #### Map and Mode
 
@@ -484,7 +484,11 @@ Vote on the map.
 
 #### In the case of a tie
 
-In the case of an EXACT tie, the team that goes first will win.
+The following rules will be applied sequentially until a winner is determined
+1. Total percentage of map turfed.
+2. P total from the game end screen (the screen with Judd).
+3. The smaller amount of total P from every player on the team (who was more efficient at covering the map). 
+4. Who went first.
 
 #### Disconnect rulings
 
@@ -497,7 +501,7 @@ If a team loses any players during the first 60 seconds of their attempt, they w
 
 Teams take turns trying to dunk the rainmaker on the opponent’s rainmaker goal and checkpoint. The defending team has 1 minute to find a position, after which they may not move.
 The offence team then has 3 minutes to get as many successful dunks as possible.
-The team that chooses this mode selects who will be on offence or defence first.
+The team that chooses this mode selects who will be on offence or defence first
 
 #### Weapon/Ability comp details
 
@@ -509,11 +513,15 @@ Audience voted Rainmaker map.
 
 #### Special requirements/roles
 
-The defending team may not move after the first minute.
-The attacking team may not move or build special in the first minute.
-Both teams may use their whole kits, but the attacking team is disqualified if they splat any defenders.
-After the 3 minutes of scoring, teams swap places.
-The new defending team sets up, the new offence team jumps off the map and waits for their scoring period.
+- The defending team may not move after the first minute.
+- The attacking team may not move or build special in the first minute.
+- Both teams may use their whole kits, but the attacking team is disqualified if they splat any defenders.
+- After the 3 minutes of scoring, teams swap places.
+- The new defending team sets up, the new offence team jumps off the map and waits for their scoring period.
+- Defenders can’t be positioned on checkpoints or the goal pedestal.
+- The same weapons must be used for attacking and defending (since it’s all one recon game).
+- If a defender is splatted by the rainmaker shield, they may reposition back to their original position, with no penalty applied to the attacking team (however, they may not splat opponents or turf in a defensive manner).
+
 
 #### How to win
 
@@ -550,9 +558,9 @@ Audience voted Clam Blitz
 
 #### Special requirements/roles
 
-The defending team may not splat the attacking team. A player that does so is disqualified and must stop playing for the rest of the round.
-Both teams may use their whole kits, but the attacking team is penalized if they splat any defenders.
-The attacking team has a maximum of 5 minutes to reach 0 remaining before a reset is forced.
+- The defending team may not splat the attacking team. A player that does so is disqualified and must stop playing for the rest of the round.
+- Both teams may use their whole kits, but the attacking team is penalized if they splat any defenders.
+- The attacking team has a maximum of 5 minutes to reach 0 remaining before a reset is forced.
 
 #### How to win
 
@@ -592,9 +600,10 @@ Turf War, audience votes on the map.
 
 #### Special requirements/roles
 
-One player is the Frog. The frog may not attack any other player, and may only use the brush’s roll ability (no subs or specials).
+- One player is the Frog. The frog may not attack any other player, and may only use the brush’s roll ability (no subs or specials).
 They may use squid form to regain ink. If the Frog gets any splats or assists, they will receive a penalty.
-The other three players are the leapers. They may not move using the left stick. These players may only move around the map by super jumping (ideally to their frog).
+- The other three players are the leapers. They may not move using the left stick. These players may only move around the map by super jumping to any available super jump target.
+- There is no penalty for any leaper to splat the frog.
 
 #### How to win
 
@@ -917,7 +926,7 @@ If the disconnect happened in the first minute of the game, a replay will be awa
 ![Final Showdown Thumbnail](https://assets.otd.ink/Showdown/SHOWDOWN.png)
 The final battle, winner takes all!
 Teams will take turns spending their wins on benefits from the list below. Benefits will list how many times they can be bought, and what they do.
-The team with the most wins picks first, if both have 4 wins, a coin toss will decide who goes first.
+The team with the most wins picks first, if both have 4 wins, a coin toss will decide who goes first. 
 Once all the wins have been spent for both teams, the match will commence, winner takes all!~
 
 #### Benefit board
@@ -925,7 +934,7 @@ Once all the wins have been spent for both teams, the match will commence, winne
 The following is a list of all possible benefits that can appear on the benefit board, as well as how many points they cost, and how many times they can be bought.
 Benefits are randomly selected, so not all of these options will be available.
 Benefits listed with prices of half/all will cost either half of your remaining points (rounded up), or all of your remaining points respectively.
-If scores are tied going into the showdown, both teams will have access to “losing team only” options.
+If scores are tied going into the showdown, both teams will have access to “losing team only” options, however they can only be selected once (first in best dressed).
 
 The following options will always be available:
 - 1 win: A shoutout point, if your team wins you get a 1 minute shoutout per point before the stream ends (unlimited)
@@ -939,7 +948,7 @@ These options have a chance to appear:
 - 2 wins: Opponent team must super jump to spawn when half way to victory. This means 50 points remaining in ranked, or at 1:30 for turf war. (losing team only)
 - 2 wins: Opponent chooses their comp first, you may counter pick after (once)
 - 2 wins: Opponent must choose 4 unique weapon classes (once each)
-- 3 wins: Opponent team may not use their main weapon until they have been splatted once. (once per team)
+- 3 wins: Opponent team may not use their main weapon until they have been splatted by another player's main, sub, or special weapon. (once per team)
 - 7 wins: Opponent must KO to win (once)
 - 7 wins: Opponent may not use Specials (once each)
 - Half wins: 5 second head start (unlimited)
