@@ -948,7 +948,7 @@ These options have a chance to appear:
 - 2 wins: Opponent team must super jump to spawn when half way to victory. This means 50 points remaining in ranked, or at 1:30 for turf war. (losing team only)
 - 2 wins: Opponent chooses their comp first, you may counter pick after (once)
 - 2 wins: Opponent must choose 4 unique weapon classes (once each)
-- 3 wins: Opponent team may not use their main weapon until they have been splatted by another player's main, sub, or special weapon. (once per team)
+- 3 wins: Opponent team may not use their main weapon until they have been splatted by another player's main, sub, or special weapon. Any 'explosion' related splat also counts. (once per team)
 - 7 wins: Opponent must KO to win (once)
 - 7 wins: Opponent may not use Specials (once each)
 - Half wins: 5 second head start (unlimited)
