@@ -5,11 +5,11 @@ desc: The rules for It's Dangerous to go Alone, our flagship, solo registration 
 
 ## Format
 
-Due to the large number of signups, players are seperated into multiple skill brackets to keep players close in skill level with each other. There is a registration cap of 48 teams (192 players).
+Due to the large number of signups, players are seperated into multiple skill brackets to keep players close in skill level with each other. There is a registration cap of 50 teams (200 players).
 
 All brackets are run independently of one another and have their own preliminaries and top cut.
 
-The skill brackets are, in order of highest skill to lowest skill: **Power** (highest), **Wisdom** (middle), and **Courage** (lowest). Note that the Wisdom bracket may not always be active depending on the number of signups.
+The skill brackets are, in order of highest skill to lowest skill: **Master**, **Power**, **Wisdom**, and **Courage**. Note that the Master and Wisdom brackets may not always be active depending on the number of signups.
 
 ### Preliminaries:
 
@@ -17,6 +17,7 @@ The skill brackets are, in order of highest skill to lowest skill: **Power** (hi
 - Matches: `Play all 3`
 - There are 4 rounds in each bracket.
 - There is no elimination, remember to play all of your rounds!
+- If the number of teams in a bracket exceeds 11 teams, the Preliminaries will be split into two pools.
 
 ### Top Cut:
 
@@ -192,6 +193,7 @@ This is a strict no-chances policy, and we do not make exceptions to this. Staff
 - If you drop out after check-in closes, you will be suspended from playing in the next season.
 - If third-party services, such as Nintendo Online or start.gg become unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
 - Head TOs reserve the right to make any changes to the tournament at any time on a case by case basis.
+- Additional info regarding the tournament can be also found in our [FAQ](https://otd.ink/faq).
 - By registering you agree to abide by our [terms and conditions](https://otd.ink/legal), thank you!
 
 ---
