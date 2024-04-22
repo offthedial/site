@@ -19,8 +19,8 @@ Even if you do have a team, you and your teammates can still play! Just don't ex
 
 #### Are there any banned weapons, gear or specials?
 
-No, all weapons and gear are allowed.
-> To note however, we're currently looking at whether or not we should be allowing Splattercolour Screen. For the time being it is allowed, however players can request their opponents not to use it.
+No, all weapons and gear are allowed, including Splattercolor Screen and Splatfest Tees
+> If a player requests their opponent to not use the Splattercolour Screen, it will be encouraged that the opponent accepts, however it will not be enforced by the TOs and is up to the discretion of the opposing team.
 
 #### Why are there multiple brackets?
 
@@ -42,25 +42,25 @@ If there's are complaints about lag from at least 3 people on the same team or 1
 
 > Note that with Splatoon 3, it has been noted that some lag is normal, and may not be based on the host so please keep this in mind.
 
-#### How are swiss points allocated?
+#### How does Swiss work?
 
-Points will be allocated for games won, matches won, byes as well as ties. The point allocations are as such:
+A Swiss bracket is where you are matched up with players with a similar win loss ratio. There is no elimination until all rounds are completed. For more information, and to see how many rounds there will be, see [this page](https://c.nintendo.com/splatoon3-tournament/help/faq/PEKxHDkoe).
 
-- 3 point per game win
-- 6 points per match won (in addition to the points allocated for individual game wins)
-- 5 point per match tie (allocated to both teams, will be used if time has run out)
-- 8 points per bye (no points will be allocated as game wins as no games have been played)
+#### How are the Swiss rankings determined?
 
-#### What happens when a tiebreaker is needed?
+Swiss rankings are determined by the following
 
-The following rules will be enacted sequentially until a winner has been determined:
+1. Points
+  - 3 points per round win
+  - 1 point per bye
+2. Opponent Match Win Percentage 
+3. Game Win Percentage
+4. Opponent Game Win Percentage
+5. Fewer amount of dropouts
+6. Total in-game points accured over all games.
+7. Entry Seed Number
 
-- Total sets won
-- Head to head
-- Game win %
-- Team with fewer dropouts
-- If between two teams, a best-of-one head-to-head match on a stage announced by the TOs will occur.
-- If between three or more teams, the total amount of points earned in all of the preliminary games
+More information can be found [here](https://c.nintendo.com/splatoon3-tournament/help/faq/pui43OC32)
 
 #### How are teams balanced?
 
