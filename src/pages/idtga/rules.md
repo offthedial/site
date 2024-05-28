@@ -15,8 +15,9 @@ The skill brackets are, in order of highest skill to lowest skill: **Master**, *
 
 - Format: `Swiss`
 - Matches: `Play all 3`
-- The number of rounds will be determined by the amount of teams in the bracket.
+- There are 4 rounds in each bracket.
 - There is no elimination, remember to play all of your rounds!
+- If the number of teams in a bracket exceeds 11 teams, the Preliminaries will be split into two pools.
 
 ### Top Cut:
 
@@ -40,7 +41,7 @@ This is the general schedule for each season, if you want to see the dates for t
 
 1. **`2` days before the tournament:**
 
-   Teams are revealed for players to practice with. Once confirming team name and captain, teams must register in the Nintendo Tournament Manager on the Nintendo Switch Online mobile application.
+   Teams are revealed for players to practice with.
 
 1. **`24` hours before the tournament:**
 
@@ -74,23 +75,11 @@ This is the general schedule for each season, if you want to see the dates for t
 - Players must start their matches within `5` minutes of the round (or `10` minutes for the first round).
   - If the match has not started yet, the first game will be automatically awarded to the waiting team.
   - For each additional `5` minutes that the match still hasn't started, another game will be awarded.
-  - Please **Contact the Director**, and follow the instructions listed below in **Match Issues** to resolve this issue.
+  - Please call a moderator in start.gg when this occurs so we can set the score.
 - There is a `5-minute` break before finals commence.
 
 If a match has not been completed by the end of the round, players are to not play any more matches, and the set will be marked as a draw.
 > If a team abuses this feature, it will result in an instant disqualification from the tournament.
-
-## Nintendo Tournament Manager
-
-### Entering the Tournament
-Once teams have been published, team captains are responsible for registering their team onto the Nintendo Tournament Manager. For a full in-depth instructions on how to do this and use the Nintendo Tournament Manager, please refer to the [official help document from Nintendo](https://c.nintendo.com/splatoon3-tournament/help/participant).
-
-Teams must be registered to the tournament prior to the tournament commencement, otherwise they will be disqualified. If a team has a substituion prior to the commencement of the tournament, the new player will need to be added into the team to use the features of the Nintendo Tournament Manager. If a player is substituted after the commencement of the tournament, see the match issues below.
-
-### Match Issues
-If there is an issue regarding your match, and you need to speak with either your opponents or the TOs, please select the **Contact the Director** option, and select the most applicable option. This is so your opponents also know to look in the Discord server before proceeding with the match. Then, in the Off the Dial Discord server, please create a forum post in your bracket's respective forum channel. You must also quote your match number (e.g. 003).
-
-If your team has had a substitute after the tournament commencement time, you will need to create standard Private Battle matches. Start by **Contacting the Director** to signal an issue, following all instructions above and organise a PB lobby in the Discord forum channel. 
 
 ## Disconnects (DC)
 
@@ -202,7 +191,7 @@ This is a strict no-chances policy, and we do not make exceptions to this. Staff
 - Rules are subject to change between seasons, Make sure to reread the rules each season, you can check the patch notes to see what we changed.
 - Signups are first-come-first serve. If there are an uneven number of players, the last ones will be removed. Make sure to sign up early!
 - If you drop out after check-in closes, you will be suspended from playing in the next season.
-- If third-party services, such as Nintendo Online become unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
+- If third-party services, such as Nintendo Online or start.gg become unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
 - Head TOs reserve the right to make any changes to the tournament at any time on a case by case basis.
 - Additional info regarding the tournament can be also found in our [FAQ](https://otd.ink/faq).
 - By registering you agree to abide by our [terms and conditions](https://otd.ink/legal), thank you!
