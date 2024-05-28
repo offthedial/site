@@ -19,8 +19,8 @@ Even if you do have a team, you and your teammates can still play! Just don't ex
 
 #### Are there any banned weapons, gear or specials?
 
-No, all weapons and gear are allowed.
-> To note however, we're currently looking at whether or not we should be allowing Splattercolour Screen. For the time being it is allowed, however players can request their opponents not to use it.
+No, all weapons and gear are allowed, including Splattercolor Screen and Splatfest Tees
+> If a player requests their opponent to not use the Splattercolour Screen, it will be encouraged that the opponent accepts, however it will not be enforced by the TOs and is up to the discretion of the opposing team.
 
 #### Why are there multiple brackets?
 
