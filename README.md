@@ -37,16 +37,16 @@ The website can be found at [`otd.ink`](https://otd.ink).
 
 ### maintenance
 
-<details><summary>Updating weapon data:</summary>
+<details><summary>Updating new weapons:</summary>
 
-> - Navigate to https://github.com/offthedial/site/blob/HEAD/src/components/weapons.js. This is where the weapon data is stored.
+> - Navigate to [https://github.com/offthedial/site/tree/master/src/components/weapons.js](https://github.com/offthedial/site/tree/master/src/components/weapons.js). This is where the weapon data is stored.
 > - All images / data is linked to from sendou.ink. Inside the file, you will see a link to the corresponding `weapon.json` file.
 > - Copy and paste the json data into the file under the `importedWeapons` variable.
 > - Delete all non `MAIN_` weapon keys.
 > - Image links are automatically generated based on weapon keys. You are finished.
 
 </details>
-<details><summary>Updating season info for IDTGA page:</summary>
+<details><summary>Updating IDTGA info card:</summary>
 
 > - Navigate to https://github.com/offthedial/site/blob/HEAD/src/pages/idtga/info.mdx. This is where the season info is stored.
 > - The frontmatter has one `hidden:` field. If you do not have any season info to show, you can choose to hide the Season Info tab all together.
