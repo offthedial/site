@@ -1,6 +1,6 @@
 /**
  * Import weapons sourced from https://github.com/Sendouc/sendou.ink
- * Direct link to file: https://github.com/Sendouc/sendou.ink/blob/a1e1b5c1758942aefa60d3a0c6cce38004385683/locales/en/weapons.json
+ * Direct link to file: https://github.com/Sendouc/sendou.ink/blob/HEAD/locales/en/weapons.json
  * All non-main weapon keys are deleted
  */
 
@@ -12,6 +12,7 @@ const importedWeapons = {
   "MAIN_240": "Rapid Blaster",
   "MAIN_241": "Rapid Blaster Deco",
   "MAIN_220": "Range Blaster",
+  "MAIN_221": "Custom Range Blaster",
   "MAIN_210": "Blaster",
   "MAIN_211": "Custom Blaster",
   "MAIN_260": "S-BLAST '92",
@@ -29,6 +30,7 @@ const importedWeapons = {
   "MAIN_2060": "Goo Tuber",
   "MAIN_2061": "Custom Goo Tuber",
   "MAIN_2050": "Bamboozler 14 Mk I",
+  "MAIN_2051": "Bamboozler 14 Mk II",
   "MAIN_2040": "E-liter 4K Scope",
   "MAIN_2041": "Custom E-liter 4K Scope",
   "MAIN_2030": "E-liter 4K",
@@ -47,6 +49,7 @@ const importedWeapons = {
   "MAIN_5020": "Glooga Dualies",
   "MAIN_5021": "Glooga Dualies Deco",
   "MAIN_5050": "Douser Dualies FF",
+  "MAIN_5051": "Custom Douser Dualies FF",
   "MAIN_5010": "Splat Dualies",
   "MAIN_5011": "Enperry Splat Dualies",
   "MAIN_5015": "Order Dualie Replicas",
@@ -65,6 +68,8 @@ const importedWeapons = {
   "MAIN_1015": "Order Roller Replica",
   "MAIN_1040": "Big Swig Roller",
   "MAIN_1041": "Big Swig Roller Express",
+  "MAIN_8020": "Mint Decavitator",
+  "MAIN_8021": "Charcoal Decavitator",
   "MAIN_8010": "Splatana Wiper",
   "MAIN_8011": "Splatana Wiper Deco",
   "MAIN_8000": "Splatana Stamper",
@@ -73,6 +78,7 @@ const importedWeapons = {
   "MAIN_6020": "Undercover Brella",
   "MAIN_6021": "Undercover Sorella Brella",
   "MAIN_6030": "Recycled Brella 24 Mk I",
+  "MAIN_6031": "Recycled Brella 24 Mk II",
   "MAIN_6000": "Splat Brella",
   "MAIN_6001": "Sorella Brella",
   "MAIN_6005": "Order Brella Replica",
@@ -125,7 +131,9 @@ const importedWeapons = {
   "MAIN_4030": "Ballpoint Splatling",
   "MAIN_4031": "Ballpoint Splatling Nouveau",
   "MAIN_4050": "Heavy Edit Splatling",
+  "MAIN_4051": "Heavy Edit Splatling Nouveau",
   "MAIN_4020": "Hydra Splatling",
+  "MAIN_4021": "Custom Hydra Splatling",
   "MAIN_4000": "Mini Splatling",
   "MAIN_4001": "Zink Mini Splatling",
   "MAIN_4040": "Nautilus 47",
@@ -133,6 +141,8 @@ const importedWeapons = {
   "MAIN_4010": "Heavy Splatling",
   "MAIN_4011": "Heavy Splatling Deco",
   "MAIN_4015": "Order Splatling Replica",
+  "MAIN_7030": "Wellstring V",
+  "MAIN_7031": "Custom Wellstring V",
   "MAIN_7010": "Tri-Stringer",
   "MAIN_7011": "Inkline Tri-Stringer",
   "MAIN_7015": "Order Stringer Replica",
