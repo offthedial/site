@@ -15,6 +15,7 @@ With the new season of IDTGA there have been some changes to the master bracket.
 - 2x Top 2-4 tournament results (past 3 months regular, 6 months majors)
 
   - 25 teams or more
+
   - Open event, no skill cap
 
 - X2700 Takoroka (past three months peak)
