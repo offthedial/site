@@ -19,6 +19,9 @@ With the new season of IDTGA there have been some changes to the master bracket.
   - Open event, no skill cap
 
 - X2700 Takoroka (past three months peak)
+
 - X3000 Tentatek (past three months peak)
+
 - Win Power Bracket twice counted from season 47 (past 6 months)
+
 - Come Top 4 Master Bracket counted from season 47 (past 3 months)
