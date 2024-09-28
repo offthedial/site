@@ -1,5 +1,5 @@
 ---
-title: New Changes to Master bracket
+title: Master Bracket Threshold
 date: 2024-09-28
 author: Wolf
 ---
