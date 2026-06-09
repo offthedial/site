@@ -1,12 +1,12 @@
 ---
-title: Master Bracket Threshold
+title: Master Division Threshold
 date: 2024-09-28
 author: Wolf
 ---
 
 Hey everyone.
 
-With the new season of IDTGA there have been some changes to the master bracket. Below are the minimum skill floor to be in the Master bracket:
+With the new season of IDTGA there have been some changes to the master division. Below are the minimum skill floor to be in the Master division:
 
 - LUTI Div 5 (most recent season)
 
