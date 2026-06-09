@@ -556,7 +556,7 @@ const WeaponSelect = ({ error, field, onX }) => {
                 className="flex h-7 items-center gap-2 rounded bg-slate-200 px-2 py-0.5 text-sm dark:bg-slate-700"
               >
                 <img
-                  src={`https://raw.githubusercontent.com/Sendouc/sendou.ink/HEAD/public/static-assets/img/main-weapons-outlined/${weapon.id}.png`}
+                  src={`https://raw.githubusercontent.com/Sendouc/sendou.ink/HEAD/public/static-assets/img/main-weapons-outlined/${weapon.id}.avif`}
                   alt=""
                   className="h-5 w-5"
                 />
@@ -610,7 +610,7 @@ const WeaponSelect = ({ error, field, onX }) => {
                   <div className="flex justify-between">
                     <div className="flex items-center gap-3 truncate">
                       <img
-                        src={`https://raw.githubusercontent.com/Sendouc/sendou.ink/HEAD/public/static-assets/img/main-weapons-outlined/${weapon.id}.png`}
+                        src={`https://raw.githubusercontent.com/Sendouc/sendou.ink/HEAD/public/static-assets/img/main-weapons-outlined/${weapon.id}.avif`}
                         alt=""
                         className="h-6 w-6"
                       />
