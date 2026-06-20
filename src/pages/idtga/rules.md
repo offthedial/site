@@ -5,19 +5,19 @@ desc: The rules for It's Dangerous to go Alone, our flagship, solo registration 
 
 ## Format
 
-Due to the large number of signups, players are seperated into multiple skill brackets to keep players close in skill level with each other. There is a registration cap of 50 teams (200 players).
+Due to the large number of signups, players are seperated into multiple skill divisions to keep players close in skill level with each other. There is a registration cap of 50 teams (200 players).
 
-All brackets are run independently of one another and have their own preliminaries and top cut.
+All divisions are run independently of one another and have their own preliminaries and top cut.
 
-The skill brackets are, in order of highest skill to lowest skill: **Master**, **Power**, **Wisdom**, and **Courage**. Note that the Master and Wisdom brackets may not always be active depending on the number of signups.
+The skill divisions are, in order of highest skill to lowest skill: **Master**, **Power**, **Wisdom**, and **Courage**. Note that the Master and Wisdom divisions may not always be active depending on the number of signups.
 
 ### Preliminaries:
 
 - Format: `Swiss`
 - Matches: `Play all 3`
-- There are 4 rounds in each bracket.
+- Rounds: `4 Rounds`
 - There is no elimination, remember to play all of your rounds!
-- If the number of teams in a bracket exceeds 11 teams, the Preliminaries will be split into two pools.
+- If the number of teams in a division exceeds 11 teams, the Preliminaries will be split into two pools.
 
 ### Top Cut:
 

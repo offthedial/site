@@ -22,19 +22,19 @@ Even if you do have a team, you and your teammates can still play! Just don't ex
 No, all weapons and gear are allowed, including Splattercolor Screen and Splatfest Tees
 > If a player requests their opponent to not use the Splattercolour Screen, it will be encouraged that the opponent accepts, however it will not be enforced by the TOs and is up to the discretion of the opposing team.
 
-#### Why are there multiple brackets?
+#### Why are there multiple divisions?
 
-In order to ensure that the skill gap between players on a given team aren't too far apart, we divide players into multiple brackets based on skill level before teams are created, so that your teammates are fairly close to your skill range.
+In order to ensure that the skill gap between players on a given team aren't too far apart, we divide players into multiple divisions based on skill level before teams are created, so that your teammates are fairly close to your skill range.
 
-For example, if there were two brackets, the top ranking 50% of players will be placed in the higher bracket, and the lower 50% in the lower bracket.
+For example, if there were two divisions, the top ranking 50% of players will be placed in the higher division, and the lower 50% in the lower division.
 
-This is similar to the 'alpha' and 'beta' brackets you may see in other large tournaments, but our brackets are split based on the relative skill of players in the tournament instead of LUTI divisions.
+This is similar to the 'alpha' and 'beta' brackets you may see in other large tournaments, but our divisions are split based on the relative skill of players in the tournament instead of LUTI divisions.
 
-The skill brackets are, in order of highest skill to lowest skill: **Master**, **Power**, **Wisdom**, and **Courage**. Note that depending on the number of signups, not all brackets will be used. A new bracket is added approximately every 12 teams.
+The skill divisions are, in order of highest skill to lowest skill: **Master**, **Power**, **Wisdom**, and **Courage**. Note that depending on the number of signups, not all divisions will be used. A new division is added approximately every 12 teams.
 
-#### How do skill brackets correspond to LUTI divisions?
+#### How do skill divisions correspond to LUTI divisions?
 
-They don't apply, the purpose of skill brackets is simply to ensure that skill gaps between players aren't too far apart. They are not designed to determine a player's absolute skill level in the competitive scene.
+They don't apply, the purpose of skill divisions is simply to ensure that skill gaps between players aren't too far apart. They are not designed to determine a player's absolute skill level in the competitive scene.
 
 #### What do I do if there's lag?
 
@@ -90,7 +90,7 @@ This is an international server, some of us are part of Australia and EU, which 
 
 #### Are tournaments streamed?
 
-Yes, one match from each round in the highest skill bracket will be streamed. There will be a five-minute break before top cut.
+Yes, one match from each round in the highest skill division will be streamed. There will be a five-minute break before top cut. Depending on the circumstance, other divisions may also be streamed.
 
 #### How are disputes/issues resolved?
 
