@@ -67,17 +67,6 @@ This is the general schedule for each season, if you want to see the dates for t
    - Preliminaries take approximately `2:25` hours in total.
    - Top cut take approximately `1:35` hours in total.
 
-   **Stagger Start**
-
-   To help reduce the clutter of requests at the start of the tournament, each divisions start time will be staggered by five minutes.
-
-   - Master Division: Tournament start time
-   - Power Division: +5 minutes from start time
-   - Wisdom Division: +10 minutes from start time
-   - Courage Division +15 minutes from start time
-
-   If a division is not in operation, the divisions will shift up their start time accordingly (e.g. if the Wisdom Division isn't running Courage Division would start +10 minutes after the start time)
-
 ### Round Durations
 
 - Each swiss round lasts `35` minutes.
