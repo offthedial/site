@@ -5,7 +5,6 @@ desc: We're thankful to have such an awesome team of staff, each person contribu
 
 import { Card, Stack, Secret } from "src/components/staff"
 import djam from "src/static/staff/djam.webp"
-import rose from "src/static/staff/rose.webp"
 import wolf from "src/static/staff/wolf.webp"
 import ambird from "src/static/staff/ambird.webp"
 import cysabi from "src/static/staff/cysabi.webp"
@@ -14,7 +13,7 @@ import cysabi from "src/static/staff/cysabi.webp"
 
 <Card
   name="DJam98"
-  role="Head Organiser, Founder"
+  role="Creative Director, Founder"
   hobby="A Busy Person"
   links={[
     ["Twitch", "https://twitch.tv/djam98"],
@@ -27,27 +26,25 @@ Hey there! I'm DJam98 and I am the creator of this little Discord server on the 
 
 I spend most of my spare time on Off the Dial and playing games on the Switch (and spending way too much time in Splatoon).
 
-I have a Twitch and Twitter, if you want to check that out, I would greatly appricate that! I stream a lot of Splatoon, but also a bunch of other games. Beyond Off the Dial I also help commentate and stream other tournaments and I’m also the executive producer of a weekly radio gaming show!
+I have a Twitch and Twitter, if you want to check that out, I would greatly appricate that! I stream a lot of Splatoon, but also a bunch of other games. Beyond Off the Dial I also help commentate stream other tournaments and explore the world!
 
 </Card>
 
 <Card
-  name="Rose"
-  role="Head Organiser, Streamer"
-  hobby="VALORANT Enthusiast"
+  name="Wolf"
+  role="Head TO, Player Management Lead"
+  hobby="Forever tired"
   links={[
-    ["Twitter", "https://twitter.com/_rosenyx"],
+    ["Twitter", "https://twitter.com/LiberoWolf_"],
   ]}
-  iconUrl={rose}
+  iconUrl={wolf}
 >
 
-Hi! I'm one of the current head TOs for Off the Dial.
+Hi I'm Wolf/LiberoWolf! I'm a sleepyhead who really has no sleep schedule. Certified (self-identified) lurker in streams and channels.
 
-I try to help where I can, whether it be streaming, commentating, or day-of business. I run the Special Series on Off the Dial, where I run an off-the-walls idea and turn that into a little bit of fun for everyone.
+I enjoy games & music so expect me to be playing games or listening to music at some point in the day. I mainly play Final Fantasy 14, Splatoon and Pokémon.
 
-I am a former Nautilus 79 main and I played for RIOT before its disbandment after LUTI 11. I stream and play VALORANT whenever I'm home, but usually I'm writing papers and studying for exams for college.
-
-If you're interested, please check out my Twitter and Twitch! Follows are greatly appreciated and I hope to see you in a tourney!
+I have a Twitter where I like and retweet stuff and on the rare time post stuff.
 
 </Card>
 
@@ -65,24 +62,6 @@ If you're interested, please check out my Twitter and Twitch! Follows are greatl
 hi, i'm ambird (they/them)! i draw, design, and also fly. but here on off the dial, i only do two of those things. i'm an illustrator and visual designer who posts art under the handle ambirdoodles! if you see any doodles around, they're prooobably from me! if you got sniped by a tri-stringer wearing a small hat, that's probably me! if your oranges are missing from your fruit bowl, that's probably me too!
 
 if you want a doodle for yourself, feel free to contact me and i'll be happy to get one for you. have a nice day 😄
-
-</Card>
-
-<Card
-  name="Wolf"
-  role="Tournament Organiser"
-  hobby="Forever tired"
-  links={[
-    ["Twitter", "https://twitter.com/LiberoWolf_"],
-  ]}
-  iconUrl={wolf}
->
-
-Hi I'm Wolf/LiberoWolf! I'm a sleepyhead who really has no sleep schedule. Certified (self-identified) lurker in streams and channels.
-
-I enjoy games & music so expect me to be playing games or listening to music at some point in the day. I mainly play Final Fantasy 14, Splatoon and Pokémon.
-
-I have a Twitter where I like and retweet stuff and on the rare time post stuff.
 
 </Card>
 
