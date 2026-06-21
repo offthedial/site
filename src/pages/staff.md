@@ -28,7 +28,7 @@ Hey there! I'm DJam98 and I am the creator of this little Discord server on the 
 
 I spend most of my spare time on Off the Dial and playing games on the Switch (and spending way too much time in Splatoon).
 
-I have a Twitch and Twitter, if you want to check that out, I would greatly appricate that! I stream a lot of Splatoon, but also a bunch of other games. Beyond Off the Dial I also help commentate stream other tournaments and explore the world!
+I have a Twitch and Twitter, if you want to check that out, I would greatly appricate that! I stream a lot of Splatoon, but also a bunch of other games. Beyond Off the Dial I also help commentate, stream and explore the world!
 
 </Card>
 
@@ -68,7 +68,7 @@ I am a long standing Tournament Organizer within the splatoon community and have
 
 When i'm not running Tournaments I love to draw, play games, and occasionally stream either of the two of those things on my twitch :3. If i'm not streaming, playing games, drawing, or at work then I am mostly likely asleep (help skye fell asleep!).
 
-If you'd like to follow me, know when I go live on twitch, or open up commission slots for my art feel free to follow me on my Twitter/Bsky/Twitch. Otherwise, I hope to see you play in our events and can't wait to see how everything unfolds! 
+If you'd like to follow me, know when I go live on twitch, or open up commission slots for my art feel free to follow me on my Twitter/Bsky/Twitch. Otherwise, I hope to see you play in our events and can't wait to see how everything unfolds! ♡
 
 </Card>
 
