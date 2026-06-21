@@ -56,7 +56,7 @@ I have a Twitter where I like and retweet stuff and on the rare time post stuff.
   hobby="FFXIV Raider & Eeper"
   links={[
     ["X", "https://x.com/SkyeTheDemon"],
-    ["Bluesky", "https://bsky.app/profile/skye.otd.ink",
+    ["Bluesky", "https://bsky.app/profile/skye.otd.ink"],
     ["Twitch", "https://www.twitch.tv/skyethedemon"],
   ]}
   iconUrl={skye}
