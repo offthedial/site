@@ -57,7 +57,6 @@ I have a Twitter where I like and retweet stuff and on the rare time post stuff.
   links={[
     ["X", "https://x.com/SkyeTheDemon"],
     ["Bluesky", "https://bsky.app/profile/skye.otd.ink"],
-    ["Twitch", "https://www.twitch.tv/skyethedemon"],
   ]}
   iconUrl={skye}
 >
