@@ -51,28 +51,6 @@ I have a Twitter where I like and retweet stuff and on the rare time post stuff.
 </Card>
 
 <Card
-  name="Skye"
-  role="Head TO, Staff and Rules Lead"
-  hobby="FFXIV Raider & Eeper"
-  links={[
-    ["X", "https://x.com/SkyeTheDemon"],
-    ["Bluesky", "https://bsky.app/profile/skye.otd.ink"],
-    ["Twitch", "https://www.twitch.tv/skyethedemon"],
-  ]}
-  iconUrl={skye}
->
-
-Hello I'm Skye!
-
-I am a long standing Tournament Organizer within the splatoon community and have been since 2020 with lots of my former experience being creating IPL and specifically Swim or Sink.
-
-When I'm not running Tournaments I love to draw, play games, and occasionally stream either of the two of those things on my twitch :3. If I'm not streaming, playing games, drawing, or at work then I am mostly likely asleep (help skye fell asleep!).
-
-If you'd like to follow me, know when I go live on twitch, or open up commission slots for my art feel free to follow me on my Twitter/Bsky/Twitch. Otherwise, I hope to see you play in our events and can't wait to see how everything unfolds! <3
-
-</Card>
-
-<Card
   name="Ambird"
   role="Artist"
   hobby="looking at small round birds"
