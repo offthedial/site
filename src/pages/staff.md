@@ -63,6 +63,7 @@ I have a Twitter where I like and retweet stuff and on the rare time post stuff.
 >
 
 Hello I'm Skye! (They/He)
+
 I am a long standing Tournament Organizer within the splatoon community and have been since 2020 with lots of my former experience being creating IPL and specifically Swim or Sink.
 
 When i'm not running Tournaments I love to draw, play games, and occasionally stream either of the two of those things on my twitch :3. If i'm not streaming, playing games, drawing, or at work then I am mostly likely asleep (help skye fell asleep!).
