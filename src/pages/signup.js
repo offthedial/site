@@ -13,6 +13,7 @@ import PrivateRoute from "src/components/PrivateRoute"
 import { auth, db, queryClient } from "src/app"
 import useTourney from "src/app/useTourney"
 import useDiscord from "src/app/useDiscord"
+import useSendouId from "src/app/useSendouId"
 import useUserSignup from "src/app/useUserSignup"
 import useUser from "src/app/useUser"
 import { format } from "date-fns"
@@ -325,50 +326,6 @@ const Signup = () => {
         />
       </FormItem>
       <Border />
-      <FormItem
-        title="start.gg User Slug"
-        desc={
-          <>
-            Enter the 8 characters that are listed on your{" "}
-            <a
-              className="text-default font-medium underline decoration-otd-slate hover:decoration-transparent"
-              href="https://start.gg/profile"
-            >
-              start.gg profile
-            </a>
-            .
-          </>
-        }
-      >
-        <div className="flex flex-row-reverse items-stretch">
-          <input
-            {...form.register("slug", {
-              required: { value: true, message: "This field is required" },
-              pattern: {
-                value: /^[0-9A-Fa-f]{8}$/,
-                message: "Invalid user slug",
-              },
-            })}
-            type="text"
-            autoComplete="off"
-            className={clsx(
-              "peer w-full rounded-l-none border-l-0",
-              formErrors.slug && "!border-red-600 dark:!border-red-400"
-            )}
-          />
-          <input
-            type="text"
-            className={clsx(
-              "min-w-0 rounded-lg rounded-r-none border-2 border-r-0 border-slate-400 !bg-slate-200 bg-transparent px-1.5 text-center text-base peer-focus:!border-otd-slate-600 peer-focus:ring-transparent dark:border-slate-700 dark:!bg-slate-800 dark:peer-focus:!border-otd-slate-400",
-              formErrors.slug && "!border-red-600 dark:!border-red-400"
-            )}
-            placeholder="start.gg/user/"
-            disabled
-          />
-        </div>
-        <Error error={formErrors.slug} />
-      </FormItem>
-      <Border />
       <WithAlert>
         {({ style, message, button }) => (
           <div className="flex w-full flex-col justify-center">
@@ -399,6 +356,7 @@ const WithAlert = ({ children }) => {
   const signup = useUserSignup()
   const tourney = useTourney()
   const discord = useDiscord()
+  const sendouId = useSendouId()
   let props
 
   if (!tourney.data) {
@@ -419,6 +377,22 @@ const WithAlert = ({ children }) => {
             Off the Dial discord server
           </Link>{" "}
           to participate!
+        </>
+      ),
+    }
+  } else if (sendouId.data === null) {
+    props = {
+      style: "text-red-600 dark:text-red-400",
+      message: (
+        <>
+          You must have a{" "}
+          <a
+            href="https://sendou.ink"
+            className="underline hover:no-underline"
+          >
+            sendou.ink
+          </a>{" "}
+          account linked to your Discord to participate!
         </>
       ),
     }

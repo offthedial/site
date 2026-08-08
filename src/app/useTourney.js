@@ -27,11 +27,11 @@ const useTourney = type =>
       result.data.date.nanoseconds
     )
     result.data.creationDate = result.data.timestamp.toDate()
-    result.data.startDate = fromUnixTime(result.data.smashgg.startAt)
+    result.data.startDate = fromUnixTime(result.data.sendou.startAt)
     result.data.closeDate = fromUnixTime(
-      result.data.smashgg.registrationClosesAt
+      result.data.sendou.registrationClosesAt
     )
-    result.data.endDate = fromUnixTime(result.data.smashgg.endAt)
+    result.data.endDate = fromUnixTime(result.data.sendou.endAt)
     result.data.hasEnded = () => isPast(result.data.endDate)
     result.data.hasClosed = () => isPast(result.data.closeDate)
     result.data.whitelist =

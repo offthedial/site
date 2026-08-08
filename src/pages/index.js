@@ -151,7 +151,7 @@ const Hero = () => {
   const tourney = useTourney()
   if (tourney.data?.hasEnded() === false) {
     props = {
-      title: tourney.data.smashgg.name,
+      title: tourney.data.sendou.name,
       desc: tourney.data?.whitelist ? (
         <>
           This is an invite-only tournament, Make sure to sign up if you've been

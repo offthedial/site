@@ -354,9 +354,9 @@ const allPhases = tourney => {
           Good luck in the tournament! Head to{" "}
           <a
             className="text-otd-slate-600 hover:underline dark:text-otd-slate-300"
-            href="https://start.gg/idtga"
+            href={tourney.data?.sendou?.url || "https://sendou.ink"}
           >
-            start.gg/idtga
+            sendou.ink
           </a>{" "}
           to organize your matches and report your scores. Tune into the
           official broadcast at{" "}
@@ -387,7 +387,7 @@ const allPhases = tourney => {
     tourney.data?.closeDate,
     addHours(tourney.data?.startDate, -48),
     tourney.data?.startDate,
-    fromUnixTime(tourney.data?.smashgg.endAt),
+    tourney.data?.endDate,
   ]
   let currentStep = 0
   steps.forEach((step, index) => {

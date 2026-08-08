@@ -91,7 +91,7 @@ const TourneyCard = () => {
       <div className="rounded-t-xl bg-slate-200 px-8 py-8 dark:bg-slate-800">
         <h2 className="text-center text-xl font-semibold">
           {tourney.data ? (
-            tourney.data.smashgg.name
+            tourney.data.sendou.name
           ) : (
             <div className="mx-auto h-7 w-96 animate-pulse rounded-full bg-slate-300 dark:bg-slate-700" />
           )}
