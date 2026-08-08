@@ -7,7 +7,7 @@ import { Card, Stack, Secret } from "src/components/staff"
 import djam from "src/static/staff/djam.webp"
 import wolf from "src/static/staff/wolf.webp"
 import ambird from "src/static/staff/ambird.webp"
-import cysabi from "src/static/staff/cysabi.webp"
+import cysabi from "src/static/staff/cysabi.png"
 import skye from "src/static/staff/skye.webp"
 
 
@@ -101,11 +101,11 @@ if you want a doodle for yourself, feel free to contact me and i'll be happy to 
   iconUrl={cysabi}
 >
 
-> <p className="text-xl">**woah! you found me !**</p>
+> <p className="text-lg">**woa, u found me!**</p>
 
-i'm the dev behind the entire site! i've rewritten it about 5 times ,, and i also built both the discord bot to help with managing tournaments, and the overlays that you see on stream !
+i'm the dev behind the site, and have rewritten it countless times.. i also made the discord bot and the overlays that you see on stream!
 
-i like boba, fizzy boba especially. in splatoon, i'm a glooga dualies one-trick, and i always make sure to die with my special up :D
+my weakness is fizzy drinks, boba especially. in splatoon, i'm a glooga dualies one-trick, and i always make sure to die with my special up :D
 
 </Card></Secret>
 
