@@ -117,7 +117,7 @@ const Index = () => (
             <h2 className="text-3xl font-medium sm:text-4xl">Ready to play?</h2>
             <p className="pt-2 text-xl text-slate-700 dark:text-slate-300 sm:text-2xl">
               Sign up with your Discord account, set up your profile, and get
-              ready for your the next tournament!
+              ready for the next tournament!
             </p>
           </div>
           <div className="flex-shrink-0">
