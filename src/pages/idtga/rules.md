@@ -41,11 +41,11 @@ This is the general schedule for each season, if you want to see the dates for t
 
 1. **`2` days before the tournament:**
 
-   Teams are revealed for players to practice with.
+   Teams are revealed for players to practice with. All players must attempt communication with their team at least once within `24` hours after teams are announced.
 
 1. **`24` hours before the tournament:**
 
-   The <Mention>#reporting-players</Mention> channel is opened. For more info, please refer to the [Reporting Players](#reporting-players) section.
+   The <Mention>#reporting-players</Mention> channel is opened. For more info, please refer to the [Reporting Players](#reporting-players) section. You may also report any player you have not recieved contact from on your team here.
 
 1. **The tournament begins!**
 
@@ -75,7 +75,6 @@ This is the general schedule for each season, if you want to see the dates for t
 - Players must start their matches within `5` minutes of the round (or `10` minutes for the first round).
   - If the match has not started yet, the first game will be automatically awarded to the waiting team.
   - For each additional `5` minutes that the match still hasn't started, another game will be awarded.
-  - Please call a moderator in start.gg when this occurs so we can set the score.
 - There is a `5-minute` break before finals commence.
 
 If a match has not been completed by the end of the round, players are to not play any more matches, and the set will be marked as a draw.
@@ -177,7 +176,7 @@ Team names are randomly generated. If you want to change your team name, here ar
 
 ## Cheating
 
-Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on start.gg, anything considered cheating by Nintendo, controller mods, and failure to comply with any of the rules on this document.
+Forms of cheating include, but are not limited to, playing under false names, bracket manipulation, providing false information in your profile or on sendou.ink, anything considered cheating by Nintendo, controller mods, and failure to comply with any of the rules on this document.
 
 **If you cheat:**
 
@@ -191,7 +190,7 @@ This is a strict no-chances policy, and we do not make exceptions to this. Staff
 - Rules are subject to change between seasons, Make sure to reread the rules each season, you can check the patch notes to see what we changed.
 - Signups are first-come-first serve. If there are an uneven number of players, the last ones will be removed. Make sure to sign up early!
 - If you drop out after check-in closes, you will be suspended from playing in the next season.
-- If third-party services, such as Nintendo Online or start.gg become unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
+- If third-party services, such as Nintendo Online or sendou.ink become unavaliable, the tournament may be delayed, change format, or even cancelled. If we need to make adjustments, please be patient with us.
 - Head TOs reserve the right to make any changes to the tournament at any time on a case by case basis.
 - Additional info regarding the tournament can be also found in our [FAQ](https://otd.ink/faq).
 - By registering you agree to abide by our [terms and conditions](https://otd.ink/legal), thank you!

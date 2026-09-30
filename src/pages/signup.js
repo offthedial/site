@@ -314,7 +314,7 @@ const Signup = () => {
       <Border />
       <FormItem
         title="Competitive Experience"
-        desc="List any relevant competitive experience. For example: LUTI division, tournament placements, team experience."
+        desc="List any relevant competitive experience NOT listed on your Sendou.ink profile."
       >
         <textarea
           {...form.register("cxp")}

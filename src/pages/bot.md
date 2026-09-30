@@ -13,7 +13,7 @@ One of the main purposes of the bot is to automate tedious tournament managing t
 - Generate a maplist with the right amount of rounds and games, given a map pool.
 - Quickly remove and substitute competitors.
 - Distribute Signal Strength properly to all competitors.
-- Export all signups with both site and smash.gg data.
+- Sync roles from sendou.ink to the Off the Dial Discord server.
 
 That's not all however, Off the Dial bot can also...
 
